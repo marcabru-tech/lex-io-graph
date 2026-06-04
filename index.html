@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexiograph | Gramática Semiótica dos Sistemas Digitais</title>
+  <meta name="description" content="Lexiograph: gramática semiótica dos sistemas digitais. Lex (governança), IO (interação), Graph (grafos de conhecimento). Assinatura Lex Quantum." />
+  <link rel="icon" href="assets/lexiograph-logo.svg" type="image/svg+xml" />
+
+  <!-- Tipografia: serifada intelectual + monospace técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       LEXIOGRAPH — CODEX SEMIÓTICO
+       Gramática visual dos sistemas digitais
+       ============================================ */
+
+    :root {
+      color-scheme: dark;
+      --bg: #08070e;
+      --surface: #0f0e18;
+      --surface-raised: #161422;
+      --border: rgba(255,255,255,0.06);
+      --border-glow: rgba(212,168,83,0.15);
+      --text: #e8e4dc;
+      --text-secondary: #b8b2a6;
+      --muted: #706a60;
+
+      /* Triade semiótica */
+      --lex: #d4a853;       /* ouro — lei, governança, gravidade */
+      --io: #3dc8e6;        /* ciano — fluxo, interação, pulso */
+      --graph: #c44b4b;     /* vermelho profundo — grafo, escrita, estrutura */
+
+      --accent: var(--lex);
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body: 'DM Mono', 'Courier New', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ---- LINKS ---- */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- SELECTION ---- */
+    ::selection { background: rgba(212,168,83,0.3); color: var(--text); }
+
+    /* ===============================
+       LAYOUT
+       =============================== */
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    /* ===============================
+       TYPOGRAPHY
+       =============================== */
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+
+    strong { font-weight: 500; color: var(--text); }
+
+    blockquote {
+      border-left: 2px solid var(--lex);
+      padding: 16px 0 16px 24px;
+      margin: 32px 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li { margin-bottom: 8px; }
+    li::marker { color: var(--muted); }
+
+    /* ===============================
+       HERO — "i f" + IDENTITY
+       =============================== */
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .hero-glyph {
+      font-family: var(--font-body);
+      font-size: clamp(4rem, 12vw, 9rem);
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      line-height: 1;
+      margin-bottom: 32px;
+      background: linear-gradient(135deg, var(--graph), var(--lex), var(--io));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 40px rgba(196,75,75,0.15))
+              drop-shadow(0 0 80px rgba(212,168,83,0.08));
+      animation: glyph-breathe 6s ease-in-out infinite;
+      user-select: none;
+    }
+
+    @keyframes glyph-breathe {
+      0%, 100% { filter: drop-shadow(0 0 40px rgba(196,75,75,0.15)) drop-shadow(0 0 80px rgba(212,168,83,0.08)); }
+      50% { filter: drop-shadow(0 0 60px rgba(196,75,75,0.25)) drop-shadow(0 0 100px rgba(212,168,83,0.15)); }
+    }
+
+    .hero h1 {
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-body);
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    .hero-line {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lex), transparent);
+      margin: 0 auto;
+    }
+
+    /* ===============================
+       DECOMPOSIÇÃO: LEX / IO / GRAPH
+       =============================== */
+    .decomp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 32px;
+    }
+
+    .decomp-cell {
+      background: var(--surface);
+      padding: 32px 24px;
+      position: relative;
+      transition: background 0.4s ease;
+    }
+    .decomp-cell:hover { background: var(--surface-raised); }
+
+    .decomp-marker {
+      display: block;
+      width: 32px;
+      height: 2px;
+      margin-bottom: 16px;
+    }
+    .decomp-cell--lex .decomp-marker { background: var(--lex); }
+    .decomp-cell--io .decomp-marker { background: var(--io); }
+    .decomp-cell--graph .decomp-marker { background: var(--graph); }
+
+    .decomp-cell h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .decomp-cell--lex h3 { color: var(--lex); }
+    .decomp-cell--io h3 { color: var(--io); }
+    .decomp-cell--graph h3 { color: var(--graph); }
+
+    .decomp-cell p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===============================
+       CARDS / PANELS
+       =============================== */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-top: 24px;
+      position: relative;
+    }
+
+    .panel--quantum {
+      border-color: var(--border-glow);
+      background: linear-gradient(135deg, var(--surface) 0%, rgba(212,168,83,0.03) 100%);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-weight: 400;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .pill:hover {
+      border-color: var(--lex);
+      color: var(--lex);
+    }
+
+    /* ===============================
+       APPLICATIONS LIST
+       =============================== */
+    .app-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 16px;
+    }
+
+    .app-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .app-list li:last-child { border-bottom: none; }
+
+    .app-list li::before {
+      content: '—';
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ===============================
+       PROCESS (OL)
+       =============================== */
+    .process {
+      list-style: none;
+      padding: 0;
+      margin-top: 24px;
+      counter-reset: step;
+    }
+
+    .process li {
+      counter-increment: step;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+    }
+    .process li:last-child { border-bottom: none; }
+
+    .process li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      line-height: 1;
+      min-width: 48px;
+    }
+
+    /* ===============================
+       ECOSYSTEM
+       =============================== */
+    .eco-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .eco-cell {
+      background: var(--surface);
+      padding: 24px;
+      transition: background 0.3s ease;
+    }
+    .eco-cell:hover { background: var(--surface-raised); }
+
+    .eco-cell h3 {
+      font-size: 14px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--lex);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .eco-cell p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ===============================
+       FOUNDER
+       =============================== */
+    .founder-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* ===============================
+       CTA
+       =============================== */
+    .cta-section {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 40px;
+      border: 1px solid var(--lex);
+      color: var(--lex);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease, letter-spacing 0.4s ease;
+    }
+    .cta-btn:hover {
+      background: var(--lex);
+      color: var(--bg);
+      letter-spacing: 0.25em;
+      text-decoration: none;
+    }
+
+    /* ===============================
+       FOOTER
+       =============================== */
+    .site-footer {
+      padding: 40px 0 60px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      border-top: 1px solid var(--border);
+    }
+    .site-footer a { color: var(--muted); }
+    .site-footer a:hover { color: var(--lex); }
+
+    /* ===============================
+       NAV (minimal)
+       =============================== */
+    .nav-minimal {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 24px 0;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .nav-minimal a {
+      color: var(--muted);
+      transition: color 0.3s ease;
+    }
+    .nav-minimal a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* ===============================
+       SCROLL REVEAL
+       =============================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* stagger children */
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+
+    /* ===============================
+       RESPONSIVE
+       =============================== */
+    @media (max-width: 700px) {
+      .decomp-grid { grid-template-columns: 1fr; }
+      .eco-grid { grid-template-columns: 1fr; }
+      .hero { padding: 80px 0 60px; }
+      section { padding: 48px 0; }
+      .process li { flex-direction: column; gap: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
+      .hero-glyph { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero">
+      <div class="hero-glyph" aria-hidden="true">i f</div>
+      <h1>Lexiograph</h1>
+      <div class="hero-tagline">Gramática Semiótica dos Sistemas Digitais</div>
+      <div class="hero-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======================== NAV ======================== -->
+    <nav class="nav-minimal">
+      <a href="#gramatica">Gramática</a>
+      <a href="#quantum">Lex Quantum</a>
+      <a href="#ecossistema">Ecossistema</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- ======================== PROPÓSITO ======================== -->
+    <section class="reveal">
+      <p style="font-family: var(--font-display); font-size: 1.3rem; line-height: 1.6; color: var(--text-secondary); font-style: italic;">
+        Comunicar sistemas digitais de forma clara, ética e estética — unindo governança (Lex), interação (IO) e estrutura semântica (Graph) sob a assinatura Lex Quantum.
+      </p>
+      <p style="margin-top: 20px;">
+        A Lexiograph é mais do que uma marca — é uma linguagem. Uma gramática visual que emerge da interseção entre compliance digital, interação sistêmica e estruturação do conhecimento. Ao decompor <strong>Lexiograph = Lex + IO + Graph</strong>, revelamos uma arquitetura semiótica que traduz sistemas digitais em signos, fluxos e grafos.
+      </p>
+    </section>
+
+    <!-- ======================== DECOMPOSIÇÃO ======================== -->
+    <section id="gramatica" class="reveal">
+      <h2>Decomposição Semiótica</h2>
+      <div class="decomp-grid reveal-stagger">
+        <div class="decomp-cell decomp-cell--lex">
+          <span class="decomp-marker"></span>
+          <h3>Lex</h3>
+          <p>Lei, compliance, governança digital. Princípios éticos e regulatórios aplicados a sistemas e algoritmos. Conformidade técnica, jurídica e operacional. Auditoria, transparência e confiabilidade em fluxos e decisões.</p>
+        </div>
+        <div class="decomp-cell decomp-cell--io">
+          <span class="decomp-marker"></span>
+          <h3>IO</h3>
+          <p>Input/output, interação e fluxo. Interfaces homem-máquina e protocolos de comunicação. Ciclos de entrada, processamento e saída de informação. Orquestração de eventos, automações e integrações.</p>
+        </div>
+        <div class="decomp-cell decomp-cell--graph">
+          <span class="decomp-marker"></span>
+          <h3>Graph</h3>
+          <p>Grafia, grafos e estrutura de conhecimento. Modelagem semântica e ontologias. Grafos de entidades, relações e inferências. Visualizações que tornam o conhecimento navegável e inteligível.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== LEX QUANTUM ======================== -->
+    <section id="quantum" class="reveal">
+      <h2>Lex Quantum</h2>
+      <div class="panel panel--quantum">
+        <p>
+          A assinatura Lex Quantum integra rigor técnico e estética semiótica. Soluções que interpretam, codificam e comunicam sistemas complexos com precisão, beleza e significado.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Governança</span>
+          <span class="pill">Interoperabilidade</span>
+          <span class="pill">Grafos de Conhecimento</span>
+          <span class="pill">Visualização</span>
+          <span class="pill">Semiótica</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== O QUE ENTREGAMOS ======================== -->
+    <section class="reveal">
+      <h2>O que a Lexiograph entrega</h2>
+      <p>
+        Você tem um sistema complexo — técnico, regulatório ou conceitual — e precisa que ele seja compreendido: por clientes, investidores, reguladores ou pela sua própria equipe. A Lexiograph transforma essa complexidade em linguagem visual operável.
+      </p>
+      <ul style="margin-top: 20px;">
+        <li><strong>Identidade visual sistêmica</strong> — sistemas de design que refletem a arquitetura real do seu produto ou organização, não apenas sua estética.</li>
+        <li><strong>Documentação viva</strong> — mapas de arquitetura, catálogos de API, grafos de conhecimento e fluxos de dados que se mantêm atualizados e navegáveis.</li>
+        <li><strong>Comunicação de governança</strong> — dashboards, relatórios e narrativas visuais para compliance, auditoria e comunicação executiva.</li>
+        <li><strong>Narrativa técnica</strong> — materiais de pitch, whitepapers e apresentações que traduzem profundidade técnica em linguagem de decisão.</li>
+      </ul>
+    </section>
+
+    <!-- ======================== APLICAÇÕES ======================== -->
+    <section class="reveal">
+      <h2>Aplicações</h2>
+      <ul class="app-list">
+        <li>Mapas de arquitetura de software e dados</li>
+        <li>Catálogos de APIs, fluxos de eventos e integrações</li>
+        <li>Grafos de conhecimento e navegação semântica</li>
+        <li>Dashboards de governança e conformidade</li>
+        <li>Narrativas visuais para comunicação executiva e técnica</li>
+      </ul>
+    </section>
+
+    <!-- ======================== COMO TRABALHAMOS ======================== -->
+    <section class="reveal">
+      <h2>Como trabalhamos</h2>
+      <p>
+        Cada projeto começa por uma leitura semiótica do sistema do cliente — entendendo sua arquitetura, seus públicos e os signos que já circulam em torno dele. A partir daí, construímos em camadas:
+      </p>
+      <ol class="process reveal-stagger">
+        <li>
+          <div>
+            <strong>Diagnóstico semiótico</strong><br>
+            <span style="color: var(--text-secondary); font-size: 13px;">Mapeamento da identidade, linguagem e lacunas comunicacionais do sistema.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Arquitetura visual</strong><br>
+            <span style="color: var(--text-secondary); font-size: 13px;">Definição dos elementos Lex, IO e Graph aplicados ao contexto específico do cliente.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Produção e entrega</strong><br>
+            <span style="color: var(--text-secondary); font-size: 13px;">Execução full service: identidade, documentação, interfaces, narrativas e materiais de governança.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Manutenção viva</strong><br>
+            <span style="color: var(--text-secondary); font-size: 13px;">Atualização contínua dos artefatos conforme o sistema evolui.</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======================== ECOSSISTEMA ======================== -->
+    <section id="ecossistema" class="reveal">
+      <h2>Ecossistema — Lexiograph no Universo Hubstry</h2>
+      <p>
+        A Lexiograph nasce dentro do ecossistema <strong>Hubstry Deep Tech</strong> — holding mista operacional que reúne, sob um roadmap de 30 anos, ventures em deep tech, pesquisa independente, compliance digital, linguística computacional e infraestrutura de conhecimento.
+      </p>
+      <p>
+        No ecossistema Hubstry, cada venture ocupa uma posição funcional precisa. A Lexiograph ocupa a <strong>camada semiótica e comunicacional</strong>: é o braço de design full service que traduz a complexidade técnica e conceitual das demais ventures em linguagem visual operável.
+      </p>
+      <p>
+        Enquanto a Hubstry Deep Tech define arquitetura e estratégia de longo prazo, a Lexiograph entrega a <strong>gramática que torna esse ecossistema legível</strong> — para clientes, parceiros, investidores e reguladores.
+      </p>
+      <div class="eco-grid reveal-stagger">
+        <div class="eco-cell">
+          <h3>Hubstry CaaS</h3>
+          <p>Compliance-as-a-service em Rust (ECA Digital / Lei 15.211/2025): dashboards de governança e comunicação de relatórios de conformidade.</p>
+        </div>
+        <div class="eco-cell">
+          <h3>GuruDev®</h3>
+          <p>Linguagem de programação ontológico-multissemiótica: sistema de identidade visual e documentação técnica.</p>
+        </div>
+        <div class="eco-cell">
+          <h3>Gonçalves et Alii</h3>
+          <p>Escritório de direito digital e dados: materiais de comunicação institucional e visualização de compliance.</p>
+        </div>
+        <div class="eco-cell">
+          <h3>Instituto PCIH³</h3>
+          <p>Pesquisa independente em ICT: identidade visual e publicações acadêmico-institucionais.</p>
+        </div>
+      </div>
+      <p style="margin-top: 24px;">
+        A Lexiograph não é apenas um estúdio de design. É a <strong>interface semiótica do ecossistema Hubstry</strong> — o lugar onde a profundidade técnica ganha forma, circulação e inteligibilidade.
+      </p>
+    </section>
+
+    <!-- ======================== FUNDADOR ======================== -->
+    <section class="reveal">
+      <div class="founder-label">Fundador</div>
+      <h2>Guilherme Machado</h2>
+      <p>
+        Empreendedor serial, pesquisador independente e polímata com sede no Rio de Janeiro. Fundou e lidera a <strong>Hubstry Deep Tech</strong>, operando um ecossistema bootstrapped de ventures interconectadas em deep tech, linguística computacional, compliance digital, pesquisa científica e expressão artístico-literária.
+      </p>
+      <p>
+        Sua formação é construída na interseção entre <strong>tecnologia, semiótica, direito digital, filosofia da linguagem e teoria literária</strong> — com presença digital contínua desde 2004 e publicações acadêmicas ativas no Zenodo, Substack, Medium e GitHub.
+      </p>
+      <p>
+        <strong>Parcerias institucionais:</strong> Microsoft Founders Hub · GitHub Education · Google Gemini · AWS
+      </p>
+      <blockquote>
+        "Comunicar bem não é simplificar. É encontrar a forma exata em que a complexidade se torna navegável."
+      </blockquote>
+    </section>
+
+    <!-- ======================== CTA ======================== -->
+    <section id="contato" class="cta-section reveal">
+      <h2>Vamos trabalhar juntos?</h2>
+      <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto;">
+        Se você tem um sistema complexo que precisa ser comunicado com clareza, precisão e profundidade — a Lexiograph é o seu interlocutor.
+      </p>
+      <a href="mailto:globaldeeptechecosystem@hubstry.dev" class="cta-btn">Iniciar conversa</a>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="site-footer">
+      <p>© Lexiograph — Gramática Semiótica dos Sistemas Digitais</p>
+      <p style="margin-top: 8px;">
+        <a href="https://github.com/guilherme-machado-ceo/lexiograph-gramatica-semiotica" target="_blank" rel="noopener noreferrer">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/guilherme-machado-ceo/lexiograph-gramatica-semiotica/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- ======================== SCROLL REVEAL JS ======================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
