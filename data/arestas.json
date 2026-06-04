@@ -1,0 +1,81 @@
+{
+  "edges": [
+    {
+      "source": "cf88",
+      "target": "lgpd",
+      "tipo": "hierarquia",
+      "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88.",
+      "artigos": "CF art. 5º, LXXIX ↔ LGPD art. 1º"
+    },
+    {
+      "source": "cf88",
+      "target": "marco_civil",
+      "tipo": "hierarquia",
+      "descricao": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de comunicação.",
+      "artigos": "CF art. 5º, IX, XII ↔ MC art. 2º, 3º"
+    },
+    {
+      "source": "lgpd",
+      "target": "anpd",
+      "tipo": "regulamenta",
+      "descricao": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil.",
+      "artigos": "LGPD art. 55-A"
+    },
+    {
+      "source": "eca",
+      "target": "eca_digital",
+      "tipo": "hierarquia",
+      "descricao": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital.",
+      "artigos": "ECA art. 3º ↔ ECA Digital art. 1º"
+    },
+    {
+      "source": "lgpd",
+      "target": "eca_digital",
+      "tipo": "intersecao",
+      "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital.",
+      "artigos": "LGPD art. 14 ↔ ECA Digital art. 12"
+    },
+    {
+      "source": "eca_digital",
+      "target": "marco_civil",
+      "tipo": "intersecao",
+      "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil.",
+      "artigos": "ECA Digital art. 18 ↔ MC art. 7º"
+    },
+    {
+      "source": "eca_digital",
+      "target": "pl_ia",
+      "tipo": "intersecao",
+      "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteções específicas do ECA Digital.",
+      "artigos": "ECA Digital art. 10 ↔ PL 2.338 art. 12"
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_adimc",
+      "tipo": "interpreta",
+      "descricao": "STF declarou constitucional o art. 12 do Marco Civil, validando as sanções civis por descumprimento de guarda de dados.",
+      "artigos": "ADI 5527"
+    },
+    {
+      "source": "marco_civil",
+      "target": "stj_resp_plat",
+      "tipo": "interpreta",
+      "descricao": "STJ interpretou o art. 19 do Marco Civil: plataformas devem remover conteúdo ilícito após notificação judicial (ou extrajudicial, conforme caso).",
+      "artigos": "REsp 1.907.924"
+    },
+    {
+      "source": "pl_ia",
+      "target": "nr1",
+      "tipo": "intersecao",
+      "descricao": "IA no ambiente de trabalho: PL 2.338 classifica sistemas de alto risco; NR-1 exige avaliação de riscos psicossociais incluindo automação e monitoramento.",
+      "artigos": "PL 2.338 art. 14 ↔ NR-1 item 1.5.3"
+    },
+    {
+      "source": "lgpd",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "LGPD regula dados pessoais; PL 2.338 regula sistemas que usam esses dados. São complementares, não concorrentes.",
+      "artigos": "LGPD art. 12 ↔ PL 2.338 art. 5º"
+    }
+  ]
+}

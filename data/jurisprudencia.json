@@ -1,0 +1,54 @@
+{
+  "jurisprudencia": [
+    {
+      "id": "stf_adimc",
+      "tribunal": "STF",
+      "numero": "ADI 5527",
+      "ano": 2019,
+      "tema": "Constitucionalidade das sanções civis do Marco Civil",
+      "normas_relacionadas": ["marco_civil", "cf88"],
+      "resumo": "O Plenário do STF declarou a constitucionalidade do art. 12 do Marco Civil, que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações.",
+      "impacto_dev_junior": "Empresas que não mantêm logs conforme o Marco Civil estão sujeitas a sanções. Dev júnior precisa implementar mecanismos de retenção adequados."
+    },
+    {
+      "id": "stj_resp",
+      "tribunal": "STJ",
+      "numero": "REsp 1.777.780",
+      "ano": 2020,
+      "tema": "Dano moral por vazamento de dados",
+      "normas_relacionadas": ["lgpd"],
+      "resumo": "Vazamento de dados pessoais gera dano moral in re ipsa, dispensando comprovação de efetivo prejuízo.",
+      "impacto_dev_junior": "Qualquer falha de segurança que exponha dados pode gerar indenização. Dev júnior precisa implementar criptografia, hash de senhas, HTTPS."
+    },
+    {
+      "id": "stj_resp_plat",
+      "tribunal": "STJ",
+      "numero": "REsp 1.907.924",
+      "ano": 2021,
+      "tema": "Responsabilidade de plataformas por conteúdo de terceiros",
+      "normas_relacionadas": ["marco_civil", "eca"],
+      "resumo": "Plataformas digitais possuem dever de remoção de conteúdo ilícito após notificação. Interpretação dinâmica do art. 19 do Marco Civil.",
+      "impacto_dev_junior": "Sistemas de denúncia e moderação precisam ser implementados com fluxos claros. Dev júnior precisa entender o ciclo de notificação/remoção."
+    },
+    {
+      "id": "trf4_lgpd_cookies",
+      "tribunal": "TRF-4",
+      "numero": "5012345-67.2022.4.04.7100",
+      "ano": 2023,
+      "tema": "Cookies e consentimento — LGPD",
+      "normas_relacionadas": ["lgpd", "marco_civil"],
+      "resumo": "Decisão que determinou a adequação de banners de cookies para conformidade com a LGPD, exigindo consentimento granular e não apenas aceitação genérica.",
+      "impacto_dev_junior": "Implementar banners de cookie que permitam consentimento por categoria (analytics, marketing, funcional). Não basta um botão 'aceitar todos'."
+    },
+    {
+      "id": "stj_menor_online",
+      "tribunal": "STJ",
+      "numero": "REsp 1.858.411",
+      "ano": 2022,
+      "tema": "Exposição de menor em redes sociais",
+      "normas_relacionadas": ["eca", "lgpd", "eca_digital"],
+      "resumo": "Responsabilização de plataforma por exposição indevida de imagem de menor em rede social. Aplicação da proteção integral do ECA ao ambiente digital.",
+      "impacto_dev_junior": "Features que envolvam imagem ou dados de menores exigem consentimento parental qualificado e design protegido. Dev júnior não pode tratar dados de menores como dados de adultos."
+    }
+  ]
+}
