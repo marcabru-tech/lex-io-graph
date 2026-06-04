@@ -1,0 +1,136 @@
+{
+  "nodes": [
+    {
+      "id": "cf88",
+      "nome": "Constituição Federal de 1988",
+      "sigla": "CF/88",
+      "tipo": "constituicao",
+      "artigos_chave": ["Art. 5º, LX", "Art. 5º, XII", "Art. 5º, XIV", "Art. 220"],
+      "ementa": "Fundamento supremo do ordenamento jurídico. Garante direitos fundamentais à privacidade, intimidade, sigilo de dados e comunicação.",
+      "status": "vigente",
+      "temas": ["dados_pessoais", "internet", "acesso"],
+      "orgao": "Congresso Nacional",
+      "ano": 1988
+    },
+    {
+      "id": "lgpd",
+      "nome": "Lei Geral de Proteção de Dados Pessoais",
+      "sigla": "LGPD — Lei 13.709/2018",
+      "tipo": "lei",
+      "artigos_chave": ["Art. 1º", "Art. 7º", "Art. 11", "Art. 14", "Art. 41", "Art. 50"],
+      "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. Dados de menores exigem consentimento específico do responsável legal.",
+      "status": "vigente",
+      "temas": ["dados_pessoais", "menores", "ia", "trabalho"],
+      "orgao": "Congresso Nacional / ANPD",
+      "ano": 2018
+    },
+    {
+      "id": "marco_civil",
+      "nome": "Marco Civil da Internet",
+      "sigla": "Lei 12.965/2014",
+      "tipo": "lei",
+      "artigos_chave": ["Art. 2º", "Art. 3º", "Art. 7º", "Art. 11", "Art. 13", "Art. 15"],
+      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores.",
+      "status": "vigente",
+      "temas": ["internet", "dados_pessoais", "acesso"],
+      "orgao": "Congresso Nacional",
+      "ano": 2014
+    },
+    {
+      "id": "eca",
+      "nome": "Estatuto da Criança e do Adolescente",
+      "sigla": "ECA — Lei 8.069/1990",
+      "tipo": "lei",
+      "artigos_chave": ["Art. 3º", "Art. 17", "Art. 75", "Art. 143"],
+      "ementa": "Doutrina da proteção integral. Prioridade absoluta na proteção de crianças e adolescentes em todos os contextos, inclusive digital.",
+      "status": "vigente",
+      "temas": ["menores"],
+      "orgao": "Congresso Nacional / ECA-TISEA",
+      "ano": 1990
+    },
+    {
+      "id": "eca_digital",
+      "nome": "Estatuto da Criança e do Adolescente Digital",
+      "sigla": "ECA Digital — Lei 15.211/2025",
+      "tipo": "lei",
+      "artigos_chave": ["Art. 4º", "Art. 10", "Art. 12", "Art. 16", "Art. 18"],
+      "ementa": "Regula a proteção de crianças e adolescentes em ambiente digital. Consentimento parental qualificado, design protegido, proibição de dark patterns, obrigatória verificação de idade.",
+      "status": "vigente",
+      "temas": ["menores", "internet", "dados_pessoais", "ia"],
+      "orgao": "Congresso Nacional / ECA-TISEA",
+      "ano": 2025
+    },
+    {
+      "id": "pl_ia",
+      "nome": "Projeto de Lei sobre Inteligência Artificial",
+      "sigla": "PL 2.338/2023",
+      "tipo": "pl",
+      "artigos_chave": ["Art. 5º", "Art. 12", "Art. 14", "Art. 16", "Art. 19"],
+      "ementa": "Marco regulatório para IA no Brasil. Classificação por risco, obrigações de transparência, direito à explicação, impacto em direitos fundamentais.",
+      "status": "tramitacao",
+      "temas": ["ia", "dados_pessoais", "trabalho"],
+      "orgao": "Senado Federal",
+      "ano": 2023
+    },
+    {
+      "id": "nr1",
+      "nome": "Norma Regulamentadora de Segurança e Saúde no Trabalho",
+      "sigla": "NR-1 (atualizada 2022)",
+      "tipo": "norma_regulamentar",
+      "artigos_chave": ["1.5.3", "1.5.4", "Anexo I"],
+      "ementa": "Disposições gerais de gerenciamento de riscos ocupacionais. Inclui riscos psicossociais, organização do trabalho, uso de tecnologia e IA no ambiente laboral.",
+      "status": "vigente",
+      "temas": ["trabalho", "ia", "dados_pessoais"],
+      "orgao": "Ministério do Trabalho e Emprego",
+      "ano": 2022
+    },
+    {
+      "id": "stf_adimc",
+      "nome": "ADI 5527 — STF (Marco Civil)",
+      "sigla": "STF — ADI 5527",
+      "tipo": "jurisprudencia",
+      "artigos_chave": [],
+      "ementa": "Declaração de constitucionalidade do art. 12 do Marco Civil. Validade das sanções civis por descumprimento de guarda de dados.",
+      "status": "vigente",
+      "temas": ["internet", "dados_pessoais"],
+      "orgao": "STF",
+      "ano": 2019
+    },
+    {
+      "id": "stj_resp",
+      "nome": "REsp 1.777.780 — STJ (dados pessoais e dano moral)",
+      "sigla": "STJ — REsp 1.777.780",
+      "tipo": "jurisprudencia",
+      "artigos_chave": [],
+      "ementa": "Vazamento de dados pessoais gera dano moral in re ipsa. Precedente relevante para responsabilização civil pós-LGPD.",
+      "status": "vigente",
+      "temas": ["dados_pessoais"],
+      "orgao": "STJ",
+      "ano": 2020
+    },
+    {
+      "id": "stj_resp_plat",
+      "nome": "REsp 1.907.924 — STJ (responsabilidade de plataformas)",
+      "sigla": "STJ — REsp 1.907.924",
+      "tipo": "jurisprudencia",
+      "artigos_chave": [],
+      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil.",
+      "status": "vigente",
+      "temas": ["internet", "menores"],
+      "orgao": "STJ",
+      "ano": 2021
+    },
+    {
+      "id": "anpd",
+      "nome": "Autoridade Nacional de Proteção de Dados",
+      "sigla": "ANPD",
+      "tipo": "orgao",
+      "artigos_chave": [],
+      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil.",
+      "status": "vigente",
+      "temas": ["dados_pessoais"],
+      "orgao": "Governo Federal",
+      "ano": 2020
+    }
+  ]
+}
