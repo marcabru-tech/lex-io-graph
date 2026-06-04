@@ -6,6 +6,7 @@ com filtros por tema e hierarquia normativa.
 """
 
 import streamlit as st
+import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
@@ -50,7 +51,7 @@ if len(G.nodes) == 0:
 col1, col2, col3 = st.columns(3)
 col1.metric("Nós visíveis", len(G.nodes))
 col2.metric("Conexões visíveis", len(G.edges))
-col3.metric("Componentes conectados", len(list(G.to_undirected().subgraph(c) for c in G.to_undirected().connected_components())))
+col3.metric("Componentes conectados", nx.number_connected_components(G.to_undirected()))
 
 # ---- Gerar visualização Pyvis ----
 net = Network(
