@@ -51,7 +51,7 @@ if len(G.nodes) == 0:
 col1, col2, col3 = st.columns(3)
 col1.metric("Nós visíveis", len(G.nodes))
 col2.metric("Conexões visíveis", len(G.edges))
-col3.metric("Componentes conectados", nx.number_connected_components(G.to_undirected()))
+col3.metric("Componentes conectados", len(list(nx.connected_components(nx.Graph(G)))))
 
 # ---- Gerar visualização Pyvis ----
 net = Network(
