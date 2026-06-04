@@ -111,9 +111,9 @@ por legislação ordinária, projetos de lei e jurisprudência dos tribunais sup
 
 **Foco de aplicação:** empresas que contratam desenvolvedores júnior e precisam mitigar
 riscos regulatórios em suas entregas técnicas.
-
-#### Normas mapeadas
 """)
+
+st.markdown("#### Normas mapeadas")
 
 normas_data = load_json("normas.json")["nodes"]
 for node in normas_data:
@@ -127,9 +127,16 @@ for node in normas_data:
     else:
         pill_class = "pill--io"
 
+    artigos = " · ".join(node.get("artigos_chave", []))
+    artigos_html = f"<br><span style='font-size:12px; color:#706a60;'>{artigos}</span>" if artigos else ""
+
     st.markdown(
+        f"<div style='padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.06);'>"
         f"<span class='pill {pill_class}'>{node['sigla']}</span> "
-        f"<strong>{node['nome']}</strong> — {node['ementa'][:120]}...",
+        f"<strong>{node['nome']}</strong>"
+        f"<br><span style='font-size:13px; color:#b8b2a6;'>{node['ementa']}</span>"
+        f"{artigos_html}"
+        f"</div>",
         unsafe_allow_html=True,
     )
 
