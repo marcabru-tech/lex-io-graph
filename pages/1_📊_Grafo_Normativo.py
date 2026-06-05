@@ -164,6 +164,7 @@ EDGE_TYPE_SHORT = {
     "interpreta": "INTERPRETA",
 }
 
+# ---- Adicionar nós ----
 for node_id in G.nodes:
     d = G.nodes[node_id]
     node_type = d.get("tipo", "")
@@ -207,6 +208,7 @@ for node_id in G.nodes:
         shape="dot",
     )
 
+# ---- Adicionar arestas ----
 for u, v, d in G.edges(data=True):
     edge_tipo = d.get("tipo", "")
     edge_label = EDGE_TYPE_SHORT.get(edge_tipo, edge_tipo.upper())
@@ -245,16 +247,15 @@ for u, v, d in G.edges(data=True):
         },
     )
 
+# ---- Salvar e injetar CSS nos botões de navegação ----
 tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
 net.save_graph(tmp.name)
 
 with open(tmp.name, "r", encoding="utf-8") as f:
     html_content = f.read()
 
-# ---- CSS premium para botoes de navegacao ----
 nav_css = """
 <style>
-    /* Container dos botoes de navegacao */
     .vis-navigation {
         position: absolute !important;
         bottom: 16px !important;
@@ -264,8 +265,6 @@ nav_css = """
         align-items: center !important;
         gap: 2px !important;
     }
-
-    /* Linha de botoes */
     .vis-navigation .vis-button {
         background: rgba(15, 14, 24, 0.92) !important;
         backdrop-filter: blur(8px) !important;
@@ -281,14 +280,11 @@ nav_css = """
         padding: 0 !important;
         margin: 1px !important;
     }
-
     .vis-navigation .vis-button:hover {
         background: rgba(212, 168, 83, 0.2) !important;
         border-color: #d4a853 !important;
         transform: scale(1.08) !important;
     }
-
-    /* Setas e icones internos do vis.js */
     .vis-navigation .vis-button:after,
     .vis-navigation .vis-button .vis-up,
     .vis-navigation .vis-button .vis-down,
@@ -302,7 +298,6 @@ nav_css = """
         font-weight: bold !important;
         opacity: 1 !important;
     }
-
     .vis-navigation .vis-button:hover:after,
     .vis-navigation .vis-button:hover .vis-up,
     .vis-navigation .vis-button:hover .vis-down,
@@ -313,8 +308,6 @@ nav_css = """
     .vis-navigation .vis-button:hover .vis-zoomExtends {
         color: #ffffff !important;
     }
-
-    /* Linha horizontal de botoes (setas direcionais) */
     .vis-navigation .vis-button.vis-up:after { content: "▲" !important; }
     .vis-navigation .vis-button.vis-down:after { content: "▼" !important; }
     .vis-navigation .vis-button.vis-left:after { content: "◀" !important; }
@@ -322,20 +315,11 @@ nav_css = """
     .vis-navigation .vis-button.vis-zoomIn:after { content: "+" !important; font-size: 20px !important; }
     .vis-navigation .vis-button.vis-zoomOut:after { content: "−" !important; font-size: 20px !important; }
     .vis-navigation .vis-button.vis-zoomExtends:after { content: "⌂" !important; font-size: 16px !important; }
-
-    /* Agrupamento visual */
     .vis-navigation > div {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 2px !important;
-    }
-
-    /* Linha separadora entre zoom e pan */
-    .vis-navigation .vis-separator-line {
-        border-bottom: 1px solid rgba(212, 168, 83, 0.2) !important;
-        width: 100% !important;
-        margin: 4px 0 !important;
     }
 </style>
 """
