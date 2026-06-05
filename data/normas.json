@@ -5,46 +5,176 @@
       "nome": "Constituição Federal de 1988",
       "sigla": "CF/88",
       "tipo": "constituicao",
-      "artigos_chave": ["Art. 5º, LX", "Art. 5º, XII", "Art. 5º, XIV", "Art. 220"],
+      "artigos_chave": [
+        "Art. 5º, LX",
+        "Art. 5º, XII",
+        "Art. 5º, XIV",
+        "Art. 220"
+      ],
       "ementa": "Fundamento supremo do ordenamento jurídico. Garante direitos fundamentais à privacidade, intimidade, sigilo de dados e comunicação.",
       "status": "vigente",
-      "temas": ["dados_pessoais", "internet", "acesso"],
+      "temas": [
+        "dados_pessoais",
+        "internet",
+        "acesso"
+      ],
       "orgao": "Congresso Nacional",
-      "ano": 1988
+      "ano": 1988,
+      "historia": "Promulgada em 5 de outubro de 1988, após 21 anos de ditadura militar (1964–1985). Conhecida como 'Constituição Cidadã' — expressão de Ulysses Guimarães, presidente da Assembleia Nacional Constituinte. Incorporou direitos fundamentais de três gerações: civis/políticos (1ª), sociais/econômicos (2ª) e difusos/coletivos (3ª). Emenda Constitucional 115/2022 incluiu o direito à proteção de dados pessoais (art. 5º, LXXIX) como direito fundamental autônomo.",
+      "direito_comparado": "Influenciada pela Constituição portuguesa de 1976 e pela Lei Fundamental alemã (Grundgesetz, 1949). O modelo de controle de constitucionalidade é híbrido: difuso (inspirado nos EUA, 1803 — Marbury v. Madison) e concentrado (inspirado na Áustria de Kelsen, 1920). Tradição romano-germânica.",
+      "autores": [
+        {
+          "nome": "Hans Kelsen",
+          "datas": "1881–1973",
+          "obra": "Teoria Pura do Direito (Reine Rechtslehre), 1934",
+          "contribuicao": "Hierarquia normativa — a Constituição como norma fundamental (Grundnorm) que confere validade a todo o ordenamento"
+        },
+        {
+          "nome": "José Afonso da Silva",
+          "datas": "1930–",
+          "obra": "Curso de Direito Constitucional Positivo, 1978",
+          "contribuicao": "Principal doutrinador da CF/88 no Brasil — classificação das normas constitucionais por eficácia"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Lex fundamentalis",
+          "traducao_literal": "Lei fundamental",
+          "traducao_juridica": "Norma suprema do ordenamento",
+          "contexto": "Direito romano medieval — a lei que não pode ser derrogada por norma inferior"
+        },
+        {
+          "original": "Lex superior derogat inferiori",
+          "traducao_literal": "A lei superior derroga a inferior",
+          "traducao_juridica": "Critério de resolução de antinomia por hierarquia normativa",
+          "contexto": "Brocardo da teoria geral do direito — aplicado pelo STF no controle de constitucionalidade"
+        }
+      ]
     },
     {
       "id": "lgpd",
       "nome": "Lei Geral de Proteção de Dados Pessoais",
       "sigla": "LGPD — Lei 13.709/2018",
       "tipo": "lei",
-      "artigos_chave": ["Art. 1º", "Art. 7º", "Art. 11", "Art. 14", "Art. 41", "Art. 50"],
+      "artigos_chave": [
+        "Art. 1º",
+        "Art. 7º",
+        "Art. 11",
+        "Art. 14",
+        "Art. 41",
+        "Art. 50"
+      ],
       "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. Dados de menores exigem consentimento específico do responsável legal.",
       "status": "vigente",
-      "temas": ["dados_pessoais", "menores", "ia", "trabalho"],
+      "temas": [
+        "dados_pessoais",
+        "menores",
+        "ia",
+        "trabalho"
+      ],
       "orgao": "Congresso Nacional / ANPD",
-      "ano": 2018
+      "ano": 2018,
+      "historia": "Sancionada em 14 de agosto de 2018 (Lei 13.709/2018), com vigência plena a partir de agosto de 2020 e sanções desde agosto de 2021. Resultado de 8 anos de debates no Congresso Nacional. Inspirada diretamente no GDPR (General Data Protection Regulation — Regulamento Geral de Proteção de Dados) europeu (2016). Criou a ANPD (Autoridade Nacional de Proteção de Dados) como autarquia federal independente.",
+      "direito_comparado": "LGPD (Brasil, 2018) ↔ GDPR — General Data Protection Regulation (União Europeia, 2016) ↔ CCPA — California Consumer Privacy Act (Califórnia/EUA, 2018). Abordagem glocal (global + local, Robertson, 1990s): o GDPR tem efeito extraterritorial — empresas brasileiras que tratam dados de cidadãos europeus estão sujeitas ao GDPR simultaneamente à LGPD. A CCPA influenciou a discussão sobre o direito de não venda de dados pessoais. Tradição romano-germânica no Brasil e na Europa continental; abordagem setorial nos EUA (common law).",
+      "autores": [
+        {
+          "nome": "Laura Schertel Mendes",
+          "datas": "1983–",
+          "obra": "Privacidade, Proteção de Dados e Defesa do Consumidor, 2014",
+          "contribuicao": "Principal doutrinadora brasileira de proteção de dados — influenciou diretamente o texto da LGPD"
+        },
+        {
+          "nome": "Danilo Doneda",
+          "datas": "1974–2022",
+          "obra": "Da Privacidade à Proteção de Dados Pessoais, 2006",
+          "contribuicao": "Obra fundadora do direito de proteção de dados no Brasil — base doutrinária da LGPD"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Habeas data",
+          "traducao_literal": "Que tenha os dados",
+          "traducao_juridica": "Ação constitucional para acesso e retificação de dados pessoais em registros públicos (CF/88 art. 5º, LXXII)",
+          "contexto": "Remédio constitucional brasileiro criado pela CF/88 — precursor do direito de acesso da LGPD"
+        },
+        {
+          "original": "In dubio pro libertate",
+          "traducao_literal": "Na dúvida, a favor da liberdade",
+          "traducao_juridica": "Em caso de dúvida interpretativa, prevalece a interpretação mais favorável aos direitos do titular dos dados",
+          "contexto": "Princípio aplicado pela ANPD na interpretação da LGPD"
+        }
+      ]
     },
     {
       "id": "marco_civil",
       "nome": "Marco Civil da Internet",
       "sigla": "Lei 12.965/2014",
       "tipo": "lei",
-      "artigos_chave": ["Art. 2º", "Art. 3º", "Art. 7º", "Art. 11", "Art. 13", "Art. 15"],
-      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores.",
-      "status": "vigente",
-      "temas": ["internet", "dados_pessoais", "acesso"],
+      "artigos_chave": [
+        "Art. 2º",
+        "Art. 3º",
+        "Art. 7º",
+        "Art. 11",
+        "Art. 13",
+        "Art. 15",
+        "Art. 19 (parcialmente inconstitucional — STF Tema 987)"
+      ],
+      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores. Art. 19 declarado parcialmente inconstitucional pelo STF (RE 1.037.396, Tema 987, jun./2025) — embargos de declaração pendentes.",
+      "status": "vigente_com_ressalva",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "acesso"
+      ],
       "orgao": "Congresso Nacional",
-      "ano": 2014
+      "ano": 2014,
+      "historia": "Lei 12.965/2014, sancionada em 23 de abril de 2014 — Dia Mundial da Internet. Resultado de processo legislativo participativo inédito: construído via plataforma online com participação da sociedade civil (2009–2014). Regulamentado pelo Decreto 8.771/2016, parcialmente revogado pelo Decreto 12.975/2026. Art. 19 declarado parcialmente inconstitucional pelo STF (Supremo Tribunal Federal) no Tema 987 (RE 1.037.396, jun./2025) — embargos de declaração pendentes. Decretos 12.975 e 12.976/2026 regulamentam o regime pós-Tema 987, gerando crise institucional tripartite: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "direito_comparado": "O Marco Civil foi pioneiro mundial em legislação de neutralidade de rede (net neutrality) — antecipou debates que ainda ocorrem nos EUA. Comparação glocal (global + local, Robertson, 1990s): EUA adotam abordagem setorial e jurisprudencial (First Amendment, Section 230 do Communications Decency Act, 1996); UE (União Europeia) tem o Digital Services Act — DSA (2022); Brasil tem o Marco Civil + regime pós-Tema 987. O art. 19 do Marco Civil era análogo à Section 230 dos EUA — ambos protegem plataformas de responsabilidade por conteúdo de terceiros; ambos estão sob pressão simultânea.",
+      "autores": [
+        {
+          "nome": "Carlos Affonso Pereira de Souza",
+          "datas": "1978–",
+          "obra": "Responsabilidade Civil dos Provedores de Internet, 2007",
+          "contribuicao": "Principal doutrinador do Marco Civil — um dos redatores do anteprojeto"
+        },
+        {
+          "nome": "Ronaldo Lemos",
+          "datas": "1973–",
+          "obra": "Direito, Tecnologia e Cultura, 2005",
+          "contribuicao": "Co-coordenador do processo participativo do Marco Civil — fundador do Centro de Tecnologia e Sociedade (CTS/FGV)"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Nemo iudex in causa sua",
+          "traducao_literal": "Ninguém é juiz em causa própria",
+          "traducao_juridica": "Princípio do juiz natural — aplicado no debate sobre auto-regulação vs. regulação estatal das plataformas digitais",
+          "contexto": "Brocardo do direito romano — central no debate sobre quem deve moderar conteúdo: plataforma, Estado ou judiciário"
+        },
+        {
+          "original": "In dubio pro libertate expressionis",
+          "traducao_literal": "Na dúvida, a favor da liberdade de expressão",
+          "traducao_juridica": "Interpretação favorável à liberdade de expressão em casos ambíguos de moderação de conteúdo",
+          "contexto": "Princípio hermenêutico aplicado ao art. 19 do Marco Civil"
+        }
+      ]
     },
     {
       "id": "eca",
       "nome": "Estatuto da Criança e do Adolescente",
       "sigla": "ECA — Lei 8.069/1990",
       "tipo": "lei",
-      "artigos_chave": ["Art. 3º", "Art. 17", "Art. 75", "Art. 143"],
+      "artigos_chave": [
+        "Art. 3º",
+        "Art. 17",
+        "Art. 75",
+        "Art. 143"
+      ],
       "ementa": "Doutrina da proteção integral. Prioridade absoluta na proteção de crianças e adolescentes em todos os contextos, inclusive digital.",
       "status": "vigente",
-      "temas": ["menores"],
+      "temas": [
+        "menores"
+      ],
       "orgao": "Congresso Nacional / ECA-TISEA",
       "ano": 1990
     },
@@ -53,46 +183,214 @@
       "nome": "Estatuto da Criança e do Adolescente Digital",
       "sigla": "ECA Digital — Lei 15.211/2025",
       "tipo": "lei",
-      "artigos_chave": ["Art. 4º", "Art. 10", "Art. 12", "Art. 16", "Art. 18"],
+      "artigos_chave": [
+        "Art. 4º",
+        "Art. 10",
+        "Art. 12",
+        "Art. 16",
+        "Art. 18"
+      ],
       "ementa": "Regula a proteção de crianças e adolescentes em ambiente digital. Consentimento parental qualificado, design protegido, proibição de dark patterns, obrigatória verificação de idade.",
       "status": "vigente",
-      "temas": ["menores", "internet", "dados_pessoais", "ia"],
+      "temas": [
+        "menores",
+        "dados_pessoais"
+      ],
       "orgao": "Congresso Nacional / ECA-TISEA",
-      "ano": 2025
+      "ano": 2025,
+      "historia": "Lei 15.211/2025 — resultado de processo legislativo acelerado após casos emblemáticos de violência digital contra crianças e adolescentes (2023–2024). Consolidou e ampliou proteções esparsas em diversas normas. Primeira lei brasileira a proibir expressamente dark patterns direcionados a menores. Entrou em vigor com implementação progressiva — plataformas tiveram 180 dias para adequação.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): Children's Online Privacy Protection Act — COPPA (EUA, 1998, atualizado 2013); Age Appropriate Design Code — Children's Code (Reino Unido, 2021); Digital Services Act — DSA (UE, 2022) com proteções específicas para menores. O ECA Digital é o mais abrangente da América Latina.",
+      "autores": [
+        {
+          "nome": "Luciano Mendes de Almeida",
+          "datas": "1950–",
+          "obra": "ECA Comentado, 1992",
+          "contribuicao": "Doutrina fundadora do ECA — base para a proteção integral que o ECA Digital estende ao ambiente digital"
+        },
+        {
+          "nome": "Caitlin Mulholland",
+          "datas": "1978–",
+          "obra": "Responsabilidade Civil por Danos na Internet, 2018",
+          "contribuicao": "Doutrinadora da responsabilidade digital com foco em proteção de vulneráveis"
+        }
+      ],
+      "latim": [
+        {
+          "original": "In dubio pro infante",
+          "traducao_literal": "Na dúvida, a favor da criança",
+          "traducao_juridica": "Princípio da proteção integral — em qualquer interpretação que envolva menores, prevalece o interesse superior da criança",
+          "contexto": "Doutrina da proteção integral (ECA art. 3º) elevada ao ambiente digital pelo ECA Digital"
+        },
+        {
+          "original": "Parens patriae",
+          "traducao_literal": "Pai da pátria",
+          "traducao_juridica": "Doutrina pela qual o Estado assume a tutela protetiva de quem não pode se proteger — fundamenta a intervenção regulatória sobre plataformas que atingem menores",
+          "contexto": "Common law inglês — incorporado à doutrina brasileira de proteção integral"
+        }
+      ]
     },
     {
       "id": "pl_ia",
       "nome": "Projeto de Lei sobre Inteligência Artificial",
       "sigla": "PL 2.338/2023",
       "tipo": "pl",
-      "artigos_chave": ["Art. 5º", "Art. 12", "Art. 14", "Art. 16", "Art. 19"],
+      "artigos_chave": [
+        "Art. 5º",
+        "Art. 12",
+        "Art. 14",
+        "Art. 16",
+        "Art. 19"
+      ],
       "ementa": "Marco regulatório para IA no Brasil. Classificação por risco, obrigações de transparência, direito à explicação, impacto em direitos fundamentais.",
       "status": "tramitacao",
-      "temas": ["ia", "dados_pessoais", "trabalho"],
+      "temas": [
+        "ia",
+        "dados_pessoais",
+        "trabalho"
+      ],
       "orgao": "Senado Federal",
-      "ano": 2023
+      "ano": 2023,
+      "historia": "PL 2.338/2023 — proposto pelo Sen. Rodrigo Pacheco com base em anteprojeto elaborado por comissão de juristas coordenada pelo Min. Ricardo Villas Bôas Cueva (STJ). Em tramitação no Senado Federal desde 2023. Inspirado no EU AI Act (União Europeia, 2024) — primeiro marco regulatório de IA do mundo. Debate central: abordagem baseada em risco vs. abordagem baseada em direitos. Tensão com LGPD (Lei Geral de Proteção de Dados Pessoais) sobre sobreposição de regimes.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (2024) — abordagem por risco, proibições absolutas para IA de alto risco; Executive Order on AI — EUA (2023) — abordagem voluntária; China — Regulamento de IA Generativa (2023) — controle centralizado. PL 2.338/2023 é o mais avançado da América Latina e dialoga diretamente com o EU AI Act.",
+      "autores": [
+        {
+          "nome": "Fabiano Hartmann Peixoto",
+          "datas": "1974–",
+          "obra": "Direito e Inteligência Artificial, 2019",
+          "contribuicao": "Pioneiro do direito de IA no Brasil — um dos consultores do processo legislativo do PL 2.338/2023"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Machina non habet animum",
+          "traducao_literal": "A máquina não tem alma",
+          "traducao_juridica": "Princípio implícito no debate sobre personalidade jurídica da IA — a IA não é sujeito de direitos nem de deveres, apenas instrumento",
+          "contexto": "Princípio derivado da doutrina jurídica romana — res (coisa) vs. persona (sujeito) — central na discussão sobre responsabilidade por danos causados por IA"
+        }
+      ]
+    },
+    {
+      "id": "pl_cc_digital",
+      "nome": "Reforma do Código Civil — Livro VI: Direito Civil Digital",
+      "sigla": "PL 4/2025",
+      "tipo": "pl",
+      "artigos_chave": [
+        "Arts. 2.027-A a 2.027-CH",
+        "Livro VI",
+        "Responsabilidade civil de plataformas",
+        "Personalidade digital",
+        "Assinatura eletrônica",
+        "Patrimônio digital"
+      ],
+      "ementa": "Proposta de reforma abrangente do Código Civil (Lei 10.406/2002), incluindo o Livro VI — Do Direito Civil Digital. Criado por Comissão de Juristas presidida pelo Min. Luís Felipe Salomão (STJ). Protocolado pelo Sen. Rodrigo Pacheco em jan./2025. Tensão com LGPD, Marco Civil e ECA Digital apontada pelo CGI.br e ANPD. Em tramitação no Senado Federal.",
+      "status": "tramitacao",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "ia"
+      ],
+      "orgao": "Senado Federal",
+      "ano": 2025
     },
     {
       "id": "nr1",
       "nome": "Norma Regulamentadora de Segurança e Saúde no Trabalho",
-      "sigla": "NR-1 (atualizada 2022)",
+      "sigla": "NR-1 (Portaria MTE 1.419/2024, vigente desde 26/05/2026)",
       "tipo": "norma_regulamentar",
-      "artigos_chave": ["1.5.3", "1.5.4", "Anexo I"],
-      "ementa": "Disposições gerais de gerenciamento de riscos ocupacionais. Inclui riscos psicossociais, organização do trabalho, uso de tecnologia e IA no ambiente laboral.",
+      "artigos_chave": [
+        "1.5.3",
+        "1.5.4",
+        "1.5.4.4 alínea e",
+        "Anexo I"
+      ],
+      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. Inclui IA e algoritmos como fatores de risco.",
       "status": "vigente",
-      "temas": ["trabalho", "ia", "dados_pessoais"],
+      "temas": [
+        "trabalho",
+        "ia",
+        "dados_pessoais"
+      ],
       "orgao": "Ministério do Trabalho e Emprego",
-      "ano": 2022
+      "ano": 2026,
+      "historia": "NR-1 (Norma Regulamentadora 1) — norma geral de segurança e saúde no trabalho, base do sistema de NRs do Brasil. Portaria MTE (Ministério do Trabalho e Emprego) 1.419/2024 incluiu obrigatoriamente os FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva desde 26/05/2026 (Portaria MTE 765/2025 encerrou período educativo). Primeira norma trabalhista brasileira a incluir explicitamente IA (Inteligência Artificial) e algoritmos como fatores de risco psicossocial.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (União Europeia, 2024) classifica sistemas de IA de RH como alto risco; OSHA (Occupational Safety and Health Administration — EUA) não tem norma equivalente sobre riscos psicossociais; ISO 45003:2021 (gestão de riscos psicossociais) é a referência internacional que influenciou a revisão da NR-1.",
+      "autores": [
+        {
+          "nome": "Sebastião Geraldo de Oliveira",
+          "datas": "1951–",
+          "obra": "Proteção Jurídica à Saúde do Trabalhador, 1996",
+          "contribuicao": "Principal doutrinador de saúde do trabalho no Brasil — referência na fundamentação dos riscos psicossociais"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Alterum non laedere",
+          "traducao_literal": "Não causar dano a outrem",
+          "traducao_juridica": "Princípio geral do direito — fundamenta a responsabilidade do empregador pela saúde psicossocial do trabalhador",
+          "contexto": "Um dos três preceitos do direito romano de Ulpiano (170–228 d.C.) — base da responsabilidade civil"
+        }
+      ]
+    },
+    {
+      "id": "stf_tema987",
+      "nome": "RE 1.037.396 — STF (art. 19 Marco Civil, Tema 987)",
+      "sigla": "STF — RE 1.037.396 / Tema 987",
+      "tipo": "jurisprudencia",
+      "artigos_chave": [
+        "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
+      ],
+      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (RE 1.037.396, Tema 987, jun./2025). Embargos pendentes. Regulamentado pelos Decretos 12.975 e 12.976/2026. 24+ PDLs da oposição tentam derrubar os decretos — crise institucional tripartite.",
+      "status": "pendente_embargos",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "menores"
+      ],
+      "orgao": "STF",
+      "ano": 2025,
+      "historia": "RE 1.037.396 (Recurso Extraordinário) com repercussão geral — Tema 987. Julgado pelo Plenário do STF (Supremo Tribunal Federal) em junho de 2025. Relatora: Min. Rosa Weber (aposentada) — assumido pela Min. Alexandre de Moraes. Declarou a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Lei 12.965/2014). Embargos de declaração pendentes — acórdão não transitou em julgado. Regulamentado pelos Decretos 12.975 e 12.976/2026, que geraram crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): nos EUA, a Section 230 do Communications Decency Act (1996) está sob pressão similar — múltiplos projetos no Congresso americano para reformá-la. Na UE (União Europeia), o DSA (Digital Services Act, 2022) já superou o modelo do art. 19 ao impor deveres proativos às plataformas. O Brasil, via STF + Executivo, está convergindo para o modelo europeu sem aprovação legislativa.",
+      "autores": [
+        {
+          "nome": "Montesquieu",
+          "datas": "1689–1755",
+          "obra": "Do Espírito das Leis (De l'Esprit des Lois), 1748",
+          "contribuicao": "Teoria da separação dos poderes — o Tema 987 e os decretos subsequentes colocam em xeque o equilíbrio entre judiciário, executivo e legislativo que Montesquieu sistematizou"
+        },
+        {
+          "nome": "Ronald Dworkin",
+          "datas": "1931–2013",
+          "obra": "O Império do Direito (Law's Empire), 1986",
+          "contribuicao": "Teoria da integridade — o Tema 987 como romance em cadeia: continuidade interpretativa da proteção de direitos fundamentais, não ruptura"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Ubi jus ibi remedium",
+          "traducao_literal": "Onde há direito, há remédio",
+          "traducao_juridica": "Onde há violação de direito fundamental, deve haver tutela jurisdicional efetiva — fundamenta a intervenção do STF ante a omissão do legislativo",
+          "contexto": "Brocardo do common law inglês incorporado à tradição romano-germânica — central na fundamentação do ativismo judicial no Tema 987"
+        },
+        {
+          "original": "Separatio potestatum",
+          "traducao_literal": "Separação dos poderes",
+          "traducao_juridica": "Princípio constitucional (CF/88 art. 2º) tensionado pelo Tema 987 — o judiciário legislou ao declarar inconstitucionalidade progressiva sem alternativa normativa",
+          "contexto": "Princípio sistematizado por Montesquieu (1748), constitucionalizado em 1788 (EUA) e 1824 (Brasil)"
+        }
+      ]
     },
     {
       "id": "stf_adimc",
-      "nome": "ADI 5527 — STF (Marco Civil)",
+      "nome": "ADI 5527 — STF (Marco Civil, art. 12)",
       "sigla": "STF — ADI 5527",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Declaração de constitucionalidade do art. 12 do Marco Civil. Validade das sanções civis por descumprimento de guarda de dados.",
       "status": "vigente",
-      "temas": ["internet", "dados_pessoais"],
+      "temas": [
+        "internet",
+        "dados_pessoais"
+      ],
       "orgao": "STF",
       "ano": 2019
     },
@@ -104,7 +402,9 @@
       "artigos_chave": [],
       "ementa": "Vazamento de dados pessoais gera dano moral in re ipsa. Precedente relevante para responsabilização civil pós-LGPD.",
       "status": "vigente",
-      "temas": ["dados_pessoais"],
+      "temas": [
+        "dados_pessoais"
+      ],
       "orgao": "STJ",
       "ano": 2020
     },
@@ -114,9 +414,12 @@
       "sigla": "STJ — REsp 1.907.924",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil.",
+      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil — precedente agora modulado pela inconstitucionalidade parcial declarada pelo STF (Tema 987/2025).",
       "status": "vigente",
-      "temas": ["internet", "menores"],
+      "temas": [
+        "internet",
+        "menores"
+      ],
       "orgao": "STJ",
       "ano": 2021
     },
@@ -126,11 +429,141 @@
       "sigla": "ANPD",
       "tipo": "orgao",
       "artigos_chave": [],
-      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil.",
+      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil. Emitiu nota técnica sobre sobreposição normativa do PL 4/2025 com LGPD e Marco Civil.",
       "status": "vigente",
-      "temas": ["dados_pessoais"],
+      "temas": [
+        "dados_pessoais"
+      ],
       "orgao": "Governo Federal",
       "ano": 2020
+    },
+    {
+      "id": "decreto_12975_2026",
+      "nome": "Decreto nº 12.975/2026 — Regulamentação do Marco Civil pós-STF",
+      "sigla": "Decreto 12.975/2026",
+      "tipo": "decreto",
+      "artigos_chave": [
+        "Responsabilidade sistêmica de plataformas",
+        "ANPD como fiscalizadora do MCI",
+        "Notice-and-takedown extrajudicial",
+        "Dados de anúncios para responsabilização"
+      ],
+      "ementa": "Atualiza a regulamentação do Marco Civil da Internet (revogando parcialmente o Decreto 8.771/2016) para operacionalizar a decisão do STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
+      "status": "vigente",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "menores"
+      ],
+      "orgao": "Presidência da República / ANPD",
+      "ano": 2026
+    },
+    {
+      "id": "decreto_12976_2026",
+      "nome": "Decreto nº 12.976/2026 — Proteção das mulheres no ambiente digital",
+      "sigla": "Decreto 12.976/2026",
+      "tipo": "decreto",
+      "artigos_chave": [
+        "Remoção rápida de conteúdo íntimo ilegal",
+        "Combate a deepfakes sexuais",
+        "Responsabilidade de plataformas por violência de gênero online",
+        "Integração com Pacto Nacional Brasil Contra o Feminicídio"
+      ],
+      "ementa": "Reforça a proteção das mulheres no ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
+      "status": "vigente",
+      "temas": [
+        "internet",
+        "menores",
+        "dados_pessoais"
+      ],
+      "orgao": "Presidência da República",
+      "ano": 2026
+    },
+    {
+      "id": "lei_15409_2026",
+      "nome": "Lei nº 15.409/2026 — Cadastro Nacional de Agressores (CNVM)",
+      "sigla": "Lei 15.409/2026",
+      "tipo": "lei",
+      "artigos_chave": [
+        "Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM)",
+        "Banco de dados estadual e federal",
+        "Localização de foragidos",
+        "Prevenção de reincidência"
+      ],
+      "ementa": "Institui o Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM), consolidando em tempo real dados de condenados por feminicídio, violência doméstica, assédio, violência psicológica e crimes correlatos. Vigência: 60 dias após 21/05/2026.",
+      "status": "vigente",
+      "temas": [
+        "menores",
+        "internet"
+      ],
+      "orgao": "Congresso Nacional",
+      "ano": 2026
+    },
+    {
+      "id": "pl_misoginia",
+      "nome": "PL 896/2023 — Criminalização da Misoginia (em tramitação na Câmara)",
+      "sigla": "PL 896/2023 (aprovado Senado — aguarda Câmara)",
+      "tipo": "pl",
+      "artigos_chave": [
+        "Altera Lei do Racismo (Lei 7.716/1989)",
+        "Inclui misoginia como crime de preconceito",
+        "Pena: 2 a 5 anos + multa",
+        "Misoginia: ódio ou aversão às mulheres"
+      ],
+      "ementa": "Tipifica a misoginia como crime de preconceito ou discriminação, inserindo-a na Lei do Racismo (Lei 7.716/1989). Aprovado pelo Senado em 24/03/2026 com 67 votos favoráveis e zero contrários (PL 896/2023, relatora Sen. Soraya Thronicke). Pendente de votação na Câmara dos Deputados — ainda não é lei. NÃO integra o pacote de 20/05/2026; é tramitação autônoma. Pena prevista: reclusão de 2 a 5 anos mais multa.",
+      "status": "tramitacao",
+      "temas": [
+        "internet",
+        "dados_pessoais"
+      ],
+      "orgao": "Câmara dos Deputados (pendente)",
+      "ano": 2026
+    },
+    {
+      "id": "magnifica_humanitas",
+      "nome": "Encíclica Magnifica Humanitas — Papa Leão XIV",
+      "sigla": "Magnifica Humanitas (Leão XIV, 25/05/2026)",
+      "tipo": "documento_internacional",
+      "artigos_chave": [
+        "Cap. I — Doutrina Social da Igreja e IA",
+        "Cap. IV — Ecologia da comunicação e verdade",
+        "IA deve ser 'desarmada' de lógicas de dominação",
+        "Transparência nos algoritmos de seleção de conteúdo",
+        "Proibição de IA autônoma em decisões sobre vida humana"
+      ],
+      "ementa": "Primeira encíclica integralmente dedicada à custódia da pessoa humana na era da IA (Inteligência Artificial). Leão XIV: 'A IA precisa ser desarmada, livre das lógicas que a transformam em instrumento de dominação, exclusão ou morte.' Pede regulamentação estatal da IA. Continuidade histórica: Leão XIII/Rerum Novarum (1891) → questão social da Revolução Industrial; Leão XIV/Magnifica Humanitas (2026) → questão social da IA. Lançada com presença de Chris Olah, cofundador da Anthropic.",
+      "status": "vigente",
+      "temas": [
+        "ia",
+        "dados_pessoais",
+        "internet"
+      ],
+      "orgao": "Santa Sé / Vaticano",
+      "ano": 2026,
+      "historia": "Apresentada em 25/05/2026 na Sala Nova do Sínodo, no Vaticano. Papa Leão XIV (primeiro papa norte-americano, eleito maio/2025) escolheu o nome Leão XIV pela continuidade com Leão XIII, autor da Rerum Novarum (1891) — que enfrentou os dilemas sociais da Revolução Industrial. O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic. Convergência histórica: na mesma semana de maio/2026, o Vaticano, o STF e o Executivo brasileiro convergiram independentemente no mesmo campo normativo sobre IA e plataformas digitais.",
+      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais de IA no trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
+      "autores": [
+        {
+          "nome": "Papa Leão XIV (Robert Francis Prevost)",
+          "datas": "1955–",
+          "obra": "Magnifica Humanitas, 2026",
+          "contribuicao": "Primeira encíclica papal inteiramente dedicada à IA — posiciona a Igreja Católica como ator normativo global no debate sobre regulação de tecnologia"
+        },
+        {
+          "nome": "Papa Leão XIII (Vincenzo Pecci)",
+          "datas": "1810–1903",
+          "obra": "Rerum Novarum, 1891",
+          "contribuicao": "Antecedente histórico direto — enfrentou os dilemas sociais da Revolução Industrial; inspirou o nome e a abordagem de Leão XIV sobre a IA"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Magnifica Humanitas",
+          "traducao_literal": "Magnífica Humanidade",
+          "traducao_juridica": "A grandiosidade da condição humana como critério normativo supremo — a IA deve servir à humanidade, nunca subjugá-la",
+          "contexto_romano": "Humanitas — conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e excelência humanas; incorporado ao direito natural medieval e ao magistério social católico"
+        }
+      ]
     }
   ]
 }
