@@ -20,6 +20,7 @@ NODE_COLORS = {
     "norma_regulamentar": "#e67e22", # laranja — regulamentar
     "jurisprudencia": "#c44b4b",    # vermelho — decisão
     "orgao": "#9b59b6",             # púrpura — institucional
+    "decreto": "#1abc9c",             # verde-esmeralda — ato do executivo
 }
 
 # ---- Cores por tipo de aresta ----
@@ -40,6 +41,7 @@ NODE_TYPE_LABELS = {
     "norma_regulamentar": "Norma Regulamentar",
     "jurisprudencia": "Jurisprudência",
     "orgao": "Órgão / Instituição",
+    "decreto": "Decreto / Ato do Executivo",
 }
 
 # ---- Labels de tipo de aresta ----
@@ -95,3 +97,20 @@ EMPRESAS_MODELO = [
         "descricao": "Tratamento de dados para profiling, cookies, remarketing — LGPD + Marco Civil",
     },
 ]
+
+# ---- Status especiais de normas ----
+STATUS_LABELS = {
+    "vigente": "Vigente",
+    "vigente_com_ressalva": "Vigente (com ressalva judicial)",
+    "tramitacao": "Em tramitação",
+    "pendente_embargos": "Julgado — Embargos pendentes",
+    "transitado_julgado": "Transitado em julgado",
+}
+
+STATUS_COLORS = {
+    "vigente": "#2ecc71",
+    "vigente_com_ressalva": "#e67e22",
+    "tramitacao": "#8b8b8b",
+    "pendente_embargos": "#c44b4b",
+    "transitado_julgado": "#3dc8e6",
+}

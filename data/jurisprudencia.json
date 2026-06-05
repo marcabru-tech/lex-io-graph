@@ -1,6 +1,17 @@
 {
   "jurisprudencia": [
     {
+      "id": "stf_tema987",
+      "tribunal": "STF",
+      "numero": "RE 1.037.396 (Tema 987 RG) + RE 1.057.258 (Tema 533)",
+      "ano": 2025,
+      "tema": "Inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet",
+      "normas_relacionadas": ["marco_civil", "cf88", "eca_digital"],
+      "resumo": "Plenário do STF declarou, por maioria, em junho de 2025, a inconstitucionalidade parcial e progressiva do art. 19 da Lei 12.965/2014 (Marco Civil da Internet). A norma, ao exigir ordem judicial específica como condição para responsabilização civil de plataformas por conteúdo de terceiros, não confere proteção suficiente a bens jurídicos constitucionais de alta relevância — direitos fundamentais e democracia. Enquanto não sobrevier nova legislação, o art. 19 permanece aplicável com interpretação conforme a Constituição. Embargos de declaração pendentes de julgamento — acórdão ainda não transitou em julgado.",
+      "impacto_dev_junior": "Plataformas digitais já podem ser responsabilizadas sem ordem judicial em casos de crimes graves e atos ilícitos evidentes, mesmo após notificação extrajudicial. Dev júnior que implementa sistemas de moderação, denúncia ou remoção de conteúdo precisa entender que o regime do art. 19 está em transição — implementar fluxos de notice-and-takedown extrajudicial é prudência de compliance.",
+      "status": "pendente_embargos"
+    },
+    {
       "id": "stf_adimc",
       "tribunal": "STF",
       "numero": "ADI 5527",
@@ -8,7 +19,8 @@
       "tema": "Constitucionalidade das sanções civis do Marco Civil",
       "normas_relacionadas": ["marco_civil", "cf88"],
       "resumo": "O Plenário do STF declarou a constitucionalidade do art. 12 do Marco Civil, que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações.",
-      "impacto_dev_junior": "Empresas que não mantêm logs conforme o Marco Civil estão sujeitas a sanções. Dev júnior precisa implementar mecanismos de retenção adequados."
+      "impacto_dev_junior": "Empresas que não mantêm logs conforme o Marco Civil estão sujeitas a sanções. Dev júnior precisa implementar mecanismos de retenção adequados.",
+      "status": "transitado_julgado"
     },
     {
       "id": "stj_resp",
@@ -18,7 +30,8 @@
       "tema": "Dano moral por vazamento de dados",
       "normas_relacionadas": ["lgpd"],
       "resumo": "Vazamento de dados pessoais gera dano moral in re ipsa, dispensando comprovação de efetivo prejuízo.",
-      "impacto_dev_junior": "Qualquer falha de segurança que exponha dados pode gerar indenização. Dev júnior precisa implementar criptografia, hash de senhas, HTTPS."
+      "impacto_dev_junior": "Qualquer falha de segurança que exponha dados pode gerar indenização. Dev júnior precisa implementar criptografia, hash de senhas, HTTPS.",
+      "status": "transitado_julgado"
     },
     {
       "id": "stj_resp_plat",
@@ -27,8 +40,9 @@
       "ano": 2021,
       "tema": "Responsabilidade de plataformas por conteúdo de terceiros",
       "normas_relacionadas": ["marco_civil", "eca"],
-      "resumo": "Plataformas digitais possuem dever de remoção de conteúdo ilícito após notificação. Interpretação dinâmica do art. 19 do Marco Civil.",
-      "impacto_dev_junior": "Sistemas de denúncia e moderação precisam ser implementados com fluxos claros. Dev júnior precisa entender o ciclo de notificação/remoção."
+      "resumo": "Plataformas digitais possuem dever de remoção de conteúdo ilícito após notificação. Interpretação dinâmica do art. 19 do Marco Civil — precedente a ser relido à luz da inconstitucionalidade parcial declarada pelo STF em 2025 (Tema 987).",
+      "impacto_dev_junior": "Sistemas de denúncia e moderação precisam ser implementados com fluxos claros. Dev júnior precisa entender o ciclo de notificação/remoção, agora ampliado para incluir vias extrajudiciais.",
+      "status": "transitado_julgado"
     },
     {
       "id": "trf4_lgpd_cookies",
@@ -38,7 +52,8 @@
       "tema": "Cookies e consentimento — LGPD",
       "normas_relacionadas": ["lgpd", "marco_civil"],
       "resumo": "Decisão que determinou a adequação de banners de cookies para conformidade com a LGPD, exigindo consentimento granular e não apenas aceitação genérica.",
-      "impacto_dev_junior": "Implementar banners de cookie que permitam consentimento por categoria (analytics, marketing, funcional). Não basta um botão 'aceitar todos'."
+      "impacto_dev_junior": "Implementar banners de cookie que permitam consentimento por categoria (analytics, marketing, funcional). Não basta um botão 'aceitar todos'.",
+      "status": "transitado_julgado"
     },
     {
       "id": "stj_menor_online",
@@ -48,7 +63,8 @@
       "tema": "Exposição de menor em redes sociais",
       "normas_relacionadas": ["eca", "lgpd", "eca_digital"],
       "resumo": "Responsabilização de plataforma por exposição indevida de imagem de menor em rede social. Aplicação da proteção integral do ECA ao ambiente digital.",
-      "impacto_dev_junior": "Features que envolvam imagem ou dados de menores exigem consentimento parental qualificado e design protegido. Dev júnior não pode tratar dados de menores como dados de adultos."
+      "impacto_dev_junior": "Features que envolvam imagem ou dados de menores exigem consentimento parental qualificado e design protegido. Dev júnior não pode tratar dados de menores como dados de adultos.",
+      "status": "transitado_julgado"
     }
   ]
 }

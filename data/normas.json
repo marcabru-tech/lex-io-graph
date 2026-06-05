@@ -5,10 +5,19 @@
       "nome": "Constituição Federal de 1988",
       "sigla": "CF/88",
       "tipo": "constituicao",
-      "artigos_chave": ["Art. 5º, LX", "Art. 5º, XII", "Art. 5º, XIV", "Art. 220"],
+      "artigos_chave": [
+        "Art. 5º, LX",
+        "Art. 5º, XII",
+        "Art. 5º, XIV",
+        "Art. 220"
+      ],
       "ementa": "Fundamento supremo do ordenamento jurídico. Garante direitos fundamentais à privacidade, intimidade, sigilo de dados e comunicação.",
       "status": "vigente",
-      "temas": ["dados_pessoais", "internet", "acesso"],
+      "temas": [
+        "dados_pessoais",
+        "internet",
+        "acesso"
+      ],
       "orgao": "Congresso Nacional",
       "ano": 1988
     },
@@ -17,10 +26,22 @@
       "nome": "Lei Geral de Proteção de Dados Pessoais",
       "sigla": "LGPD — Lei 13.709/2018",
       "tipo": "lei",
-      "artigos_chave": ["Art. 1º", "Art. 7º", "Art. 11", "Art. 14", "Art. 41", "Art. 50"],
+      "artigos_chave": [
+        "Art. 1º",
+        "Art. 7º",
+        "Art. 11",
+        "Art. 14",
+        "Art. 41",
+        "Art. 50"
+      ],
       "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. Dados de menores exigem consentimento específico do responsável legal.",
       "status": "vigente",
-      "temas": ["dados_pessoais", "menores", "ia", "trabalho"],
+      "temas": [
+        "dados_pessoais",
+        "menores",
+        "ia",
+        "trabalho"
+      ],
       "orgao": "Congresso Nacional / ANPD",
       "ano": 2018
     },
@@ -29,10 +50,22 @@
       "nome": "Marco Civil da Internet",
       "sigla": "Lei 12.965/2014",
       "tipo": "lei",
-      "artigos_chave": ["Art. 2º", "Art. 3º", "Art. 7º", "Art. 11", "Art. 13", "Art. 15"],
-      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores.",
-      "status": "vigente",
-      "temas": ["internet", "dados_pessoais", "acesso"],
+      "artigos_chave": [
+        "Art. 2º",
+        "Art. 3º",
+        "Art. 7º",
+        "Art. 11",
+        "Art. 13",
+        "Art. 15",
+        "Art. 19 (parcialmente inconstitucional — STF Tema 987)"
+      ],
+      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores. Art. 19 declarado parcialmente inconstitucional pelo STF (RE 1.037.396, Tema 987, jun./2025) — embargos de declaração pendentes.",
+      "status": "vigente_com_ressalva",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "acesso"
+      ],
       "orgao": "Congresso Nacional",
       "ano": 2014
     },
@@ -41,10 +74,17 @@
       "nome": "Estatuto da Criança e do Adolescente",
       "sigla": "ECA — Lei 8.069/1990",
       "tipo": "lei",
-      "artigos_chave": ["Art. 3º", "Art. 17", "Art. 75", "Art. 143"],
+      "artigos_chave": [
+        "Art. 3º",
+        "Art. 17",
+        "Art. 75",
+        "Art. 143"
+      ],
       "ementa": "Doutrina da proteção integral. Prioridade absoluta na proteção de crianças e adolescentes em todos os contextos, inclusive digital.",
       "status": "vigente",
-      "temas": ["menores"],
+      "temas": [
+        "menores"
+      ],
       "orgao": "Congresso Nacional / ECA-TISEA",
       "ano": 1990
     },
@@ -53,10 +93,21 @@
       "nome": "Estatuto da Criança e do Adolescente Digital",
       "sigla": "ECA Digital — Lei 15.211/2025",
       "tipo": "lei",
-      "artigos_chave": ["Art. 4º", "Art. 10", "Art. 12", "Art. 16", "Art. 18"],
+      "artigos_chave": [
+        "Art. 4º",
+        "Art. 10",
+        "Art. 12",
+        "Art. 16",
+        "Art. 18"
+      ],
       "ementa": "Regula a proteção de crianças e adolescentes em ambiente digital. Consentimento parental qualificado, design protegido, proibição de dark patterns, obrigatória verificação de idade.",
       "status": "vigente",
-      "temas": ["menores", "internet", "dados_pessoais", "ia"],
+      "temas": [
+        "menores",
+        "internet",
+        "dados_pessoais",
+        "ia"
+      ],
       "orgao": "Congresso Nacional / ECA-TISEA",
       "ano": 2025
     },
@@ -65,34 +116,97 @@
       "nome": "Projeto de Lei sobre Inteligência Artificial",
       "sigla": "PL 2.338/2023",
       "tipo": "pl",
-      "artigos_chave": ["Art. 5º", "Art. 12", "Art. 14", "Art. 16", "Art. 19"],
+      "artigos_chave": [
+        "Art. 5º",
+        "Art. 12",
+        "Art. 14",
+        "Art. 16",
+        "Art. 19"
+      ],
       "ementa": "Marco regulatório para IA no Brasil. Classificação por risco, obrigações de transparência, direito à explicação, impacto em direitos fundamentais.",
       "status": "tramitacao",
-      "temas": ["ia", "dados_pessoais", "trabalho"],
+      "temas": [
+        "ia",
+        "dados_pessoais",
+        "trabalho"
+      ],
       "orgao": "Senado Federal",
       "ano": 2023
     },
     {
+      "id": "pl_cc_digital",
+      "nome": "Reforma do Código Civil — Livro VI: Direito Civil Digital",
+      "sigla": "PL 4/2025",
+      "tipo": "pl",
+      "artigos_chave": [
+        "Arts. 2.027-A a 2.027-CH",
+        "Livro VI",
+        "Responsabilidade civil de plataformas",
+        "Personalidade digital",
+        "Assinatura eletrônica",
+        "Patrimônio digital"
+      ],
+      "ementa": "Proposta de reforma abrangente do Código Civil (Lei 10.406/2002), incluindo o Livro VI — Do Direito Civil Digital. Criado por Comissão de Juristas presidida pelo Min. Luís Felipe Salomão (STJ). Protocolado pelo Sen. Rodrigo Pacheco em jan./2025. Tensão com LGPD, Marco Civil e ECA Digital apontada pelo CGI.br e ANPD. Em tramitação no Senado Federal.",
+      "status": "tramitacao",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "ia"
+      ],
+      "orgao": "Senado Federal",
+      "ano": 2025
+    },
+    {
       "id": "nr1",
       "nome": "Norma Regulamentadora de Segurança e Saúde no Trabalho",
-      "sigla": "NR-1 (atualizada 2022)",
+      "sigla": "NR-1 (Portaria MTE 1.419/2024, vigente desde 26/05/2026)",
       "tipo": "norma_regulamentar",
-      "artigos_chave": ["1.5.3", "1.5.4", "Anexo I"],
-      "ementa": "Disposições gerais de gerenciamento de riscos ocupacionais. Inclui riscos psicossociais, organização do trabalho, uso de tecnologia e IA no ambiente laboral.",
+      "artigos_chave": [
+        "1.5.3",
+        "1.5.4",
+        "1.5.4.4 alínea e",
+        "Anexo I"
+      ],
+      "ementa": "Disposições gerais de gerenciamento de riscos ocupacionais. Portaria MTE 1.419/2024 incluiu obrigatoriamente Fatores de Riscos Psicossociais Relacionados ao Trabalho (FRPRT) no PGR. Vigência: 26 de maio de 2026 (prorrogada pela Portaria MTE 765/2025). Inclui riscos psicossociais, organização do trabalho, uso de tecnologia e IA no ambiente laboral.",
       "status": "vigente",
-      "temas": ["trabalho", "ia", "dados_pessoais"],
+      "temas": [
+        "trabalho",
+        "ia",
+        "dados_pessoais"
+      ],
       "orgao": "Ministério do Trabalho e Emprego",
-      "ano": 2022
+      "ano": 2026
+    },
+    {
+      "id": "stf_tema987",
+      "nome": "RE 1.037.396 — STF (art. 19 Marco Civil, Tema 987)",
+      "sigla": "STF — RE 1.037.396 / Tema 987",
+      "tipo": "jurisprudencia",
+      "artigos_chave": [
+        "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
+      ],
+      "ementa": "Plenário do STF declarou, por maioria, a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (jun./2025). A exigência de ordem judicial prévia para responsabilização de plataformas por conteúdo de terceiros não confere proteção suficiente a direitos fundamentais e à democracia. Embargos de declaração pendentes de julgamento — efeitos ainda não transitaram em julgado.",
+      "status": "pendente_embargos",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "menores"
+      ],
+      "orgao": "STF",
+      "ano": 2025
     },
     {
       "id": "stf_adimc",
-      "nome": "ADI 5527 — STF (Marco Civil)",
+      "nome": "ADI 5527 — STF (Marco Civil, art. 12)",
       "sigla": "STF — ADI 5527",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Declaração de constitucionalidade do art. 12 do Marco Civil. Validade das sanções civis por descumprimento de guarda de dados.",
       "status": "vigente",
-      "temas": ["internet", "dados_pessoais"],
+      "temas": [
+        "internet",
+        "dados_pessoais"
+      ],
       "orgao": "STF",
       "ano": 2019
     },
@@ -104,7 +218,9 @@
       "artigos_chave": [],
       "ementa": "Vazamento de dados pessoais gera dano moral in re ipsa. Precedente relevante para responsabilização civil pós-LGPD.",
       "status": "vigente",
-      "temas": ["dados_pessoais"],
+      "temas": [
+        "dados_pessoais"
+      ],
       "orgao": "STJ",
       "ano": 2020
     },
@@ -114,9 +230,12 @@
       "sigla": "STJ — REsp 1.907.924",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil.",
+      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil — precedente agora modulado pela inconstitucionalidade parcial declarada pelo STF (Tema 987/2025).",
       "status": "vigente",
-      "temas": ["internet", "menores"],
+      "temas": [
+        "internet",
+        "menores"
+      ],
       "orgao": "STJ",
       "ano": 2021
     },
@@ -126,11 +245,95 @@
       "sigla": "ANPD",
       "tipo": "orgao",
       "artigos_chave": [],
-      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil.",
+      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil. Emitiu nota técnica sobre sobreposição normativa do PL 4/2025 com LGPD e Marco Civil.",
       "status": "vigente",
-      "temas": ["dados_pessoais"],
+      "temas": [
+        "dados_pessoais"
+      ],
       "orgao": "Governo Federal",
       "ano": 2020
+    },
+    {
+      "id": "decreto_12975_2026",
+      "nome": "Decreto nº 12.975/2026 — Regulamentação do Marco Civil pós-STF",
+      "sigla": "Decreto 12.975/2026",
+      "tipo": "decreto",
+      "artigos_chave": [
+        "Responsabilidade sistêmica de plataformas",
+        "ANPD como fiscalizadora do MCI",
+        "Notice-and-takedown extrajudicial",
+        "Dados de anúncios para responsabilização"
+      ],
+      "ementa": "Atualiza a regulamentação do Marco Civil da Internet (revogando parcialmente o Decreto 8.771/2016) para operacionalizar a decisão do STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
+      "status": "vigente",
+      "temas": [
+        "internet",
+        "dados_pessoais",
+        "menores"
+      ],
+      "orgao": "Presidência da República / ANPD",
+      "ano": 2026
+    },
+    {
+      "id": "decreto_12976_2026",
+      "nome": "Decreto nº 12.976/2026 — Proteção das mulheres no ambiente digital",
+      "sigla": "Decreto 12.976/2026",
+      "tipo": "decreto",
+      "artigos_chave": [
+        "Remoção rápida de conteúdo íntimo ilegal",
+        "Combate a deepfakes sexuais",
+        "Responsabilidade de plataformas por violência de gênero online",
+        "Integração com Pacto Nacional Brasil Contra o Feminicídio"
+      ],
+      "ementa": "Reforça a proteção das mulheres no ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
+      "status": "vigente",
+      "temas": [
+        "internet",
+        "menores",
+        "dados_pessoais"
+      ],
+      "orgao": "Presidência da República",
+      "ano": 2026
+    },
+    {
+      "id": "lei_15409_2026",
+      "nome": "Lei nº 15.409/2026 — Cadastro Nacional de Agressores (CNVM)",
+      "sigla": "Lei 15.409/2026",
+      "tipo": "lei",
+      "artigos_chave": [
+        "Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM)",
+        "Banco de dados estadual e federal",
+        "Localização de foragidos",
+        "Prevenção de reincidência"
+      ],
+      "ementa": "Institui o Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM), consolidando em tempo real dados de condenados por feminicídio, violência doméstica, assédio, violência psicológica e crimes correlatos. Vigência: 60 dias após 21/05/2026.",
+      "status": "vigente",
+      "temas": [
+        "menores",
+        "internet"
+      ],
+      "orgao": "Congresso Nacional",
+      "ano": 2026
+    },
+    {
+      "id": "pl_misoginia",
+      "nome": "PL 896/2023 — Criminalização da Misoginia (em tramitação na Câmara)",
+      "sigla": "PL 896/2023 (aprovado Senado — aguarda Câmara)",
+      "tipo": "pl",
+      "artigos_chave": [
+        "Altera Lei do Racismo (Lei 7.716/1989)",
+        "Inclui misoginia como crime de preconceito",
+        "Pena: 2 a 5 anos + multa",
+        "Misoginia: ódio ou aversão às mulheres"
+      ],
+      "ementa": "Tipifica a misoginia como crime de preconceito ou discriminação, inserindo-a na Lei do Racismo (Lei 7.716/1989). Aprovado pelo Senado em 24/03/2026 com 67 votos favoráveis e zero contrários (PL 896/2023, relatora Sen. Soraya Thronicke). Pendente de votação na Câmara dos Deputados — ainda não é lei. NÃO integra o pacote de 20/05/2026; é tramitação autônoma. Pena prevista: reclusão de 2 a 5 anos mais multa.",
+      "status": "tramitacao",
+      "temas": [
+        "internet",
+        "dados_pessoais"
+      ],
+      "orgao": "Câmara dos Deputados (pendente)",
+      "ano": 2026
     }
   ]
 }

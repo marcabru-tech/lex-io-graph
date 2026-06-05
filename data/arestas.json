@@ -60,8 +60,8 @@
       "source": "marco_civil",
       "target": "stj_resp_plat",
       "tipo": "interpreta",
-      "descricao": "STJ interpretou o art. 19 do Marco Civil: plataformas devem remover conteúdo ilícito após notificação judicial (ou extrajudicial, conforme caso).",
-      "artigos": "REsp 1.907.924"
+      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucionalidade parcial declarada pelo STF (Tema 987, jun./2025).",
+      "artigos": "REsp 1.907.924 ↔ RE 1.037.396"
     },
     {
       "source": "pl_ia",
@@ -76,6 +76,111 @@
       "tipo": "complementaridade",
       "descricao": "LGPD regula dados pessoais; PL 2.338 regula sistemas que usam esses dados. São complementares, não concorrentes.",
       "artigos": "LGPD art. 12 ↔ PL 2.338 art. 5º"
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_tema987",
+      "tipo": "interpreta",
+      "descricao": "STF declarou inconstitucional parcialmente o art. 19 do Marco Civil (Tema 987, RE 1.037.396, jun./2025): exigência de ordem judicial prévia não basta para proteger direitos fundamentais. Embargos de declaração pendentes.",
+      "artigos": "MCI art. 19 ↔ CF art. 5º, IV, IX, XIV, XXXVI"
+    },
+    {
+      "source": "cf88",
+      "target": "stf_tema987",
+      "tipo": "hierarquia",
+      "descricao": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do Marco Civil — inconstitucionalidade por omissão parcial.",
+      "artigos": "CF art. 5º ↔ MCI art. 19"
+    },
+    {
+      "source": "pl_cc_digital",
+      "target": "lgpd",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de sobreposição normativa. ANPD e CGI.br emitiram alertas de insegurança jurídica.",
+      "artigos": "PL 4/2025 Livro VI ↔ LGPD art. 1º"
+    },
+    {
+      "source": "pl_cc_digital",
+      "target": "marco_civil",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil — já objeto de inconstitucionalidade parcial pelo STF (Tema 987).",
+      "artigos": "PL 4/2025 Livro VI ↔ MCI art. 19"
+    },
+    {
+      "source": "cf88",
+      "target": "pl_cc_digital",
+      "tipo": "hierarquia",
+      "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º, LXXIX) e liberdade de expressão.",
+      "artigos": "CF art. 5º, LXXIX ↔ PL 4/2025 Livro VI"
+    },
+    {
+      "source": "stf_tema987",
+      "target": "eca_digital",
+      "tipo": "complementaridade",
+      "descricao": "A inconstitucionalidade parcial do art. 19 do MCI dialoga com o ECA Digital: plataformas que atingem menores têm deveres reforçados de remoção independentemente de ordem judicial.",
+      "artigos": "RE 1.037.396 ↔ ECA Digital art. 18"
+    },
+    {
+      "source": "stf_tema987",
+      "target": "decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "O Decreto 12.975/2026 operacionaliza a decisão do STF no Tema 987, definindo os deveres proativos das plataformas e atribuindo à ANPD competência para fiscalizar o Marco Civil.",
+      "artigos": "RE 1.037.396 → Decreto 12.975/2026"
+    },
+    {
+      "source": "marco_civil",
+      "target": "decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
+      "artigos": "MCI Lei 12.965/2014 → Decreto 12.975/2026"
+    },
+    {
+      "source": "anpd",
+      "target": "decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da Internet — expansão significativa de atribuições.",
+      "artigos": "Decreto 12.975/2026 → ANPD"
+    },
+    {
+      "source": "decreto_12976_2026",
+      "target": "eca_digital",
+      "tipo": "complementaridade",
+      "descricao": "Decreto 12.976/2026 e ECA Digital convergem na proteção de vulneráveis no ambiente digital — o decreto amplia para mulheres adultas o regime de remoção rápida de conteúdo que o ECA Digital exige para menores.",
+      "artigos": "Decreto 12.976/2026 ↔ ECA Digital art. 18"
+    },
+    {
+      "source": "decreto_12976_2026",
+      "target": "decreto_12975_2026",
+      "tipo": "complementaridade",
+      "descricao": "Os dois decretos de 20/05/2026 são complementares: o 12.975 regula a responsabilidade geral de plataformas; o 12.976 cria regime específico para violência de gênero digital.",
+      "artigos": "Decreto 12.975/2026 ↔ Decreto 12.976/2026"
+    },
+    {
+      "source": "marco_civil",
+      "target": "decreto_12976_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção de deepfakes sexuais e conteúdo íntimo ilegal.",
+      "artigos": "MCI Lei 12.965/2014 → Decreto 12.976/2026"
+    },
+    {
+      "source": "pl_misoginia",
+      "target": "marco_civil",
+      "tipo": "intersecao",
+      "descricao": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino serão responsabilizadas sob o novo regime do art. 19 + Decreto 12.975/2026.",
+      "artigos": "PL 896/2023 ↔ MCI art. 19 + Decreto 12.975/2026"
+    },
+    {
+      "source": "cf88",
+      "target": "pl_misoginia",
+      "tipo": "hierarquia",
+      "descricao": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88 — crimes de discriminação são inafiançáveis e imprescritíveis.",
+      "artigos": "CF art. 5º, XLII ↔ Lei 7.716/1989 ↔ PL 896/2023"
+    },
+    {
+      "source": "lei_15409_2026",
+      "target": "decreto_12976_2026",
+      "tipo": "complementaridade",
+      "descricao": "Lei 15.409/2026 (CNVM) e Decreto 12.976/2026 integram o mesmo pacote normativo do Pacto Nacional Brasil Contra o Feminicídio: o cadastro identifica reincidentes; o decreto protege no ambiente digital.",
+      "artigos": "Lei 15.409/2026 ↔ Decreto 12.976/2026"
     }
   ]
 }
