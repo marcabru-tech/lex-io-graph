@@ -1,0 +1,12 @@
+{
+  "ultima_atualizacao": "2026-06-05T00:00:00",
+  "novidades_detectadas": [],
+  "total_novidades": 0,
+  "temas": {
+    "ia": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
+    "dados": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
+    "menores": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
+    "plataformas": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
+    "trabalho_digital": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []}
+  }
+}
