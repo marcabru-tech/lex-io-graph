@@ -180,20 +180,21 @@ for node_id in G.nodes:
         node_size = 30
 
     art = d.get("artigos_chave", [])
-    art_str = ""
+
+    art_txt = ""
     if art:
-        art_str = "<br><b>Artigos:</b> " + " | ".join(art)
+        art_txt = "\nArtigos: " + " | ".join(art)
 
     tip = (
-        "<div style='max-width:400px; font-family: monospace; font-size: 13px; line-height: 1.6;'>"
-        + "<b style='font-size:15px;'>" + d.get("nome", "") + "</b><br><br>"
-        + "<i>" + d.get("ementa", "") + "</i><br><br>"
-        + "<b>Tipo:</b> " + d.get("tipo_label", "") + "<br>"
-        + "<b>Status:</b> " + d.get("status", "") + "<br>"
-        + "<b>Órgão:</b> " + d.get("orgao", "") + "<br>"
-        + "<b>Ano:</b> " + str(d.get("ano", ""))
-        + art_str
-        + "</div>"
+        d.get("nome", "") + "\n"
+        + "─" * 40 + "\n"
+        + d.get("ementa", "") + "\n"
+        + "─" * 40 + "\n"
+        + "Tipo: " + d.get("tipo_label", "") + "\n"
+        + "Status: " + d.get("status", "") + "\n"
+        + "Órgão: " + d.get("orgao", "") + "\n"
+        + "Ano: " + str(d.get("ano", ""))
+        + art_txt
     )
 
     net.add_node(
@@ -214,11 +215,11 @@ for u, v, d in G.edges(data=True):
     edge_label = EDGE_TYPE_SHORT.get(edge_tipo, edge_tipo.upper())
 
     tip = (
-        "<div style='max-width:450px; font-family: monospace; font-size: 13px; line-height: 1.6;'>"
-        + "<b style='font-size:14px;'>" + d.get("tipo_label", "") + "</b><br><br>"
-        + d.get("descricao", "") + "<br><br>"
-        + "<b>Artigos cruzados:</b> " + d.get("artigos", "")
-        + "</div>"
+        d.get("tipo_label", "") + "\n"
+        + "─" * 40 + "\n"
+        + d.get("descricao", "") + "\n"
+        + "─" * 40 + "\n"
+        + "Artigos: " + d.get("artigos", "")
     )
 
     is_dashed = edge_tipo in ("intersecao", "antinomia", "complementaridade")
@@ -324,26 +325,7 @@ nav_css = """
 </style>
 """
 
-tooltip_fix = """<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-                if (node.className && typeof node.className === 'string' && node.className.indexOf('vis-tooltip') !== -1) {
-                    var raw = node.innerHTML;
-                    if (raw && raw.indexOf('&lt;') !== -1) {
-                        node.innerHTML = raw
-                            .replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
-                            .replace(/&#x27;/g,"'").replace(/&quot;/g,'"');
-                    }
-                }
-            });
-        });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-});
-</script>"""
-html_content = html_content.replace("</head>", nav_css + tooltip_fix + "</head>")
+html_content = html_content.replace("</head>", nav_css + "</head>")
 
 components.html(html_content, height=GRAFO_ALTURA + 20, scrolling=False)
 
