@@ -198,6 +198,34 @@ TRADICOES_JURIDICAS = {
         "brasil": "Influência crescente via súmulas vinculantes do STF (EC 45/2004) e precedentes do CPC/2015 — aproximação híbrida com o common law",
         "codigos_referencia": "Magna Carta (1215); Habeas Corpus Act (1679); Bill of Rights (1689); US Constitution (1787)"
     },
+    "judaico": {
+        "nome": "Direito Judaico (Halachá)",
+        "paises": ["Israel (sistema híbrido)", "comunidades judaicas globalmente"],
+        "caracteristicas": (
+            "Fontes: Torah, Talmude (Mishná + Guemará), responsa rabínica (teshuvot). "
+            "3.000 anos de jurisprudência contínua — o sistema jurídico com registro "
+            "ininterrupto mais antigo do mundo. Metodologia talmúdica: argumento e "
+            "contra-argumento registrados simultaneamente — minoria preservada junto "
+            "com maioria. Forma de polifonia bakhtiniana avant la lettre (Bakhtin, 1895–1975). "
+            "Israel: sistema híbrido — Estado secular com tribunais rabínicos (Batei Din) "
+            "com jurisdição exclusiva sobre casamento e divórcio de judeus."
+        ),
+        "brasil": (
+            "Sem aplicação direta. Relevante para direito comparado glocal "
+            "(global + local, Robertson, 1990s) e para o inventário pancrônico: "
+            "a Halachá influenciou o direito canônico medieval e, via este, "
+            "o direito civil europeu e brasileiro. O conceito de Tikkun Olam "
+            "(reparação do mundo) dialoga com a virada preventiva do CC/2025 "
+            "(resgate de Pontes de Miranda)."
+        ),
+        "codigos_referencia": (
+            "Torah (séc. XIII–V a.C.); Mishná (200 d.C.); "
+            "Talmude de Jerusalém (séc. IV d.C.); "
+            "Talmude da Babilônia (séc. VI d.C.); "
+            "Mishné Torá — Maimônides (1180 d.C.); "
+            "Shulchan Aruch — Josef Karo (1565 d.C.)"
+        )
+    },
     "islamico": {
         "nome": "Direito Islâmico (Sharia)",
         "paises": ["Irã", "Arábia Saudita", "Paquistão (misto)", "Malásia (misto)"],
@@ -212,4 +240,50 @@ TRADICOES_JURIDICAS = {
         "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, 25/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
         "codigos_referencia": "Decreto de Graciano (1140); Corpus Iuris Canonici (1582); Código de Direito Canônico (1983)"
     }
+}
+
+# ---- Encíclica Magnifica Humanitas ----
+MAGNIFICA_HUMANITAS = {
+    "titulo": "Magnifica Humanitas",
+    "autor": "Papa Leão XIV (Robert Francis Prevost, 1955–)",
+    "data": "25 de maio de 2026",
+    "local": "Sala Nova do Sínodo, Vaticano",
+    "tema_central": "Custódia da pessoa humana na era da Inteligência Artificial (IA)",
+    "tese_principal": (
+        "A IA precisa ser desarmada, livre das lógicas que a transformam em "
+        "instrumento de dominação, exclusão ou morte. A tecnologia não é neutra — "
+        "pode proteger ou ameaçar a dignidade humana. A escolha não é entre aceitar "
+        "ou rejeitar a IA, mas entre usos que prejudicam ou protegem a dignidade humana."
+    ),
+    "capitulos": [
+        "Cap. I — Doutrina Social da Igreja (DSI) e IA: teologia da comunhão na história",
+        "Cap. II — Reconhecimento dos direitos das minorias, especialmente mulheres",
+        "Cap. III — Cinco princípios da DSC: bem comum, solidariedade, subsidiariedade, participação, destinação universal dos bens",
+        "Cap. IV — Ecologia da comunicação baseada na verdade; transparência nos algoritmos de seleção de conteúdo",
+        "Cap. V — IA em conflitos armados: rejeição da automação de decisões sobre vida humana"
+    ],
+    "continuidade_historica": (
+        "Leão XIII / Rerum Novarum (1891) → questão social da Revolução Industrial "
+        "→ direitos trabalhistas → CLT brasileira (1943) → NR-1 com riscos psicossociais "
+        "de IA (2026) → Leão XIV / Magnifica Humanitas (2026) → questão social da IA. "
+        "Arco de 135 anos de magistério social católico sobre tecnologia e trabalho."
+    ),
+    "convergencia_maio_2026": (
+        "Na semana de 21–27 de maio de 2026, três instâncias independentes convergiram "
+        "no mesmo campo normativo: (1) Executivo brasileiro — Decretos 12.975 e 12.976/2026 "
+        "sobre responsabilidade de plataformas; (2) Vaticano — Magnifica Humanitas sobre "
+        "dignidade humana e IA; (3) Congresso — 24+ PDLs para derrubar os decretos. "
+        "Momento civilizatório singular documentado."
+    ),
+    "presenca_anthropic": (
+        "O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic "
+        "— criadora do Claude. Sinal do reconhecimento do Vaticano de que as empresas de IA "
+        "são interlocutores normativos relevantes no debate sobre dignidade humana."
+    ),
+    "impacto_brasil": [
+        "PL 2.338/2023 (Marco Legal da IA): reforço ético ao princípio da dignidade humana",
+        "NR-1: convergência sobre riscos psicossociais de IA no trabalho",
+        "Decretos 12.975 e 12.976/2026: convergência sobre responsabilidade de plataformas",
+        "CF/88 art. 1º, III: dignidade humana como fundamento normativo supremo"
+    ]
 }
