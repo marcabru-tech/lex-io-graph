@@ -471,20 +471,60 @@ selected_node = st.selectbox(
 
 if selected_node:
     nd = G.nodes[selected_node]
-    col_info, col_conex = st.columns([1, 1])
 
-    with col_info:
-        st.markdown("#### " + nd.get("nome", ""))
-        st.markdown("**Sigla:** " + nd.get("label", ""))
-        st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
-        st.markdown("**Status:** " + nd.get("status", ""))
-        st.markdown("**Órgão:** " + nd.get("orgao", ""))
-        st.markdown("**Ementa:** " + nd.get("ementa", ""))
-        art = nd.get("artigos_chave", [])
-        if art:
-            st.markdown("**Artigos-chave:** " + " | ".join(art))
+    aba_factual, aba_doutrina, aba_conexoes = st.tabs([
+        "📋 Factual", "📚 Doutrinário", "🔗 Conexões"
+    ])
 
-    with col_conex:
+    with aba_factual:
+        col_info, col_art = st.columns([1, 1])
+        with col_info:
+            st.markdown("#### " + nd.get("nome", ""))
+            st.markdown("**Sigla:** " + nd.get("label", ""))
+            st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
+            st.markdown("**Status:** " + nd.get("status", ""))
+            st.markdown("**Órgão:** " + nd.get("orgao", ""))
+            st.markdown("**Ano:** " + str(nd.get("ano", "")))
+            st.markdown("**Ementa:** " + nd.get("ementa", ""))
+        with col_art:
+            art = nd.get("artigos_chave", [])
+            if art:
+                st.markdown("**Artigos-chave:**")
+                for a in art:
+                    st.markdown(f"- {a}")
+            historia = nd.get("historia", "")
+            if historia:
+                st.markdown("**Contexto histórico:**")
+                st.markdown(historia)
+
+    with aba_doutrina:
+        autores = nd.get("autores", [])
+        latim = nd.get("latim", [])
+        dir_comp = nd.get("direito_comparado", "")
+
+        if autores:
+            st.markdown("#### Autores e referências doutrinárias")
+            for a in autores:
+                with st.expander(f"{a['nome']} ({a['datas']})"):
+                    st.markdown(f"**Obra:** {a['obra']}")
+                    st.markdown(f"**Contribuição:** {a['contribuicao']}")
+
+        if latim:
+            st.markdown("#### Latim jurídico")
+            for l in latim:
+                with st.expander(f"*{l['original']}*"):
+                    st.markdown(f"**Tradução literal:** {l['traducao_literal']}")
+                    st.markdown(f"**Tradução jurídica:** {l['traducao_juridica']}")
+                    st.markdown(f"**Contexto romano:** {l['contexto_romano']}")
+
+        if dir_comp:
+            st.markdown("#### Direito comparado glocal (global + local, Robertson, 1990s)")
+            st.markdown(dir_comp)
+
+        if not autores and not latim and not dir_comp:
+            st.info("Conteúdo doutrinário em elaboração para esta norma — Sprint 3 em andamento.")
+
+    with aba_conexoes:
         ix = get_intersections(G, selected_node)
         if ix:
             st.markdown("#### Conexões (" + str(len(ix)) + ")")
