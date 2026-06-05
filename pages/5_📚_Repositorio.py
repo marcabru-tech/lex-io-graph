@@ -259,16 +259,23 @@ elif secao == "📖 Literatura e Arte":
             cols = st.columns(2)
             for j, obra in enumerate(OBRAS_ARTE[i:i+2]):
                 with cols[j]:
-                    try:
-                        st.image(
-                            obra['url_wikimedia'],
-                            caption=f"{obra['titulo']} — {obra['autor']} ({obra['ano']})",
-                            use_container_width=True
-                        )
-                    except Exception:
-                        st.markdown(f"*{obra['titulo']}* — {obra['autor']} ({obra['ano']})")
-                    st.markdown(f"**{obra['titulo']}** · {obra['autor']} ({obra['datas_autor']})")
-                    st.markdown(f"*{obra['tecnica']} · {obra['ano']} · {obra['localizacao']}*")
+                    st.markdown(f"""
+<div style="margin-bottom:16px;">
+  <img src="{obra['url_wikimedia']}"
+       alt="{obra['titulo']}"
+       style="width:100%;border-radius:6px;border:1px solid rgba(212,168,83,0.2);"
+       onerror="this.style.display='none';document.getElementById('fallback_{obra['id']}').style.display='block';">
+  <div id="fallback_{obra['id']}" style="display:none;padding:12px;background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);border-radius:6px;font-family:monospace;font-size:11px;color:#706a60;">
+    🖼️ {obra['titulo']} — {obra['autor']} ({obra['ano']})<br>
+    <em>Imagem disponível em: <a href="{obra['url_wikimedia']}" target="_blank" style="color:#d4a853;">Wikimedia Commons</a></em>
+  </div>
+  <div style="margin-top:8px;">
+    <strong style="color:#e8e4dc;">{obra['titulo']}</strong><br>
+    <span style="color:#9b59b6;font-size:12px;font-family:monospace;">{obra['autor']} ({obra['datas_autor']})</span><br>
+    <span style="color:#706a60;font-size:11px;font-style:italic;">{obra['tecnica']} · {obra['ano']} · {obra['localizacao']}</span>
+  </div>
+</div>
+""", unsafe_allow_html=True)
                     with st.expander("Conexão jurídica"):
                         st.markdown(obra['descricao'])
                         st.markdown(obra['conexao_juridica'])
