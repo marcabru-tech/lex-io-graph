@@ -324,7 +324,26 @@ nav_css = """
 </style>
 """
 
-html_content = html_content.replace("</head>", nav_css + "</head>")
+tooltip_fix = """<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.className && typeof node.className === 'string' && node.className.indexOf('vis-tooltip') !== -1) {
+                    var raw = node.innerHTML;
+                    if (raw && raw.indexOf('&lt;') !== -1) {
+                        node.innerHTML = raw
+                            .replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
+                            .replace(/&#x27;/g,"'").replace(/&quot;/g,'"');
+                    }
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>"""
+html_content = html_content.replace("</head>", nav_css + tooltip_fix + "</head>")
 
 components.html(html_content, height=GRAFO_ALTURA + 20, scrolling=False)
 
