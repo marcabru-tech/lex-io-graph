@@ -194,9 +194,7 @@
       "status": "vigente",
       "temas": [
         "menores",
-        "internet",
-        "dados_pessoais",
-        "ia"
+        "dados_pessoais"
       ],
       "orgao": "Congresso Nacional / ECA-TISEA",
       "ano": 2025,
@@ -305,7 +303,7 @@
         "1.5.4.4 alínea e",
         "Anexo I"
       ],
-      "ementa": "Disposições gerais de gerenciamento de riscos ocupacionais. Portaria MTE 1.419/2024 incluiu obrigatoriamente Fatores de Riscos Psicossociais Relacionados ao Trabalho (FRPRT) no PGR. Vigência: 26 de maio de 2026 (prorrogada pela Portaria MTE 765/2025). Inclui riscos psicossociais, organização do trabalho, uso de tecnologia e IA no ambiente laboral.",
+      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. Inclui IA e algoritmos como fatores de risco.",
       "status": "vigente",
       "temas": [
         "trabalho",
@@ -341,7 +339,7 @@
       "artigos_chave": [
         "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
       ],
-      "ementa": "Plenário do STF declarou, por maioria, a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (jun./2025). A exigência de ordem judicial prévia para responsabilização de plataformas por conteúdo de terceiros não confere proteção suficiente a direitos fundamentais e à democracia. Embargos de declaração pendentes de julgamento — efeitos ainda não transitaram em julgado.",
+      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (RE 1.037.396, Tema 987, jun./2025). Exigência de ordem judicial prévia não basta para proteger direitos fundamentais. Embargos de declaração pendentes. Regulamentado pelos Decretos 12.975 e 12.976/2026 — 24+ PDLs da oposição para derrubar os decretos.",
       "status": "pendente_embargos",
       "temas": [
         "internet",
@@ -520,6 +518,52 @@
       ],
       "orgao": "Câmara dos Deputados (pendente)",
       "ano": 2026
+    },
+    {
+      "id": "magnifica_humanitas",
+      "nome": "Encíclica Magnifica Humanitas — Papa Leão XIV",
+      "sigla": "Magnifica Humanitas (Leão XIV, 25/05/2026)",
+      "tipo": "documento_internacional",
+      "artigos_chave": [
+        "Cap. I — Doutrina Social da Igreja e IA",
+        "Cap. IV — Ecologia da comunicação e verdade",
+        "IA deve ser 'desarmada' de lógicas de dominação",
+        "Transparência nos algoritmos de seleção de conteúdo",
+        "Proibição de IA autônoma em decisões sobre vida humana"
+      ],
+      "ementa": "Primeira encíclica integralmente dedicada à custódia da pessoa humana na era da IA (Inteligência Artificial). Leão XIV: 'A IA precisa ser desarmada, livre das lógicas que a transformam em instrumento de dominação, exclusão ou morte.' Pede regulamentação estatal da IA. Continuidade histórica: Leão XIII/Rerum Novarum (1891) → questão social da Revolução Industrial; Leão XIV/Magnifica Humanitas (2026) → questão social da IA. Lançada com presença de Chris Olah, cofundador da Anthropic.",
+      "status": "vigente",
+      "temas": [
+        "ia",
+        "dados_pessoais",
+        "internet"
+      ],
+      "orgao": "Santa Sé / Vaticano",
+      "ano": 2026,
+      "historia": "Apresentada em 25/05/2026 na Sala Nova do Sínodo, no Vaticano. Papa Leão XIV (primeiro papa norte-americano, eleito maio/2025) escolheu o nome Leão XIV pela continuidade com Leão XIII, autor da Rerum Novarum (1891) — que enfrentou os dilemas sociais da Revolução Industrial. O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic. Convergência histórica: na mesma semana de maio/2026, o Vaticano, o STF e o Executivo brasileiro convergiram independentemente no mesmo campo normativo sobre IA e plataformas digitais.",
+      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais de IA no trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
+      "autores": [
+        {
+          "nome": "Papa Leão XIV (Robert Francis Prevost)",
+          "datas": "1955–",
+          "obra": "Magnifica Humanitas, 2026",
+          "contribuicao": "Primeira encíclica papal inteiramente dedicada à IA — posiciona a Igreja Católica como ator normativo global no debate sobre regulação de tecnologia"
+        },
+        {
+          "nome": "Papa Leão XIII (Vincenzo Pecci)",
+          "datas": "1810–1903",
+          "obra": "Rerum Novarum, 1891",
+          "contribuicao": "Antecedente histórico direto — enfrentou os dilemas sociais da Revolução Industrial; inspirou o nome e a abordagem de Leão XIV sobre a IA"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Magnifica Humanitas",
+          "traducao_literal": "Magnífica Humanidade",
+          "traducao_juridica": "A grandiosidade da condição humana como critério normativo supremo — a IA deve servir à humanidade, nunca subjugá-la",
+          "contexto_romano": "Humanitas — conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e excelência humanas; incorporado ao direito natural medieval e ao magistério social católico"
+        }
+      ]
     }
   ]
 }

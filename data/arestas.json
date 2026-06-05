@@ -181,6 +181,34 @@
       "tipo": "complementaridade",
       "descricao": "Lei 15.409/2026 (CNVM) e Decreto 12.976/2026 integram o mesmo pacote normativo do Pacto Nacional Brasil Contra o Feminicídio: o cadastro identifica reincidentes; o decreto protege no ambiente digital.",
       "artigos": "Lei 15.409/2026 ↔ Decreto 12.976/2026"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite da IA — o Vaticano como ator normativo global no debate regulatório brasileiro.",
+      "artigos": "Magnifica Humanitas Cap. IV ↔ PL 2.338/2023 art. 5º"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "decreto_12975_2026",
+      "tipo": "complementaridade",
+      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, 21/05) agiram independentemente no mesmo campo — responsabilidade de plataformas e proteção da dignidade humana na era digital.",
+      "artigos": "Magnifica Humanitas ↔ Decreto 12.975/2026"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "cf88",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana como fundamento normativo supremo — a encíclica reforça eticamente o que a CF/88 positivou juridicamente.",
+      "artigos": "Magnifica Humanitas ↔ CF/88 art. 1º, III"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "nr1",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu riscos psicossociais de IA no PGR (Programa de Gerenciamento de Riscos).",
+      "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
     }
   ]
 }
