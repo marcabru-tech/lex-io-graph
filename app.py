@@ -154,7 +154,7 @@ st.markdown("""
 | **Grafo Normativo** | Visualização interativa do mapa de conexões entre normas |
 | **Matriz de Compliance** | Tabela cruzada: empresas × normas com nível de risco |
 | **Comparação Normativa** | Análise lado a lado de pares de normas |
-| **Radar de Riscos** | Mapa de calor das exposições de dev júnior |
+| **Radar de Riscos** | Mapa de calor das exposições regulatórias por perfil de empresa |
 
 > *Gramática semiótica dos sistemas digitais — Lexiograph, 2026*
 """)

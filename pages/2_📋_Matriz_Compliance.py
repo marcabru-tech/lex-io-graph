@@ -2,7 +2,7 @@
 Página 2 — Matriz de Compliance
 
 Tabela cruzada: empresas modelo × normas, com indicadores de risco.
-Foco em empresas que contratam dev júnior.
+Foco em empresas de tecnologia com exposição regulatória.
 """
 
 import streamlit as st
@@ -10,11 +10,12 @@ import pandas as pd
 
 from lib.graph_builder import build_compliance_matrix, load_json
 from lib.constants import EMPRESAS_MODELO
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Matriz de Compliance — Lex Quantum", layout="wide", page_icon="📋")
 
 st.markdown("# 📋 Matriz de Compliance")
-st.markdown("Tabela cruzada: empresas que contratam dev júnior × normas do ordenamento jurídico digital.")
+st.markdown("Tabela cruzada: perfis de empresa × normas do ordenamento jurídico digital.")
 
 # ---- Construir matriz ----
 matrix = build_compliance_matrix()
@@ -69,10 +70,10 @@ st.dataframe(display_df, use_container_width=True, hide_index=True)
 # ---- Insight ----
 st.markdown("---")
 st.markdown("""
-### Insight: por que dev júnior aumenta o risco?
+### Insight: por que a ausência de processo regulatório aumenta o risco?
 
 O risco não está no nível técnico do desenvolvedor — está na **ausência de revisão jurídica**
-antes da entrega. Quando um dev júnior implementa uma feature sem mapear:
+antes da entrega. Quando uma equipe técnica implementa uma feature sem mapear:
 
 1. **Quais dados estão sendo coletados** → LGPD art. 7º (base legal)
 2. **Se há menores envolvidos** → ECA Digital (consentimento parental, design protegido)
@@ -86,3 +87,5 @@ antes da entrega. Quando um dev júnior implementa uma feature sem mapear:
 **O Lex Quantum Compliance Map existe para tornar essas interseções visíveis
 antes que se tornem problemas.**
 """)
+
+render_footer()

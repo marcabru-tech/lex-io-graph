@@ -120,7 +120,7 @@ THEMES = {
 # ---- Empresas modelo para matriz de compliance ----
 EMPRESAS_MODELO = [
     {
-        "nome": "Startup SaaS (Software as a Service — software como serviço, dev júnior, 5-15 pessoas)",
+        "nome": "Startup SaaS (Software as a Service — software como serviço, 5-15 pessoas)",
         "setor": "Tecnologia",
         "risco_base": "alto",
         "descricao": "Coleta dados de usuários, usa IA para automação, contrata devs júnior sem revisão jurídica",

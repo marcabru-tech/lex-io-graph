@@ -1,16 +1,17 @@
 """
-Página 4 — Radar de Riscos para Dev Júnior
+Página 4 — Radar de Riscos Regulatórios
 
-Mapa de calor: quais entregas de dev júnior mais expõem
+Mapa de calor: exposição regulatória por perfil de empresa e norma
 a empresa a risco jurídico, linkadas às normas específicas.
 """
 
 import streamlit as st
 import plotly.graph_objects as go
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Radar de Riscos — Lex Quantum", layout="wide", page_icon="🎯")
 
-st.markdown("# 🎯 Radar de Riscos — Dev Júnior")
+st.markdown("# 🎯 Radar de Riscos Regulatórios")
 st.markdown("Mapa de calor das exposições regulatórias mais comuns em entregas de desenvolvedores júnior.")
 
 # ---- Base de riscos ----
@@ -160,13 +161,13 @@ for risco in sorted(riscos, key=lambda x: x["risco"], reverse=True):
 # ---- Insight ----
 st.markdown("---")
 st.markdown("""
-### Insight: o padrão de risco em empresas com dev júnior
+### Insight: o gap entre entrega técnica e conformidade regulatória
 
 Os três riscos mais críticos (nota 9-10) compartilham um padrão:
 
 1. **Envolvem dados de populações vulneráveis** (menores) ou **dados sensíveis** (CPF, saúde)
 2. **A norma é recente ou em tramitação** (ECA Digital 2025, PL 2.338)
-3. **O dev júnior não tem referência** — não é negligência, é lacuna de formação
+3. **A equipe técnica não tem referência regulatória** — não é negligência, é lacuna de processo
 
 O Compliance Map existe para **preencher essa lacuna visualmente** — antes que a entrega
 vá para produção sem revisão jurídica.
@@ -174,3 +175,5 @@ vá para produção sem revisão jurídica.
 > *"O risco não está no código. Está no que o código coleta, processa e decide
 > sem que o desenvolvedor saiba que precisa saber."*
 """)
+
+render_footer()
