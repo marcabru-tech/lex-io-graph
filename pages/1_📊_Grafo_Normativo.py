@@ -7,6 +7,7 @@ import json
 
 from lib.graph_builder import build_compliance_graph, get_intersections
 from lib.constants import THEMES, NODE_TYPE_LABELS
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Grafo Normativo - Lexiograph Compliance Map", layout="wide", page_icon="📊")
 
@@ -368,3 +369,5 @@ if selected_node:
                 st.markdown("  *" + inter["artigos"] + "*")
         else:
             st.markdown("Nenhuma conexão encontrada com os filtros atuais.")
+
+render_footer()

@@ -1,5 +1,6 @@
 import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
+from lib.footer import render_footer
 
 st.set_page_config(
     page_title="Lexiograph Compliance Map",
@@ -157,3 +158,5 @@ st.markdown("""
 
 > *Gramática semiótica dos sistemas digitais — Lexiograph, 2026*
 """)
+
+render_footer()

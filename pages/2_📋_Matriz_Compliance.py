@@ -10,6 +10,7 @@ import pandas as pd
 
 from lib.graph_builder import build_compliance_matrix, load_json
 from lib.constants import EMPRESAS_MODELO
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Matriz de Compliance — Lex Quantum", layout="wide", page_icon="📋")
 
@@ -86,3 +87,5 @@ antes da entrega. Quando um dev júnior implementa uma feature sem mapear:
 **O Lex Quantum Compliance Map existe para tornar essas interseções visíveis
 antes que se tornem problemas.**
 """)
+
+render_footer()

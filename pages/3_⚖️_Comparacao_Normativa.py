@@ -8,6 +8,7 @@ import streamlit as st
 
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.constants import EDGE_TYPE_LABELS, THEMES
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Comparação Normativa — Lex Quantum", layout="wide", page_icon="⚖️")
 
@@ -113,3 +114,5 @@ sugestoes = [
 
 for id_a, id_b, titulo in sugestoes:
     st.markdown(f"- **{titulo}** — `{node_options.get(id_a, id_a)}` × `{node_options.get(id_b, id_b)}`")
+
+render_footer()

@@ -7,6 +7,7 @@ a empresa a risco jurídico, linkadas às normas específicas.
 
 import streamlit as st
 import plotly.graph_objects as go
+from lib.footer import render_footer
 
 st.set_page_config(page_title="Radar de Riscos — Lex Quantum", layout="wide", page_icon="🎯")
 
@@ -174,3 +175,5 @@ vá para produção sem revisão jurídica.
 > *"O risco não está no código. Está no que o código coleta, processa e decide
 > sem que o desenvolvedor saiba que precisa saber."*
 """)
+
+render_footer()
