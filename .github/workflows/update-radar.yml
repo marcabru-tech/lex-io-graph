@@ -1,0 +1,65 @@
+name: Radar Legislativo — Atualização Automática
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'  # Toda segunda-feira às 10h UTC (7h BRT)
+  workflow_dispatch:        # Permite rodar manualmente via GitHub Actions UI
+
+jobs:
+  update-radar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar radar legislativo
+        run: python updater.py
+
+      - name: Verificar se houve mudanças
+        id: check_changes
+        run: |
+          git diff --quiet data/radar_legislativo.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Criar branch e PR com atualização
+        if: steps.check_changes.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          BRANCH="data/radar-update-${DATE}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "${BRANCH}"
+          git add data/radar_legislativo.json
+          git commit -m "chore(radar): atualização automática ${DATE}"
+          git push origin "${BRANCH}"
+
+          # Criar PR via GitHub CLI
+          gh pr create \
+            --title "Radar Legislativo — ${DATE}" \
+            --body "Atualização automática do radar legislativo.
+
+          **Ação necessária:** revisar novidades detectadas no \`data/radar_legislativo.json\` e decidir quais PLs/normas entram no grafo como novos nós.
+
+          > Curadoria preservada — nenhum nó é adicionado automaticamente ao grafo.
+          > O radar alerta; o curador decide." \
+            --base main \
+            --head "${BRANCH}"
+
+      - name: Sem mudanças detectadas
+        if: steps.check_changes.outputs.changed != 'true'
+        run: echo "Nenhuma novidade detectada. Radar sem alterações."
