@@ -57,6 +57,11 @@ with col2:
         "Compliance Map — Ordenamento Jurídico Digital Brasileiro</p>",
         unsafe_allow_html=True,
     )
+    st.markdown(
+        f"<p style=\'text-align:center; font-size: 11px; color: #454040; font-family: monospace; "
+        f"letter-spacing: 0.04em; line-height: 1.8; margin-top: 4px;\'>{APP_SUBTITLE}</p>",
+        unsafe_allow_html=True,
+    )
 
 st.divider()
 
