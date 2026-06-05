@@ -1,5 +1,7 @@
 import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
+from lib.footer import render_footer
+from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 
 st.set_page_config(
     page_title="Lexiograph Compliance Map",
@@ -70,6 +72,41 @@ col_d.metric("Temas regulatórios", 6)
 
 st.divider()
 
+st.markdown("### ⚠️ Alertas normativos recentes")
+
+col_al1, col_al2, col_al3 = st.columns(3)
+
+with col_al1:
+    st.error("""
+**STF — Tema 987 (RE 1.037.396)**
+Art. 19 do Marco Civil declarado **parcialmente inconstitucional** (jun./2025).
+Regulamentado pelos **Decretos 12.975 e 12.976/2026** (20/05/2026).
+Embargos de declaração pendentes.
+""")
+
+with col_al2:
+    st.warning("""
+**NR-1 — Portaria MTE 1.419/2024**
+Riscos psicossociais obrigatórios no PGR a partir de **26/05/2026**.
+Fiscalização punitiva ativa.
+
+**PL 896/2023 — Misoginia como crime**
+Aprovado no Senado (24/03/2026). Aguarda Câmara.
+""")
+
+with col_al3:
+    st.info("""
+**PL 4/2025 — Código Civil Digital**
+Livro VI: Direito Civil Digital. ANPD e CGI.br alertam sobreposição com LGPD e Marco Civil.
+
+**Lei 15.409/2026 — CNVM**
+Cadastro Nacional de Agressores. Vigor: jul./2026.
+""")
+
+st.divider()
+
+
+
 st.markdown("""
 ### Sobre este mapa
 
@@ -77,8 +114,7 @@ Este dashboard interativo mapeia as **conexões, hierarquias e interseções** d
 jurídico digital brasileiro — da Constituição Federal às normas regulamentares, passando
 por legislação ordinária, projetos de lei e jurisprudência dos tribunais superiores.
 
-**Foco de aplicação:** empresas que contratam desenvolvedores júnior e precisam mitigar
-riscos regulatórios em suas entregas técnicas.
+**Para quem:** advogados, gestores de compliance, founders de tech, pesquisadores e estrategistas que precisam compreender o ordenamento jurídico digital brasileiro com profundidade doutrinária, fundamentação semiótica e vetor de inteligência estratégica.
 """)
 
 st.markdown("#### Normas mapeadas")
@@ -120,5 +156,7 @@ st.markdown("""
 | **Comparação Normativa** | Análise lado a lado de pares de normas |
 | **Radar de Riscos** | Mapa de calor das exposições de dev júnior |
 
-> *Gramática semiótica dos sistemas digitais — Lexiograph, 2025*
+> *Gramática semiótica dos sistemas digitais — Lexiograph, 2026*
 """)
+
+render_footer()
