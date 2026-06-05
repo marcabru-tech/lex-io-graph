@@ -331,15 +331,36 @@ injected_css = """
         box-shadow: 0 4px 24px rgba(0,0,0,0.7) !important;
         pointer-events: none !important;
     }
+    .vis-navigation {
+        position: absolute !important;
+        bottom: 16px !important;
+        left: 16px !important;
+    }
     .vis-navigation .vis-button {
         background: rgba(15,14,24,0.92) !important;
         border: 1px solid rgba(212,168,83,0.4) !important;
         border-radius: 6px !important;
+        width: 32px !important;
+        height: 32px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
     }
     .vis-navigation .vis-button:hover {
         background: rgba(212,168,83,0.2) !important;
         border-color: #d4a853 !important;
+        transform: scale(1.08) !important;
     }
+    .vis-navigation .vis-button.vis-up:after    { content: "▲" !important; color: #d4a853 !important; font-size:14px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-down:after  { content: "▼" !important; color: #d4a853 !important; font-size:14px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-left:after  { content: "◀" !important; color: #d4a853 !important; font-size:14px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-right:after { content: "▶" !important; color: #d4a853 !important; font-size:14px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-zoomIn:after     { content: "+" !important; color: #d4a853 !important; font-size:18px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-zoomOut:after    { content: "−" !important; color: #d4a853 !important; font-size:18px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button.vis-zoomExtends:after{ content: "⌖" !important; color: #d4a853 !important; font-size:14px !important; font-weight:bold !important; }
+    .vis-navigation .vis-button:hover:after { color: #ffffff !important; }
 </style>
 """
 
