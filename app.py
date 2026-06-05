@@ -1,6 +1,7 @@
 import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
+from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 
 st.set_page_config(
     page_title="Lexiograph Compliance Map",
