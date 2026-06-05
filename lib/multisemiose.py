@@ -89,6 +89,19 @@ CITACOES = [
         "tema": "proteção integral de menores, vulnerabilidade digital, censura, acesso à justiça"
     },
     {
+        "id": "machado_alienista",
+        "autor": "Machado de Assis",
+        "datas": "1839–1908",
+        "obra": "O Alienista, 1882 (in: Papéis Avulsos)",
+        "citacao_original": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
+        "idioma_original": "Português",
+        "traducao": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
+        "contexto_juridico": "A antinomia bacamartiana — o sistema normativo que muda os critérios retroativamente, internando quem antes era são. Bacamarte é simultaneamente legislador, juiz e executor: a concentração de poder que Montesquieu (1689–1755) quis evitar com a separação dos três poderes. No fim, interna a si mesmo — a norma que se volta contra seu criador. Metáfora da crise do art. 19 do Marco Civil: o Estado que criou a regra (exigência de ordem judicial) e doze anos depois a declara insuficiente via STF e decretos, gerando insegurança jurídica total. Machado antecipou em 1882 o que Fuller (1902–1978) teorizaria em 1964: a lei que muda seus critérios continuamente viola a moralidade interna do direito.",
+        "uso_jurisprudencia": "O Alienista é a obra de Machado de Assis mais citada em votos sobre insegurança jurídica e arbitrariedade normativa — STJ e STF utilizam Bacamarte para ilustrar sistemas que perdem a capacidade de distinguir normalidade de patologia. Min. Luis Felipe Salomão citou O Alienista em voto sobre responsabilidade civil por dano institucional.",
+        "normas_relacionadas": ["marco_civil", "stf_tema987", "decreto_12975_2026", "cf88"],
+        "tema": "insegurança jurídica, separação de poderes, antinomia institucional, moralidade interna do direito"
+    },
+    {
         "id": "kafka_colonia",
         "autor": "Franz Kafka",
         "datas": "1883–1924",
