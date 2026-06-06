@@ -8,8 +8,9 @@ from lib.multisemiose import CITACOES, OBRAS_ARTE, GLOSSARIO
 from lib.footer import render_footer
 
 @st.cache_data(ttl=86400)
-def baixar_imagem(url: str, nome: str) -> str:
-    """Baixa imagem para /tmp/ e retorna o path local. Cache de 24h."""
+def baixar_imagem_base64(url: str, nome: str) -> str:
+    """Baixa imagem e retorna como base64 para embed direto no HTML. Sem numpy."""
+    import base64
     tmp_path = f"/tmp/lexiograph_{nome}"
     if not os.path.exists(tmp_path):
         try:
@@ -21,7 +22,14 @@ def baixar_imagem(url: str, nome: str) -> str:
                 f.write(resp.content)
         except Exception:
             return ""
-    return tmp_path
+    try:
+        import base64
+        with open(tmp_path, "rb") as f:
+            data = base64.b64encode(f.read()).decode()
+        ext = "jpeg" if nome.endswith(".jpg") else "png"
+        return f"data:image/{ext};base64,{data}"
+    except Exception:
+        return "" 
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Repositório de Conhecimento",
@@ -278,9 +286,9 @@ elif secao == "📖 Literatura e Arte":
             cols = st.columns(2)
             for j, obra in enumerate(OBRAS_ARTE[i:i+2]):
                 with cols[j]:
-                    img_path = baixar_imagem(obra['url_wikimedia'], f"{obra['id']}.jpg")
-                    if img_path:
-                        st.image(img_path, use_container_width=True)
+                    img_b64 = baixar_imagem_base64(obra['url_wikimedia'], f"{obra['id']}.jpg")
+                    if img_b64:
+                        st.markdown(f'<img src="{img_b64}" style="width:100%;border-radius:6px;border:1px solid rgba(212,168,83,0.2);margin-bottom:8px;" alt="{obra['titulo']}">', unsafe_allow_html=True)
                     else:
                         st.markdown(f"""
 <div style="padding:12px;background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);
