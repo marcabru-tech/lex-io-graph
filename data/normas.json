@@ -392,7 +392,25 @@
         "dados_pessoais"
       ],
       "orgao": "STF",
-      "ano": 2019
+      "ano": 2019,
+      "historia": "STF — ADI 5527, julgada em 2019. Declarou a constitucionalidade do art. 12 do Marco Civil da Internet (Lei 12.965/2014), que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações. Relatora: Min. Rosa Weber. Precedente relevante para a validade do regime de guarda de logs imposto ao Marco Civil e, por extensão, à LGPD.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A ADI 5527 validou um regime de guarda mais amplo que o europeu — tensão com o princípio de minimização de dados da LGPD.",
+      "autores": [
+        {
+          "nome": "Ronald Dworkin",
+          "datas": "1931–2013",
+          "obra": "O Império do Direito (Law's Empire), 1986",
+          "contribuicao": "Integridade como romance em cadeia — a ADI 5527 como continuidade da proteção constitucional da privacidade, não ruptura; validade das sanções como consequência necessária do sistema"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Ubi ius ibi remedium",
+          "traducao_literal": "Onde há direito, há remédio",
+          "traducao_juridica": "As sanções do art. 12 do Marco Civil são o remédio constitucional para o descumprimento do dever de guarda — validadas pelo STF na ADI 5527",
+          "contexto_romano": "Brocardo do common law incorporado à tradição romano-germânica — base do direito de ação e das sanções administrativas"
+        }
+      ]
     },
     {
       "id": "stj_resp",
@@ -406,7 +424,31 @@
         "dados_pessoais"
       ],
       "orgao": "STJ",
-      "ano": 2020
+      "ano": 2020,
+      "historia": "STJ — REsp 1.777.780, julgado em 2020. Estabeleceu que vazamento de dados pessoais gera dano moral in re ipsa — dispensando comprovação de efetivo prejuízo. Precedente que antecedeu a vigência plena das sanções da LGPD (ago./2021) e demonstrou que o Judiciário já aplicava proteção de dados antes da ANPD existir. Relator: Min. Paulo de Tarso Sanseverino. É a prova histórica de que a proteção de dados no Brasil tem raiz jurisprudencial anterior à lei — dialogismo pancrônico entre common law e civil law.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 82 — responsabilidade civil por violação de dados pessoais; CCPA — California Consumer Privacy Act (2018) — dano estatutário sem prova de prejuízo; common law americano — tort de invasion of privacy. O STJ antecipou o modelo europeu de dano in re ipsa por vazamento de dados — convergência espontânea glocal antes da vigência da LGPD.",
+      "autores": [
+        {
+          "nome": "Danilo Doneda",
+          "datas": "1974–2022",
+          "obra": "Da Privacidade à Proteção de Dados Pessoais, 2006",
+          "contribuicao": "Obra fundadora do direito de proteção de dados no Brasil — base doutrinária do REsp 1.777.780 e da LGPD"
+        },
+        {
+          "nome": "Laura Schertel Mendes",
+          "datas": "1983–",
+          "obra": "Privacidade, Proteção de Dados e Defesa do Consumidor, 2014",
+          "contribuicao": "Doutrinadora que fundamentou o dano in re ipsa por vazamento — argumento acolhido pelo STJ no REsp 1.777.780"
+        }
+      ],
+      "latim": [
+        {
+          "original": "In re ipsa",
+          "traducao_literal": "Na coisa em si",
+          "traducao_juridica": "O dano existe na própria violação — não precisa ser demonstrado separadamente. O STJ aplicou ao vazamento de dados pessoais: a exposição é o dano",
+          "contexto_romano": "Doutrina da presunção de dano — aplicada originalmente em casos de diffamatio (difamação) no direito romano clássico"
+        }
+      ]
     },
     {
       "id": "stj_resp_plat",
@@ -421,7 +463,25 @@
         "menores"
       ],
       "orgao": "STJ",
-      "ano": 2021
+      "ano": 2021,
+      "historia": "STJ — REsp 1.907.924, julgado em 2021. Estabeleceu que plataformas digitais têm dever de remoção de conteúdo ilícito após notificação — interpretação dinâmica do art. 19 do Marco Civil da Internet. Precedente que deve ser relido à luz da inconstitucionalidade parcial declarada pelo STF no Tema 987 (jun./2025): o regime de responsabilidade de plataformas está em transição — o STJ antecipou o que o STF formalizou.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU DSA — Digital Services Act (2022) — notice-and-takedown como obrigação geral; Section 230 do CDA (EUA, 1996) — imunidade ampla, sem dever de remoção por notificação; NetzDG — Netzwerkdurchsetzungsgesetz (Alemanha, 2017) — remoção em 24h para conteúdo ilegal. O REsp 1.907.924 posicionou o Brasil entre o modelo europeu (dever de remoção) e o americano (imunidade ampla) — posição agora consolidada pelo Tema 987 + Decreto 12.975/2026.",
+      "autores": [
+        {
+          "nome": "Carlos Affonso Pereira de Souza",
+          "datas": "1978–",
+          "obra": "Responsabilidade Civil dos Provedores de Internet, 2007",
+          "contribuicao": "Principal doutrinador do Marco Civil — suas análises sobre responsabilidade de plataformas fundamentaram o REsp 1.907.924"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Qui tacet consentire videtur",
+          "traducao_literal": "Quem cala parece consentir",
+          "traducao_juridica": "A plataforma que não remove conteúdo ilícito após notificação parece consentir com o ilícito — fundamento do dever de remoção estabelecido no REsp 1.907.924",
+          "contexto_romano": "Brocardo medieval do direito canônico — incorporado à teoria da responsabilidade civil por omissão"
+        }
+      ]
     },
     {
       "id": "anpd",
@@ -435,7 +495,31 @@
         "dados_pessoais"
       ],
       "orgao": "Governo Federal",
-      "ano": 2020
+      "ano": 2020,
+      "historia": "ANPD — Autoridade Nacional de Proteção de Dados, criada pela LGPD (Lei 13.709/2018) como autarquia federal vinculada à Presidência da República. Levou 3 anos para ter estrutura funcional plena. Em 2026, o Decreto 12.975/2026 expandiu suas competências para fiscalizar o Marco Civil da Internet — transformando a ANPD de autoridade de dados em autoridade digital ampla. Tensão estrutural: vinculação ao Executivo compromete independência regulatória — modelo oposto ao GDPR europeu.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): CNIL — Commission Nationale de l'Informatique et des Libertés (França, 1978) — autoridade independente, modelo europeu de referência; ICO — Information Commissioner's Office (UK) — autoridade independente do governo; FTC — Federal Trade Commission (EUA) — sem mandato específico de proteção de dados, usa poderes gerais antitruste. A ANPD nasceu vinculada ao Executivo — tensão com o princípio da independência regulatória que o GDPR exige das autoridades supervisoras nacionais (art. 52).",
+      "autores": [
+        {
+          "nome": "Laura Schertel Mendes",
+          "datas": "1983–",
+          "obra": "Privacidade, Proteção de Dados e Defesa do Consumidor, 2014",
+          "contribuicao": "Doutrinadora que mais influenciou a criação da ANPD — defende independência estrutural como condição de efetividade regulatória"
+        },
+        {
+          "nome": "Danilo Doneda",
+          "datas": "1974–2022",
+          "obra": "Da Privacidade à Proteção de Dados Pessoais, 2006",
+          "contribuicao": "Co-arquiteto intelectual da LGPD e da ANPD — sua morte em 2022 foi perda irreparável para o direito de proteção de dados brasileiro"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Quis custodiet ipsos custodes?",
+          "traducao_literal": "Quem guardará os próprios guardiões?",
+          "traducao_juridica": "A ANPD vinculada ao Executivo — quem fiscaliza o fiscalizador quando o governo é parte interessada? Questão central da independência regulatória",
+          "contexto_romano": "Juvenal, Sátiras VI (séc. II d.C.) — aplicado ao debate sobre independência de agências reguladoras"
+        }
+      ]
     },
     {
       "id": "decreto_12975_2026",
@@ -456,7 +540,37 @@
         "menores"
       ],
       "orgao": "Presidência da República / ANPD",
-      "ano": 2026
+      "ano": 2026,
+      "historia": "Decreto 12.975, assinado em 21 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Revoga parcialmente o Decreto 8.771/2016. Atribui à ANPD (Autoridade Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar o decreto.",
+      "direito_comparado": "O Decreto 12.975/2026 converge com o DSA — Digital Services Act (União Europeia, 2022): ambos impõem deveres proativos de moderação a plataformas digitais sem exigir ordem judicial específica. Diverge do modelo americano da Section 230 do CDA — Communications Decency Act (EUA, 1996), que mantém imunidade ampla das plataformas. Glocal (global + local, Robertson, 1990s): o Brasil está convergindo para o modelo europeu via decreto executivo, sem aprovação legislativa — caminho distinto do DSA, que passou pelo Parlamento Europeu.",
+      "autores": [
+        {
+          "nome": "Jürgen Habermas",
+          "datas": "1929–",
+          "obra": "Teoria da Ação Comunicativa (Theorie des kommunikativen Handelns), 1981",
+          "contribuicao": "O decreto viola o critério habermasiano de legitimidade: foi editado sem debate parlamentar prévio — procedimento discursivo racional ausente"
+        },
+        {
+          "nome": "Lon Fuller",
+          "datas": "1902–1978",
+          "obra": "A Moralidade do Direito (The Morality of Law), 1964",
+          "contribuicao": "Critério de publicidade processual: decreto sem debate legislativo amplo fragiliza a moralidade interna do direito — questionamento doutrinário legítimo"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Delegata potestas non potest delegari",
+          "traducao_literal": "O poder delegado não pode ser subdelegado",
+          "traducao_juridica": "O executivo não pode legislar sobre matéria reservada ao Congresso — argumento central dos 24+ PDLs que tentam derrubar o decreto",
+          "contexto_romano": "Princípio do direito público romano — limite do poder regulamentar"
+        },
+        {
+          "original": "Ubi lex voluit dixit, ubi noluit tacuit",
+          "traducao_literal": "Onde a lei quis, disse; onde não quis, calou",
+          "traducao_juridica": "O silêncio legislativo sobre moderação de conteúdo não autoriza o executivo a legislar — argumento da oposição contra o decreto",
+          "contexto_romano": "Brocardo de hermenêutica legislativa — interpretação restritiva do poder regulamentar"
+        }
+      ]
     },
     {
       "id": "decreto_12976_2026",
@@ -477,7 +591,25 @@
         "dados_pessoais"
       ],
       "orgao": "Presidência da República",
-      "ano": 2026
+      "ano": 2026,
+      "historia": "Decreto 12.976, assinado em 21 de maio de 2026 conjuntamente com o Decreto 12.975/2026. Reforça a proteção das mulheres no ambiente digital: remoção rápida de conteúdo íntimo ilegal, combate a deepfakes sexuais, responsabilidade de plataformas por violência de gênero online. Integra o Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado na mesma cerimônia que as Leis 15.409 e 15.410/2026.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): UK Online Safety Act (2023) — primeiro do mundo a exigir remoção proativa de conteúdo sexual não consensual; EU DSA (2022) — obrigações de remoção rápida para plataformas de grande porte; VAWA — Violence Against Women Act (EUA, 2022) — proteção digital de mulheres, mas sem obrigação de remoção equivalente. O Decreto 12.976 é o mais abrangente da América Latina em proteção digital de mulheres.",
+      "autores": [
+        {
+          "nome": "Silvia Pimentel",
+          "datas": "1942–",
+          "obra": "Convenção CEDAW e o Direito Brasileiro, 2008",
+          "contribuicao": "Principal doutrinadora brasileira dos direitos das mulheres — CEDAW como fundamento internacional do decreto"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Alterum non laedere",
+          "traducao_literal": "Não causar dano a outrem",
+          "traducao_juridica": "Princípio que fundamenta a responsabilidade das plataformas por danos causados por conteúdo íntimo ilegal — o dano digital é tão real quanto o físico",
+          "contexto_romano": "Ulpiano (170–228 d.C.) — Digesto de Justiniano (533 d.C.) — um dos três preceitos do direito romano"
+        }
+      ]
     },
     {
       "id": "lei_15409_2026",
@@ -497,7 +629,25 @@
         "internet"
       ],
       "orgao": "Congresso Nacional",
-      "ano": 2026
+      "ano": 2026,
+      "historia": "Lei 15.409/2026, sancionada em 21/05/2026 conjuntamente com a Lei 15.410/2026 e os Decretos 12.975 e 12.976/2026. Institui o CNVM — Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Consolida em tempo real dados de condenados por feminicídio, violência doméstica, assédio e crimes correlatos. Vigor: 60 dias após 21/05/2026. Integra o Pacto Nacional Brasil Contra o Feminicídio.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA — National Sex Offender Public Website (NSOPW) — cadastro federal de agressores sexuais; UK — Sarah's Law (2011) — direito de saber se parceiro tem histórico de violência; Espanha — Registro Central de Delincuentes Sexuales (2016). O CNVM é o mais abrangente da América Latina — inclui feminicídio e violência psicológica, não apenas crimes sexuais.",
+      "autores": [
+        {
+          "nome": "Maria Berenice Dias",
+          "datas": "1948–",
+          "obra": "A Lei Maria da Penha na Justiça, 2007",
+          "contribuicao": "Principal doutrinadora do direito das mulheres no Brasil — base doutrinária do CNVM e da Lei Maria da Penha que o precede"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Nemo iudex in causa sua",
+          "traducao_literal": "Ninguém é juiz em causa própria",
+          "traducao_juridica": "O CNVM como instrumento de transparência pública — impede que agressores reincidentes se apresentem como pessoas sem histórico de violência",
+          "contexto_romano": "Princípio do juiz natural — aplicado aqui como princípio de transparência: a sociedade tem direito de conhecer o histórico de condenados"
+        }
+      ]
     },
     {
       "id": "pl_misoginia",
@@ -517,7 +667,25 @@
         "dados_pessoais"
       ],
       "orgao": "Câmara dos Deputados (pendente)",
-      "ano": 2026
+      "ano": 2026,
+      "historia": "PL 896/2023 — proposto originalmente na Câmara, aprovado pelo Senado em 24/03/2026 com 67 votos favoráveis e zero contrários. Relatora: Sen. Soraya Thronicke. Altera a Lei do Racismo (Lei 7.716/1989) para incluir misoginia como crime de preconceito ou discriminação — pena de 2 a 5 anos de reclusão mais multa. Aguarda votação na Câmara dos Deputados — ainda não é lei. O islamismo crescente na Europa coloca o debate sobre misoginia em perspectiva glocal: crime em sistemas de tradição romano-germânica, tolerado em sistemas de direito religioso — tensão normativa civilizatória.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): Alemanha — §130 StGB (Código Penal alemão) criminaliza incitação ao ódio incluindo misoginia; França — Lei Avia (2020) combate conteúdo misógino online; UK — Hate Crime and Public Order (Scotland) Act (2021) inclui misoginia. Brasil segue a tendência europeia de expandir crimes de ódio para incluir discriminação de gênero — tradição romano-germânica partilhada.",
+      "autores": [
+        {
+          "nome": "Ela Wiecko Volkmer de Castilho",
+          "datas": "1952–",
+          "obra": "Criminalização do Racismo, 2002",
+          "contribuicao": "Doutrinadora de referência em crimes de discriminação — base para a extensão da Lei do Racismo à misoginia"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Lex specialis derogat generali",
+          "traducao_literal": "A lei especial derroga a geral",
+          "traducao_juridica": "O PL 896/2023 como lex specialis para misoginia dentro da Lei do Racismo (lex generalis para crimes de discriminação) — critério de Bobbio (1909–2004)",
+          "contexto_romano": "Terceiro critério de resolução de antinomias de Bobbio — o mais complexo, exige identificação precisa do âmbito de aplicação"
+        }
+      ]
     },
     {
       "id": "magnifica_humanitas",
@@ -554,14 +722,26 @@
           "datas": "1810–1903",
           "obra": "Rerum Novarum, 1891",
           "contribuicao": "Antecedente histórico direto — enfrentou os dilemas sociais da Revolução Industrial; inspirou o nome e a abordagem de Leão XIV sobre a IA"
+        },
+        {
+          "nome": "John Finnis",
+          "datas": "1940–",
+          "obra": "Lei Natural e Direitos Naturais (Natural Law and Natural Rights), 1980",
+          "contribuicao": "Fundamentação jusnaturalista sem teologia — a dignidade humana como limite da IA é argumento de razão prática, acessível a crentes e não-crentes; base filosófica da encíclica"
         }
       ],
       "latim": [
         {
-          "original": "Magnifica Humanitas",
-          "traducao_literal": "Magnífica Humanidade",
-          "traducao_juridica": "A grandiosidade da condição humana como critério normativo supremo — a IA deve servir à humanidade, nunca subjugá-la",
-          "contexto_romano": "Humanitas — conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e excelência humanas; incorporado ao direito natural medieval e ao magistério social católico"
+          "original": "Humanitas",
+          "traducao_literal": "Humanidade / Condição humana",
+          "traducao_juridica": "Conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e excelência humanas — a Magnifica Humanitas afirma que a IA deve servir à humanitas, nunca subjugá-la",
+          "contexto_romano": "Cícero, De Officiis (44 a.C.) — humanitas como fundamento ético da vida pública; incorporado ao magistério social católico"
+        },
+        {
+          "original": "Lex iniusta non est lex",
+          "traducao_literal": "A lei injusta não é lei",
+          "traducao_juridica": "São Tomás de Aquino (1225–1274) — a IA que viola a dignidade humana não pode ser considerada tecnologia legítima; argumento central da encíclica",
+          "contexto_romano": "Agostinho de Hipona (354–430 d.C.) → São Tomás — fundamento do jusnaturalismo católico"
         }
       ]
     }

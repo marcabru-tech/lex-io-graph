@@ -1,12 +1,67 @@
 {
-  "total_sugeridas": 19,
+  "total_sugeridas": 32,
   "total_existentes": 30,
-  "confirmadas": 9,
-  "novas": 10,
-  "faltando": 21,
-  "precisao": 0.474,
-  "cobertura": 0.3,
+  "confirmadas": 11,
+  "novas": 21,
+  "faltando": 19,
+  "precisao": 0.344,
+  "cobertura": 0.367,
   "detalhe_confirmadas": [
+    {
+      "source": "stf_tema987",
+      "target": "decreto_12975_2026",
+      "score": 0.604,
+      "classificacao": "moderada",
+      "tier": 3,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 1.0,
+        "ementa": 0.059
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "regulamenta",
+      "match_tipo": false
+    },
+    {
+      "source": "decreto_12975_2026",
+      "target": "decreto_12976_2026",
+      "score": 0.541,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.143
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
+    },
     {
       "source": "eca_digital",
       "target": "stf_tema987",
@@ -62,29 +117,83 @@
       "match_tipo": false
     },
     {
-      "source": "decreto_12975_2026",
+      "source": "eca_digital",
       "target": "decreto_12976_2026",
       "score": 0.466,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "regulamenta",
       "scores_parciais": {
-        "temas": 1.0,
-        "hierarquia": 0.3,
+        "temas": 0.667,
+        "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.0,
+        "comparado": 0.333,
         "temporal": 1.0,
-        "ementa": 0.143
+        "ementa": 0.071
       },
       "temas_comuns": [
         "dados_pessoais",
-        "internet",
         "menores"
       ],
-      "jurisdicoes_comuns": [],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
       "match_tipo": false
+    },
+    {
+      "source": "marco_civil",
+      "target": "decreto_12975_2026",
+      "score": 0.463,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.4,
+        "ementa": 0.12
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "regulamenta",
+      "match_tipo": true
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_adimc",
+      "score": 0.461,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.071
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "interpreta",
+      "match_tipo": true
     },
     {
       "source": "marco_civil",
@@ -112,31 +221,6 @@
       "correntes_comuns": [],
       "tipo_existente": "interpreta",
       "match_tipo": true
-    },
-    {
-      "source": "stf_tema987",
-      "target": "decreto_12975_2026",
-      "score": 0.454,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 1.0,
-        "hierarquia": 0.3,
-        "hermeneutica": 0.0,
-        "comparado": 0.0,
-        "temporal": 1.0,
-        "ementa": 0.059
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "internet",
-        "menores"
-      ],
-      "jurisdicoes_comuns": [],
-      "correntes_comuns": [],
-      "tipo_existente": "regulamenta",
-      "match_tipo": false
     },
     {
       "source": "cf88",
@@ -191,30 +275,6 @@
       "match_tipo": true
     },
     {
-      "source": "eca_digital",
-      "target": "decreto_12976_2026",
-      "score": 0.416,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "regulamenta",
-      "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.0,
-        "temporal": 1.0,
-        "ementa": 0.071
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "menores"
-      ],
-      "jurisdicoes_comuns": [],
-      "correntes_comuns": [],
-      "tipo_existente": "complementaridade",
-      "match_tipo": false
-    },
-    {
       "source": "decreto_12976_2026",
       "target": "lei_15409_2026",
       "score": 0.415,
@@ -243,22 +303,100 @@
     {
       "source": "stj_resp",
       "target": "anpd",
-      "score": 0.517,
-      "classificacao": "fraca",
-      "tier": 4,
-      "tipo_sugerido": "intersecao",
+      "score": 0.567,
+      "classificacao": "moderada",
+      "tier": 3,
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 1.0,
         "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.0,
+        "comparado": 0.333,
         "temporal": 1.0,
         "ementa": 0.077
       },
       "temas_comuns": [
         "dados_pessoais"
       ],
-      "jurisdicoes_comuns": [],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "decreto_12976_2026",
+      "score": 0.52,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "stf_adimc",
+      "score": 0.507,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.7,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.077
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [
+        "integridade"
+      ]
+    },
+    {
+      "source": "eca_digital",
+      "target": "decreto_12975_2026",
+      "score": 0.505,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.667,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
@@ -306,6 +444,55 @@
         "menores"
       ],
       "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_adimc",
+      "target": "decreto_12976_2026",
+      "score": 0.465,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lgpd",
+      "target": "decreto_12975_2026",
+      "score": 0.454,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.4,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.7,
+        "ementa": 0.061
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
@@ -357,26 +544,148 @@
       "correntes_comuns": []
     },
     {
-      "source": "stf_tema987",
-      "target": "decreto_12976_2026",
-      "score": 0.445,
+      "source": "stf_adimc",
+      "target": "anpd",
+      "score": 0.443,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.083
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lgpd",
+      "target": "stj_resp",
+      "score": 0.442,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "interpreta",
       "scores_parciais": {
-        "temas": 1.0,
-        "hierarquia": 0.3,
+        "temas": 0.25,
+        "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.0,
+        "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.0
+        "ementa": 0.077
       },
       "temas_comuns": [
-        "dados_pessoais",
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "stj_resp_plat",
+      "score": 0.44,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.667,
+        "temporal": 0.7,
+        "ementa": 0.167
+      },
+      "temas_comuns": [
         "internet",
         "menores"
       ],
-      "jurisdicoes_comuns": [],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stj_resp_plat",
+      "target": "decreto_12975_2026",
+      "score": 0.427,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.667,
+        "temporal": 0.7,
+        "ementa": 0.082
+      },
+      "temas_comuns": [
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "marco_civil",
+      "target": "stj_resp",
+      "score": 0.425,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.333,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "eca_digital",
+      "target": "stj_resp",
+      "score": 0.425,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.667,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
@@ -425,24 +734,25 @@
     },
     {
       "source": "eca_digital",
-      "target": "decreto_12975_2026",
-      "score": 0.405,
+      "target": "anpd",
+      "score": 0.407,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.7,
+        "temas": 0.5,
+        "hierarquia": 1.0,
         "hermeneutica": 0.0,
-        "comparado": 0.0,
-        "temporal": 1.0,
+        "comparado": 0.25,
+        "temporal": 0.7,
         "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "menores"
+        "dados_pessoais"
       ],
-      "jurisdicoes_comuns": [],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
@@ -465,6 +775,29 @@
         "menores"
       ],
       "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "nr1",
+      "target": "decreto_12976_2026",
+      "score": 0.4,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "intersecao",
+      "scores_parciais": {
+        "temas": 0.2,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.3,
+        "comparado": 1.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
       "correntes_comuns": []
     }
   ],
@@ -513,13 +846,6 @@
     },
     {
       "source": "marco_civil",
-      "target": "stf_adimc",
-      "tipo": "interpreta",
-      "descricao": "STF declarou constitucional o art. 12 do Marco Civil, validando as sanções civis por descumprimento de guarda de dados.",
-      "artigos": "ADI 5527"
-    },
-    {
-      "source": "marco_civil",
       "target": "stj_resp_plat",
       "tipo": "interpreta",
       "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucionalidade parcial declarada pelo STF (Tema 987, jun./2025).",
@@ -552,13 +878,6 @@
       "tipo": "hierarquia",
       "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º, LXXIX) e liberdade de expressão.",
       "artigos": "CF art. 5º, LXXIX ↔ PL 4/2025 Livro VI"
-    },
-    {
-      "source": "marco_civil",
-      "target": "decreto_12975_2026",
-      "tipo": "regulamenta",
-      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
-      "artigos": "MCI Lei 12.965/2014 → Decreto 12.975/2026"
     },
     {
       "source": "anpd",
@@ -649,11 +968,6 @@
       "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteçõe"
     },
     {
-      "par": "marco_civil ↔ stf_adimc",
-      "tipo": "interpreta",
-      "descricao": "STF declarou constitucional o art. 12 do Marco Civil, validando as sanções civis por descumprimento de guarda de dados."
-    },
-    {
       "par": "marco_civil ↔ stj_resp_plat",
       "tipo": "interpreta",
       "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucion"
@@ -677,11 +991,6 @@
       "par": "cf88 ↔ pl_cc_digital",
       "tipo": "hierarquia",
       "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º"
-    },
-    {
-      "par": "marco_civil ↔ decreto_12975_2026",
-      "tipo": "regulamenta",
-      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e "
     },
     {
       "par": "anpd ↔ decreto_12975_2026",
@@ -725,7 +1034,7 @@
     }
   ],
   "metadata": {
-    "gerado_em": "2026-06-06T12:21:01.131157",
+    "gerado_em": "2026-06-06T12:39:18.723324",
     "threshold": 0.4,
     "tier_filtro": 3,
     "engine": "IPII Engine v1.0",
