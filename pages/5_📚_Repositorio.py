@@ -1,8 +1,27 @@
 import streamlit as st
+import requests
+import os
+from pathlib import Path
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.repositorio import AUTORES, BROCARDOS, TRADICOES_JURIDICAS, MAGNIFICA_HUMANITAS
 from lib.multisemiose import CITACOES, OBRAS_ARTE, GLOSSARIO
 from lib.footer import render_footer
+
+@st.cache_data(ttl=86400)
+def baixar_imagem(url: str, nome: str) -> str:
+    """Baixa imagem para /tmp/ e retorna o path local. Cache de 24h."""
+    tmp_path = f"/tmp/lexiograph_{nome}"
+    if not os.path.exists(tmp_path):
+        try:
+            resp = requests.get(url, timeout=15, headers={
+                "User-Agent": "Lexiograph/1.0 (hubstry.dev; compliance atlas)"
+            })
+            resp.raise_for_status()
+            with open(tmp_path, "wb") as f:
+                f.write(resp.content)
+        except Exception:
+            return ""
+    return tmp_path
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Repositório de Conhecimento",
@@ -259,23 +278,22 @@ elif secao == "📖 Literatura e Arte":
             cols = st.columns(2)
             for j, obra in enumerate(OBRAS_ARTE[i:i+2]):
                 with cols[j]:
+                    img_path = baixar_imagem(obra['url_wikimedia'], f"{obra['id']}.jpg")
+                    if img_path:
+                        st.image(img_path, use_container_width=True)
+                    else:
+                        st.markdown(f"""
+<div style="padding:12px;background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);
+border-radius:6px;font-family:monospace;font-size:11px;color:#706a60;margin-bottom:8px;">
+🖼️ {obra['titulo']} — {obra['autor']} ({obra['ano']})<br>
+<em>Ver em: <a href="{obra['url_wikimedia']}" target="_blank" style="color:#d4a853;">Wikimedia Commons</a></em>
+</div>""", unsafe_allow_html=True)
                     st.markdown(f"""
 <div style="margin-bottom:16px;">
-  <img src="{obra['url_wikimedia']}"
-       alt="{obra['titulo']}"
-       style="width:100%;border-radius:6px;border:1px solid rgba(212,168,83,0.2);"
-       onerror="this.style.display='none';document.getElementById('fallback_{obra['id']}').style.display='block';">
-  <div id="fallback_{obra['id']}" style="display:none;padding:12px;background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);border-radius:6px;font-family:monospace;font-size:11px;color:#706a60;">
-    🖼️ {obra['titulo']} — {obra['autor']} ({obra['ano']})<br>
-    <em>Imagem disponível em: <a href="{obra['url_wikimedia']}" target="_blank" style="color:#d4a853;">Wikimedia Commons</a></em>
-  </div>
-  <div style="margin-top:8px;">
-    <strong style="color:#e8e4dc;">{obra['titulo']}</strong><br>
-    <span style="color:#9b59b6;font-size:12px;font-family:monospace;">{obra['autor']} ({obra['datas_autor']})</span><br>
-    <span style="color:#706a60;font-size:11px;font-style:italic;">{obra['tecnica']} · {obra['ano']} · {obra['localizacao']}</span>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+  <strong style="color:#e8e4dc;">{obra['titulo']}</strong><br>
+  <span style="color:#9b59b6;font-size:12px;font-family:monospace;">{obra['autor']} ({obra['datas_autor']})</span><br>
+  <span style="color:#706a60;font-size:11px;font-style:italic;">{obra['tecnica']} · {obra['ano']} · {obra['localizacao']}</span>
+</div>""", unsafe_allow_html=True)
                     with st.expander("Conexão jurídica"):
                         st.markdown(obra['descricao'])
                         st.markdown(obra['conexao_juridica'])
