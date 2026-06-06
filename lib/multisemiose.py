@@ -89,6 +89,63 @@ CITACOES = [
         "tema": "proteção integral de menores, vulnerabilidade digital, censura, acesso à justiça"
     },
     {
+        "id": "machado_alienista",
+        "autor": "Machado de Assis",
+        "datas": "1839–1908",
+        "obra": "O Alienista, 1882 (in: Papéis Avulsos)",
+        "citacao_original": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
+        "idioma_original": "Português",
+        "traducao": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
+        "contexto_juridico": "A antinomia bacamartiana — o sistema normativo que muda os critérios retroativamente, internando quem antes era são. Bacamarte é simultaneamente legislador, juiz e executor: a concentração de poder que Montesquieu (1689–1755) quis evitar com a separação dos três poderes. No fim, interna a si mesmo — a norma que se volta contra seu criador. Metáfora da crise do art. 19 do Marco Civil: o Estado que criou a regra (exigência de ordem judicial) e doze anos depois a declara insuficiente via STF e decretos, gerando insegurança jurídica total. Machado antecipou em 1882 o que Fuller (1902–1978) teorizaria em 1964: a lei que muda seus critérios continuamente viola a moralidade interna do direito.",
+        "uso_jurisprudencia": "O Alienista é a obra de Machado de Assis mais citada em votos sobre insegurança jurídica e arbitrariedade normativa — STJ e STF utilizam Bacamarte para ilustrar sistemas que perdem a capacidade de distinguir normalidade de patologia. Min. Luis Felipe Salomão citou O Alienista em voto sobre responsabilidade civil por dano institucional.",
+        "normas_relacionadas": ["marco_civil", "stf_tema987", "decreto_12975_2026", "cf88"],
+        "tema": "insegurança jurídica, separação de poderes, antinomia institucional, moralidade interna do direito"
+    },
+    {
+        "id": "graciliano_relatorios",
+        "autor": "Graciliano Ramos",
+        "datas": "1892–1953",
+        "obra": "Relatórios ao Governador do Estado de Alagoas (1929, 1930) — atos administrativos oficiais da Prefeitura de Palmeira dos Índios, Alagoas. Republicados in: O Prefeito Escritor (Editora Record, 2024)",
+        "citacao_original": "Os mortos esperarão mais algum tempo. São os munícipes que não reclamam.",
+        "idioma_original": "Português",
+        "traducao": "Sobre a impossibilidade orçamentária de construir o cemitério naquele exercício fiscal — os vivos têm prioridade.",
+        "contexto_juridico": (
+            "Graciliano Ramos foi prefeito de Palmeira dos Índios, Alagoas, de janeiro de 1928 a abril de 1930. "
+            "Seus relatórios de gestão ao governador Álvaro Paes — publicados no Diário Oficial do Estado — "
+            "são documentos administrativos oficiais, atos jurídicos no sentido pleno, redigidos com a economia "
+            "verbal e a precisão que marcaria Vidas Secas (1938). Não é literatura sobre direito — é um literato "
+            "produzindo direito. A distinção é ontológica. "
+            "É o caso mais antigo documentado de accountability municipal com linguagem clara no Brasil: "
+            "em 1929, sem Lei de Responsabilidade Fiscal (LC 101/2000), sem CGU (criada em 2001), "
+            "sem Portal da Transparência, Graciliano prestou contas com mais clareza e precisão "
+            "do que a maioria dos gestores públicos obrigados por lei a fazê-lo hoje. "
+            "Primeiro ato de gestão: 'estabelecer alguma ordem na administração' — vetou apadrinhamentos, "
+            "demitiu cobradores irregulares, construiu escolas, abriu estradas. "
+            "A receita municipal cresceu 41% em 1929 com supressão de taxas, não criação de novas. "
+            "O governador ficou tão impressionado que o convidou para diretor da Instrução Pública de Alagoas. "
+            "Pancronia: o princípio da publicidade administrativa (CF/88 art. 37), a LAI (Lei 12.527/2011) "
+            "e o debate contemporâneo sobre linguagem clara na LGPD, no ECA Digital e nos termos de uso "
+            "das plataformas têm aqui seu antecedente literário e administrativo mais preciso."
+        ),
+        "uso_jurisprudencia": (
+            "Em março de 1936, Graciliano foi preso sem acusação formal pelo governo Vargas — "
+            "sob o estado de guerra declarado após a Intentona Comunista de novembro de 1935 "
+            "(Lei de Segurança Nacional, Decreto 38/1935). O Estado Novo seria decretado apenas "
+            "em novembro de 1937, mas a lógica autoritária já operava sem due process desde 1935. "
+            "Ficou detido 10 meses sem processo, sem habeas corpus, sem contraditório. "
+            "O mesmo Estado que havia reconhecido e promovido sua excelência administrativa "
+            "o encarcerou pela mesma estrutura que O Alienista diagnosticou em 1882 e que "
+            "a dissertação de Sandoval Gonçalves dos Santos analisou em 1982: "
+            "o sistema que pune sem explicar, que julga sem fundamentar. "
+            "A experiência da prisão resultou em Memórias do Cárcere (1953, póstumo). "
+            "O arco pancrônico fecha: 1928 (prefeito que presta contas com clareza) → "
+            "1936 (preso sem acusação) → 1982 (dissertação sobre o mito da intimidação) → "
+            "2026 (debate sobre transparência algorítmica e due process digital)."
+        ),
+        "normas_relacionadas": ["cf88", "lgpd", "marco_civil", "decreto_12975_2026"],
+        "tema": "publicidade administrativa, linguagem clara, accountability, due process, pancronia, Estado de exceção"
+    },
+    {
         "id": "kafka_colonia",
         "autor": "Franz Kafka",
         "datas": "1883–1924",

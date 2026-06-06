@@ -68,8 +68,8 @@ Para licenciamento comercial ou parcerias:
 <a href="mailto:globaldeeptechecosystem@hubstry.dev"
    style="color:#d4a853;">globaldeeptechecosystem@hubstry.dev</a>
 ·
-<a href="https://hubstry.dev" target="_blank"
-   style="color:#3dc8e6;">hubstry.dev</a><br><br>
+<a href="https://hubstry.dev/lex-io-graph/" target="_blank"
+   style="color:#3dc8e6;">hubstry.dev/lex-io-graph</a><br><br>
 <strong style="color:#c44b4b;">Princípio de curadoria:</strong>
 o engine alerta — o curador decide.
 Nenhuma aresta é adicionada automaticamente ao grafo.

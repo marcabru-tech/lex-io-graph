@@ -24,7 +24,11 @@ Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> �
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
 <a href="https://hubstry.dev/lex-io-graph/" target="_blank"
    style="color: #d4a853; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
-↗ hubstry.dev
+↗ Site Lexiograph
+</a>
+<a href="https://hubstry.dev/lex-io-graph/#pricing" target="_blank"
+   style="color: #2ecc71; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
+↗ Pricing
 </a>
 <a href="https://github.com/marcabru-tech/lex-io-graph" target="_blank"
    style="color: #3dc8e6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
