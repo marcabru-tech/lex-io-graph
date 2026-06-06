@@ -1,5 +1,5 @@
 # Copyright © 2026 Hubstry Deep Tech — Guilherme Gonçalves Machado
-# IPII Engine — implementação proprietária para Lex-IO-Graph / Lexiograph
+# IPII (Interação Paramétrica Iterativa por Interoperabilidade) para Lex-IO-Graph / Lexiograph
 # Todos os direitos reservados.
 # Uso comercial, reprodução ou distribuição sem autorização escrita
 # da Hubstry Deep Tech é expressamente proibido.

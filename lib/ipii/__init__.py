@@ -6,7 +6,7 @@
 # Contato: globaldeeptechecosystem@hubstry.dev
 # hubstry.dev/lex-io-graph
 """
-IPII Engine — Integrated Polymorphic Intersection Intelligence
+IPII Engine — Interação Paramétrica Iterativa por Interoperabilidade
 Aplicado ao corpus normativo do Lex-IO-Graph / Lexiograph.
 Propriedade intelectual: Hubstry Deep Tech © 2026.
 """

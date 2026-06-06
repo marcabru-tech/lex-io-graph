@@ -57,7 +57,7 @@ st.markdown("""
 <div class="ip-box">
 <div class="ip-title">⚖️ Propriedade Intelectual — Hubstry Deep Tech</div>
 O <strong style="color:#e8e4dc;">IPII Engine</strong>
-(Integrated Polymorphic Intersection Intelligence aplicado ao corpus normativo do Lex-IO-Graph)
+(Interação Paramétrica Iterativa por Interoperabilidade aplicado ao corpus normativo do Lex-IO-Graph)
 é propriedade intelectual exclusiva da
 <strong style="color:#d4a853;">Hubstry Deep Tech</strong>
 — Guilherme Gonçalves Machado, Rio de Janeiro, Brasil. © 2026.<br><br>
