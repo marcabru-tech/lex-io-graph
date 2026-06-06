@@ -1,0 +1,735 @@
+{
+  "total_sugeridas": 19,
+  "total_existentes": 30,
+  "confirmadas": 9,
+  "novas": 10,
+  "faltando": 21,
+  "precisao": 0.474,
+  "cobertura": 0.3,
+  "detalhe_confirmadas": [
+    {
+      "source": "eca_digital",
+      "target": "stf_tema987",
+      "score": 0.505,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.667,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
+    },
+    {
+      "source": "pl_ia",
+      "target": "nr1",
+      "score": 0.495,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.033
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia",
+        "trabalho"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "intersecao",
+      "match_tipo": false
+    },
+    {
+      "source": "decreto_12975_2026",
+      "target": "decreto_12976_2026",
+      "score": 0.466,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.143
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_tema987",
+      "score": 0.458,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.4,
+        "ementa": 0.086
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "interpreta",
+      "match_tipo": true
+    },
+    {
+      "source": "stf_tema987",
+      "target": "decreto_12975_2026",
+      "score": 0.454,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.059
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": [],
+      "tipo_existente": "regulamenta",
+      "match_tipo": false
+    },
+    {
+      "source": "cf88",
+      "target": "marco_civil",
+      "score": 0.45,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "hierarquia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 0.4,
+        "ementa": 0.032
+      },
+      "temas_comuns": [
+        "acesso",
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": [],
+      "tipo_existente": "hierarquia",
+      "match_tipo": true
+    },
+    {
+      "source": "lgpd",
+      "target": "pl_ia",
+      "score": 0.45,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.75,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.333,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia",
+        "trabalho"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": true
+    },
+    {
+      "source": "eca_digital",
+      "target": "decreto_12976_2026",
+      "score": 0.416,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.071
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
+    },
+    {
+      "source": "decreto_12976_2026",
+      "target": "lei_15409_2026",
+      "score": 0.415,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.065
+      },
+      "temas_comuns": [
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
+    }
+  ],
+  "detalhe_novas": [
+    {
+      "source": "stj_resp",
+      "target": "anpd",
+      "score": 0.517,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "intersecao",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.077
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lgpd",
+      "target": "nr1",
+      "score": 0.475,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.75,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia",
+        "trabalho"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stj_resp_plat",
+      "target": "lei_15409_2026",
+      "score": 0.475,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lgpd",
+      "target": "stf_tema987",
+      "score": 0.445,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.4,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "pl_cc_digital",
+      "target": "magnifica_humanitas",
+      "score": 0.445,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "decreto_12976_2026",
+      "score": 0.445,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_adimc",
+      "target": "pl_misoginia",
+      "score": 0.415,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "antinomia",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "decreto_12975_2026",
+      "target": "lei_15409_2026",
+      "score": 0.413,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.056
+      },
+      "temas_comuns": [
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "eca_digital",
+      "target": "decreto_12975_2026",
+      "score": 0.405,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "lei_15409_2026",
+      "score": 0.405,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "internet",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    }
+  ],
+  "detalhe_faltando": [
+    {
+      "source": "cf88",
+      "target": "lgpd",
+      "tipo": "hierarquia",
+      "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88.",
+      "artigos": "CF art. 5º, LXXIX ↔ LGPD art. 1º"
+    },
+    {
+      "source": "lgpd",
+      "target": "anpd",
+      "tipo": "regulamenta",
+      "descricao": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil.",
+      "artigos": "LGPD art. 55-A"
+    },
+    {
+      "source": "eca",
+      "target": "eca_digital",
+      "tipo": "hierarquia",
+      "descricao": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital.",
+      "artigos": "ECA art. 3º ↔ ECA Digital art. 1º"
+    },
+    {
+      "source": "lgpd",
+      "target": "eca_digital",
+      "tipo": "intersecao",
+      "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital.",
+      "artigos": "LGPD art. 14 ↔ ECA Digital art. 12"
+    },
+    {
+      "source": "eca_digital",
+      "target": "marco_civil",
+      "tipo": "intersecao",
+      "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil.",
+      "artigos": "ECA Digital art. 18 ↔ MC art. 7º"
+    },
+    {
+      "source": "eca_digital",
+      "target": "pl_ia",
+      "tipo": "intersecao",
+      "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteções específicas do ECA Digital.",
+      "artigos": "ECA Digital art. 10 ↔ PL 2.338 art. 12"
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_adimc",
+      "tipo": "interpreta",
+      "descricao": "STF declarou constitucional o art. 12 do Marco Civil, validando as sanções civis por descumprimento de guarda de dados.",
+      "artigos": "ADI 5527"
+    },
+    {
+      "source": "marco_civil",
+      "target": "stj_resp_plat",
+      "tipo": "interpreta",
+      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucionalidade parcial declarada pelo STF (Tema 987, jun./2025).",
+      "artigos": "REsp 1.907.924 ↔ RE 1.037.396"
+    },
+    {
+      "source": "cf88",
+      "target": "stf_tema987",
+      "tipo": "hierarquia",
+      "descricao": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do Marco Civil — inconstitucionalidade por omissão parcial.",
+      "artigos": "CF art. 5º ↔ MCI art. 19"
+    },
+    {
+      "source": "pl_cc_digital",
+      "target": "lgpd",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de sobreposição normativa. ANPD e CGI.br emitiram alertas de insegurança jurídica.",
+      "artigos": "PL 4/2025 Livro VI ↔ LGPD art. 1º"
+    },
+    {
+      "source": "pl_cc_digital",
+      "target": "marco_civil",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil — já objeto de inconstitucionalidade parcial pelo STF (Tema 987).",
+      "artigos": "PL 4/2025 Livro VI ↔ MCI art. 19"
+    },
+    {
+      "source": "cf88",
+      "target": "pl_cc_digital",
+      "tipo": "hierarquia",
+      "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º, LXXIX) e liberdade de expressão.",
+      "artigos": "CF art. 5º, LXXIX ↔ PL 4/2025 Livro VI"
+    },
+    {
+      "source": "marco_civil",
+      "target": "decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
+      "artigos": "MCI Lei 12.965/2014 → Decreto 12.975/2026"
+    },
+    {
+      "source": "anpd",
+      "target": "decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da Internet — expansão significativa de atribuições.",
+      "artigos": "Decreto 12.975/2026 → ANPD"
+    },
+    {
+      "source": "marco_civil",
+      "target": "decreto_12976_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção de deepfakes sexuais e conteúdo íntimo ilegal.",
+      "artigos": "MCI Lei 12.965/2014 → Decreto 12.976/2026"
+    },
+    {
+      "source": "pl_misoginia",
+      "target": "marco_civil",
+      "tipo": "intersecao",
+      "descricao": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino serão responsabilizadas sob o novo regime do art. 19 + Decreto 12.975/2026.",
+      "artigos": "PL 896/2023 ↔ MCI art. 19 + Decreto 12.975/2026"
+    },
+    {
+      "source": "cf88",
+      "target": "pl_misoginia",
+      "tipo": "hierarquia",
+      "descricao": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88 — crimes de discriminação são inafiançáveis e imprescritíveis.",
+      "artigos": "CF art. 5º, XLII ↔ Lei 7.716/1989 ↔ PL 896/2023"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite da IA — o Vaticano como ator normativo global no debate regulatório brasileiro.",
+      "artigos": "Magnifica Humanitas Cap. IV ↔ PL 2.338/2023 art. 5º"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "decreto_12975_2026",
+      "tipo": "complementaridade",
+      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, 21/05) agiram independentemente no mesmo campo — responsabilidade de plataformas e proteção da dignidade humana na era digital.",
+      "artigos": "Magnifica Humanitas ↔ Decreto 12.975/2026"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "cf88",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana como fundamento normativo supremo — a encíclica reforça eticamente o que a CF/88 positivou juridicamente.",
+      "artigos": "Magnifica Humanitas ↔ CF/88 art. 1º, III"
+    },
+    {
+      "source": "magnifica_humanitas",
+      "target": "nr1",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu riscos psicossociais de IA no PGR (Programa de Gerenciamento de Riscos).",
+      "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
+    }
+  ],
+  "gap_engine": [
+    {
+      "par": "cf88 ↔ lgpd",
+      "tipo": "hierarquia",
+      "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88."
+    },
+    {
+      "par": "lgpd ↔ anpd",
+      "tipo": "regulamenta",
+      "descricao": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil."
+    },
+    {
+      "par": "eca ↔ eca_digital",
+      "tipo": "hierarquia",
+      "descricao": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital."
+    },
+    {
+      "par": "lgpd ↔ eca_digital",
+      "tipo": "intersecao",
+      "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital."
+    },
+    {
+      "par": "eca_digital ↔ marco_civil",
+      "tipo": "intersecao",
+      "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Ci"
+    },
+    {
+      "par": "eca_digital ↔ pl_ia",
+      "tipo": "intersecao",
+      "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteçõe"
+    },
+    {
+      "par": "marco_civil ↔ stf_adimc",
+      "tipo": "interpreta",
+      "descricao": "STF declarou constitucional o art. 12 do Marco Civil, validando as sanções civis por descumprimento de guarda de dados."
+    },
+    {
+      "par": "marco_civil ↔ stj_resp_plat",
+      "tipo": "interpreta",
+      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucion"
+    },
+    {
+      "par": "cf88 ↔ stf_tema987",
+      "tipo": "hierarquia",
+      "descricao": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do M"
+    },
+    {
+      "par": "pl_cc_digital ↔ lgpd",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de sobreposição"
+    },
+    {
+      "par": "pl_cc_digital ↔ marco_civil",
+      "tipo": "antinomia",
+      "descricao": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil — j"
+    },
+    {
+      "par": "cf88 ↔ pl_cc_digital",
+      "tipo": "hierarquia",
+      "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º"
+    },
+    {
+      "par": "marco_civil ↔ decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e "
+    },
+    {
+      "par": "anpd ↔ decreto_12975_2026",
+      "tipo": "regulamenta",
+      "descricao": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da "
+    },
+    {
+      "par": "marco_civil ↔ decreto_12976_2026",
+      "tipo": "regulamenta",
+      "descricao": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção de"
+    },
+    {
+      "par": "pl_misoginia ↔ marco_civil",
+      "tipo": "intersecao",
+      "descricao": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino serão"
+    },
+    {
+      "par": "cf88 ↔ pl_misoginia",
+      "tipo": "hierarquia",
+      "descricao": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88 — crim"
+    },
+    {
+      "par": "magnifica_humanitas ↔ pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite da"
+    },
+    {
+      "par": "magnifica_humanitas ↔ decreto_12975_2026",
+      "tipo": "complementaridade",
+      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, "
+    },
+    {
+      "par": "magnifica_humanitas ↔ cf88",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana com"
+    },
+    {
+      "par": "magnifica_humanitas ↔ nr1",
+      "tipo": "complementaridade",
+      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MT"
+    }
+  ],
+  "metadata": {
+    "gerado_em": "2026-06-06T12:21:01.131157",
+    "threshold": 0.4,
+    "tier_filtro": 3,
+    "engine": "IPII Engine v1.0",
+    "propriedade": "Hubstry Deep Tech © 2026",
+    "principio": "O engine alerta, o curador decide."
+  }
+}
