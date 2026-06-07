@@ -62,7 +62,7 @@ st.markdown(
 )
 st.markdown(
     "Análise do jogo de forças institucional, civilizatório e geopolítico "
-    "por trás de cada tensão normativa. Estilo: Chatham House / Eurasia Group / IISS — "
+    "por trás de cada tensão normativa. Estilo: analítico de consultoria — "
     "analítico, diagnóstico, acionável. "
     "O fato normativo como sintoma — a inteligência estratégica como diagnóstico."
 )
@@ -157,7 +157,7 @@ e
 <a href="https://hubstry.dev" target="_blank"
    style="color:#d4a853;text-decoration:none;">Hubstry Deep Tech</a>
 — venture building bootstrapped, Rio de Janeiro.<br>
-Alinhada com Chatham House / Eurasia Group / IISS.
+Diagnóstico estratégico baseado em fontes públicas.
 Diagnóstico estratégico baseado em fontes públicas — não assessoria jurídica.<br>
 Lex-IO-Graph · Lexiograph | Hubstry Deep Tech · Rio de Janeiro · 2026
 </div>""", unsafe_allow_html=True)

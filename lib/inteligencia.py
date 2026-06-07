@@ -3,7 +3,7 @@ Camada de inteligência jurídico-estratégica do Lex-IO-Graph.
 
 Vetor analítico: não apenas o fato normativo, mas o jogo de forças
 institucional, civilizatório e geopolítico por trás de cada tensão.
-Estilo: Chatham House / Eurasia Group / IISS — analítico, frio, acionável.
+Estilo: analítico de consultoria — diagnóstico, frio, acionável.
 Evitar: teoria da dependência, tom acusatório, framing conspiratório,
 fechamentos moralizantes. Fatos como diagnóstico estratégico e oportunidade.
 """
@@ -20,7 +20,7 @@ CASOS_ESTRATEGICOS = [
             "O campo normativo do art. 19 do Marco Civil da Internet (Lei 12.965/2014) "
             "é o epicentro da maior crise institucional do direito digital brasileiro. "
             "Três poderes entraram no mesmo campo em direções incompatíveis, "
-            "em contexto de ano eleitoral com ex-presidente preso por tentativa de golpe."
+            "em contexto de ano eleitoral com instabilidade institucional elevada."
         ),
         "camadas": [
             {
@@ -28,7 +28,7 @@ CASOS_ESTRATEGICOS = [
                 "analise": (
                     "O Congresso Nacional não aprovou o PL 2.630/2020 (PL das fake news) "
                     "por pressão de parlamentares ligados a plataformas digitais e a setores "
-                    "que se beneficiaram operacionalmente da desinformação nos ciclos eleitorais "
+                    "que se beneficiaram da ausência de regulação de plataformas "
                     "de 2018 e 2022. O vácuo não foi acidente — foi produto de vetos cruzados "
                     "entre atores com interesses incompatíveis. O STF, ante a omissão legislativa "
                     "e a urgência de 2025 (pré-eleitoral, ex-presidente indiciado por golpe de Estado "
@@ -70,15 +70,15 @@ CASOS_ESTRATEGICOS = [
                 )
             },
             {
-                "titulo": "Tensão 4 — O vetor geopolítico: Elon Musk, X e a pressão externa",
+                "titulo": "Tensão 4 — O vetor geopolítico: plataformas globais e soberania regulatória",
                 "analise": (
                     "O debate não é apenas doméstico. A suspensão do X (ex-Twitter) no Brasil "
                     "pelo STF (ago./2024) e o retorno após acordo (out./2024) inseriram o "
                     "Brasil no mapa global da regulação de plataformas. Elon Musk como ator "
-                    "geopolítico — proprietário de plataforma, aliado de Trump e de líderes "
+                    "geopolítico relevante — proprietário de plataforma com alcance global "
                     "da direita europeia — transforma a regulação brasileira em front de uma "
                     "disputa global entre soberania regulatória dos Estados e poder privado "
-                    "das big techs. O Decreto 12.975/2026 é lido por Musk e aliados como "
+                    "das plataformas. O Decreto 12.975/2026 é lido por críticos como "
                     "modelo de censura estatal; pelo governo brasileiro como modelo de "
                     "responsabilidade de plataformas. Duas narrativas incompatíveis, "
                     "ambas estrategicamente corretas para seus proponentes."
@@ -100,7 +100,7 @@ CASOS_ESTRATEGICOS = [
             ),
             "lacuna_remanescente": (
                 "Mesmo com legislação, o problema estrutural persiste: a assimetria de "
-                "capacidade técnica entre Estado e big techs. Nenhum decreto ou lei resolve "
+                "capacidade técnica entre Estado e plataformas de grande porte. Nenhum decreto ou lei resolve "
                 "o problema de quem tem competência para auditar algoritmos de moderação. "
                 "Essa é a lacuna que o PL 2.338/2023 (Marco Legal da IA) precisa endereçar."
             )
@@ -160,7 +160,7 @@ CASOS_ESTRATEGICOS = [
             "O ECA Digital (Lei 15.211/2025) é um dos poucos casos de consenso legislativo "
             "no direito digital brasileiro — aprovado com amplo apoio, sem a polarização "
             "que bloqueou o PL das fake news. A proteção de menores em ambiente digital "
-            "é o terreno onde direita e esquerda, governo e oposição, big techs e "
+            "é o terreno onde diferentes atores políticos, governo e oposição, plataformas e "
             "reguladores encontraram denominador comum."
         ),
         "camadas": [
@@ -170,7 +170,7 @@ CASOS_ESTRATEGICOS = [
                     "A proteção de crianças é um dos poucos valores que transcende "
                     "a polarização política — nenhum ator político se beneficia de "
                     "aparecer como defensor de plataformas que expõem menores. "
-                    "As big techs aceitaram o ECA Digital como troca implícita: "
+                    "As plataformas de grande porte aceitaram o ECA Digital como troca implícita: "
                     "regras claras sobre menores em troca de não regulação mais ampla "
                     "de conteúdo para adultos. O ECA Digital é o oposto do PL das fake news: "
                     "legislação possível porque não ameaça o modelo de negócio das plataformas "

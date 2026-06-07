@@ -34,6 +34,10 @@ Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> �
    style="color: #3dc8e6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
 ↗ GitHub
 </a>
+<a href="https://facebook.com/goncalvesetalii" target="_blank"
+   style="color: #9b59b6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
+↗ Gonçalves et Alii
+</a>
 <a href="mailto:globaldeeptechecosystem@hubstry.dev"
    style="color: #c44b4b; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
 ↗ contato
