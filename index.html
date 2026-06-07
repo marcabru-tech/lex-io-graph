@@ -588,10 +588,118 @@
       <p style="max-width: 540px; margin: 0 auto; color: var(--text-secondary);">
         O único atlas jurídico brasileiro com 10 páginas de inteligência,
         engine IPII de detecção de interseções normativas,
-        Radar Legislativo com APIs do Senado e Câmara,
-        e Teoria dos Conjuntos Jurídicos com diagramas de Venn e semiótica peirciana.
+        e Radar Legislativo com APIs do Senado e Câmara.
       </p>
       <a href="https://lex-io-graph-compliance-map.streamlit.app/" class="hero-cta" target="_blank" rel="noopener noreferrer">Explorar o app</a>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px;">
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:6px 14px;border:1px solid rgba(212,168,83,0.3);border-radius:4px;color:#d4a853;">18 normas mapeadas</span>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:6px 14px;border:1px solid rgba(212,168,83,0.3);border-radius:4px;color:#d4a853;">70+ arestas tipadas</span>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:6px 14px;border:1px solid rgba(61,200,230,0.3);border-radius:4px;color:#3dc8e6;">IPII Engine — PI Hubstry</span>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:6px 14px;border:1px solid rgba(155,89,182,0.3);border-radius:4px;color:#9b59b6;">10 páginas de inteligência</span>
+      </div>
+    </section>
+
+
+    <!-- ======================== DIAGRAMA HERO ======================== -->
+    <section style="padding: 0 0 48px; overflow:hidden;">
+      <div style="max-width:680px;margin:0 auto;padding:0 24px;">
+        <div style="font-family:var(--font-body);font-size:10px;color:var(--muted);letter-spacing:0.12em;text-align:center;margin-bottom:16px;">CORPUS NORMATIVO — GRAFO INTERATIVO</div>
+        <svg width="100%" viewBox="0 0 680 320" role="img" aria-label="Grafo normativo do Lex-IO-Graph mostrando normas jurídicas conectadas por tipo de relação">
+          <title>Grafo normativo — Lex-IO-Graph</title>
+          <style>
+            @keyframes lxg-fadein { from { opacity:0; transform:scale(0.82); } to { opacity:1; transform:scale(1); } }
+            @keyframes lxg-draw { from { stroke-dashoffset:300; } to { stroke-dashoffset:0; } }
+            @keyframes lxg-pulse { 0%,100%{opacity:0.25;r:34;} 50%{opacity:0.5;r:37;} }
+            .lxg-node { animation: lxg-fadein 0.45s ease both; transform-box:fill-box; transform-origin:center; }
+            .lxg-n1{animation-delay:0.0s} .lxg-n2{animation-delay:0.12s} .lxg-n3{animation-delay:0.24s}
+            .lxg-n4{animation-delay:0.36s} .lxg-n5{animation-delay:0.48s} .lxg-n6{animation-delay:0.60s}
+            .lxg-edge { stroke-dasharray:300; fill:none; animation: lxg-draw 0.5s ease both; }
+            .lxg-e1{animation-delay:0.75s} .lxg-e2{animation-delay:0.88s} .lxg-e3{animation-delay:1.01s}
+            .lxg-e4{animation-delay:1.14s} .lxg-e5{animation-delay:1.27s} .lxg-e6{animation-delay:1.40s}
+            .lxg-pulse { animation: lxg-pulse 2.8s ease-in-out infinite; animation-delay:1.6s; }
+          </style>
+          <defs>
+            <marker id="lxg-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+
+          <!-- Grid sutil -->
+          <g stroke="rgba(255,255,255,0.04)" stroke-width="0.5">
+            <line x1="0" y1="80" x2="680" y2="80"/>
+            <line x1="0" y1="160" x2="680" y2="160"/>
+            <line x1="0" y1="240" x2="680" y2="240"/>
+            <line x1="170" y1="0" x2="170" y2="320"/>
+            <line x1="340" y1="0" x2="340" y2="320"/>
+            <line x1="510" y1="0" x2="510" y2="320"/>
+          </g>
+
+          <!-- ARESTAS -->
+          <!-- CF/88 → LGPD hierarquia -->
+          <path class="lxg-edge lxg-e1" d="M318 68 L248 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <!-- CF/88 → Marco Civil hierarquia -->
+          <path class="lxg-edge lxg-e2" d="M362 68 L432 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <!-- LGPD → Marco Civil interpreta -->
+          <path class="lxg-edge lxg-e3" d="M278 148 L398 148" stroke="var(--io)" stroke-width="1" stroke-dasharray="4 3 300" marker-end="url(#lxg-arr)"/>
+          <!-- LGPD → ECA complementaridade -->
+          <path class="lxg-edge lxg-e4" d="M218 186 L168 234" stroke="var(--io)" stroke-width="1" stroke-dasharray="5 4 300" marker-end="url(#lxg-arr)"/>
+          <!-- Marco Civil → Decreto regulamenta -->
+          <path class="lxg-edge lxg-e5" d="M458 186 L510 234" stroke="var(--graph)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <!-- LGPD → NR-1 intersecção -->
+          <path class="lxg-edge lxg-e6" d="M238 188 L316 234" stroke="var(--graph)" stroke-width="1" stroke-dasharray="3 3 300" marker-end="url(#lxg-arr)"/>
+
+          <!-- NODO CF/88 — centro topo -->
+          <g class="lxg-node lxg-n1">
+            <circle class="lxg-pulse" cx="340" cy="48" r="34" fill="none" stroke="var(--lex)"/>
+            <circle cx="340" cy="48" r="28" fill="#1a1520" stroke="var(--lex)" stroke-width="1.5"/>
+            <text x="340" y="44" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--lex)" font-weight="600">CF/88</text>
+            <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">Constituição</text>
+          </g>
+
+          <!-- NODO LGPD -->
+          <g class="lxg-node lxg-n2">
+            <circle cx="228" cy="155" r="32" fill="#0d1a14" stroke="var(--io)" stroke-width="1.5"/>
+            <text x="228" y="151" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--io)" font-weight="600">LGPD</text>
+            <text x="228" y="165" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">dados pessoais</text>
+          </g>
+
+          <!-- NODO Marco Civil -->
+          <g class="lxg-node lxg-n3">
+            <circle cx="452" cy="155" r="32" fill="#0d1218" stroke="#378ADD" stroke-width="1.5"/>
+            <text x="452" y="151" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="#378ADD" font-weight="600">Marco</text>
+            <text x="452" y="165" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">Civil</text>
+          </g>
+
+          <!-- NODO ECA Digital -->
+          <g class="lxg-node lxg-n4">
+            <circle cx="148" cy="260" r="28" fill="#161208" stroke="var(--lex)" stroke-width="1" stroke-opacity="0.6"/>
+            <text x="148" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="var(--lex)" font-weight="500">ECA</text>
+            <text x="148" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">Digital</text>
+          </g>
+
+          <!-- NODO NR-1 -->
+          <g class="lxg-node lxg-n5">
+            <circle cx="340" cy="260" r="28" fill="#180e0e" stroke="var(--graph)" stroke-width="1.5"/>
+            <text x="340" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--graph)" font-weight="600">NR-1</text>
+            <text x="340" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">psicossocial</text>
+          </g>
+
+          <!-- NODO Decreto 12.975 -->
+          <g class="lxg-node lxg-n6">
+            <circle cx="524" cy="260" r="28" fill="#161208" stroke="var(--lex)" stroke-width="1" stroke-opacity="0.6"/>
+            <text x="524" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="11" fill="var(--lex)" font-weight="500">Dec.</text>
+            <text x="524" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">12.975/2026</text>
+          </g>
+
+          <!-- Legenda -->
+          <line x1="60" y1="302" x2="76" y2="302" stroke="var(--lex)" stroke-width="1.5"/>
+          <text x="80" y="306" font-family="var(--font-body)" font-size="9" fill="var(--muted)">hierarquia</text>
+          <line x1="160" y1="302" x2="176" y2="302" stroke="var(--io)" stroke-width="1" stroke-dasharray="4 2"/>
+          <text x="180" y="306" font-family="var(--font-body)" font-size="9" fill="var(--muted)">interpreta / complementa</text>
+          <line x1="360" y1="302" x2="376" y2="302" stroke="var(--graph)" stroke-width="1.5"/>
+          <text x="380" y="306" font-family="var(--font-body)" font-size="9" fill="var(--muted)">regulamenta / interseção</text>
+        </svg>
+      </div>
     </section>
 
     <!-- ======================== NAV ======================== -->
@@ -974,11 +1082,6 @@
             <td style="color: var(--lex);">IPII Engine</td>
             <td class="col-chatbot">Descoberta assistida de interseções normativas — técnica IPII, PI Hubstry Deep Tech</td>
           </tr>
-          <tr>
-            <td>10</td>
-            <td style="color: var(--io);">Teoria dos Conjuntos</td>
-            <td class="col-chatbot">Diagramas de Venn, chaves taxonômicas e tríade peirciana aplicados ao ordenamento jurídico</td>
-          </tr>
         </tbody>
       </table>
 
@@ -1054,6 +1157,7 @@
             </p>
             <div class="pricing-price">Sob consulta</div>
             <div class="pricing-detail">escopo técnico variável · pilares cobertos · quantidade de agentes</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);margin-top:12px;line-height:1.7;padding:10px 12px;border:1px solid rgba(255,255,255,0.06);border-radius:4px;">Escopo tipicamente inclui 10 páginas customizadas + IPII Engine + Radar Legislativo + Protocolo Hubstry adaptado ao segmento. Investimento varia conforme profundidade e pilares cobertos.</div>
           </div>
         </div>
       </div>
