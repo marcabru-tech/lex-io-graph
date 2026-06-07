@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teoria dos Conjuntos Jurídicos</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#080c18 0%,#0d1526 30%,#0a1020 70%,#080c18 100%);color:#d0d8ec;line-height:1.65;padding:0}
+.ctn{max-width:960px;margin:0 auto;padding:20px 24px}
+
+/* HERO */
+.hero{text-align:center;padding:30px 0 20px}
+.hero h1{font-size:2.4em;background:linear-gradient(135deg,#00d4ff 0%,#7c3aed 50%,#ff6b35 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;letter-spacing:-.5px}
+.hero .sub{font-size:1.15em;color:#7a86a6;margin-bottom:16px}
+.hero .intro{font-size:.97em;color:#8e99b8;max-width:780px;margin:0 auto;text-align:left}
+
+/* SECTION */
+.sec{margin:32px 0;padding:28px 26px;background:rgba(13,18,35,0.75);border-radius:14px;border:1px solid rgba(90,110,170,0.13)}
+.sec h2{font-size:1.45em;color:#00d4ff;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(0,212,255,0.15);display:flex;align-items:center;gap:8px}
+.sec h3{font-size:1.1em;color:#b8c4e0;margin:14px 0 8px}
+.sec p{color:#96a0bc;margin-bottom:10px;font-size:.95em}
+.sec .desc{color:#7a86a6;font-size:.88em;margin-top:4px}
+
+/* TRANSVERSAL BANDS */
+.tv{margin:18px -26px;border-radius:12px;padding:14px 24px;text-align:center;position:relative}
+.tv h4{font-size:.95em;margin-bottom:4px;font-weight:600}
+.tv .items{font-size:.88em;opacity:.8}
+.tv .arr{position:absolute;top:50%;transform:translateY(-50%);font-size:1.4em;opacity:.4}
+.tv .arr-l{left:12px}
+.tv .arr-r{right:12px}
+
+.tv-meta{background:linear-gradient(90deg,transparent,rgba(234,179,8,0.1) 20%,rgba(234,179,8,0.14) 50%,rgba(234,179,8,0.1) 80%,transparent);border:1px solid rgba(234,179,8,0.25)}
+.tv-meta h4{color:#facc15}
+.tv-meta .items{color:#caab35}
+.tv-meta .arr{color:#facc15}
+
+.tv-proc{background:linear-gradient(90deg,transparent,rgba(34,197,94,0.08) 20%,rgba(34,197,94,0.12) 50%,rgba(34,197,94,0.08) 80%,transparent);border:1px solid rgba(34,197,94,0.22)}
+.tv-proc h4{color:#4ade80}
+.tv-proc .items{color:#5cb870}
+.tv-proc .arr{color:#4ade80}
+
+.tv-pi{background:linear-gradient(90deg,transparent,rgba(236,72,153,0.08) 20%,rgba(236,72,153,0.12) 50%,rgba(236,72,153,0.08) 80%,transparent);border:1px solid rgba(236,72,153,0.22)}
+.tv-pi h4{color:#f472b6}
+.tv-pi .items{color:#d46090}
+.tv-pi .arr{color:#f472b6}
+
+/* LAYERS */
+.layer{margin:6px 0;border-radius:10px;overflow:hidden;border:1px solid rgba(90,110,170,0.15)}
+.lh{padding:11px 16px;display:flex;justify-content:space-between;align-items:center}
+.lh .nm{font-weight:600;font-size:1em}
+.lh .tg{font-size:.75em;opacity:.6;padding:2px 10px;border-radius:20px;border:1px solid rgba(255,255,255,0.15)}
+.lb{padding:7px 16px 10px;font-size:.85em;opacity:.8}
+.lb span{display:inline-block;margin:2px 6px 2px 0;padding:2px 7px;border-radius:4px;background:rgba(0,0,0,0.2);font-size:.83em}
+
+.l1 .lh{background:linear-gradient(135deg,#152a45,#1a2d4a);color:#60a5fa}
+.l2 .lh{background:linear-gradient(135deg,#3a2a10,#43330e);color:#fbbf24}
+.l3 .lh{background:linear-gradient(135deg,#451515,#4a1818);color:#f87171}
+.l4 .lh{background:linear-gradient(135deg,#0d3025,#0e3528);color:#34d399}
+.l5 .lh{background:linear-gradient(135deg,#2a1545,#30184d);color:#a78bfa}
+.l6 .lh{background:linear-gradient(135deg,#0d3040,#0e3545);color:#22d3ee}
+.l7 .lh{background:linear-gradient(135deg,#0d2d45,#0e304a);color:#06b6d4}
+.l8 .lh{background:linear-gradient(135deg,#3a200a,#43280d);color:#fb923c}
+
+/* SUB-LAYERS (Digital) */
+.sub{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px 16px 10px}
+.sl{padding:7px 10px;border-radius:6px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);font-size:.82em;text-align:center}
+.sl .st{color:#22d3ee;font-weight:600;margin-bottom:2px;font-size:.9em}
+.sl .si{color:#7a86a6;font-size:.85em}
+
+/* VENN */
+.venn-wrap{text-align:center;padding:10px 0 0}
+.venn-wrap svg{max-width:100%;height:auto}
+.vleg{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.vi{display:flex;align-items:flex-start;gap:8px}
+.vd{width:13px;height:13px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.vt strong{display:block;color:#d0d8ec;font-size:.92em}
+.vt{font-size:.88em;color:#8e99b8}
+
+/* NOTATION */
+.nblk{background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.12);border-radius:8px;padding:16px 18px;margin:12px 0;font-family:'Courier New',monospace;font-size:.98em;color:#c8d4ec;overflow-x:auto;white-space:pre-wrap;line-height:1.7}
+.nblk .cm{color:#3d5a78}
+.nexpl{margin:10px 0;padding:10px 14px;background:rgba(124,58,237,0.06);border-left:3px solid #7c3aed;border-radius:0 8px 8px 0;color:#a8b4d0;font-size:.9em}
+
+/* KELSEN */
+.kel{text-align:center;padding:10px 0}
+.kel svg{max-width:100%;height:auto}
+
+/* PEIRCE */
+.pei{text-align:center;padding:10px 0}
+.pei svg{max-width:100%;height:auto}
+
+/* GLOSSARY */
+.gtbl{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+.gtbl th{background:rgba(0,212,255,0.1);color:#00d4ff;padding:9px 12px;text-align:left;font-weight:600}
+.gtbl td{padding:9px 12px;border-bottom:1px solid rgba(90,110,170,0.08);color:#8e99b8}
+.gtbl tr:hover td{background:rgba(0,212,255,0.03)}
+.gtbl .sym{font-size:1.25em;color:#d0d8ec;font-family:'Courier New',monospace;white-space:nowrap}
+
+/* FOOTER SPACE */
+.end-space{height:10px}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .ctn{padding:12px 10px}
+  .hero h1{font-size:1.7em}
+  .sec{padding:18px 14px;margin:22px 0}
+  .tv{margin:14px -14px}
+  .sub{grid-template-columns:1fr}
+  .vleg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="ctn">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+  <h1>🧩 Teoria dos Conjuntos Jurídicos</h1>
+  <p class="sub">Arquitetura Sistêmica do Ordenamento Jurídico Brasileiro</p>
+  <p class="intro">O ordenamento jurídico brasileiro, concebido como um sistema complexo de normas, instituições e interpretações, pode ser modelado pela Teoria dos Conjuntos. Cada ramo do Direito constitui um subconjunto cujas interseções, uniões e diferenças revelam zonas de convergência, antinomias e lacunas normativas. Esta visualização adota uma abordagem sistêmica: o Direito não é tratado como mera lista dogmática, mas como <strong>arquitetura de camadas</strong> com funções específicas, permeada por <strong>eixos transversais</strong> que atravessam toda a verticalidade normativa. O modelo incorpora uma metacamada interpretativa (Doutrina, Jurisprudência, Costume e Analogia) e diferencia formalmente Direito Cibernético (preventivo/regulatório) de Direito Penal Digital (repressivo/sancionatório).</p>
+</div>
+
+<!-- ═══════════════ SEC 1: ARQUITETURA EM CAMADAS ═══════════════ -->
+<div class="sec">
+  <h2>📐 Arquitetura em Camadas do Sistema Jurídico</h2>
+  <p>O sistema jurídico é organizado em <strong>oito camadas verticais</strong> classificadas por função sistêmica — do fundamento normativo à aplicação setorial — e três <strong>eixos transversais</strong> que atravessam todas as camadas: a Metacamada Interpretativa (fontes secundárias), o Processual (mecanismos operacionais) e a Propriedade Intelectual (regime bifronte digital-analógico). Esta organização reconhece que o Direito possui múltiplos critérios de classificação — funcional, material e setorial — e torna essa heterogeneidade explícita em vez de ocultá-la.</p>
+
+  <!-- METACAMADA -->
+  <div class="tv tv-meta">
+    <span class="arr arr-l">◄</span>
+    <h4>🧬 Metacamada Interpretativa — Fontes Secundárias (transversal a todas as camadas)</h4>
+    <div class="items">Doutrina · Jurisprudência · Costume · Analogia</div>
+    <span class="arr arr-r">►</span>
+  </div>
+  <p class="desc">Base de sustentação hermenêutica do sistema. Informam, integram e atualizam toda a arquitetura normativa, conforme o art. 4.° da LINDB. Princípios gerais operam como axiomas implícitos em todas as camadas.</p>
+
+  <!-- LAYER 1 -->
+  <div class="layer l1">
+    <div class="lh"><span class="nm">Camada 1 — Fundacional (Kernel)</span><span class="tg">Critério: base normativa</span></div>
+    <div class="lb"><span>Direito Constitucional</span><span>Direito Internacional / Direito Comunitário</span></div>
+    <p class="desc">Funda o sistema. A Constituição é o "kernel" — núcleo a partir do qual todas as demais normas derivam validade. O Direito Internacional complementa com tratados e convenções.</p>
+  </div>
+
+  <!-- LAYER 2 -->
+  <div class="layer l2">
+    <div class="lh"><span class="nm">Camada 2 — Organização do Poder</span><span class="tg">Critério: estrutura estatal</span></div>
+    <div class="lb"><span>Direito Administrativo</span><span>Direito Tributário</span><span>Direito Financeiro</span></div>
+    <p class="desc">Disciplina a estrutura e o funcionamento do aparato estatal — como o Estado se organiza para governar, arrecadar e distribuir recursos.</p>
+  </div>
+
+  <!-- LAYER 3 -->
+  <div class="layer l3">
+    <div class="lh"><span class="nm">Camada 3 — Enforcement (Controle e Coerção)</span><span class="tg">Critério: sanção estatal</span></div>
+    <div class="lb"><span>Direito Penal</span><span>Direito Processual Penal (operacionalizado na camada transversal)</span></div>
+    <p class="desc">Concentra as normas sancionatórias — o monopólio estatal de coerção legítima. O Direito Penal define condutas ilícitas e cominações penais; sua operacionalização depende do eixo processual transversal.</p>
+  </div>
+
+  <!-- LAYER 4 -->
+  <div class="layer l4">
+    <div class="lh"><span class="nm">Camada 4 — Relações Privadas (Mercado)</span><span class="tg">Critério: autonomia da vontade</span></div>
+    <div class="lb"><span>Direito Civil</span><span>Direito Empresarial</span></div>
+    <p class="desc">Regula as relações entre particulares no espaço de autonomia negocial — contratos, obrigações, direitos reais, família, sucessões e atividade empresarial.</p>
+  </div>
+
+  <!-- LAYER 5 -->
+  <div class="layer l5">
+    <div class="lh"><span class="nm">Camada 5 — Equilíbrio Social</span><span class="tg">Critério: proteção compensatória</span></div>
+    <div class="lb"><span>Direito do Trabalho</span><span>Direito Previdenciário</span><span>Direito do Consumidor</span></div>
+    <p class="desc">Regulação social compensatória que visa equilibrar relações assimétricas: trabalhador-empregador, consumidor-fornecedor, segurado-previdência. O hipossuficiente é tutelado para restaurar equilíbrio.</p>
+  </div>
+
+  <!-- LAYER 6 -->
+  <div class="layer l6">
+    <div class="lh"><span class="nm">Camada 6 — Regulação de Sistemas Complexos (ESG)</span><span class="tg">Critério: regulação setorial</span></div>
+    <div class="lb"><span>Direito Ambiental</span><span>Direito Econômico</span><span>Direito Urbanístico</span><span>Direito Concorrencial</span></div>
+    <p class="desc">Disciplina sistemas complexos que transcendem a esfera puramente privada ou estatal — meio ambiente, ordenamento econômico, uso do solo, defesa da concorrência. São áreas de governança sistêmica.</p>
+  </div>
+
+  <!-- LAYER 7 — DIGITAL (subarquitetura) -->
+  <div class="layer l7">
+    <div class="lh"><span class="nm">Camada 7 — Digital (Subarquitetura)</span><span class="tg">Critério: meio/tecnologia</span></div>
+    <div class="sub">
+      <div class="sl">
+        <div class="st">7.1 Governança Digital</div>
+        <div class="si">Direito Digital · LGPD · Proteção de Dados</div>
+      </div>
+      <div class="sl">
+        <div class="st">7.2 Infraestrutura Cibernética</div>
+        <div class="si">Direito Cibernético (preventivo/regulatório)</div>
+      </div>
+      <div class="sl">
+        <div class="st">7.3 Repressão Digital</div>
+        <div class="si">Direito Penal Digital (repressivo/sancionatório)</div>
+      </div>
+    </div>
+    <p class="desc">Subarquitetura que reorganiza o ecossistema digital em três funções distintas: governança (regras gerais para o ambiente digital), infraestrutura cibernética (segurança e prevenção) e repressão digital (sanções penais para condutas cibernéticas). <strong>Direito Cibernético</strong> atua preventivamente — regula a segurança da informação, a governança de infraestrutura digital e o combate ao crime organizado cibernético. <strong>Direito Penal Digital</strong> atua repressivamente — aplica sanções penais a condutas digitais tipificadas (art. 154-A CP, Lei 12.737/2012). A separação reflete a mesma lógica que distingue Direito Administrativo (preventivo) de Direito Penal (repressivo).</p>
+  </div>
+
+  <!-- LAYER 8 — SETORIAL APLICADO -->
+  <div class="layer l8">
+    <div class="lh"><span class="nm">Camada 8 — Setorial Aplicado</span><span class="tg">Critério: projeção setorial</span></div>
+    <div class="lb"><span>Direito Marítimo</span><span>Direito Energético</span><span>Direito da Saúde</span><span>Direito Aeronáutico</span><span>Direito Agrário</span><span>Direito Minerário</span><span>Direito de Telecomunicações</span></div>
+    <p class="desc">Não são ramos autônomos — são <strong>projeções das camadas anteriores</strong> aplicadas a setores econômicos específicos. Formalmente: <em>Setorial = f(L<sub>1</sub> ... L<sub>7</sub>)</em>. O Direito Marítimo, por exemplo, projeta normas do Civil (contratos de transporte), do Penal (crimes no mar), do Ambiental (poluição marítima) e do Trabalho (trabalhadores embarcados).</p>
+  </div>
+
+  <!-- PROCESSUAL TRANSVERSAL -->
+  <div class="tv tv-proc">
+    <span class="arr arr-l">◄</span>
+    <h4>⚖️ Camada Transversal Processual — Mecanismos Operacionais</h4>
+    <div class="items">Processo Civil · Processo Penal · Processo do Trabalho · Processo Eleitoral</div>
+    <span class="arr arr-r">►</span>
+  </div>
+  <p class="desc">Processual não pertence a uma camada vertical específica — é o eixo operacional que viabiliza a efetividade de todas as camadas. Sem processo, o Direito é apenas enunciação normativa sem eficácia. O mesmo instrumento processual serve ao Civil (execução contratual), ao Penal (aplicação de sanção), ao Trabalho (reclamação trabalhista), ao Ambiental (ação civil pública).</p>
+
+  <!-- PI TRANSVERSAL -->
+  <div class="tv tv-pi">
+    <span class="arr arr-l">◄</span>
+    <h4>💡 Propriedade Intelectual — Regime Bifronte (transversal)</h4>
+    <div class="items">Direito Autoral · Propriedade Industrial (Patentes, Marcas) · Direito de Software · Proteção de Cultivares · Domínios</div>
+    <span class="arr arr-r">►</span>
+  </div>
+  <p class="desc">A Propriedade Intelectual é inerentemente <strong>transversal</strong> porque possui face digital e face analógica/física simultaneamente. Software e domínios são PI digital; patentes industriais, marcas físicas e direitos autorais tradicionais são PI analógico. Formalmente: <em>PI = L<sub>digital</sub> ∪ L<sub>analógico</sub></em>. PI não pertence exclusivamente à camada 7 (Digital), pois seu regime protetivo deriva de normas constitucionais (art. 5.°, XXVII, XXVIII), civis (Código Civil, Lei 9.610/1998) e internacionais (Convenção de Berna, TRIPS).</p>
+</div>
+
+<!-- ═══════════════ SEC 2: VENN REDUZIDO ═══════════════ -->
+<div class="sec">
+  <h2>⭕ Diagrama de Venn — Interseções entre Ramos Fundamentais</h2>
+  <p>O diagrama reduzido representa os <strong>quatro ramos tradicionais</strong> como subconjuntos do ordenamento jurídico, com o <strong>Direito Digital</strong> posicionado no centro — interseção de todos os demais. Cada círculo é um conjunto L<sub>i</sub>; a região central é L<sub>Digital</sub> ∩ L<sub>Constitucional</sub> ∩ L<sub>Civil</sub> ∩ L<sub>Penal</sub> ∩ L<sub>Trabalho</sub> ≠ ∅, evidenciando que o Direito Digital permeia transversalmente toda a arquitetura normativa. As áreas de sobreposição entre pares de círculos representam zonas de convergência dogmática — por exemplo, a interseção entre Constitucional e Civil abriga os direitos fundamentais nas relações privadas.</p>
+
+  <div class="venn-wrap">
+    <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+
+      <!-- CÍRCULO: Direito Constitucional -->
+      <circle cx="265" cy="195" r="155" fill="rgba(59,130,246,0.18)" stroke="rgba(59,130,246,0.5)" stroke-width="2"/>
+      <text x="165" y="168" text-anchor="middle" fill="#60a5fa" font-size="15" font-weight="600">Direito</text>
+      <text x="165" y="188" text-anchor="middle" fill="#60a5fa" font-size="15" font-weight="600">Constitucional</text>
+
+      <!-- CÍRCULO: Direito Civil -->
+      <circle cx="535" cy="195" r="155" fill="rgba(16,185,129,0.18)" stroke="rgba(16,185,129,0.5)" stroke-width="2"/>
+      <text x="635" y="168" text-anchor="middle" fill="#34d399" font-size="15" font-weight="600">Direito</text>
+      <text x="635" y="188" text-anchor="middle" fill="#34d399" font-size="15" font-weight="600">Civil</text>
+
+      <!-- CÍRCULO: Direito do Trabalho -->
+      <circle cx="265" cy="330" r="155" fill="rgba(168,85,247,0.18)" stroke="rgba(168,85,247,0.5)" stroke-width="2"/>
+      <text x="165" y="328" text-anchor="middle" fill="#a78bfa" font-size="15" font-weight="600">Direito do</text>
+      <text x="165" y="348" text-anchor="middle" fill="#a78bfa" font-size="15" font-weight="600">Trabalho</text>
+
+      <!-- CÍRCULO: Direito Penal -->
+      <circle cx="535" cy="330" r="155" fill="rgba(239,68,68,0.18)" stroke="rgba(239,68,68,0.5)" stroke-width="2"/>
+      <text x="635" y="328" text-anchor="middle" fill="#f87171" font-size="15" font-weight="600">Direito</text>
+      <text x="635" y="348" text-anchor="middle" fill="#f87171" font-size="15" font-weight="600">Penal</text>
+
+      <!-- CENTRO: Digital -->
+      <circle cx="400" cy="262" r="58" fill="rgba(6,182,212,0.35)" stroke="rgba(6,182,212,0.75)" stroke-width="2.5" filter="url(#glow)"/>
+      <text x="400" y="258" text-anchor="middle" fill="#06b6d4" font-size="14" font-weight="700">Digital</text>
+      <text x="400" y="276" text-anchor="middle" fill="rgba(6,182,212,0.7)" font-size="10">L<tspan baseline-shift="sub" font-size="8">D</tspan> ∩ todos</text>
+
+      <!-- RÓTULOS DE INTERSEÇÃO (selecionados) -->
+      <text x="400" y="160" text-anchor="middle" fill="rgba(200,220,255,0.45)" font-size="10" font-style="italic">Const. ∩ Civil</text>
+      <text x="400" y="380" text-anchor="middle" fill="rgba(200,220,255,0.45)" font-size="10" font-style="italic">Trab. ∩ Penal</text>
+      <text x="310" y="262" text-anchor="middle" fill="rgba(200,220,255,0.45)" font-size="10" font-style="italic">Const. ∩ Trab.</text>
+      <text x="490" y="262" text-anchor="middle" fill="rgba(200,220,255,0.45)" font-size="10" font-style="italic">Civil ∩ Penal</text>
+    </svg>
+  </div>
+
+  <!-- LEGENDA (ABAIXO) -->
+  <div class="vleg">
+    <div class="vi">
+      <div class="vd" style="background:#3b82f6"></div>
+      <div class="vt"><strong>Direito Constitucional</strong>Base normativa do sistema. Interseção com Civil: direitos fundamentais nas relações privadas; com Trabalho: direitos sociais constitucionais; com Penal: garantias penais e devido processo legal.</div>
+    </div>
+    <div class="vi">
+      <div class="vd" style="background:#10b981"></div>
+      <div class="vt"><strong>Direito Civil</strong>Núcleo das relações privadas. Interseção com Penal: ilícito civil-penal (dano, fraude); com Trabalho: contrato de trabalho (híbrido civil-trabalhista); com Constitucional: constitucionalização do Direito Civil.</div>
+    </div>
+    <div class="vi">
+      <div class="vd" style="background:#a855f7"></div>
+      <div class="vt"><strong>Direito do Trabalho</strong>Proteção compensatória do trabalhador. Interseção com Constitucional: art. 7.° da CF/88; com Civil: princípios contratuais aplicáveis; com Penal: crimes contra a organização do trabalho.</div>
+    </div>
+    <div class="vi">
+      <div class="vd" style="background:#ef4444"></div>
+      <div class="vt"><strong>Direito Penal</strong>Enforcement sancionatório. Interseção com Civil: reparação civil e criminal; com Trabalho: fraudes trabalhistas; com Constitucional: tipicidade restritiva e garantias individuais.</div>
+    </div>
+    <div class="vi">
+      <div class="vd" style="background:#06b6d4"></div>
+      <div class="vt"><strong>Direito Digital (centro)</strong>Permeia todos os ramos. Interseção com Constitucional: direitos digitais e LGPD; com Civil: contratos eletrônicos; com Trabalho: teletrabalho; com Penal: crimes cibernéticos (Lei 12.737/2012). Formalmente: L<sub>Digital</sub> ∩ L<sub>i</sub> ≠ ∅ para todo i ∈ {1,...,8}.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ SEC 3: FORMALIZAÇÃO MATEMÁTICA ═══════════════ -->
+<div class="sec">
+  <h2>🔢 Formalização Matemática — Notação Conjuntista</h2>
+  <p>Utilizando a linguagem da Teoria dos Conjuntos, é possível expressar formalmente as relações entre ramos do Direito, camadas sistêmicas, zonas de interseção e projeções setoriais. Cada ramo é modelado como um conjunto de normas; as operações conjuntistas revelam a estrutura oculta do ordenamento jurídico.</p>
+
+  <div class="nblk">
+<span class="cm">/* Definição: cada camada como conjunto de normas */</span>
+L<sub>i</sub> = { x | x é norma pertencente à camada i }, i ∈ {1, 2, ..., 8}
+
+<span class="cm">/* Uniiverso: totalidade do ordenamento jurídico */</span>
+Ω = L<sub>1</sub> ∪ L<sub>2</sub> ∪ L<sub>3</sub> ∪ L<sub>4</sub> ∪ L<sub>5</sub> ∪ L<sub>6</sub> ∪ L<sub>7</sub> ∪ L<sub>8</sub>
+
+<span class="cm">/* Transversalidade: Processual atravessa todas as camadas */</span>
+P = { x | x é norma processual }
+P ∩ L<sub>i</sub> ≠ ∅  para todo i ∈ {1, ..., 8}
+
+<span class="cm">/* Metacamada: fontes interpretativas */</span>
+M = { Doutrina, Jurisprudência, Costume, Analogia }
+M ⊙ Ω  (M permeia todo o ordenamento)
+
+<span class="cm">/* Interseção-chave: Penal Digital */</span>
+Penal_Digital = L<sub>7.3</sub> ∩ L<sub>3</sub>
+<span class="cm">// Subconjunto da camada digital que sanciona condutas cibernéticas,
+// operacionalizado pelo Processual Penal (eixo transversal)</span>
+
+<span class="cm">/* Cibernético ≠ Penal Digital: domínios distintos */</span>
+Cibernético = L<sub>7.2</sub>  →  função preventiva/regulatória
+Penal_Digital = L<sub>7.3</sub> ∩ L<sub>3</sub>  →  função repressiva/sancionatória
+Cibernético ∩ Penal_Digital ≠ Cibernético  (não são equivalentes)
+
+<span class="cm">/* Propriedade Intelectual: regime bifronte */</span>
+PI = PI<sub>digital</sub> ∪ PI<sub>analógico</sub>
+PI<sub>digital</sub> ⊂ L<sub>7</sub>  (software, domínios, bases de dados)
+PI<sub>analógico</sub> ⊂ L<sub>1</sub> ∪ L<sub>4</sub>  (patentes, marcas, direitos autorais tradicionais)
+
+<span class="cm">/* Projeção setorial: camada 8 como função das anteriores */</span>
+L<sub>8</sub> = f(L<sub>1</sub>, L<sub>2</sub>, ..., L<sub>7</sub>)
+<span class="cm">// O Direito Marítimo, por exemplo, projeta normas do Civil,</span>
+<span class="cm">// Penal, Ambiental e Trabalho no contexto setorial marítimo</span>
+
+<span class="cm">/* Digital como interseção generalizada */</span>
+L<sub>Digital</sub> ∩ L<sub>i</sub> ≠ ∅  para todo i ∈ {1, ..., 8}
+<span class="cm">// O Direito Digital toca todos os ramos: contratos digitais (Civil),</span>
+<span class="cm">// teletrabalho (Trabalho), crimes cibernéticos (Penal), LGPD (Const.)</span>
+  </div>
+
+  <div class="nexpl">
+    <strong>Lacuna normativa:</strong> Quando A ∩ B = ∅, o sistema apresenta uma zona não regulada — uma lacuna. Exemplo: a interseção entre Direito Penal e Direito Previdenciário era historicamente vazia até a criminalização de fraudes previdenciárias (art. 171 do CP). Quando a lacuna é intencional, corresponde ao princípio da legalidade estrita do Direito Penal: <em>nullum crimen sine lege</em>.
+  </div>
+  <div class="nexpl">
+    <strong>Antinomia:</strong> Quando x ∈ A ∧ x ∈ B, mas A e B prescrevem consequências incompatíveis para x, o sistema apresenta uma antinomia. A solução segue critérios hierárquico (Kelsen), cronológico e de especialidade — este último particularmente relevante na camada digital, onde normas gerais (Civil) convivem com normas especiais (Marco Civil da Internet, LGPD).
+  </div>
+</div>
+
+<!-- ═══════════════ SEC 4: HIERARQUIA KELSENIANA ═══════════════ -->
+<div class="sec">
+  <h2>🔺 Hierarquia Normativa — Escada Kelseniana</h2>
+  <p>A Teoria Pura do Direito de Hans Kelsen modela o ordenamento como uma <strong>pirâmide normativa</strong> em que cada escalão deriva sua validade do escalão superior, remontando até a <em>Grundnorm</em> (norma fundamental). No sistema brasileiro, a Constituição Federal de 1988 ocupa o ápice, seguida por emendas, leis complementares, leis ordinárias, medidas provisórias, decretos regulamentares e normas individuais. Cada camada do sistema jurídico (Seção 1) projeta-se em múltiplos escalões — o Direito Penal, por exemplo, possui normas em todos os níveis, desde o art. 5.°, XXXIX da CF (ápice) até sentenças criminais individuais (base).</p>
+
+  <div class="kel">
+    <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#92400e" stop-opacity="0.2"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Nível 1: CF/88 -->
+      <polygon points="320,18 440,68 200,68" fill="rgba(251,191,36,0.35)" stroke="rgba(251,191,36,0.6)" stroke-width="1.5"/>
+      <text x="320" y="52" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="700">CF/88</text>
+
+      <!-- Nível 2: Emendas -->
+      <polygon points="200,72 440,72 460,112 180,112" fill="rgba(251,191,36,0.2)" stroke="rgba(251,191,36,0.35)" stroke-width="1"/>
+      <text x="320" y="98" text-anchor="middle" fill="#d4a020" font-size="11">Emendas Constitucionais</text>
+
+      <!-- Nível 3: LC -->
+      <polygon points="180,116 460,116 485,156 155,156" fill="rgba(100,130,200,0.15)" stroke="rgba(100,130,200,0.3)" stroke-width="1"/>
+      <text x="320" y="142" text-anchor="middle" fill="#8ba4d4" font-size="11">Leis Complementares</text>
+
+      <!-- Nível 4: LO -->
+      <polygon points="155,160 485,160 510,200 130,200" fill="rgba(100,130,200,0.1)" stroke="rgba(100,130,200,0.25)" stroke-width="1"/>
+      <text x="320" y="186" text-anchor="middle" fill="#7a90b8" font-size="11">Leis Ordinárias</text>
+
+      <!-- Nível 5: MP -->
+      <polygon points="130,204 510,204 535,244 105,244" fill="rgba(140,120,180,0.1)" stroke="rgba(140,120,180,0.25)" stroke-width="1"/>
+      <text x="320" y="230" text-anchor="middle" fill="#a090c0" font-size="11">Medidas Provisórias · Leis Delegadas</text>
+
+      <!-- Nível 6: Decretos -->
+      <polygon points="105,248 535,248 560,288 80,288" fill="rgba(80,100,140,0.08)" stroke="rgba(80,100,140,0.2)" stroke-width="1"/>
+      <text x="320" y="274" text-anchor="middle" fill="#6a80a8" font-size="11">Decretos Regulamentares · Resoluções</text>
+
+      <!-- Nível 7: Atos Admin -->
+      <polygon points="80,292 560,292 590,332 50,332" fill="rgba(80,100,140,0.05)" stroke="rgba(80,100,140,0.15)" stroke-width="1"/>
+      <text x="320" y="318" text-anchor="middle" fill="#5a7098" font-size="11">Atos Administrativos · Portarias · Instruções Normativas</text>
+
+      <!-- Nível 8: Normas Individuais -->
+      <polygon points="50,336 590,336 620,376 20,376" fill="rgba(80,100,140,0.03)" stroke="rgba(80,100,140,0.1)" stroke-width="1"/>
+      <text x="320" y="362" text-anchor="middle" fill="#4a6088" font-size="11">Normas Individuais — Sentenças · Contratos · Decisões Administrativas</text>
+
+      <!-- Grundnorm (abaixo) -->
+      <text x="320" y="410" text-anchor="middle" fill="rgba(251,191,36,0.5)" font-size="12" font-style="italic">Grundnorm (pressuposto lógico)</text>
+      <line x1="320" y1="378" x2="320" y2="395" stroke="rgba(251,191,36,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+
+      <!-- Camadas laterais -->
+      <text x="628" y="52" text-anchor="end" fill="rgba(251,191,36,0.3)" font-size="8">Fundacional</text>
+      <text x="628" y="142" text-anchor="end" fill="rgba(100,130,200,0.3)" font-size="8">Legislação</text>
+      <text x="628" y="274" text-anchor="end" fill="rgba(80,100,140,0.3)" font-size="8">Executivo</text>
+      <text x="628" y="362" text-anchor="end" fill="rgba(80,100,140,0.2)" font-size="8">Individual</text>
+
+      <!-- Conectores laterais -->
+      <line x1="590" y1="50" x2="610" y2="50" stroke="rgba(251,191,36,0.2)" stroke-width="1"/>
+      <line x1="485" y1="142" x2="610" y2="142" stroke="rgba(100,130,200,0.2)" stroke-width="1"/>
+      <line x1="560" y1="274" x2="610" y2="274" stroke="rgba(80,100,140,0.15)" stroke-width="1"/>
+      <line x1="620" y1="362" x2="610" y2="362" stroke="rgba(80,100,140,0.1)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <p class="desc">Cada camada do sistema (Seção 1) possui projeções em múltiplos escalões kelsenianos. A camada Digital (7), por exemplo, inclui normas constitucionais (art. 5.°, XII — sigilo de dados), legislativas (Marco Civil, LGPD, Lei 12.737/2012) e individuais (sentenças de crimes cibernéticos). A camada Processual, por sua vez, possui CPC, CPP e CLT como diplomas legislativos, mas sua função operacional perpassa toda a pirâmide.</p>
+</div>
+
+<!-- ═══════════════ SEC 5: SEMIÓTICA PEIRCEANA ═══════════════ -->
+<div class="sec">
+  <h2>🔀 Semiótica Peirceana Aplicada ao Direito</h2>
+  <p>A tríade semiótica de Charles Sanders Peirce — <strong>Signo</strong>, <strong>Objeto</strong> e <strong>Interpretante</strong> — oferece um modelo para compreender como o Direito opera como sistema de significação. A norma jurídica é um signo que representa um objeto (conduta regulada) e gera um interpretante (efeito jurídico). A semiose jurídica é um processo contínuo: o juiz interpreta a norma (signo) sobre um caso concreto (objeto) e produz uma decisão (interpretante), que por sua vez se torna nova norma (novo signo) para futuras interpretações.</p>
+
+  <div class="pei">
+    <svg viewBox="0 0 460 370" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="triGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(0,212,255,0.15)"/>
+          <stop offset="100%" stop-color="rgba(124,58,237,0.15)"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Triângulo -->
+      <polygon points="230,50 60,310 400,310" fill="url(#triGrad)" stroke="rgba(0,212,255,0.25)" stroke-width="1.5"/>
+
+      <!-- Vértices -->
+      <circle cx="230" cy="50" r="32" fill="rgba(251,191,36,0.2)" stroke="rgba(251,191,36,0.5)" stroke-width="1.5"/>
+      <text x="230" y="45" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">Interpretante</text>
+      <text x="230" y="60" text-anchor="middle" fill="rgba(251,191,36,0.6)" font-size="8">(efeito jurídico)</text>
+
+      <circle cx="60" cy="310" r="32" fill="rgba(96,165,250,0.2)" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
+      <text x="60" y="305" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700">Signo</text>
+      <text x="60" y="320" text-anchor="middle" fill="rgba(96,165,250,0.6)" font-size="8">(norma jurídica)</text>
+
+      <circle cx="400" cy="310" r="32" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.5)" stroke-width="1.5"/>
+      <text x="400" y="305" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="700">Objeto</text>
+      <text x="400" y="320" text-anchor="middle" fill="rgba(168,85,247,0.6)" font-size="8">(conduta/fato)</text>
+
+      <!-- Setas bidirecionais nos lados -->
+      <line x1="90" y1="288" x2="208" y2="72" stroke="rgba(200,215,240,0.15)" stroke-width="1"/>
+      <line x1="252" y1="72" x2="370" y2="288" stroke="rgba(200,215,240,0.15)" stroke-width="1"/>
+      <line x1="92" y1="310" x2="368" y2="310" stroke="rgba(200,215,240,0.15)" stroke-width="1"/>
+
+      <!-- Rótulos dos lados -->
+      <text x="130" y="175" text-anchor="middle" fill="rgba(200,215,240,0.4)" font-size="9" transform="rotate(-52,130,175)">Representação</text>
+      <text x="330" y="175" text-anchor="middle" fill="rgba(200,215,240,0.4)" font-size="9" transform="rotate(52,330,175)">Aplicação</text>
+      <text x="230" y="335" text-anchor="middle" fill="rgba(200,215,240,0.4)" font-size="9">Determinação</text>
+
+      <!-- Centro -->
+      <text x="230" y="215" text-anchor="middle" fill="rgba(0,212,255,0.5)" font-size="10" font-weight="600">Semiose Jurídica</text>
+      <text x="230" y="230" text-anchor="middle" fill="rgba(200,215,240,0.3)" font-size="8">processo contínuo de interpretação</text>
+    </svg>
+  </div>
+
+  <p><strong>Exemplo aplicado ao modelo de camadas:</strong> A Lei 13.185/2015 (Lei Anticrime) é um signo (norma) que regulamenta o objeto (condutas de organização criminosa e operações financeiras ilícitas). Quando o juiz a aplica a um caso concreto, produz um interpretante (sentença condenatória ou absolutória). Essa sentença torna-se novo signo para futuras decisões, alimentando a Metacamada Interpretativa (Jurisprudência). A semiose jurídica, portanto, conecta a camada normativa (L<sub>3</sub> — Penal) ao eixo transversal processual e à metacamada interpretativa num fluxo contínuo.</p>
+</div>
+
+<!-- ═══════════════ SEC 6: GLOSSÁRIO ═══════════════ -->
+<div class="sec">
+  <h2>📖 Glossário de Notação Matemática</h2>
+  <p>A seguir, os principais símbolos da Teoria dos Conjuntos utilizados nesta representação, com seus significados e exemplos de aplicação ao Direito. A notação formal permite expressar com precisão relações que a linguagem natural torna ambíguas — como a diferença entre "todo A está em B" (subconjunto) e "A e B compartilham elementos" (interseção não vazia).</p>
+
+  <table class="gtbl">
+    <thead>
+      <tr>
+        <th style="width:60px">Símbolo</th>
+        <th style="width:110px">Nome</th>
+        <th style="width:170px">Leitura</th>
+        <th>Significado Jurídico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="sym">∈</td>
+        <td>Pertencimento</td>
+        <td>"x pertence a A"</td>
+        <td>Uma norma x pertence ao ramo A. Ex.: o art. 121 do CP ∈ Direito Penal.</td>
+      </tr>
+      <tr>
+        <td class="sym">∪</td>
+        <td>União</td>
+        <td>"A união B"</td>
+        <td>Conjunto de normas presentes em A ou em B. Ex.: L<sub>Trabalho</sub> ∪ L<sub>Previdenciário</sub> inclui normas de ambos.</td>
+      </tr>
+      <tr>
+        <td class="sym">∩</td>
+        <td>Interseção</td>
+        <td>"A interseção B"</td>
+        <td>Normas comuns simultaneamente a A e B. Ex.: L<sub>Digital</sub> ∩ L<sub>Constitucional</sub> = direitos digitais fundamentais.</td>
+      </tr>
+      <tr>
+        <td class="sym">⊂</td>
+        <td>Subconjunto</td>
+        <td>"A contido em B"</td>
+        <td>Todo elemento de A está em B. Ex.: L<sub>Empresarial</sub> ⊂ L<sub>Civil</sub> — o Empresarial deriva do Civil.</td>
+      </tr>
+      <tr>
+        <td class="sym">∅</td>
+        <td>Conjunto Vazio</td>
+        <td>"vazio"</td>
+        <td>Lacuna normativa — área sem regulação. Ex.: A ∩ B = ∅ indica zona não regulada (ou não intencionalmente regulada).</td>
+      </tr>
+      <tr>
+        <td class="sym"><sup>c</sup>A</td>
+        <td>Complemento</td>
+        <td>"complemento de A"</td>
+        <td>Normas que NÃO pertencem ao conjunto A. Ex.: <sup>c</sup>L<sub>Penal</sub> = normas não penais do ordenamento.</td>
+      </tr>
+      <tr>
+        <td class="sym">|A|</td>
+        <td>Cardinalidade</td>
+        <td>"módulo de A"</td>
+        <td>Quantidade de normas no ramo A. Usado para comparar volumetria legislativa entre ramos.</td>
+      </tr>
+      <tr>
+        <td class="sym">A × B</td>
+        <td>Produto Cartesiano</td>
+        <td>"A cruz B"</td>
+        <td>Combinações de normas de A aplicadas a contextos de B. Ex.: L<sub>Penal</sub> × L<sub>Digital</sub> = tipos penais aplicados ao meio digital.</td>
+      </tr>
+      <tr>
+        <td class="sym">L<sub>i</sub></td>
+        <td>Camada i</td>
+        <td>"conjunto da camada i"</td>
+        <td>L<sub>i</sub> = { x | x é norma da camada i }. Representa formalmente cada camada do sistema (Seção 1).</td>
+      </tr>
+      <tr>
+        <td class="sym">f(L<sub>1</sub>...L<sub>7</sub>)</td>
+        <td>Projeção / Função</td>
+        <td>"função das camadas"</td>
+        <td>Aplicação das camadas 1 a 7 em contexto específico. L<sub>8</sub> = f(L<sub>1</sub>...L<sub>7</sub>): ramos setoriais como projeção das camadas anteriores.</td>
+      </tr>
+      <tr>
+        <td class="sym">A ⊕ B</td>
+        <td>Diferença Simétrica</td>
+        <td>"A ou-exclusivo B"</td>
+        <td>Normas pertencentes a A ou B, mas não a ambos. Ex.: normas exclusivamente civis ou exclusivamente penais, excluindo as que são ambas.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ESPAÇO FINAL MÍNIMO -->
+<div class="end-space"></div>
+
+</div>
+</body>
+</html>
