@@ -63,51 +63,9 @@ def carregar_dados():
 normas, arestas = carregar_dados()
 
 # ═══════════════════════════════════════════════════════
-# SEÇÃO 1 — QUADRO DE CONFORMIDADE
+# SEÇÃO 1 — GRAFO NORMATIVO
 # ═══════════════════════════════════════════════════════
 
-st.markdown("## ⚖️ Quadro de Conformidade")
-st.markdown(
-    "Descubra quais normas se aplicam ao seu negócio, "
-    "onde estão os riscos e o que fazer agora."
-)
-
-render_disclaimer()
-
-perfil, submitted = render_questionario()
-
-if submitted:
-    radar = gerar_radar(perfil, normas, arestas)
-    st.session_state["radar_gerado"] = radar
-    st.session_state["radar_perfil"] = perfil
-
-if "radar_gerado" in st.session_state:
-    render_radar(st.session_state["radar_gerado"])
-
-    col_dl, col_clr = st.columns(2)
-    with col_dl:
-        html_rel = gerar_relatorio_html(
-            st.session_state["radar_gerado"],
-            st.session_state["radar_perfil"],
-        )
-        st.download_button(
-            label="📄 Baixar Relatório (HTML)",
-            data=html_rel,
-            file_name="lexiograph-conformidade.html",
-            mime="text/html",
-            use_container_width=True,
-        )
-        st.caption("Abra no browser e use Ctrl+P → Salvar como PDF")
-    with col_clr:
-        render_botao_limpar()
-
-    render_disclaimer_rodape()
-
-# ═══════════════════════════════════════════════════════
-# SEÇÃO 2 — GRAFO NORMATIVO
-# ═══════════════════════════════════════════════════════
-
-st.markdown("---")
 st.markdown("## 🕸️ Grafo Normativo Interativo")
 st.markdown(
     "Mapa das normas do corpus e suas interseções calculadas pelo IPII Engine. "
@@ -438,3 +396,45 @@ if selected_node:
             st.markdown("Nenhuma conexão encontrada com os filtros atuais.")
 
 render_footer()
+# ═══════════════════════════════════════════════════════
+# SEÇÃO 2 — QUADRO DE CONFORMIDADE
+# ═══════════════════════════════════════════════════════
+
+st.markdown("---")
+st.markdown("## ⚖️ Quadro de Conformidade")
+st.markdown(
+    "Descubra quais normas se aplicam ao seu negócio, "
+    "onde estão os riscos e o que fazer agora."
+)
+
+render_disclaimer()
+
+perfil, submitted = render_questionario()
+
+if submitted:
+    radar = gerar_radar(perfil, normas, arestas)
+    st.session_state["radar_gerado"] = radar
+    st.session_state["radar_perfil"] = perfil
+
+if "radar_gerado" in st.session_state:
+    render_radar(st.session_state["radar_gerado"])
+
+    col_dl, col_clr = st.columns(2)
+    with col_dl:
+        html_rel = gerar_relatorio_html(
+            st.session_state["radar_gerado"],
+            st.session_state["radar_perfil"],
+        )
+        st.download_button(
+            label="📄 Baixar Relatório (HTML)",
+            data=html_rel,
+            file_name="lexiograph-conformidade.html",
+            mime="text/html",
+            use_container_width=True,
+        )
+        st.caption("Abra no browser e use Ctrl+P → Salvar como PDF")
+    with col_clr:
+        render_botao_limpar()
+
+    render_disclaimer_rodape()
+
