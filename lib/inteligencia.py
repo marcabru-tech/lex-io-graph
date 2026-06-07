@@ -400,3 +400,129 @@ DIREITO_NATURAL = {
         }
     ]
 }
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CASOS NOVOS — Sprint 12
+# ─────────────────────────────────────────────────────────────────────────────
+
+CASO_ANPD_JUDICIARIO = {
+    "id": "anpd_nao_vincula_judiciario",
+    "titulo": "ANPD não vincula o Judiciário — o iceberg normativo",
+    "subtitulo": "Compliance administrativo não é blindagem jurídica",
+    "area": "direito digital, direito administrativo, direito civil",
+    "normas": ["lgpd", "cf88", "marco_civil", "decreto_12975_2026"],
+    "tensoes": [
+        {
+            "titulo": "Tensão 1 — ANPD: regulação administrativa, não jurisdição",
+            "descricao": (
+                "A ANPD (Autoridade Nacional de Proteção de Dados) é autarquia especial criada "
+                "pela LGPD (Lei 13.709/2018, art. 55-J) com competências administrativas: "
+                "regulamentar, fiscalizar, orientar e aplicar sanções. "
+                "Suas decisões não possuem efeito vinculante sobre o Poder Judiciário. "
+                "O art. 5º, XXXV, CF/88 — inafastabilidade da jurisdição — garante que "
+                "nenhum ato administrativo cria porto seguro definitivo contra escrutínio judicial. "
+                "Um juiz pode considerar a manifestação da ANPD como elemento técnico informativo, "
+                "mas não está juridicamente obrigado a segui-la."
+            )
+        },
+        {
+            "titulo": "Tensão 2 — O Ministério Público age independentemente",
+            "descricao": (
+                "Direitos de crianças e adolescentes têm tutela constitucional qualificada "
+                "(CF/88 art. 227 — prioridade absoluta). São direitos difusos: "
+                "transindividuais, indivisíveis, de titularidade indeterminada. "
+                "O MP (art. 129, III, CF/88) pode promover ação civil pública para proteção "
+                "de interesses difusos e coletivos independentemente de qualquer decisão prévia da ANPD. "
+                "Compliance com a LGPD reduz riscos — não elimina responsabilidade judicial."
+            )
+        },
+        {
+            "titulo": "Tensão 3 — O iceberg normativo: a ANPD é a parte visível",
+            "descricao": (
+                "A ANPD, como toda agência reguladora, opera em nível administrativo infralegal: "
+                "não cria lei, não reinterpreta a Constituição de forma definitiva, não exerce jurisdição, "
+                "não produz coisa julgada. É a ponta do iceberg. "
+                "O volume submerso: CF/88, leis formais, princípios gerais do direito, "
+                "controle judicial, atuação do Ministério Público, responsabilidade civil objetiva. "
+                "Confundir regulação administrativa com encerramento jurídico do risco "
+                "é o erro estratégico mais comum no discurso corporativo de compliance."
+            )
+        },
+    ],
+    "doutrina": [
+        "Pontes de Miranda — distinção entre ilícito e responsabilidade civil (Tratado, 1954)",
+        "CF/88 art. 5º, XXXV — inafastabilidade da jurisdição",
+        "CF/88 art. 227 — prioridade absoluta dos direitos da criança",
+        "CDC art. 81, par. único, I — conceito de direitos difusos",
+    ],
+    "prospectiva": (
+        "O risco principal para compliance officers não é a ANPD — é a confusão institucional. "
+        "Empresas que acreditam que 'estar em compliance' fecha o risco jurídico "
+        "criam exatamente o que antecede crises reputacionais, judiciais e financeiras. "
+        "A hierarquia real: ANPD regula, Judiciário decide, MP vela pelos direitos difusos."
+    ),
+    "fonte": "Gonçalves et Alii — Hubstry Deep Tech · guilhermemachado@hubstry.onmicrosoft.com",
+}
+
+CASO_PARADIGMA_PREVENTIVO = {
+    "id": "paradigma_preventivo_inibitorio",
+    "titulo": "Da Reparação à Prevenção — a mutação do ethos jurídico-regulatório",
+    "subtitulo": "Compliance by design como vetor jurídico, econômico e estratégico",
+    "area": "direito civil, direito digital, análise econômica do direito",
+    "normas": ["cf88", "lgpd", "marco_civil", "stf_tema987", "pl_ia"],
+    "tensoes": [
+        {
+            "titulo": "Tensão 1 — A crise do paradigma reparatório diante da IA",
+            "descricao": (
+                "O ordenamento brasileiro foi edificado sobre o princípio da reparação integral "
+                "(restitutio in integrum) como eixo da responsabilidade civil. "
+                "A premissa — que o dano pode ser reparado por equivalente pecuniário — "
+                "torna-se epistemologicamente frágil diante dos riscos algorítmicos: "
+                "Como reparar discriminação sistêmica por algoritmo de credit scoring? "
+                "Como indenizar dano psíquico coletivo por amplificação de desinformação? "
+                "Danos algorítmicos são massivos, difusos, opacos e frequentemente irreversíveis."
+            )
+        },
+        {
+            "titulo": "Tensão 2 — Pontes de Miranda: o ilícito é anterior ao dano",
+            "descricao": (
+                "Pontes de Miranda (Tratado de Direito Privado, 1954) estabelecia com rigor "
+                "que o ato ilícito — a violação do dever jurídico — é categoria autônoma, "
+                "logicamente anterior e ontologicamente independente do dano patrimonial. "
+                "O dano gera o dever de indenizar, mas não é condição de existência do ilícito. "
+                "Essa distinção, negligenciada pela prática forense, é central na era da IA: "
+                "violação de transparência algorítmica, tratamento discriminatório automatizado, "
+                "dark patterns — todos configuram ilícitos autônomos cuja tutela adequada é prevenção."
+            )
+        },
+        {
+            "titulo": "Tensão 3 — O paradigma preventivo como imperativo constitucional",
+            "descricao": (
+                "A convergência de múltiplos vetores aponta para o paradigma preventivo: "
+                "reforma do Código Civil (nova redação do art. 186 — ilícito sem dano), "
+                "STF Tema 987 (falha sistêmica — responsabilidade ex ante, não apenas ex post), "
+                "ECA Digital (proibição de profiling de menores — tutela inibitória por natureza), "
+                "PL 2338/2023 — AI Act brasileiro (abordagem baseada em risco — controle antes do deployment). "
+                "Compliance by design, safety by default e governança algorítmica "
+                "operam como vetor simultaneamente jurídico, econômico e estratégico."
+            )
+        },
+    ],
+    "doutrina": [
+        "Pontes de Miranda — autonomia do ilícito (Tratado de Direito Privado, 1954)",
+        "Calabresi — custos dos acidentes e eficiência alocativa (1970)",
+        "Marinoni — tutela inibitória individual e coletiva (2012)",
+        "Tepedino / Bodin de Moraes — constitucionalização do direito civil",
+        "AI Act europeu — Regulamento UE 2024/1689",
+    ],
+    "prospectiva": (
+        "Organizações que anteciparem a transição — incorporando compliance by design, "
+        "auditorias algorítmicas e governança preventiva — estarão posicionadas para capturar "
+        "os dividendos econômicos da confiança institucional. "
+        "A prevenção não é apenas opção regulatória. É imperativo civilizatório. "
+        "Para deep techs como a Hubstry, a consolidação do paradigma preventivo "
+        "não representa ameaça — é oportunidade estrutural."
+    ),
+    "fonte": "Guilherme Gonçalves Machado — Founder & CEO, Hubstry Deep Tech · guilhermemachado@hubstry.onmicrosoft.com",
+}
+

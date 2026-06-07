@@ -102,6 +102,55 @@ CITACOES = [
         "tema": "insegurança jurídica, separação de poderes, antinomia institucional, moralidade interna do direito"
     },
     {
+        "id": "tiradentes_mandado",
+        "autor": "Coroa Portuguesa — Mandado de Execução",
+        "datas": "1792",
+        "obra": "Mandado de Execução das Penas Impostas a Joaquim José da Silva Xavier — Tiradentes (1746–1792), líder da Inconfidência Mineira. Reproduzido em: Teoria da Norma Penal (material doutrinário, 2023).",
+        "citacao_original": (
+            "(...) e que separada a cabeça do corpo seja levada a Villa Rica, donde será conservada "
+            "em poste alto junto ao lugar de sua habitação, até que o tempo a consuma; que o corpo seja "
+            "dividido em quatro, e pregados em iguais postes pela estrada de Minas nos lugares mais públicos "
+            "(...) que a casa de sua habitação seja arrasada e salgada, e no meio de suas ruínas levantado "
+            "um Padrão em que se conserve para a posteridade a memória de tão abominável Réu e delito, "
+            "e que ficando infame para sempre seus filhos e netos lhe sejam confiscados seus bens "
+            "para a Coroa e Câmara Real."
+        ),
+        "idioma_original": "Português (séculos XVIII)",
+        "traducao": "Mandado de execução da pena capital — execução pública em 21 de abril de 1792.",
+        "contexto_juridico": (
+            "Leitura semiótica da Lexiograph — atos de fala como tecnologia jurídica: "
+            "o mandado de execução de Tiradentes não descreve uma punição — ele CRIA um estado. "
+            "No sentido de J. L. Austin (How to Do Things With Words, 1962), é ato de fala performativo: "
+            "ao ser enunciado, produz efeitos jurídicos e simbólicos simultaneamente. "
+            "Especificamente, é ato ilocucionário de maldição institucionalizada: "
+            "a pena não atinge apenas o corpo do condenado — ela se propaga no tempo "
+            "('até que o tempo a consuma'), no espaço ('lugares mais públicos'), "
+            "na linhagem ('filhos e netos') e no território ('casa arrasada e salgada'). "
+            "O sal como elemento de aniquilação permanente — referência direta à destruição de Cartago "
+            "e à tradição veterotestamentária de cidades amaldiçoadas. "
+            "É o oposto estrutural do princípio da pessoalidade da pena (CF/88 art. 5º, XLV): "
+            "'nenhuma pena passará da pessoa do condenado'. "
+            "O mandado de Tiradentes viola esse princípio em todas as dimensões possíveis — "
+            "temporal, espacial, familiar e territorial. "
+            "O arco pancrônico: 1792 (pena como maldição total) → 1982 (dissertação de Sandoval "
+            "Gonçalves dos Santos sobre o mito da intimidação da pena) → 2026 "
+            "(debate sobre IA que pune sem explicar — viés algorítmico como nova forma de "
+            "incontagiabilidade invertida: o algoritmo que penaliza sem fundamentar, "
+            "sem pessoalidade, sem individualização)."
+        ),
+        "uso_jurisprudencia": (
+            "O mandado é citado na doutrina penal brasileira como exemplo histórico extremo "
+            "da violação do princípio da pessoalidade (também chamado de impessoalidade, "
+            "personalidade, intransmissibilidade, intranscendência ou incontagiabilidade da pena). "
+            "A Convenção Interamericana de Direitos Humanos (art. 3º) é explícita: "
+            "'A pena não pode passar da pessoa do delinquente.' "
+            "O constitucionalismo de 1988 positivou essa garantia no art. 5º, XLV — "
+            "196 anos após a execução de Tiradentes."
+        ),
+        "normas_relacionadas": ["cf88", "stf_adimc"],
+        "tema": "pessoalidade da pena, atos de fala performativos, semiótica jurídica, pancronia, due process, história do direito penal"
+    },
+    {
         "id": "graciliano_relatorios",
         "autor": "Graciliano Ramos",
         "datas": "1892–1953",

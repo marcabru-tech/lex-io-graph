@@ -431,4 +431,21 @@ reproduz o mesmo mito que Sandoval recusou em sua pesquisa.
 </div>
 """, unsafe_allow_html=True)
 
+# ─── Princípios Penais como camada do ordenamento ────────────────────────
+st.divider()
+st.subheader("⚖️ Princípios Penais — Camada do Ordenamento")
+st.caption(
+    "Fonte: Teoria da Norma Penal (2023) · Agrega às fontes do direito existentes · "
+    "Conexões com o ordenamento digital identificadas pela Lexiograph"
+)
+col_pen1, col_pen2 = st.columns(2)
+for i, p in enumerate(PRINCIPIOS_PENAIS):
+    with (col_pen1 if i % 2 == 0 else col_pen2):
+        with st.expander(f"**{p['nome']}** — *{p['latim']}*", expanded=False):
+            st.markdown(f"**{p['autor']}**")
+            st.markdown(p['descricao'])
+            if p.get('conexao_digital'):
+                st.markdown(f"**CF/88:** {p['cf88']}")
+                st.caption("🔗 Conexão com ordenamento digital — ver Lex-IO-Graph")
+
 render_footer()

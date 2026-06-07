@@ -445,3 +445,104 @@ BRASIL_IMPERIO = {
         }
     ]
 }
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PRINCÍPIOS PENAIS — camada do ordenamento (fonte: Teoria da Norma Penal, 2023)
+# Agrega às fontes do direito existentes — nunca substitui
+# ─────────────────────────────────────────────────────────────────────────────
+PRINCIPIOS_PENAIS = [
+    {
+        "id": "legalidade",
+        "nome": "Princípio da Legalidade",
+        "latim": "Nullum crimen, nulla poena sine lege",
+        "autor": "Feuerbach (1801) — positivado no art. 5º, XXXIX, CF/88",
+        "descricao": (
+            "Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal. "
+            "Quatro subprincípios: lex scripta (lei escrita), lex stricta (vedada analogia in malam partem), "
+            "lex certa (taxatividade — a lei deve ser precisa) e lex praevia (anterioridade). "
+            "Conexão digital: sistemas de IA que restringem acesso ou aplicam sanções sem fundamento "
+            "normativo claro violam o espírito do princípio — a opacidade algorítmica como "
+            "antinomia da taxatividade."
+        ),
+        "cf88": "Art. 5º, XXXIX",
+        "normas_relacionadas": ["cf88", "lgpd", "pl_ia"],
+        "area": "penal",
+        "conexao_digital": True
+    },
+    {
+        "id": "dignidade",
+        "nome": "Princípio da Dignidade da Pessoa Humana",
+        "latim": "Dignitas humana",
+        "autor": "Kant — Grundlage der Metaphysik der Sitten (1785) — positivado no art. 1º, III, CF/88",
+        "descricao": (
+            "Veda penas cruéis, degradantes ou desumanas. Fundamento de todo o sistema penal "
+            "constitucional brasileiro. Inclui o princípio da humanidade da pena. "
+            "Conexão com o mandado de Tiradentes (1792): a pena que arrasava e salgava a casa, "
+            "infamava os filhos e espalha o corpo pelos caminhos é o paradigma histórico extremo "
+            "da violação desse princípio — 196 anos antes de sua constitucionalização."
+        ),
+        "cf88": "Art. 1º, III; Art. 5º, III e XLVII",
+        "normas_relacionadas": ["cf88", "stf_adimc"],
+        "area": "penal",
+        "conexao_digital": True
+    },
+    {
+        "id": "intervencao_minima",
+        "nome": "Princípio da Intervenção Mínima",
+        "latim": "Ultima ratio",
+        "autor": "Iluminismo penal — Beccaria, Dos Delitos e das Penas (1764)",
+        "descricao": (
+            "O direito penal deve ser a última ratio do ordenamento — só deve intervir quando "
+            "outras áreas do direito (civil, administrativo) forem insuficientes para proteger o bem jurídico. "
+            "Dois subprincípios: fragmentariedade (protege apenas os bens jurídicos mais relevantes) "
+            "e subsidiariedade (só atua quando outros ramos falharem). "
+            "Conexão digital: o debate sobre criminalização de condutas digitais — quando "
+            "a regulação administrativa (ANPD, ANATEL) é suficiente e quando o direito penal deve incidir."
+        ),
+        "cf88": "Implícito no sistema constitucional",
+        "normas_relacionadas": ["cf88", "marco_civil", "lgpd"],
+        "area": "penal",
+        "conexao_digital": True
+    },
+    {
+        "id": "pessoalidade",
+        "nome": "Princípio da Pessoalidade da Pena",
+        "latim": "Nulla poena sine culpa / Intranscendência da pena",
+        "autor": "CIDH art. 3º — CF/88 art. 5º, XLV",
+        "descricao": (
+            "Nenhuma pena passará da pessoa do condenado. Também chamado de princípio da "
+            "impessoalidade, personalidade, intransmissibilidade, intranscendência ou "
+            "incontagiabilidade da pena. "
+            "O mandado de execução de Tiradentes (1792) é o paradigma histórico da violação: "
+            "pena que se propaga no tempo, no espaço, na linhagem e no território. "
+            "Conexão digital: viés algorítmico em sistemas de credit scoring ou seleção "
+            "que penaliza grupos inteiros por características de terceiros viola o espírito "
+            "desse princípio — a incontagiabilidade invertida do algoritmo que pune sem individualizar."
+        ),
+        "cf88": "Art. 5º, XLV",
+        "normas_relacionadas": ["cf88", "lgpd", "decreto_12975_2026"],
+        "area": "penal",
+        "conexao_digital": True
+    },
+    {
+        "id": "proporcionalidade",
+        "nome": "Princípio da Proporcionalidade",
+        "latim": "Ne bis in idem / Proportionalitas",
+        "autor": "Beccaria — dogmática alemã (Verhältnismäßigkeit) — CF/88 implícito",
+        "descricao": (
+            "A pena deve ser proporcional à gravidade do fato. Três subprincípios: "
+            "adequação (a medida deve ser apta a atingir o fim), necessidade (deve ser a menos "
+            "gravosa possível) e proporcionalidade em sentido estrito (relação custo-benefício). "
+            "Proibição do excesso e proibição da proteção insuficiente. "
+            "Conexão digital: o debate sobre moderação de conteúdo — remoção imediata de "
+            "discurso ambíguo pode violar a proporcionalidade; tolerância com conteúdo "
+            "gravemente lesivo viola a proteção insuficiente. O STF Tema 987 equaciona "
+            "essa tensão com o modelo de falha sistêmica."
+        ),
+        "cf88": "Art. 5º, XLVI e XLVII; implícito no due process",
+        "normas_relacionadas": ["cf88", "stf_adimc", "stf_tema987"],
+        "area": "penal",
+        "conexao_digital": True
+    },
+]
+

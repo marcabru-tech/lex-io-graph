@@ -1,6 +1,6 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
-from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL
+from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -249,5 +249,24 @@ elif secao == "⚖️ Direito Natural e Positivo":
                 f'<div class="epist-dir">🇧🇷 {arco["relevancia_brasil"]}</div>',
                 unsafe_allow_html=True
             )
+
+
+    # ─── Novos casos Sprint 12 ───────────────────────────────────────────────
+    for caso in [CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO]:
+        with st.expander(f"⚖️ {caso['titulo']}", expanded=False):
+            st.markdown(f"*{caso['subtitulo']}*")
+            st.markdown(f"**Área:** {caso['area']}")
+            st.divider()
+            for tensao in caso.get('tensoes', []):
+                st.markdown(f"**{tensao['titulo']}**")
+                st.markdown(tensao['descricao'])
+                st.markdown("")
+            if caso.get('doutrina'):
+                st.markdown("**Fundamento doutrinário:**")
+                for d in caso['doutrina']:
+                    st.markdown(f"- {d}")
+            st.divider()
+            st.markdown(f"*{caso.get('prospectiva', '')}*")
+            st.caption(f"Fonte: {caso.get('fonte', 'Hubstry Deep Tech')}")
 
 render_footer()
