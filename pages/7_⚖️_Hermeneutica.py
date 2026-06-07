@@ -1,7 +1,8 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.hermeneutica import (
-    CORRENTES_HERMENEUTICAS, FONTES_DIREITO, ARCO_CC, BRASIL_IMPERIO
+    CORRENTES_HERMENEUTICAS, FONTES_DIREITO, ARCO_CC, BRASIL_IMPERIO,
+    PRINCIPIOS_PENAIS
 )
 from lib.footer import render_footer
 
