@@ -3,21 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lexiograph | Gramática Semiótica dos Sistemas Digitais</title>
-  <meta name="description" content="Lexiograph: gramática semiótica dos sistemas digitais. Lex (governança), IO (interação), Graph (grafos de conhecimento). Assinatura Lex Quantum." />
+  <title>Lexiograph — Gramática Semiótica dos Sistemas Digitais</title>
+  <meta name="description" content="Lexiograph: o único atlas jurídico brasileiro com 9 páginas de inteligência, engine IPII de detecção de interseções normativas, Radar Legislativo com APIs do Senado e Câmara." />
   <link rel="icon" href="assets/lexiograph-logo.svg" type="image/svg+xml" />
 
-  <!-- Tipografia: serifada intelectual + monospace técnica -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================
-       LEXIOGRAPH — CODEX SEMIÓTICO
-       Gramática visual dos sistemas digitais
-       ============================================ */
-
     :root {
       color-scheme: dark;
       --bg: #08070e;
@@ -28,19 +22,15 @@
       --text: #e8e4dc;
       --text-secondary: #b8b2a6;
       --muted: #706a60;
-
-      /* Triade semiótica */
-      --lex: #d4a853;       /* ouro — lei, governança, gravidade */
-      --io: #3dc8e6;        /* ciano — fluxo, interação, pulso */
-      --graph: #c44b4b;     /* vermelho profundo — grafo, escrita, estrutura */
-
+      --lex: #d4a853;
+      --io: #3dc8e6;
+      --graph: #c44b4b;
       --accent: var(--lex);
       --font-display: 'Cormorant Garamond', 'Georgia', serif;
       --font-body: 'DM Mono', 'Courier New', monospace;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -54,7 +44,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Grain overlay */
     body::before {
       content: '';
       position: fixed;
@@ -65,16 +54,10 @@
       z-index: 9999;
     }
 
-    /* ---- LINKS ---- */
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    /* ---- SELECTION ---- */
     ::selection { background: rgba(212,168,83,0.3); color: var(--text); }
 
-    /* ===============================
-       LAYOUT
-       =============================== */
     .page {
       max-width: 820px;
       margin: 0 auto;
@@ -82,14 +65,11 @@
     }
 
     section {
-      padding: 64px 0;
+      padding: 80px 0;
       border-bottom: 1px solid var(--border);
     }
     section:last-of-type { border-bottom: none; }
 
-    /* ===============================
-       TYPOGRAPHY
-       =============================== */
     h1, h2, h3 {
       font-family: var(--font-display);
       font-weight: 600;
@@ -105,7 +85,7 @@
 
     h2 {
       font-size: 1.6rem;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       letter-spacing: 0.02em;
     }
 
@@ -117,7 +97,6 @@
 
     p { margin-bottom: 16px; }
     p:last-child { margin-bottom: 0; }
-
     strong { font-weight: 500; color: var(--text); }
 
     blockquote {
@@ -131,18 +110,13 @@
       color: var(--text-secondary);
     }
 
-    ul, ol {
-      padding-left: 20px;
-      margin-bottom: 16px;
-    }
+    ul, ol { padding-left: 20px; margin-bottom: 16px; }
     li { margin-bottom: 8px; }
     li::marker { color: var(--muted); }
 
-    /* ===============================
-       HERO — "i f" + IDENTITY
-       =============================== */
+    /* ======================== HERO ======================== */
     .hero {
-      padding: 120px 0 80px;
+      padding: 140px 0 100px;
       text-align: center;
       border-bottom: 1px solid var(--border);
       position: relative;
@@ -150,11 +124,11 @@
 
     .hero-glyph {
       font-family: var(--font-body);
-      font-size: clamp(4rem, 12vw, 9rem);
+      font-size: clamp(5rem, 14vw, 11rem);
       font-weight: 500;
       letter-spacing: 0.3em;
       line-height: 1;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
       background: linear-gradient(135deg, var(--graph), var(--lex), var(--io));
       -webkit-background-clip: text;
       background-clip: text;
@@ -170,14 +144,19 @@
       50% { filter: drop-shadow(0 0 60px rgba(196,75,75,0.25)) drop-shadow(0 0 100px rgba(212,168,83,0.15)); }
     }
 
-    .hero h1 {
-      margin-bottom: 16px;
+    .hero-sub {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
     }
 
+    .hero h1 { margin-bottom: 16px; }
+
     .hero-tagline {
-      font-family: var(--font-body);
-      font-size: 14px;
-      letter-spacing: 0.15em;
+      font-size: 13px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 40px;
@@ -187,12 +166,44 @@
       width: 80px;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--lex), transparent);
-      margin: 0 auto;
+      margin: 0 auto 32px;
     }
 
-    /* ===============================
-       DECOMPOSIÇÃO: LEX / IO / GRAPH
-       =============================== */
+    .hero-cta {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 40px;
+      border: 1px solid var(--lex);
+      color: var(--lex);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: background 0.3s ease, color 0.3s ease, letter-spacing 0.4s ease;
+    }
+    .hero-cta:hover {
+      background: var(--lex);
+      color: var(--bg);
+      letter-spacing: 0.25em;
+      text-decoration: none;
+    }
+
+    /* ======================== LOGIC ======================== */
+    .logic-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin: 24px 0;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--text-secondary);
+    }
+    .logic-keyword { color: var(--graph); font-weight: 500; }
+    .logic-then { color: var(--io); font-weight: 500; }
+    .logic-else-kw { color: var(--lex); font-weight: 500; }
+
+    /* ======================== DECOMPOSITION ======================== */
     .decomp-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -205,7 +216,6 @@
     .decomp-cell {
       background: var(--surface);
       padding: 32px 24px;
-      position: relative;
       transition: background 0.4s ease;
     }
     .decomp-cell:hover { background: var(--surface-raised); }
@@ -235,104 +245,199 @@
       line-height: 1.7;
     }
 
-    /* ===============================
-       CARDS / PANELS
-       =============================== */
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 32px;
-      margin-top: 24px;
-      position: relative;
-    }
-
-    .panel--quantum {
-      border-color: var(--border-glow);
-      background: linear-gradient(135deg, var(--surface) 0%, rgba(212,168,83,0.03) 100%);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .pill {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-      font-family: var(--font-body);
-      font-weight: 400;
-      transition: border-color 0.3s ease, color 0.3s ease;
-    }
-    .pill:hover {
-      border-color: var(--lex);
-      color: var(--lex);
-    }
-
-    /* ===============================
-       APPLICATIONS LIST
-       =============================== */
-    .app-list {
+    /* ======================== LAYERS ======================== */
+    .layers-list {
       list-style: none;
       padding: 0;
-      margin-top: 16px;
+      margin-top: 24px;
     }
 
-    .app-list li {
-      padding: 14px 0;
+    .layers-list li {
+      padding: 20px 0 20px 20px;
       border-bottom: 1px solid var(--border);
-      font-size: 14px;
       display: flex;
       align-items: baseline;
-      gap: 12px;
-    }
-    .app-list li:last-child { border-bottom: none; }
-
-    .app-list li::before {
-      content: '—';
-      color: var(--muted);
-      flex-shrink: 0;
-    }
-
-    /* ===============================
-       PROCESS (OL)
-       =============================== */
-    .process {
-      list-style: none;
-      padding: 0;
-      margin-top: 24px;
-      counter-reset: step;
-    }
-
-    .process li {
-      counter-increment: step;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
       gap: 20px;
-      align-items: baseline;
+      margin-bottom: 0;
     }
-    .process li:last-child { border-bottom: none; }
+    .layers-list li:last-child { border-bottom: none; }
 
-    .process li::before {
-      content: counter(step, decimal-leading-zero);
+    .layer-num {
       font-family: var(--font-display);
       font-size: 2rem;
       font-weight: 300;
       color: var(--muted);
       flex-shrink: 0;
       line-height: 1;
-      min-width: 48px;
+      min-width: 32px;
     }
 
-    /* ===============================
-       ECOSYSTEM
-       =============================== */
+    .layer-content strong { display: block; margin-bottom: 4px; }
+
+    /* ======================== DIFFERENTIAL ======================== */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .diff-cell {
+      background: var(--surface);
+      padding: 28px 24px;
+      transition: background 0.3s ease;
+    }
+    .diff-cell:hover { background: var(--surface-raised); }
+
+    .diff-cell h3 {
+      font-size: 14px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--lex);
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .diff-cell p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .diff-vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 13px;
+    }
+
+    .diff-vs-table th {
+      text-align: left;
+      padding: 12px 16px;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .diff-vs-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .diff-vs-table tr:last-child td { border-bottom: none; }
+
+    .diff-vs-table td:first-child {
+      font-weight: 500;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .diff-vs-table .col-chatbot { color: var(--muted); }
+    .diff-vs-table .col-lexiograph { color: var(--io); }
+
+    .diff-pitch {
+      background: var(--surface);
+      border: 1px solid var(--border-glow);
+      padding: 32px;
+      margin-top: 32px;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    /* ======================== MOAT ======================== */
+    .moat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .moat-cell {
+      background: var(--surface);
+      padding: 24px;
+    }
+
+    .moat-cell h3 {
+      font-size: 14px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--lex);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .moat-cell p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ======================== PRICING ======================== */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .pricing-cell {
+      background: var(--surface);
+      padding: 32px 24px;
+      transition: background 0.3s ease;
+    }
+    .pricing-cell:hover { background: var(--surface-raised); }
+
+    .pricing-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .pricing-cell h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--lex);
+    }
+
+    .pricing-cell p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pricing-price {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 16px 0 8px;
+    }
+
+    .pricing-detail {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ======================== ECO ======================== */
     .eco-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -363,23 +468,10 @@
       margin: 0;
     }
 
-    /* ===============================
-       FOUNDER
-       =============================== */
-    .founder-label {
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    /* ===============================
-       CTA
-       =============================== */
+    /* ======================== CTA ======================== */
     .cta-section {
       text-align: center;
-      padding: 80px 0;
+      padding: 100px 0;
     }
 
     .cta-btn {
@@ -393,7 +485,6 @@
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      text-decoration: none;
       transition: background 0.3s ease, color 0.3s ease, letter-spacing 0.4s ease;
     }
     .cta-btn:hover {
@@ -403,9 +494,36 @@
       text-decoration: none;
     }
 
-    /* ===============================
-       FOOTER
-       =============================== */
+    /* ======================== NAV ======================== */
+    .nav-minimal {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      padding: 24px 0;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+    .nav-minimal a {
+      color: var(--muted);
+      transition: color 0.3s ease;
+    }
+    .nav-minimal a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* ======================== FOUNDER ======================== */
+    .founder-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* ======================== FOOTER ======================== */
     .site-footer {
       padding: 40px 0 60px;
       text-align: center;
@@ -417,30 +535,7 @@
     .site-footer a { color: var(--muted); }
     .site-footer a:hover { color: var(--lex); }
 
-    /* ===============================
-       NAV (minimal)
-       =============================== */
-    .nav-minimal {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      padding: 24px 0;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .nav-minimal a {
-      color: var(--muted);
-      transition: color 0.3s ease;
-    }
-    .nav-minimal a:hover {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    /* ===============================
-       SCROLL REVEAL
-       =============================== */
+    /* ======================== SCROLL REVEAL ======================== */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -451,7 +546,6 @@
       transform: translateY(0);
     }
 
-    /* stagger children */
     .reveal-stagger > * {
       opacity: 0;
       transform: translateY(16px);
@@ -461,40 +555,22 @@
     .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
     .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
     .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
 
-    /* ===============================
-       RESPONSIVE
-       =============================== */
+    /* ======================== RESPONSIVE ======================== */
     @media (max-width: 700px) {
-      .decomp-grid { grid-template-columns: 1fr; }
-      .eco-grid { grid-template-columns: 1fr; }
-      .hero { padding: 80px 0 60px; }
-      section { padding: 48px 0; }
-      .process li { flex-direction: column; gap: 8px; }
+      .decomp-grid, .pricing-grid, .moat-grid, .eco-grid, .diff-grid { grid-template-columns: 1fr; }
+      .hero { padding: 100px 0 70px; }
+      section { padding: 56px 0; }
+      .nav-minimal { gap: 14px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
       .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
       .hero-glyph { animation: none; }
-    }
-  
-  .section-label {
-    font-family: var(--font-body);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 20px;
-    letter-spacing: 0.02em;
     }
   </style>
 </head>
@@ -504,167 +580,588 @@
 
     <!-- ======================== HERO ======================== -->
     <section class="hero">
-      <div class="hero-glyph" aria-hidden="true">i f</div>
+      <div class="hero-glyph" aria-hidden="true">if</div>
+      <div class="hero-sub">A estrutura condicional que conecta código e direito</div>
       <h1>Lexiograph</h1>
       <div class="hero-tagline">Gramática Semiótica dos Sistemas Digitais</div>
       <div class="hero-line" aria-hidden="true"></div>
+      <p style="max-width: 540px; margin: 0 auto; color: var(--text-secondary);">
+        O único atlas jurídico brasileiro com 9 páginas de inteligência,
+        engine IPII de detecção de interseções normativas,
+        e Radar Legislativo com APIs do Senado e Câmara.
+      </p>
+      <a href="https://lex-io-graph-compliance-map.streamlit.app/" class="hero-cta" target="_blank" rel="noopener noreferrer">Explorar o app</a>
     </section>
 
     <!-- ======================== NAV ======================== -->
     <nav class="nav-minimal">
+      <a href="#logica">A Lógica</a>
       <a href="#gramatica">Gramática</a>
-      <a href="#quantum">Lex Quantum</a>
+      <a href="#camadas">7 Camadas</a>
+      <a href="#diferencial">Diferencial</a>
+      <a href="#fosso">Fosso</a>
+      <a href="#demo">App</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#protocolo">Protocolo</a>
       <a href="#ecossistema">Ecossistema</a>
       <a href="#artigos">Artigos</a>
       <a href="#contato">Contato</a>
     </nav>
 
-    <!-- ======================== PROPÓSITO ======================== -->
-    <section class="reveal">
-      <p style="font-family: var(--font-display); font-size: 1.3rem; line-height: 1.6; color: var(--text-secondary); font-style: italic;">
-        Comunicar sistemas digitais de forma clara, ética e estética — unindo governança (Lex), interação (IO) e estrutura semântica (Graph) sob a assinatura Lex Quantum.
+    <!-- ======================== A LOGICA if/else ======================== -->
+    <section id="logica" class="reveal">
+      <h2>A lógica: if / else</h2>
+      <p>
+        Em programação, toda decisão se reduz a uma estrutura condicional:
+        <strong>se</strong> a condição for verdadeira, execute; <strong>senão</strong>, alternativa.
       </p>
-      <p style="margin-top: 20px;">
-        A Lexiograph é mais do que uma marca — é uma linguagem. Uma gramática visual que emerge da interseção entre compliance digital, interação sistêmica e estruturação do conhecimento. Ao decompor <strong>Lexiograph = Lex + IO + Graph</strong>, revelamos uma arquitetura semiótica que traduz sistemas digitais em signos, fluxos e grafos.
+      <p>
+        O direito opera na mesma gramática. Se o ato é lícito, permissão. Se é ilícito, punição.
+        Se há base legal, o tratamento de dados é permitido. Se não há, é vedado.
+        Se a norma A intersecta a norma B, há risco regulatório. Se não há interseção, há vácuo.
+      </p>
+      <div class="logic-block">
+        <span class="logic-keyword">if</span> (ato é ilícito):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ punição</span><br>
+        <span class="logic-else-kw">else</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;→ permissão<br>
+        <br>
+        <span class="logic-keyword">if</span> (consentimento existe) AND (base legal válida):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ tratamento permitido (LGPD art. 7º)</span><br>
+        <span class="logic-else-kw">else</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;→ tratamento vedado → sanção (LGPD art. 52)<br>
+        <br>
+        <span class="logic-keyword">if</span> (norma A intersecta norma B):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ risco mapeado</span><br>
+        <span class="logic-else-kw">else</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;→ vácuo normativo → oportunidade ou risco oculto
+      </div>
+      <p>
+        O <strong>if</strong> no nosso nome não é abreviação. É proposição.
+        O Lexiograph opera na interseção entre a lógica condicional do código
+        e a lógica condicional do direito — produzindo epistemologia nova
+        onde as duas gramáticas se encontram.
       </p>
     </section>
 
-    <!-- ======================== DECOMPOSIÇÃO ======================== -->
+    <!-- ======================== DECOMPOSICAO ======================== -->
     <section id="gramatica" class="reveal">
-      <h2>Decomposição Semiótica</h2>
+      <h2>Lexiograph = Lex + IO + Graph</h2>
+      <p>
+        Uma gramática visual que emerge da interseção entre compliance digital,
+        interação sistêmica e estruturação do conhecimento.
+      </p>
       <div class="decomp-grid reveal-stagger">
         <div class="decomp-cell decomp-cell--lex">
           <span class="decomp-marker"></span>
           <h3>Lex</h3>
-          <p>Lei, compliance, governança digital. Princípios éticos e regulatórios aplicados a sistemas e algoritmos. Conformidade técnica, jurídica e operacional. Auditoria, transparência e confiabilidade em fluxos e decisões.</p>
+          <p>Lei, compliance, governança digital. Princípios éticos e regulatórios aplicados a sistemas e algoritmos. Conformidade técnica, jurídica e operacional.</p>
         </div>
         <div class="decomp-cell decomp-cell--io">
           <span class="decomp-marker"></span>
           <h3>IO</h3>
-          <p>Input/output, interação e fluxo. Interfaces homem-máquina e protocolos de comunicação. Ciclos de entrada, processamento e saída de informação. Orquestração de eventos, automações e integrações.</p>
+          <p>Input/output, interação e fluxo. Interfaces homem-máquina e protocolos de comunicação. Orquestração de eventos, automações e integrações.</p>
         </div>
         <div class="decomp-cell decomp-cell--graph">
           <span class="decomp-marker"></span>
           <h3>Graph</h3>
-          <p>Grafia, grafos e estrutura de conhecimento. Modelagem semântica e ontologias. Grafos de entidades, relações e inferências. Visualizações que tornam o conhecimento navegável e inteligível.</p>
+          <p>Grafia, grafos e estrutura de conhecimento. Modelagem semântica e ontologias. Visualizações que tornam o conhecimento navegável e inteligível.</p>
         </div>
       </div>
     </section>
 
-    <!-- ======================== LEX QUANTUM ======================== -->
-    <section id="quantum" class="reveal">
-      <h2>Lex Quantum</h2>
-      <div class="panel panel--quantum">
-        <p>
-          A assinatura Lex Quantum integra rigor técnico e estética semiótica. Soluções que interpretam, codificam e comunicam sistemas complexos com precisão, beleza e significado.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Governança</span>
-          <span class="pill">Interoperabilidade</span>
-          <span class="pill">Grafos de Conhecimento</span>
-          <span class="pill">Visualização</span>
-          <span class="pill">Semiótica</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== O QUE ENTREGAMOS ======================== -->
-    <section class="reveal">
-      <h2>O que a Lexiograph entrega</h2>
+    <!-- ======================== SETE CAMADAS ======================== -->
+    <section id="camadas" class="reveal">
+      <h2>Sete Camadas de Inteligência</h2>
       <p>
-        Você tem um sistema complexo — técnico, regulatório ou conceitual — e precisa que ele seja compreendido: por clientes, investidores, reguladores ou pela sua própria equipe. A Lexiograph transforma essa complexidade em linguagem visual operável.
+        O Lex-IO-Graph é o único atlas jurídico brasileiro que articula
+        explicitamente sete camadas simultâneas de inteligência jurídica.
+        O grafo não descreve o direito — compreende-o
+        (<em>Verstehen</em>, Dilthey, 1833–1911).
       </p>
-      <ul style="margin-top: 20px;">
-        <li><strong>Identidade visual sistêmica</strong> — sistemas de design que refletem a arquitetura real do seu produto ou organização, não apenas sua estética.</li>
-        <li><strong>Documentação viva</strong> — mapas de arquitetura, catálogos de API, grafos de conhecimento e fluxos de dados que se mantêm atualizados e navegáveis.</li>
-        <li><strong>Comunicação de governança</strong> — dashboards, relatórios e narrativas visuais para compliance, auditoria e comunicação executiva.</li>
-        <li><strong>Narrativa técnica</strong> — materiais de pitch, whitepapers e apresentações que traduzem profundidade técnica em linguagem de decisão.</li>
-      </ul>
-    </section>
-
-    <!-- ======================== APLICAÇÕES ======================== -->
-    <section class="reveal">
-      <h2>Aplicações</h2>
-      <ul class="app-list">
-        <li>Mapas de arquitetura de software e dados</li>
-        <li>Catálogos de APIs, fluxos de eventos e integrações</li>
-        <li>Grafos de conhecimento e navegação semântica</li>
-        <li>Dashboards de governança e conformidade</li>
-        <li>Narrativas visuais para comunicação executiva e técnica</li>
-      </ul>
-    </section>
-
-    <!-- ======================== COMO TRABALHAMOS ======================== -->
-    <section class="reveal">
-      <h2>Como trabalhamos</h2>
-      <p>
-        Cada projeto começa por uma leitura semiótica do sistema do cliente — entendendo sua arquitetura, seus públicos e os signos que já circulam em torno dele. A partir daí, construímos em camadas:
-      </p>
-      <ol class="process reveal-stagger">
+      <ol class="layers-list reveal-stagger">
         <li>
-          <div>
-            <strong>Diagnóstico semiótico</strong><br>
-            <span style="color: var(--text-secondary); font-size: 13px;">Mapeamento da identidade, linguagem e lacunas comunicacionais do sistema.</span>
+          <span class="layer-num">01</span>
+          <div class="layer-content">
+            <strong style="color: var(--lex);">Norma positiva</strong>
+            O fato jurídico bruto: texto, hierarquia, vigência, artigos-chave, status.
           </div>
         </li>
         <li>
-          <div>
-            <strong>Arquitetura visual</strong><br>
-            <span style="color: var(--text-secondary); font-size: 13px;">Definição dos elementos Lex, IO e Graph aplicados ao contexto específico do cliente.</span>
+          <span class="layer-num">02</span>
+          <div class="layer-content">
+            <strong style="color: var(--io);">Hermenêutica</strong>
+            A corrente interpretativa que molda o sentido da norma. Savigny (histórica), Ihering (teleológica), Gadamer (filosófica), Dworkin (integridade), Carlos Maximiliano (síntese brasileira), Pontes de Miranda.
           </div>
         </li>
         <li>
-          <div>
-            <strong>Produção e entrega</strong><br>
-            <span style="color: var(--text-secondary); font-size: 13px;">Execução full service: identidade, documentação, interfaces, narrativas e materiais de governança.</span>
+          <span class="layer-num">03</span>
+          <div class="layer-content">
+            <strong style="color: var(--graph);">Inventário pancrônico</strong>
+            O arco histórico completo acessível simultaneamente — não em timeline linear. Da Constituição de 1824 ao PL mais recente.
           </div>
         </li>
         <li>
-          <div>
-            <strong>Manutenção viva</strong><br>
-            <span style="color: var(--text-secondary); font-size: 13px;">Atualização contínua dos artefatos conforme o sistema evolui.</span>
+          <span class="layer-num">04</span>
+          <div class="layer-content">
+            <strong style="color: var(--io);">Direito comparado glocal</strong>
+            A norma brasileira no campo mundial. LGPD ↔ GDPR ↔ CCPA. CC/2002 ↔ BGB ↔ Codice Civile ↔ Code Civil. Tradição romano-germânica vs. common law.
+          </div>
+        </li>
+        <li>
+          <span class="layer-num">05</span>
+          <div class="layer-content">
+            <strong style="color: var(--graph);">Multissemiose</strong>
+            Literatura mundial amplamente utilizada por magistrados para justificar e fundamentar votos — Kafka (<em>O Processo</em>) em habeas corpus, Dostoiévski (<em>Crime e Castigo</em>) em responsabilidade penal, Shakespeare (<em>O Mercador de Veneza</em>) em interpretação contratual, Machado de Assis em dano moral. Citações que são operações hermenêuticas, não ornamento retórico. Obras de arte com estatuto epistemológico autônomo — Debret gravando o sistema jurídico colonial brasileiro não é ilustração, é conhecimento. A Lexiograph trata imagem, texto e símbolo como sistemas paralelos de saber jurídico.
+          </div>
+        </li>
+        <li>
+          <span class="layer-num">06</span>
+          <div class="layer-content">
+            <strong style="color: var(--lex);">Inteligência estratégica</strong>
+            Atores, vetores de força, vácuo normativo, prospectiva 12–36 meses por PL. O jogo de forças por trás da norma.
+          </div>
+        </li>
+        <li>
+          <span class="layer-num">07</span>
+          <div class="layer-content">
+            <strong style="color: var(--io);">Epistemologia do direito</strong>
+            De onde vem o conhecimento jurídico, como se forma, como se valida. Schleiermacher → Dilthey → Gadamer → Habermas → Dworkin como arco epistemológico.
           </div>
         </li>
       </ol>
+      <blockquote style="margin-top: 40px;">
+        "Comunicar bem não é simplificar. É encontrar a forma exata em que a
+        complexidade se torna navegável."
+      </blockquote>
+      <p style="margin-top: 24px;">
+        A convergência é inevitável: a inteligência artificial geral será multissemiótica —
+        processará texto, imagem, som e símbolo como sistemas paralelos de conhecimento.
+        Os modelos multimodais já apontam nessa direção. A Lexiograph foi arquitetada
+        desde o início para esse futuro. Quando a IA chegar lá, a gramática já estará pronta.
+      </p>
+    </section>
+
+    <!-- ======================== DIFERENCIAL ======================== -->
+    <section id="diferencial" class="reveal">
+      <h2>Por que não um chatbot jurídico?</h2>
+
+      <p>
+        Em maio de 2026, os três maiores laboratórios de IA do mundo entraram
+        no vertical jurídico simultaneamente — com ofertas especializadas para
+        o mercado americano e europeu. O campo jurídico se tornou estratégico.
+      </p>
+      <p>
+        Ao mesmo tempo, plataformas de IA agora operam sob um conjunto de
+        regulamentações sobrepostas — Lei da IA da UE, GDPR, DSA, obrigações
+        de KYC/AML — onde a conformidade deixou de ser pensamento posterior
+        e virou preocupação arquitetural.
+      </p>
+      <p>
+        Nenhum desses movimentos atinge o ordenamento jurídico digital brasileiro
+        como sistema integrado. Eles atendem perguntas isoladas. O Lex-IO-Graph
+        mapeia o sistema inteiro.
+      </p>
+
+      <table class="diff-vs-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-chatbot">Chatbot jurídico</th>
+            <th class="col-lexiograph">Lex-IO-Graph</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modelo</td>
+            <td class="col-chatbot">Pergunta → resposta</td>
+            <td class="col-lexiograph">Mapa relacional navegável</td>
+          </tr>
+          <tr>
+            <td>Camadas</td>
+            <td class="col-chatbot">1 (norma positiva interpretada)</td>
+            <td class="col-lexiograph">7 simultâneas</td>
+          </tr>
+          <tr>
+            <td>Escopo</td>
+            <td class="col-chatbot">Resposta a um ponto isolado</td>
+            <td class="col-lexiograph">Sistema normativo completo</td>
+          </tr>
+          <tr>
+            <td>Hermenêutica</td>
+            <td class="col-chatbot">Menciona se perguntado</td>
+            <td class="col-lexiograph">Vinculada a cada nó do grafo</td>
+          </tr>
+          <tr>
+            <td>Histórico</td>
+            <td class="col-chatbot">Não mantém mapa</td>
+            <td class="col-lexiograph">Inventário pancrônico simultâneo</td>
+          </tr>
+          <tr>
+            <td>Direito comparado</td>
+            <td class="col-chatbot">Cita se solicitado</td>
+            <td class="col-lexiograph">Glocal mapeado por aresta</td>
+          </tr>
+          <tr>
+            <td>Prospectiva</td>
+            <td class="col-chatbot">Não faz</td>
+            <td class="col-lexiograph">Vetor estratégico por PL</td>
+          </tr>
+          <tr>
+            <td>Conformidade</td>
+            <td class="col-chatbot">Sujeita a regulação de IA</td>
+            <td class="col-lexiograph">Mapa curado — risco regulatório zero</td>
+          </tr>
+          <tr>
+            <td>Foco</td>
+            <td class="col-chatbot">Global genérico (common law)</td>
+            <td class="col-lexiograph">Nativo do ordenamento brasileiro</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="diff-grid reveal-stagger">
+        <div class="diff-cell">
+          <h3>1. Mapa vs. Resposta</h3>
+          <p>O chatbot te diz o que diz o art. 14 da LGPD. O Lex-IO-Graph mostra o art. 14 conectado ao ECA Digital art. 10, ao PL 2.338 art. 12, à jurisprudência do STJ, à hermenêutica de Gadamer, ao GDPR europeu, e à inteligência estratégica que mostra o PL pode mudar tudo em 2026. Uma é consulta. A outra é compreensão.</p>
+        </div>
+        <div class="diff-cell">
+          <h3>2. Sete camadas vs. uma</h3>
+          <p>Qualquer chatbot jurídico opera numa única camada: norma positiva interpretada por linguagem natural. O Lex-IO-Graph opera em sete camadas simultâneas. Nenhum modelo de IA articula Bakhtin, Fuller e o Decreto 12.975/2026 na mesma tela com precisão técnica. Isso não é limitação técnica — é limitação arquitetural.</p>
+        </div>
+        <div class="diff-cell">
+          <h3>3. Conformidade como produto</h3>
+          <p>Plataformas de IA estão sendo submetidas às mesmas exigências de conformidade de bancos. O Lex-IO-Graph não é um modelo de IA. É um mapa curado com camada interativa. Não processa dados pessoais. Não gera respostas que podem alucinar. O risco regulatório é zero.</p>
+        </div>
+        <div class="diff-cell">
+          <h3>4. Gap brasileiro</h3>
+          <p>Os grandes labs construíram para common law americano e regulamentos europeus. Nenhum mapeia a interseção entre CF/88, LGPD, Marco Civil, ECA Digital, PL 2.338, NR-1 e os Decretos 12.975/2026 como sistema integrado. O Lex-IO-Graph é o único produto que faz isso.</p>
+        </div>
+        <div class="diff-cell">
+          <h3>5. Engine proprietário (IPII)</h3>
+          <p>O Lexiograph não é um grafo curado à mão. Usa a técnica IPII — Interação Paramétrica Iterativa por Interoperabilidade — para calcular interseções normativas em todo o corpus. Ontologia computacional de 5 dimensões (GuruMatrix 5D) que analisa todos os pares do corpus, calcula scores de relevância por tema, hierarquia, hermenêutica, direito comparado e temporalidade, e sugere arestas ao curador humano. Nenhum produto jurídico existente tem engine algorítmico de detecção de interseções operando sobre o corpus inteiro.</p>
+        </div>
+        <div class="diff-cell">
+          <h3>6. Radar Legislativo</h3>
+          <p>Monitoramento automático de PLs e normas via APIs do Senado, Câmara e LexML. O IPII já opera sobre todo o corpus — detecta interseções entre normas existentes, sugere novas arestas, e quando uma nova norma chega pelo Radar, recalcula o corpus inteiro. O mapa cresce sozinho.</p>
+        </div>
+      </div>
+
+      <div class="diff-grid reveal-stagger" style="grid-template-columns: 1fr;">
+        <div class="diff-cell">
+          <h3>7. Ferramenta de raciocínio vs. de resposta</h3>
+          <p>A diferença entre usar IA como assistente que responde perguntas e usá-la como extensão do pensamento profissional já é reconhecida no mercado. O Lex-IO-Graph opera nesse segundo nível. Não é uma IA que você pergunta. É uma ferramenta que estrutura o raciocínio jurídico. O advogado não pergunta "o que diz o art. 19 do Marco Civil?" — ele navega pelo grafo e vê que o art. 19 intersecta o STF Tema 987, que conecta aos Decretos 12.975/2026, que tensionam com a separação de poderes, que conecta ao Vaticano via <em>Magnifica Humanitas</em>. Isso é raciocínio estruturado, não resposta.</p>
+        </div>
+      </div>
+
+      <div class="diff-pitch">
+        "Os grandes labs estão construindo para escala global. Vão otimizar
+        para o mercado americano e europeu. O direito brasileiro — com sua
+        complexidade pancrônica, tradição romano-germânica específica, e
+        ecossistema regulatório em rápida mutação — vai continuar sendo
+        atendido por soluções genéricas adaptadas. O Lex-IO-Graph não é
+        uma adaptação. É nativo."
+      </div>
+    </section>
+
+    <!-- ======================== FOSSO COMPETITIVO ======================== -->
+    <section id="fosso" class="reveal">
+      <h2>Fosso Competitivo</h2>
+      <p>
+        O que uma equipe de TI + advogados levaria para replicar este sistema.
+      </p>
+      <div class="moat-grid reveal-stagger">
+        <div class="moat-cell">
+          <h3>Mapear corpus doutrinário</h3>
+          <p>3–6 meses</p>
+        </div>
+        <div class="moat-cell">
+          <h3>Arco histórico pancrônico</h3>
+          <p>2–4 meses</p>
+        </div>
+        <div class="moat-cell">
+          <h3>Hermenêutica + epistemologia</h3>
+          <p>2–3 meses</p>
+        </div>
+        <div class="moat-cell">
+          <h3>Multissemiose (literatura + arte)</h3>
+          <p>1–2 meses</p>
+        </div>
+        <div class="moat-cell">
+          <h3>Engine IPII (ontologia 5D)</h3>
+          <p>3–6 meses</p>
+        </div>
+        <div class="moat-cell">
+          <h3>Radar Legislativo (APIs + automação)</h3>
+          <p>1–2 meses</p>
+        </div>
+      </div>
+      <p style="margin-top: 24px;">
+        <strong>Total estimado:</strong> 12–23 meses de equipe multidisciplinar.
+      </p>
+      <p style="margin-top: 16px;">
+        O que não se contrata: 30 anos de repertório jurídico-filosófico.
+        Síntese tripartite: científico + artístico + empreendedor.
+        Capacidade de articular Bakhtin, Fuller e o Decreto 12.975/2026
+        na mesma frase com precisão técnica. O olhar pancrônico que conecta
+        os glosadores de Bolonha ao ECA Digital de 2025.
+        Técnica IPII de transpilação semântica adaptada de linguagens de programação
+        para detecção de interseções normativas — PI registrada.
+      </p>
+      <p><em>Esse perfil se forma — não se compra.</em></p>
+    </section>
+
+    <!-- ======================== DEMO ======================== -->
+    <section id="demo" class="reveal">
+      <h2>O App — 9 Páginas</h2>
+      <p>
+        O dashboard público é demonstração. O produto é o mapa customizado + inteligência jurídica.
+        Cada página é uma camada de compreensão do ordenamento jurídico digital brasileiro.
+      </p>
+
+      <table class="diff-vs-table" style="margin-top: 24px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Página</th>
+            <th>O que faz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td style="color: var(--io);">Grafo Normativo</td>
+            <td class="col-chatbot">Atlas interativo com hierarquia espacial, busca textual, toggle lista/grafo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td style="color: var(--io);">Matriz Compliance</td>
+            <td class="col-chatbot">Cruzamento empresa × norma — mapa de conformidade</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td style="color: var(--io);">Comparação Normativa</td>
+            <td class="col-chatbot">Side-by-side de normas — LGPD vs GDPR vs CCPA, em tempo real</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td style="color: var(--io);">Radar Riscos</td>
+            <td class="col-chatbot">Mapa de calor regulatório — onde o risco se concentra</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td style="color: var(--io);">Repositório</td>
+            <td class="col-chatbot">Inventário doutrinário, latim jurídico, direito comparado glocal, multissemiose</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td style="color: var(--io);">Inteligência</td>
+            <td class="col-chatbot">Casos estratégicos, epistemologia, direito natural</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td style="color: var(--io);">Hermenêutica</td>
+            <td class="col-chatbot">Correntes interpretativas, fontes, código civil, constituições, in memoriam</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td style="color: var(--io);">Radar Legislativo</td>
+            <td class="col-chatbot">APIs do Senado, Câmara e LexML — monitoramento automático de PLs e normas</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td style="color: var(--lex);">IPII Engine</td>
+            <td class="col-chatbot">Descoberta assistida de interseções normativas — técnica IPII, PI Hubstry Deep Tech</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 24px; font-size: 13px; color: var(--text-secondary);">
+        O IPII (Interação Paramétrica Iterativa por Interoperabilidade) é uma técnica de transpilação semântica
+        originalmente desenvolvida para interoperabilidade entre linguagens de programação — adaptada ao Lexiograph
+        como engine de detecção automática de interseções normativas. O engine já opera sobre todo o corpus existente —
+        18 normas, 30+ arestas mapeadas — calculando scores de relevância para cada par e sugerindo novas conexões
+        ao curador humano. Quando uma nova norma chega pelo Radar Legislativo, o engine recalcula o corpus inteiro
+        incorporando a nova norma. O grafo vive.
+      </p>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="https://lex-io-graph-compliance-map.streamlit.app/" class="cta-btn" target="_blank" rel="noopener noreferrer">Abrir o App</a>
+      </div>
+    </section>
+
+    <!-- ======================== PRICING ======================== -->
+    <section id="pricing" class="reveal">
+      <h2>Pricing</h2>
+      <p>
+        O dashboard público é demonstração. O produto é o mapa customizado + inteligência jurídica.
+      </p>
+      <div class="pricing-grid reveal-stagger">
+        <div class="pricing-cell">
+          <div class="pricing-label">Escritórios de Direito Digital</div>
+          <h3>Mapa Customizado</h3>
+          <p>O Compliance Map com a identidade do escritório, normas do segmento de atuação, jurisprudência vinculada e inteligência estratégica.</p>
+          <div class="pricing-price">R$ 8.000–15.000</div>
+          <div class="pricing-detail">one-shot + R$ 1.500/mês (atualização trimestral)</div>
+        </div>
+        <div class="pricing-cell">
+          <div class="pricing-label">Empresas de Tech</div>
+          <h3>Diagnóstico + Mapa</h3>
+          <p>Mapeamento de onde as entregas técnicas intersectam o ordenamento jurídico. Workshop para equipe dev incluído.</p>
+          <div class="pricing-price">R$ 5.000</div>
+          <div class="pricing-detail">+ R$ 800/mês (acesso atualizado)</div>
+        </div>
+        <div class="pricing-cell">
+          <div class="pricing-label">DPO / Compliance Officers</div>
+          <h3>Assinatura Lexiograph</h3>
+          <p>Acesso ao dashboard atualizado + relatório executivo mensal com mudanças normativas.</p>
+          <div class="pricing-price">R$ 1.500/mês</div>
+          <div class="pricing-detail">relatório + dashboard + suporte</div>
+        </div>
+      </div>
+
+      <!-- Tier 4 — Compliance Total -->
+      <div style="margin-top: 32px;">
+        <div class="pricing-grid" style="grid-template-columns: 1fr;">
+          <div class="pricing-cell" style="border-left: 2px solid var(--lex);">
+            <div class="pricing-label">Escritórios · Empresas · Governo</div>
+            <h3>Compliance Total — Lexiograph + Protocolo Hubstry</h3>
+            <p>
+              O mapa jurídico customizado do Lexiograph (9 páginas) <strong>+</strong> a aplicação do
+              Protocolo Hubstry de Tecnologia Geral (v.04.1) ao contexto do cliente.
+              A norma jurídica e a implementação técnica na mesma entrega.
+            </p>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 12px;">
+              <strong style="color: var(--io);">O que inclui:</strong><br>
+              Mapa Lexiograph customizado do segmento (Grafo, Matriz, Comparação, Radar Riscos) ·
+              Repositório + Inteligência + Hermenêutica adaptados ao segmento ·
+              Radar Legislativo com alertas para normas do segmento ·
+              IPII Engine recalculado para o corpus do cliente ·
+              Checklists operacionais do Protocolo Hubstry (Modo 1 ou Modo 2) ·
+              Roadmap de conformidade 12–36 meses.
+            </p>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 12px;">
+              <strong style="color: var(--io);">Ideal para:</strong><br>
+              Escritórios que atendem empresas de tech · Empresas com agentes de IA em produção ·
+              Contratos B2G que exigem conformidade documentada · DPOs que precisam de
+              profundidade técnica além da norma.
+            </p>
+            <div class="pricing-price">Sob consulta</div>
+            <div class="pricing-detail">escopo técnico variável · pilares cobertos · quantidade de agentes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PROTOCOLO HUBSTRY ======================== -->
+    <section id="protocolo" class="reveal">
+      <h2>Protocolo Hubstry de Tecnologia Geral — v.04.1</h2>
+      <p>
+        O Lexiograph mapeia <strong>o que a lei exige</strong>. O Protocolo Hubstry
+        mapeia <strong>como implementar tecnicamente</strong>. Juntos, formam o único
+        sistema brasileiro que conecta ordenamento jurídico digital a framework
+        técnico de governança — norma e implementação na mesma arquitetura.
+      </p>
+
+      <div class="logic-block" style="font-size: 13px; line-height: 1.8;">
+        <strong style="color: var(--io);">Lexiograph:</strong>
+        LGPD art. 46 — "adotar medidas de segurança, técnicas e administrativas"<br>
+        ↓<br>
+        <strong style="color: var(--lex);">Protocolo Hubstry:</strong>
+        Pilar Quântico: AES-256 em repouso, TLS 1.3 em trânsito, roadmap PQC
+        (NIST FIPS 203/204/205)<br>
+        <br>
+        <strong style="color: var(--io);">Lexiograph:</strong>
+        PL 2.338 — "responsabilidade por output de sistemas de IA"<br>
+        ↓<br>
+        <strong style="color: var(--lex);">Protocolo Hubstry:</strong>
+        Protocolo de 7 Camadas para agentes de IA — autonomia limitada,
+        identidade registrada, validação humana, trilha de auditoria<br>
+        <br>
+        <strong style="color: var(--io);">Lexiograph:</strong>
+        ECA Digital — "proteção de menores no digital"<br>
+        ↓<br>
+        <strong style="color: var(--lex);">Protocolo Hubstry:</strong>
+        Pilar Digital: Privacy by Design — minimização, pseudonimização,
+        direito ao esquecimento como função de arquitetura
+      </div>
+
+      <p style="margin-top: 24px;">
+        O Protocolo é um documento de 50 páginas, versionado (v.04.1), publicado sob
+        CC BY 4.0, com DOI no Zenodo, revisado em AI Safety Meetup Brazil #6 (ABRIA,
+        maio/2026). Referências normativas: NIST AI RMF, OWASP Agentic AI Security,
+        Singapore MGF for Agentic AI, ISO/IEC 42001, AI Act (UE).
+      </p>
+
+      <div class="decomp-grid reveal-stagger" style="margin-top: 32px;">
+        <div class="decomp-cell decomp-cell--lex">
+          <span class="decomp-marker"></span>
+          <h3>Segurança por Design</h3>
+          <p>Camada de governança transversal. Protocolo de 7 camadas para agentes de IA. Sustentabilidade ambiental como dimensão regulatória. Cláusula ética de não-licenciamento.</p>
+        </div>
+        <div class="decomp-cell decomp-cell--io">
+          <span class="decomp-marker"></span>
+          <h3>Camada de Dados</h3>
+          <p>Ciclo de vida completo: captura → ingestão → processamento → qualidade → segurança → distribuição → descarte. Pirâmide DIKW. Princípios FAIR. LGPD/GDPR compliance.</p>
+        </div>
+        <div class="decomp-cell decomp-cell--graph">
+          <span class="decomp-marker"></span>
+          <h3>Três Pilares</h3>
+          <p>Quântico (PQC, NIST FIPS 203/204/205). Analógico-Físico (semicondutores, soberania orbital, supply chain). Digital (OWASP GenAI, Privacy by Design, multi-agente).</p>
+        </div>
+      </div>
+
+      <blockquote style="margin-top: 32px;">
+        "Segurança não é um domínio entre iguais — é o envelope que governa
+        todos os outros. Dados não é um pilar — é a camada de valor que
+        atravessa todos os domínios."
+      </blockquote>
+
+      <p style="margin-top: 24px; font-size: 13px; color: var(--text-secondary);">
+        <strong style="color: var(--lex);">Checklists operacionais:</strong>
+        Modo 1 (criação de tecnologia própria) e Modo 2 (auditoria de tecnologias
+        existentes). Cobertura: regulação aplicável, 7 camadas de agentes, dados pessoais,
+        criptografia pós-quântica, redundância geográfica, Privacy by Design, OWASP GenAI,
+        soberania digital, AI BOM.
+      </p>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="https://hubstry.dev/lex-io-graph/" class="cta-btn" target="_blank" rel="noopener noreferrer">Ver Protocolo completo</a>
+      </div>
     </section>
 
     <!-- ======================== ECOSSISTEMA ======================== -->
     <section id="ecossistema" class="reveal">
-      <h2>Ecossistema — Lexiograph no Universo Hubstry</h2>
+      <h2>Ecossistema — Hubstry Deep Tech</h2>
       <p>
-        A Lexiograph nasce dentro do ecossistema <strong>Hubstry Deep Tech</strong> — holding mista operacional que reúne, sob um roadmap de 30 anos, ventures em deep tech, pesquisa independente, compliance digital, linguística computacional e infraestrutura de conhecimento.
+        A Lexiograph nasce dentro do ecossistema <strong>Hubstry Deep Tech</strong> —
+        holding mista operacional que reúne ventures em deep tech, compliance digital,
+        linguística computacional e infraestrutura de conhecimento.
       </p>
       <p>
-        No ecossistema Hubstry, cada venture ocupa uma posição funcional precisa. A Lexiograph ocupa a <strong>camada semiótica e comunicacional</strong>: é o braço de design full service que traduz a complexidade técnica e conceitual das demais ventures em linguagem visual operável.
-      </p>
-      <p>
-        Enquanto a Hubstry Deep Tech define arquitetura e estratégia de longo prazo, a Lexiograph entrega a <strong>gramática que torna esse ecossistema legível</strong> — para clientes, parceiros, investidores e reguladores.
+        A Lexiograph ocupa a <strong>camada semiótica e comunicacional</strong>: é o braço
+        de design full service que traduz a complexidade técnica e conceitual das demais
+        ventures em linguagem visual operável.
       </p>
       <div class="eco-grid reveal-stagger">
         <div class="eco-cell">
           <h3>Hubstry CaaS</h3>
-          <p>Compliance-as-a-service em Rust (ECA Digital / Lei 15.211/2025): dashboards de governança e comunicação de relatórios de conformidade.</p>
+          <p>Compliance-as-a-service em Rust (ECA Digital / Lei 15.211/2025).</p>
         </div>
         <div class="eco-cell">
           <h3>GuruDev®</h3>
-          <p>Linguagem de programação ontológico-multissemiótica: sistema de identidade visual e documentação técnica.</p>
+          <p>Linguagem de programação ontológico-multissemiótica.</p>
         </div>
         <div class="eco-cell">
           <h3>Gonçalves et Alii</h3>
-          <p>Escola de comentadores jurídicos — linhagem de Bologna, cultura cyborg, decisão humana. Direito digital, governança e compliance estratégico via outsource.</p>
-          <p style="margin-top:8px;">
-            <a href="https://goncalvesetalii.github.io" target="_blank" style="color:var(--gold);font-family:var(--font-mono);font-size:11px;text-decoration:none;margin-right:16px;">↗ Site</a>
-            <a href="https://facebook.com/goncalvesetalii" target="_blank" style="color:var(--gold);font-family:var(--font-mono);font-size:11px;text-decoration:none;">↗ Facebook</a>
-          </p>
+          <p>Escola de comentadores jurídicos — linhagem de Bologna, cultura cyborg, decisão humana.</p>
+          <p style="margin-top:8px;"><a href="https://facebook.com/goncalvesetalii" target="_blank" style="color:var(--gold);font-size:11px;text-decoration:none;">↗ Facebook</a></p>
         </div>
         <div class="eco-cell">
           <h3>Instituto PCIH³</h3>
-          <p>Pesquisa independente em ICT: identidade visual e publicações acadêmico-institucionais.</p>
+          <p>Pesquisa independente em ICT.</p>
         </div>
       </div>
-      <p style="margin-top: 24px;">
-        A Lexiograph não é apenas um estúdio de design. É a <strong>interface semiótica do ecossistema Hubstry</strong> — o lugar onde a profundidade técnica ganha forma, circulação e inteligibilidade.
-      </p>
     </section>
 
     <!-- ======================== FUNDADOR ======================== -->
@@ -672,23 +1169,53 @@
       <div class="founder-label">Fundador</div>
       <h2>Guilherme Machado</h2>
       <p>
-        Empreendedor serial, pesquisador independente e polímata com sede no Rio de Janeiro. Fundou e lidera a <strong>Hubstry Deep Tech</strong>, operando um ecossistema bootstrapped de ventures interconectadas em deep tech, linguística computacional, compliance digital, pesquisa científica e expressão artístico-literária.
+        Empreendedor serial, pesquisador independente e polímata com sede no Rio de Janeiro.
+        51 anos, 30+ de repertório na interseção entre tecnologia, semiótica, direito digital,
+        filosofia da linguagem e teoria literária. Fundador da Hubstry Deep Tech —
+        ecossistema bootstrapped de ventures interconectadas.
       </p>
       <p>
-        Sua formação é construída na interseção entre <strong>tecnologia, semiótica, direito digital, filosofia da linguagem e teoria literária</strong> — com presença digital contínua desde 2004 e publicações acadêmicas ativas no Zenodo, Substack, Medium e GitHub.
-      </p>
-      <p>
-        <strong>Parcerias institucionais:</strong> Microsoft Founders Hub · GitHub Education · Google Gemini · AWS
+        Presença digital contínua desde 2004. Publicações acadêmicas ativas no Zenodo,
+        Substack, Medium e GitHub. Parcerias institucionais: Microsoft Founders Hub ·
+        GitHub Education · Google Gemini · AWS.
       </p>
       <blockquote>
-        "Comunicar bem não é simplificar. É encontrar a forma exata em que a complexidade se torna navegável."
+        "O grafo não descreve o direito — compreende-o."
       </blockquote>
+
+      <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border);">
+        <div class="founder-label">Linhagem</div>
+        <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 16px;">
+          Sandoval Gonçalves dos Santos
+        </h3>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          Mestre em Direito pela Universidade Gama Filho (1982).
+          Dissertação: <em>O mito da intimidação da pena</em>.
+          Orientador: <strong>Juarez Estevam Xavier Tavares</strong> —
+          um dos maiores penalistas garantistas brasileiros,
+          professor da UERJ, referência em direito penal e filosofia do direito.
+        </p>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          A dissertação de 1982 é uma crítica ao positivismo penal —
+          a mesma tradição que dialoga com Fuller, Bobbio e a virada preventiva
+          que o ordenamento brasileiro contemporâneo tenta operar.
+          Não é coincidência. É linhagem.
+        </p>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          Guilherme Machado agrega dimensão empreendedora e tecnológica
+          a essa tradição jurídica de rigor acadêmico <em>stricto sensu</em> —
+          através da Gonçalves et Alii (escritório de direito digital e dados)
+          e do Lexiograph (gramática semiótica dos sistemas digitais).
+          O arco é pancrônico: Sandoval (1982) → Guilherme (2026).
+          Uma linhagem que atravessa gerações e disciplinas.
+        </p>
+      </div>
     </section>
 
 
     <!-- ======================== ARTIGOS ======================== -->
     <section id="artigos" class="reveal" style="padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.06);">
-      <div>
+      <div class="container">
         <div class="section-label">SÉRIE DIREITO DIGITAL E INOVAÇÃO</div>
         <h2 class="section-title">Análise e Inteligência Estratégica</h2>
         <p style="color:#8a8478;font-size:15px;max-width:600px;line-height:1.7;margin-bottom:2.5rem;">
@@ -720,24 +1247,29 @@
     <section id="contato" class="cta-section reveal">
       <h2>Vamos trabalhar juntos?</h2>
       <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto;">
-        Se você tem um sistema complexo que precisa ser comunicado com clareza, precisão e profundidade — a Lexiograph é o seu interlocutor.
+        Se você tem um sistema complexo que precisa ser comunicado com clareza,
+        precisão e profundidade — a Lexiograph é o seu interlocutor.
       </p>
-      <a href="mailto:globaldeeptechecosystem@hubstry.dev" class="cta-btn">Iniciar conversa</a>
+      <a href="mailto:guilhermemachado@hubstry.onmicrosoft.com" class="cta-btn">Iniciar conversa</a>
     </section>
 
     <!-- ======================== FOOTER ======================== -->
     <footer class="site-footer">
       <p>© Lexiograph — Gramática Semiótica dos Sistemas Digitais</p>
       <p style="margin-top: 8px;">
-        <a href="https://github.com/guilherme-machado-ceo/lexiograph-gramatica-semiotica" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://lex-io-graph-compliance-map.streamlit.app/" target="_blank" rel="noopener noreferrer">Compliance Map</a>
         &nbsp;·&nbsp;
-        <a href="https://github.com/guilherme-machado-ceo/lexiograph-gramatica-semiotica/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>
+        <a href="https://github.com/marcabru-tech/lex-io-graph" target="_blank" rel="noopener noreferrer">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/marcabru-tech/lex-io-graph/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>
+      </p>
+      <p style="margin-top: 12px; font-size: 11px;">
+        Lexiograph | Hubstry Deep Tech · Rio de Janeiro · 2026
       </p>
     </footer>
 
   </div>
 
-  <!-- ======================== SCROLL REVEAL JS ======================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
@@ -746,7 +1278,7 @@
             entry.target.classList.add('visible');
           }
         });
-      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
       document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
         observer.observe(el);
@@ -756,4 +1288,3 @@
 
 </body>
 </html>
-
