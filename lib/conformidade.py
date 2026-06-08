@@ -414,7 +414,7 @@ def _score_norma(norma: dict, tags_perfil: set) -> float:
     cobertura = len(intersecao) / len(tags_perfil) if tags_perfil else 0
     score = (jaccard * 0.35) + (cobertura * 0.65)
 
-    if norma.get("status") == "vigente":
+    if norma.get("status") in ("vigente", "vigente_com_ressalva"):
         score *= 1.1
     if norma.get("tipo") == "constituicao":
         score = max(score, 0.25)

@@ -124,275 +124,275 @@ if _grafo_ok:
         st.warning("Nenhuma norma encontrada com os filtros selecionados.")
         _grafo_ok = False
 
-undirected_G = G.to_undirected()
-num_componentes = nx.number_connected_components(undirected_G)
+if _grafo_ok:
+    undirected_G = G.to_undirected()
+    num_componentes = nx.number_connected_components(undirected_G)
 
-col1, col2, col3 = st.columns(3)
-col1.metric("Nós visíveis", len(G.nodes))
-col2.metric("Conexões visíveis", len(G.edges))
-col3.metric("Componentes conectados", num_componentes)
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Nós visíveis", len(G.nodes))
+    col2.metric("Conexões visíveis", len(G.edges))
+    col3.metric("Componentes conectados", num_componentes)
 
-col_b, col_m = st.columns([3, 1])
-with col_b:
-    busca_texto = st.text_input(
-        "Buscar norma",
-        placeholder="ex: LGPD, Marco Civil, menores, IA...",
-        label_visibility="collapsed"
-    )
-with col_m:
-    modo_viz = st.radio("Modo", ["🕸️ Grafo", "📋 Lista"],
-                        horizontal=True, label_visibility="collapsed")
-
-nos_destacados = set()
-if busca_texto:
-    for nid in G.nodes:
-        nd = G.nodes[nid]
-        texto = (nd.get("nome","") + " " + nd.get("label","") + " " +
-                 nd.get("ementa","") + " " + " ".join(nd.get("temas",[]))).lower()
-        if busca_texto.lower() in texto:
-            nos_destacados.add(nid)
-    if nos_destacados:
-        st.success(f"{len(nos_destacados)} norma(s) encontrada(s) para '{busca_texto}'")
-    else:
-        st.warning(f"Nenhuma norma encontrada para '{busca_texto}'")
-
-if modo_viz == "📋 Lista":
-    st.markdown("### Normas visíveis")
-    for nid in sorted(G.nodes, key=lambda x: G.nodes[x].get("label",x)):
-        nd = G.nodes[nid]
-        destaque = nid in nos_destacados and bool(busca_texto)
-        border_color = "#d4a853" if destaque else "rgba(255,255,255,0.08)"
-        conexoes = len(list(G.edges(nid)))
-        st.markdown(f"""
-<div style="background:rgba(255,255,255,0.03);border:1px solid {border_color};
-border-radius:6px;padding:12px 16px;margin-bottom:8px;">
-<span style="color:#d4a853;font-family:monospace;font-weight:bold;">{nd.get("label",nid)}</span>
-<span style="color:#706a60;font-size:11px;margin-left:8px;">
-{nd.get("tipo_label","")} · {nd.get("status","")} · {conexoes} conexão(ões)</span><br>
-<span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")[:180]}</span>
-</div>""", unsafe_allow_html=True)
-
-if modo_viz == "🕸️ Grafo":
-    GRAFO_ALTURA = 900
-    net = Network(
-        height=str(GRAFO_ALTURA) + "px",
-        width="100%",
-        directed=True,
-        bgcolor="#08070e",
-        font_color="#e8e4dc",
-        notebook=False,
-        cdn_resources="remote",
-    )
-    physics_options = {
-        "physics": {
-            "forceAtlas2Based": {
-                "gravitationalConstant": -200,
-                "centralGravity": 0.008,
-                "springLength": 350,
-                "springConstant": 0.02,
-                "damping": 0.5,
-                "avoidOverlap": 0.8
-            },
-            "solver": "forceAtlas2Based",
-            "stabilization": {"enabled": True, "iterations": 400, "updateInterval": 25},
-            "maxVelocity": 20,
-            "minVelocity": 0.5
-        },
-        "nodes": {
-            "borderWidth": 2,
-            "borderWidthSelected": 4,
-            "font": {"size": 18, "face": "monospace", "color": "#e8e4dc",
-                     "strokeWidth": 3, "strokeColor": "#08070e"},
-            "shadow": True,
-            "margin": 12
-        },
-        "edges": {
-            "smooth": {"type": "continuous", "roundness": 0.5},
-            "arrows": {"to": {"enabled": True, "scaleFactor": 1.0}},
-            "font": {"size": 14, "face": "monospace", "color": "#b8b2a6",
-                     "align": "middle", "strokeWidth": 4, "strokeColor": "#08070e"},
-            "shadow": False
-        },
-        "interaction": {
-            "hover": True,
-            "navigationButtons": True,
-            "keyboard": True,
-            "zoomView": True,
-            "dragView": True,
-            "tooltipDelay": 200
-        }
-    }
-    net.set_options(json.dumps(physics_options))
-
-    EDGE_TYPE_SHORT = {
-        "hierarquia": "HIERARQUIA",
-        "intersecao": "INTERSEÇÃO",
-        "antinomia": "ANTINOMIA",
-        "complementaridade": "COMPLEMENTAR",
-        "regulamenta": "REGULAMENTA",
-        "interpreta": "INTERPRETA",
-    }
-    LEVEL_Y = {0: -600, 1: -300, 2: -100, 3: 150, 4: 400}
-
-    for node_id in G.nodes:
-        d = G.nodes[node_id]
-        node_type = d.get("tipo", "")
-        size_map = {
-            "constituicao": 55, "lei": 35, "jurisprudencia": 25,
-            "orgao": 28, "decreto": 30, "norma_regulamentar": 30,
-            "pl": 22, "documento_internacional": 28,
-        }
-        node_size = size_map.get(node_type, 28)
-        shape = NODE_SHAPES.get(node_type, "dot")
-        level = HIERARCHY_LEVELS.get(node_type, 3)
-        y_pos = LEVEL_Y.get(level, 0)
-        art = d.get("artigos_chave", [])
-        art_txt = ""
-        if art:
-            art_txt = "\nArtigos: " + " | ".join(art[:4])
-            if len(art) > 4:
-                art_txt += " ..."
-        tip = (
-            d.get("nome", "") + "\n"
-            + "-" * 36 + "\n"
-            + d.get("ementa", "")[:300] + "\n"
-            + "-" * 36 + "\n"
-            + "Tipo:   " + d.get("tipo_label", "") + "\n"
-            + "Status: " + d.get("status", "") + "\n"
-            + "Orgao:  " + d.get("orgao", "") + "\n"
-            + "Ano:    " + str(d.get("ano", ""))
-            + art_txt
+    col_b, col_m = st.columns([3, 1])
+    with col_b:
+        busca_texto = st.text_input(
+            "Buscar norma",
+            placeholder="ex: LGPD, Marco Civil, menores, IA...",
+            label_visibility="collapsed"
         )
-        net.add_node(
-            node_id,
-            label=d.get("label", node_id),
-            title=tip,
-            color={"background": d.get("color", "#888888"), "border": d.get("color", "#888888")},
-            size=node_size,
-            shape=shape,
-            y=y_pos,
-            physics=True,
-        )
+    with col_m:
+        modo_viz = st.radio("Modo", ["🕸️ Grafo", "📋 Lista"],
+                            horizontal=True, label_visibility="collapsed")
 
-    for u, v, d in G.edges(data=True):
-        edge_tipo = d.get("tipo", "")
-        edge_label = EDGE_TYPE_SHORT.get(edge_tipo, edge_tipo.upper())
-        tip = (
-            d.get("tipo_label", "") + "\n"
-            + "-" * 36 + "\n"
-            + d.get("descricao", "")[:280] + "\n"
-            + "-" * 36 + "\n"
-            + "Artigos: " + d.get("artigos", "")
-        )
-        is_dashed = edge_tipo in ("intersecao", "antinomia", "complementaridade")
-        net.add_edge(
-            u, v,
-            title=tip,
-            color={"color": d.get("color", "#888888"), "highlight": "#ffffff", "hover": "#ffffff"},
-            label=edge_label,
-            width=2 if edge_tipo == "hierarquia" else 1.5,
-            dashes=is_dashed,
-            font={"size": 14, "strokeWidth": 4, "strokeColor": "#08070e",
-                  "color": "#b8b2a6", "align": "middle"},
-            smooth={"type": "continuous", "roundness": 0.5},
-        )
-
-    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
-    net.save_graph(tmp.name)
-    with open(tmp.name, "r", encoding="utf-8") as f:
-        html_content = f.read()
-
-    injected_css = """
-    <style>
-        .vis-tooltip {
-            max-width: 400px !important; min-width: 180px !important;
-            white-space: pre-wrap !important; word-break: break-word !important;
-            font-family: monospace !important; font-size: 12px !important;
-            line-height: 1.65 !important; padding: 10px 14px !important;
-            background: rgba(10,9,18,0.97) !important;
-            border: 1px solid rgba(212,168,83,0.5) !important;
-            border-radius: 6px !important; color: #e8e4dc !important;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.7) !important;
-            pointer-events: none !important;
-        }
-    </style>
-    """
-    html_content = html_content.replace("</head>", injected_css + "</head>")
-    components.html(html_content, height=GRAFO_ALTURA + 20, scrolling=False)
-
-st.markdown("---")
-st.markdown("### Explorar norma")
-
-node_options = {nid: G.nodes[nid].get("nome", nid) for nid in G.nodes}
-selected_node = st.selectbox(
-    "Selecione uma norma para ver detalhes e conexões",
-    options=list(node_options.keys()),
-    format_func=lambda x: node_options[x],
-)
-
-if selected_node:
-    nd = G.nodes[selected_node]
-    aba_factual, aba_doutrina, aba_conexoes = st.tabs([
-        "📋 Factual", "📚 Doutrinário", "🔗 Conexões"
-    ])
-    with aba_factual:
-        col_info, col_art = st.columns([1, 1])
-        with col_info:
-            st.markdown("#### " + nd.get("nome", ""))
-            st.markdown("**Sigla:** " + nd.get("label", ""))
-            st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
-            st.markdown("**Status:** " + nd.get("status", ""))
-            st.markdown("**Órgão:** " + nd.get("orgao", ""))
-            st.markdown("**Ano:** " + str(nd.get("ano", "")))
-            st.markdown("**Ementa:** " + nd.get("ementa", ""))
-        with col_art:
-            art = nd.get("artigos_chave", [])
-            if art:
-                st.markdown("**Artigos-chave:**")
-                for a in art:
-                    st.markdown(f"- {a}")
-            historia = nd.get("historia", "")
-            if historia:
-                st.markdown("**Contexto histórico:**")
-                st.markdown(historia)
-    with aba_doutrina:
-        autores = nd.get("autores", [])
-        latim = nd.get("latim", [])
-        dir_comp = nd.get("direito_comparado", "")
-        if autores:
-            st.markdown("#### Autores e referências doutrinárias")
-            for a in autores:
-                with st.expander(f"{a['nome']} ({a['datas']})"):
-                    st.markdown(f"**Obra:** {a['obra']}")
-                    st.markdown(f"**Contribuição:** {a['contribuicao']}")
-        if latim:
-            st.markdown("#### Latim jurídico")
-            for l in latim:
-                with st.expander(f"*{l['original']}*"):
-                    st.markdown(f"**Tradução literal:** {l['traducao_literal']}")
-                    st.markdown(f"**Tradução jurídica:** {l['traducao_juridica']}")
-                    st.markdown(f"**Contexto romano:** {l['contexto_romano']}")
-        if dir_comp:
-            st.markdown("#### Direito comparado glocal")
-            st.markdown(dir_comp)
-        if not autores and not latim and not dir_comp:
-            st.info("Conteúdo doutrinário em elaboração para esta norma.")
-    with aba_conexoes:
-        ix = get_intersections(G, selected_node)
-        if ix:
-            st.markdown("#### Conexões (" + str(len(ix)) + ")")
-            for inter in ix:
-                st.markdown(
-                    "- **" + inter["tipo_relacao"] + "** com `"
-                    + inter["outro_no"] + "`"
-                )
-                st.markdown("  " + inter["descricao"])
-                st.markdown("  *" + inter["artigos"] + "*")
+    nos_destacados = set()
+    if busca_texto:
+        for nid in G.nodes:
+            nd = G.nodes[nid]
+            texto = (nd.get("nome","") + " " + nd.get("label","") + " " +
+                     nd.get("ementa","") + " " + " ".join(nd.get("temas",[]))).lower()
+            if busca_texto.lower() in texto:
+                nos_destacados.add(nid)
+        if nos_destacados:
+            st.success(f"{len(nos_destacados)} norma(s) encontrada(s) para '{busca_texto}'")
         else:
-            st.markdown("Nenhuma conexão encontrada com os filtros atuais.")
+            st.warning(f"Nenhuma norma encontrada para '{busca_texto}'")
 
-render_footer()
-# ═══════════════════════════════════════════════════════
+    if modo_viz == "📋 Lista":
+        st.markdown("### Normas visíveis")
+        for nid in sorted(G.nodes, key=lambda x: G.nodes[x].get("label",x)):
+            nd = G.nodes[nid]
+            destaque = nid in nos_destacados and bool(busca_texto)
+            border_color = "#d4a853" if destaque else "rgba(255,255,255,0.08)"
+            conexoes = len(list(G.edges(nid)))
+            st.markdown(f"""
+    <div style="background:rgba(255,255,255,0.03);border:1px solid {border_color};
+    border-radius:6px;padding:12px 16px;margin-bottom:8px;">
+    <span style="color:#d4a853;font-family:monospace;font-weight:bold;">{nd.get("label",nid)}</span>
+    <span style="color:#706a60;font-size:11px;margin-left:8px;">
+    {nd.get("tipo_label","")} · {nd.get("status","")} · {conexoes} conexão(ões)</span><br>
+    <span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")[:180]}</span>
+    </div>""", unsafe_allow_html=True)
+
+    if modo_viz == "🕸️ Grafo":
+        GRAFO_ALTURA = 900
+        net = Network(
+            height=str(GRAFO_ALTURA) + "px",
+            width="100%",
+            directed=True,
+            bgcolor="#08070e",
+            font_color="#e8e4dc",
+            notebook=False,
+            cdn_resources="remote",
+        )
+        physics_options = {
+            "physics": {
+                "forceAtlas2Based": {
+                    "gravitationalConstant": -200,
+                    "centralGravity": 0.008,
+                    "springLength": 350,
+                    "springConstant": 0.02,
+                    "damping": 0.5,
+                    "avoidOverlap": 0.8
+                },
+                "solver": "forceAtlas2Based",
+                "stabilization": {"enabled": True, "iterations": 400, "updateInterval": 25},
+                "maxVelocity": 20,
+                "minVelocity": 0.5
+            },
+            "nodes": {
+                "borderWidth": 2,
+                "borderWidthSelected": 4,
+                "font": {"size": 18, "face": "monospace", "color": "#e8e4dc",
+                         "strokeWidth": 3, "strokeColor": "#08070e"},
+                "shadow": True,
+                "margin": 12
+            },
+            "edges": {
+                "smooth": {"type": "continuous", "roundness": 0.5},
+                "arrows": {"to": {"enabled": True, "scaleFactor": 1.0}},
+                "font": {"size": 14, "face": "monospace", "color": "#b8b2a6",
+                         "align": "middle", "strokeWidth": 4, "strokeColor": "#08070e"},
+                "shadow": False
+            },
+            "interaction": {
+                "hover": True,
+                "navigationButtons": True,
+                "keyboard": True,
+                "zoomView": True,
+                "dragView": True,
+                "tooltipDelay": 200
+            }
+        }
+        net.set_options(json.dumps(physics_options))
+
+        EDGE_TYPE_SHORT = {
+            "hierarquia": "HIERARQUIA",
+            "intersecao": "INTERSEÇÃO",
+            "antinomia": "ANTINOMIA",
+            "complementaridade": "COMPLEMENTAR",
+            "regulamenta": "REGULAMENTA",
+            "interpreta": "INTERPRETA",
+        }
+        LEVEL_Y = {0: -600, 1: -300, 2: -100, 3: 150, 4: 400}
+
+        for node_id in G.nodes:
+            d = G.nodes[node_id]
+            node_type = d.get("tipo", "")
+            size_map = {
+                "constituicao": 55, "lei": 35, "jurisprudencia": 25,
+                "orgao": 28, "decreto": 30, "norma_regulamentar": 30,
+                "pl": 22, "documento_internacional": 28,
+            }
+            node_size = size_map.get(node_type, 28)
+            shape = NODE_SHAPES.get(node_type, "dot")
+            level = HIERARCHY_LEVELS.get(node_type, 3)
+            y_pos = LEVEL_Y.get(level, 0)
+            art = d.get("artigos_chave", [])
+            art_txt = ""
+            if art:
+                art_txt = "\nArtigos: " + " | ".join(art[:4])
+                if len(art) > 4:
+                    art_txt += " ..."
+            tip = (
+                d.get("nome", "") + "\n"
+                + "-" * 36 + "\n"
+                + d.get("ementa", "")[:300] + "\n"
+                + "-" * 36 + "\n"
+                + "Tipo:   " + d.get("tipo_label", "") + "\n"
+                + "Status: " + d.get("status", "") + "\n"
+                + "Orgao:  " + d.get("orgao", "") + "\n"
+                + "Ano:    " + str(d.get("ano", ""))
+                + art_txt
+            )
+            net.add_node(
+                node_id,
+                label=d.get("label", node_id),
+                title=tip,
+                color={"background": d.get("color", "#888888"), "border": d.get("color", "#888888")},
+                size=node_size,
+                shape=shape,
+                y=y_pos,
+                physics=True,
+            )
+
+        for u, v, d in G.edges(data=True):
+            edge_tipo = d.get("tipo", "")
+            edge_label = EDGE_TYPE_SHORT.get(edge_tipo, edge_tipo.upper())
+            tip = (
+                d.get("tipo_label", "") + "\n"
+                + "-" * 36 + "\n"
+                + d.get("descricao", "")[:280] + "\n"
+                + "-" * 36 + "\n"
+                + "Artigos: " + d.get("artigos", "")
+            )
+            is_dashed = edge_tipo in ("intersecao", "antinomia", "complementaridade")
+            net.add_edge(
+                u, v,
+                title=tip,
+                color={"color": d.get("color", "#888888"), "highlight": "#ffffff", "hover": "#ffffff"},
+                label=edge_label,
+                width=2 if edge_tipo == "hierarquia" else 1.5,
+                dashes=is_dashed,
+                font={"size": 14, "strokeWidth": 4, "strokeColor": "#08070e",
+                      "color": "#b8b2a6", "align": "middle"},
+                smooth={"type": "continuous", "roundness": 0.5},
+            )
+
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
+        net.save_graph(tmp.name)
+        with open(tmp.name, "r", encoding="utf-8") as f:
+            html_content = f.read()
+
+        injected_css = """
+        <style>
+            .vis-tooltip {
+                max-width: 400px !important; min-width: 180px !important;
+                white-space: pre-wrap !important; word-break: break-word !important;
+                font-family: monospace !important; font-size: 12px !important;
+                line-height: 1.65 !important; padding: 10px 14px !important;
+                background: rgba(10,9,18,0.97) !important;
+                border: 1px solid rgba(212,168,83,0.5) !important;
+                border-radius: 6px !important; color: #e8e4dc !important;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.7) !important;
+                pointer-events: none !important;
+            }
+        </style>
+        """
+        html_content = html_content.replace("</head>", injected_css + "</head>")
+        components.html(html_content, height=GRAFO_ALTURA + 20, scrolling=False)
+
+    st.markdown("---")
+    st.markdown("### Explorar norma")
+
+    node_options = {nid: G.nodes[nid].get("nome", nid) for nid in G.nodes}
+    selected_node = st.selectbox(
+        "Selecione uma norma para ver detalhes e conexões",
+        options=list(node_options.keys()),
+        format_func=lambda x: node_options[x],
+    )
+
+    if selected_node:
+        nd = G.nodes[selected_node]
+        aba_factual, aba_doutrina, aba_conexoes = st.tabs([
+            "📋 Factual", "📚 Doutrinário", "🔗 Conexões"
+        ])
+        with aba_factual:
+            col_info, col_art = st.columns([1, 1])
+            with col_info:
+                st.markdown("#### " + nd.get("nome", ""))
+                st.markdown("**Sigla:** " + nd.get("label", ""))
+                st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
+                st.markdown("**Status:** " + nd.get("status", ""))
+                st.markdown("**Órgão:** " + nd.get("orgao", ""))
+                st.markdown("**Ano:** " + str(nd.get("ano", "")))
+                st.markdown("**Ementa:** " + nd.get("ementa", ""))
+            with col_art:
+                art = nd.get("artigos_chave", [])
+                if art:
+                    st.markdown("**Artigos-chave:**")
+                    for a in art:
+                        st.markdown(f"- {a}")
+                historia = nd.get("historia", "")
+                if historia:
+                    st.markdown("**Contexto histórico:**")
+                    st.markdown(historia)
+        with aba_doutrina:
+            autores = nd.get("autores", [])
+            latim = nd.get("latim", [])
+            dir_comp = nd.get("direito_comparado", "")
+            if autores:
+                st.markdown("#### Autores e referências doutrinárias")
+                for a in autores:
+                    with st.expander(f"{a['nome']} ({a['datas']})"):
+                        st.markdown(f"**Obra:** {a['obra']}")
+                        st.markdown(f"**Contribuição:** {a['contribuicao']}")
+            if latim:
+                st.markdown("#### Latim jurídico")
+                for l in latim:
+                    with st.expander(f"*{l['original']}*"):
+                        st.markdown(f"**Tradução literal:** {l['traducao_literal']}")
+                        st.markdown(f"**Tradução jurídica:** {l['traducao_juridica']}")
+                        st.markdown(f"**Contexto romano:** {l['contexto_romano']}")
+            if dir_comp:
+                st.markdown("#### Direito comparado glocal")
+                st.markdown(dir_comp)
+            if not autores and not latim and not dir_comp:
+                st.info("Conteúdo doutrinário em elaboração para esta norma.")
+        with aba_conexoes:
+            ix = get_intersections(G, selected_node)
+            if ix:
+                st.markdown("#### Conexões (" + str(len(ix)) + ")")
+                for inter in ix:
+                    st.markdown(
+                        "- **" + inter["tipo_relacao"] + "** com `"
+                        + inter["outro_no"] + "`"
+                    )
+                    st.markdown("  " + inter["descricao"])
+                    st.markdown("  *" + inter["artigos"] + "*")
+            else:
+                st.markdown("Nenhuma conexão encontrada com os filtros atuais.")
+
+    # ═══════════════════════════════════════════════════════
 # SEÇÃO 2 — QUADRO DE CONFORMIDADE
 # ═══════════════════════════════════════════════════════
 
@@ -434,3 +434,4 @@ if "radar_gerado" in st.session_state:
 
     render_disclaimer_rodape()
 
+render_footer()
