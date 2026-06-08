@@ -622,6 +622,12 @@
             <marker id="lxg-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
               <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </marker>
+            <clipPath id="lxg-cl-cf"><circle cx="340" cy="48" r="31"/></clipPath>
+            <clipPath id="lxg-cl-lgpd"><circle cx="228" cy="155" r="35"/></clipPath>
+            <clipPath id="lxg-cl-mc"><circle cx="452" cy="155" r="31"/></clipPath>
+            <clipPath id="lxg-cl-eca"><circle cx="148" cy="260" r="27"/></clipPath>
+            <clipPath id="lxg-cl-nr1"><circle cx="340" cy="260" r="31"/></clipPath>
+            <clipPath id="lxg-cl-dec"><circle cx="524" cy="260" r="31"/></clipPath>
           </defs>
 
           <!-- Grid sutil -->
@@ -636,59 +642,71 @@
 
           <!-- ARESTAS -->
           <!-- CF/88 → LGPD hierarquia -->
-          <path class="lxg-edge lxg-e1" d="M318 68 L248 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <path class="lxg-edge lxg-e1" d="M316 69 L248 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
           <!-- CF/88 → Marco Civil hierarquia -->
-          <path class="lxg-edge lxg-e2" d="M362 68 L432 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <path class="lxg-edge lxg-e2" d="M364 69 L432 126" stroke="var(--lex)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
           <!-- LGPD → Marco Civil interpreta -->
           <path class="lxg-edge lxg-e3" d="M278 148 L398 148" stroke="var(--io)" stroke-width="1" stroke-dasharray="4 3 300" marker-end="url(#lxg-arr)"/>
           <!-- LGPD → ECA complementaridade -->
-          <path class="lxg-edge lxg-e4" d="M218 186 L168 234" stroke="var(--io)" stroke-width="1" stroke-dasharray="5 4 300" marker-end="url(#lxg-arr)"/>
+          <path class="lxg-edge lxg-e4" d="M217 189 L168 234" stroke="var(--io)" stroke-width="1" stroke-dasharray="5 4 300" marker-end="url(#lxg-arr)"/>
           <!-- Marco Civil → Decreto regulamenta -->
-          <path class="lxg-edge lxg-e5" d="M458 186 L510 234" stroke="var(--graph)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
+          <path class="lxg-edge lxg-e5" d="M458 186 L509 232" stroke="var(--graph)" stroke-width="1.5" marker-end="url(#lxg-arr)" stroke-dasharray="300"/>
           <!-- LGPD → NR-1 intersecção -->
-          <path class="lxg-edge lxg-e6" d="M238 188 L316 234" stroke="var(--graph)" stroke-width="1" stroke-dasharray="3 3 300" marker-end="url(#lxg-arr)"/>
+          <path class="lxg-edge lxg-e6" d="M238 190 L316 234" stroke="var(--graph)" stroke-width="1" stroke-dasharray="3 3 300" marker-end="url(#lxg-arr)"/>
 
           <!-- NODO CF/88 — centro topo -->
           <g class="lxg-node lxg-n1">
-            <circle class="lxg-pulse" cx="340" cy="48" r="34" fill="none" stroke="var(--lex)"/>
+            <circle class="lxg-pulse" cx="340" cy="48" r="38" fill="none" stroke="var(--lex)"/>
             <circle cx="340" cy="48" r="32" fill="#1a1520" stroke="var(--lex)" stroke-width="1.5"/>
-            <text x="340" y="44" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="var(--lex)" font-weight="600">CF/88</text>
-            <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Constituição</text>
+            <g clip-path="url(#lxg-cl-cf)">
+              <text x="340" y="43" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--lex)" font-weight="600">CF/88</text>
+              <text x="340" y="57" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Constituição</text>
+            </g>
           </g>
 
           <!-- NODO LGPD -->
           <g class="lxg-node lxg-n2">
             <circle cx="228" cy="155" r="36" fill="#0d1a14" stroke="var(--io)" stroke-width="1.5"/>
-            <text x="228" y="151" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="var(--io)" font-weight="600">LGPD</text>
-            <text x="228" y="165" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">dados pessoais</text>
+            <g clip-path="url(#lxg-cl-lgpd)">
+              <text x="228" y="149" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--io)" font-weight="600">LGPD</text>
+              <text x="228" y="164" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">dados pessoais</text>
+            </g>
           </g>
 
           <!-- NODO Marco Civil -->
           <g class="lxg-node lxg-n3">
-            <circle cx="452" cy="155" r="36" fill="#0d1218" stroke="#378ADD" stroke-width="1.5"/>
-            <text x="452" y="151" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="#378ADD" font-weight="600">Marco</text>
-            <text x="452" y="165" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Civil</text>
+            <circle cx="452" cy="155" r="32" fill="#0d1218" stroke="#378ADD" stroke-width="1.5"/>
+            <g clip-path="url(#lxg-cl-mc)">
+              <text x="452" y="150" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="#378ADD" font-weight="600">Marco</text>
+              <text x="452" y="164" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Civil</text>
+            </g>
           </g>
 
           <!-- NODO ECA Digital -->
           <g class="lxg-node lxg-n4">
-            <circle cx="148" cy="260" r="32" fill="#161208" stroke="var(--lex)" stroke-width="1" stroke-opacity="0.6"/>
-            <text x="148" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="11" fill="var(--lex)" font-weight="500">ECA</text>
-            <text x="148" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Digital</text>
+            <circle cx="148" cy="260" r="28" fill="#161208" stroke="var(--lex)" stroke-width="1" stroke-opacity="0.6"/>
+            <g clip-path="url(#lxg-cl-eca)">
+              <text x="148" y="255" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="12" fill="var(--lex)" font-weight="500">ECA</text>
+              <text x="148" y="268" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">Digital</text>
+            </g>
           </g>
 
           <!-- NODO NR-1 -->
           <g class="lxg-node lxg-n5">
             <circle cx="340" cy="260" r="32" fill="#180e0e" stroke="var(--graph)" stroke-width="1.5"/>
-            <text x="340" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="11" fill="var(--graph)" font-weight="600">NR-1</text>
-            <text x="340" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">psicossocial</text>
+            <g clip-path="url(#lxg-cl-nr1)">
+              <text x="340" y="255" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="13" fill="var(--graph)" font-weight="600">NR-1</text>
+              <text x="340" y="268" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">psicossocial</text>
+            </g>
           </g>
 
           <!-- NODO Decreto 12.975 -->
           <g class="lxg-node lxg-n6">
             <circle cx="524" cy="260" r="32" fill="#161208" stroke="var(--lex)" stroke-width="1" stroke-opacity="0.6"/>
-            <text x="524" y="256" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="10" fill="var(--lex)" font-weight="500">Dec.</text>
-            <text x="524" y="269" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="9" fill="var(--muted)">12.975/2026</text>
+            <g clip-path="url(#lxg-cl-dec)">
+              <text x="524" y="255" text-anchor="middle" dominant-baseline="central" font-family="var(--font-display)" font-size="11" fill="var(--lex)" font-weight="500">Dec.</text>
+              <text x="524" y="268" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-size="8" fill="var(--muted)">12.975/2026</text>
+            </g>
           </g>
 
           <!-- Legenda -->
@@ -717,6 +735,12 @@
       <a href="#artigos">Artigos</a>
       <a href="#contato">Contato</a>
     </nav>
+
+    <!-- ======================== DISCLAIMER ======================== -->
+    <div style="max-width:680px;margin:0 auto;padding:12px 24px 0;display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:0.08em;color:var(--muted);border-bottom:1px solid var(--border);">
+      <span style="color:var(--lex);font-weight:500;flex-shrink:0;letter-spacing:0.12em;">DEMO</span>
+      <span>O app exibe o corpus genérico (18 normas) e funcionalidades selecionadas. O produto é o mapa customizado — corpus do seu segmento, IPII Engine recalculado, inteligência estratégica.</span>
+    </div>
 
 
     <!-- ======================== QUADRO DE CONFORMIDADE ======================== -->
@@ -1135,7 +1159,7 @@
         </div>
         <div class="moat-cell">
           <h3>Radar Legislativo (APIs + automação)</h3>
-          <p>1–2 meses</p>
+          <p>1–2 mois</p>
         </div>
       </div>
       <p style="margin-top: 24px;">
@@ -1468,7 +1492,7 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
           <a href="artigos/artigo-01-regulacao-digital.html" style="text-decoration:none;">
             <div style="background:#111;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:24px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(212,168,83,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
-              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 1 DE 3 · REGULAÇÃO DIGITAL</div>
+              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 1 DE 4 · REGULAÇÃO DIGITAL</div>
               <h3 style="font-size:17px;font-weight:normal;color:#e8e4dc;line-height:1.4;margin-bottom:10px;">O custo real da desregulação digital — e o que o caso Havaianas prova</h3>
               <p style="font-size:13px;color:#706a60;line-height:1.6;margin-bottom:16px;">STF Tema 987, Decretos 12.975/2026, Pontes de Miranda e a antinomia bacamartiana. Regulação bem calibrada é precondição da inovação, não obstáculo.</p>
               <span style="font-family:monospace;font-size:11px;color:#d4a853;">Ler artigo →</span>
@@ -1484,7 +1508,7 @@
           </a>
           <a href="artigos/artigo-03-paradigma-preventivo.html" style="text-decoration:none;">
             <div style="background:#111;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:24px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(212,168,83,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
-              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 3 · DIREITO CIVIL E IA</div>
+              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 3 DE 4 · DIREITO CIVIL E IA</div>
               <h3 style="font-size:17px;font-weight:normal;color:#e8e4dc;line-height:1.4;margin-bottom:10px;">Da Reparação à Prevenção — a reconfiguração paradigmática do Direito Civil diante da IA</h3>
               <p style="font-size:13px;color:#706a60;line-height:1.6;margin-bottom:16px;">Pontes de Miranda, Calabresi, AI Act e o paradigma preventivo-inibitório. Compliance by design como vetor jurídico, econômico e estratégico para o setor produtivo.</p>
               <span style="font-family:monospace;font-size:11px;color:#d4a853;">Ler artigo →</span>
@@ -1492,7 +1516,7 @@
           </a>
           <a href="artigos/artigo-04-anpd-judiciario.html" style="text-decoration:none;">
             <div style="background:#111;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:24px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(212,168,83,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
-              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 4 · GOVERNANÇA DE DADOS</div>
+              <div style="font-family:monospace;font-size:10px;color:#706a60;letter-spacing:0.1em;margin-bottom:12px;">ARTIGO 4 DE 4 · GOVERNANÇA DE DADOS</div>
               <h3 style="font-size:17px;font-weight:normal;color:#e8e4dc;line-height:1.4;margin-bottom:10px;">ANPD não vincula o Judiciário — o risco jurídico real do compliance administrativo</h3>
               <p style="font-size:13px;color:#706a60;line-height:1.6;margin-bottom:16px;">Por que a aprovação da ANPD não garante imunidade jurídica. O iceberg normativo, o papel do Ministério Público e os 7 princípios de governança digital madura.</p>
               <span style="font-family:monospace;font-size:11px;color:#d4a853;">Ler artigo →</span>
