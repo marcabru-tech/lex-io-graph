@@ -5,6 +5,7 @@ import streamlit.components.v1 as components
 import tempfile
 import json
 
+from lib.curadoria import render_principio_curadoria
 from lib.conformidade import (
     render_disclaimer,
     render_questionario,
@@ -404,6 +405,8 @@ st.markdown(
 )
 
 render_disclaimer()
+
+render_principio_curadoria()
 
 perfil, submitted = render_questionario()
 
