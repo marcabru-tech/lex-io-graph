@@ -114,20 +114,16 @@ st.sidebar.markdown("""
 • Passe o mouse sobre nós e arestas para detalhes\n
 """)
 
-if not selected_themes:
-    st.warning("Nenhum tema selecionado. Marque pelo menos um tema na barra lateral.")
-    st.stop()
-if not selected_types:
-    st.warning("Nenhum tipo de norma selecionado. Marque pelo menos um tipo.")
-    st.stop()
+_grafo_ok = bool(selected_themes and selected_types)
+if not _grafo_ok:
+    st.warning("Marque pelo menos um tema e um tipo de norma na barra lateral.")
 
-G = build_compliance_graph(themes=selected_themes, norm_types=selected_types)
+if _grafo_ok:
+    G = build_compliance_graph(themes=selected_themes, norm_types=selected_types)
+    if len(G.nodes) == 0:
+        st.warning("Nenhuma norma encontrada com os filtros selecionados.")
+        _grafo_ok = False
 
-if len(G.nodes) == 0:
-    st.warning("Nenhuma norma encontrada com os filtros selecionados.")
-    st.stop()
-
-import networkx as nx
 undirected_G = G.to_undirected()
 num_componentes = nx.number_connected_components(undirected_G)
 
