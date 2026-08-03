@@ -1,12 +1,310 @@
 {
-  "ultima_atualizacao": "2026-06-05T00:00:00",
-  "novidades_detectadas": [],
-  "total_novidades": 0,
+  "ultima_atualizacao": "2026-08-03T12:56:12.834007",
   "temas": {
-    "ia": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "dados": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "menores": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "plataformas": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "trabalho_digital": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []}
-  }
+    "ia": {
+      "termos_monitorados": [
+        "inteligência artificial",
+        "IA generativa",
+        "algoritmo decisão"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:15.834185"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641166",
+          "sigla": "PL 4479/2026",
+          "ementa": "Institui a Política Nacional de Proteção da Autonomia Tecnológica Brasileira, estabelece diretrizes para a soberania tecnológica nacional, a proteção das infraestruturas digitais estratégicas, a resiliência computacional, a inteligência artificial estratégica, a soberania dos dados críticos, a compu",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641166",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:17.577437"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641055",
+          "sigla": "PL 4371/2026",
+          "ementa": "Institui normas gerais para promover a igualdade de oportunidades econômicas no ambiente digital, prevenir práticas digitais que produzam discriminações socioeconômicas injustificadas e estabelecer deveres proporcionais de diligência e governança para serviços digitais de relevância econômica.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641055",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:17.577450"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641047",
+          "sigla": "PL 4363/2026",
+          "ementa": "Institui a Política Nacional de Computação em Nuvem Soberana da Região Norte, estabelece diretrizes para incentivo à instalação de infraestrutura de armazenamento, processamento e segurança de dados na Região Norte, fortalece a soberania digital, a conectividade estratégica e o desenvolvimento tecno",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641047",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:17.577454"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2640985",
+          "sigla": "PL 4302/2026",
+          "ementa": "Institui a Lei Nacional de Transparência, Governança Algorítmica, Prevenção à Discriminação e Proteção de Direitos em Sistemas Automatizados de Decisão, altera a Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2640985",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:17.577457"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2640981",
+          "sigla": "PL 4298/2026",
+          "ementa": "Dispõe sobre a proteção do direito de imagem e de dados biométricos das pessoas naturais face à utilização de sistemas de inteligência artificial; altera a Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais); e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2640981",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-03T12:56:17.577459"
+        }
+      ],
+      "lexml": []
+    },
+    "dados": {
+      "termos_monitorados": [
+        "proteção dados pessoais",
+        "LGPD",
+        "privacidade digital"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:26.313972"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2639458",
+          "sigla": "PL 3685/2026",
+          "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, estabelece regras para o tratamento e compartilhamento dessas informações e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:27.185640"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2629351",
+          "sigla": "PL 2754/2026",
+          "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e privadas de educação infantil, ensino fundamental e ensino médio, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:27.185650"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2602193",
+          "sigla": "PL 446/2026",
+          "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resposta a Fraudes contra a Pessoa Idosa, institui o “Alerta Prata Digital”, estabelece deveres de segurança, cooperação e resposta rápida para instituiçõ",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:27.185653"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2600015",
+          "sigla": "PL 19/2026",
+          "ementa": "Estabelece condições, deveres e restrições ao uso de óculos inteligentes com recursos de inteligência artificial, altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2600015",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:27.185656"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2599797",
+          "sigla": "PL 7188/2025",
+          "ementa": "Dispõe sobre a obrigatoriedade de capacitação de agentes bancários e financeiros para identificação de operações suspeitas de coerção ou abuso econômico contra mulheres, e dá outras providências.",
+          "ano": "2025",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2599797",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-03T12:56:27.185658"
+        }
+      ],
+      "lexml": []
+    },
+    "menores": {
+      "termos_monitorados": [
+        "criança adolescente digital",
+        "ECA digital",
+        "proteção menores internet"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "criança adolescente digital",
+          "data_deteccao": "2026-08-03T12:56:35.119946"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    },
+    "plataformas": {
+      "termos_monitorados": [
+        "responsabilidade plataformas",
+        "moderação conteúdo",
+        "redes sociais"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "responsabilidade plataformas",
+          "data_deteccao": "2026-08-03T12:56:44.183585"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    },
+    "trabalho_digital": {
+      "termos_monitorados": [
+        "riscos psicossociais trabalho",
+        "NR-1",
+        "teletrabalho algoritmo"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "riscos psicossociais trabalho",
+          "data_deteccao": "2026-08-03T12:56:52.931856"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    }
+  },
+  "novidades_detectadas": [
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4479/2026",
+      "ementa": "Institui a Política Nacional de Proteção da Autonomia Tecnológica Brasileira, estabelece diretrizes para a soberania tecnológica nacional, a proteção ",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641166",
+      "data_deteccao": "2026-08-03T12:56:17.577437"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4371/2026",
+      "ementa": "Institui normas gerais para promover a igualdade de oportunidades econômicas no ambiente digital, prevenir práticas digitais que produzam discriminaçõ",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641055",
+      "data_deteccao": "2026-08-03T12:56:17.577450"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4363/2026",
+      "ementa": "Institui a Política Nacional de Computação em Nuvem Soberana da Região Norte, estabelece diretrizes para incentivo à instalação de infraestrutura de a",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641047",
+      "data_deteccao": "2026-08-03T12:56:17.577454"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4302/2026",
+      "ementa": "Institui a Lei Nacional de Transparência, Governança Algorítmica, Prevenção à Discriminação e Proteção de Direitos em Sistemas Automatizados de Decisã",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2640985",
+      "data_deteccao": "2026-08-03T12:56:17.577457"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4298/2026",
+      "ementa": "Dispõe sobre a proteção do direito de imagem e de dados biométricos das pessoas naturais face à utilização de sistemas de inteligência artificial; alt",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2640981",
+      "data_deteccao": "2026-08-03T12:56:17.577459"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 3685/2026",
+      "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, e",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
+      "data_deteccao": "2026-08-03T12:56:27.185640"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 2754/2026",
+      "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e p",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
+      "data_deteccao": "2026-08-03T12:56:27.185650"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 446/2026",
+      "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resp",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
+      "data_deteccao": "2026-08-03T12:56:27.185653"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 19/2026",
+      "ementa": "Estabelece condições, deveres e restrições ao uso de óculos inteligentes com recursos de inteligência artificial, altera a Lei nº 9.503, de 23 de sete",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2600015",
+      "data_deteccao": "2026-08-03T12:56:27.185656"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 7188/2025",
+      "ementa": "Dispõe sobre a obrigatoriedade de capacitação de agentes bancários e financeiros para identificação de operações suspeitas de coerção ou abuso econômi",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2599797",
+      "data_deteccao": "2026-08-03T12:56:27.185658"
+    }
+  ],
+  "total_novidades": 10
 }
