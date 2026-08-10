@@ -1,12 +1,310 @@
 {
-  "ultima_atualizacao": "2026-06-05T00:00:00",
-  "novidades_detectadas": [],
-  "total_novidades": 0,
+  "ultima_atualizacao": "2026-08-10T11:11:24.466361",
   "temas": {
-    "ia": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "dados": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "menores": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "plataformas": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []},
-    "trabalho_digital": {"termos_monitorados": [], "senado": [], "camara": [], "lexml": []}
-  }
+    "ia": {
+      "termos_monitorados": [
+        "inteligência artificial",
+        "IA generativa",
+        "algoritmo decisão"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:27.931060"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2642052",
+          "sigla": "PL 4900/2026",
+          "ementa": "Dispõe sobre normas de prevenção, proteção e responsabilização em casos de violência contra a mulher em ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642052",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:29.436740"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641936",
+          "sigla": "PL 4881/2026",
+          "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de inteligência artificial nas relações de consumo, institui o Regime Jurídico de Integridade Algorítmica nas Relações de Consumo, altera a Lei nº 8.078,",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641936",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:29.436756"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641822",
+          "sigla": "PL 4863/2026",
+          "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceituar a violência por rastreamento digital não consentido, estabelecer obrigações aos fabricantes e provedores de dispositivos de localização e determin",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641822",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:29.436761"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641766",
+          "sigla": "PL 4849/2026",
+          "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a falsidade de identidade praticada mediante conteúdo gerado ou alterado por sistema de inteligência artificial e para prever causa de aumento de pena no crime de estelionato praticado por esse meio.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641766",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:29.436765"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641390",
+          "sigla": "PL 4695/2026",
+          "ementa": "Proíbe a criação, solicitação, divulgação e facilitação de conteúdo sexual sintético não consentido com imagem de pessoa identificável, estabelece crimes, agravantes e deveres de prevenção e remoção aplicáveis a provedores de aplicações e serviços digitais, e dispõe sobre sanções administrativas e m",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641390",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-10T11:11:29.436769"
+        }
+      ],
+      "lexml": []
+    },
+    "dados": {
+      "termos_monitorados": [
+        "proteção dados pessoais",
+        "LGPD",
+        "privacidade digital"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:38.438210"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2642181",
+          "sigla": "PL 4927/2026",
+          "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para dispor sobre mecanismo público de verificação de idade.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642181",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:39.246349"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641087",
+          "sigla": "PL 4400/2026",
+          "ementa": "Institui a Política Nacional de Governança de Dados para Inteligência Artificial e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641087",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:39.246361"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2639458",
+          "sigla": "PL 3685/2026",
+          "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, estabelece regras para o tratamento e compartilhamento dessas informações e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:39.246365"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2629351",
+          "sigla": "PL 2754/2026",
+          "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e privadas de educação infantil, ensino fundamental e ensino médio, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:39.246368"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2602193",
+          "sigla": "PL 446/2026",
+          "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resposta a Fraudes contra a Pessoa Idosa, institui o “Alerta Prata Digital”, estabelece deveres de segurança, cooperação e resposta rápida para instituiçõ",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-10T11:11:39.246372"
+        }
+      ],
+      "lexml": []
+    },
+    "menores": {
+      "termos_monitorados": [
+        "criança adolescente digital",
+        "ECA digital",
+        "proteção menores internet"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "criança adolescente digital",
+          "data_deteccao": "2026-08-10T11:11:47.228530"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    },
+    "plataformas": {
+      "termos_monitorados": [
+        "responsabilidade plataformas",
+        "moderação conteúdo",
+        "redes sociais"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "responsabilidade plataformas",
+          "data_deteccao": "2026-08-10T11:11:55.353729"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    },
+    "trabalho_digital": {
+      "termos_monitorados": [
+        "riscos psicossociais trabalho",
+        "NR-1",
+        "teletrabalho algoritmo"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "riscos psicossociais trabalho",
+          "data_deteccao": "2026-08-10T11:12:03.100172"
+        }
+      ],
+      "camara": [],
+      "lexml": []
+    }
+  },
+  "novidades_detectadas": [
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4900/2026",
+      "ementa": "Dispõe sobre normas de prevenção, proteção e responsabilização em casos de violência contra a mulher em ambiente digital.",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642052",
+      "data_deteccao": "2026-08-10T11:11:29.436740"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4881/2026",
+      "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de ",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641936",
+      "data_deteccao": "2026-08-10T11:11:29.436756"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4863/2026",
+      "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceit",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641822",
+      "data_deteccao": "2026-08-10T11:11:29.436761"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4849/2026",
+      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a falsidade de identidade praticada mediante conteúdo gerado ou",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641766",
+      "data_deteccao": "2026-08-10T11:11:29.436765"
+    },
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 4695/2026",
+      "ementa": "Proíbe a criação, solicitação, divulgação e facilitação de conteúdo sexual sintético não consentido com imagem de pessoa identificável, estabelece cri",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641390",
+      "data_deteccao": "2026-08-10T11:11:29.436769"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 4927/2026",
+      "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para dispor sobre mecanismo público de verificação d",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642181",
+      "data_deteccao": "2026-08-10T11:11:39.246349"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 4400/2026",
+      "ementa": "Institui a Política Nacional de Governança de Dados para Inteligência Artificial e dá outras providências.",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641087",
+      "data_deteccao": "2026-08-10T11:11:39.246361"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 3685/2026",
+      "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, e",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
+      "data_deteccao": "2026-08-10T11:11:39.246365"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 2754/2026",
+      "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e p",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
+      "data_deteccao": "2026-08-10T11:11:39.246368"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 446/2026",
+      "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resp",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
+      "data_deteccao": "2026-08-10T11:11:39.246372"
+    }
+  ],
+  "total_novidades": 10
 }
