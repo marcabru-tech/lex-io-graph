@@ -74,7 +74,7 @@
       ],
       "orgao": "Congresso Nacional / ANPD",
       "ano": 2018,
-      "historia": "Sancionada em 14 de agosto de 2018 (Lei 13.709/2018), com vigência plena a partir de agosto de 2020 e sanções desde agosto de 2021. Resultado de 8 anos de debates no Congresso Nacional. Inspirada diretamente no GDPR (General Data Protection Regulation — Regulamento Geral de Proteção de Dados) europeu (2016). Criou a ANPD (Autoridade Nacional de Proteção de Dados) como autarquia federal independente.",
+      "historia": "Sancionada em 14 de agosto de 2018 (Lei 13.709/2018), com vigência plena a partir de agosto de 2020 e sanções desde agosto de 2021. Resultado de 8 anos de debates no Congresso Nacional. Inspirada diretamente no GDPR (General Data Protection Regulation — Regulamento Geral de Proteção de Dados) europeu (2016). Criou a ANPD (Agência Nacional de Proteção de Dados) como autarquia federal independente.",
       "direito_comparado": "LGPD (Brasil, 2018) ↔ GDPR — General Data Protection Regulation (União Europeia, 2016) ↔ CCPA — California Consumer Privacy Act (Califórnia/EUA, 2018). Abordagem glocal (global + local, Robertson, 1990s): o GDPR tem efeito extraterritorial — empresas brasileiras que tratam dados de cidadãos europeus estão sujeitas ao GDPR simultaneamente à LGPD. A CCPA influenciou a discussão sobre o direito de não venda de dados pessoais. Tradição romano-germânica no Brasil e na Europa continental; abordagem setorial nos EUA (common law).",
       "autores": [
         {
@@ -339,7 +339,7 @@
       "artigos_chave": [
         "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
       ],
-      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (REs 1.037.396 e 1.057.258, Temas 987 e 533, jun./2025). Tese definitiva fixada em 17/06/2026, no julgamento dos embargos de declara\u00e7\u00e3o. Regulamentado pelos Decretos 12.975 e 12.976/2026. 27 PDLs (levantamento na base da Câmara em 15/08/2026) da oposição tentam derrubar os decretos — crise institucional tripartite.",
+      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (REs 1.037.396 e 1.057.258, Temas 987 e 533, jun./2025). Tese definitiva fixada em 17/06/2026, no julgamento dos embargos de declaração. Regulamentado pelos Decretos 12.975 e 12.976/2026. 27 PDLs (levantamento na base da Câmara em 15/08/2026) da oposição tentam derrubar os decretos — crise institucional tripartite.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -485,18 +485,18 @@
     },
     {
       "id": "anpd",
-      "nome": "Autoridade Nacional de Proteção de Dados",
+      "nome": "Agência Nacional de Proteção de Dados",
       "sigla": "ANPD",
       "tipo": "orgao",
       "artigos_chave": [],
-      "ementa": "Órgão federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil. Emitiu nota técnica sobre sobreposição normativa do PL 4/2025 com LGPD e Marco Civil.",
+      "ementa": "Agência reguladora federal, autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública, integrante do regime da Lei 13.848/2019 (Lei Geral das Agências Reguladoras). Zela, implementa e fiscaliza o cumprimento da LGPD e, desde o Decreto 12.975/2026, também do Marco Civil da Internet.",
       "status": "vigente",
       "temas": [
         "dados_pessoais"
       ],
       "orgao": "Governo Federal",
       "ano": 2020,
-      "historia": "ANPD — Autoridade Nacional de Proteção de Dados, criada pela LGPD (Lei 13.709/2018) como autarquia federal vinculada à Presidência da República. Levou 3 anos para ter estrutura funcional plena. Em 2026, o Decreto 12.975/2026 expandiu suas competências para fiscalizar o Marco Civil da Internet — transformando a ANPD de autoridade de dados em autoridade digital ampla. Tensão estrutural: vinculação ao Executivo compromete independência regulatória — modelo oposto ao GDPR europeu.",
+      "historia": "Criada pela LGPD (Lei 13.709/2018, art. 55-A) como Autoridade Nacional de Proteção de Dados, sem personalidade jurídica própria e vinculada à Presidência da República. Levou três anos para ter estrutura funcional plena. A Lei 14.460/2022 a transformou em autarquia de natureza especial. A Lei 15.352/2026 (conversão da MP 1.317/2025) a converteu em Agência Nacional de Proteção de Dados, vinculada ao Ministério da Justiça e Segurança Pública, inserindo-a no rol da Lei 13.848/2019 e criando a Carreira de Regulação e Fiscalização de Proteção de Dados. O Decreto 12.881/2026 aprovou a estrutura regimental. O Decreto 12.975/2026 expandiu suas competências para o Marco Civil da Internet, deslocando-a de autoridade de dados para reguladora digital ampla. Verificado em 16/08/2026.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): CNIL — Commission Nationale de l'Informatique et des Libertés (França, 1978) — autoridade independente, modelo europeu de referência; ICO — Information Commissioner's Office (UK) — autoridade independente do governo; FTC — Federal Trade Commission (EUA) — sem mandato específico de proteção de dados, usa poderes gerais antitruste. A ANPD nasceu vinculada ao Executivo — tensão com o princípio da independência regulatória que o GDPR exige das autoridades supervisoras nacionais (art. 52).",
       "autores": [
         {
@@ -541,7 +541,7 @@
       ],
       "orgao": "Presidência da República / ANPD",
       "ano": 2026,
-      "historia": "Decreto 12.975, de 20 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Altera o Decreto 8.771/2016. Atribui à ANPD (Autoridade Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
+      "historia": "Decreto 12.975, de 20 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Altera o Decreto 8.771/2016. Atribui à ANPD (Agência Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
       "direito_comparado": "O Decreto 12.975/2026 converge com o DSA — Digital Services Act (União Europeia, 2022): ambos impõem deveres proativos de moderação a plataformas digitais sem exigir ordem judicial específica. Diverge do modelo americano da Section 230 do CDA — Communications Decency Act (EUA, 1996), que mantém imunidade ampla das plataformas. Glocal (global + local, Robertson, 1990s): o Brasil está convergindo para o modelo europeu via decreto executivo, sem aprovação legislativa — caminho distinto do DSA, que passou pelo Parlamento Europeu.",
       "autores": [
         {

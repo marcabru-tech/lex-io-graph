@@ -113,7 +113,7 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "moderado",
         "status": "em consolidação — ANPD ganha competências via Decreto 12.975/2026",
         "sintese": (
-            "A ANPD (Autoridade Nacional de Proteção de Dados) foi criada pela LGPD em 2018 "
+            "A ANPD (Agência Nacional de Proteção de Dados) foi criada pela LGPD em 2018 "
             "como autarquia federal. Levou 3 anos para ter estrutura funcional. Em 2026, "
             "o Decreto 12.975 expandiu suas competências para fiscalizar o Marco Civil — "
             "movimento que transforma a ANPD de autoridade de dados em autoridade digital."
@@ -415,7 +415,7 @@ CASO_ANPD_JUDICIARIO = {
         {
             "titulo": "Tensão 1 — ANPD: regulação administrativa, não jurisdição",
             "descricao": (
-                "A ANPD (Autoridade Nacional de Proteção de Dados) é autarquia especial criada "
+                "A ANPD (Agência Nacional de Proteção de Dados) é agência reguladora federal (Lei 15.352/2026), autarquia de natureza especial criada "
                 "pela LGPD (Lei 13.709/2018, art. 55-J) com competências administrativas: "
                 "regulamentar, fiscalizar, orientar e aplicar sanções. "
                 "Suas decisões não possuem efeito vinculante sobre o Poder Judiciário. "

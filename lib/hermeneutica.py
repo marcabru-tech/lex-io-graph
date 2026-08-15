@@ -64,7 +64,7 @@ CORRENTES_HERMENEUTICAS = [
         ),
         "no_brasil": (
             "Influência no CC/2002 — função social do contrato (art. 421) e da propriedade. "
-            "Interpretação teleológica da LGPD pela ANPD (Autoridade Nacional de Proteção de Dados): "
+            "Interpretação teleológica da LGPD pela ANPD (Agência Nacional de Proteção de Dados): "
             "a proteção de dados como fim, não como formalidade."
         ),
         "tensao_norma": "LGPD — função social dos dados pessoais; CC/2002 art. 421 — função social do contrato"

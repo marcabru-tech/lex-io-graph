@@ -129,7 +129,7 @@ BROCARDOS = [
         "traducao_literal": "A lei especial derroga a geral",
         "traducao_juridica": "Critério de resolução de antinomia por especialidade — norma específica prevalece sobre a geral",
         "contexto_romano": "Terceiro critério de Bobbio — o mais complexo, pois exige identificação do âmbito de aplicação de cada norma",
-        "uso_brasil": "LGPD como lex specialis em relação ao PL 4/2025 (Livro VI CC Digital) — alerta da ANPD (Autoridade Nacional de Proteção de Dados)",
+        "uso_brasil": "LGPD como lex specialis em relação ao PL 4/2025 (Livro VI CC Digital) — alerta da ANPD (Agência Nacional de Proteção de Dados)",
         "relacao_norma": "pl_cc_digital"
     },
     {

@@ -272,7 +272,7 @@ GLOSSARIO = [
         "latim": "Antinomia (do grego: anti = contra + nomos = lei)",
         "definicao": "Conflito entre duas normas jurídicas de mesmo ordenamento cuja aplicação simultânea é impossível ou gera resultado contraditório. Bobbio (1909–2004) sistematizou três critérios de resolução: lex superior (hierarquia), lex posterior (temporalidade), lex specialis (especialidade).",
         "corrente": "Positivismo jurídico analítico (Bobbio)",
-        "exemplo_brasil": "PL 4/2025 (Livro VI CC Digital) × LGPD — antinomia apontada pela ANPD (Autoridade Nacional de Proteção de Dados): mesma matéria regulada por dois diplomas com critérios distintos"
+        "exemplo_brasil": "PL 4/2025 (Livro VI CC Digital) × LGPD — antinomia apontada pela ANPD (Agência Nacional de Proteção de Dados): mesma matéria regulada por dois diplomas com critérios distintos"
     },
     {
         "termo": "Hermenêutica jurídica",
