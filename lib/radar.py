@@ -77,7 +77,7 @@ def buscar_senado(termo: str, max_resultados: int = 10) -> list[dict]:
                     str(ident.get("NumeroMateria", "")) + "/" +
                     str(ident.get("AnoMateria", ""))
                 ).strip(),
-                "ementa": dados.get("EmentaMateria", "")[:300],
+                "ementa": dados.get("EmentaMateria", ""),
                 "ano": str(ident.get("AnoMateria", "")),
                 "status": situacao or "Em tramitação",
                 "url": (
@@ -131,7 +131,7 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
                     str(p.get("numero", "")) + "/" +
                     str(p.get("ano", ""))
                 ).strip(),
-                "ementa": p.get("ementa", "")[:300],
+                "ementa": p.get("ementa", ""),
                 "ano": str(p.get("ano", "")),
                 "status": p.get("statusProposicao", {}).get("descricaoSituacao", "Em tramitação"),
                 "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=" + str(p.get("id", "")),

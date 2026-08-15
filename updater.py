@@ -58,7 +58,7 @@ def detectar_novidades(radar_novo: dict, radar_anterior: dict) -> list[dict]:
                         "tema": tema,
                         "fonte": fonte,
                         "sigla": item.get("sigla", ""),
-                        "ementa": item.get("ementa", "")[:150],
+                        "ementa": item.get("ementa", ""),
                         "url": item.get("url", ""),
                         "data_deteccao": item.get("data_deteccao", ""),
                     })
