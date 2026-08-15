@@ -2,22 +2,23 @@ name: Radar Legislativo — Atualização Automática
 
 on:
   schedule:
-    - cron: '0 10 * * 1'  # Toda segunda-feira às 10h UTC (7h BRT)
-  workflow_dispatch:        # Permite rodar manualmente via GitHub Actions UI
+    - cron: '0 10 * * 1'   # Toda segunda-feira às 10h UTC (7h BRT)
+  workflow_dispatch:        # Permite rodar manualmente pela interface do Actions
 
 jobs:
   update-radar:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
+      contents: write       # Basta isto para commitar direto em main.
+                            # pull-requests: write foi removido — não abrimos mais PR.
 
     steps:
+      # v5 e v6 rodam em Node24: some o aviso de deprecação do Node20
       - name: Checkout repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -27,39 +28,58 @@ jobs:
       - name: Executar radar legislativo
         run: python updater.py
 
-      - name: Verificar se houve mudanças
-        id: check_changes
+      - name: Commitar snapshot se houve mudança
         run: |
-          git diff --quiet data/radar_legislativo.json || echo "changed=true" >> $GITHUB_OUTPUT
+          # git diff --quiet retorna 0 se NÃO há mudança, 1 se há.
+          # O 'if' abaixo evita commit vazio quando o radar não achou nada novo.
+          if git diff --quiet data/radar_legislativo.json; then
+            echo "Nenhuma novidade detectada. Radar sem alterações."
+            exit 0
+          fi
 
-      - name: Criar branch e PR com atualização
-        if: steps.check_changes.outputs.changed == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          DATE=$(date +'%Y-%m-%d')
-          BRANCH="data/radar-update-${DATE}"
-
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git checkout -b "${BRANCH}"
           git add data/radar_legislativo.json
-          git commit -m "chore(radar): atualização automática ${DATE}"
-          git push origin "${BRANCH}"
+          git commit -m "chore(radar): snapshot automático $(date +'%Y-%m-%d')"
 
-          # Criar PR via GitHub CLI
-          gh pr create \
-            --title "Radar Legislativo — ${DATE}" \
-            --body "Atualização automática do radar legislativo.
+          # Rebase antes do push evita falha se alguém commitou em main
+          # enquanto o radar rodava.
+          git pull --rebase origin main
+          git push origin main
 
-          **Ação necessária:** revisar novidades detectadas no \`data/radar_legislativo.json\` e decidir quais PLs/normas entram no grafo como novos nós.
+          echo "Snapshot atualizado em main."
 
-          > Curadoria preservada — nenhum nó é adicionado automaticamente ao grafo.
-          > O radar alerta; o curador decide." \
-            --base main \
-            --head "${BRANCH}"
-
-      - name: Sem mudanças detectadas
-        if: steps.check_changes.outputs.changed != 'true'
-        run: echo "Nenhuma novidade detectada. Radar sem alterações."
+# ─────────────────────────────────────────────────────────────────────
+# O QUE MUDOU E POR QUÊ
+#
+# 1. Saiu o passo 'gh pr create'. Era ele que falhava: o push do branch
+#    funcionava (por isso os branches data/radar-update-* existem no
+#    remoto com dados reais), mas a criação do PR era recusada.
+#    Sem PR, não há branch órfão acumulando.
+#
+# 2. Saiu a criação de branch. O radar grava um snapshot de dados
+#    públicos — não é código que precise de revisão em PR. A curadoria
+#    de verdade continua acontecendo onde sempre aconteceu: na decisão
+#    de quais PLs viram nós em normas.json, feita por você, à mão.
+#
+# 3. checkout@v4 → v5 e setup-python@v5 → v6: elimina o aviso de
+#    deprecação do Node20. Era só aviso, nunca foi a causa da falha.
+#
+# 4. permissions: pull-requests: write foi removido — não é mais usado.
+#
+# COMO APLICAR (PowerShell, na raiz do repositório):
+#
+#   Copy-Item "$HOME\Downloads\update-radar.yml" ".\.github\workflows\update-radar.yml" -Force
+#   git add .github/workflows/update-radar.yml
+#   git commit -m "fix(ci): radar commita direto em main, sem gh pr create"
+#   git push origin main
+#
+# Depois, teste sem esperar segunda-feira:
+#   GitHub → Actions → "Radar Legislativo" → Run workflow
+#
+# LIMPEZA DOS BRANCHES ÓRFÃOS (opcional, depois que o workflow passar):
+#   git push origin --delete data/radar-update-2026-07-27
+#   git push origin --delete data/radar-update-2026-08-03
+#   git push origin --delete data/radar-update-2026-08-10
+# ─────────────────────────────────────────────────────────────────────
