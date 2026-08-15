@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-15T09:01:01.041938",
+  "ultima_atualizacao": "2026-08-15T12:11:14.442679",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -17,7 +17,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.680886"
+          "data_deteccao": "2026-08-15T12:11:16.741883"
         }
       ],
       "camara": [
@@ -30,7 +30,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-15T12:11:18.103224"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -41,7 +41,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642052",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-15T12:11:18.103237"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -52,7 +52,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641936",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-15T12:11:18.103241"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -63,7 +63,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641822",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-15T12:11:18.103244"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -74,7 +74,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641766",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-15T12:11:18.103246"
         }
       ],
       "lexml": []
@@ -95,7 +95,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.763362"
+          "data_deteccao": "2026-08-15T12:11:22.692814"
         }
       ],
       "camara": [
@@ -108,7 +108,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642181",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-15T12:11:23.577938"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -119,7 +119,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641087",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-15T12:11:23.577950"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -130,7 +130,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-15T12:11:23.577953"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -141,7 +141,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-15T12:11:23.577955"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -152,7 +152,7 @@
           "status": "Em tramitação",
           "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-15T12:11:23.577958"
         }
       ],
       "lexml": []
@@ -173,7 +173,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-08-15T09:01:05.756456"
+          "data_deteccao": "2026-08-15T12:11:28.356975"
         }
       ],
       "camara": [],
@@ -195,7 +195,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "responsabilidade plataformas",
-          "data_deteccao": "2026-08-15T09:01:07.851493"
+          "data_deteccao": "2026-08-15T12:11:34.554505"
         }
       ],
       "camara": [],
@@ -217,94 +217,13 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "riscos psicossociais trabalho",
-          "data_deteccao": "2026-08-15T09:01:09.680666"
+          "data_deteccao": "2026-08-15T12:11:40.218760"
         }
       ],
       "camara": [],
       "lexml": []
     }
   },
-  "novidades_detectadas": [
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 5058/2026",
-      "ementa": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para assegurar a inviolabilidade ",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2643605",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4900/2026",
-      "ementa": "Dispõe sobre normas de prevenção, proteção e responsabilização em casos de violência contra a mulher em ambiente digital.",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642052",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4881/2026",
-      "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de ",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641936",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4863/2026",
-      "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceit",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641822",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4849/2026",
-      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a falsidade de identidade praticada mediante conteúdo gerado ou",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641766",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 4927/2026",
-      "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para dispor sobre mecanismo público de verificação d",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2642181",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 4400/2026",
-      "ementa": "Institui a Política Nacional de Governança de Dados para Inteligência Artificial e dá outras providências.",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641087",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 3685/2026",
-      "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, e",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639458",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 2754/2026",
-      "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e p",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2629351",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 446/2026",
-      "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resp",
-      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2602193",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    }
-  ],
-  "total_novidades": 10
+  "novidades_detectadas": [],
+  "total_novidades": 0
 }
