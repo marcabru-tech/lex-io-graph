@@ -162,6 +162,315 @@
       "senado": [],
       "camara": [],
       "lexml": []
+    },
+    "Sustação dos Decretos 12.975 e 12.976/2026": {
+      "termos_monitorados": [
+        "sustação de decreto",
+        "art. 49, V, CF/88",
+        "Decreto 12.975/2026",
+        "Decreto 12.976/2026"
+      ],
+      "senado": [],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626866",
+          "sigla": "PDL 395/2026",
+          "ementa": "Susta parcialmente os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar dispositivos da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet).",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626866",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626867",
+          "sigla": "PDL 396/2026",
+          "ementa": "Susta os Decretos nºs 12.975/2026 e 12.976/2026, que que dispõem sobre a regulamentação do Marco Civil da Internet e sobre deveres das plataformas digitais em matéria de proteção das mulheres no ambiente digital, respectivamente, por extrapolarem os limites do poder regulamentar do Poder Executivo, violarem a reserva legal em matéria de liberdade de expressão e comunicação, e usurparem competência normativa do Congresso Nacional.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626867",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626798",
+          "sigla": "PDL 397/2026",
+          "ementa": "Susta integralmente os efeitos dos Decretos nº 12.975 e nº 12.976, de 2026, que regulamentam a atuação das plataformas digitais, dispõem sobre mecanismos de responsabilização e fiscalização no âmbito do Marco Civil da Internet e estabelecem medidas relacionadas à moderação de conteúdos e ao funcionamento de redes sociais.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626798",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.647299"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626813",
+          "sigla": "PDL 399/2026",
+          "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626813",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.647299"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626819",
+          "sigla": "PDL 400/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que “Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014”.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626819",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626820",
+          "sigla": "PDL 401/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que “Estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.”.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626820",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626827",
+          "sigla": "PDL 402/2026",
+          "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626827",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626829",
+          "sigla": "PDL 403/2026",
+          "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626829",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626854",
+          "sigla": "PDL 406/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres nainternete para o enfrentamento da violência contra mulheres em ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626854",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626855",
+          "sigla": "PDL 407/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626855",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626868",
+          "sigla": "PDL 408/2026",
+          "ementa": "Ficam sustados os efeitos dos Decretos 12.975 e 12.976 de 2026, publicados no D.O.U no dia 21 de maio de 2026, assinados pelo presidente Luiz Inácio Lula da Silva, que atualizam a regulamentação do Marco Civil da Internet e estabelecem novas diretrizes para a proteção de mulheres no ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626868",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626876",
+          "sigla": "PDL 409/2026",
+          "ementa": "Susta Decreto Federal nº 12975, de 20 de maio de 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626876",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626880",
+          "sigla": "PDL 410/2026",
+          "ementa": "Ficam sustados, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos dos Decretos nºs 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados – ANPD no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626880",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626935",
+          "sigla": "PDL 412/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para tratar de hipóteses de discriminação de pacotes de dados na internet, degradação de tráfego, guarda de dados, requisição de informações pela Administração Pública e fiscalização de provedores.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626935",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2626967",
+          "sigla": "PDL 413/2026",
+          "ementa": "Susta a aplicação dos Decretos nº 12.975 e nº 12.976, ambos de 20 de maio de 2026, que dispõem sobre a regulamentação do Marco Civil da Internet (Lei nº 12.965/2014) e estabelecem diretrizes para o ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626967",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:11.658823"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627017",
+          "sigla": "PDL 454/2026",
+          "ementa": "Ficam sustados, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos dos Decretos 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados (ANPD) no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627017",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627043",
+          "sigla": "PDL 455/2026",
+          "ementa": "Sustam os Decretos Presidenciais nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014, e nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção das mulheres na internet para o enfrentamento da violência contra mulheres no ambiente digital, por exorbitância do poder regulamentar e violação aos limites constitucionais da função regulamentar do Poder Executivo.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627043",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627053",
+          "sigla": "PDL 456/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que “Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.”",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627053",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627056",
+          "sigla": "PDL 457/2026",
+          "ementa": "Susta dispositivos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), em razão de extrapolação do poder regulamentar.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627056",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627069",
+          "sigla": "PDL 458/2026",
+          "ementa": "Sustam os efeitos dos Decretos nºs 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados – ANPD no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627069",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627076",
+          "sigla": "PDL 459/2026",
+          "ementa": "Susta parcialmente os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar dispositivos da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet).",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627076",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627549",
+          "sigla": "PDL 468/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627549",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627560",
+          "sigla": "PDL 469/2026",
+          "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os Decretos nº 12.975/2026 e nº 12.976/2026, que dispõem sobre a regulamentação do Marco Civil da Internet e sobre deveres das plataformas digitais na proteção das mulheres no ambiente digital, por extrapolarem o poder regulamentar, violarem a reserva legal e invadirem a competência do Congresso Nacional.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627560",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627789",
+          "sigla": "PDL 477/2026",
+          "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para dispor sobre os deveres dos provedores de conexão e de aplicações de internet.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627789",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2627901",
+          "sigla": "PDL 480/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627901",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2628943",
+          "sigla": "PDL 489/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014 — Marco Civil da Internet.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2628943",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:12.701164"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2633132",
+          "sigla": "PDL 617/2026",
+          "ementa": "Susta os efeitos do Decreto nº 12.975 de 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2633132",
+          "termo_busca": "sustação decretos 12.975/12.976",
+          "data_deteccao": "2026-08-15T12:00:13.877382"
+        }
+      ],
+      "lexml": []
     }
   },
   "novidades_detectadas": [

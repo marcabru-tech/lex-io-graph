@@ -257,7 +257,7 @@ if _grafo_ok:
             tip = (
                 d.get("nome", "") + "\n"
                 + "-" * 36 + "\n"
-                + d.get("ementa", "")[:300] + "\n"
+                + d.get("ementa", "") + "\n"
                 + "-" * 36 + "\n"
                 + "Tipo:   " + d.get("tipo_label", "") + "\n"
                 + "Status: " + d.get("status", "") + "\n"
