@@ -119,7 +119,7 @@
         "Art. 15",
         "Art. 19 (parcialmente inconstitucional — STF Tema 987)"
       ],
-      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores. Art. 19 declarado parcialmente inconstitucional pelo STF (RE 1.037.396, Tema 987, jun./2025) — embargos de declaração pendentes.",
+      "ementa": "Estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. Neutralidade de rede, guarda de registros, responsabilidade de provedores. Art. 19 declarado parcialmente inconstitucional pelo STF (RE 1.037.396, Tema 987, jun./2025); tese definitiva fixada em 17/06/2026.",
       "status": "vigente_com_ressalva",
       "temas": [
         "internet",
@@ -128,7 +128,7 @@
       ],
       "orgao": "Congresso Nacional",
       "ano": 2014,
-      "historia": "Lei 12.965/2014, sancionada em 23 de abril de 2014 — Dia Mundial da Internet. Resultado de processo legislativo participativo inédito: construído via plataforma online com participação da sociedade civil (2009–2014). Regulamentado pelo Decreto 8.771/2016, parcialmente revogado pelo Decreto 12.975/2026. Art. 19 declarado parcialmente inconstitucional pelo STF (Supremo Tribunal Federal) no Tema 987 (RE 1.037.396, jun./2025) — embargos de declaração pendentes. Decretos 12.975 e 12.976/2026 regulamentam o regime pós-Tema 987, gerando crise institucional tripartite: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "historia": "Lei 12.965/2014, sancionada em 23 de abril de 2014 — Dia Mundial da Internet. Resultado de processo legislativo participativo inédito: construído via plataforma online com participação da sociedade civil (2009–2014). Regulamentado pelo Decreto 8.771/2016, parcialmente revogado pelo Decreto 12.975/2026. Art. 19 declarado parcialmente inconstitucional pelo STF (Supremo Tribunal Federal) nos Temas 987 e 533 (REs 1.037.396 e 1.057.258, jun./2025), com tese definitiva fixada no julgamento dos embargos em 17/06/2026. Decretos 12.975 e 12.976/2026 regulamentam o regime pós-Tema 987, gerando crise institucional tripartite: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
       "direito_comparado": "O Marco Civil foi pioneiro mundial em legislação de neutralidade de rede (net neutrality) — antecipou debates que ainda ocorrem nos EUA. Comparação glocal (global + local, Robertson, 1990s): EUA adotam abordagem setorial e jurisprudencial (First Amendment, Section 230 do Communications Decency Act, 1996); UE (União Europeia) tem o Digital Services Act — DSA (2022); Brasil tem o Marco Civil + regime pós-Tema 987. O art. 19 do Marco Civil era análogo à Section 230 dos EUA — ambos protegem plataformas de responsabilidade por conteúdo de terceiros; ambos estão sob pressão simultânea.",
       "autores": [
         {
@@ -339,8 +339,8 @@
       "artigos_chave": [
         "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
       ],
-      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (RE 1.037.396, Tema 987, jun./2025). Embargos pendentes. Regulamentado pelos Decretos 12.975 e 12.976/2026. 24+ PDLs da oposição tentam derrubar os decretos — crise institucional tripartite.",
-      "status": "pendente_embargos",
+      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (REs 1.037.396 e 1.057.258, Temas 987 e 533, jun./2025). Tese definitiva fixada em 17/06/2026, no julgamento dos embargos de declara\u00e7\u00e3o. Regulamentado pelos Decretos 12.975 e 12.976/2026. 24+ PDLs da oposição tentam derrubar os decretos — crise institucional tripartite.",
+      "status": "vigente",
       "temas": [
         "internet",
         "dados_pessoais",
@@ -348,7 +348,7 @@
       ],
       "orgao": "STF",
       "ano": 2025,
-      "historia": "RE 1.037.396 (Recurso Extraordinário) com repercussão geral — Tema 987. Julgado pelo Plenário do STF (Supremo Tribunal Federal) em junho de 2025. Relatora: Min. Rosa Weber (aposentada) — assumido pela Min. Alexandre de Moraes. Declarou a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Lei 12.965/2014). Embargos de declaração pendentes — acórdão não transitou em julgado. Regulamentado pelos Decretos 12.975 e 12.976/2026, que geraram crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "historia": "RE 1.037.396 (Recurso Extraordinário) com repercussão geral — Tema 987. Julgado pelo Plenário do STF (Supremo Tribunal Federal) em junho de 2025, em conjunto com o Tema 533 (RE 1.057.258). Relator do Tema 987: Min. Dias Toffoli; relator do Tema 533: Min. Luiz Fux. Declarou a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Lei 12.965/2014). Os embargos de declaração foram julgados e concluÃ­dos em 17/06/2026, fixando a tese definitiva: mantida a arquitetura de junho de 2025, com refinamento do conceito de provedor neutro e da modulação dos efeitos. Regulamentado pelos Decretos 12.975 e 12.976/2026, que geraram crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): nos EUA, a Section 230 do Communications Decency Act (1996) está sob pressão similar — múltiplos projetos no Congresso americano para reformá-la. Na UE (União Europeia), o DSA (Digital Services Act, 2022) já superou o modelo do art. 19 ao impor deveres proativos às plataformas. O Brasil, via STF + Executivo, está convergindo para o modelo europeu sem aprovação legislativa.",
       "autores": [
         {

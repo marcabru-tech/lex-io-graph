@@ -85,8 +85,8 @@ with col_al1:
     st.error("""
 **STF — Tema 987 (RE 1.037.396)**
 Art. 19 do Marco Civil declarado **parcialmente inconstitucional** (jun./2025).
-Regulamentado pelos **Decretos 12.975 e 12.976/2026** (20/05/2026).
-Embargos de declaração pendentes.
+**Tese definitiva fixada em 17/06/2026** (Temas 987 e 533), após julgamento dos embargos.
+Deveres regulamentados pelos **Decretos 12.975 e 12.976/2026** (vigentes desde 20/07/2026).
 """)
 
 with col_al2:
