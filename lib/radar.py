@@ -134,7 +134,7 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
                 "ementa": p.get("ementa", "")[:300],
                 "ano": str(p.get("ano", "")),
                 "status": p.get("statusProposicao", {}).get("descricaoSituacao", "Em tramitação"),
-                "url": p.get("uri", ""),
+                "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=" + str(p.get("id", "")),
                 "termo_busca": termo,
                 "data_deteccao": datetime.now().isoformat(),
             })
