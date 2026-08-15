@@ -8,6 +8,7 @@ on:
 jobs:
   update-radar:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write       # Basta isto para commitar direto em main.
                             # pull-requests: write foi removido — não abrimos mais PR.
@@ -26,7 +27,7 @@ jobs:
         run: pip install requests
 
       - name: Executar radar legislativo
-        run: python updater.py
+        run: python -u updater.py
 
       - name: Commitar snapshot se houve mudança
         run: |

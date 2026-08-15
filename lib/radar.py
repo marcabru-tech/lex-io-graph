@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from typing import Optional
 
-TIMEOUT = 30
+TIMEOUT = 10
 
 # ---- Temas monitorados ----
 TEMAS_RADAR = {
