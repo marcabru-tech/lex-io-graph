@@ -56,9 +56,9 @@ CASOS_ESTRATEGICOS = [
                 )
             },
             {
-                "titulo": "Tensão 3 — A reação legislativa: 24+ PDLs e o paradoxo da oposição",
+                "titulo": "Tensão 3 — A reação legislativa: 27 PDLs (base da Camara, 15/08/2026) e o paradoxo da oposição",
                 "analise": (
-                    "A oposição (PL, Republicanos, União Brasil, Novo) protocolou 24+ PDLs "
+                    "A oposição (PL, Republicanos, União Brasil, Novo) protocolou 27 PDLs (base da Camara, 15/08/2026) "
                     "(Projetos de Decreto Legislativo) para derrubar os Decretos 12.975 e "
                     "12.976/2026 sob o argumento de censura e usurpação de competência normativa. "
                     "O paradoxo estratégico: a mesma oposição que bloqueou o PL das fake news "
@@ -216,7 +216,7 @@ CASOS_ESTRATEGICOS = [
                     "Na semana de 21–27 de maio de 2026, três instâncias independentes "
                     "convergiram no mesmo campo normativo: (1) Executivo brasileiro — "
                     "Decretos 12.975 e 12.976/2026; (2) Vaticano — Magnifica Humanitas; "
-                    "(3) Congresso — 24+ PDLs para derrubar os decretos. "
+                    "(3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "
                     "A convergência Vaticano-Executivo e a divergência Congresso-STF "
                     "mapeiam o campo de forças: de um lado, atores que priorizam "
                     "proteção de direitos fundamentais; de outro, atores que priorizam "

@@ -128,7 +128,7 @@
       ],
       "orgao": "Congresso Nacional",
       "ano": 2014,
-      "historia": "Lei 12.965/2014, sancionada em 23 de abril de 2014 — Dia Mundial da Internet. Resultado de processo legislativo participativo inédito: construído via plataforma online com participação da sociedade civil (2009–2014). Regulamentado pelo Decreto 8.771/2016, parcialmente revogado pelo Decreto 12.975/2026. Art. 19 declarado parcialmente inconstitucional pelo STF (Supremo Tribunal Federal) nos Temas 987 e 533 (REs 1.037.396 e 1.057.258, jun./2025), com tese definitiva fixada no julgamento dos embargos em 17/06/2026. Decretos 12.975 e 12.976/2026 regulamentam o regime pós-Tema 987, gerando crise institucional tripartite: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "historia": "Lei 12.965/2014, sancionada em 23 de abril de 2014 — Dia Mundial da Internet. Resultado de processo legislativo participativo inédito: construído via plataforma online com participação da sociedade civil (2009–2014). Regulamentado pelo Decreto 8.771/2016, alterado pelo Decreto 12.975/2026. Art. 19 declarado parcialmente inconstitucional pelo STF (Supremo Tribunal Federal) nos Temas 987 e 533 (REs 1.037.396 e 1.057.258, jun./2025), com tese definitiva fixada no julgamento dos embargos em 17/06/2026. Decretos 12.975 e 12.976/2026 regulamentam o regime pós-Tema 987, gerando crise institucional tripartite: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar os decretos.",
       "direito_comparado": "O Marco Civil foi pioneiro mundial em legislação de neutralidade de rede (net neutrality) — antecipou debates que ainda ocorrem nos EUA. Comparação glocal (global + local, Robertson, 1990s): EUA adotam abordagem setorial e jurisprudencial (First Amendment, Section 230 do Communications Decency Act, 1996); UE (União Europeia) tem o Digital Services Act — DSA (2022); Brasil tem o Marco Civil + regime pós-Tema 987. O art. 19 do Marco Civil era análogo à Section 230 dos EUA — ambos protegem plataformas de responsabilidade por conteúdo de terceiros; ambos estão sob pressão simultânea.",
       "autores": [
         {
@@ -339,7 +339,7 @@
       "artigos_chave": [
         "Art. 19 Marco Civil (inconstitucionalidade parcial e progressiva)"
       ],
-      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (REs 1.037.396 e 1.057.258, Temas 987 e 533, jun./2025). Tese definitiva fixada em 17/06/2026, no julgamento dos embargos de declara\u00e7\u00e3o. Regulamentado pelos Decretos 12.975 e 12.976/2026. 24+ PDLs da oposição tentam derrubar os decretos — crise institucional tripartite.",
+      "ementa": "STF declarou inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil (REs 1.037.396 e 1.057.258, Temas 987 e 533, jun./2025). Tese definitiva fixada em 17/06/2026, no julgamento dos embargos de declara\u00e7\u00e3o. Regulamentado pelos Decretos 12.975 e 12.976/2026. 27 PDLs (base da Camara, 15/08/2026) da oposição tentam derrubar os decretos — crise institucional tripartite.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -348,7 +348,7 @@
       ],
       "orgao": "STF",
       "ano": 2025,
-      "historia": "RE 1.037.396 (Recurso Extraordinário) com repercussão geral — Tema 987. Julgado pelo Plenário do STF (Supremo Tribunal Federal) em junho de 2025, em conjunto com o Tema 533 (RE 1.057.258). Relator do Tema 987: Min. Dias Toffoli; relator do Tema 533: Min. Luiz Fux. Declarou a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Lei 12.965/2014). Os embargos de declaração foram julgados e concluÃ­dos em 17/06/2026, fixando a tese definitiva: mantida a arquitetura de junho de 2025, com refinamento do conceito de provedor neutro e da modulação dos efeitos. Regulamentado pelos Decretos 12.975 e 12.976/2026, que geraram crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar os decretos.",
+      "historia": "RE 1.037.396 (Recurso Extraordinário) com repercussão geral — Tema 987. Julgado pelo Plenário do STF (Supremo Tribunal Federal) em junho de 2025, em conjunto com o Tema 533 (RE 1.057.258). Relator do Tema 987: Min. Dias Toffoli; relator do Tema 533: Min. Luiz Fux. Declarou a inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Lei 12.965/2014). Os embargos de declaração foram julgados e concluÃ­dos em 17/06/2026, fixando a tese definitiva: mantida a arquitetura de junho de 2025, com refinamento do conceito de provedor neutro e da modulação dos efeitos. Regulamentado pelos Decretos 12.975 e 12.976/2026, que geraram crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar os decretos.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): nos EUA, a Section 230 do Communications Decency Act (1996) está sob pressão similar — múltiplos projetos no Congresso americano para reformá-la. Na UE (União Europeia), o DSA (Digital Services Act, 2022) já superou o modelo do art. 19 ao impor deveres proativos às plataformas. O Brasil, via STF + Executivo, está convergindo para o modelo europeu sem aprovação legislativa.",
       "autores": [
         {
@@ -541,7 +541,7 @@
       ],
       "orgao": "Presidência da República / ANPD",
       "ano": 2026,
-      "historia": "Decreto 12.975, assinado em 21 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Revoga parcialmente o Decreto 8.771/2016. Atribui à ANPD (Autoridade Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 24+ PDLs (Projetos de Decreto Legislativo) da oposição para derrubar o decreto.",
+      "historia": "Decreto 12.975, de 20 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Altera o Decreto 8.771/2016. Atribui à ANPD (Autoridade Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
       "direito_comparado": "O Decreto 12.975/2026 converge com o DSA — Digital Services Act (União Europeia, 2022): ambos impõem deveres proativos de moderação a plataformas digitais sem exigir ordem judicial específica. Diverge do modelo americano da Section 230 do CDA — Communications Decency Act (EUA, 1996), que mantém imunidade ampla das plataformas. Glocal (global + local, Robertson, 1990s): o Brasil está convergindo para o modelo europeu via decreto executivo, sem aprovação legislativa — caminho distinto do DSA, que passou pelo Parlamento Europeu.",
       "autores": [
         {
@@ -561,7 +561,7 @@
         {
           "original": "Delegata potestas non potest delegari",
           "traducao_literal": "O poder delegado não pode ser subdelegado",
-          "traducao_juridica": "O executivo não pode legislar sobre matéria reservada ao Congresso — argumento central dos 24+ PDLs que tentam derrubar o decreto",
+          "traducao_juridica": "O executivo não pode legislar sobre matéria reservada ao Congresso — argumento central dos 27 PDLs (base da Camara, 15/08/2026) que tentam derrubar o decreto",
           "contexto_romano": "Princípio do direito público romano — limite do poder regulamentar"
         },
         {
@@ -592,7 +592,7 @@
       ],
       "orgao": "Presidência da República",
       "ano": 2026,
-      "historia": "Decreto 12.976, assinado em 21 de maio de 2026 conjuntamente com o Decreto 12.975/2026. Reforça a proteção das mulheres no ambiente digital: remoção rápida de conteúdo íntimo ilegal, combate a deepfakes sexuais, responsabilidade de plataformas por violência de gênero online. Integra o Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado na mesma cerimônia que as Leis 15.409 e 15.410/2026.",
+      "historia": "Decreto 12.976, de 20 de maio de 2026 conjuntamente com o Decreto 12.975/2026. Reforça a proteção das mulheres no ambiente digital: remoção rápida de conteúdo íntimo ilegal, combate a deepfakes sexuais, responsabilidade de plataformas por violência de gênero online. Integra o Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado na mesma cerimônia que as Leis 15.409 e 15.410/2026.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): UK Online Safety Act (2023) — primeiro do mundo a exigir remoção proativa de conteúdo sexual não consensual; EU DSA (2022) — obrigações de remoção rápida para plataformas de grande porte; VAWA — Violence Against Women Act (EUA, 2022) — proteção digital de mulheres, mas sem obrigação de remoção equivalente. O Decreto 12.976 é o mais abrangente da América Latina em proteção digital de mulheres.",
       "autores": [
         {

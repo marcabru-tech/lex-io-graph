@@ -272,7 +272,7 @@ MAGNIFICA_HUMANITAS = {
         "Na semana de 21–27 de maio de 2026, três instâncias independentes convergiram "
         "no mesmo campo normativo: (1) Executivo brasileiro — Decretos 12.975 e 12.976/2026 "
         "sobre responsabilidade de plataformas; (2) Vaticano — Magnifica Humanitas sobre "
-        "dignidade humana e IA; (3) Congresso — 24+ PDLs para derrubar os decretos. "
+        "dignidade humana e IA; (3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "
         "Momento civilizatório singular documentado."
     ),
     "presenca_anthropic": (
