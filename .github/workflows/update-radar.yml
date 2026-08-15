@@ -45,6 +45,9 @@ jobs:
 
           # Rebase antes do push evita falha se alguém commitou em main
           # enquanto o radar rodava.
+          echo "Arvore antes do pull:"
+          git status --porcelain
+          git checkout -- .
           git pull --rebase origin main
           git push origin main
 
