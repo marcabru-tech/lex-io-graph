@@ -128,6 +128,11 @@ PERFIL_TEMA_MAP = {
             "plataformas", "responsabilidade_plataformas",
             "remocao_conteudo",
         ],
+        "Escritório de Advocacia / Jurídico": [
+            "dados_pessoais", "dados_sensiveis", "sigilo_comunicacao",
+            "bases_legais", "seguranca_dados", "dpo", "direito_titular",
+            "incidente", "privacidade",
+        ],
         "Outro": ["dados_pessoais", "internet"],
     },
     "usa_ia": {
