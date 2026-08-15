@@ -171,7 +171,7 @@ if _grafo_ok:
     <span style="color:#d4a853;font-family:monospace;font-weight:bold;">{nd.get("label",nid)}</span>
     <span style="color:#706a60;font-size:11px;margin-left:8px;">
     {nd.get("tipo_label","")} · {nd.get("status","")} · {conexoes} conexão(ões)</span><br>
-    <span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")[:180]}</span>
+    <span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")}</span>
     </div>""", unsafe_allow_html=True)
 
     if modo_viz == "🕸️ Grafo":
@@ -282,7 +282,7 @@ if _grafo_ok:
             tip = (
                 d.get("tipo_label", "") + "\n"
                 + "-" * 36 + "\n"
-                + d.get("descricao", "")[:280] + "\n"
+                + d.get("descricao", "") + "\n"
                 + "-" * 36 + "\n"
                 + "Artigos: " + d.get("artigos", "")
             )

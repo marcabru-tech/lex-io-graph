@@ -533,7 +533,7 @@ def render_radar(radar: dict):
                 f"{ico} **{a['source']} ↔ {a['target']}** ({a.get('tipo', '')})"
             )
             if a.get("descricao"):
-                st.caption(a["descricao"][:150])
+                st.caption(a["descricao"])
 
     if radar["acoes"]:
         st.markdown("#### Ações recomendadas")
@@ -559,7 +559,7 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
         f"<tr><td>{RISCO_ICO.get(a['risco'],'ℹ️')}</td>"
         f"<td>{a['source']} ↔ {a['target']}</td>"
         f"<td>{a.get('tipo','')}</td>"
-        f"<td>{a.get('descricao','')[:80]}</td></tr>"
+        f"<td>{a.get('descricao','')}</td></tr>"
         for a in radar["arestas"][:10]
     )
     rows_acoes = "".join(
