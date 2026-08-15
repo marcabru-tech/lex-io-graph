@@ -18,7 +18,7 @@ APP_SUBTITLE = (
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.3.0"
+APP_VERSION = "0.10.0"
 
 # ---- Tríade cromática ----
 LEX_COLOR   = "#d4a853"   # dourado — lei, governança, razão, sol

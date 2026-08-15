@@ -15,10 +15,10 @@ Lexiograph
 </div>
 
 <div style="color: #8a8478; font-size: 11px; max-width: 800px; line-height: 1.8; margin-bottom: 10px;">
-Comunicar sistemas digitais de forma clara, etica e estetica â€” unindo governanca <span style="color:#d4a853">(Lex)</span>, interacao <span style="color:#3dc8e6">(IO)</span> e estrutura semantica <span style="color:#c44b4b">(Graph)</span> sob a assinatura <strong style="color:#e8e4dc">Lex Quantum</strong>.<br>
-A Lexiograph e mais do que uma marca â€” e uma linguagem. Uma gramatica visual que emerge da intersecao entre compliance digital, interacao sistemica e estruturacao do conhecimento.<br>
-<strong style="color:#8a8478">Lexiograph = Lex + IO + Graph</strong> â€” arquitetura semiotica que traduz sistemas digitais em signos, fluxos e grafos.<br>
-Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> â€” venture building bootstrapped, Rio de Janeiro.
+Comunicar sistemas digitais de forma clara, etica e estetica — unindo governanca <span style="color:#d4a853">(Lex)</span>, interacao <span style="color:#3dc8e6">(IO)</span> e estrutura semantica <span style="color:#c44b4b">(Graph)</span> sob a assinatura <strong style="color:#e8e4dc">Lex Quantum</strong>.<br>
+A Lexiograph e mais do que uma marca — e uma linguagem. Uma gramatica visual que emerge da intersecao entre compliance digital, interacao sistemica e estruturacao do conhecimento.<br>
+<strong style="color:#8a8478">Lexiograph = Lex + IO + Graph</strong> — arquitetura semiotica que traduz sistemas digitais em signos, fluxos e grafos.<br>
+Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> — venture building bootstrapped, Rio de Janeiro.
 </div>
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">

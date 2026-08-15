@@ -63,8 +63,8 @@ st.markdown(
 st.markdown(
     "Monitoramento automático de PLs (Projetos de Lei), decretos e normas "
     "relevantes para o ordenamento jurídico digital brasileiro. "
-    "Fontes: Senado Federal e Câmara dos Deputados. "
-    "Última coleta curada manualmente."
+    "Fontes: Senado Federal, Câmara dos Deputados e LexML. "
+    "Atualização: toda segunda-feira via GitHub Actions."
 )
 
 # ---- Carregar dados do radar ----
@@ -145,7 +145,7 @@ def render_item(item: dict, novidade: bool = False):
     st.markdown(f"""
 <div class="radar-card">
   <div class="radar-sigla">{item.get('sigla', 'Sem sigla')}{badge} {link}</div>
-  <div class="radar-fonte">{item.get('fonte', '')} · Detectado: {(item.get('data_deteccao') or '')[:10]}</div>
+  <div class="radar-fonte">{item.get('fonte', '')} · Detectado: {item.get('data_deteccao', '')[:10]}</div>
   <div class="radar-ementa">{item.get('ementa', 'Sem ementa disponível')}</div>
   <div class="radar-status">Status: {item.get('status', 'Desconhecido')}</div>
 </div>""", unsafe_allow_html=True)
