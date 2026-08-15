@@ -156,6 +156,11 @@ def buscar_lexml(termo: str, max_resultados: int = 10) -> list[dict]:
     Endpoint: lexml.gov.br/busca/search — output Atom XML
     Namespace Atom: http://www.w3.org/2005/Atom
     """
+    # DESATIVADO (ago/2026): o LexML passou a exigir verificacao anti-bot
+    # com JavaScript. Responde 200 com pagina de intersticio em HTML, nao
+    # com Atom XML. Sem caminho de acesso oficial, Senado e Camara cobrem
+    # o radar. Reativar quando houver API documentada ou chave de acesso.
+    return []
     url = "https://www.lexml.gov.br/busca/search"
     params = {
         "q": termo,
