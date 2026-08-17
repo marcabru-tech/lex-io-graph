@@ -471,6 +471,29 @@
         }
       ],
       "lexml": []
+    },
+    "Cibersegurança e Resiliência Digital": {
+      "termos_monitorados": [
+        "marco legal da cibersegurança",
+        "resiliência digital",
+        "infraestrutura crítica",
+        "resposta a incidentes"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "170613",
+          "sigla": "PL 4.752/2025",
+          "ementa": "Institui o Marco Legal da Cibersegurança e cria o Programa Nacional de Segurança e Resiliência Digital. Estabelece diretrizes nacionais de prevenção, resposta e resiliência, com cooperação entre poder público, setor privado, infraestruturas críticas e serviços essenciais. Aprovado na CCJ (Comissão de Constituição e Justiça); em análise na CCT (Comissão de Ciência, Tecnologia, Inovação, Comunicação e Informática).",
+          "ano": "2025",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/170613",
+          "termo_busca": "marco legal da cibersegurança",
+          "data_deteccao": "2026-08-17T10:23:49.334776"
+        }
+      ],
+      "camara": [],
+      "lexml": []
     }
   },
   "novidades_detectadas": [
