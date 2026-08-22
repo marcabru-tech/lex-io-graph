@@ -97,6 +97,14 @@ def main():
     print("Coletando dados das APIs...\n")
     radar_novo = coletar_radar()
 
+    # Temas fora de TEMAS_RADAR sao CURADOS: entram a mao e nao podem ser
+    # sobrescritos pela coleta automatica. Principio de curadoria aplicado
+    # a infraestrutura: o robo coleta, o curador decide o que permanece.
+    for _tema, _dados in radar_anterior.get("temas", {}).items():
+        if _tema not in TEMAS_RADAR:
+            radar_novo["temas"][_tema] = _dados
+            print(f"  [curado] tema preservado: {_tema}")
+
     novidades = detectar_novidades(radar_novo, radar_anterior)
     salvar_radar(radar_novo, novidades)
 

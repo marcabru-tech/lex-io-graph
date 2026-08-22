@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-15T09:01:01.041938",
+  "ultima_atualizacao": "2026-08-22T06:45:38.453000",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -7,18 +7,30 @@
         "IA generativa",
         "algoritmo decisão"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-22T06:45:39.919131"
+        }
+      ],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
           "id": "2643605",
           "sigla": "PL 5058/2026",
-          "ementa": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para assegurar a inviolabilidade do exercício da liberdade religiosa, garantindo a livre manifestação de fé, a pregação, o proselitismo e a citação literal de textos ou escritos sagra…",
+          "ementa": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para assegurar a inviolabilidade do exercício da liberdade religiosa, garantindo a livre manifestação de fé, a pregação, o proselitismo e a citação literal de textos ou escritos sagrados na internet e nos meios de comunicação.",
           "ano": "2026",
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-22T06:45:40.416055"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -29,29 +41,29 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642052",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-22T06:45:40.416055"
         },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2641936",
           "sigla": "PL 4881/2026",
-          "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de inteligência artificial nas relações de consumo, institui o Regime Jurídico de Integridade Algorítmica nas Relações de Consumo, altera a Lei nº 8.078,…",
+          "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de inteligência artificial nas relações de consumo, institui o Regime Jurídico de Integridade Algorítmica nas Relações de Consumo, altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), e dá outras providências.",
           "ano": "2026",
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641936",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-22T06:45:40.416055"
         },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2641822",
           "sigla": "PL 4863/2026",
-          "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceituar a violência por rastreamento digital não consentido, estabelecer obrigações aos fabricantes e provedores de dispositivos de localização e determin…",
+          "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceituar a violência por rastreamento digital não consentido, estabelecer obrigações aos fabricantes e provedores de dispositivos de localização e determinar salvaguardas de proteção à mulher contra o monitoramento ilícito.",
           "ano": "2026",
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641822",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-22T06:45:40.416055"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -62,7 +74,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641766",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-15T09:01:01.972973"
+          "data_deteccao": "2026-08-22T06:45:40.416055"
         }
       ],
       "lexml": []
@@ -73,7 +85,19 @@
         "LGPD",
         "privacidade digital"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-08-22T06:45:42.899950"
+        }
+      ],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
@@ -84,7 +108,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642181",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-22T06:45:43.140965"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -95,7 +119,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641087",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-22T06:45:43.140965"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -106,7 +130,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2639458",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-22T06:45:43.140965"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -117,18 +141,18 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2629351",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-22T06:45:43.140965"
         },
         {
           "fonte": "Câmara dos Deputados",
-          "id": "2602193",
-          "sigla": "PL 446/2026",
-          "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resposta a Fraudes contra a Pessoa Idosa, institui o “Alerta Prata Digital”, estabelece deveres de segurança, cooperação e resposta rápida para instituiçõ…",
+          "id": "2600015",
+          "sigla": "PL 19/2026",
+          "ementa": "Estabelece condições, deveres e restrições ao uso de óculos inteligentes com recursos de inteligência artificial, altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e dá outras providências.",
           "ano": "2026",
           "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2602193",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600015",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-15T09:01:03.982798"
+          "data_deteccao": "2026-08-22T06:45:43.140965"
         }
       ],
       "lexml": []
@@ -139,7 +163,19 @@
         "ECA digital",
         "proteção menores internet"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "criança adolescente digital",
+          "data_deteccao": "2026-08-22T06:45:45.445595"
+        }
+      ],
       "camara": [],
       "lexml": []
     },
@@ -149,7 +185,19 @@
         "moderação conteúdo",
         "redes sociais"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "responsabilidade plataformas",
+          "data_deteccao": "2026-08-22T06:45:47.857689"
+        }
+      ],
       "camara": [],
       "lexml": []
     },
@@ -159,7 +207,19 @@
         "NR-1",
         "teletrabalho algoritmo"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "riscos psicossociais trabalho",
+          "data_deteccao": "2026-08-22T06:45:50.345549"
+        }
+      ],
       "camara": [],
       "lexml": []
     },
@@ -498,85 +558,13 @@
   },
   "novidades_detectadas": [
     {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 5058/2026",
-      "ementa": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para assegurar a inviolabilidade do exercício da liberdade religiosa, garantindo a livre manifestação de fé, a pregação, o proselitismo e a citação literal de textos ou escritos sagra…",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4900/2026",
-      "ementa": "Dispõe sobre normas de prevenção, proteção e responsabilização em casos de violência contra a mulher em ambiente digital.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642052",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4881/2026",
-      "ementa": "Dispõe sobre os deveres de governança, segurança, transparência, responsabilidade, conformidade e proteção do consumidor na utilização de sistemas de inteligência artificial nas relações de consumo, institui o Regime Jurídico de Integridade Algorítmica nas Relações de Consumo, altera a Lei nº 8.078,…",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641936",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4863/2026",
-      "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para conceituar a violência por rastreamento digital não consentido, estabelecer obrigações aos fabricantes e provedores de dispositivos de localização e determin…",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641822",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
-      "tema": "ia",
-      "fonte": "camara",
-      "sigla": "PL 4849/2026",
-      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a falsidade de identidade praticada mediante conteúdo gerado ou alterado por sistema de inteligência artificial e para prever causa de aumento de pena no crime de estelionato praticado por esse meio.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641766",
-      "data_deteccao": "2026-08-15T09:01:01.972973"
-    },
-    {
       "tema": "dados",
       "fonte": "camara",
-      "sigla": "PL 4927/2026",
-      "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para dispor sobre mecanismo público de verificação de idade.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642181",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 4400/2026",
-      "ementa": "Institui a Política Nacional de Governança de Dados para Inteligência Artificial e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641087",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 3685/2026",
-      "ementa": "Institui medidas especiais de proteção de dados pessoais de aposentados, pensionistas e beneficiários de benefícios previdenciários e assistenciais, estabelece regras para o tratamento e compartilhamento dessas informações e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2639458",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 2754/2026",
-      "ementa": "Institui o Programa Nacional de Controle de Acesso Escolar por Reconhecimento Facial e Notificação Digital aos Responsáveis, para escolas públicas e privadas de educação infantil, ensino fundamental e ensino médio, e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2629351",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
-    },
-    {
-      "tema": "dados",
-      "fonte": "camara",
-      "sigla": "PL 446/2026",
-      "ementa": "Institui a Lei Nacional de Proteção Digital da Pessoa Idosa contra golpes e fraudes eletrônicas, cria o Sistema Nacional Integrado de Prevenção e Resposta a Fraudes contra a Pessoa Idosa, institui o “Alerta Prata Digital”, estabelece deveres de segurança, cooperação e resposta rápida para instituiçõ…",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2602193",
-      "data_deteccao": "2026-08-15T09:01:03.982798"
+      "sigla": "PL 19/2026",
+      "ementa": "Estabelece condições, deveres e restrições ao uso de óculos inteligentes com recursos de inteligência artificial, altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600015",
+      "data_deteccao": "2026-08-22T06:45:43.140965"
     }
   ],
-  "total_novidades": 10
+  "total_novidades": 1
 }
