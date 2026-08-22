@@ -744,6 +744,56 @@
           "contexto_romano": "Agostinho de Hipona (354–430 d.C.) → São Tomás — fundamento do jusnaturalismo católico"
         }
       ]
+    },
+    {
+      "id": "res_cnj_615",
+      "nome": "Resolução CNJ nº 615/2025 — IA no Poder Judiciário",
+      "sigla": "Res. CNJ 615/2025",
+      "tipo": "norma_regulamentar",
+      "artigos_chave": [
+        "Art. 7º — dados de treinamento, segredo de justiça e LGPD",
+        "Art. 6º — cadastro obrigatório no Sinapses",
+        "Classificação de risco e vedação de risco excessivo",
+        "Supervisão humana e governança algorítmica"
+      ],
+      "ementa": "Estabelece normas para desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de inteligência artificial no Poder Judiciário brasileiro, excetuado o Supremo Tribunal Federal. Substituiu a Resolução CNJ nº 332/2020. Publicada em 14/03/2025, vigente após o período de vacância de 120 dias previsto no art. 30. Alterada pela Resolução CNJ nº 674/2026 quanto à composição do Comitê Nacional de Inteligência Artificial do Judiciário.",
+      "status": "vigente",
+      "temas": [
+        "ia",
+        "dados_pessoais"
+      ],
+      "orgao": "CNJ — Conselho Nacional de Justiça",
+      "ano": 2025,
+      "historia": "Resolução nº 615, de 11 de março de 2025, publicada em 14/03/2025. Resultou de audiência pública realizada entre 25 e 27 de setembro de 2024 e do grupo de trabalho instituído pela Portaria CNJ nº 338/2023. Adota estrutura de classificação de risco e veda usos de risco excessivo — entre eles aplicações de perfilamento ou avaliação de pessoas naturais com efeito decisório em matéria criminal ou trabalhista. Soluções que passem a se enquadrar em hipótese vedada devem ser descontinuadas, com registro das razões. O art. 7º exige que os dados de desenvolvimento e treinamento sejam representativos dos casos judiciais e observem segredo de justiça e a LGPD, com anonimização obrigatória para dados sigilosos. O Sinapses não é regime normativo autônomo: é a infraestrutura de registro e governança prevista pela própria Resolução, onde toda solução de IA em desenvolvimento ou uso deve ser cadastrada, com catálogo organizado pela categorização de risco. A incidência é direta sobre tribunais e órgãos submetidos ao CNJ; sobre fornecedores e legaltechs os efeitos são contratuais e técnicos, materializando-se em editais, contratos, requisitos de homologação e deveres de prestação de informações. Verificado em 22/08/2026.",
+      "direito_comparado": "Dialoga com a tendência internacional de regulação baseada em risco, especialmente com a arquitetura do AI Act — Regulamento (UE) 2024/1689, que classifica sistemas de IA por nível de risco e trata a administração da justiça como domínio de alto risco. Não há, no texto da Resolução, declaração formal de filiação ao modelo europeu: a convergência é de arquitetura, não de origem declarada. Antecipa temas do debate brasileiro sobre o PL nº 2.338/2023 — classificação de risco, transparência, supervisão humana e governança.",
+      "autores": [
+        {
+          "nome": "Juli Ponce Solé",
+          "datas": "1965–",
+          "obra": "Inteligencia artificial, derecho administrativo y reserva de humanidad (2019)",
+          "contribuicao": "Formula a reserva de humanidade como limite à automação decisória no procedimento administrativo — referência recorrente na leitura da supervisão humana exigida pela Resolução."
+        },
+        {
+          "nome": "Luiz Fux",
+          "datas": "1953–",
+          "obra": "O Judiciário do futuro: Justiça 4.0 e processo contemporâneo (2022)",
+          "contribuicao": "Coordena a formulação do programa Justiça 4.0, moldura institucional em que se insere a governança de IA no Judiciário brasileiro."
+        }
+      ],
+      "latim": [
+        {
+          "original": "Iudex non calculat",
+          "traducao_literal": "O juiz não calcula",
+          "traducao_juridica": "Brocardo clássico sobre erro material; lido hoje como limite à substituição da cognição judicial por processamento automatizado.",
+          "contexto": "Direito romano — reapropriado no debate sobre decisão algorítmica"
+        },
+        {
+          "original": "Nemo iudex sine lege",
+          "traducao_literal": "Nenhum juiz sem lei",
+          "traducao_juridica": "A jurisdição é indelegável e vinculada à lei — fundamento da vedação de decisão exclusivamente automatizada.",
+          "contexto": "Tradição romano-germânica"
+        }
+      ]
     }
   ]
 }

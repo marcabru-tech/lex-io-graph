@@ -209,6 +209,20 @@
       "tipo": "complementaridade",
       "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu riscos psicossociais de IA no PGR (Programa de Gerenciamento de Riscos).",
       "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
+    },
+    {
+      "source": "res_cnj_615",
+      "target": "lgpd",
+      "tipo": "complementaridade",
+      "descricao": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário e remete expressamente à legislação de proteção de dados, exigindo anonimização e observância do segredo de justiça.",
+      "artigos": "Res. CNJ 615 art. 7º ↔ LGPD art. 1º e art. 11"
+    },
+    {
+      "source": "res_cnj_615",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "Ambas adotam regulação baseada em classificação de risco. A Resolução é norma administrativa setorial já vigente no Judiciário; o PL 2.338/2023 é proposta de lei geral em tramitação. A Resolução antecipa temas do debate legislativo.",
+      "artigos": "Res. CNJ 615 — Anexo de Classificação de Riscos ↔ PL 2.338/2023"
     }
   ]
 }
