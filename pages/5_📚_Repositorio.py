@@ -1,35 +1,9 @@
 import streamlit as st
-import requests
-import os
 from pathlib import Path
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.repositorio import AUTORES, BROCARDOS, TRADICOES_JURIDICAS, MAGNIFICA_HUMANITAS
 from lib.multisemiose import CITACOES, OBRAS_ARTE, GLOSSARIO
 from lib.footer import render_footer
-
-@st.cache_data(ttl=86400)
-def baixar_imagem_base64(url: str, nome: str) -> str:
-    """Baixa imagem e retorna como base64 para embed direto no HTML. Sem numpy."""
-    import base64
-    tmp_path = f"/tmp/lexiograph_{nome}"
-    if not os.path.exists(tmp_path):
-        try:
-            resp = requests.get(url, timeout=15, headers={
-                "User-Agent": "Lexiograph/1.0 (hubstry.dev; compliance atlas)"
-            })
-            resp.raise_for_status()
-            with open(tmp_path, "wb") as f:
-                f.write(resp.content)
-        except Exception:
-            return ""
-    try:
-        import base64
-        with open(tmp_path, "rb") as f:
-            data = base64.b64encode(f.read()).decode()
-        ext = "jpeg" if nome.endswith(".jpg") else "png"
-        return f"data:image/{ext};base64,{data}"
-    except Exception:
-        return "" 
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Repositório de Conhecimento",
@@ -279,23 +253,12 @@ elif secao == "📖 Literatura e Arte":
 
     with aba_arte:
         st.markdown(
-            "*Todas as obras em domínio público — via Wikimedia Commons. "
-            "URLs externas: se uma imagem não carregar, o conteúdo da obra permanece disponível.*"
+            "*Obras em domínio público. A análise multissemiótica dispensa a reprodução da imagem.*"
         )
         for i in range(0, len(OBRAS_ARTE), 2):
             cols = st.columns(2)
             for j, obra in enumerate(OBRAS_ARTE[i:i+2]):
                 with cols[j]:
-                    img_b64 = baixar_imagem_base64(obra['url_wikimedia'], f"{obra['id']}.jpg")
-                    if img_b64:
-                        st.markdown(f'<img src="{img_b64}" style="width:100%;border-radius:6px;border:1px solid rgba(212,168,83,0.2);margin-bottom:8px;" alt="{obra['titulo']}">', unsafe_allow_html=True)
-                    else:
-                        st.markdown(f"""
-<div style="padding:12px;background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);
-border-radius:6px;font-family:monospace;font-size:11px;color:#706a60;margin-bottom:8px;">
-🖼️ {obra['titulo']} — {obra['autor']} ({obra['ano']})<br>
-<em>Ver em: <a href="{obra['url_wikimedia']}" target="_blank" style="color:#d4a853;">Wikimedia Commons</a></em>
-</div>""", unsafe_allow_html=True)
                     st.markdown(f"""
 <div style="margin-bottom:16px;">
   <strong style="color:#e8e4dc;">{obra['titulo']}</strong><br>
