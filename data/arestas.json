@@ -223,6 +223,13 @@
       "tipo": "complementaridade",
       "descricao": "Ambas adotam regulação baseada em classificação de risco. A Resolução é norma administrativa setorial já vigente no Judiciário; o PL 2.338/2023 é proposta de lei geral em tramitação. A Resolução antecipa temas do debate legislativo.",
       "artigos": "Res. CNJ 615 — Anexo de Classificação de Riscos ↔ PL 2.338/2023"
+    },
+    {
+      "source": "cf88",
+      "target": "res_cnj_615",
+      "tipo": "hierarquia",
+      "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e autoriza a expedição de atos regulamentares no âmbito de sua competência. A Resolução exerce essa competência ao disciplinar desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de IA pelos órgãos do Judiciário, preservada a autonomia dos tribunais e excetuado o STF. A competência não é legislativa geral: permanece sujeita à legalidade, aos direitos fundamentais e aos limites materiais do controle administrativo.",
+      "artigos": "CF art. 103-B, § 4º, I ↔ Res. CNJ 615/2025 art. 1º"
     }
   ]
 }
