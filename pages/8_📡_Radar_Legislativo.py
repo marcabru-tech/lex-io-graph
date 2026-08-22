@@ -160,8 +160,8 @@ if secao == "🆕 Novidades":
     if not novidades:
         st.info(
             "Nenhuma novidade detectada na última atualização. "
-            "O radar roda toda segunda-feira às 7h BRT. "
-            "Para rodar manualmente: GitHub → Actions → Radar Legislativo → Run workflow."
+            "Coleta semanal às segundas-feiras."
+            ""
         )
     else:
         st.markdown(f"**{len(novidades)} novidade(s) detectada(s)** — aguardando revisão doutrinária")
