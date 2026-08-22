@@ -167,9 +167,15 @@ def _sugerir_tipo(
        (ont_b == "decreto" and ont_a == "lei"):
         return "regulamenta"
 
-    # Antinomia: mesmo nível hierárquico, temas sobrepostos, score alto
-    if scores["temas"] > 0.6 and scores["hierarquia"] < 0.4:
-        return "antinomia"
+    # ANTINOMIA DESATIVADA (ago/2026): a regra anterior inferia conflito
+    # normativo a partir de "mesmo nivel hierarquico + temas sobrepostos".
+    # Similaridade de conjuntos nao prova incompatibilidade de comandos:
+    # duas normas podem partilhar tema e nivel por se complementarem, por
+    # disciplinarem situacoes distintas ou por serem decisoes sucessivas
+    # sobre a mesma materia. Antinomia exige comandos incompativeis,
+    # aplicaveis ao mesmo caso, com coexistencia temporal — e isso o motor
+    # nao consegue verificar. Pares com essa assinatura caem em intersecao
+    # (a afirmacao mais fraca), e a qualificacao fica com o curador.
 
     # Complementaridade: scores altos em múltiplas dimensões
     if scores["temas"] > 0.4 and (scores["comparado"] > 0.3 or scores["hermeneutica"] > 0.3):

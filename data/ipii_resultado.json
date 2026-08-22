@@ -1,16 +1,16 @@
 {
-  "total_sugeridas": 32,
-  "total_existentes": 30,
-  "confirmadas": 11,
-  "novas": 21,
-  "faltando": 19,
-  "precisao": 0.344,
-  "cobertura": 0.367,
+  "total_sugeridas": 36,
+  "total_existentes": 33,
+  "confirmadas": 13,
+  "novas": 23,
+  "faltando": 20,
+  "precisao": 0.361,
+  "cobertura": 0.394,
   "detalhe_confirmadas": [
     {
       "source": "stf_tema987",
       "target": "decreto_12975_2026",
-      "score": 0.604,
+      "score": 0.6,
       "classificacao": "moderada",
       "tier": 3,
       "tipo_sugerido": "interpreta",
@@ -20,7 +20,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.059
+        "ementa": 0.034
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -41,7 +41,7 @@
       "score": 0.541,
       "classificacao": "fraca",
       "tier": 4,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 1.0,
         "hierarquia": 0.3,
@@ -60,7 +60,7 @@
       ],
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
-      "match_tipo": false
+      "match_tipo": true
     },
     {
       "source": "eca_digital",
@@ -95,7 +95,7 @@
       "score": 0.495,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 1.0,
         "hierarquia": 0.3,
@@ -171,34 +171,8 @@
     },
     {
       "source": "marco_civil",
-      "target": "stf_adimc",
-      "score": 0.461,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.5,
-        "temporal": 0.7,
-        "ementa": 0.071
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "internet"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
-      "correntes_comuns": [],
-      "tipo_existente": "interpreta",
-      "match_tipo": true
-    },
-    {
-      "source": "marco_civil",
       "target": "stf_tema987",
-      "score": 0.458,
+      "score": 0.456,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "interpreta",
@@ -208,7 +182,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 0.4,
-        "ementa": 0.086
+        "ementa": 0.071
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -216,6 +190,32 @@
       ],
       "jurisdicoes_comuns": [
         "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "interpreta",
+      "match_tipo": true
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_adimc",
+      "score": 0.455,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.034
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
         "UE"
       ],
       "correntes_comuns": [],
@@ -275,6 +275,32 @@
       "match_tipo": true
     },
     {
+      "source": "pl_ia",
+      "target": "res_cnj_615",
+      "score": 0.42,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": true
+    },
+    {
       "source": "decreto_12976_2026",
       "target": "lei_15409_2026",
       "score": 0.415,
@@ -297,13 +323,39 @@
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
       "match_tipo": false
+    },
+    {
+      "source": "lgpd",
+      "target": "res_cnj_615",
+      "score": 0.403,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.022
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": true
     }
   ],
   "detalhe_novas": [
     {
       "source": "stj_resp",
       "target": "anpd",
-      "score": 0.567,
+      "score": 0.563,
       "classificacao": "moderada",
       "tier": 3,
       "tipo_sugerido": "complementaridade",
@@ -313,7 +365,7 @@
         "hermeneutica": 0.0,
         "comparado": 0.333,
         "temporal": 1.0,
-        "ementa": 0.077
+        "ementa": 0.056
       },
       "temas_comuns": [
         "dados_pessoais"
@@ -351,17 +403,17 @@
     {
       "source": "stf_tema987",
       "target": "stf_adimc",
-      "score": 0.507,
+      "score": 0.509,
       "classificacao": "fraca",
       "tier": 4,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.3,
         "hermeneutica": 0.7,
         "comparado": 0.5,
         "temporal": 0.7,
-        "ementa": 0.077
+        "ementa": 0.094
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -395,6 +447,30 @@
       ],
       "jurisdicoes_comuns": [
         "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "nr1",
+      "target": "res_cnj_615",
+      "score": 0.495,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia"
+      ],
+      "jurisdicoes_comuns": [
         "UE"
       ],
       "correntes_comuns": []
@@ -526,7 +602,7 @@
       "score": 0.445,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 1.0,
         "hierarquia": 0.3,
@@ -541,29 +617,6 @@
         "internet"
       ],
       "jurisdicoes_comuns": [],
-      "correntes_comuns": []
-    },
-    {
-      "source": "stf_adimc",
-      "target": "anpd",
-      "score": 0.443,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "complementaridade",
-      "scores_parciais": {
-        "temas": 0.5,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.5,
-        "temporal": 1.0,
-        "ementa": 0.083
-      },
-      "temas_comuns": [
-        "dados_pessoais"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
       "correntes_comuns": []
     },
     {
@@ -591,19 +644,42 @@
       "correntes_comuns": []
     },
     {
-      "source": "stf_tema987",
-      "target": "stj_resp_plat",
-      "score": 0.44,
+      "source": "stf_adimc",
+      "target": "anpd",
+      "score": 0.439,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.059
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "stf_tema987",
+      "target": "stj_resp_plat",
+      "score": 0.431,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.3,
         "hermeneutica": 0.0,
         "comparado": 0.667,
         "temporal": 0.7,
-        "ementa": 0.167
+        "ementa": 0.105
       },
       "temas_comuns": [
         "internet",
@@ -694,7 +770,7 @@
       "score": 0.415,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "antinomia",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 1.0,
         "hierarquia": 0.3,
@@ -775,6 +851,29 @@
         "menores"
       ],
       "jurisdicoes_comuns": [],
+      "correntes_comuns": []
+    },
+    {
+      "source": "anpd",
+      "target": "res_cnj_615",
+      "score": 0.403,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.018
+      },
+      "temas_comuns": [
+        "dados_pessoais"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
@@ -934,6 +1033,13 @@
       "tipo": "complementaridade",
       "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu riscos psicossociais de IA no PGR (Programa de Gerenciamento de Riscos).",
       "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
+    },
+    {
+      "source": "cf88",
+      "target": "res_cnj_615",
+      "tipo": "hierarquia",
+      "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e autoriza a expedição de atos regulamentares no âmbito de sua competência. A Resolução exerce essa competência ao disciplinar desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de IA pelos órgãos do Judiciário, preservada a autonomia dos tribunais e excetuado o STF. A competência não é legislativa geral: permanece sujeita à legalidade, aos direitos fundamentais e aos limites materiais do controle administrativo.",
+      "artigos": "CF art. 103-B, § 4º, I ↔ Res. CNJ 615/2025 art. 1º"
     }
   ],
   "gap_engine": [
@@ -1031,12 +1137,17 @@
       "par": "magnifica_humanitas ↔ nr1",
       "tipo": "complementaridade",
       "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MT"
+    },
+    {
+      "par": "cf88 ↔ res_cnj_615",
+      "tipo": "hierarquia",
+      "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao "
     }
   ],
   "metadata": {
-    "gerado_em": "2026-06-06T12:39:18.723324",
+    "gerado_em": "2026-08-22T09:20:38.686271",
     "threshold": 0.4,
-    "tier_filtro": 3,
+    "tier_filtro": 5,
     "engine": "IPII Engine v1.0",
     "propriedade": "Hubstry Deep Tech © 2026",
     "principio": "O engine alerta, o curador decide."
