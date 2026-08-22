@@ -1,8 +1,8 @@
 name: Radar Legislativo — Atualização Automática
 
 on:
-  # schedule:
-    # - cron: '0 10 * * 1'   # reativar apos 19/08/2026   # Toda segunda-feira às 10h UTC (7h BRT)
+  schedule:
+    - cron: '0 0 * * 2'   # segunda-feira, 21h de Brasilia (00h UTC de terca)
   workflow_dispatch:        # Permite rodar manualmente pela interface do Actions
 
 jobs:
@@ -28,6 +28,7 @@ jobs:
 
       - name: Executar radar legislativo
         run: python -u updater.py
+        continue-on-error: true
 
       - name: Commitar snapshot se houve mudança
         run: |
