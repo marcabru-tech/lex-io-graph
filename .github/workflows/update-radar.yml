@@ -1,8 +1,8 @@
 name: Radar Legislativo — Atualização Automática
 
 on:
-  schedule:
-    - cron: '0 0 * * 2'   # segunda-feira, 21h de Brasilia (00h UTC de terca)
+  # schedule:
+    # - cron: '0 0 * * 2'   # segunda-feira, 21h de Brasilia (00h UTC de terca)
   workflow_dispatch:        # Permite rodar manualmente pela interface do Actions
 
 jobs:
