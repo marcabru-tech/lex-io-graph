@@ -110,6 +110,17 @@ Cadastro Nacional de Agressores. Vigor: jul./2026.
 
 st.divider()
 
+st.markdown("### Fundamentação teórica")
+st.markdown("""
+**Do mando ao sistema de funções: os trinta anos do Estado Regulador brasileiro (1996–2026) à luz dos cinco deslocamentos de Eusébio de Queiroz Lima**
+Preprint · Zenodo, 2026 · CC BY 4.0
+
+O quinto deslocamento — a objetivação crescente — projeta a fronteira algorítmica
+da regulação. É esse terreno que este atlas mapeia.
+
+[Ler o artigo completo →](https://doi.org/10.5281/zenodo.21978602)
+""")
+
 
 
 st.markdown("""

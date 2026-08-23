@@ -269,4 +269,36 @@ elif secao == "⚖️ Direito Natural e Positivo":
             st.markdown(f"*{caso.get('prospectiva', '')}*")
             st.caption(f"Fonte: {caso.get('fonte', 'Hubstry Deep Tech')}")
 
+st.divider()
+st.markdown("### Fundamentação teórica")
+
+with st.expander("Do mando ao sistema de funções: os trinta anos do Estado Regulador brasileiro (1996–2026) à luz dos cinco deslocamentos de Eusébio de Queiroz Lima"):
+    st.markdown("""
+**Resumo.** Este artigo propõe uma leitura teórica dos trinta anos do Estado Regulador
+brasileiro (1996–2026) a partir do programa de cinco deslocamentos do olhar político
+formulado por Eusébio de Queiroz Lima no prefácio (1935) de *Teoria do Estado*
+(1930; 4. ed., 1943). O método é a comparação pancrônica: leitura retrospectiva e
+estrutural que confronta a categoria da despersonalização do poder — matriz do
+direito público brasileiro do início do século XX — com a trajetória institucional
+das agências reguladoras.
+
+Sustenta-se que o Estado Regulador realizou institucionalmente os três primeiros
+deslocamentos — a objetivação da autoridade, a atividade estatal como processo e os
+poderes de governo como sistema de funções impessoais —, encontrando na autarquia
+sob regime especial a forma quase exata do "sistema objetivo de funções" descrito em
+1930; mas deixou não desenvolvido o quarto deslocamento, a sistematização da
+capacidade de resistência dos governados, cujo déficit explica estruturalmente as
+crises de legitimidade, captura e reversibilidade do modelo.
+
+Conclui-se que o quinto deslocamento — a objetivação crescente — projeta a
+**fronteira algorítmica da regulação**, na qual a tensão não resolvida entre função e
+resistência reaparece de forma mais aguda; e que a maturidade do modelo depende menos
+de aperfeiçoar a função técnica do que de sistematizar a resistência que a legitima.
+""")
+    st.caption(
+        "MACHADO, Guilherme Gonçalves. *Do mando ao sistema de funções.* "
+        "Zenodo, 2026. Preprint. DOI: 10.5281/zenodo.21978602"
+    )
+    st.markdown("[Acessar no Zenodo →](0)".format("https://doi.org/10.5281/zenodo.21978602"))
+
 render_footer()

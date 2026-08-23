@@ -320,6 +320,29 @@ elif secao == "📋 Magnifica Humanitas":
         for item in MAGNIFICA_HUMANITAS['impacto_brasil']:
             st.markdown(f"- {item}")
 
+st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+st.markdown("### Produção do autor")
+st.markdown("""
+**Do mando ao sistema de funções: os trinta anos do Estado Regulador brasileiro (1996–2026) à luz dos cinco deslocamentos de Eusébio de Queiroz Lima**
+Preprint · Zenodo, 2026 · CC BY 4.0 · DOI: 10.5281/zenodo.21978602
+
+Leitura pancrônica dos trinta anos do Estado Regulador brasileiro, a partir dos
+cinco deslocamentos do olhar político formulados por Eusébio de Queiroz Lima em 1935.
+
+O argumento: o Estado Regulador realizou os três primeiros deslocamentos — objetivação
+da autoridade, atividade estatal como processo, poderes de governo como sistema de
+funções impessoais —, encontrando na autarquia sob regime especial a forma quase exata
+do "sistema objetivo de funções" descrito em 1930. Deixou, porém, não desenvolvido o
+quarto: a sistematização da capacidade de resistência dos governados — déficit que
+explica estruturalmente as crises de legitimidade, captura e reversibilidade do modelo.
+
+O quinto deslocamento — a objetivação crescente — projeta a **fronteira algorítmica da
+regulação**, onde a tensão entre função e resistência reaparece de forma mais aguda.
+É a fundamentação teórica deste atlas.
+
+[Acessar no Zenodo →](https://doi.org/10.5281/zenodo.21978602)
+""")
+
 # ---- Rodapé editorial Bakhtin ----
 st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 st.markdown("""
