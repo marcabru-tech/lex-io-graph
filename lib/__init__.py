@@ -1,1 +1,1 @@
-"""Lex Quantum — Compliance Map Library."""
+"""Lexiograph — Compliance Map Library."""

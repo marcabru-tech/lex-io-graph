@@ -10,7 +10,7 @@ from lib.graph_builder import build_compliance_graph, load_json
 from lib.constants import EDGE_TYPE_LABELS, THEMES
 from lib.footer import render_footer
 
-st.set_page_config(page_title="Comparação Normativa — Lex Quantum", layout="wide", page_icon="⚖️")
+st.set_page_config(page_title="Comparação Normativa — Lexiograph", layout="wide", page_icon="⚖️")
 
 st.markdown("# ⚖️ Comparação e Contraste Normativo")
 st.markdown("Análise lado a lado de pares de normas com interseções identificadas no grafo.")

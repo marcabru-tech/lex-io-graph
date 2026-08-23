@@ -15,9 +15,9 @@ Lexiograph
 </div>
 
 <div style="color: #8a8478; font-size: 11px; max-width: 800px; line-height: 1.8; margin-bottom: 10px;">
-Comunicar sistemas digitais de forma clara, etica e estetica — unindo governanca <span style="color:#d4a853">(Lex)</span>, interacao <span style="color:#3dc8e6">(IO)</span> e estrutura semantica <span style="color:#c44b4b">(Graph)</span> sob a assinatura <strong style="color:#e8e4dc">Lex Quantum</strong>.<br>
-A Lexiograph e mais do que uma marca — e uma linguagem. Uma gramatica visual que emerge da intersecao entre compliance digital, interacao sistemica e estruturacao do conhecimento.<br>
-<strong style="color:#8a8478">Lexiograph = Lex + IO + Graph</strong> — arquitetura semiotica que traduz sistemas digitais em signos, fluxos e grafos.<br>
+Comunicar sistemas digitais de forma clara, ética e estética — unindo governança <span style="color:#d4a853">(Lex)</span>, interação <span style="color:#3dc8e6">(IO)</span> e estrutura semântica <span style="color:#c44b4b">(Graph)</span>.<br>
+A Lexiograph é mais do que uma marca — é uma linguagem. Uma gramática visual que emerge da interseção entre compliance digital, interação sistêmica e estruturação do conhecimento.<br>
+<strong style="color:#8a8478">Lexiograph = Lex + IO + Graph</strong> — arquitetura semiótica que traduz sistemas digitais em signos, fluxos e grafos.<br>
 Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> — venture building bootstrapped, Rio de Janeiro.
 </div>
 
@@ -36,7 +36,7 @@ Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> �
 </a>
 <a href="https://facebook.com/goncalvesetalii" target="_blank"
    style="color: #9b59b6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
-&#x2197; Goncalves et Alii
+&#x2197; Gonçalves et Alii
 </a>
 <a href="https://goncalvesetalii.github.io/" target="_blank"
    style="color: #9b59b6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">

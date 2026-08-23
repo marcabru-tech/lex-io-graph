@@ -12,7 +12,7 @@ from lib.graph_builder import build_compliance_matrix, load_json
 from lib.constants import EMPRESAS_MODELO
 from lib.footer import render_footer
 
-st.set_page_config(page_title="Matriz de Compliance — Lex Quantum", layout="wide", page_icon="📋")
+st.set_page_config(page_title="Matriz de Compliance — Lexiograph", layout="wide", page_icon="📋")
 
 st.markdown("# 📋 Matriz de Compliance")
 st.markdown("Tabela cruzada: perfis de empresa × normas do ordenamento jurídico digital.")
@@ -84,7 +84,7 @@ antes da entrega. Quando uma equipe técnica implementa uma feature sem mapear:
 ...a empresa fica exposta a sanções administrativas (ANPD), responsabilização civil
 (STJ — dano moral in re ipsa) e, nos casos mais graves, ação penal.
 
-**O Lex Quantum Compliance Map existe para tornar essas interseções visíveis
+**O Lexiograph existe para tornar essas interseções visíveis
 antes que se tornem problemas.**
 """)
 

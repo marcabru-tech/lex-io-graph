@@ -1,5 +1,5 @@
 """
-Construtor de grafos para o Lex Quantum Compliance Map.
+Construtor de grafos para o Lexiograph Compliance Map.
 
 Gera o grafo NetworkX a partir dos dados JSON e fornece
 funções de análise, filtragem e exportação.
