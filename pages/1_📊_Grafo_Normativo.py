@@ -68,6 +68,50 @@ normas, arestas = carregar_dados()
 # ═══════════════════════════════════════════════════════
 
 st.markdown("## 🕸️ Grafo Normativo Interativo")
+
+with st.expander("📐 Por que grafo? — estatuto epistemológico"):
+    st.markdown("""
+O grafo tem estatuto epistemológico próprio, e a razão não é ilustrativa. Na forma
+discursiva, a arquitetura de relações precisa ser reconstruída pelo leitor ao longo da
+sucessão de enunciados; no grafo, ela é o próprio objeto — modelada explicitamente e,
+portanto, percorrível, verificável e computável. O ganho não é dispensar a
+interpretação, mas torná-la rastreável; e não é expressivo — todo grafo se reduz
+formalmente a relações binárias —, mas inferencial: centralidade, ciclos, caminhos,
+componentes e dependências são consequências obtidas por operação sobre a topologia,
+sem que cada uma exija a reconstrução discursiva de uma cadeia argumentativa
+distribuída.
+
+Não se trata de intuição sem precedente: Charles Sanders Peirce construiu, nos Grafos
+Existenciais, uma lógica diagramática dotada de regras próprias de inferência; Gilles
+Deleuze e Félix Guattari pensaram o rizoma como forma de conexão sem centro organizador
+único. Minha hipótese é mais específica: o grafo oferece a mediação formal entre a
+descrição da complexidade — no sentido de Edgar Morin e das teorias dos sistemas
+complexos — e sua operacionalização em sistemas de decisão.
+
+É o que sustento no Lex-IO-Graph, onde o campo normativo, feito de remissões,
+vigências, revogações parciais, competências, exceções e antinomias, é irredutível à
+subsunção linear porque é **derrotável**: exceções não se acrescentam simplesmente à
+cadeia; elas reconfiguram a topologia de aplicabilidade, prevalência e efeito.
+
+Não por acaso, automações como as do n8n, orquestradores como o Apache Airflow e os
+grafos computacionais do aprendizado profundo convergem para formas relacionais: não
+porque a máquina leia grafos melhor do que texto, mas porque, para ser executável, o
+texto precisa tornar explícitas relações que nele permanecem distribuídas e implícitas
+— e essa estrutura tem forma de grafo.
+""")
+
+    st.markdown("---")
+    st.caption("""
+**Nota bibliográfica.** Sobre os Grafos Existenciais, ver PEIRCE, Charles S. *Logic of
+the Future: Writings on Existential Graphs*. Ed. Ahti-Veikko Pietarinen. Berlin/Boston:
+Mouton De Gruyter, 2019–2025, 3 v. em 5 t.; cf. PEIRCE, Charles S. *Collected Papers of
+Charles Sanders Peirce*. Ed. Charles Hartshorne e Paul Weiss. Cambridge, MA: Harvard
+University Press, 1933, v. 4. Sobre a dimensão inferencial do raciocínio diagramático e
+a distinção entre dedução corolarial e teoremática, ver PEIRCE, Charles S. *The New
+Elements of Mathematics*. Ed. Carolyn Eisele. The Hague: Mouton, 1976, v. 4; ROBERTS,
+Don D. *The Existential Graphs of Charles S. Peirce*. The Hague: Mouton, 1973; SHIN,
+Sun-Joo. *The Iconic Logic of Peirce's Graphs*. Cambridge, MA: MIT Press, 2002.
+""")
 st.markdown(
     "Mapa das normas do corpus e suas interseções calculadas pelo IPII Engine. "
     "Visualização interativa — arraste, zoom, passe o mouse para detalhes."
