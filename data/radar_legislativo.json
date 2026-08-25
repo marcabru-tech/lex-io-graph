@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-22T07:53:37.360779",
+  "ultima_atualizacao": "2026-08-24T21:01:28.885017",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -17,7 +17,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:37.839779"
+          "data_deteccao": "2026-08-24T21:01:32.742479"
         }
       ],
       "camara": [
@@ -30,7 +30,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:38.015018"
+          "data_deteccao": "2026-08-24T21:01:33.666854"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -41,7 +41,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642052",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:38.015018"
+          "data_deteccao": "2026-08-24T21:01:33.666854"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -52,7 +52,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641936",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:38.015018"
+          "data_deteccao": "2026-08-24T21:01:33.666854"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -63,7 +63,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641822",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:38.015018"
+          "data_deteccao": "2026-08-24T21:01:33.666854"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -74,7 +74,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641766",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-22T07:53:38.015018"
+          "data_deteccao": "2026-08-24T21:01:33.666854"
         }
       ],
       "lexml": []
@@ -95,7 +95,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.259322"
+          "data_deteccao": "2026-08-24T21:01:36.632020"
         }
       ],
       "camara": [
@@ -108,7 +108,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642181",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.435853"
+          "data_deteccao": "2026-08-24T21:01:36.927380"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -119,7 +119,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641087",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.435853"
+          "data_deteccao": "2026-08-24T21:01:36.927380"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -130,7 +130,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2639458",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.435853"
+          "data_deteccao": "2026-08-24T21:01:36.927380"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -141,7 +141,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2629351",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.435853"
+          "data_deteccao": "2026-08-24T21:01:36.927380"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -152,7 +152,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600015",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-22T07:53:39.435853"
+          "data_deteccao": "2026-08-24T21:01:36.927380"
         }
       ],
       "lexml": []
@@ -173,7 +173,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-08-22T07:53:40.758262"
+          "data_deteccao": "2026-08-24T21:01:40.145674"
         }
       ],
       "camara": [],
@@ -195,7 +195,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "responsabilidade plataformas",
-          "data_deteccao": "2026-08-22T07:53:42.427280"
+          "data_deteccao": "2026-08-24T21:01:43.864656"
         }
       ],
       "camara": [],
@@ -217,7 +217,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "riscos psicossociais trabalho",
-          "data_deteccao": "2026-08-22T07:53:44.251394"
+          "data_deteccao": "2026-08-24T21:01:47.662449"
         }
       ],
       "camara": [],
