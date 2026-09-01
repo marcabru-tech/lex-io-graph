@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-24T21:01:28.885017",
+  "ultima_atualizacao": "2026-08-31T21:00:33.243082",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -17,10 +17,21 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:32.742479"
+          "data_deteccao": "2026-08-31T21:00:34.354824"
         }
       ],
       "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2644599",
+          "sigla": "PL 5178/2026",
+          "ementa": "Institui a Política Nacional de Formação Profissional para Trabalhadores Substituídos por Automação e Inteligência Artificial, estabelece o direito à requalificação tecnológica gratuita, cria incentivos fiscais para a recontratação e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-08-31T21:00:34.783598"
+        },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2643605",
@@ -30,7 +41,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:33.666854"
+          "data_deteccao": "2026-08-31T21:00:34.783598"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -41,7 +52,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642052",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:33.666854"
+          "data_deteccao": "2026-08-31T21:00:34.783598"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -52,7 +63,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641936",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:33.666854"
+          "data_deteccao": "2026-08-31T21:00:34.783598"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -63,18 +74,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641822",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:33.666854"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2641766",
-          "sigla": "PL 4849/2026",
-          "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a falsidade de identidade praticada mediante conteúdo gerado ou alterado por sistema de inteligência artificial e para prever causa de aumento de pena no crime de estelionato praticado por esse meio.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641766",
-          "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-08-24T21:01:33.666854"
+          "data_deteccao": "2026-08-31T21:00:34.783598"
         }
       ],
       "lexml": []
@@ -95,7 +95,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.632020"
+          "data_deteccao": "2026-08-31T21:00:36.844932"
         }
       ],
       "camara": [
@@ -108,7 +108,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642181",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.927380"
+          "data_deteccao": "2026-08-31T21:00:37.113709"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -119,7 +119,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641087",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.927380"
+          "data_deteccao": "2026-08-31T21:00:37.113709"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -130,7 +130,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2639458",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.927380"
+          "data_deteccao": "2026-08-31T21:00:37.113709"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -141,7 +141,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2629351",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.927380"
+          "data_deteccao": "2026-08-31T21:00:37.113709"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -152,7 +152,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600015",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-08-24T21:01:36.927380"
+          "data_deteccao": "2026-08-31T21:00:37.113709"
         }
       ],
       "lexml": []
@@ -173,7 +173,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-08-24T21:01:40.145674"
+          "data_deteccao": "2026-08-31T21:00:39.560778"
         }
       ],
       "camara": [],
@@ -195,7 +195,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "responsabilidade plataformas",
-          "data_deteccao": "2026-08-24T21:01:43.864656"
+          "data_deteccao": "2026-08-31T21:00:43.549139"
         }
       ],
       "camara": [],
@@ -217,7 +217,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "riscos psicossociais trabalho",
-          "data_deteccao": "2026-08-24T21:01:47.662449"
+          "data_deteccao": "2026-08-31T21:00:46.251766"
         }
       ],
       "camara": [],
@@ -556,6 +556,15 @@
       "lexml": []
     }
   },
-  "novidades_detectadas": [],
-  "total_novidades": 0
+  "novidades_detectadas": [
+    {
+      "tema": "ia",
+      "fonte": "camara",
+      "sigla": "PL 5178/2026",
+      "ementa": "Institui a Política Nacional de Formação Profissional para Trabalhadores Substituídos por Automação e Inteligência Artificial, estabelece o direito à requalificação tecnológica gratuita, cria incentivos fiscais para a recontratação e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
+      "data_deteccao": "2026-08-31T21:00:34.783598"
+    }
+  ],
+  "total_novidades": 1
 }
