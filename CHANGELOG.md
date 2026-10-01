@@ -1,5 +1,14 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.16.1] — 2026-10-01
+
+- Radar: métrica do topo passa a contar novidades pendentes de curadoria (17), igual à
+  lista da seção Novidades; as que já estão no grafo aparecem na dica da métrica.
+- Inteligência: todo caso e ensaio exibe selo de natureza. Sem rótulo próprio, o caso é
+  marcado como leitura analítica (interpretação e cenários, não fonte normativa nem
+  previsão). Nenhum texto dos casos foi alterado; a revisão de linguagem segue para
+  aprovação.
+
 ## [v0.16.0] — 2026-10-01
 
 ### Fase 0 (continuação) — hierarquia dos tratados, saúde do radar, EMPA

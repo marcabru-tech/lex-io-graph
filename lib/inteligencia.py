@@ -9,6 +9,16 @@ fechamentos moralizantes. Fatos como diagnóstico estratégico e oportunidade.
 """
 
 # ---- Casos de inteligência estratégica ----
+# Selo padrão de natureza (Fase 0): caso sem rótulo próprio é leitura
+# analítica. Separar fato verificado de interpretação é contrato do produto.
+NATUREZA_CASO_PADRAO = (
+    "Leitura analítica do Lexiograph: interpretação sobre fatos citados, com prospectiva "
+    "em cenários. Não é fonte normativa nem previsão."
+)
+NATUREZA_ENSAIO_PADRAO = (
+    "Ensaio doutrinário autoral: interpretação fundamentada nas normas e na doutrina citadas."
+)
+
 CASOS_ESTRATEGICOS = [
     {
         "id": "art19_guerra_institucional",

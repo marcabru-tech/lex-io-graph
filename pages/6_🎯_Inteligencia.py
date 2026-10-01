@@ -1,6 +1,6 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
-from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA, SOBERANIA
+from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA, SOBERANIA, NATUREZA_CASO_PADRAO, NATUREZA_ENSAIO_PADRAO
 from lib.footer import render_footer
 from lib.estado_regulador import figura_linha_do_tempo, SINTESE_LIVRO, FONTE_LIVRO
 from lib.constants import ODIN_URL
@@ -115,8 +115,7 @@ if secao == "⚡ Casos Estratégicos":
   <div class="caso-sintese">{caso['sintese']}</div>
 </div>""", unsafe_allow_html=True)
 
-        if caso.get("natureza"):
-            st.caption(caso["natureza"])
+        st.caption(caso.get("natureza") or NATUREZA_CASO_PADRAO)
         if caso.get("matriz_vigencia"):
             import json as _json
             with open("data/normas.json", encoding="utf-8") as _f:
@@ -349,6 +348,7 @@ elif secao == "⚖️ Direito Natural e Positivo":
     for caso in [CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO]:
         with st.expander(f"⚖️ {caso['titulo']}", expanded=False):
             st.markdown(f"*{caso['subtitulo']}*")
+            st.caption(caso.get("natureza") or NATUREZA_ENSAIO_PADRAO)
             st.markdown(f"**Área:** {caso['area']}")
             st.divider()
             for tensao in caso.get('tensoes', []):
