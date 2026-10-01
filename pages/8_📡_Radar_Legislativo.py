@@ -186,10 +186,7 @@ elif secao == "📋 Por Tema":
 
     if tema_sel:
         tema_data = radar["temas"].get(tema_sel, {})
-        termos = tema_data.get("termos_monitorados", [])
-        if termos:
-            st.markdown(f"**Termos monitorados:** {', '.join(termos)}")
-
+        # ---- Ponte Radar -> Grafo: onde este tema encaixa no corpus curado ----
         vetores = vetores_do_tema_radar(tema_sel)
         if vetores:
             try:
@@ -198,11 +195,32 @@ elif secao == "📋 Por Tema":
             except Exception:
                 _normas = []
             rel = normas_relacionadas(tema_sel, _normas)
+            chips_v = " ".join(
+                f'<span style="display:inline-block;padding:3px 10px;margin:2px;border-radius:999px;'
+                f'background:rgba(212,168,83,0.15);border:1px solid rgba(212,168,83,0.35);color:#d4a853;'
+                f'font-size:12px;">{THEMES.get(v, v)}</span>' for v in vetores)
+            chips_n = " ".join(
+                f'<span style="display:inline-block;padding:3px 10px;margin:2px;border-radius:999px;'
+                f'background:rgba(61,200,230,0.10);border:1px solid rgba(61,200,230,0.30);color:#3dc8e6;'
+                f'font-size:12px;">{n.get("sigla") or n["nome"]}</span>'
+                for n in sorted(rel, key=lambda n: n.get("sigla") or n["nome"]))
             st.markdown(
-                "**Vetores do grafo:** " + ", ".join(THEMES.get(v, v) for v in vetores)
-                + (" · **Normas do corpus com que dialoga:** "
-                   + " · ".join(sorted(n.get("sigla") or n["nome"] for n in rel)) if rel else "")
+                '<div style="border:1px solid rgba(212,168,83,0.35);border-radius:8px;padding:12px 14px;'
+                'margin:8px 0 16px 0;background:rgba(212,168,83,0.05);">'
+                '<div style="font-size:13px;font-weight:bold;color:#e8e4dc;margin-bottom:6px;">'
+                '🕸️ No grafo — vetores e normas do corpus com que este tema dialoga</div>'
+                f'<div style="margin-bottom:6px;">{chips_v}</div>'
+                f'<div>{chips_n or "<em>nenhuma norma do corpus nestes vetores</em>"}</div>'
+                '<div style="font-size:11px;color:#8a8478;margin-top:8px;">Orientação ao curador: '
+                'um PL deste tema, se aprovado, se ligaria a estas normas. Nada entra no grafo '
+                'automaticamente.</div></div>',
+                unsafe_allow_html=True,
             )
+            st.markdown("[🕸️ Abrir o Grafo Normativo →](/Grafo_Normativo)")
+
+        termos = tema_data.get("termos_monitorados", [])
+        if termos:
+            st.markdown(f"**Termos monitorados:** {', '.join(termos)}")
 
         for fonte in ["senado", "camara", "lexml"]:
             itens = tema_data.get(fonte, [])

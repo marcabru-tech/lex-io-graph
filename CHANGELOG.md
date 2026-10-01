@@ -1,5 +1,13 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.3] — 2026-10-01
+
+### Radar: ponte para o grafo em destaque
+
+- Em "Por Tema", a ligação com o grafo passa a ser um quadro "🕸️ No grafo" logo
+  abaixo do seletor, com os vetores e as normas do corpus em etiquetas, nota de
+  curadoria e link para o Grafo Normativo. Antes era uma linha de texto discreta.
+
 ## [v0.13.2] — 2026-10-01
 
 ### Radar: leitura do Senado adaptada ao novo formato da API
