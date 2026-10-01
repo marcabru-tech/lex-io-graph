@@ -94,6 +94,22 @@ NORMA_TAGS = {
         "violencia_genero", "feminicidio", "cadastro_agressor",
         "protecao_mulher", "reincidencia",
     ],
+    "res_cnj_615": [
+        "inteligencia_artificial", "governanca_ia", "auditoria_ia",
+        "poder_judiciario", "supervisao_humana", "transparencia_algoritmos",
+    ],
+    "lei_15504_2026": [
+        "datacenter", "computacao_nuvem", "energia", "incentivo_fiscal",
+        "infraestrutura_digital", "soberania_tecnologica", "direito_economico",
+    ],
+    "lei_15506_2026": [
+        "minerais_criticos", "mineracao", "incentivo_fiscal", "investimento_estrangeiro",
+        "rastreabilidade", "energia", "soberania_tecnologica", "direito_economico",
+    ],
+    "decreto_13118_2026": [
+        "minerais_criticos", "investimento_estrangeiro", "controle_societario",
+        "soberania_tecnologica",
+    ],
     "magnifica_humanitas": [
         "etica_ia", "dignidade_humana", "direitos_humanos",
         "responsabilidade_ia", "vigilancia", "trabalho_digno",
@@ -131,7 +147,16 @@ PERFIL_TEMA_MAP = {
         "Escritório de Advocacia / Jurídico": [
             "dados_pessoais", "dados_sensiveis", "sigilo_comunicacao",
             "bases_legais", "seguranca_dados", "dpo", "direito_titular",
-            "incidente", "privacidade",
+            "incidente", "privacidade", "poder_judiciario",
+        ],
+        "Infraestrutura Digital / Data Center / Nuvem": [
+            "datacenter", "computacao_nuvem", "energia", "incentivo_fiscal",
+            "infraestrutura_digital", "seguranca_dados",
+            "transferencia_internacional", "soberania_tecnologica",
+        ],
+        "Mineração / Minerais Críticos": [
+            "minerais_criticos", "mineracao", "investimento_estrangeiro",
+            "controle_societario", "rastreabilidade", "energia", "incentivo_fiscal",
         ],
         "Outro": ["dados_pessoais", "internet"],
     },
@@ -208,6 +233,31 @@ PERGUNTAS = {
 }
 
 ACOES_POR_TAG = {
+    "datacenter": {
+        "prioridade": "alta",
+        "acao": "Avaliar habilitação ao REDATA e mapear as contrapartidas: 10% da capacidade ao mercado interno, 2% em P&D e eficiência hídrica de até 0,05 L/kWh",
+        "base": "Lei 11.196/2005, art. 11-B, § 1º (Lei 15.504/2026)",
+    },
+    "energia": {
+        "prioridade": "media",
+        "acao": "Documentar a origem da energia contratada; o critério de 'baixa emissão' do REDATA ainda depende de regulamento",
+        "base": "Lei 11.196/2005, art. 11-B, § 1º, III",
+    },
+    "minerais_criticos": {
+        "prioridade": "alta",
+        "acao": "Verificar enquadramento do projeto na PNMCE e acompanhar a lista oficial de minerais do CIMCE",
+        "base": "Lei 15.506/2026, arts. 5º e 41",
+    },
+    "investimento_estrangeiro": {
+        "prioridade": "critica",
+        "acao": "Mapear mudanças de controle e participação estrangeira relevante sujeitas à homologação do CIMCE",
+        "base": "Lei 15.506/2026, art. 41; Decreto 13.118/2026",
+    },
+    "rastreabilidade": {
+        "prioridade": "alta",
+        "acao": "Estruturar registros de origem, licença ambiental e outorga mineral para o sistema de rastreabilidade",
+        "base": "Lei 15.506/2026, art. 44",
+    },
     "consentimento": {
         "prioridade": "critica",
         "acao": "Implementar mecanismo de consentimento granular",

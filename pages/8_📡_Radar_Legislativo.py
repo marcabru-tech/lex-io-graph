@@ -2,7 +2,8 @@ import streamlit as st
 import json
 from pathlib import Path
 from datetime import datetime
-from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA
+from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, THEMES
+from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -188,6 +189,20 @@ elif secao == "📋 Por Tema":
         termos = tema_data.get("termos_monitorados", [])
         if termos:
             st.markdown(f"**Termos monitorados:** {', '.join(termos)}")
+
+        vetores = vetores_do_tema_radar(tema_sel)
+        if vetores:
+            try:
+                with open("data/normas.json", encoding="utf-8") as _f:
+                    _normas = json.load(_f)["nodes"]
+            except Exception:
+                _normas = []
+            rel = normas_relacionadas(tema_sel, _normas)
+            st.markdown(
+                "**Vetores do grafo:** " + ", ".join(THEMES.get(v, v) for v in vetores)
+                + (" · **Normas do corpus com que dialoga:** "
+                   + " · ".join(sorted(n.get("sigla") or n["nome"] for n in rel)) if rel else "")
+            )
 
         for fonte in ["senado", "camara", "lexml"]:
             itens = tema_data.get(fonte, [])

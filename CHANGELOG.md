@@ -1,5 +1,18 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.0] — 2026-10-01
+
+### Taxonomias integradas e versões fixadas
+
+- `lib/taxonomia.py`: mapa Radar → vetores do grafo. Cada tema do Radar mostra os
+  vetores e as normas do corpus com que dialoga.
+- Questionário: setores "Infraestrutura Digital / Data Center / Nuvem" e
+  "Mineração / Minerais Críticos"; tags para Res. CNJ 615, REDATA, PNMCE e
+  Decreto 13.118; ações com base legal (REDATA, PNMCE, CIMCE, rastreabilidade).
+  1.800 perfis testados.
+- `requirements.txt` com versões fixadas (Streamlit 1.64.0, Plotly 7.1.0,
+  NetworkX 3.6.1, PyVis 0.3.2, Requests 2.33.1).
+
 ## [v0.12.1] — 2026-10-01
 
 ### Teoria dos Conjuntos calculada a partir do corpus

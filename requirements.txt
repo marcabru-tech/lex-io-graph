@@ -1,5 +1,8 @@
-streamlit>=1.32.0
-networkx>=3.2
-pyvis>=0.3.2
-requests>=2.31.0
-plotly>=5.18.0
+# Versoes fixadas (testadas em 01/10/2026). Atualizar de forma deliberada:
+# trocar a versao, rodar smoke_test.py e conferir as paginas do Grafo e da
+# Teoria dos Conjuntos, que usam APIs do Streamlit marcadas para remocao.
+streamlit==1.64.0
+networkx==3.6.1
+pyvis==0.3.2
+requests==2.33.1
+plotly==7.1.0
