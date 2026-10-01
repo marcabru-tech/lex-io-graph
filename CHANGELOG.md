@@ -1,5 +1,21 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.14.0] — 2026-10-01
+
+### Direito Internacional Público e Privado no corpus (parte 2 de 3)
+
+- 6 nós: Convenção de Viena (Decreto 7.030/2009, com reserva aos arts. 25 e 66),
+  Tratado de Assunção (Decreto 350/1991), LINDB (DIPr, arts. 7º a 17) e os acordos
+  Mercosul–Singapura (Decreto 13.081/2026), Mercosul–EFTA (Decreto 13.126/2026) e
+  Acordo Provisório de Comércio Mercosul–UE (ITA, Decreto 12.953/2026). O EMPA é
+  registrado como instrumento distinto, não em aplicação provisória.
+- Campo `vigencia` com matriz por Parte (situação, data, fonte) nos acordos.
+- Status novos: `vigente_parcial` e `aplicacao_provisoria`.
+- 10 arestas: incorporação constitucional (CF arts. 49, I e 84, VIII), Tratado de
+  Assunção → acordos (estrutura do bloco), CVDT art. 25 → ITA, CF → LINDB.
+  Arestas temáticas (acordos ↔ LGPD, UE ↔ PNMCE) não registradas sem leitura textual.
+- 28 normas, 48 arestas.
+
 ## [v0.13.5] — 2026-10-01
 
 ### Acordos internacionais — radar, taxonomia e questionário (parte 1 de 3)

@@ -18,7 +18,7 @@ APP_SUBTITLE = (
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.13.5"
+APP_VERSION = "0.14.0"
 
 # ---- Radar Legislativo: cadencia (fonte unica para os textos da UI) ----
 RADAR_CADENCIA = "Coleta automática semanal às segundas-feiras, 9h (horário de Brasília), via GitHub Actions."
@@ -169,6 +169,8 @@ STATUS_LABELS = {
     "tramitacao":           "Em tramitação",
     "pendente_embargos":    "Julgado — Embargos pendentes",
     "transitado_julgado":   "Transitado em julgado",
+    "vigente_parcial":      "Vigente (parcial, por Parte)",
+    "aplicacao_provisoria": "Em aplicação provisória",
 }
 
 STATUS_COLORS = {
@@ -177,4 +179,6 @@ STATUS_COLORS = {
     "tramitacao":           "#8b8b8b",
     "pendente_embargos":    "#c44b4b",
     "transitado_julgado":   "#3dc8e6",
+    "vigente_parcial":      "#a3d977",
+    "aplicacao_provisoria": "#e6c13d",
 }

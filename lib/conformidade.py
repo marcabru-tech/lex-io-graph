@@ -94,6 +94,17 @@ NORMA_TAGS = {
         "violencia_genero", "feminicidio", "cadastro_agressor",
         "protecao_mulher", "reincidencia",
     ],
+    "acordo_mercosul_singapura": [
+        "comercio_exterior", "acordo_comercial", "regras_origem", "certificado_origem",
+        "tarifas", "comercio_eletronico",
+    ],
+    "acordo_mercosul_efta": [
+        "comercio_exterior", "acordo_comercial", "regras_origem", "certificado_origem", "tarifas",
+    ],
+    "acordo_mercosul_ue_ita": [
+        "comercio_exterior", "acordo_comercial", "regras_origem", "certificado_origem", "tarifas",
+    ],
+    "lindb": ["contratos_internacionais", "lei_aplicavel", "transferencia_internacional"],
     "res_cnj_615": [
         "inteligencia_artificial", "governanca_ia", "auditoria_ia",
         "poder_judiciario", "supervisao_humana", "transparencia_algoritmos",

@@ -265,6 +265,76 @@
       "tipo": "complementaridade",
       "descricao": "Minerais críticos e data centers são elos da mesma cadeia de capacidade computacional: insumo (minerais, semicondutores) e infraestrutura (compute). As duas leis usam incentivo fiscal condicionado a contrapartidas no território.",
       "artigos": "Lei 15.506/2026 arts. 17-18 ↔ Lei 11.196/2005 art. 11-B"
+    },
+    {
+      "source": "cf88",
+      "target": "convencao_viena_1969",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 496/2009 → Decreto 7.030/2009.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "tratado_assuncao_1991",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 197/1991 → Decreto 350/1991.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_singapura",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 147/2026 → Decreto 13.081/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_efta",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 146/2026 → Decreto 13.126/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 14/2026 → Decreto 12.953/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_singapura",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica.",
+      "artigos": "Tratado de Assunção, art. 1º"
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_efta",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com EFTA é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica.",
+      "artigos": "Tratado de Assunção, art. 1º"
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica.",
+      "artigos": "Tratado de Assunção, art. 1º"
+    },
+    {
+      "source": "convencao_viena_1969",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA (art. 23.3) só começou após a aprovação pelo Congresso (DL 14/2026), coerente com a reserva.",
+      "artigos": "CVDT art. 25 (reservado) ↔ ITA art. 23.3"
+    },
+    {
+      "source": "cf88",
+      "target": "lindb",
+      "tipo": "hierarquia",
+      "descricao": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem pública, bons costumes) dialogam com os fundamentos constitucionais da soberania (art. 1º, I).",
+      "artigos": "CF art. 1º, I ↔ LINDB art. 17"
     }
   ]
 }

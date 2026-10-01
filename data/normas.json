@@ -908,6 +908,246 @@
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA — CFIUS (Committee on Foreign Investment in the United States), triagem de investimento estrangeiro por segurança nacional; União Europeia — Regulamento (UE) 2019/452, quadro de triagem de investimento estrangeiro direto. O CIMCE reúne em um só colegiado a política industrial e a triagem.",
       "autores": [],
       "latim": []
+    },
+    {
+      "artigos_chave": [
+        "Art. 26 — pacta sunt servanda",
+        "Art. 27 — direito interno não justifica inadimplemento de tratado",
+        "Arts. 31 a 33 — interpretação dos tratados",
+        "Art. 25 — aplicação provisória (reservado pelo Brasil)"
+      ],
+      "autores": [
+        {
+          "nome": "Hildebrando Accioly",
+          "datas": "1888–1962",
+          "obra": "Tratado de Direito Internacional Público, 1933–1935",
+          "contribuicao": "Sistematização do direito dos tratados no Brasil antes da codificação de Viena"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Pacta sunt servanda",
+          "traducao_literal": "Os pactos devem ser cumpridos",
+          "traducao_juridica": "Todo tratado em vigor obriga as partes e deve ser cumprido de boa-fé (CVDT, art. 26)",
+          "contexto_romano": "Princípio de origem canônica e romanística, positivado no direito internacional pela Convenção de 1969"
+        }
+      ],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA assinaram e não ratificaram a Convenção, aplicando-a como costume internacional; Reino Unido e França a ratificaram. A reserva brasileira ao art. 25 condiciona a aplicação provisória de tratados à aprovação do Congresso.",
+      "orgao": "Organização das Nações Unidas",
+      "historia": "Concluída em Viena em 23/05/1969; em vigor internacional desde 27/01/1980. Aprovada pelo Decreto Legislativo 496/2009 e promulgada pelo Decreto 7.030, de 14/12/2009; vigente para o Brasil desde 25/09/2009, data do depósito da ratificação. O Brasil fez reserva ao art. 25 (aplicação provisória) e ao art. 66 (solução de controvérsias). Fornece as regras internacionais sobre tratados — não é norma que confira validade interna aos acordos, função que cabe à Constituição. Verificado em 01/10/2026.",
+      "id": "convencao_viena_1969",
+      "nome": "Convenção de Viena sobre o Direito dos Tratados (1969)",
+      "sigla": "CVDT — Decreto 7.030/2009",
+      "tipo": "documento_internacional",
+      "status": "vigente",
+      "ano": 2009,
+      "temas": [
+        "direito_internacional_publico"
+      ],
+      "ementa": "Codifica as normas internacionais sobre celebração, entrada em vigor, aplicação, interpretação e extinção de tratados. Promulgada no Brasil pelo Decreto 7.030/2009, com reserva aos arts. 25 e 66."
+    },
+    {
+      "artigos_chave": [
+        "Art. 1º — constituição do Mercado Comum do Sul e tarifa externa comum",
+        "Art. 1º — adoção de política comercial comum em relação a terceiros Estados"
+      ],
+      "autores": [
+        {
+          "nome": "Celso D. de Albuquerque Mello",
+          "datas": "1937–2000",
+          "obra": "Curso de Direito Internacional Público",
+          "contribuicao": "Obra de referência do DIP brasileiro, incluindo organizações internacionais e integração regional"
+        }
+      ],
+      "latim": [],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): União Europeia — Tratado de Roma (1957) e competência exclusiva da União para política comercial; o Mercosul, intergovernamental, negocia externamente em conjunto, mas cada Estado internaliza e ratifica os acordos.",
+      "orgao": "Mercosul",
+      "historia": "Assinado em 26/03/1991; aprovado pelo Decreto Legislativo 197/1991 e promulgado pelo Decreto 350, de 21/11/1991; em vigor internacional e para o Brasil desde 29/11/1991. Verificado em 01/10/2026.",
+      "id": "tratado_assuncao_1991",
+      "nome": "Tratado de Assunção (1991) — constitui o Mercosul",
+      "sigla": "Tratado de Assunção — Decreto 350/1991",
+      "tipo": "documento_internacional",
+      "status": "vigente",
+      "ano": 1991,
+      "temas": [
+        "direito_internacional_publico",
+        "direito_economico"
+      ],
+      "ementa": "Tratado para a constituição de um mercado comum entre Argentina, Brasil, Paraguai e Uruguai. Base da estrutura jurídica e institucional sob a qual o Mercosul negocia acordos comerciais externos."
+    },
+    {
+      "artigos_chave": [
+        "Art. 7º — lei do domicílio: personalidade, nome, capacidade e família",
+        "Art. 9º — obrigações: lei do país em que se constituírem",
+        "Art. 12 — competência da autoridade judiciária brasileira",
+        "Art. 17 — limites da lei estrangeira: soberania, ordem pública e bons costumes"
+      ],
+      "autores": [
+        {
+          "nome": "Haroldo Valladão",
+          "datas": "1901–1987",
+          "obra": "Direito Internacional Privado (3 v.)",
+          "contribuicao": "Principal sistematizador do DIPr brasileiro; autor do anteprojeto de Lei Geral de Aplicação das Normas Jurídicas"
+        },
+        {
+          "nome": "Clóvis Beviláqua",
+          "datas": "1859–1944",
+          "obra": "Princípios Elementares de Direito Internacional Privado, 1906",
+          "contribuicao": "Fundação doutrinária do DIPr no Brasil e autor do projeto do Código Civil de 1916"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Locus regit actum",
+          "traducao_literal": "O lugar rege o ato",
+          "traducao_juridica": "A forma do ato jurídico segue a lei do lugar em que é praticado",
+          "contexto_romano": "Regra estatutária medieval, base das normas de conflito sobre forma dos atos"
+        }
+      ],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): União Europeia — Regulamentos Roma I (obrigações contratuais) e Roma II (extracontratuais); Conferência da Haia de Direito Internacional Privado como foro de convenções. O Brasil mantém a regra do art. 9º (lugar da constituição da obrigação), sem a autonomia da vontade expressa de Roma I.",
+      "orgao": "Presidência da República",
+      "historia": "Editada como Lei de Introdução ao Código Civil em 1942; denominação atual dada pela Lei 12.376/2010. Âncora do DIPr no Lexiograph, sem esgotar o campo, que inclui também normas processuais (CPC) e tratados de cooperação. Verificado em 01/10/2026.",
+      "id": "lindb",
+      "nome": "Lei de Introdução às Normas do Direito Brasileiro (LINDB)",
+      "sigla": "Decreto-Lei 4.657/1942",
+      "tipo": "lei",
+      "status": "vigente",
+      "ano": 1942,
+      "temas": [
+        "direito_internacional_privado"
+      ],
+      "ementa": "Norma de sobredireito: disciplina a aplicação das leis no tempo e no espaço. Os arts. 7º a 17 são as regras clássicas de conflito de leis do Direito Internacional Privado brasileiro."
+    },
+    {
+      "artigos_chave": [
+        "Bens, serviços, investimentos, facilitação de comércio, propriedade intelectual, compras governamentais e comércio eletrônico",
+        "Art. 19.13 — entrada em vigor"
+      ],
+      "autores": [],
+      "latim": [],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): Singapura mantém rede ampla de acordos de livre comércio e acordos de economia digital (DEPA, 2020); o acordo com o Mercosul é o primeiro do bloco no Sudeste Asiático.",
+      "orgao": "Mercosul",
+      "historia": "Assinado no Rio de Janeiro em 07/12/2023; aprovado pelo Decreto Legislativo 147/2026 (origem: PDL 571/2026); ratificação depositada em 30/06/2026; promulgado pelo Decreto 13.081, de 27/07/2026; em vigor para o Brasil em 01/08/2026 (art. 19.13). Contém capítulo de comércio eletrônico — eventual relação com a LGPD depende de leitura do texto do capítulo e não foi registrada como aresta. Verificado em 01/10/2026.",
+      "id": "acordo_mercosul_singapura",
+      "nome": "Acordo de Livre Comércio Mercosul–Singapura",
+      "sigla": "Decreto 13.081/2026",
+      "tipo": "documento_internacional",
+      "status": "vigente",
+      "ano": 2026,
+      "temas": [
+        "direito_internacional_publico",
+        "direito_economico"
+      ],
+      "ementa": "Primeiro acordo de livre comércio do Mercosul com país do Sudeste Asiático. Em vigor para o Brasil desde 01/08/2026.",
+      "vigencia": [
+        {
+          "parte": "Brasil",
+          "situacao": "em vigor",
+          "desde": "2026-08-01",
+          "fonte": "Decreto 13.081/2026"
+        },
+        {
+          "parte": "Paraguai e Uruguai",
+          "situacao": "em vigor bilateralmente antes do Brasil",
+          "desde": "",
+          "fonte": "Mercosul (não conferido nesta versão)"
+        },
+        {
+          "parte": "Argentina",
+          "situacao": "anunciada para 01/11/2026",
+          "desde": "",
+          "fonte": "Ministério do Comércio e Indústria de Singapura (declaração)"
+        }
+      ]
+    },
+    {
+      "artigos_chave": [
+        "Art. 16.5 — entrada em vigor bilateral, à medida que cada Parte conclui seus procedimentos"
+      ],
+      "autores": [],
+      "latim": [],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): a EFTA negocia acordos próprios, distintos dos da União Europeia; na Suíça, tratados aprovados pelo Parlamento podem ser submetidos a referendo facultativo.",
+      "orgao": "Mercosul",
+      "historia": "Assinado no Rio de Janeiro em 16/09/2025; aprovado pelo Decreto Legislativo 146/2026; ratificação depositada junto ao Governo da Noruega em 08/07/2026; promulgado pelo Decreto 13.126, de 23/09/2026; em vigor para o Brasil, no plano externo, em 01/10/2026 (art. 16.5). Ver matriz de vigência por Parte. Verificado em 01/10/2026.",
+      "id": "acordo_mercosul_efta",
+      "nome": "Acordo de Livre Comércio Mercosul–EFTA",
+      "sigla": "Decreto 13.126/2026",
+      "tipo": "documento_internacional",
+      "status": "vigente_parcial",
+      "ano": 2026,
+      "temas": [
+        "direito_internacional_publico",
+        "direito_economico"
+      ],
+      "ementa": "Acordo com Suíça, Noruega, Islândia e Liechtenstein. Vigência bilateral escalonada: em 01/10/2026, em vigor apenas entre Brasil e Islândia.",
+      "vigencia": [
+        {
+          "parte": "Brasil",
+          "situacao": "em vigor",
+          "desde": "2026-10-01",
+          "fonte": "Decreto 13.126/2026"
+        },
+        {
+          "parte": "Islândia",
+          "situacao": "em vigor com o Brasil",
+          "desde": "2026-10-01",
+          "fonte": "EFTA"
+        },
+        {
+          "parte": "Noruega",
+          "situacao": "pendente (MDIC prevê 01/11/2026)",
+          "desde": "",
+          "fonte": "EFTA; MDIC"
+        },
+        {
+          "parte": "Suíça",
+          "situacao": "pendente (Parlamento aprovou em 16/09/2026; referendo anunciado)",
+          "desde": "",
+          "fonte": "EFTA; Parlamento suíço"
+        },
+        {
+          "parte": "Liechtenstein",
+          "situacao": "pendente",
+          "desde": "",
+          "fonte": "EFTA"
+        },
+        {
+          "parte": "Argentina, Paraguai, Uruguai",
+          "situacao": "pendente",
+          "desde": "",
+          "fonte": "EFTA"
+        }
+      ]
+    },
+    {
+      "artigos_chave": [
+        "Art. 23.2 — entrada em vigor após notificação recíproca das formalidades internas",
+        "Art. 23.3 — aplicação provisória"
+      ],
+      "autores": [],
+      "latim": [],
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): a divisão entre acordo comercial provisório (competência da União) e acordo de parceria (competência mista, sujeito a ratificação dos Estados-membros) segue o modelo adotado pela UE após o Parecer 2/15 do Tribunal de Justiça da UE (2017).",
+      "orgao": "Mercosul",
+      "historia": "Firmado em Assunção em 17/01/2026; aprovado pelo Decreto Legislativo 14, de 17/03/2026; notificação em 18/03/2026; promulgado pelo Decreto 12.953, de 28/04/2026, com aplicação provisória pelo Brasil a partir de 01/05/2026 (art. 23.3). O Acordo de Parceria (EMPA) é instrumento distinto, com procedimentos próprios de conclusão — não está em aplicação provisória. A aplicação provisória foi precedida de aprovação do Congresso, coerente com a reserva brasileira ao art. 25 da Convenção de Viena. Verificado em 01/10/2026.",
+      "id": "acordo_mercosul_ue_ita",
+      "nome": "Acordo Provisório de Comércio Mercosul–União Europeia (ITA)",
+      "sigla": "Decreto 12.953/2026",
+      "tipo": "documento_internacional",
+      "status": "aplicacao_provisoria",
+      "ano": 2026,
+      "temas": [
+        "direito_internacional_publico",
+        "direito_economico"
+      ],
+      "ementa": "Interim Trade Agreement: reproduz o pilar comercial do Acordo de Parceria Mercosul–UE (EMPA). Aplicado provisoriamente pelo Brasil desde 01/05/2026; ainda não em vigor nos termos do art. 23.2.",
+      "vigencia": [
+        {
+          "parte": "Brasil",
+          "situacao": "aplicação provisória",
+          "desde": "2026-05-01",
+          "fonte": "Decreto 12.953/2026, art. 23.3"
+        }
+      ]
     }
   ]
 }
