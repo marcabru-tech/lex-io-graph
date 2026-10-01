@@ -18,7 +18,7 @@ APP_SUBTITLE = (
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.13.3"
+APP_VERSION = "0.13.4"
 
 # ---- Radar Legislativo: cadencia (fonte unica para os textos da UI) ----
 RADAR_CADENCIA = "Coleta automática semanal às segundas-feiras, 9h (horário de Brasília), via GitHub Actions."

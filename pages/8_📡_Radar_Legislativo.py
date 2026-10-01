@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, THEMES
-from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas
+from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -143,8 +143,22 @@ FONTE_LABELS = {
     "lexml": "LexML",
 }
 
+try:
+    with open("data/normas.json", encoding="utf-8") as _fc:
+        _INDICE_CORPUS = indice_corpus(json.load(_fc)["nodes"])
+except Exception:
+    _INDICE_CORPUS = {}
+
+
 def render_item(item: dict, novidade: bool = False):
-    badge = '<span class="novidade-badge">NOVO</span>' if novidade else ""
+    no_corpus = norma_no_corpus(item, _INDICE_CORPUS)
+    if no_corpus:
+        rotulo = no_corpus.get("sigla") or no_corpus.get("nome")
+        badge = (f'<span style="margin-left:8px;padding:2px 8px;border-radius:999px;font-size:10px;'
+                 f'background:rgba(46,204,113,0.12);border:1px solid rgba(46,204,113,0.35);color:#2ecc71;">'
+                 f'JÁ NO GRAFO · {rotulo}</span>')
+    else:
+        badge = '<span class="novidade-badge">NOVO</span>' if novidade else ""
     url = item.get("url", "")
     link = f'<a href="{url}" target="_blank" style="color:#1abc9c;font-size:10px;">↗ ver fonte</a>' if url else ""
     st.markdown(f"""
@@ -168,6 +182,7 @@ if secao == "🆕 Novidades":
             + RADAR_CADENCIA
         )
     else:
+        novidades = [n for n in novidades if not norma_no_corpus(n, _INDICE_CORPUS)]
         st.markdown(f"**{len(novidades)} novidade(s) detectada(s)** — aguardando revisão doutrinária")
         for n in novidades:
             render_item(n, novidade=True)

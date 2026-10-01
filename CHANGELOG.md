@@ -1,5 +1,16 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.4] — 2026-10-01
+
+### Radar: proposições já no grafo e termos recalibrados
+
+- Proposição que já está no corpus (como nó ou como origem de uma norma, ex.
+  PL 278/2026 → Lei 15.504/2026) recebe a etiqueta "JÁ NO GRAFO" e deixa de contar
+  como novidade (`lib/taxonomia.py`, `updater.py`).
+- Termos recalibrados após a primeira coleta com o Senado no formato novo:
+  plataformas ("plataformas digitais", "redes sociais"), trabalho digital
+  ("trabalho por aplicativo", "plataformas de trabalho") e dados ("dados pessoais").
+
 ## [v0.13.3] — 2026-10-01
 
 ### Radar: ponte para o grafo em destaque

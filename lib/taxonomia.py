@@ -34,3 +34,38 @@ def normas_relacionadas(tema: str, normas: list[dict]) -> list[dict]:
     """Normas do corpus que compartilham ao menos um vetor com o tema do radar."""
     vet = set(vetores_do_tema_radar(tema))
     return [n for n in normas if vet & set(n.get("temas") or [])]
+
+
+# ---- Proposicoes que ja estao no corpus ----
+import re as _re
+
+_RE_PROP = _re.compile(r"\b(PLP|PL|PEC|MPV|MP|PDL)\s*(?:n[º°o.]\s*)?([\d.]+)\s*/\s*(\d{2,4})")
+
+
+def chave_proposicao(texto: str):
+    """'PL 2.780/2024', 'PL 2780/2024' e 'MP 1.317/2025' -> chaves normalizadas."""
+    out = []
+    for tipo, num, ano in _RE_PROP.findall(texto or ""):
+        tipo = "MPV" if tipo == "MP" else tipo
+        num = num.replace(".", "").lstrip("0") or "0"
+        ano = ano if len(ano) == 4 else "20" + ano
+        out.append(f"{tipo} {num}/{ano}")
+    return out
+
+
+def indice_corpus(normas: list[dict]) -> dict:
+    """Chave da proposicao -> norma do corpus que a contem (como no ou como origem)."""
+    idx = {}
+    for n in normas:
+        txt = " ".join(str(n.get(c, "")) for c in ("nome", "sigla", "ementa", "historia"))
+        for k in chave_proposicao(txt):
+            idx.setdefault(k, n)
+    return idx
+
+
+def norma_no_corpus(item: dict, indice: dict):
+    """Se o item do radar ja esta no grafo, devolve a norma correspondente."""
+    for k in chave_proposicao(item.get("sigla", "")):
+        if k in indice:
+            return indice[k]
+    return None

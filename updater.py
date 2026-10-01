@@ -131,6 +131,19 @@ def main():
         print(f"  [saneamento] {_descartados} item(ns) sem id descartado(s)")
 
     novidades = detectar_novidades(radar_novo, radar_anterior)
+
+    # Proposicao que ja virou no do grafo (ou originou uma norma do corpus)
+    # nao e novidade para a curadoria.
+    try:
+        from lib.taxonomia import indice_corpus, norma_no_corpus
+        with open(DATA_DIR / "normas.json", encoding="utf-8") as _f:
+            _idx = indice_corpus(json.load(_f)["nodes"])
+        _antes = len(novidades)
+        novidades = [n for n in novidades if not norma_no_corpus(n, _idx)]
+        if _antes != len(novidades):
+            print(f"  [corpus] {_antes - len(novidades)} novidade(s) ja presentes no grafo")
+    except Exception as _e:
+        print(f"  [corpus] verificacao ignorada: {_e}")
     salvar_radar(radar_novo, novidades)
 
     # Exit code 0 = sucesso, mesmo sem novidades

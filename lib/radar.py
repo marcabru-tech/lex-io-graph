@@ -23,10 +23,10 @@ TIMEOUT = 30
 # ---- Temas monitorados ----
 TEMAS_RADAR = {
     "ia": ["inteligência artificial", "IA generativa", "algoritmo decisão"],
-    "dados": ["proteção dados pessoais", "LGPD", "privacidade digital"],
+    "dados": ["dados pessoais", "LGPD", "privacidade"],
     "menores": ["criança adolescente digital", "ECA digital", "proteção menores internet"],
-    "plataformas": ["responsabilidade plataformas", "moderação conteúdo", "redes sociais"],
-    "trabalho_digital": ["riscos psicossociais trabalho", "NR-1", "teletrabalho algoritmo"],
+    "plataformas": ["plataformas digitais", "redes sociais", "moderação de conteúdo"],
+    "trabalho_digital": ["trabalho por aplicativo", "plataformas de trabalho", "riscos psicossociais"],
     "infraestrutura_digital": ["datacenter", "computação em nuvem"],
     "mercados_digitais": ["mercados digitais", "concorrência digital"],
     "minerais_criticos": ["minerais críticos", "terras raras"],
