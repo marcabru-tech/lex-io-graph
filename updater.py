@@ -1,7 +1,7 @@
 """
 updater.py — Atualiza o radar legislativo do Lex-IO-Graph.
 
-Chamado pelo GitHub Action (.github/workflows/update-radar.yml).
+Chamado pelo GitHub Actions (.github/workflows/update-radar.yml), toda segunda 09h BRT.
 Consulta APIs públicas via lib/radar.py e salva data/radar_legislativo.json.
 
 Arquitetura:

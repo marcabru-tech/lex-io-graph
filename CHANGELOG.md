@@ -1,5 +1,16 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.11.1] — 2026-10-01
+
+### Radar: cadência no GitHub Actions, 4 temas novos e PDL
+
+- GitHub Actions passa a ser o coletor principal: segunda 09h BRT; limite de 20 min.
+- Temas novos: infraestrutura digital, mercados digitais, minerais críticos,
+  soberania digital. Busca passa a incluir PDL (Projeto de Decreto Legislativo).
+- Texto de cadência centralizado em `RADAR_CADENCIA` (lib/constants.py).
+- Título "Fundamentação teórica" corrigido para "30 anos do Estado Regulador
+  Brasileiro" na home e na página de Inteligência.
+
 ## [v0.11.0] — 2026-10-01
 
 ### REDATA, Direito Econômico e radar com reserva no GitHub Actions

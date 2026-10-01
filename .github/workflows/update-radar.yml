@@ -2,16 +2,16 @@ name: Radar Legislativo — Atualização Automática
 
 on:
   schedule:
-    # Reserva: terca-feira 09h de Brasilia (12h UTC). O coletor principal
-    # e a tarefa agendada do notebook (segunda, 21h). Se ela rodou, este
-    # job ve o snapshot fresco e encerra sem coletar.
-    - cron: '0 12 * * 2'
+    # Coletor principal: segunda-feira 09h de Brasilia (12h UTC).
+    # Se houver snapshot com menos de 36 h (coleta manual recente),
+    # o job agendado encerra sem coletar. O disparo manual sempre coleta.
+    - cron: '0 12 * * 1'
   workflow_dispatch:        # Permite rodar manualmente pela interface do Actions
 
 jobs:
   update-radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     permissions:
       contents: write       # Basta isto para commitar direto em main.
                             # pull-requests: write foi removido — não abrimos mais PR.

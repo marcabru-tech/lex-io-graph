@@ -320,7 +320,7 @@ elif secao == "⚖️ Direito Natural e Positivo":
             st.caption(f"Fonte: {caso.get('fonte', 'Hubstry Deep Tech')}")
 
 st.divider()
-st.markdown("### Fundamentação teórica")
+st.markdown("### 30 anos do Estado Regulador Brasileiro")
 
 with st.expander("Do mando ao sistema de funções: os trinta anos do Estado Regulador brasileiro (1996–2026) à luz dos cinco deslocamentos de Eusébio de Queiroz Lima"):
     st.markdown("""

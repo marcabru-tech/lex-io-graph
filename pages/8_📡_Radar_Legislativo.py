@@ -2,7 +2,7 @@ import streamlit as st
 import json
 from pathlib import Path
 from datetime import datetime
-from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
+from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -61,10 +61,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown(
-    "Monitoramento automático de PLs (Projetos de Lei), decretos e normas "
-    "relevantes para o ordenamento jurídico digital brasileiro. "
-    "Fontes: Senado Federal e Câmara dos Deputados. "
-    "Última coleta curada manualmente."
+    "Monitoramento automático de PLs (Projetos de Lei), PDLs (Projetos de Decreto "
+    "Legislativo) e demais proposições relevantes para o ordenamento jurídico "
+    "digital brasileiro. Fontes: Senado Federal e Câmara dos Deputados. "
+    + RADAR_CADENCIA
 )
 
 # ---- Carregar dados do radar ----
@@ -130,6 +130,10 @@ TEMA_LABELS = {
     "menores": "Crianças e Adolescentes",
     "plataformas": "Plataformas Digitais",
     "trabalho_digital": "Trabalho Digital",
+    "infraestrutura_digital": "Infraestrutura Digital (data centers e nuvem)",
+    "mercados_digitais": "Mercados Digitais e Concorrência",
+    "minerais_criticos": "Minerais Críticos e Terras Raras",
+    "soberania_digital": "Soberania Digital e Tecnológica",
 }
 
 FONTE_LABELS = {
@@ -160,8 +164,7 @@ if secao == "🆕 Novidades":
     if not novidades:
         st.info(
             "Nenhuma novidade detectada na última atualização. "
-            "Coleta semanal às segundas-feiras."
-            ""
+            + RADAR_CADENCIA
         )
     else:
         st.markdown(f"**{len(novidades)} novidade(s) detectada(s)** — aguardando revisão doutrinária")

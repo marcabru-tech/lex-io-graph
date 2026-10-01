@@ -110,7 +110,7 @@ Cadastro Nacional de Agressores. Vigor: jul./2026.
 
 st.divider()
 
-st.markdown("### Fundamentação teórica")
+st.markdown("### 30 anos do Estado Regulador Brasileiro")
 st.markdown("""
 **Do mando ao sistema de funções: os trinta anos do Estado Regulador brasileiro (1996–2026) à luz dos cinco deslocamentos de Eusébio de Queiroz Lima**
 Preprint · Zenodo, 2026 · CC BY 4.0

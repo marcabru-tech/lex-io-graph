@@ -27,6 +27,10 @@ TEMAS_RADAR = {
     "menores": ["criança adolescente digital", "ECA digital", "proteção menores internet"],
     "plataformas": ["responsabilidade plataformas", "moderação conteúdo", "redes sociais"],
     "trabalho_digital": ["riscos psicossociais trabalho", "NR-1", "teletrabalho algoritmo"],
+    "infraestrutura_digital": ["datacenter", "computação em nuvem"],
+    "mercados_digitais": ["mercados digitais", "concorrência digital"],
+    "minerais_criticos": ["minerais críticos", "terras raras"],
+    "soberania_digital": ["soberania digital", "soberania tecnológica"],
 }
 
 # ---- Senado Federal ----
@@ -38,7 +42,7 @@ def buscar_senado(termo: str, max_resultados: int = 10) -> list[dict]:
     url = "https://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista"
     params = {
         "palavrasChave": termo,
-        "siglaTipo": "PL,PLP,PEC,MPV",
+        "siglaTipo": "PL,PLP,PEC,MPV,PDL",
         "qtdRegistros": max_resultados,
     }
     headers = {"Accept": "application/json"}
@@ -107,7 +111,7 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
     url = "https://dadosabertos.camara.leg.br/api/v2/proposicoes"
     params = {
         "keywords": termo,
-        "siglaTipo": "PL,PLP,PEC,MPV",
+        "siglaTipo": "PL,PLP,PEC,MPV,PDL",
         "itens": max_resultados,
         "ordem": "DESC",
         "ordenarPor": "id",
