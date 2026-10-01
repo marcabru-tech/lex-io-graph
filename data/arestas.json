@@ -244,6 +244,27 @@
       "tipo": "complementaridade",
       "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem a outra produz infraestrutura sem governança ou governança sem infraestrutura.",
       "artigos": "Lei 11.196/2005 art. 11-B ↔ PL 2.338/2023"
+    },
+    {
+      "source": "cf88",
+      "target": "lei_15506_2026",
+      "tipo": "hierarquia",
+      "descricao": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no interesse nacional (art. 176). A PNMCE regula o aproveitamento de bem público dentro da ordem econômica constitucional (art. 170).",
+      "artigos": "CF arts. 20, IX; 170; 176 ↔ Lei 15.506/2026 art. 5º"
+    },
+    {
+      "source": "lei_15506_2026",
+      "target": "decreto_13118_2026",
+      "tipo": "regulamenta",
+      "descricao": "O decreto regulamenta o CIMCE: composição, competências e a Secretaria-Executiva com área de triagem de investimentos.",
+      "artigos": "Lei 15.506/2026 art. 41 ↔ Decreto 13.118/2026 arts. 3º, 6º, 13"
+    },
+    {
+      "source": "lei_15506_2026",
+      "target": "lei_15504_2026",
+      "tipo": "complementaridade",
+      "descricao": "Minerais críticos e data centers são elos da mesma cadeia de capacidade computacional: insumo (minerais, semicondutores) e infraestrutura (compute). As duas leis usam incentivo fiscal condicionado a contrapartidas no território.",
+      "artigos": "Lei 15.506/2026 arts. 17-18 ↔ Lei 11.196/2005 art. 11-B"
     }
   ]
 }

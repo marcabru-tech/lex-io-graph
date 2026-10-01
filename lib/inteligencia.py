@@ -355,6 +355,84 @@ CASOS_ESTRATEGICOS = [
                 "'baixa emissão' permanece categoria política, não parâmetro verificável."
             )
         }
+    },
+    {
+        "id": "minerais_criticos_valor_territorio",
+        "titulo": "Minerais Críticos — Valor no Território",
+        "normas_relacionadas": ["lei_15506_2026", "decreto_13118_2026", "cf88", "lei_15504_2026"],
+        "nivel_tensao": "estratégico",
+        "status": "lei vigente desde 16/09/2026 — CIMCE instalado, lista de minerais e FGAM pendentes",
+        "sintese": (
+            "A Lei 15.506/2026 desloca a política mineral da extração para o beneficiamento, "
+            "o refino e a transformação no País. O instrumento decisivo não é o incentivo: "
+            "é o CIMCE (Conselho Nacional para Industrialização de Minerais Críticos e "
+            "Estratégicos), que homologa mudança de controle societário e participação "
+            "estrangeira relevante em titulares de direitos minerários."
+        ),
+        "camadas": [
+            {
+                "titulo": "Tensão 1 — Incentivo anunciado versus incentivo disponível",
+                "analise": (
+                    "Três instrumentos costumam ser somados no debate público e não devem ser. "
+                    "O FGAM (Fundo Garantidor da Atividade Mineral) admite participação da União "
+                    "até R$ 2 bilhões, mas não havia sido capitalizado até 30/09/2026. O PFMCE "
+                    "(crédito fiscal ao beneficiamento) tem teto de R$ 1 bilhão por ano entre 2030 "
+                    "e 2034 — crédito futuro, não caixa. A chamada BNDES–Finep, anterior à lei, selecionou em junho "
+                    "de 2025 56 planos de negócios que somam R$ 45,8 bilhões em investimentos "
+                    "previstos — valor dos planos, não recurso público contratado; a chamada "
+                    "disponibilizou inicialmente até R$ 5 bilhões em instrumentos financeiros, "
+                    "montante distinto do teto do PFMCE. Diagnóstico: no curto prazo, o canal "
+                    "em operação é o dos bancos de fomento; a lei estrutura o médio prazo."
+                )
+            },
+            {
+                "titulo": "Tensão 2 — Capital estrangeiro e soberania: o primeiro caso-teste",
+                "analise": (
+                    "Em 30/09/2026 a australiana Lynas Rare Earths anunciou acordo para adquirir "
+                    "a Meteoric Resources, dona do Projeto Caldeira (Caldas, MG), em operação "
+                    "estimada em R$ 3,5 bilhões, com plano de avaliar a separação de terras raras "
+                    "no Brasil. A operação combina os elementos que a lei submete ao CIMCE: "
+                    "mudança de controle, capital estrangeiro e mineral estratégico, antes de haver "
+                    "decreto específico sobre o rito de triagem. O caso definirá se a triagem opera como filtro de "
+                    "segurança ou como instrumento de negociação de contrapartidas industriais."
+                )
+            },
+            {
+                "titulo": "Tensão 3 — Rastreabilidade como condição de eficácia",
+                "analise": (
+                    "A lei cria sistema de rastreabilidade da origem à reciclagem, com registro "
+                    "obrigatório de transações, licença ambiental e outorga mineral (art. 44). "
+                    "Sem integração entre ANM (Agência Nacional de Mineração), fiscalização "
+                    "aduaneira e cadeia formal, lista de minerais e incentivos atuam sobre a parte "
+                    "visível do mercado."
+                )
+            },
+            {
+                "titulo": "Tensão 4 — Da mina ao data center",
+                "analise": (
+                    "Minerais críticos e data centers são elos da mesma cadeia de capacidade "
+                    "computacional. A PNMCE e o REDATA usam a mesma técnica — incentivo fiscal "
+                    "condicionado a contrapartidas no território — e enfrentam o mesmo teste: "
+                    "produzir capacidade decisória nacional, não apenas volume físico instalado."
+                )
+            }
+        ],
+        "prospectiva": {
+            "12_meses": (
+                "Publicação da lista oficial de minerais pelo CIMCE; decreto de triagem de "
+                "operações; decisão sobre Lynas–Meteoric; regulamentação do FGAM e do Certificado "
+                "Mineral de Baixo Carbono. O calendário eleitoral de outubro/2026 é variável de "
+                "risco regulatório."
+            ),
+            "36_meses": (
+                "O indicador de sucesso é a primeira planta de separação ou refino de terras raras "
+                "em operação no País, não o volume de reservas anunciado."
+            ),
+            "lacuna_remanescente": (
+                "A lei não define critérios objetivos para a homologação de operações "
+                "estrangeiras; até o decreto de triagem, a discricionariedade do CIMCE é ampla."
+            )
+        }
     }
 ]
 
@@ -780,5 +858,45 @@ DIREITO_ECONOMIA = {
         "HARRIS, Angela P.; VARELLAS, James J. Introduction: law and political economy in a "
         "time of accelerating crises. <em>Journal of Law and Political Economy</em>, Davis, "
         "v. 1, n. 1, p. 1-27, 2020. DOI: 10.5070/LP61150254.",
+    ],
+}
+
+
+# ---- Soberania tecnológica ----
+SOBERANIA = {
+    "introducao": (
+        "Soberania tecnológica não se mede pela localização do servidor nem pelo volume da "
+        "reserva mineral. Mede-se pela capacidade verificável de decidir, operar, substituir "
+        "e recuperar sistemas críticos. O vetor organiza normas e casos do Lexiograph por "
+        "essa pergunta."
+    ),
+    "dimensoes": [
+        ("Soberania de dados",
+         "Onde estão os dados, sob qual jurisdição, com quais regras de acesso, retenção, "
+         "transferência e proteção.",
+         "LGPD · ANPD · Cloud Act (EUA, 2018), que alcança dados sob controle de provedores "
+         "norte-americanos onde quer que estejam armazenados"),
+        ("Soberania operacional",
+         "Quem opera a infraestrutura, controla contas administrativas, detém chaves, monitora "
+         "incidentes, executa recuperação e responde pela continuidade.",
+         "REDATA (capacidade instalada não equivale a controle operacional) · resiliência: "
+         "backup isolado, testes de restauração, plano de saída de fornecedor"),
+        ("Soberania tecnológica",
+         "Quem domina arquitetura, código, padrões, integrações, componentes críticos, "
+         "formação técnica e capacidade de evolução.",
+         "PNMCE (do minério ao refino) · PONTARIA (PL 1.074/2026, IA brasileira)"),
+    ],
+    "principio": (
+        "Soberania sem isolamento: o critério não é que todos os componentes sejam nacionais, "
+        "mas o grau de controle sobre dependências críticas — chaves, administração, "
+        "jurisdição, suporte, licenciamento, portabilidade e recuperação."
+    ),
+    "fontes": [
+        "As três dimensões seguem a formulação do debate público sobre a Nuvem Brasileira "
+        "(MGI — Ministério da Gestão e da Inovação em Serviços Públicos; Serpro, "
+        "'Soberania sem isolamento', 2026).",
+        "A camada de resiliência operacional dialoga com GARTNER, apresentação de Leonardo "
+        "Jardino e Hélio Mariano no Fórum RNP+ Tendências 2026.",
+        "Leitura estendida no dossiê ODIN — A Arquitetura Brasileira de Inteligência Artificial.",
     ],
 }

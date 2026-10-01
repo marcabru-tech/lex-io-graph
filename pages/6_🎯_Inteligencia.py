@@ -1,7 +1,8 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
-from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA
+from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA, SOBERANIA
 from lib.footer import render_footer
+from lib.estado_regulador import figura_linha_do_tempo, SINTESE_LIVRO, FONTE_LIVRO
 from lib.constants import ODIN_URL
 
 st.set_page_config(
@@ -75,6 +76,7 @@ secao = st.radio(
         "🧠 Epistemologia do Direito",
         "⚖️ Direito Natural e Positivo",
         "📈 Direito Econômico e Economia Política",
+        "🛰️ Soberania Tecnológica",
     ],
     horizontal=True,
     label_visibility="collapsed"
@@ -270,6 +272,32 @@ elif secao == "📈 Direito Econômico e Economia Política":
     )
 
 # =============================================================
+# SEÇÃO 5 — Soberania tecnológica
+# =============================================================
+elif secao == "🛰️ Soberania Tecnológica":
+    S = SOBERANIA
+    st.markdown("## Soberania Tecnológica")
+    st.markdown(S["introducao"])
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("### Três dimensões")
+    for nome, definicao, no_grafo in S["dimensoes"]:
+        st.markdown(f"""
+<div class="epist-card">
+  <span class="epist-autor">{nome}</span>
+  <div class="epist-contrib">{definicao}</div>
+  <div class="epist-dir">🕸️ No Lexiograph: {no_grafo}</div>
+</div>""", unsafe_allow_html=True)
+    st.info(S["principio"])
+    st.markdown(
+        "No grafo, o vetor **Soberania Tecnológica** marca o REDATA (Lei 15.504/2026), a "
+        "PNMCE (Lei 15.506/2026) e o Decreto 13.118/2026. Os casos estratégicos "
+        "*REDATA e Gás Natural* e *Minerais Críticos — Valor no Território* aplicam a lente."
+    )
+    st.markdown("**Fontes.** " + " ".join(S["fontes"]))
+    if ODIN_URL:
+        st.markdown(f"[Ler a seção de soberania no ODIN →]({ODIN_URL})")
+
+# =============================================================
 # SEÇÃO 3 — Direito natural e positivo
 # =============================================================
 elif secao == "⚖️ Direito Natural e Positivo":
@@ -349,6 +377,28 @@ de aperfeiçoar a função técnica do que de sistematizar a resistência que a 
         "MACHADO, Guilherme Gonçalves. *Do mando ao sistema de funções.* "
         "Zenodo, 2026. Preprint. DOI: 10.5281/zenodo.21978602"
     )
-    st.markdown("[Acessar no Zenodo →](0)".format("https://doi.org/10.5281/zenodo.21978602"))
+    st.markdown("[Acessar no Zenodo →](https://doi.org/10.5281/zenodo.21978602)")
+
+st.markdown("#### Linha do tempo das agências reguladoras federais")
+st.caption(
+    "Passe o mouse sobre cada agência para ver o ato de criação, a data e o setor. "
+    "Linhas pontilhadas marcam os marcos do sistema regulatório."
+)
+st.plotly_chart(figura_linha_do_tempo(), use_container_width=True, config={"displayModeBar": False})
+st.caption(
+    "Fonte: Cunha e Faganello (2026, p. 27), Quadro 1. Mudanças de denominação e a "
+    "conversão da ANPD (Lei 15.352/2026) são acréscimos do Lexiograph."
+)
+
+with st.expander("Três décadas de reformas e agencificação — síntese do livro organizado por Bruno Queiroz Cunha (Ipea/MDIC, 2026)"):
+    for titulo, texto in SINTESE_LIVRO:
+        st.markdown(f"**{titulo}.** {texto}")
+    st.markdown(
+        "<div class='tensao-analise'>"
+        "CUNHA, Bruno Queiroz; FAGANELLO, Cláucia Piccoli. Introdução. In: " + FONTE_LIVRO +
+        " p. 25-42.<br><br>" + FONTE_LIVRO + "</div>",
+        unsafe_allow_html=True,
+    )
+    st.markdown("[Acessar o livro no repositório do Ipea →](https://dx.doi.org/10.38116/978-65-5635-095-0)")
 
 render_footer()

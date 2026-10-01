@@ -119,6 +119,10 @@ O quinto deslocamento — a objetivação crescente — projeta a fronteira algo
 da regulação. É esse terreno que este atlas mapeia.
 
 [Ler o artigo completo →](https://doi.org/10.5281/zenodo.21978602)
+
+Na página **Inteligência**: linha do tempo interativa das doze agências reguladoras
+federais (1996–2025) e síntese de *O Estado regulador brasileiro: três décadas de
+reformas e agencificação* (Ipea/MDIC, 2026).
 """)
 
 

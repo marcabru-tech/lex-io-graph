@@ -1,5 +1,19 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.12.0] — 2026-10-01
+
+### Estado Regulador, minerais críticos e soberania tecnológica
+
+- Inteligência: linha do tempo interativa (Plotly) das 12 agências reguladoras
+  federais, com marcos PRO-REG (2007), Lei 13.848/2019 e Lei 15.352/2026, e síntese
+  do livro organizado por Bruno Queiroz Cunha (Ipea/MDIC, 2026). `lib/estado_regulador.py`.
+- Corpus: `lei_15506_2026` (PNMCE) e `decreto_13118_2026` (CIMCE), com 3 arestas.
+  22 normas, 38 arestas.
+- Novo vetor temático `soberania_tecnologica` (REDATA, PNMCE, Decreto 13.118).
+- Inteligência: caso "Minerais Críticos — Valor no Território" e aba
+  "Soberania Tecnológica" (dados, operacional, tecnológica).
+- Corrigido link quebrado "Acessar no Zenodo" na página de Inteligência.
+
 ## [v0.11.1] — 2026-10-01
 
 ### Radar: cadência no GitHub Actions, 4 temas novos e PDL

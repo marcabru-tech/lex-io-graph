@@ -18,7 +18,7 @@ APP_SUBTITLE = (
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.11.1"
+APP_VERSION = "0.12.0"
 
 # ---- Radar Legislativo: cadencia (fonte unica para os textos da UI) ----
 RADAR_CADENCIA = "Coleta automática semanal às segundas-feiras, 9h (horário de Brasília), via GitHub Actions."
@@ -123,6 +123,7 @@ THEMES = {
     "internet":       "Internet e Plataformas",
     "acesso":         "Acesso e Inclusão",
     "direito_economico": "Direito Econômico e Regulação",
+    "soberania_tecnologica": "Soberania Tecnológica",
 }
 
 # ---- Empresas modelo para matriz de compliance ----

@@ -813,7 +813,8 @@
       "status": "vigente",
       "temas": [
         "ia",
-        "direito_economico"
+        "direito_economico",
+        "soberania_tecnologica"
       ],
       "orgao": "Congresso Nacional",
       "ano": 2026,
@@ -841,6 +842,70 @@
           "contexto_romano": "Brocardo da tradição romanística, aplicado à repartição de riscos e encargos no direito civil e administrativo"
         }
       ]
+    },
+    {
+      "id": "lei_15506_2026",
+      "nome": "Lei nº 15.506/2026 — Política Nacional de Minerais Críticos e Estratégicos (PNMCE)",
+      "sigla": "Lei 15.506/2026",
+      "tipo": "lei",
+      "artigos_chave": [
+        "Art. 5º — objetivos: beneficiamento e transformação mineral no País; soberania, defesa e interesse nacional",
+        "Arts. 9 a 14 — FGAM (Fundo Garantidor da Atividade Mineral), participação da União até R$ 2 bilhões",
+        "Art. 15 — 0,3% da receita operacional bruta em PD&I e 0,2% em cotas do FGAM nos seis primeiros anos; depois, 0,5% em PD&I",
+        "Arts. 17 e 18 — PFMCE: crédito fiscal de até 20% do dispêndio com beneficiamento, limite de R$ 1 bilhão/ano de 2030 a 2034",
+        "Arts. 23 a 27 — Certificado Mineral de Baixo Carbono, voluntário, por análise de ciclo de vida",
+        "Art. 41 — CIMCE: homologa mudança de controle societário e participação estrangeira relevante em titulares de direitos minerários",
+        "Art. 44 — sistema de rastreabilidade da cadeia de minerais críticos"
+      ],
+      "ementa": "Institui a PNMCE (Política Nacional de Minerais Críticos e Estratégicos) e o CIMCE (Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos), com instrumentos de financiamento (FGAM), crédito fiscal ao beneficiamento (PFMCE), certificação de baixo carbono, rastreabilidade e triagem de controle societário e investimento estrangeiro.",
+      "status": "vigente",
+      "temas": [
+        "direito_economico",
+        "soberania_tecnologica"
+      ],
+      "orgao": "Congresso Nacional",
+      "ano": 2026,
+      "historia": "Origem no PL 2.780/2024 (autor: Dep. Zé Silva; relator na Câmara: Dep. Arnaldo Jardim), sancionado em 16/09/2026 com o Decreto 13.118/2026. O eixo da lei é deslocar o País da extração para o beneficiamento, o refino e a transformação em território nacional. Até 30/09/2026 não havia lista oficial de minerais definida pelo CIMCE, nem FGAM capitalizado ou edital publicado. Os R$ 5 bilhões do PFMCE são teto de crédito fiscal futuro (2030–2034), não recursos disponíveis. Verificado em 01/10/2026 (Planalto, Agência Câmara).",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): União Europeia — Critical Raw Materials Act (Regulamento (UE) 2024/1252), com metas de extração, processamento e reciclagem domésticos e projetos estratégicos; EUA — Inflation Reduction Act (2022), que condiciona créditos de veículos elétricos à origem dos minerais; China — controles de exportação sobre gálio, germânio e terras raras. A PNMCE combina os três vetores: fomento ao processamento local, triagem de investimento estrangeiro e certificação ambiental.",
+      "autores": [
+        {
+          "nome": "Eros Roberto Grau",
+          "datas": "1940–",
+          "obra": "A Ordem Econômica na Constituição de 1988, 1990",
+          "contribuicao": "Recursos minerais como bens da União (CF, art. 20, IX) e a ordem econômica como programa: a PNMCE é política econômica sobre bem público"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Res publica",
+          "traducao_literal": "Coisa pública",
+          "traducao_juridica": "Os recursos minerais pertencem à União (CF, art. 20, IX); a concessão de lavra não transfere a titularidade do subsolo — a política de minerais críticos regula o uso de um bem público",
+          "contexto_romano": "Categoria romana dos bens de uso comum e do patrimônio público, retomada na teoria dos bens públicos"
+        }
+      ]
+    },
+    {
+      "id": "decreto_13118_2026",
+      "nome": "Decreto nº 13.118/2026 — Regulamenta o CIMCE",
+      "sigla": "Decreto 13.118/2026",
+      "tipo": "decreto",
+      "artigos_chave": [
+        "Art. 3º — competências do CIMCE, incluindo lista de minerais críticos e homologação de mudança de controle societário",
+        "Art. 6º — Pleno com ministros (presidido pela Casa Civil) e representantes de Estados/DF, Municípios, setor privado e ensino superior",
+        "Art. 13 — Secretaria-Executiva no MDIC, com área de triagem de investimentos"
+      ],
+      "ementa": "Regulamenta a Lei 15.506/2026 quanto ao CIMCE e institui o Grupo de Assessoramento sobre Minerais Críticos e Estratégicos.",
+      "status": "vigente",
+      "temas": [
+        "direito_economico",
+        "soberania_tecnologica"
+      ],
+      "orgao": "Presidência da República",
+      "ano": 2026,
+      "historia": "Editado em 16/09/2026, junto com a sanção da Lei 15.506/2026. Atribui ao CIMCE a definição da lista de minerais críticos e estratégicos e a homologação de operações societárias; o rito detalhado da triagem de investimentos ainda depende de regulamentação. Verificado em 01/10/2026 (Planalto).",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA — CFIUS (Committee on Foreign Investment in the United States), triagem de investimento estrangeiro por segurança nacional; União Europeia — Regulamento (UE) 2019/452, quadro de triagem de investimento estrangeiro direto. O CIMCE reúne em um só colegiado a política industrial e a triagem.",
+      "autores": [],
+      "latim": []
     }
   ]
 }
