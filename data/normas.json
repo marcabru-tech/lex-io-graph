@@ -63,7 +63,8 @@
         "Art. 11",
         "Art. 14",
         "Art. 41",
-        "Art. 50"
+        "Art. 50",
+        "Arts. 33 a 36 — transferência internacional de dados pessoais (soberania de dados)"
       ],
       "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. Dados de menores exigem consentimento específico do responsável legal.",
       "status": "vigente",
@@ -71,7 +72,8 @@
         "dados_pessoais",
         "menores",
         "ia",
-        "trabalho"
+        "trabalho",
+        "soberania_tecnologica"
       ],
       "orgao": "Congresso Nacional / ANPD",
       "ano": 2018,

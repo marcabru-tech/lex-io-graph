@@ -1,5 +1,19 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.12.1] — 2026-10-01
+
+### Teoria dos Conjuntos calculada a partir do corpus
+
+- Página 10 ganha aba "Conjuntos do corpus (calculados)": cada vetor temático
+  vira conjunto; matriz de interseções, exame de par (A ∩ B, A \ B, B \ A),
+  arestas entre os conjuntos e pares disjuntos. Novos vetores entram sem edição.
+- Distinção explícita entre classificar (conjunto) e relacionar (aresta).
+- Campos de 2026 situados na arquitetura: Direito Econômico (camada 06),
+  Soberania Tecnológica (eixo transversal), Direito e Economia Política (lente).
+- `lib/conjuntos.py`.
+- Curadoria: LGPD marcada no vetor Soberania Tecnológica (arts. 33 a 36,
+  transferência internacional de dados).
+
 ## [v0.12.0] — 2026-10-01
 
 ### Estado Regulador, minerais críticos e soberania tecnológica

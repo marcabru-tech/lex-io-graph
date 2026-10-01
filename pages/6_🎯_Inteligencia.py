@@ -289,7 +289,8 @@ elif secao == "🛰️ Soberania Tecnológica":
 </div>""", unsafe_allow_html=True)
     st.info(S["principio"])
     st.markdown(
-        "No grafo, o vetor **Soberania Tecnológica** marca o REDATA (Lei 15.504/2026), a "
+        "No grafo, o vetor **Soberania Tecnológica** marca a LGPD (transferência "
+        "internacional de dados, arts. 33 a 36), o REDATA (Lei 15.504/2026), a "
         "PNMCE (Lei 15.506/2026) e o Decreto 13.118/2026. Os casos estratégicos "
         "*REDATA e Gás Natural* e *Minerais Críticos — Valor no Território* aplicam a lente."
     )
