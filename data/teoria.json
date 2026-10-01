@@ -1,0 +1,74 @@
+{
+  "_sobre": "Conteúdo novo da aba 'Arquitetura teórica' (Teoria dos Conjuntos). O HTML legado em docs/ não é editado; o que se acrescenta à teoria entra aqui, como dado, e é renderizado pela página. Cada bloco declara 'natureza': fato (texto normativo ou decisão identificável), interpretacao (leitura do Lexiograph) ou metafora (recurso expositivo). Ids em 'exemplos_corpus' são checados por lib/validacao.py.",
+  "hierarquia_tratados": {
+    "titulo": "Tratados na hierarquia — modelo de hierarquia normativa (leitura kelseniana)",
+    "introducao": "Posição no direito interno, força no plano internacional e procedimento de incorporação são três dimensões distintas. Um acordo comercial em vigor internacionalmente pode ainda não valer no Brasil; um tratado incorporado pode ocupar escalões diferentes conforme a matéria e o rito.",
+    "posicao_interna": [
+      {
+        "regime": "Regra geral",
+        "abrange": "Tratados comuns, incluídos os comerciais e de integração",
+        "posicao": "Paridade com a lei ordinária",
+        "fundamento": "STF, RE 80.004/SE (1977); ADI 1.480-MC (1997). Antinomias com lei interna resolvidas pelos critérios cronológico e de especialidade.",
+        "exemplos_corpus": ["tratado_assuncao_1991", "convencao_viena_1969", "acordo_mercosul_singapura", "acordo_mercosul_efta", "acordo_mercosul_ue_ita"],
+        "natureza": "fato"
+      },
+      {
+        "regime": "Matéria tributária",
+        "abrange": "Tratados com normas tributárias",
+        "posicao": "Prevalência sobre a legislação tributária interna",
+        "fundamento": "CTN (Código Tributário Nacional), art. 98: os tratados 'revogam ou modificam a legislação tributária interna, e serão observados pela que lhes sobrevenha'. O alcance da regra é debatido na doutrina.",
+        "exemplos_corpus": [],
+        "natureza": "fato"
+      },
+      {
+        "regime": "Direitos humanos sem o rito do art. 5º, §3º",
+        "abrange": "Tratados de direitos humanos aprovados pelo rito comum",
+        "posicao": "Supralegal: abaixo da Constituição, acima das leis",
+        "fundamento": "STF, RE 466.343/SP (2008), sobre o Pacto de São José da Costa Rica (Decreto 678/1992); Súmula Vinculante 25.",
+        "exemplos_corpus": [],
+        "natureza": "fato"
+      },
+      {
+        "regime": "Direitos humanos com o rito do art. 5º, §3º",
+        "abrange": "Tratados de direitos humanos aprovados em dois turnos, por três quintos, em cada Casa",
+        "posicao": "Equivalência a emenda constitucional",
+        "fundamento": "CF, art. 5º, §3º (EC 45/2004). Exemplo: Convenção sobre os Direitos das Pessoas com Deficiência (Decreto 6.949/2009).",
+        "exemplos_corpus": [],
+        "natureza": "fato"
+      }
+    ],
+    "procedimento": {
+      "passos": [
+        "Assinatura pelo Presidente da República (CF, art. 84, VIII)",
+        "Aprovação pelo Congresso Nacional, por decreto legislativo (CF, art. 49, I)",
+        "Ratificação ou notificação no plano internacional",
+        "Promulgação por decreto presidencial: publicação e vigência interna"
+      ],
+      "exemplo": "ITA Mercosul–UE: assinatura em 17/01/2026 → Decreto Legislativo 14/2026 → notificação em 18/03/2026 → Decreto 12.953/2026, com aplicação provisória desde 01/05/2026.",
+      "exemplos_corpus": ["acordo_mercosul_ue_ita"],
+      "natureza": "fato"
+    },
+    "forca_internacional": {
+      "texto": "No plano internacional, o tratado vincula o Estado desde a sua entrada em vigor internacional (CVDT, art. 26, pacta sunt servanda), e o direito interno não justifica o inadimplemento (art. 27). A aplicação provisória (art. 25) é dispositivo reservado pelo Brasil; na prática recente, ela só começou após a aprovação do Congresso.",
+      "exemplos_corpus": ["convencao_viena_1969", "acordo_mercosul_ue_ita"],
+      "natureza": "fato"
+    },
+    "nao_incorporados": {
+      "texto": "Instrumento identificado mas sem ato brasileiro de incorporação fica em DIP \\ C: existe no plano internacional, não no ordenamento. No corpus, recebe o status 'instrumento internacional não incorporado' e não participa de arestas de hierarquia.",
+      "exemplos_corpus": ["acordo_mercosul_ue_empa"],
+      "natureza": "interpretacao"
+    },
+    "leitura_kelseniana": {
+      "texto": "A pirâmide é um modelo de leitura, não uma dedução. A posição dos tratados no escalonamento brasileiro resulta de decisões do STF e do texto constitucional, e o modelo kelseniano serve para organizá-las.",
+      "natureza": "interpretacao"
+    }
+  },
+  "metaforas": [
+    {
+      "termo": "kernel",
+      "onde": "Camada 01 — Fundacional",
+      "leitura": "Metáfora arquitetural tomada dos sistemas operacionais: a Constituição como núcleo do qual as demais normas derivam validade. Não é categoria jurídica.",
+      "natureza": "metafora"
+    }
+  ]
+}

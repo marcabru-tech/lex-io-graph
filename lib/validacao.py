@@ -49,6 +49,28 @@ def ids_citados_na_teoria(html: str | None = None) -> set[str]:
     return {t.strip() for t in _TAG_TEORIA.findall(html)}
 
 
+def ids_em_teoria_json() -> set[str]:
+    """Todos os ids listados em 'exemplos_corpus' de data/teoria.json."""
+    p = DATA / "teoria.json"
+    if not p.exists():
+        return set()
+    achados: set[str] = set()
+
+    def varrer(x):
+        if isinstance(x, dict):
+            for k, v in x.items():
+                if k == "exemplos_corpus" and isinstance(v, list):
+                    achados.update(v)
+                else:
+                    varrer(v)
+        elif isinstance(x, list):
+            for v in x:
+                varrer(v)
+
+    varrer(_ler("teoria.json"))
+    return achados
+
+
 def validar_corpus() -> list[str]:
     from lib.constants import THEMES, STATUS_LABELS
 
@@ -80,12 +102,20 @@ def validar_corpus() -> list[str]:
             if e.get(lado) and e[lado] not in ids:
                 erros.append(f"arestas.json #{i}: {lado} '{e[lado]}' não existe no corpus")
 
+    # Instrumento não incorporado não retira validade da CF nem fundamenta outra
+    # norma: não pode participar de aresta de hierarquia.
+    nao_incorporados = {n["id"] for n in normas if n.get("status") == "instrumento_externo"}
+    for i, e in enumerate(arestas):
+        if e.get("tipo") == "hierarquia" and {e.get("source"), e.get("target")} & nao_incorporados:
+            erros.append(f"arestas.json #{i}: aresta de hierarquia com instrumento não incorporado "
+                         f"({e.get('source')} → {e.get('target')})")
+
     externos = ids_externos()
     sobrepostos = ids & set(externos)
     if sobrepostos:
         erros.append(f"referencias_externas.json: ids que já são nós do corpus {sorted(sobrepostos)}")
 
-    fantasmas = ids_citados_na_teoria() - ids - set(externos)
+    fantasmas = (ids_citados_na_teoria() | ids_em_teoria_json()) - ids - set(externos)
     if fantasmas:
         erros.append(
             "teoria: ids citados que não estão no corpus nem em referencias_externas.json "
