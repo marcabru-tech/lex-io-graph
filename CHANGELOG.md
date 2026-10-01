@@ -1,5 +1,17 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.2] — 2026-10-01
+
+### Radar: leitura do Senado adaptada ao novo formato da API
+
+- O endpoint `materia/pesquisa/lista` passou a ignorar `palavrasChave` e
+  `qtdRegistros` e a devolver a lista de matérias recentes em formato plano
+  (Codigo, Sigla, Numero, Ano, Ementa, Autor, Data). O radar faz uma única
+  requisição por execução e filtra localmente: tipo (PL, PLP, PEC, MPV, PDL) e
+  palavras inteiras do termo na ementa, sem acento e sem diferenciar maiúsculas.
+- Limitação conhecida: a cobertura do Senado se restringe às matérias que o
+  endpoint devolve (recentes). Reavaliar quando o Senado documentar busca por termo.
+
 ## [v0.13.1] — 2026-10-01
 
 ### Correção: cards vazios do Senado no Radar

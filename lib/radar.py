@@ -34,77 +34,89 @@ TEMAS_RADAR = {
 }
 
 # ---- Senado Federal ----
+# Desde a modernizacao do portal de dados abertos (2025), o endpoint
+# materia/pesquisa/lista ignora palavrasChave e qtdRegistros e devolve a lista
+# de materias do ano em formato plano (Codigo, Sigla, Numero, Ano, Ementa,
+# Autor, Data). Por isso: uma unica requisicao por execucao (cache) e filtro
+# por palavra-chave feito aqui, sobre a ementa. Verificado em 01/10/2026.
+SIGLAS_SENADO = {"PL", "PLP", "PEC", "MPV", "PDL"}
+_SENADO_CACHE: Optional[list] = None
+_STOP = {"de", "da", "do", "das", "dos", "e", "a", "o", "em", "na", "no", "para"}
+
+
+def _normalizar(txt: str) -> str:
+    import unicodedata
+    t = unicodedata.normalize("NFKD", txt or "").encode("ascii", "ignore").decode()
+    return t.lower()
+
+
+def _casa_termo(termo: str, ementa: str) -> bool:
+    """Todas as palavras significativas do termo aparecem na ementa."""
+    import re
+    e = _normalizar(ementa)
+    palavras = [w for w in re.split(r"\s+", _normalizar(termo)) if w and w not in _STOP]
+    # palavra inteira (evita "nr" casar com "inr..." e "1" com qualquer numero)
+    return bool(palavras) and all(re.search(r"(?<![a-z0-9])" + re.escape(w) + r"(?![a-z0-9])", e)
+                                  for w in palavras)
+
+
+def _lista_senado() -> list:
+    global _SENADO_CACHE
+    if _SENADO_CACHE is not None:
+        return _SENADO_CACHE
+    url = "https://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista"
+    resp = requests.get(url, params={"palavrasChave": "lei"},
+                        headers={"Accept": "application/json"}, timeout=TIMEOUT)
+    resp.raise_for_status()
+    materias = (resp.json().get("PesquisaBasicaMateria", {})
+                .get("Materias", {}).get("Materia", []))
+    if isinstance(materias, dict):
+        materias = [materias]
+    _SENADO_CACHE = materias
+    return materias
+
+
 def buscar_senado(termo: str, max_resultados: int = 10) -> list[dict]:
     """
-    Busca PLs no Senado Federal Dados Abertos.
+    Busca proposicoes no Senado Federal Dados Abertos (filtro local por termo).
     Endpoint: legis.senado.leg.br/dadosabertos/materia/pesquisa/lista
     """
-    url = "https://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista"
-    params = {
-        "palavrasChave": termo,
-        "siglaTipo": "PL,PLP,PEC,MPV,PDL",
-        "qtdRegistros": max_resultados,
-    }
-    headers = {"Accept": "application/json"}
-
     try:
-        resp = requests.get(url, params=params, headers=headers, timeout=TIMEOUT)
-        resp.raise_for_status()
-        data = resp.json()
-
-        materias = (
-            data.get("PesquisaBasicaMateria", {})
-                .get("Materias", {})
-                .get("Materia", [])
-        )
-        if isinstance(materias, dict):
-            materias = [materias]
-
-        resultados = []
-        for m in materias:
-            ident = m.get("IdentificacaoMateria", {})
-            dados = m.get("DadosBasicosMateria", {})
-            sit = (
-                m.get("SituacaoAtual", {})
-                 .get("Autuacoes", {})
-                 .get("Autuacao", {})
-            )
-            if isinstance(sit, list):
-                sit = sit[0] if sit else {}
-            situacao = sit.get("Situacao", {}).get("DescricaoSituacao", "")
-
-            # Item sem codigo nao e materia: e sinal de que o formato da
-            # resposta mudou. Descartar em vez de gravar um card vazio.
-            if not ident.get("CodigoMateria"):
-                continue
-
-            resultados.append({
-                "fonte": "Senado Federal",
-                "id": str(ident.get("CodigoMateria", "")),
-                "sigla": (
-                    ident.get("SiglaSubtipoMateria", "") + " " +
-                    str(ident.get("NumeroMateria", "")) + "/" +
-                    str(ident.get("AnoMateria", ""))
-                ).strip(),
-                "ementa": dados.get("EmentaMateria", ""),
-                "ano": str(ident.get("AnoMateria", "")),
-                "status": situacao or "Em tramitação",
-                "url": (
-                    "https://www25.senado.leg.br/web/atividade/materias/-/materia/" +
-                    str(ident.get("CodigoMateria", ""))
-                ),
-                "termo_busca": termo,
-                "data_deteccao": datetime.now().isoformat(),
-            })
-
-        return resultados
-
+        materias = _lista_senado()
     except requests.exceptions.Timeout:
         print(f"  [Senado] Timeout para '{termo}'")
         return []
     except Exception as e:
         print(f"  [Senado] Erro para '{termo}': {e}")
         return []
+
+    resultados = []
+    for m in materias:
+        codigo = str(m.get("Codigo") or "").strip()
+        sigla = (m.get("Sigla") or "").strip()
+        # Item sem codigo nao e materia; tipo fora da lista nao interessa ao radar.
+        if not codigo or sigla not in SIGLAS_SENADO:
+            continue
+        ementa = m.get("Ementa") or ""
+        if not _casa_termo(termo, ementa):
+            continue
+        numero = str(m.get("Numero") or "").lstrip("0") or "0"
+        ano = str(m.get("Ano") or "")
+        resultados.append({
+            "fonte": "Senado Federal",
+            "id": codigo,
+            "sigla": m.get("DescricaoIdentificacao") or f"{sigla} {numero}/{ano}",
+            "ementa": ementa,
+            "ano": ano,
+            "status": f"Apresentada em {m['Data']}" if m.get("Data") else "Em tramitação",
+            "autor": m.get("Autor", ""),
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/" + codigo,
+            "termo_busca": termo,
+            "data_deteccao": datetime.now().isoformat(),
+        })
+        if len(resultados) >= max_resultados:
+            break
+    return resultados
 
 
 # ---- Câmara dos Deputados ----
