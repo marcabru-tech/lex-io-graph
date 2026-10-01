@@ -7,6 +7,7 @@ import streamlit.components.v1 as components
 from lib.constants import THEMES
 from lib.conjuntos import carregar, conjuntos, lacunas, relacoes_no_par, figura_matriz, pares_em_frases
 from lib.validacao import ids_externos
+from lib.natureza import selo, legenda
 from lib.graph_builder import load_json
 from lib.footer import render_footer
 
@@ -130,14 +131,6 @@ with aba_teoria:
     # Complementos 2026 — conteúdo novo vem de data/teoria.json
     # ---------------------------------------------------------
     teoria = load_json("teoria.json")
-    ROTULO_NATUREZA = {"fato": ("FATO", "#2ecc71"), "interpretacao": ("INTERPRETAÇÃO", "#d4a853"),
-                       "metafora": ("METÁFORA", "#8a8478")}
-
-    def selo(natureza):
-        r, c = ROTULO_NATUREZA.get(natureza, (natureza.upper(), "#8a8478"))
-        return (f"<span style='font-family:DM Mono,monospace;font-size:10px;letter-spacing:.08em;"
-                f"color:{c};border:1px solid {c};border-radius:3px;padding:1px 6px'>{r}</span>")
-
     def exemplos(ids):
         if not ids:
             return ""
@@ -145,6 +138,7 @@ with aba_teoria:
 
     ht = teoria["hierarquia_tratados"]
     with st.expander("Complementos 2026 — " + ht["titulo"], expanded=True):
+        st.markdown(legenda(), unsafe_allow_html=True)
         st.markdown(ht["introducao"])
         st.markdown("##### 1. Posição no direito interno")
         for r in ht["posicao_interna"]:

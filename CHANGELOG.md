@@ -4,10 +4,23 @@
 
 - Radar: métrica do topo passa a contar novidades pendentes de curadoria (17), igual à
   lista da seção Novidades; as que já estão no grafo aparecem na dica da métrica.
-- Inteligência: todo caso e ensaio exibe selo de natureza. Sem rótulo próprio, o caso é
-  marcado como leitura analítica (interpretação e cenários, não fonte normativa nem
-  previsão). Nenhum texto dos casos foi alterado; a revisão de linguagem segue para
-  aprovação.
+- **Selos de natureza** (`lib/natureza.py`), com semântica explícita e legenda: FATO
+  (afirmação sustentada por fonte), INTERPRETAÇÃO (leitura analítica), HIPÓTESE
+  (inferência não demonstrada), METÁFORA (formulação analógica). Usados na Inteligência
+  (casos, camadas, prospectiva como cenários) e na Teoria dos Conjuntos.
+- **Revisão de linguagem aprovada (itens 1–12)**:
+  - Fatos corrigidos: trajetória da ANPD (órgão da Presidência, MP 869/2018 → Lei
+    13.853/2019; autarquia, Lei 14.460/2022; agência, Lei 15.352/2026); art. 55-A da LGPD
+    cria a ANPD, o 55-J lista competências; Decretos 12.975 e 12.976 de 20/05/2026;
+    católicos ≈ 57% da população (Censo 2022, IBGE).
+  - Caso art. 19: sequência institucional sem atribuição de intenção (PL 2.630 retirado de
+    pauta em 02/05/2023; Tema 987 com tese definitiva em 17/06/2026); PDLs descritos pelo
+    fundamento jurídico (CF, art. 49, V); caracterização pessoal retirada; cenários por
+    desfecho, não por campo político; AI Act e DSA como referenciais em avaliação.
+  - "Troca implícita" (ECA Digital) e influência da Rerum Novarum na CLT rotuladas como
+    hipótese.
+  - Contato dos ensaios: guilhermemachado.ceo@hubstry.dev.
+- Validador: natureza de `data/teoria.json` restrita aos quatro selos.
 
 ## [v0.16.0] — 2026-10-01
 

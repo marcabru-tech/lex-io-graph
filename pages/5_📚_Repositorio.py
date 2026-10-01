@@ -312,7 +312,7 @@ elif secao == "📋 Magnifica Humanitas":
             st.markdown(f"- {cap}")
     with st.expander("Continuidade histórica pancrônica"):
         st.markdown(MAGNIFICA_HUMANITAS['continuidade_historica'])
-    with st.expander("Convergência histórica — semana de 21–27 maio/2026"):
+    with st.expander("Convergência histórica — 20 a 27 de maio de 2026"):
         st.markdown(MAGNIFICA_HUMANITAS['convergencia_maio_2026'])
     with st.expander("Presença da Anthropic no lançamento"):
         st.markdown(MAGNIFICA_HUMANITAS['presenca_anthropic'])

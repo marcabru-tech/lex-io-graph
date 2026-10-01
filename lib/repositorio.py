@@ -328,7 +328,7 @@ MAGNIFICA_HUMANITAS = {
         "Arco de 135 anos de magistério social católico sobre tecnologia e trabalho."
     ),
     "convergencia_maio_2026": (
-        "Na semana de 21–27 de maio de 2026, três instâncias independentes convergiram "
+        "Entre 20 e 27 de maio de 2026, três instâncias independentes convergiram "
         "no mesmo campo normativo: (1) Executivo brasileiro — Decretos 12.975 e 12.976/2026 "
         "sobre responsabilidade de plataformas; (2) Vaticano — Magnifica Humanitas sobre "
         "dignidade humana e IA; (3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "

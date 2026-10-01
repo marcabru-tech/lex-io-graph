@@ -36,18 +36,15 @@ CASOS_ESTRATEGICOS = [
             {
                 "titulo": "Tensão 1 — O vácuo legislativo como campo de batalha",
                 "analise": (
-                    "O Congresso Nacional não aprovou o PL 2.630/2020 (PL das fake news) "
-                    "por pressão de parlamentares ligados a plataformas digitais e a setores "
-                    "que se beneficiaram da ausência de regulação de plataformas "
-                    "de 2018 e 2022. O vácuo não foi acidente — foi produto de vetos cruzados "
-                    "entre atores com interesses incompatíveis. O STF, ante a omissão legislativa "
-                    "e a urgência de 2025 (pré-eleitoral, ex-presidente indiciado por golpe de Estado "
-                    "— PL 2.253/2024), declarou a inconstitucionalidade parcial e progressiva "
-                    "do art. 19 (Tema 987, RE 1.037.396, jun./2025). O Executivo regulamentou "
-                    "via Decretos 12.975 e 12.976/2026 (21/05/2026). "
-                    "Diagnóstico: o judiciário e o executivo preencheram o vácuo que o "
-                    "legislativo deixou deliberadamente — não por omissão técnica, mas por "
-                    "bloqueio político estrutural."
+                    "O PL 2.630/2020 (PL das fake news) foi retirado de pauta na Câmara em "
+                    "02/05/2023 e não voltou ao Plenário; o art. 19 permaneceu sem revisão "
+                    "legislativa. O STF declarou a inconstitucionalidade parcial e progressiva "
+                    "do art. 19 (Tema 987, RE 1.037.396, jun./2025), com tese definitiva fixada "
+                    "em 17/06/2026, após os embargos. O Executivo regulamentou o tema pelos "
+                    "Decretos 12.975 e 12.976, de 20/05/2026. "
+                    "Leitura: na ausência de lei nova, o Judiciário e o Executivo passaram a "
+                    "ocupar o espaço que o Legislativo não redefiniu. As razões do impasse "
+                    "legislativo são disputadas e não são objeto desta análise."
                 )
             },
             {
@@ -66,17 +63,15 @@ CASOS_ESTRATEGICOS = [
                 )
             },
             {
-                "titulo": "Tensão 3 — A reação legislativa: 27 PDLs (base da Camara, 15/08/2026) e o paradoxo da oposição",
+                "titulo": "Tensão 3 — A reação legislativa: 27 PDLs (base da Câmara, 15/08/2026) e o argumento de competência",
                 "analise": (
-                    "A oposição (PL, Republicanos, União Brasil, Novo) protocolou 27 PDLs (base da Camara, 15/08/2026) "
-                    "(Projetos de Decreto Legislativo) para derrubar os Decretos 12.975 e "
-                    "12.976/2026 sob o argumento de censura e usurpação de competência normativa. "
-                    "O paradoxo estratégico: a mesma oposição que bloqueou o PL das fake news "
-                    "por anos — criando o vácuo que levou o STF a agir — agora acusa o STF e o "
-                    "Executivo de ultrapassar seus limites. O Congresso que não legislou invoca "
-                    "sua competência normativa contra quem legislou no vácuo que ele criou. "
-                    "Ano eleitoral (outubro/2026) amplifica todas as tensões: cada PDL é "
-                    "simultaneamente ato jurídico e peça de campanha."
+                    "Parlamentares de partidos de oposição (PL, Republicanos, União Brasil, Novo) "
+                    "protocolaram 27 PDLs (Projetos de Decreto Legislativo; base da Câmara, "
+                    "15/08/2026) para sustar os Decretos 12.975 e 12.976/2026, com fundamento na "
+                    "extrapolação do poder regulamentar (CF, art. 49, V) e na proteção à liberdade "
+                    "de expressão. A tensão institucional: o argumento de que a matéria é de "
+                    "competência do Congresso convive com a ausência de lei aprovada sobre o tema. "
+                    "O calendário eleitoral (outubro/2026) aumenta a visibilidade política da disputa."
                 )
             },
             {
@@ -84,11 +79,9 @@ CASOS_ESTRATEGICOS = [
                 "analise": (
                     "O debate não é apenas doméstico. A suspensão do X (ex-Twitter) no Brasil "
                     "pelo STF (ago./2024) e o retorno após acordo (out./2024) inseriram o "
-                    "Brasil no mapa global da regulação de plataformas. Elon Musk como ator "
-                    "geopolítico relevante — proprietário de plataforma com alcance global "
-                    "da direita europeia — transforma a regulação brasileira em front de uma "
-                    "disputa global entre soberania regulatória dos Estados e poder privado "
-                    "das plataformas. O Decreto 12.975/2026 é lido por críticos como "
+                    "Brasil no mapa global da regulação de plataformas e colocaram a regulação "
+                    "brasileira no centro de uma disputa global entre soberania regulatória "
+                    "dos Estados e poder privado das plataformas. O Decreto 12.975/2026 é lido por críticos como "
                     "modelo de censura estatal; pelo governo brasileiro como modelo de "
                     "responsabilidade de plataformas. Duas narrativas incompatíveis, "
                     "ambas estrategicamente corretas para seus proponentes."
@@ -97,16 +90,17 @@ CASOS_ESTRATEGICOS = [
         ],
         "prospectiva": {
             "12_meses": (
-                "Eleições outubro/2026: qualquer partido que vença terá que lidar com o vácuo "
-                "legislativo sobre moderação de conteúdo. Se a direita vencer, pressão para "
-                "revogar os decretos e restringir o STF. Se a esquerda mantiver o governo, "
-                "pressão para legislar o que os decretos fizeram por decreto."
+                "Eleições outubro/2026: qualquer governo eleito terá de lidar com a ausência "
+                "de lei sobre moderação de conteúdo. Cenário A: revogação ou alteração dos "
+                "decretos, com retorno da questão ao Congresso. Cenário B: continuidade dos "
+                "decretos e pressão para converter em lei o que hoje está em regulamento."
             ),
             "36_meses": (
-                "O EU AI Act (2024) e o DSA (2022) europeus já provaram que regulação estatal "
-                "de plataformas é viável sem censura — o Brasil pode seguir esse modelo via "
-                "legislação, não via decreto. A janela estratégica para o Congresso legislar "
-                "é 2027–2028, após as eleições de 2026."
+                "O AI Act (2024) e o DSA (Digital Services Act, 2022) europeus são o principal "
+                "referencial de regulação de IA e de plataformas por lei; a avaliação de sua "
+                "eficácia e de seus efeitos sobre a liberdade de expressão ainda está em curso. "
+                "Um caminho para o Brasil é legislar, em vez de regulamentar por decreto; a "
+                "janela provável é 2027–2028, após as eleições de 2026."
             ),
             "lacuna_remanescente": (
                 "Mesmo com legislação, o problema estrutural persiste: a assimetria de "
@@ -123,8 +117,11 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "moderado",
         "status": "em consolidação — ANPD ganha competências via Decreto 12.975/2026",
         "sintese": (
-            "A ANPD (Agência Nacional de Proteção de Dados) foi criada pela LGPD em 2018 "
-            "como autarquia federal. Levou 3 anos para ter estrutura funcional. Em 2026, "
+            "A ANPD (Agência Nacional de Proteção de Dados) foi criada em 2018 (MP 869/2018, "
+            "convertida na Lei 13.853/2019) como órgão da Presidência da República; tornou-se "
+            "autarquia de natureza especial em 2022 (Lei 14.460) e agência reguladora em 2026 "
+            "(Lei 15.352). A estrutura funcional começou a se formar com a posse do Conselho "
+            "Diretor, em novembro de 2020. Em 2026, "
             "o Decreto 12.975 expandiu suas competências para fiscalizar o Marco Civil — "
             "movimento que transforma a ANPD de autoridade de dados em autoridade digital."
         ),
@@ -139,7 +136,8 @@ CASOS_ESTRATEGICOS = [
                     "regulação robusta sendo construída por instrumento frágil. "
                     "Glocal (global + local, Robertson, 1990s): o modelo europeu funciona "
                     "porque as autoridades de proteção de dados têm independência constitucional. "
-                    "No Brasil, a ANPD depende de vontade política do Executivo."
+                    "No Brasil, a autonomia foi construída por etapas: autarquia em 2022 e "
+                    "agência reguladora em 2026 (Lei 15.352)."
                 )
             }
         ],
@@ -151,7 +149,8 @@ CASOS_ESTRATEGICOS = [
             "36_meses": (
                 "Se o PL 2.338/2023 for aprovado, a ANPD pode se tornar a autoridade "
                 "regulatória de IA no Brasil — concentração de poder regulatório que "
-                "replica o modelo europeu mas sem a mesma independência institucional."
+                "replica o modelo europeu; o teste será se a autonomia de agência se traduz "
+                "em independência efetiva."
             ),
             "lacuna_remanescente": (
                 "Capacidade técnica: a ANPD não tem quadro de especialistas em IA e "
@@ -180,11 +179,15 @@ CASOS_ESTRATEGICOS = [
                     "A proteção de crianças é um dos poucos valores que transcende "
                     "a polarização política — nenhum ator político se beneficia de "
                     "aparecer como defensor de plataformas que expõem menores. "
-                    "As plataformas de grande porte aceitaram o ECA Digital como troca implícita: "
-                    "regras claras sobre menores em troca de não regulação mais ampla "
-                    "de conteúdo para adultos. O ECA Digital é o oposto do PL das fake news: "
-                    "legislação possível porque não ameaça o modelo de negócio das plataformas "
-                    "da mesma forma que a moderação de conteúdo político ameaçaria."
+                    "O ECA Digital contrasta com o PL das fake news: o tema dos menores "
+                    "reuniu apoio que a moderação de conteúdo político não reuniu."
+                ),
+                "hipotese": (
+                    "As plataformas de grande porte teriam aceitado o ECA Digital como troca "
+                    "implícita: regras claras sobre menores em troca de não regulação mais ampla "
+                    "de conteúdo para adultos, porque a lei não ameaça o modelo de negócio da "
+                    "mesma forma que a moderação de conteúdo político ameaçaria. Não há "
+                    "evidência documental de negociação nesse sentido."
                 )
             }
         ],
@@ -217,13 +220,13 @@ CASOS_ESTRATEGICOS = [
             "A encíclica Magnifica Humanitas (Leão XIV, 25/05/2026) posiciona a Igreja "
             "Católica como ator normativo global no debate sobre IA — não apenas ético, "
             "mas com capacidade de influenciar legisladores em 1,3 bilhão de católicos "
-            "globalmente, incluindo o Brasil (65% da população)."
+            "globalmente, incluindo o Brasil (cerca de 57% da população, Censo 2022 do IBGE)."
         ),
         "camadas": [
             {
                 "titulo": "Convergência histórica de maio/2026",
                 "analise": (
-                    "Na semana de 21–27 de maio de 2026, três instâncias independentes "
+                    "Entre 20 e 27 de maio de 2026, três instâncias independentes "
                     "convergiram no mesmo campo normativo: (1) Executivo brasileiro — "
                     "Decretos 12.975 e 12.976/2026; (2) Vaticano — Magnifica Humanitas; "
                     "(3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "
@@ -242,14 +245,17 @@ CASOS_ESTRATEGICOS = [
                     "Leão XIII / Rerum Novarum (1891): a Igreja entrou no debate sobre "
                     "as condições de trabalho na Revolução Industrial — quando o Estado "
                     "e o mercado ainda não tinham vocabulário para discutir dignidade "
-                    "do trabalhador. O resultado: influência direta na legislação trabalhista "
-                    "do século XX, incluindo a CLT brasileira (1943). "
+                    "do trabalhador. "
                     "Leão XIV / Magnifica Humanitas (2026): a Igreja entra no debate sobre "
                     "IA quando o Estado e o mercado ainda não têm vocabulário consolidado "
-                    "para discutir dignidade na era digital. "
-                    "Vetor prospectivo: se o padrão histórico se repetir, a encíclica "
-                    "influenciará legislação de IA nas próximas duas décadas — "
-                    "especialmente em países de maioria católica como o Brasil."
+                    "para discutir dignidade na era digital."
+                ),
+                "hipotese": (
+                    "A Rerum Novarum teria influenciado a legislação trabalhista do século XX, "
+                    "inclusive a CLT brasileira (1943) — relação sustentada por parte da "
+                    "historiografia, não demonstrada aqui. Se o padrão se repetir, a encíclica "
+                    "influenciará a legislação de IA nas próximas duas décadas, especialmente "
+                    "em países de maioria católica como o Brasil."
                 )
             }
         ],
@@ -677,8 +683,8 @@ CASO_ANPD_JUDICIARIO = {
         {
             "titulo": "Tensão 1 — ANPD: regulação administrativa, não jurisdição",
             "descricao": (
-                "A ANPD (Agência Nacional de Proteção de Dados) é agência reguladora federal (Lei 15.352/2026), autarquia de natureza especial criada "
-                "pela LGPD (Lei 13.709/2018, art. 55-J) com competências administrativas: "
+                "A ANPD (Agência Nacional de Proteção de Dados) é agência reguladora federal (Lei 15.352/2026), autarquia de natureza especial prevista "
+                "na LGPD (Lei 13.709/2018, art. 55-A; competências no art. 55-J) com competências administrativas: "
                 "regulamentar, fiscalizar, orientar e aplicar sanções. "
                 "Suas decisões não possuem efeito vinculante sobre o Poder Judiciário. "
                 "O art. 5º, XXXV, CF/88 — inafastabilidade da jurisdição — garante que "
@@ -723,7 +729,7 @@ CASO_ANPD_JUDICIARIO = {
         "criam exatamente o que antecede crises reputacionais, judiciais e financeiras. "
         "A hierarquia real: ANPD regula, Judiciário decide, MP vela pelos direitos difusos."
     ),
-    "fonte": "Gonçalves et Alii — Hubstry Deep Tech · guilhermemachado@hubstry.onmicrosoft.com",
+    "fonte": "Gonçalves et Alii — Hubstry Deep Tech · guilhermemachado.ceo@hubstry.dev",
 }
 
 CASO_PARADIGMA_PREVENTIVO = {
@@ -785,7 +791,7 @@ CASO_PARADIGMA_PREVENTIVO = {
         "Para deep techs como a Hubstry, a consolidação do paradigma preventivo "
         "não representa ameaça — é oportunidade estrutural."
     ),
-    "fonte": "Guilherme Gonçalves Machado — Founder & CEO, Hubstry Deep Tech · guilhermemachado@hubstry.onmicrosoft.com",
+    "fonte": "Guilherme Gonçalves Machado — Founder & CEO, Hubstry Deep Tech · guilhermemachado.ceo@hubstry.dev",
 }
 
 
