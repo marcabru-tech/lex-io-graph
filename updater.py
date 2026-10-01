@@ -119,6 +119,17 @@ def main():
                 _agora[_fonte] = _antes[_fonte]
                 print(f"  [preservado] {_fonte} vazio nesta coleta, mantido anterior: {_tema} ({_n_antes} itens)")
 
+    # Saneamento: item sem id nao identifica proposicao (resposta da API em
+    # formato inesperado). Remove de todas as fontes antes de salvar.
+    _descartados = 0
+    for _dados in radar_novo.get("temas", {}).values():
+        for _f in ("senado", "camara", "lexml"):
+            _antes = _dados.get(_f, [])
+            _dados[_f] = [i for i in _antes if str(i.get("id", "")).strip()]
+            _descartados += len(_antes) - len(_dados[_f])
+    if _descartados:
+        print(f"  [saneamento] {_descartados} item(ns) sem id descartado(s)")
+
     novidades = detectar_novidades(radar_novo, radar_anterior)
     salvar_radar(radar_novo, novidades)
 

@@ -1,5 +1,14 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.1] — 2026-10-01
+
+### Correção: cards vazios do Senado no Radar
+
+- O parser do Senado gravava um item vazio por tema (sigla "/", link sem código)
+  quando a resposta da API vinha em formato inesperado. Itens sem código passam a
+  ser descartados no parser e no saneamento do `updater.py`; 5 itens vazios
+  removidos do snapshot.
+
 ## [v0.13.0] — 2026-10-01
 
 ### Taxonomias integradas e versões fixadas

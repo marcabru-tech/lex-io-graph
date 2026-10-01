@@ -7,19 +7,7 @@
         "IA generativa",
         "algoritmo decisão"
       ],
-      "senado": [
-        {
-          "fonte": "Senado Federal",
-          "id": "",
-          "sigla": "/",
-          "ementa": "",
-          "ano": "",
-          "status": "Em tramitação",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
-          "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:12.229728"
-        }
-      ],
+      "senado": [],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
@@ -85,19 +73,7 @@
         "LGPD",
         "privacidade digital"
       ],
-      "senado": [
-        {
-          "fonte": "Senado Federal",
-          "id": "",
-          "sigla": "/",
-          "ementa": "",
-          "ano": "",
-          "status": "Em tramitação",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
-          "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-10-01T12:39:20.224691"
-        }
-      ],
+      "senado": [],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
@@ -163,19 +139,7 @@
         "ECA digital",
         "proteção menores internet"
       ],
-      "senado": [
-        {
-          "fonte": "Senado Federal",
-          "id": "",
-          "sigla": "/",
-          "ementa": "",
-          "ano": "",
-          "status": "Em tramitação",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
-          "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-10-01T12:39:25.343921"
-        }
-      ],
+      "senado": [],
       "camara": [],
       "lexml": []
     },
@@ -185,19 +149,7 @@
         "moderação conteúdo",
         "redes sociais"
       ],
-      "senado": [
-        {
-          "fonte": "Senado Federal",
-          "id": "",
-          "sigla": "/",
-          "ementa": "",
-          "ano": "",
-          "status": "Em tramitação",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
-          "termo_busca": "responsabilidade plataformas",
-          "data_deteccao": "2026-10-01T12:39:29.845311"
-        }
-      ],
+      "senado": [],
       "camara": [],
       "lexml": []
     },
@@ -207,19 +159,7 @@
         "NR-1",
         "teletrabalho algoritmo"
       ],
-      "senado": [
-        {
-          "fonte": "Senado Federal",
-          "id": "",
-          "sigla": "/",
-          "ementa": "",
-          "ano": "",
-          "status": "Em tramitação",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
-          "termo_busca": "riscos psicossociais trabalho",
-          "data_deteccao": "2026-10-01T12:39:34.632847"
-        }
-      ],
+      "senado": [],
       "camara": [],
       "lexml": []
     },

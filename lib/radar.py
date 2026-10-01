@@ -73,6 +73,11 @@ def buscar_senado(termo: str, max_resultados: int = 10) -> list[dict]:
                 sit = sit[0] if sit else {}
             situacao = sit.get("Situacao", {}).get("DescricaoSituacao", "")
 
+            # Item sem codigo nao e materia: e sinal de que o formato da
+            # resposta mudou. Descartar em vez de gravar um card vazio.
+            if not ident.get("CodigoMateria"):
+                continue
+
             resultados.append({
                 "fonte": "Senado Federal",
                 "id": str(ident.get("CodigoMateria", "")),
