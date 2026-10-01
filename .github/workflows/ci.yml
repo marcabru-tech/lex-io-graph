@@ -1,0 +1,33 @@
+name: CI — Smoke test
+
+# Roda em todo PR para main e em todo push para main.
+# É a verificação que o ADR 005 pressupunha e não existia: barra dados
+# inconsistentes, ImportError e página quebrada antes do deploy do
+# Streamlit Cloud (que publica automaticamente o que chega em main).
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Smoke test
+        run: python -u smoke_test.py
