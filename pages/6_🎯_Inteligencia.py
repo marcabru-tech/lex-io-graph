@@ -1,6 +1,7 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
-from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA, SOBERANIA
+from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA, SOBERANIA, NATUREZA_CASO_PADRAO, NATUREZA_ENSAIO_PADRAO
+from lib.natureza import selo, legenda
 from lib.footer import render_footer
 from lib.estado_regulador import figura_linha_do_tempo, SINTESE_LIVRO, FONTE_LIVRO
 from lib.constants import ODIN_URL
@@ -103,6 +104,8 @@ if secao == "⚡ Casos Estratégicos":
         "estratégico": "nivel-estrategico"
     }
 
+    st.markdown(legenda(), unsafe_allow_html=True)
+
     for caso in CASOS_ESTRATEGICOS:
         nivel_class = nivel_cores.get(caso['nivel_tensao'], "")
         st.markdown(f"""
@@ -115,8 +118,8 @@ if secao == "⚡ Casos Estratégicos":
   <div class="caso-sintese">{caso['sintese']}</div>
 </div>""", unsafe_allow_html=True)
 
-        if caso.get("natureza"):
-            st.caption(caso["natureza"])
+        st.markdown(f"{selo('interpretacao')} <span style='color:#8a8478;font-size:12px'>"
+                    f"{caso.get('natureza') or NATUREZA_CASO_PADRAO}</span>", unsafe_allow_html=True)
         if caso.get("matriz_vigencia"):
             import json as _json
             with open("data/normas.json", encoding="utf-8") as _f:
@@ -137,13 +140,21 @@ if secao == "⚡ Casos Estratégicos":
                     unsafe_allow_html=True
                 )
                 st.markdown(
-                    f'<div class="tensao-analise">{camada["analise"]}</div>',
+                    f'<div class="tensao-analise">{selo(camada.get("natureza", "interpretacao"))} '
+                    f'{camada["analise"]}</div>',
                     unsafe_allow_html=True
                 )
+                if camada.get("hipotese"):
+                    st.markdown(
+                        f'<div class="tensao-analise">{selo("hipotese")} {camada["hipotese"]}</div>',
+                        unsafe_allow_html=True
+                    )
                 st.markdown("")
 
             st.markdown("---")
-            st.markdown("**Prospectiva**")
+            st.markdown(f"**Prospectiva** {selo('hipotese')} "
+                        "<span style='color:#8a8478;font-size:12px'>cenários, não previsões</span>",
+                        unsafe_allow_html=True)
             prosp = caso['prospectiva']
             st.markdown(
                 f'<div class="prosp-label">12 meses</div>'
@@ -349,6 +360,8 @@ elif secao == "⚖️ Direito Natural e Positivo":
     for caso in [CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO]:
         with st.expander(f"⚖️ {caso['titulo']}", expanded=False):
             st.markdown(f"*{caso['subtitulo']}*")
+            st.markdown(f"{selo('interpretacao')} <span style='color:#8a8478;font-size:12px'>"
+                        f"{caso.get('natureza') or NATUREZA_ENSAIO_PADRAO}</span>", unsafe_allow_html=True)
             st.markdown(f"**Área:** {caso['area']}")
             st.divider()
             for tensao in caso.get('tensoes', []):

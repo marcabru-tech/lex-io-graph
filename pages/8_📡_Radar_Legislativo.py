@@ -92,7 +92,17 @@ if ultima and ultima != "Nunca":
     except Exception:
         pass
 
-total_novidades = radar.get("total_novidades", 0)
+# Novidades pendentes de curadoria: as que já viraram nó do grafo depois da
+# coleta saem da contagem, como saem da lista da seção Novidades.
+try:
+    with open("data/normas.json", encoding="utf-8") as _fi:
+        _idx_topo = indice_corpus(json.load(_fi)["nodes"])
+except Exception:
+    _idx_topo = {}
+_nov_todas = radar.get("novidades_detectadas", [])
+_nov_pendentes = [n for n in _nov_todas if not norma_no_corpus(n, _idx_topo)]
+total_novidades = len(_nov_pendentes)
+_ja_no_grafo = len(_nov_todas) - total_novidades
 total_itens = sum(
     len(tema_data.get("senado", [])) +
     len(tema_data.get("camara", [])) +
@@ -103,7 +113,9 @@ total_itens = sum(
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Última atualização", ultima)
 col2.metric("Itens monitorados", total_itens)
-col3.metric("Novidades detectadas", total_novidades)
+col3.metric("Novidades pendentes", total_novidades,
+            help=(f"{_ja_no_grafo} novidade(s) da última coleta já estão no grafo e não contam aqui."
+                  if _ja_no_grafo else "Novidades da última coleta ainda sem curadoria."))
 col4.metric("Temas ativos", len(radar.get("temas", {})))
 
 # ---- Saúde das fontes (ADR 006) ----

@@ -115,6 +115,13 @@ def validar_corpus() -> list[str]:
     if sobrepostos:
         erros.append(f"referencias_externas.json: ids que já são nós do corpus {sorted(sobrepostos)}")
 
+    if (DATA / "teoria.json").exists():
+        from lib.natureza import SELOS
+        naturezas = set(re.findall(r'"natureza":\s*"([^"]+)"',
+                                   (DATA / "teoria.json").read_text(encoding="utf-8")))
+        if naturezas - set(SELOS):
+            erros.append(f"teoria.json: natureza desconhecida {sorted(naturezas - set(SELOS))}")
+
     fantasmas = (ids_citados_na_teoria() | ids_em_teoria_json()) - ids - set(externos)
     if fantasmas:
         erros.append(
