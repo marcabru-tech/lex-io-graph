@@ -931,12 +931,12 @@
   <div class="animate delay-3" style="margin-top:3rem">
     <div class="section-label">DIAGRAMA DE VENN · INTERSEÇÕES ENTRE RAMOS FUNDAMENTAIS</div>
     <h1>Campos do Direito como Conjuntos</h1>
-    <p class="subtitle">Quatro ramos tradicionais + Direito Digital no centro — A = { x | x é norma do campo A }</p>
+    <p class="subtitle">Quatro ramos tradicionais + Direito Digital no centro + campos acrescentados em 2026 (Econômico, Internacional Público, Internacional Privado, Soberania Tecnológica) — A = { x | x é norma do campo A }</p>
   </div>
 
   <div class="venn-container animate delay-4">
     <div class="venn-svg-wrap">
-      <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="-45 0 790 520" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="glow-gold">
             <feGaussianBlur stdDeviation="4" result="blur"/>
@@ -968,7 +968,7 @@
           </radialGradient>
         </defs>
 
-        <rect width="700" height="520" fill="#0a0a0a" rx="4"/>
+        <rect x="-45" width="790" height="520" fill="#0a0a0a" rx="4"/>
 
         <g stroke="#1a1a1a" stroke-width="0.5">
           <line x1="0" y1="130" x2="700" y2="130"/>
@@ -1004,6 +1004,46 @@
         <text x="350" y="256" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" fill="#3dc8e6" font-style="italic" font-weight="600">Digital</text>
         <text x="350" y="270" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3dc8e6" opacity="0.6">D ∩ todos ≠ ∅</text>
 
+        <!-- ===== Campos acrescentados em 2026 ===== -->
+        <!-- Direito Econômico -->
+        <circle cx="480" cy="165" r="105" fill="rgba(230,126,34,0.07)" stroke="#e67e22" stroke-width="1" opacity="0.85"/>
+        <text x="512" y="78" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="11" fill="#e67e22" opacity="0.95" font-style="italic">Direito Econômico</text>
+        <text x="512" y="90" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e67e22" opacity="0.55">E = { x | x organiza a economia }</text>
+
+        <!-- Direito Internacional Público: atravessa a fronteira de C (incorporação) -->
+        <circle cx="625" cy="215" r="88" fill="rgba(200,169,110,0.07)" stroke="#c8a96e" stroke-width="1" opacity="0.85"/>
+        <text x="630" y="322" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="11" fill="#c8a96e" opacity="0.95" font-style="italic">Dir. Internacional Público</text>
+        <text x="630" y="334" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#c8a96e" opacity="0.55">DIP = { x | x é tratado }</text>
+        <text x="668" y="205" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c8a96e" opacity="0.5">fora de C:</text>
+        <text x="668" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c8a96e" opacity="0.5">não incorporado</text>
+
+        <!-- Direito Internacional Privado: atravessa Civil e a fronteira de C -->
+        <circle cx="90" cy="300" r="80" fill="rgba(163,217,119,0.06)" stroke="#a3d977" stroke-width="1" opacity="0.85"/>
+        <text x="72" y="396" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="11" fill="#a3d977" opacity="0.95" font-style="italic">Dir. Internacional Privado</text>
+        <text x="72" y="408" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#a3d977" opacity="0.55">DIPr = { x | x resolve conflito de leis }</text>
+
+        <!-- Soberania Tecnológica: eixo transversal (tracejado) -->
+        <circle cx="430" cy="200" r="70" fill="none" stroke="#6c8ef5" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.9"/>
+        <text x="430" y="122" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="10" fill="#6c8ef5" opacity="0.95" font-style="italic">Soberania Tecnológica</text>
+
+        <!-- Interseções dos campos novos -->
+        <circle cx="398" cy="226" r="4" fill="#6c8ef5" opacity="0.9"/>
+        <line x1="394" y1="221" x2="384" y2="196" stroke="#6c8ef5" stroke-width="0.6" opacity="0.6"/>
+        <text x="362" y="184" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6c8ef5" opacity="0.9">REDATA</text>
+        <text x="362" y="194" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6c8ef5" opacity="0.55">E ∩ S ∩ D</text>
+
+        <circle cx="468" cy="178" r="4" fill="#e67e22" opacity="0.9"/>
+        <text x="476" y="174" font-family="'JetBrains Mono', monospace" font-size="9" fill="#e67e22" opacity="0.9">PNMCE</text>
+        <text x="476" y="184" font-family="'JetBrains Mono', monospace" font-size="7" fill="#e67e22" opacity="0.55">E ∩ S</text>
+
+        <circle cx="560" cy="185" r="4" fill="#c8a96e" opacity="0.9"/>
+        <text x="566" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#c8a96e" opacity="0.9">Acordos Mercosul</text>
+        <text x="566" y="176" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c8a96e" opacity="0.55">DIP ∩ E ∩ C</text>
+
+        <circle cx="140" cy="265" r="4" fill="#a3d977" opacity="0.9"/>
+        <text x="148" y="262" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a3d977" opacity="0.9">LINDB</text>
+        <text x="148" y="272" font-family="'JetBrains Mono', monospace" font-size="7" fill="#a3d977" opacity="0.55">DIPr ∩ Cv ∩ C</text>
+
         <!-- Interseções principais -->
         <circle cx="320" cy="205" r="4" fill="#3dc8e6" opacity="0.8" filter="url(#glow-cyan)"/>
         <text x="325" y="196" font-family="'JetBrains Mono', monospace" font-size="9" fill="#3dc8e6" opacity="0.9">LGPD</text>
@@ -1017,7 +1057,7 @@
         <text x="400" y="271" font-family="'JetBrains Mono', monospace" font-size="9" fill="#c44b4b" opacity="0.9">Tema 987</text>
         <text x="400" y="282" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c44b4b" opacity="0.5">D ∩ P ∩ C</text>
 
-        <rect x="1" y="1" width="698" height="518" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+        <rect x="-44" y="1" width="788" height="518" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1"/>
       </svg>
     </div>
 
@@ -1063,6 +1103,38 @@
             <div class="legend-name">Direito Digital — Centro (interseção generalizada)</div>
             <div class="legend-desc">Permeia todos os ramos. Interseção com Constitucional: direitos digitais e LGPD; com Civil: contratos eletrônicos; com Trabalho: teletrabalho; com Penal: crimes cibernéticos (Lei 12.737/2012). Formalmente: L<sub>Digital</sub> ∩ L<sub>i</sub> ≠ ∅ para todo i ∈ {1,...,8}.</div>
             <div class="legend-enunciado">D = { x | x regula o<br>ambiente digital }<br>D ∩ C ∩ Cv ∩ P ∩ T ≠ ∅</div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#e67e22"></div>
+          <div>
+            <div class="legend-name">Direito Econômico <span style="opacity:.6">· 2026</span></div>
+            <div class="legend-desc">Organização jurídica da economia: ordem econômica constitucional (arts. 170 a 181), regulação, concorrência e política industrial. Interseção com Digital e Soberania: REDATA; com Soberania: minerais críticos (PNMCE); com Penal: crimes contra a ordem econômica.</div>
+            <div class="legend-enunciado">E = { x | x organiza<br>a economia }<br>E ∩ C = ordem econômica (art. 170)</div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#c8a96e"></div>
+          <div>
+            <div class="legend-name">Direito Internacional Público <span style="opacity:.6">· 2026</span></div>
+            <div class="legend-desc">Tratados e organizações internacionais. O círculo atravessa a fronteira de C: o tratado nasce fora do ordenamento e entra por incorporação (CF, arts. 49, I e 84, VIII). Convenção de Viena, Tratado de Assunção e acordos do Mercosul com Singapura, EFTA e União Europeia.</div>
+            <div class="legend-enunciado">DIP = { x | x é tratado }<br>DIP ∩ C = tratados incorporados<br>DIP \ C = ainda não incorporados</div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#a3d977"></div>
+          <div>
+            <div class="legend-name">Direito Internacional Privado <span style="opacity:.6">· 2026</span></div>
+            <div class="legend-desc">Lei aplicável e jurisdição em relações privadas com elemento estrangeiro (LINDB, arts. 7º a 17). Atravessa Civil e Trabalho. Um acordo comercial é tratado (DIP), não norma de DIPr, ainda que produza efeitos em relações privadas.</div>
+            <div class="legend-enunciado">DIPr = { x | x resolve<br>conflito de leis }<br>DIPr ∩ Cv = contratos internacionais</div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#6c8ef5"></div>
+          <div>
+            <div class="legend-name">Soberania Tecnológica <span style="opacity:.6">· 2026 · eixo transversal</span></div>
+            <div class="legend-desc">Capacidade verificável de decidir, operar e substituir sistemas críticos — dados, operação e tecnologia. Tracejado porque é eixo transversal, não ramo: atravessa Digital (LGPD, transferência internacional), Econômico (REDATA, PNMCE) e infraestrutura.</div>
+            <div class="legend-enunciado">S ∩ D ∩ E ≠ ∅<br>(REDATA)</div>
           </div>
         </div>
       </div>

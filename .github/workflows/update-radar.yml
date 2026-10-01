@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
-      contents: write       # Basta isto para commitar direto em main.
-                            # pull-requests: write foi removido — não abrimos mais PR.
+      contents: write       # Commit direto em main, restrito a data/radar_legislativo.json
+                            # pelo passo "Trava de escopo" abaixo (ADR 006).
 
     steps:
       # v5 e v6 rodam em Node24: some o aviso de deprecação do Node20
@@ -49,6 +49,26 @@ jobs:
         run: python -u updater.py
         continue-on-error: true
 
+      # ADR 006 — a coleta só vira commit se passar pelas duas travas:
+      # 1) validação do snapshot (ids, estrutura, coleta não vazia);
+      # 2) escopo: o robô só pode alterar data/radar_legislativo.json.
+      - name: Validar snapshot
+        if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
+        run: python -m lib.validacao --radar
+
+      - name: Trava de escopo
+        if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          PERMITIDO="data/radar_legislativo.json"
+          ALTERADOS=$( (git diff --name-only; git ls-files --others --exclude-standard) | grep -v '__pycache__' | sort -u )
+          FORA=$(echo "$ALTERADOS" | grep -v -x "$PERMITIDO" | grep -v '^$' || true)
+          if [ -n "$FORA" ]; then
+            echo "::error::O robô alterou arquivos fora do escopo do ADR 006:"
+            echo "$FORA"
+            exit 1
+          fi
+          echo "Escopo OK: ${ALTERADOS:-nenhuma alteração}"
+
       - name: Commitar snapshot se houve mudança
         if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
         run: |
@@ -66,45 +86,24 @@ jobs:
           git commit -m "chore(radar): snapshot automático $(date +'%Y-%m-%d')"
 
           # Rebase antes do push evita falha se alguém commitou em main
-          # enquanto o radar rodava.
-          echo "Arvore antes do pull:"
-          git status --porcelain
-          git checkout -- .
+          # enquanto o radar rodava. A trava de escopo já garantiu que
+          # nada além do snapshot foi alterado.
           git pull --rebase origin main
           git push origin main
 
           echo "Snapshot atualizado em main."
 
 # ─────────────────────────────────────────────────────────────────────
-# O QUE MUDOU E POR QUÊ
+# GOVERNANÇA — ver docs/adr/006-ingestao-automatizada-de-dados.md
 #
-# 1. Saiu o passo 'gh pr create'. Era ele que falhava: o push do branch
-#    funcionava (por isso os branches data/radar-update-* existem no
-#    remoto com dados reais), mas a criação do PR era recusada.
-#    Sem PR, não há branch órfão acumulando.
+# O radar é a única exceção ao fluxo de PR do ADR 005. A exceção é
+# estreita: um arquivo, validado antes do commit, com proveniência
+# gravada no próprio snapshot (bloco "proveniencia": executor, URL da
+# execução, hash do conteúdo, estado e contagem por fonte).
 #
-# 2. Saiu a criação de branch. O radar grava um snapshot de dados
-#    públicos — não é código que precise de revisão em PR. A curadoria
-#    de verdade continua acontecendo onde sempre aconteceu: na decisão
-#    de quais PLs viram nós em normas.json, feita por você, à mão.
-#
-# 3. checkout@v4 → v5 e setup-python@v5 → v6: elimina o aviso de
-#    deprecação do Node20. Era só aviso, nunca foi a causa da falha.
-#
-# 4. permissions: pull-requests: write foi removido — não é mais usado.
-#
-# COMO APLICAR (PowerShell, na raiz do repositório):
-#
-#   Copy-Item "$HOME\Downloads\update-radar.yml" ".\.github\workflows\update-radar.yml" -Force
-#   git add .github/workflows/update-radar.yml
-#   git commit -m "fix(ci): radar commita direto em main, sem gh pr create"
-#   git push origin main
-#
-# Depois, teste sem esperar segunda-feira:
-#   GitHub → Actions → "Radar Legislativo" → Run workflow
-#
-# LIMPEZA DOS BRANCHES ÓRFÃOS (opcional, depois que o workflow passar):
-#   git push origin --delete data/radar-update-2026-07-27
-#   git push origin --delete data/radar-update-2026-08-03
-#   git push origin --delete data/radar-update-2026-08-10
+# Por que não PR: PRs abertas com o GITHUB_TOKEN não disparam outros
+# workflows, então a validação não rodaria sem um token pessoal; e o
+# fluxo por PR já foi tentado em jul-ago/2026 e acumulou PRs sem merge.
+# O juízo humano acontece depois, quando uma proposição entra em
+# normas.json: o radar alerta, o curador decide.
 # ─────────────────────────────────────────────────────────────────────

@@ -1,10 +1,10 @@
 import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
-from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
+from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
 
 st.set_page_config(
-    page_title="Lexiograph Compliance Map",
+    page_title=f"{APP_NAME} — {APP_TAGLINE}",
     page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -49,12 +49,17 @@ with col2:
         "<h1 style='text-align:center; font-size: 2.8rem; letter-spacing: 0.04em; "
         "background: linear-gradient(135deg, #c44b4b, #d4a853, #3dc8e6); "
         "-webkit-background-clip: text; background-clip: text; color: transparent;'>"
-        "Lexiograph</h1>",
+        f"{APP_NAME}</h1>",
         unsafe_allow_html=True,
     )
     st.markdown(
         "<p style='text-align:center; font-size: 14px; color: #706a60; letter-spacing: 0.15em; text-transform: uppercase;'>"
-        "Compliance Map — Ordenamento Jurídico Digital Brasileiro</p>",
+        f"{APP_TAGLINE} — Ordenamento Jurídico Digital Brasileiro</p>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        "<p style='text-align:center; font-size: 12px; color: #8a8478; letter-spacing: 0.06em;'>"
+        f"{APP_SHORT} · módulos: {' · '.join(APP_MODULOS)}</p>",
         unsafe_allow_html=True,
     )
     st.markdown(
@@ -73,7 +78,7 @@ col_a, col_b, col_c, col_d = st.columns(4)
 col_a.metric("Normas mapeadas", len(G.nodes))
 col_b.metric("Conexões normativas", len(raw_edges))
 col_c.metric("Jurisprudência vinculada", len(raw_juris))
-col_d.metric("Temas regulatórios", 6)
+col_d.metric("Temas regulatórios", len(THEMES))
 
 st.divider()
 

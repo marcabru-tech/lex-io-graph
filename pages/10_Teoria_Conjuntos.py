@@ -1,8 +1,12 @@
+import html
+import re
+
 import streamlit as st
 import streamlit.components.v1 as components
 
 from lib.constants import THEMES
-from lib.conjuntos import carregar, conjuntos, lacunas, relacoes_no_par, figura_matriz
+from lib.conjuntos import carregar, conjuntos, lacunas, relacoes_no_par, figura_matriz, pares_em_frases
+from lib.validacao import ids_externos
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -39,9 +43,22 @@ with aba_corpus:
         1 for i, a in enumerate(cj) for b in list(cj)[i + 1:] if cj[a] & cj[b]))
     c4.metric("Pares disjuntos", len(vazios))
 
-    st.markdown("#### Matriz de interseções |A ∩ B|")
-    st.caption("A diagonal é a cardinalidade de cada conjunto. Passe o mouse para ver o par.")
+    st.markdown("#### Quantas normas cada par de vetores compartilha — |A ∩ B|")
+    st.caption(
+        "Cruze uma linha com uma coluna: o número é a quantidade de normas marcadas com os dois "
+        "vetores. Só aparece a metade inferior porque A ∩ B = B ∩ A — a outra metade repetiria "
+        "os mesmos números. Na diagonal, o total de normas de cada vetor. Passe o mouse para ver o par."
+    )
     st.plotly_chart(figura_matriz(cj), use_container_width=True, config={"displayModeBar": False})
+
+    nome_curto = lambda i: por_id[i].get("sigla") or por_id[i]["nome"]
+    frases, disjuntos = pares_em_frases(cj, nome_curto)
+    with st.expander(f"Ler a matriz em frases — {len(frases)} pares com normas em comum"):
+        for f in frases:
+            st.markdown(f"- {f}")
+        if disjuntos:
+            st.markdown(f"**Sem norma em comum no corpus atual ({len(disjuntos)} pares):** "
+                        + " · ".join(disjuntos))
 
     st.markdown("#### Examinar um par de conjuntos")
     temas = list(cj)
@@ -109,6 +126,30 @@ with aba_corpus:
 # =============================================================
 with aba_teoria:
     with open("docs/teoria-conjuntos-juridicos-v3.html", "r", encoding="utf-8") as f:
-        components.html(f.read(), height=6200, scrolling=True)
+        html_teoria = f.read()
+
+    # O documento legado não é editado: a ligação com o corpus é feita na
+    # renderização. Cada id citado ganha a descrição do nó (se está no corpus)
+    # ou é marcado como referência externa declarada em referencias_externas.json.
+    _externos = ids_externos()
+
+    def _marcar(m):
+        i = m.group(1).strip()
+        if i in por_id:
+            dica = (por_id[i].get("sigla") or por_id[i]["nome"]) + " — nó do corpus"
+            return f'<span class="int-norma-tag" title="{html.escape(dica)}">{i}</span>'
+        if i in _externos:
+            dica = _externos[i]["nome"] + " — referência externa, fora do corpus"
+            return (f'<span class="int-norma-tag int-norma-externa" title="{html.escape(dica)}">'
+                    f'{i} ↗</span>')
+        return m.group(0)
+
+    html_teoria = re.sub(r'<span class="int-norma-tag">([^<]+)</span>', _marcar, html_teoria)
+    html_teoria = html_teoria.replace(
+        "</style>",
+        ".int-norma-externa{outline:1px dashed currentColor;outline-offset:-1px;opacity:.8}</style>", 1)
+    st.caption("Na seção de interseções, ids com ↗ e borda tracejada são referências externas: "
+               "identificadas, mas fora do corpus atual. Passe o mouse sobre qualquer id para ver a norma.")
+    components.html(html_teoria, height=6200, scrolling=True)
 
 render_footer()

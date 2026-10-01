@@ -1,0 +1,40 @@
+{
+  "_sobre": "Referências citadas pela página Teoria dos Conjuntos que NÃO são nós do corpus. Declarar aqui é uma decisão de curadoria: o id é conhecido, identificado e conscientemente mantido fora do recorte. Para promover a nó, criar a entrada em normas.json e remover daqui. O validador (lib/validacao.py) falha se um id citado não estiver nem no corpus nem nesta lista.",
+  "referencias": {
+    "lei_12737": {
+      "nome": "Lei 12.737/2012 (tipificação de delitos informáticos)",
+      "categoria": "norma",
+      "motivo": "Fora do recorte atual do corpus (penal digital)."
+    },
+    "art_154a_cp": {
+      "nome": "Código Penal, art. 154-A (invasão de dispositivo informático)",
+      "categoria": "dispositivo",
+      "motivo": "Dispositivo inserido pela Lei 12.737/2012; fora do recorte atual."
+    },
+    "csirt": {
+      "nome": "CSIRT (Computer Security Incident Response Team — equipes de resposta a incidentes de segurança)",
+      "categoria": "orgao",
+      "motivo": "Categoria institucional, não norma; citada como elemento da camada cibernética."
+    },
+    "lei_9610": {
+      "nome": "Lei 9.610/1998 (Lei de Direitos Autorais)",
+      "categoria": "norma",
+      "motivo": "Fora do recorte atual do corpus (propriedade intelectual)."
+    },
+    "lei_9279": {
+      "nome": "Lei 9.279/1996 (Lei de Propriedade Industrial)",
+      "categoria": "norma",
+      "motivo": "Fora do recorte atual do corpus (propriedade intelectual)."
+    },
+    "convencao_berna": {
+      "nome": "Convenção de Berna para a Proteção das Obras Literárias e Artísticas (Decreto 75.699/1975)",
+      "categoria": "tratado",
+      "motivo": "Tratado incorporado, fora do recorte atual do corpus."
+    },
+    "trips": {
+      "nome": "Acordo TRIPS (Aspectos dos Direitos de Propriedade Intelectual Relacionados ao Comércio, OMC — Decreto 1.355/1994)",
+      "categoria": "tratado",
+      "motivo": "Tratado incorporado, fora do recorte atual do corpus."
+    }
+  }
+}
