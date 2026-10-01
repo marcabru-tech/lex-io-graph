@@ -31,6 +31,10 @@ TEMAS_RADAR = {
     "mercados_digitais": ["mercados digitais", "concorrência digital"],
     "minerais_criticos": ["minerais críticos", "terras raras"],
     "soberania_digital": ["soberania digital", "soberania tecnológica"],
+    # Acordos submetidos ao Congresso costumam chegar como PDL com a ementa
+    # "Aprova o texto do Acordo..."; a promulgacao (decreto) sai no DOU e nao
+    # e coberta por Senado/Camara.
+    "acordos_internacionais": ["aprova o texto do acordo", "Mercosul"],
 }
 
 # ---- Senado Federal ----

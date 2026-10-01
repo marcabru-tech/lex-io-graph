@@ -20,6 +20,7 @@ RADAR_PARA_VETORES = {
     "mercados_digitais": ["direito_economico", "internet"],
     "minerais_criticos": ["direito_economico", "soberania_tecnologica"],
     "soberania_digital": ["soberania_tecnologica"],
+    "acordos_internacionais": ["direito_internacional_publico", "direito_economico"],
     # temas curados
     "Sustação dos Decretos 12.975 e 12.976/2026": ["internet", "menores"],
     "Cibersegurança e Resiliência Digital": ["soberania_tecnologica", "dados_pessoais"],

@@ -154,6 +154,10 @@ PERFIL_TEMA_MAP = {
             "infraestrutura_digital", "seguranca_dados",
             "transferencia_internacional", "soberania_tecnologica",
         ],
+        "Comércio Exterior / Exportação": [
+            "comercio_exterior", "regras_origem", "certificado_origem",
+            "acordo_comercial", "transferencia_internacional",
+        ],
         "Mineração / Minerais Críticos": [
             "minerais_criticos", "mineracao", "investimento_estrangeiro",
             "controle_societario", "rastreabilidade", "energia", "incentivo_fiscal",
@@ -233,6 +237,21 @@ PERGUNTAS = {
 }
 
 ACOES_POR_TAG = {
+    "regras_origem": {
+        "prioridade": "alta",
+        "acao": "Verificar, por NCM, a regra de origem e o cronograma de desgravação no acordo aplicável ao destino (Singapura, EFTA ou União Europeia)",
+        "base": "Decretos 13.081/2026, 13.126/2026 e 12.953/2026; manuais do MDIC/Siscomex",
+    },
+    "certificado_origem": {
+        "prioridade": "alta",
+        "acao": "Emitir a prova de origem exigida pelo acordo e pelo país de destino antes de embarcar",
+        "base": "Regras de origem dos Decretos 13.081/2026, 13.126/2026 e 12.953/2026",
+    },
+    "acordo_comercial": {
+        "prioridade": "media",
+        "acao": "Confirmar a vigência por país de destino: Mercosul–EFTA vale com a Islândia desde 01/10/2026; o acordo com a UE está em aplicação provisória desde 01/05/2026",
+        "base": "Decreto 13.126/2026; Decreto 12.953/2026, art. 23.3 do Acordo",
+    },
     "datacenter": {
         "prioridade": "alta",
         "acao": "Avaliar habilitação ao REDATA e mapear as contrapartidas: 10% da capacidade ao mercado interno, 2% em P&D e eficiência hídrica de até 0,05 L/kWh",

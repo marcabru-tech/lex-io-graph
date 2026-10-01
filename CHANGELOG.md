@@ -1,5 +1,17 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.13.5] — 2026-10-01
+
+### Acordos internacionais — radar, taxonomia e questionário (parte 1 de 3)
+
+- Radar: tema "Acordos Internacionais e Mercosul" ("aprova o texto do acordo",
+  "Mercosul"), ligado aos vetores Direito Internacional Público e Direito Econômico.
+  Fronteira de cobertura: a etapa parlamentar (PDL) é captada; o decreto de
+  promulgação (DOU) não.
+- Vetores declarados: Direito Internacional Público e Direito Internacional Privado.
+- Questionário: setor "Comércio Exterior / Exportação", com ações de regra de origem,
+  prova de origem e vigência por país de destino. 1.980 perfis testados.
+
 ## [v0.13.4] — 2026-10-01
 
 ### Radar: proposições já no grafo e termos recalibrados

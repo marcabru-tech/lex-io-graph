@@ -135,6 +135,7 @@ TEMA_LABELS = {
     "mercados_digitais": "Mercados Digitais e Concorrência",
     "minerais_criticos": "Minerais Críticos e Terras Raras",
     "soberania_digital": "Soberania Digital e Tecnológica",
+    "acordos_internacionais": "Acordos Internacionais e Mercosul",
 }
 
 FONTE_LABELS = {
