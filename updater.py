@@ -25,6 +25,44 @@ DATA_DIR.mkdir(exist_ok=True)
 
 RADAR_PATH = DATA_DIR / "radar_legislativo.json"
 
+FONTES = ("senado", "camara", "lexml")
+
+# Estado declarado de cada coletor. Mudar aqui quando um coletor for
+# desligado ou religado em lib/radar.py, para que o snapshot diga a verdade.
+ESTADO_FONTES = {
+    "senado": "parcial",      # API ignora palavra-chave; filtro local sobre ~564 itens
+    "camara": "ativa",
+    "lexml": "desativada",    # verificacao anti-bot desde ago/2026
+}
+
+
+def montar_proveniencia(radar: dict, coletados: dict, preservados: dict) -> dict:
+    """
+    Proveniencia do snapshot (ADR 006): quem coletou, quando, o que cada
+    fonte respondeu e o que foi herdado do snapshot anterior. O hash cobre
+    o conteudo dos temas, para que duas coletas identicas sejam reconheciveis.
+    """
+    import hashlib
+    import os
+
+    run_id = os.environ.get("GITHUB_RUN_ID")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    conteudo = json.dumps(radar.get("temas", {}), ensure_ascii=False, sort_keys=True)
+    return {
+        "coletado_em": radar.get("ultima_atualizacao"),
+        "executor": "github-actions" if os.environ.get("GITHUB_ACTIONS") else "local",
+        "execucao_url": f"https://github.com/{repo}/actions/runs/{run_id}" if run_id and repo else None,
+        "sha256_temas": hashlib.sha256(conteudo.encode("utf-8")).hexdigest(),
+        "fontes": {
+            f: {
+                "estado": ESTADO_FONTES.get(f, "desconhecido"),
+                "itens_coletados": coletados.get(f, 0),
+                "temas_herdados_do_snapshot_anterior": sorted(preservados.get(f, [])),
+            }
+            for f in FONTES
+        },
+    }
+
 
 def carregar_radar_anterior() -> dict:
     """Carrega o radar anterior para comparação."""
@@ -109,14 +147,23 @@ def main():
     # se o Senado respondeu e a Camara nao (caso tipico quando o robo roda
     # fora do Brasil), a lista da Camara anterior e preservada em vez de
     # ser apagada. Antes a regra era por tema e deixava passar esse caso.
+    # Contagem coletada ANTES da blindagem: e o que a fonte respondeu de fato.
+    _coletados = {
+        f: sum(len(d.get(f, [])) for t, d in radar_novo.get("temas", {}).items() if t in TEMAS_RADAR)
+        for f in FONTES
+    }
+    _preservados = {f: [] for f in FONTES}
+
     for _tema, _antes in radar_anterior.get("temas", {}).items():
         if _tema not in radar_novo.get("temas", {}):
             continue
         _agora = radar_novo["temas"][_tema]
-        for _fonte in ("senado", "camara", "lexml"):
+        for _fonte in FONTES:
             _n_antes = len(_antes.get(_fonte, []))
             if _n_antes > 0 and not _agora.get(_fonte):
                 _agora[_fonte] = _antes[_fonte]
+                if _tema in TEMAS_RADAR:
+                    _preservados[_fonte].append(_tema)
                 print(f"  [preservado] {_fonte} vazio nesta coleta, mantido anterior: {_tema} ({_n_antes} itens)")
 
     # Saneamento: item sem id nao identifica proposicao (resposta da API em
@@ -144,6 +191,7 @@ def main():
             print(f"  [corpus] {_antes - len(novidades)} novidade(s) ja presentes no grafo")
     except Exception as _e:
         print(f"  [corpus] verificacao ignorada: {_e}")
+    radar_novo["proveniencia"] = montar_proveniencia(radar_novo, _coletados, _preservados)
     salvar_radar(radar_novo, novidades)
 
     # Exit code 0 = sucesso, mesmo sem novidades
