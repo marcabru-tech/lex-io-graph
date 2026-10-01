@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-09-28T22:11:23.819707",
+  "ultima_atualizacao": "2026-10-01T12:35:02.657796",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -17,7 +17,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:25.955219"
+          "data_deteccao": "2026-10-01T12:35:05.534284"
         }
       ],
       "camara": [
@@ -30,7 +30,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:26.463376"
+          "data_deteccao": "2026-10-01T12:35:06.925178"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -41,7 +41,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:26.463376"
+          "data_deteccao": "2026-10-01T12:35:06.925192"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -52,7 +52,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:26.463376"
+          "data_deteccao": "2026-10-01T12:35:06.925196"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -63,7 +63,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:26.463376"
+          "data_deteccao": "2026-10-01T12:35:06.925198"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -74,7 +74,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-09-28T22:11:26.463376"
+          "data_deteccao": "2026-10-01T12:35:06.925201"
         }
       ],
       "lexml": []
@@ -85,7 +85,19 @@
         "LGPD",
         "privacidade digital"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "",
+          "sigla": "/",
+          "ementa": "",
+          "ano": "",
+          "status": "Em tramitação",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
+          "termo_busca": "proteção dados pessoais",
+          "data_deteccao": "2026-10-01T12:35:12.694890"
+        }
+      ],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
@@ -96,7 +108,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642181",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-09-28T22:11:47.621109"
+          "data_deteccao": "2026-10-01T12:35:13.271528"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -107,7 +119,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641087",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-09-28T22:11:47.621109"
+          "data_deteccao": "2026-10-01T12:35:13.271543"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -118,7 +130,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2639458",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-09-28T22:11:47.621109"
+          "data_deteccao": "2026-10-01T12:35:13.271546"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -129,18 +141,18 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2629351",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-09-28T22:11:47.621109"
+          "data_deteccao": "2026-10-01T12:35:13.271548"
         },
         {
           "fonte": "Câmara dos Deputados",
-          "id": "2600015",
-          "sigla": "PL 19/2026",
-          "ementa": "Estabelece condições, deveres e restrições ao uso de óculos inteligentes com recursos de inteligência artificial, altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e dá outras providências.",
+          "id": "2601015",
+          "sigla": "PL 309/2026",
+          "ementa": "Altera a Lei nº 15.211/2025, a fim de vedar o acesso a redes sociais de qualquer natureza por menores de 16 anos de idade, e dá outras providências.",
           "ano": "2026",
           "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600015",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2601015",
           "termo_busca": "proteção dados pessoais",
-          "data_deteccao": "2026-09-28T22:11:47.621109"
+          "data_deteccao": "2026-10-01T12:35:13.271551"
         }
       ],
       "lexml": []
@@ -161,7 +173,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-09-22T02:41:59.585987"
+          "data_deteccao": "2026-10-01T12:35:20.994409"
         }
       ],
       "camara": [],
@@ -183,7 +195,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "responsabilidade plataformas",
-          "data_deteccao": "2026-09-22T02:42:02.055772"
+          "data_deteccao": "2026-10-01T12:35:27.119451"
         }
       ],
       "camara": [],
@@ -205,7 +217,7 @@
           "status": "Em tramitação",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/",
           "termo_busca": "riscos psicossociais trabalho",
-          "data_deteccao": "2026-09-22T02:42:04.340618"
+          "data_deteccao": "2026-10-01T12:35:32.771308"
         }
       ],
       "camara": [],
@@ -544,6 +556,15 @@
       "lexml": []
     }
   },
-  "novidades_detectadas": [],
-  "total_novidades": 0
+  "novidades_detectadas": [
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 309/2026",
+      "ementa": "Altera a Lei nº 15.211/2025, a fim de vedar o acesso a redes sociais de qualquer natureza por menores de 16 anos de idade, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2601015",
+      "data_deteccao": "2026-10-01T12:35:13.271551"
+    }
+  ],
+  "total_novidades": 1
 }
