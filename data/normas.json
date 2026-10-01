@@ -16,7 +16,8 @@
       "temas": [
         "dados_pessoais",
         "internet",
-        "acesso"
+        "acesso",
+        "direito_economico"
       ],
       "orgao": "Congresso Nacional",
       "ano": 1988,
@@ -492,7 +493,8 @@
       "ementa": "Agência reguladora federal, autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública, integrante do regime da Lei 13.848/2019 (Lei Geral das Agências Reguladoras). Zela, implementa e fiscaliza o cumprimento da LGPD e, desde o Decreto 12.975/2026, também do Marco Civil da Internet.",
       "status": "vigente",
       "temas": [
-        "dados_pessoais"
+        "dados_pessoais",
+        "direito_economico"
       ],
       "orgao": "Governo Federal",
       "ano": 2020,
@@ -792,6 +794,51 @@
           "traducao_literal": "Nenhum juiz sem lei",
           "traducao_juridica": "A jurisdição é indelegável e vinculada à lei — fundamento da vedação de decisão exclusivamente automatizada.",
           "contexto": "Tradição romano-germânica"
+        }
+      ]
+    },
+    {
+      "id": "lei_15504_2026",
+      "nome": "Lei nº 15.504/2026 — Regime Especial de Tributação para Serviços de Datacenter (REDATA)",
+      "sigla": "Lei 15.504/2026",
+      "tipo": "lei",
+      "artigos_chave": [
+        "Lei 11.196/2005, art. 11-B, § 1º, I — 10% da capacidade ofertada ao mercado interno",
+        "Art. 11-B, § 1º, III — totalidade da demanda elétrica por fontes renováveis ou de baixa emissão, na forma de regulamento",
+        "Art. 11-B, § 1º, IV — eficiência hídrica igual ou inferior a 0,05 L/kWh",
+        "Art. 11-B, § 1º, V — investimento de 2% em pesquisa e desenvolvimento no País",
+        "Art. 11-B, § 7º — redução de 20% dos compromissos dos incisos I e V nas regiões Norte, Nordeste e Centro-Oeste"
+      ],
+      "ementa": "Altera a Lei 11.196/2005 para instituir o REDATA (Regime Especial de Tributação para Serviços de Datacenter), com suspensão de PIS/Cofins, PIS/Cofins-Importação, IPI e Imposto de Importação na aquisição de equipamentos, condicionada a contrapartidas de mercado interno, energia, eficiência hídrica e P&D. Os critérios de 'baixa emissão' dependem de regulamento ainda não editado.",
+      "status": "vigente",
+      "temas": [
+        "ia",
+        "direito_economico"
+      ],
+      "orgao": "Congresso Nacional",
+      "ano": 2026,
+      "historia": "Origem no PL 278/2026, aprovado pelo Senado em 01/09/2026 (relator: Sen. Cid Gomes) e sancionado em 15/09/2026. No Senado, a redação da exigência energética passou de fontes 'renováveis ou limpas' para 'renováveis ou de baixa emissão', abrindo a controvérsia sobre o gás natural. Na sanção, o Ministério de Minas e Energia (MME) defendeu a inclusão do gás; o Ministério da Fazenda, apoiado na Taxonomia Sustentável Brasileira, condicionou eventual inclusão a captura de carbono (CCUS — Carbon Capture, Utilization and Storage) ou compensação por créditos. Governos de Sergipe e Amazonas pediram critérios de desempenho em vez de exclusão prévia de tecnologias. A definição das fontes elegíveis ficou para regulamento e portaria interministerial. Verificado em 01/10/2026 (Planalto, Senado Notícias, Agência iNFRA, NeoFeed).",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): União Europeia — Diretiva (UE) 2023/1791 (eficiência energética), art. 12, obriga data centers com potência a partir de 500 kW a reportar desempenho energético e hídrico; o REDATA, em vez de reportar, condiciona o benefício fiscal a metas. Irlanda — o regulador de energia (CRU) restringiu em 2021 novas conexões de data centers à rede na região de Dublin por risco de suprimento: o mesmo trade-off entre carga contínua e segurança energética que alimenta o debate brasileiro sobre o gás. EUA — incentivos a data centers são majoritariamente estaduais (isenções de sales tax), sem contrapartida energética federal.",
+      "autores": [
+        {
+          "nome": "Eros Roberto Grau",
+          "datas": "1940–",
+          "obra": "A Ordem Econômica na Constituição de 1988, 1990",
+          "contribuicao": "Leitura do art. 170 da CF/88 como programa constitucional da ordem econômica — base para examinar incentivo fiscal como instrumento de política econômica sujeito aos fins constitucionais, inclusive defesa do meio ambiente (art. 170, VI)"
+        },
+        {
+          "nome": "Washington Peluso Albino de Souza",
+          "datas": "1917–2011",
+          "obra": "Primeiras Linhas de Direito Econômico",
+          "contribuicao": "Fundador da disciplina do Direito Econômico no Brasil (UFMG) — a política econômica como objeto jurídico, não apenas como decisão de governo"
+        }
+      ],
+      "latim": [
+        {
+          "original": "Ubi commoda, ibi incommoda",
+          "traducao_literal": "Onde estão as vantagens, aí estão os ônus",
+          "traducao_juridica": "Quem recebe o benefício fiscal assume as contrapartidas: mercado interno, energia, água e P&D. O REDATA positiva o brocardo no art. 11-B, § 1º",
+          "contexto_romano": "Brocardo da tradição romanística, aplicado à repartição de riscos e encargos no direito civil e administrativo"
         }
       ]
     }

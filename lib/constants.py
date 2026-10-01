@@ -18,7 +18,11 @@ APP_SUBTITLE = (
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.10.0"
+APP_VERSION = "0.11.0"
+
+# ---- ODIN — dossie editorial sobre a arquitetura brasileira de IA ----
+# Enquanto vazio, nenhum link e exibido (nao publica link quebrado).
+ODIN_URL = ""
 
 # ---- Tríade cromática ----
 LEX_COLOR   = "#d4a853"   # dourado — lei, governança, razão, sol
@@ -115,6 +119,7 @@ THEMES = {
     "trabalho":       "Trabalho Digital",
     "internet":       "Internet e Plataformas",
     "acesso":         "Acesso e Inclusão",
+    "direito_economico": "Direito Econômico e Regulação",
 }
 
 # ---- Empresas modelo para matriz de compliance ----

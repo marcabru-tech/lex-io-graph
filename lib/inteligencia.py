@@ -261,6 +261,100 @@ CASOS_ESTRATEGICOS = [
                 "que o PL 2.338/2023 precisa fazer."
             )
         }
+    },
+    {
+        "id": "redata_gas_natural",
+        "titulo": "REDATA e Gás Natural — Quem Define 'Baixa Emissão'",
+        "normas_relacionadas": ["lei_15504_2026", "cf88", "pl_ia"],
+        "nivel_tensao": "estratégico",
+        "status": "lei vigente desde 15/09/2026 — regulamento das fontes de energia pendente",
+        "sintese": (
+            "A Lei 15.504/2026 condiciona o REDATA (Regime Especial de Tributação "
+            "para Serviços de Datacenter) ao suprimento elétrico integral por fontes "
+            "'renováveis ou de baixa emissão, na forma de regulamento'. A lei não diz "
+            "se o gás natural cabe nessa expressão. A decisão foi transferida do "
+            "Congresso para o Executivo — e, dentro do Executivo, ficou entre dois "
+            "ministérios com leituras opostas."
+        ),
+        "camadas": [
+            {
+                "titulo": "Tensão 1 — Uma expressão aberta como ponto de decisão",
+                "analise": (
+                    "No Senado, a exigência passou de fontes 'renováveis ou limpas' para "
+                    "'renováveis ou de baixa emissão' (Lei 11.196/2005, art. 11-B, § 1º, III, "
+                    "na redação da Lei 15.504/2026). A troca não resolveu o conteúdo: deslocou-o. "
+                    "Quem regulamentar 'baixa emissão' decide, na prática, quais projetos "
+                    "acessam a desoneração. Diagnóstico: o vetor decisivo do regime não está "
+                    "na lei, está no decreto e na portaria interministerial que ainda virão."
+                )
+            },
+            {
+                "titulo": "Tensão 2 — Fazenda e Minas e Energia: duas métricas para o mesmo megawatt",
+                "analise": (
+                    "O Ministério de Minas e Energia (MME) defende a inclusão do gás natural "
+                    "como fonte firme que compensa a intermitência de eólica e solar e, segundo "
+                    "o ministério, classificada pela Agência Internacional de Energia (IEA — "
+                    "International Energy Agency) como combustível de transição. O Ministério "
+                    "da Fazenda ancora-se na Taxonomia Sustentável Brasileira, que não "
+                    "enquadra o gás, e admite inclusão apenas com captura de carbono "
+                    "(CCUS — Carbon Capture, Utilization and Storage) ou compensação por "
+                    "créditos. Os dois argumentos são internamente coerentes: um mede "
+                    "confiabilidade de suprimento, o outro mede intensidade de carbono. "
+                    "O regulamento terá de escolher a métrica ou combiná-las."
+                )
+            },
+            {
+                "titulo": "Tensão 3 — Federação e território: o gás como política regional",
+                "analise": (
+                    "Governos de Sergipe e do Amazonas, estados com oferta de gás, enviaram "
+                    "ofícios à Presidência pedindo critérios de desempenho ambiental e "
+                    "energético em vez de exclusão prévia de tecnologias. Em Sergipe, o "
+                    "debate está ligado a um complexo de data centers projetado para a Zona "
+                    "de Processamento de Exportação (ZPE) e à oferta do projeto Sergipe Águas "
+                    "Profundas. A lei já reduz em 20% os compromissos de mercado interno e "
+                    "P&D nas regiões Norte, Nordeste e Centro-Oeste (art. 11-B, § 7º): a "
+                    "política regional está no texto; a energética, ainda não."
+                )
+            },
+            {
+                "titulo": "Tensão 4 — Três lentes sobre o mesmo incentivo",
+                "analise": (
+                    "Direito Econômico: o REDATA é instrumento de política econômica e deve "
+                    "ser lido à luz da ordem econômica constitucional, que inclui a defesa do "
+                    "meio ambiente entre seus princípios (CF, art. 170, VI). "
+                    "Análise Econômica do Direito: a escolha da fonte altera custo de capital, "
+                    "risco de ativo encalhado e atratividade relativa entre regiões — "
+                    "incentivos mal calibrados selecionam projetos pelo preço imediato do "
+                    "megawatt-hora. Direito e Economia Política: a definição de 'baixa "
+                    "emissão' distribui capacidade de computar entre territórios e cadeias "
+                    "de suprimento; não é escolha técnica neutra, é alocação de poder "
+                    "econômico mediada por regulamento. As três lentes não se excluem: "
+                    "a primeira dá o parâmetro, a segunda mede o efeito, a terceira "
+                    "pergunta quem ganha capacidade."
+                )
+            }
+        ],
+        "prospectiva": {
+            "12_meses": (
+                "Edição do decreto e da portaria interministerial. Cenários: (a) exclusão "
+                "do gás, com risco de reação legislativa — há sinalização de projeto de "
+                "decreto legislativo no Senado; (b) inclusão condicionada a CCUS ou "
+                "créditos de carbono; (c) critério de desempenho por intensidade de "
+                "emissões, neutro quanto à tecnologia. Nova composição do governo após "
+                "as eleições de outubro/2026 pode reabrir a arbitragem."
+            ),
+            "36_meses": (
+                "Habilitações no regime revelarão a geografia efetiva dos data centers. "
+                "O teste será se as contrapartidas (10% mercado interno, 2% P&D, eficiência "
+                "hídrica) produzem acesso nacional a capacidade computacional ou apenas "
+                "capacidade instalada para exportação de serviços."
+            ),
+            "lacuna_remanescente": (
+                "A lei não define método de cálculo de emissões (direta, ciclo de vida, "
+                "por contrato ou por hora de consumo) nem prazo de transição. Sem isso, "
+                "'baixa emissão' permanece categoria política, não parâmetro verificável."
+            )
+        }
     }
 ]
 

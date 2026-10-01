@@ -1,8 +1,14 @@
 import streamlit as st
+from lib.constants import ODIN_URL
 
 
 def render_footer():
     st.markdown("---")
+    odin = (
+        f'<a href="{ODIN_URL}" target="_blank" '
+        'style="color: #d4a853; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">'
+        '&#x2197; ODIN â€” Arquitetura Brasileira de IA</a>\n'
+    ) if ODIN_URL else ""
     st.markdown("""
 <div style="font-family: monospace; font-size: 12px; color: #706a60; line-height: 2; padding: 8px 0;">
 
@@ -30,7 +36,7 @@ Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> â€
    style="color: #2ecc71; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
 &#x2197; Pricing
 </a>
-<a href="https://github.com/marcabru-tech/lex-io-graph" target="_blank"
+""" + odin + """<a href="https://github.com/marcabru-tech/lex-io-graph" target="_blank"
    style="color: #3dc8e6; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
 &#x2197; GitHub
 </a>

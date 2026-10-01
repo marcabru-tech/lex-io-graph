@@ -1,6 +1,6 @@
 import streamlit as st
 from pathlib import Path
-from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
+from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, ODIN_URL
 from lib.repositorio import AUTORES, BROCARDOS, TRADICOES_JURIDICAS, MAGNIFICA_HUMANITAS
 from lib.multisemiose import CITACOES, OBRAS_ARTE, GLOSSARIO
 from lib.footer import render_footer
@@ -341,6 +341,20 @@ regulação**, onde a tensão entre função e resistência reaparece de forma m
 É a fundamentação teórica deste atlas.
 
 [Acessar no Zenodo →](https://doi.org/10.5281/zenodo.21978602)
+""")
+
+if ODIN_URL:
+    st.markdown(f"""
+**ODIN — A Arquitetura Brasileira de Inteligência Artificial**
+Dossiê de inteligência institucional · Manuscrito editorial 1.1 · data de corte 30/09/2026 · CC BY 4.0
+
+Mapa da regulação policêntrica da IA no Brasil em seis camadas — constitucional,
+legislativa, estratégica, produtiva, material e setorial —, cobrindo PL 2.338/2023,
+PBIA, REDATA, Nuvem Brasileira, ANPD, CNJ, CFM, BCB/CMN, CVM, Cade e Coaf, com
+registro estruturado de fontes primárias. Tese: o Brasil não vive vazio regulatório,
+vive problema de arquitetura. É o desdobramento editorial deste atlas para IA.
+
+[Acessar o ODIN →]({ODIN_URL})
 """)
 
 # ---- Rodapé editorial Bakhtin ----

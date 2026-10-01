@@ -2,6 +2,7 @@ import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO
 from lib.footer import render_footer
+from lib.constants import ODIN_URL
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Inteligência Estratégica",
@@ -142,6 +143,12 @@ if secao == "⚡ Casos Estratégicos":
                 unsafe_allow_html=True
             )
 
+    if ODIN_URL:
+        st.markdown(
+            f"Leitura estendida sobre IA, REDATA, Nuvem Brasileira e Direito & Economia "
+            f"Política: [ODIN — A Arquitetura Brasileira de Inteligência Artificial]({ODIN_URL})."
+        )
+
     st.markdown("""
 <div class="disclaimer">
 Voz analítica:
@@ -157,7 +164,6 @@ e
 <a href="https://hubstry.dev" target="_blank"
    style="color:#d4a853;text-decoration:none;">Hubstry Deep Tech</a>
 — venture building bootstrapped, Rio de Janeiro.<br>
-Diagnóstico estratégico baseado em fontes públicas.
 Diagnóstico estratégico baseado em fontes públicas — não assessoria jurídica.<br>
 Lex-IO-Graph · Lexiograph | Hubstry Deep Tech · Rio de Janeiro · 2026
 </div>""", unsafe_allow_html=True)

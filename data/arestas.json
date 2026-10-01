@@ -230,6 +230,20 @@
       "tipo": "hierarquia",
       "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e autoriza a expedição de atos regulamentares no âmbito de sua competência. A Resolução exerce essa competência ao disciplinar desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de IA pelos órgãos do Judiciário, preservada a autonomia dos tribunais e excetuado o STF. A competência não é legislativa geral: permanece sujeita à legalidade, aos direitos fundamentais e aos limites materiais do controle administrativo.",
       "artigos": "CF art. 103-B, § 4º, I ↔ Res. CNJ 615/2025 art. 1º"
+    },
+    {
+      "source": "cf88",
+      "target": "lei_15504_2026",
+      "tipo": "hierarquia",
+      "descricao": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art. 174), mercado interno como patrimônio nacional (art. 219) e defesa do meio ambiente como princípio da ordem econômica (art. 170, VI) — este último é o parâmetro constitucional do debate sobre o gás natural.",
+      "artigos": "CF arts. 170, VI; 174; 219 ↔ Lei 11.196/2005 art. 11-B"
+    },
+    {
+      "source": "lei_15504_2026",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem a outra produz infraestrutura sem governança ou governança sem infraestrutura.",
+      "artigos": "Lei 11.196/2005 art. 11-B ↔ PL 2.338/2023"
     }
   ]
 }

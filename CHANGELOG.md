@@ -1,5 +1,24 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.11.0] — 2026-10-01
+
+### REDATA, Direito Econômico e radar com reserva no GitHub Actions
+
+- Corpus: novo nó `lei_15504_2026` (REDATA, sancionada em 15/09/2026), com
+  arestas `cf88 → lei_15504_2026` (hierarquia, CF arts. 170, VI; 174; 219) e
+  `lei_15504_2026 ↔ pl_ia` (complementaridade). 20 normas, 35 arestas.
+- Novo vetor temático `direito_economico` (Direito Econômico e Regulação):
+  `cf88`, `anpd` (agência reguladora, Lei 13.848/2019) e `lei_15504_2026`.
+- Inteligência: caso estratégico "REDATA e Gás Natural — Quem Define
+  'Baixa Emissão'", com a lente Direito Econômico / AED / Direito e
+  Economia Política.
+- Radar: blindagem passa a ser por fonte (Senado, Câmara, LexML), não por
+  tema. Coleta sem resposta da Câmara não apaga mais a lista anterior.
+- GitHub Actions volta como reserva: terça 09h BRT, e só coleta se o
+  snapshot do notebook (segunda 21h) tiver mais de 36 horas.
+- Constante `ODIN_URL`: link para o dossiê ODIN no rodapé, no Repositório
+  e na página de Inteligência; oculto enquanto vazia.
+
 ## [v0.9.0] — 2026-06-05
 
 ### Sprint 9 — Enriquecimento doutrinário do corpus

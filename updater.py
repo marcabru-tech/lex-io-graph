@@ -105,17 +105,19 @@ def main():
             radar_novo["temas"][_tema] = _dados
             print(f"  [curado] tema preservado: {_tema}")
 
-    # Falha de rede nao e ausencia de norma: se a coleta devolveu zero itens
-    # para um tema que antes tinha conteudo, preserva o anterior.
+    # Falha de rede nao e ausencia de norma. A blindagem e POR FONTE:
+    # se o Senado respondeu e a Camara nao (caso tipico quando o robo roda
+    # fora do Brasil), a lista da Camara anterior e preservada em vez de
+    # ser apagada. Antes a regra era por tema e deixava passar esse caso.
     for _tema, _antes in radar_anterior.get("temas", {}).items():
         if _tema not in radar_novo.get("temas", {}):
             continue
-        _n_antes = sum(len(_antes.get(f, [])) for f in ("senado", "camara", "lexml"))
         _agora = radar_novo["temas"][_tema]
-        _n_agora = sum(len(_agora.get(f, [])) for f in ("senado", "camara", "lexml"))
-        if _n_agora == 0 and _n_antes > 0:
-            radar_novo["temas"][_tema] = _antes
-            print(f"  [preservado] coleta vazia, mantido anterior: {_tema} ({_n_antes} itens)")
+        for _fonte in ("senado", "camara", "lexml"):
+            _n_antes = len(_antes.get(_fonte, []))
+            if _n_antes > 0 and not _agora.get(_fonte):
+                _agora[_fonte] = _antes[_fonte]
+                print(f"  [preservado] {_fonte} vazio nesta coleta, mantido anterior: {_tema} ({_n_antes} itens)")
 
     novidades = detectar_novidades(radar_novo, radar_anterior)
     salvar_radar(radar_novo, novidades)

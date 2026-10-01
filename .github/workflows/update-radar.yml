@@ -1,8 +1,11 @@
 name: Radar Legislativo — Atualização Automática
 
 on:
-  # schedule:
-    # - cron: '0 0 * * 2'   # segunda-feira, 21h de Brasilia (00h UTC de terca)
+  schedule:
+    # Reserva: terca-feira 09h de Brasilia (12h UTC). O coletor principal
+    # e a tarefa agendada do notebook (segunda, 21h). Se ela rodou, este
+    # job ve o snapshot fresco e encerra sem coletar.
+    - cron: '0 12 * * 2'
   workflow_dispatch:        # Permite rodar manualmente pela interface do Actions
 
 jobs:
@@ -26,11 +29,28 @@ jobs:
       - name: Instalar dependências
         run: pip install requests
 
+      - name: Verificar se o notebook ja coletou esta semana
+        id: frescor
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime
+          r = json.load(open("data/radar_legislativo.json", encoding="utf-8"))
+          ts = r.get("ultima_atualizacao")
+          horas = (datetime.now() - datetime.fromisoformat(ts)).total_seconds() / 3600 if ts else 999
+          fresco = horas < 36
+          print(f"Ultimo snapshot ha {horas:.1f} h -> {'pular' if fresco else 'coletar'}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"fresco={'true' if fresco else 'false'}\n")
+          PY
+
       - name: Executar radar legislativo
+        if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
         run: python -u updater.py
         continue-on-error: true
 
       - name: Commitar snapshot se houve mudança
+        if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
         run: |
           # git diff --quiet retorna 0 se NÃO há mudança, 1 se há.
           # O 'if' abaixo evita commit vazio quando o radar não achou nada novo.
