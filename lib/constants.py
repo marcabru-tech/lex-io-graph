@@ -12,13 +12,18 @@ Tríade cromática Lexiograph:
 """
 
 # ---- Identidade do produto ----
+# Nomenclatura (out/2026): marca Lex-IO-Graph; nome curto Lexiograph;
+# repositório lex-io-graph; Compliance Map é um dos módulos.
 APP_NAME = "Lex-IO-Graph"
+APP_SHORT = "Lexiograph"
+APP_TAGLINE = "Legal Knowledge Graph"
+APP_MODULOS = ("Compliance Map", "Grafo Normativo", "Radar Legislativo", "IPII Engine", "Inteligência")
 APP_SUBTITLE = (
     "Sistema de inteligência jurídico-estratégica com gramática "
     "visual-cognitiva, fundamentação semiótica, inventário pancrônico "
     "e vetor prospectivo"
 )
-APP_VERSION = "0.14.1"
+APP_VERSION = "0.15.0"
 
 # ---- Radar Legislativo: cadencia (fonte unica para os textos da UI) ----
 RADAR_CADENCIA = "Coleta automática semanal às segundas-feiras, 9h (horário de Brasília), via GitHub Actions."

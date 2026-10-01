@@ -1,5 +1,30 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.15.0] — 2026-10-01
+
+### Fase 0 — integridade, governança e teoria ligada ao corpus
+
+- **Validador** (`lib/validacao.py`): ids únicos, campos obrigatórios, status e temas
+  conhecidos, arestas apontando para nós existentes, ids citados na teoria e estrutura
+  do snapshot do radar.
+- **Referências externas** (`data/referencias_externas.json`): os 7 ids citados pela
+  teoria que não são nós do corpus (Lei 12.737/2012, CP art. 154-A, CSIRT, Lei 9.610/1998,
+  Lei 9.279/1996, Convenção de Berna, TRIPS) passam a ser declarados, com motivo.
+- **`smoke_test.py` e CI** (`.github/workflows/ci.yml`): dados, imports de `lib/` e
+  execução de todas as páginas, em cada PR e cada push para `main`.
+- **ADR 006 — ingestão automatizada de dados**: o radar pode commitar direto em `main`
+  apenas em `data/radar_legislativo.json`, após validação e trava de escopo. Substitui o
+  item 4 do ADR 005, que recebe nota de atualização.
+- **Proveniência no snapshot do radar**: executor, URL da execução, hash SHA-256 do
+  conteúdo e, por fonte, estado declarado, itens coletados e temas herdados.
+- **Marca**: home passa a exibir Lex-IO-Graph (marca), Legal Knowledge Graph (descritor),
+  Lexiograph (nome curto) e os módulos. Mudança apenas de texto.
+- **Teoria dos Conjuntos**: diagrama de Venn com Direito Econômico, Soberania
+  Tecnológica, DIP e DIPr; matriz só no triângulo inferior, com título explicativo e
+  leitura em frases; ids da teoria ligados ao corpus por dica ao passar o mouse, com as
+  referências externas marcadas (↗, borda tracejada). O HTML legado não foi editado.
+- Home: contagem de temas passa a ser calculada (10), não fixa (6).
+
 ## [v0.14.1] — 2026-10-01
 
 ### Inteligência e Repositório: acordos internacionais (parte 3 de 3)
