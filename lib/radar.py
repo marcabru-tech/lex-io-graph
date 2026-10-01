@@ -174,6 +174,27 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
         return []
 
 
+# ---- Estado declarado das fontes (ADR 006) ----
+# Fonte unica: o updater grava no bloco de proveniencia e a pagina do radar
+# exibe. Atualizar aqui sempre que um coletor for desligado ou religado.
+ESTADO_FONTES = {
+    "senado": {
+        "estado": "parcial",
+        "nota": "A API de pesquisa passou a ignorar palavra-chave e quantidade; o radar "
+                "baixa a lista de proposições recentes e filtra localmente por termo.",
+    },
+    "camara": {
+        "estado": "ativa",
+        "nota": "Busca por palavra-chave na API de Dados Abertos da Câmara.",
+    },
+    "lexml": {
+        "estado": "desativada",
+        "nota": "Desde ago/2026 o LexML exige verificação anti-robô em JavaScript; sem "
+                "acesso oficial, o coletor está desligado.",
+    },
+}
+
+
 # ---- LexML ----
 def buscar_lexml(termo: str, max_resultados: int = 10) -> list[dict]:
     """

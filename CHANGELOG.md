@@ -1,5 +1,26 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.16.0] — 2026-10-01
+
+### Fase 0 (continuação) — hierarquia dos tratados, saúde do radar, EMPA
+
+- **`data/teoria.json`**: primeiro conteúdo da aba "Arquitetura teórica" mantido como dado.
+  Tratados na hierarquia separados em três dimensões: posição interna (regra geral de
+  paridade com lei ordinária; prevalência tributária do CTN art. 98; supralegalidade dos
+  tratados de direitos humanos, RE 466.343; equivalência a emenda pelo art. 5º, §3º),
+  procedimento de incorporação e força internacional. Cada bloco traz selo de natureza
+  (fato, interpretação, metáfora); "leitura kelseniana" e "kernel" rotulados como tal.
+  Corrige a generalização "tratados comerciais equivalem a lei ordinária" como regra única.
+- **Saúde das fontes no Radar Legislativo**: Senado (parcial), Câmara (ativa), LexML
+  (desativada), com itens no snapshot e proveniência da coleta. Estado declarado passa a
+  ter fonte única em `lib/radar.py` (`ESTADO_FONTES`).
+- **EMPA** (Acordo de Parceria Mercosul–UE) entra como nó com o novo status
+  `instrumento_externo`: identificado, sem ato brasileiro de incorporação (a tramitação
+  MSC 93/2026 → DL 14/2026 refere-se ao ITA). Aresta de complementaridade com o ITA.
+- Validador: instrumento não incorporado não pode participar de aresta de hierarquia;
+  ids de `data/teoria.json` passam a ser checados.
+- 29 normas, 49 arestas.
+
 ## [v0.15.0] — 2026-10-01
 
 ### Fase 0 — integridade, governança e teoria ligada ao corpus

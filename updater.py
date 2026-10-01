@@ -18,7 +18,7 @@ from datetime import datetime
 # Adicionar raiz ao path para importar lib/
 sys.path.insert(0, str(Path(__file__).parent))
 
-from lib.radar import coletar_radar, TEMAS_RADAR
+from lib.radar import coletar_radar, TEMAS_RADAR, ESTADO_FONTES
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -26,14 +26,6 @@ DATA_DIR.mkdir(exist_ok=True)
 RADAR_PATH = DATA_DIR / "radar_legislativo.json"
 
 FONTES = ("senado", "camara", "lexml")
-
-# Estado declarado de cada coletor. Mudar aqui quando um coletor for
-# desligado ou religado em lib/radar.py, para que o snapshot diga a verdade.
-ESTADO_FONTES = {
-    "senado": "parcial",      # API ignora palavra-chave; filtro local sobre ~564 itens
-    "camara": "ativa",
-    "lexml": "desativada",    # verificacao anti-bot desde ago/2026
-}
 
 
 def montar_proveniencia(radar: dict, coletados: dict, preservados: dict) -> dict:
@@ -55,7 +47,7 @@ def montar_proveniencia(radar: dict, coletados: dict, preservados: dict) -> dict
         "sha256_temas": hashlib.sha256(conteudo.encode("utf-8")).hexdigest(),
         "fontes": {
             f: {
-                "estado": ESTADO_FONTES.get(f, "desconhecido"),
+                "estado": ESTADO_FONTES.get(f, {}).get("estado", "desconhecido"),
                 "itens_coletados": coletados.get(f, 0),
                 "temas_herdados_do_snapshot_anterior": sorted(preservados.get(f, [])),
             }

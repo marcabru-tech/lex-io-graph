@@ -1148,6 +1148,25 @@
           "fonte": "Decreto 12.953/2026, art. 23.3"
         }
       ]
+    },
+    {
+      "id": "acordo_mercosul_ue_empa",
+      "nome": "Acordo de Parceria Mercosul–União Europeia (EMPA)",
+      "sigla": "EMPA (assinado em 17/01/2026)",
+      "tipo": "documento_internacional",
+      "artigos_chave": [],
+      "ementa": "Acordo de parceria de competência mista, com pilares político, de cooperação e comercial. Instrumento internacional identificado, sem ato brasileiro de incorporação até a data de verificação. O pilar comercial é aplicado provisoriamente por meio do ITA (Decreto 12.953/2026).",
+      "status": "instrumento_externo",
+      "temas": [
+        "direito_internacional_publico",
+        "direito_economico"
+      ],
+      "orgao": "Mercosul",
+      "ano": 2026,
+      "historia": "Firmado em Assunção em 17/01/2026, junto com o Acordo Provisório de Comércio (ITA). A tramitação brasileira identificada (MSC 93/2026, PDL 41/2026, Decreto Legislativo 14/2026) refere-se ao Acordo Provisório de Comércio. Do lado europeu, por ser acordo de competência mista, depende também de ratificação pelos Estados-membros. Passa a 'incorporado' quando houver decreto legislativo e decreto de promulgação próprios. Verificado em 01/10/2026.",
+      "direito_comparado": "",
+      "autores": [],
+      "latim": []
     }
   ]
 }

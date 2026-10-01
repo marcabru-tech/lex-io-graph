@@ -106,6 +106,48 @@ col2.metric("Itens monitorados", total_itens)
 col3.metric("Novidades detectadas", total_novidades)
 col4.metric("Temas ativos", len(radar.get("temas", {})))
 
+# ---- Saúde das fontes (ADR 006) ----
+from lib.radar import ESTADO_FONTES
+
+_prov = radar.get("proveniencia") or {}
+_prov_fontes = _prov.get("fontes", {})
+_COR_ESTADO = {"ativa": "#2ecc71", "parcial": "#e6c13d", "desativada": "#c44b4b"}
+_NOME_FONTE = {"senado": "Senado Federal", "camara": "Câmara dos Deputados", "lexml": "LexML"}
+
+st.markdown("##### Saúde das fontes")
+_cols = st.columns(len(ESTADO_FONTES))
+for _col, (_f, _decl) in zip(_cols, ESTADO_FONTES.items()):
+    _estado = _prov_fontes.get(_f, {}).get("estado", _decl["estado"])
+    _no_snapshot = sum(len(_t.get(_f, [])) for _t in radar.get("temas", {}).values())
+    _coletados = _prov_fontes.get(_f, {}).get("itens_coletados")
+    _herdados = _prov_fontes.get(_f, {}).get("temas_herdados_do_snapshot_anterior", [])
+    _linhas = [f"{_no_snapshot} item(ns) no snapshot"]
+    if _coletados is not None:
+        _linhas.append(f"{_coletados} coletado(s) na última execução")
+    if _herdados:
+        _linhas.append(f"herdado(s) da coleta anterior em: {', '.join(_herdados)}")
+    _cor = _COR_ESTADO.get(_estado, "#8a8478")
+    _col.markdown(
+        f"<div style='border:1px solid {_cor}55;border-left:3px solid {_cor};border-radius:4px;"
+        f"padding:8px 12px;font-size:12px'>"
+        f"<b>{_NOME_FONTE.get(_f, _f)}</b> · <span style='color:{_cor}'>{_estado.upper()}</span><br>"
+        f"<span style='color:#b8b2a6'>{'<br>'.join(_linhas)}</span><br>"
+        f"<span style='color:#706a60;font-size:11px'>{_decl['nota']}</span></div>",
+        unsafe_allow_html=True,
+    )
+if _prov:
+    _exec = _prov.get("executor", "?")
+    _url = _prov.get("execucao_url")
+    _hash = (_prov.get("sha256_temas") or "")[:12]
+    st.caption(
+        f"Proveniência do snapshot: coletado por {_exec}"
+        + (f" ([ver execução]({_url}))" if _url else "")
+        + (f" · sha256 {_hash}…" if _hash else "")
+    )
+else:
+    st.caption("Proveniência detalhada é gravada a partir da próxima coleta (ADR 006). "
+               "Até lá, o estado exibido é o declarado em lib/radar.py.")
+
 st.markdown("""
 <div class="curadoria-box">
 ⚖️ <strong style="color:#d4a853;">Princípio de curadoria:</strong>

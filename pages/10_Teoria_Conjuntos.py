@@ -7,6 +7,7 @@ import streamlit.components.v1 as components
 from lib.constants import THEMES
 from lib.conjuntos import carregar, conjuntos, lacunas, relacoes_no_par, figura_matriz, pares_em_frases
 from lib.validacao import ids_externos
+from lib.graph_builder import load_json
 from lib.footer import render_footer
 
 st.set_page_config(
@@ -125,6 +126,54 @@ with aba_corpus:
 # Documento teórico (v3)
 # =============================================================
 with aba_teoria:
+    # ---------------------------------------------------------
+    # Complementos 2026 — conteúdo novo vem de data/teoria.json
+    # ---------------------------------------------------------
+    teoria = load_json("teoria.json")
+    ROTULO_NATUREZA = {"fato": ("FATO", "#2ecc71"), "interpretacao": ("INTERPRETAÇÃO", "#d4a853"),
+                       "metafora": ("METÁFORA", "#8a8478")}
+
+    def selo(natureza):
+        r, c = ROTULO_NATUREZA.get(natureza, (natureza.upper(), "#8a8478"))
+        return (f"<span style='font-family:DM Mono,monospace;font-size:10px;letter-spacing:.08em;"
+                f"color:{c};border:1px solid {c};border-radius:3px;padding:1px 6px'>{r}</span>")
+
+    def exemplos(ids):
+        if not ids:
+            return ""
+        return " · ".join((por_id[i].get("sigla") or por_id[i]["nome"]) if i in por_id else i for i in ids)
+
+    ht = teoria["hierarquia_tratados"]
+    with st.expander("Complementos 2026 — " + ht["titulo"], expanded=True):
+        st.markdown(ht["introducao"])
+        st.markdown("##### 1. Posição no direito interno")
+        for r in ht["posicao_interna"]:
+            ex = exemplos(r["exemplos_corpus"])
+            st.markdown(
+                f"{selo(r['natureza'])} **{r['regime']}** — {r['posicao']}<br>"
+                f"<span style='color:#8a8478'>{r['abrange']}.</span> {r['fundamento']}"
+                + (f"<br><span style='color:#8a8478'>No corpus:</span> {ex}" if ex else ""),
+                unsafe_allow_html=True)
+        pr = ht["procedimento"]
+        st.markdown("##### 2. Procedimento de incorporação")
+        st.markdown(selo(pr["natureza"]) + "<br>" + "<br>".join(
+            f"{n}. {p}" for n, p in enumerate(pr["passos"], 1)) + f"<br><em>{pr['exemplo']}</em>",
+            unsafe_allow_html=True)
+        fi = ht["forca_internacional"]
+        st.markdown("##### 3. Força no plano internacional")
+        st.markdown(f"{selo(fi['natureza'])} {fi['texto']}", unsafe_allow_html=True)
+        ni = ht["nao_incorporados"]
+        st.markdown("##### Instrumentos não incorporados")
+        st.markdown(f"{selo(ni['natureza'])} {ni['texto']}<br><span style='color:#8a8478'>No corpus:</span> "
+                    f"{exemplos(ni['exemplos_corpus'])}", unsafe_allow_html=True)
+        lk = ht["leitura_kelseniana"]
+        st.markdown(f"{selo(lk['natureza'])} {lk['texto']}", unsafe_allow_html=True)
+        for m in teoria.get("metaforas", []):
+            st.markdown(f"{selo(m['natureza'])} **“{m['termo']}”** ({m['onde']}): {m['leitura']}",
+                        unsafe_allow_html=True)
+        st.caption("Fonte destes complementos: data/teoria.json. O documento abaixo é o texto "
+                   "original da arquitetura teórica, preservado sem edição.")
+
     with open("docs/teoria-conjuntos-juridicos-v3.html", "r", encoding="utf-8") as f:
         html_teoria = f.read()
 
