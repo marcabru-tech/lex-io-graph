@@ -22,7 +22,7 @@ APP_VERSION = "0.11.0"
 
 # ---- ODIN — dossie editorial sobre a arquitetura brasileira de IA ----
 # Enquanto vazio, nenhum link e exibido (nao publica link quebrado).
-ODIN_URL = ""
+ODIN_URL = "https://hubstry-arquitetura-brasileira-ia.onrender.com/"
 
 # ---- Tríade cromática ----
 LEX_COLOR   = "#d4a853"   # dourado — lei, governança, razão, sol

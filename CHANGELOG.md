@@ -17,7 +17,12 @@
 - GitHub Actions volta como reserva: terça 09h BRT, e só coleta se o
   snapshot do notebook (segunda 21h) tiver mais de 36 horas.
 - Constante `ODIN_URL`: link para o dossiê ODIN no rodapé, no Repositório
-  e na página de Inteligência; oculto enquanto vazia.
+  e na página de Inteligência, apontando para
+  hubstry-arquitetura-brasileira-ia.onrender.com.
+- Inteligência: nova seção "Direito Econômico e Economia Política" — três
+  lentes, genealogia em três momentos (Realismo Jurídico, CLS, LPE), contraponto
+  da AED contratualista e referências ABNT (Blalock, 2022; Harris e Varellas,
+  2020; Easterbrook e Fischel, 1991).
 
 ## [v0.9.0] — 2026-06-05
 

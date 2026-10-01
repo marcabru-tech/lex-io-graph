@@ -1,6 +1,6 @@
 import streamlit as st
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
-from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO
+from lib.inteligencia import CASOS_ESTRATEGICOS, EPISTEMOLOGIA, DIREITO_NATURAL, CASO_ANPD_JUDICIARIO, CASO_PARADIGMA_PREVENTIVO, DIREITO_ECONOMIA
 from lib.footer import render_footer
 from lib.constants import ODIN_URL
 
@@ -74,6 +74,7 @@ secao = st.radio(
         "⚡ Casos Estratégicos",
         "🧠 Epistemologia do Direito",
         "⚖️ Direito Natural e Positivo",
+        "📈 Direito Econômico e Economia Política",
     ],
     horizontal=True,
     label_visibility="collapsed"
@@ -224,6 +225,49 @@ Cada nó do grafo é simultaneamente: fato normativo, evento histórico,
 produto de método hermenêutico, objeto de direito comparado e vetor estratégico.
 O grafo não descreve o direito — *compreende-o* (Dilthey, Gadamer).
 """)
+
+# =============================================================
+# SEÇÃO 4 — Direito Econômico, AED e Direito e Economia Política
+# =============================================================
+elif secao == "📈 Direito Econômico e Economia Política":
+    D = DIREITO_ECONOMIA
+    st.markdown("## Direito Econômico, AED e Direito e Economia Política")
+    st.markdown(D["introducao"])
+
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("### Três lentes")
+    for lente in D["lentes"]:
+        st.markdown(f"""
+<div class="epist-card">
+  <span class="epist-autor">{lente['nome']}</span>
+  <div class="epist-contrib"><em>{lente['pergunta']}</em><br>{lente['foco']}</div>
+  <div class="epist-dir">🕸️ No grafo: {lente['no_grafo']}</div>
+</div>""", unsafe_allow_html=True)
+
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("### Genealogia — três momentos nos Estados Unidos")
+    st.markdown(D["genealogia_fonte"])
+    for g in D["genealogia"]:
+        with st.expander(f"{g['momento']} · {g['periodo']}"):
+            st.markdown(f"**Autores de referência:** {g['autores']}")
+            st.markdown(f"**Contexto:** {g['contexto']}")
+            st.markdown(f"**Tese:** {g['tese']}")
+            st.markdown(f"**Destino:** {g['destino']}")
+    st.info(D["contraponto"])
+
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("### Leitura Lexiograph")
+    for tema, texto in D["leitura_lexiograph"]:
+        st.markdown(f"**{tema}.** {texto}")
+
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("### Referências")
+    st.markdown(
+        "<div class='tensao-analise'>" + "<br><br>".join(D["referencias"]) +
+        "<br><br><em>Referências conforme ABNT NBR 6023:2018. Citações indiretas (apud) remetem às obras listadas acima, "
+        "conforme ABNT NBR 10520:2023.</em></div>",
+        unsafe_allow_html=True,
+    )
 
 # =============================================================
 # SEÇÃO 3 — Direito natural e positivo

@@ -620,3 +620,165 @@ CASO_PARADIGMA_PREVENTIVO = {
     "fonte": "Guilherme Gonçalves Machado — Founder & CEO, Hubstry Deep Tech · guilhermemachado@hubstry.onmicrosoft.com",
 }
 
+
+
+# ---- Direito Econômico, AED e Direito e Economia Política ----
+# Fontes consultadas diretamente: Blalock (2022), Harris e Varellas (2020),
+# Easterbrook e Fischel (1991). Autores citados por meio delas usam "apud".
+DIREITO_ECONOMIA = {
+    "introducao": (
+        "O grafo mostra como as normas se conectam. Esta seção trata de outra "
+        "pergunta: como as normas constroem mercados — quem recebe incentivo, "
+        "quem controla infraestrutura, quem regula dados. Três lentes respondem "
+        "de modos diferentes, e o Lexiograph as usa como instrumentos de leitura, "
+        "não como categorias normativas do grafo."
+    ),
+    "lentes": [
+        {
+            "nome": "Direito Econômico",
+            "pergunta": "Como o direito organiza a economia concreta?",
+            "foco": (
+                "Normas, instituições, política industrial, concorrência e regulação "
+                "como instrumentos que distribuem capacidade econômica. No Brasil, o "
+                "parâmetro é a ordem econômica constitucional (CF, arts. 170 a 181)."
+            ),
+            "no_grafo": "REDATA (art. 170, VI e art. 174) · ANPD como agência reguladora (Lei 13.848/2019)",
+        },
+        {
+            "nome": "Análise Econômica do Direito (AED)",
+            "pergunta": "Que incentivos e custos a regra produz?",
+            "foco": (
+                "Regras alteram custos de transação, risco, entrada e alocação de recursos. "
+                "Na formulação contratualista de Easterbrook e Fischel, a empresa é um "
+                "'nexo de contratos', e o direito societário funciona como contrato-padrão: "
+                "supre os termos que as partes teriam negociado se negociar cada contingência "
+                "fosse barato — é 'habilitador, não diretivo' (EASTERBROOK; FISCHEL, 1991, p. 12, 15)."
+            ),
+            "no_grafo": "Contrapartidas do REDATA (10% mercado interno, 2% P&D) como desenho de incentivos",
+        },
+        {
+            "nome": "Direito e Economia Política (LPE — Law and Political Economy)",
+            "pergunta": "Quem ganha poder com a forma jurídica do mercado?",
+            "foco": (
+                "Mercados, empresas, contratos, propriedade e a própria moeda são "
+                "'criaturas do direito e da política', não esferas anteriores ao Estado "
+                "(HARRIS; VARELLAS, 2020, p. 5). A eficiência é informação relevante, "
+                "mas não esgota perguntas sobre distribuição, poder e democracia."
+            ),
+            "no_grafo": "Plataformas e art. 19 do Marco Civil · dados pessoais como relação jurídica construída",
+        },
+    ],
+    "genealogia_fonte": (
+        "Genealogia proposta por Corinne Blalock (2022, p. 226-229) e por "
+        "Harris e Varellas (2020, p. 8-10): a crítica jurídica norte-americana à "
+        "separação entre política e economia aparece em três momentos, separados por "
+        "longos períodos de esquecimento."
+    ),
+    "genealogia": [
+        {
+            "momento": "1. Realismo Jurídico Norte-Americano",
+            "periodo": "décadas de 1920 e 1930",
+            "autores": "Robert Hale, Morris Cohen",
+            "contexto": (
+                "Surge quando a desigualdade cresce e a concentração empresarial abala a "
+                "crença num mercado competitivo descentralizado e 'natural' (HORWITZ, 1992 "
+                "apud BLALOCK, 2022, p. 226)."
+            ),
+            "tese": (
+                "O poder de barganha das partes no mercado não é natural: é afetado pela "
+                "distribuição prévia de propriedade e de titularidades, criada pelo direito "
+                "(HALE, 1923 apud BLALOCK, 2022, p. 226). A troca 'voluntária' pode esconder "
+                "coerção. Por isso o Realismo contesta a divisão entre direito privado "
+                "(contratos, propriedade, responsabilidade civil) e direito público."
+            ),
+            "destino": (
+                "A crítica foi posta de lado pela Segunda Guerra, pelo New Deal e pela "
+                "teoria do processo jurídico (HARRIS; VARELLAS, 2020, p. 8)."
+            ),
+        },
+        {
+            "momento": "2. Critical Legal Studies (CLS — Estudos Jurídicos Críticos)",
+            "periodo": "décadas de 1970 e 1980",
+            "autores": "Duncan Kennedy, Karl Klare",
+            "contexto": (
+                "Retoma o Realismo quando o debate jurídico estava centrado nos tribunais "
+                "e na adjudicação de direitos da Suprema Corte."
+            ),
+            "tese": (
+                "Todo direito privado — a propriedade, por exemplo — implica uma privação "
+                "correspondente e é, portanto, regulação pública tanto quanto um tributo "
+                "(KENNEDY, 1991 apud BLALOCK, 2022, p. 226). O direito é indeterminado e "
+                "'é política'. Kennedy argumenta ainda que a economia neoclássica absorveu "
+                "a dicotomia entre mercado livre e coerção estatal (HARRIS; VARELLAS, 2020, p. 8)."
+            ),
+            "destino": (
+                "As críticas feminista e racial levaram à separação da Critical Race Theory "
+                "e da teoria feminista do direito; a análise de classe saiu da conversa "
+                "(BLALOCK, 2022, p. 227)."
+            ),
+        },
+        {
+            "momento": "3. Law and Political Economy (LPE — Direito e Economia Política)",
+            "periodo": "a partir do fim dos anos 2000",
+            "autores": "Angela Harris, Amy Kapczynski, K. Sabeel Rahman, Lina Khan",
+            "contexto": (
+                "Responde a três décadas de hegemonia do Law and Economics (AED) nas "
+                "faculdades norte-americanas, associado a Coase, Director e Posner "
+                "(BLALOCK, 2022, p. 227-228, 235). O movimento ClassCrits (2007) é uma "
+                "das origens institucionais (HARRIS; VARELLAS, 2020, p. 10)."
+            ),
+            "tese": (
+                "Recusa a separação entre política e economia. Mostra como a AED está "
+                "incorporada à governança — por exemplo, na exigência de análise de "
+                "custo-benefício para regulação federal e no padrão estreito de prova "
+                "anticompetitiva no antitruste (BLALOCK, 2022, p. 229)."
+            ),
+            "destino": (
+                "Agenda ativa: antitruste, regulação administrativa, tributação e o "
+                "direito do capitalismo informacional (COHEN, 2019; PASQUALE, 2015 apud "
+                "HARRIS; VARELLAS, 2020, p. 10)."
+            ),
+        },
+    ],
+    "contraponto": (
+        "Contraponto necessário: a AED não é só o alvo da LPE. Em Easterbrook e Fischel "
+        "(1991), a pergunta é por que o direito societário deixa decisões críticas à "
+        "discricionariedade dos administradores e deixa a correção ao jogo de atores "
+        "interessados, não a reguladores (p. 15). A resposta contratualista é uma "
+        "hipótese testável sobre custos de transação; a resposta da LPE é uma pergunta "
+        "sobre quem definiu os termos do contrato-padrão. O Lexiograph mantém as duas "
+        "perguntas abertas."
+    ),
+    "leitura_lexiograph": [
+        (
+            "REDATA",
+            "Direito Econômico dá o parâmetro (defesa do meio ambiente como princípio da "
+            "ordem econômica); AED mede o efeito do critério de 'baixa emissão' sobre "
+            "custo de capital e localização; LPE pergunta que territórios e cadeias de "
+            "suprimento ganham capacidade de computar."
+        ),
+        (
+            "ANPD",
+            "Como agência reguladora, a ANPD é objeto do Direito Econômico da regulação. "
+            "Para a AED, consentimento e transparência reduzem assimetria informacional; "
+            "para a LPE, o 'dado pessoal' é relação jurídica construída, e a forma da "
+            "regulação define quem extrai valor dele."
+        ),
+        (
+            "Plataformas e art. 19",
+            "A AED lê a responsabilidade de intermediários como alocação de custos de "
+            "moderação; a LPE lê a mesma regra como distribuição de poder sobre a esfera "
+            "pública — conexão com o antitruste de plataformas."
+        ),
+    ],
+    "referencias": [
+        "BLALOCK, Corinne. Introduction: law and the critique of capitalism. "
+        "<em>The South Atlantic Quarterly</em>, Durham, v. 121, n. 2, p. 223-236, abr. 2022. "
+        "DOI: 10.1215/00382876-9663562.",
+        "EASTERBROOK, Frank H.; FISCHEL, Daniel R. <em>The economic structure of corporate "
+        "law</em>. Cambridge, MA: Harvard University Press, 1991.",
+        "HARRIS, Angela P.; VARELLAS, James J. Introduction: law and political economy in a "
+        "time of accelerating crises. <em>Journal of Law and Political Economy</em>, Davis, "
+        "v. 1, n. 1, p. 1-27, 2020. DOI: 10.5070/LP61150254.",
+    ],
+}
