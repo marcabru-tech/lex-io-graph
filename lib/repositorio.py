@@ -103,11 +103,70 @@ AUTORES = {
         "contribuicao": "Dialogismo e polifonia — múltiplas vozes que coexistem em tensão produtiva sem fusão em voz única autoritária. O romance polifônico como modelo epistemológico.",
         "corrente": "Teoria literária / Filosofia da linguagem",
         "relevancia_brasil": "Fundamento metodológico do Lex-IO-Graph — o ordenamento jurídico brasileiro como sistema polifônico: legislador, juiz, doutrinador, costume coexistindo em dialogismo pancrônico"
-    }
+    },
+    "accioly": {
+        "nome": "Hildebrando Accioly",
+        "datas": "1888–1962",
+        "nacionalidade": "Brasileiro",
+        "obra_principal": "Tratado de Direito Internacional Público, 1933–1935",
+        "contribuicao": "Sistematização do Direito Internacional Público no Brasil, incluindo o direito dos tratados, antes da codificação de Viena.",
+        "corrente": "Direito Internacional Público clássico",
+        "relevancia_brasil": "Base doutrinária para a leitura da Convenção de Viena (Decreto 7.030/2009) e dos acordos do Mercosul"
+    },
+    "cancado_trindade": {
+        "nome": "Antônio Augusto Cançado Trindade",
+        "datas": "1947–2022",
+        "nacionalidade": "Brasileiro",
+        "obra_principal": "Tratado de Direito Internacional dos Direitos Humanos (3 v.), 1997–2003",
+        "contribuicao": "Humanização do Direito Internacional; juiz da Corte Internacional de Justiça (2009–2022) e presidente da Corte Interamericana de Direitos Humanos.",
+        "corrente": "Jusinternacionalismo humanista",
+        "relevancia_brasil": "Referência para a hierarquia dos tratados de direitos humanos (CF, art. 5º, §§ 2º e 3º)"
+    },
+    "valladao": {
+        "nome": "Haroldo Valladão",
+        "datas": "1901–1987",
+        "nacionalidade": "Brasileiro",
+        "obra_principal": "Direito Internacional Privado (3 v.)",
+        "contribuicao": "Principal sistematizador do Direito Internacional Privado brasileiro; autor do anteprojeto de Lei Geral de Aplicação das Normas Jurídicas.",
+        "corrente": "Direito Internacional Privado",
+        "relevancia_brasil": "Leitura das regras de conflito da LINDB (arts. 7º a 17)"
+    },
 }
 
 # ---- Brocardos latinos ----
 BROCARDOS = [
+    {
+        "original": "Pacta sunt servanda",
+        "traducao_literal": "Os pactos devem ser cumpridos",
+        "traducao_juridica": "Todo tratado em vigor obriga as partes e deve ser cumprido de boa-fé",
+        "contexto_romano": "Princípio de origem canônica e romanística, positivado no art. 26 da Convenção de Viena (1969)",
+        "uso_brasil": "Convenção de Viena, art. 26 (Decreto 7.030/2009); base da obrigatoriedade dos acordos do Mercosul",
+        "relacao_norma": "convencao_viena_1969"
+    },
+    {
+        "original": "Rebus sic stantibus",
+        "traducao_literal": "Estando assim as coisas",
+        "traducao_juridica": "Mudança fundamental das circunstâncias pode justificar a extinção ou suspensão de tratado, em hipóteses estritas",
+        "contexto_romano": "Cláusula de construção medieval, codificada no art. 62 da Convenção de Viena",
+        "uso_brasil": "Convenção de Viena, art. 62; no direito interno, teoria da imprevisão (CC, arts. 478 a 480)",
+        "relacao_norma": "convencao_viena_1969"
+    },
+    {
+        "original": "Locus regit actum",
+        "traducao_literal": "O lugar rege o ato",
+        "traducao_juridica": "A forma do ato jurídico segue a lei do lugar em que é praticado",
+        "contexto_romano": "Regra estatutária medieval, base das normas de conflito sobre forma dos atos",
+        "uso_brasil": "Direito Internacional Privado brasileiro — LINDB",
+        "relacao_norma": "lindb"
+    },
+    {
+        "original": "Lex loci contractus",
+        "traducao_literal": "A lei do lugar do contrato",
+        "traducao_juridica": "As obrigações contratuais regem-se pela lei do país em que se constituírem",
+        "contexto_romano": "Regra estatutária; no Brasil, positivada no art. 9º da LINDB",
+        "uso_brasil": "LINDB, art. 9º — contratos internacionais",
+        "relacao_norma": "lindb"
+    },
     {
         "original": "Lex superior derogat inferiori",
         "traducao_literal": "A lei superior derroga a inferior",

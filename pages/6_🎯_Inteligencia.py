@@ -115,6 +115,21 @@ if secao == "⚡ Casos Estratégicos":
   <div class="caso-sintese">{caso['sintese']}</div>
 </div>""", unsafe_allow_html=True)
 
+        if caso.get("natureza"):
+            st.caption(caso["natureza"])
+        if caso.get("matriz_vigencia"):
+            import json as _json
+            with open("data/normas.json", encoding="utf-8") as _f:
+                _por_id = {n["id"]: n for n in _json.load(_f)["nodes"]}
+            with st.expander("Matriz de vigência por Parte"):
+                for _nid in caso["matriz_vigencia"]:
+                    _n = _por_id.get(_nid)
+                    if not _n:
+                        continue
+                    st.markdown(f"**{_n['nome']}** — {_n.get('sigla', '')}")
+                    st.table([{"Parte": v["parte"], "Situação": v["situacao"],
+                               "Desde": v.get("desde") or "—", "Fonte": v["fonte"]}
+                              for v in _n.get("vigencia", [])])
         with st.expander(f"Análise detalhada — {caso['titulo']}"):
             for camada in caso['camadas']:
                 st.markdown(

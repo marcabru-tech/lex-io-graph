@@ -1,5 +1,15 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.14.1] — 2026-10-01
+
+### Inteligência e Repositório: acordos internacionais (parte 3 de 3)
+
+- Caso "Três Acordos, Três Velocidades", rotulado como leitura analítica, com matriz
+  de vigência por Parte renderizada a partir de `normas.json`.
+- Repositório: autores Hildebrando Accioly, Antônio Augusto Cançado Trindade e
+  Haroldo Valladão; brocardos pacta sunt servanda, rebus sic stantibus, locus regit
+  actum e lex loci contractus.
+
 ## [v0.14.0] — 2026-10-01
 
 ### Direito Internacional Público e Privado no corpus (parte 2 de 3)

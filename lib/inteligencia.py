@@ -433,6 +433,86 @@ CASOS_ESTRATEGICOS = [
                 "estrangeiras; até o decreto de triagem, a discricionariedade do CIMCE é ampla."
             )
         }
+    },
+    {
+        "id": "tres_acordos_tres_velocidades",
+        "titulo": "Três Acordos, Três Velocidades — Mercosul com Singapura, EFTA e União Europeia",
+        "natureza": "Leitura analítica do Lexiograph sobre fatos verificados em fonte primária — não é fonte normativa.",
+        "normas_relacionadas": ["acordo_mercosul_singapura", "acordo_mercosul_efta", "acordo_mercosul_ue_ita",
+                                "tratado_assuncao_1991", "convencao_viena_1969", "cf88"],
+        "matriz_vigencia": ["acordo_mercosul_singapura", "acordo_mercosul_efta", "acordo_mercosul_ue_ita"],
+        "nivel_tensao": "estratégico",
+        "status": "em implementação — matriz de vigência verificada em 01/10/2026",
+        "sintese": (
+            "Em 2026 o Brasil passou a operar três acordos comerciais externos do Mercosul, "
+            "cada um em um estágio jurídico diferente: um em vigor, um em vigor apenas com "
+            "parte dos parceiros e um em aplicação provisória, ainda sem entrada em vigor. "
+            "A pergunta empresarial deixa de ser 'o acordo existe?' e passa a ser 'vale para "
+            "este produto, neste destino, nesta data?'."
+        ),
+        "camadas": [
+            {
+                "titulo": "Tensão 1 — Três estágios jurídicos",
+                "analise": (
+                    "Singapura: em vigor para o Brasil desde 01/08/2026 (Decreto 13.081/2026). "
+                    "EFTA: em vigor para o Brasil desde 01/10/2026, mas, segundo a própria EFTA, "
+                    "apenas com a Islândia; Noruega, Suíça, Liechtenstein e os demais sócios do "
+                    "Mercosul seguem pendentes (Decreto 13.126/2026). União Europeia: o Acordo "
+                    "Provisório de Comércio (ITA) é aplicado provisoriamente desde 01/05/2026 e "
+                    "ainda não entrou em vigor (Decreto 12.953/2026, art. 23); o Acordo de Parceria "
+                    "(EMPA) é instrumento distinto. Diagnóstico: 'vigente' deixou de ser um atributo "
+                    "binário — exige matriz por Parte."
+                )
+            },
+            {
+                "titulo": "Tensão 2 — Aplicação provisória e a reserva brasileira",
+                "analise": (
+                    "O Brasil ratificou a Convenção de Viena com reserva ao art. 25, que trata da "
+                    "aplicação provisória de tratados. No caso do ITA, a aplicação provisória começou "
+                    "depois da aprovação pelo Congresso (Decreto Legislativo 14/2026). A prática "
+                    "preserva o controle parlamentar e, ao mesmo tempo, permite antecipar efeitos "
+                    "comerciais enquanto o acordo não entra em vigor."
+                )
+            },
+            {
+                "titulo": "Tensão 3 — Fronteira de observabilidade",
+                "analise": (
+                    "Nos três casos, a aprovação parlamentar ocorreu por projeto de decreto "
+                    "legislativo, etapa que o Radar Legislativo capta. A promulgação por decreto "
+                    "presidencial e a vigência para cada parceiro estrangeiro ocorrem fora do "
+                    "Congresso — no Diário Oficial e nas fontes oficiais das contrapartes — e "
+                    "entram no Lexiograph por curadoria."
+                )
+            },
+            {
+                "titulo": "Tensão 4 — Preferência tarifária não é exportação",
+                "analise": (
+                    "A redução tarifária abre acesso, mas a utilização depende de regra de origem, "
+                    "prova de origem, habilitação sanitária, logística e escala de fornecimento. "
+                    "O indicador relevante é a taxa de utilização das preferências, não o número "
+                    "de linhas tarifárias liberalizadas. Do ponto de vista de soberania, os três "
+                    "acordos diversificam parceiros (Sudeste Asiático, EFTA e UE) sem alterar, por "
+                    "si, a capacidade produtiva doméstica."
+                )
+            }
+        ],
+        "prospectiva": {
+            "12_meses": (
+                "01/11/2026: início previsto Brasil–Noruega (MDIC) e Argentina–Singapura "
+                "(anunciado por Singapura). Suíça: aprovação parlamentar em 16/09/2026, com "
+                "referendo anunciado. União Europeia: entrada em vigor do ITA depende das "
+                "notificações do art. 23.2; EMPA segue rito próprio."
+            ),
+            "36_meses": (
+                "Dados de comércio por produto permitirão medir a utilização das preferências e "
+                "identificar setores que efetivamente se beneficiaram."
+            ),
+            "lacuna_remanescente": (
+                "As relações entre os capítulos de comércio eletrônico e a LGPD, e entre o acordo "
+                "com a UE e a PNMCE, dependem de leitura textual dos capítulos e não foram "
+                "registradas como arestas."
+            )
+        }
     }
 ]
 
