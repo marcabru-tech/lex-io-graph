@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-01T12:39:09.453240",
+  "ultima_atualizacao": "2026-10-01T14:21:47.968322",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -7,7 +7,68 @@
         "IA generativa",
         "algoritmo decisão"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "172783",
+          "sigla": "PL 750/2026",
+          "ementa": "Institui o Programa Nacional de Monitoramento de Agressores com Uso de Tecnologia por Inteligência Artificial (PNM-IA), com a finalidade de prevenir a violência doméstica; assegurar a efetividade das medidas protetivas de urgência; ampliar a proteção das vítimas por meio do uso de tecnologias digitais e de inteligência artificial; e subsidiar a atuação preventiva e repressiva dos órgãos de segurança pública, do Ministério Público e do Poder Judiciário.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-02-25",
+          "autor": "Senador Eduardo Braga (MDB/AM)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-01T14:21:50.609150"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "172838",
+          "sigla": "PL 846/2026",
+          "ementa": "Institui a Lei de Governança de Inteligência Artificial no Setor Público",
+          "ano": "2026",
+          "status": "Apresentada em 2026-03-02",
+          "autor": "Senador Marcio Bittar (PL/AC)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-01T14:21:50.609321"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "172900",
+          "sigla": "PL 931/2026",
+          "ementa": "Dispõe sobre os princípios éticos, diretrizes de governança, requisitos de transparência e mecanismos de controle aplicáveis ao uso de sistemas de Inteligência Artificial (IA) na área da saúde, e dá outras providências.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-03-04",
+          "autor": "Senadora Dra. Eudócia (PL/AL)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-01T14:21:50.609498"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "174154",
+          "sigla": "PL 2397/2026",
+          "ementa": "Estabelece os parâmetros de ética nacional para o uso da inteligência artificial nas instituições de ensino públicas e privadas e dá outras providências.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-05-14",
+          "autor": "Senador Jader Barbalho (MDB/PA)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-01T14:21:50.612271"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "174521",
+          "sigla": "PL 2991/2026",
+          "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre o crime de manipulação fraudulenta de sistema de inteligência artificial, quando o fato não constituir crime mais grave.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-06-10",
+          "autor": "Senador Eduardo Girão (NOVO/CE)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-01T14:21:50.613280"
+        }
+      ],
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
@@ -18,7 +79,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:13.440684"
+          "data_deteccao": "2026-10-01T14:22:00.683654"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -29,7 +90,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:13.440697"
+          "data_deteccao": "2026-10-01T14:22:00.683668"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -40,7 +101,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:13.440701"
+          "data_deteccao": "2026-10-01T14:22:00.683671"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -51,7 +112,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:13.440704"
+          "data_deteccao": "2026-10-01T14:22:00.683674"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -62,7 +123,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-01T12:39:13.440706"
+          "data_deteccao": "2026-10-01T14:22:00.683676"
         }
       ],
       "lexml": []
@@ -139,7 +200,20 @@
         "ECA digital",
         "proteção menores internet"
       ],
-      "senado": [],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "173870",
+          "sigla": "PL 2164/2026",
+          "ementa": "Altera as Leis nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), e nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para estabelecer mecanismos com o objetivo de restringir a circulação não autorizada, na internet, de imagens, vídeos e conteúdos que retratem crianças e adolescentes.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-05-05",
+          "autor": "Senador Jader Barbalho (MDB/PA)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173870",
+          "termo_busca": "criança adolescente digital",
+          "data_deteccao": "2026-10-01T14:22:28.239950"
+        }
+      ],
       "camara": [],
       "lexml": []
     },
@@ -161,6 +235,206 @@
       ],
       "senado": [],
       "camara": [],
+      "lexml": []
+    },
+    "infraestrutura_digital": {
+      "termos_monitorados": [
+        "datacenter",
+        "computação em nuvem"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "172786",
+          "sigla": "PL 278/2026",
+          "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter (Redata), e a Lei nº 15.211, de 17 de setembro de 2025.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-02-25",
+          "autor": "Câmara dos Deputados",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
+          "termo_busca": "datacenter",
+          "data_deteccao": "2026-10-01T14:23:47.773092"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "175732",
+          "sigla": "PLP 74/2026",
+          "ementa": "Altera a Lei Complementar nº 229, de 30 de março de 2026, para incluir o regime especial de tributação para serviços de datacenter, o programa federal de financiamento de ações de apoio às pessoas com câncer e às pessoas com deficiência, bem como a desoneração do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL) das sociedades resseguradoras locais entre as exceções às regras aplicáveis à concessão de benefícios tributários e altera a Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal).",
+          "ano": "2026",
+          "status": "Apresentada em 2026-09-03",
+          "autor": "Câmara dos Deputados",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
+          "termo_busca": "datacenter",
+          "data_deteccao": "2026-10-01T14:23:47.779819"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2611313",
+          "sigla": "PLP 74/2026",
+          "ementa": "Dispõe sobre regras relativas a benefícios tributários e despesas obrigatórias no exercício de 2026.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
+          "termo_busca": "datacenter",
+          "data_deteccao": "2026-10-01T14:23:51.881758"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2600838",
+          "sigla": "PL 278/2026",
+          "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter – REDATA, e a Lei nº 15.211, de 17 de setembro de 2025.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
+          "termo_busca": "datacenter",
+          "data_deteccao": "2026-10-01T14:23:51.881769"
+        }
+      ],
+      "lexml": []
+    },
+    "mercados_digitais": {
+      "termos_monitorados": [
+        "mercados digitais",
+        "concorrência digital"
+      ],
+      "senado": [],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2562481",
+          "sigla": "PL 4675/2025",
+          "ementa": "Altera a Lei nº 12.529, de 30 de novembro de 2011, dispõe sobre os processos de designação de agentes econômicos de relevância sistêmica em mercados digitais e de determinação de obrigações especiais a agentes econômicos de relevância sistêmica e cria a Superintendência de Mercados Digitais no âmbito do Conselho Administrativo de Defesa Econômica",
+          "ano": "2025",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2562481",
+          "termo_busca": "mercados digitais",
+          "data_deteccao": "2026-10-01T14:24:16.912022"
+        }
+      ],
+      "lexml": []
+    },
+    "minerais_criticos": {
+      "termos_monitorados": [
+        "minerais críticos",
+        "terras raras"
+      ],
+      "senado": [
+        {
+          "fonte": "Senado Federal",
+          "id": "174566",
+          "sigla": "PL 3050/2026",
+          "ementa": "Altera a Lei nº 8.001, de 13 de março de 1990, para destinar pelo menos 50% (cinquenta por cento) dos recursos arrecadados com a Compensação Financeira pela Exploração de Recursos Minerais (CFEM) decorrentes da exploração de minerais classificados como críticos ou estratégicos ao financiamento de políticas públicas de saúde e educação, sendo 25% (vinte e cinco por cento) para cada área.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-06-11",
+          "autor": "Senadora Ana Paula Lobato (PSB/MA)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
+          "termo_busca": "minerais críticos",
+          "data_deteccao": "2026-10-01T14:24:27.653469"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "175446",
+          "sigla": "PLP 114/2026",
+          "ementa": "Dispõe sobre regras para renúncias de receita com o objetivo de mitigar os impactos econômicos causados pelo choque no mercado internacional de energia decorrente do conflito no Oriente Médio e excepcionaliza os benefícios tributários destinados à Política Nacional de Minerais Críticos e Estratégicos, ao Programa de Desenvolvimento da Indústria de Fertilizantes e à realização da Copa do Mundo Feminina, e dá outras providências.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-08-12",
+          "autor": "Câmara dos Deputados",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
+          "termo_busca": "minerais críticos",
+          "data_deteccao": "2026-10-01T14:24:27.655646"
+        }
+      ],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2621082",
+          "sigla": "PL 2166/2026",
+          "ementa": "Dispõe sobre critérios para o enquadramento de minerais estratégicos no âmbito da Política Nacional de Minerais Críticos e Estratégicos e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
+          "termo_busca": "minerais críticos",
+          "data_deteccao": "2026-10-01T14:24:36.143971"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2447259",
+          "sigla": "PL 2780/2024",
+          "ementa": "Institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE), o Comitê de Minerais Críticos e Estratégicos (CMCE), vinculado ao Conselho Nacional de Política Mineral, e dá outras providências.",
+          "ano": "2024",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
+          "termo_busca": "minerais críticos",
+          "data_deteccao": "2026-10-01T14:24:36.143983"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2631129",
+          "sigla": "PL 2988/2026",
+          "ementa": "Dispõe sobre a participação de estrangeiros em pessoas jurídicas que explorem recursos minerais classificados como críticos e estratégicos e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
+          "termo_busca": "terras raras",
+          "data_deteccao": "2026-10-01T14:24:44.437611"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2625485",
+          "sigla": "PL 2448/2026",
+          "ementa": "Institui a Lei de Análise sobre Investimentos Estratégicos (LAIE), regulamenta o art. 172 da Constituição Federal para disciplinar, com base no interesse nacional, o investimento de capital estrangeiro no Brasil e instituir o Câmara de Análise sobre Investimentos Estratégicos (CAIE).",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2625485",
+          "termo_busca": "terras raras",
+          "data_deteccao": "2026-10-01T14:24:44.437623"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2618506",
+          "sigla": "PL 1984/2026",
+          "ementa": "Altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967, para estabelecer requisitos específicos para a outorga de direitos minerários relativos a minerais estratégicos, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
+          "termo_busca": "terras raras",
+          "data_deteccao": "2026-10-01T14:24:44.437628"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2617957",
+          "sigla": "PL 1939/2026",
+          "ementa": "Institui o Regime Nacional de Proteção dos Minerais Estratégicos (RNPME); dispõe sobre o controle de direitos minerários e de operações societárias envolvendo minerais estratégicos; cria o Fundo Nacional Estratégico de Defesa e Desenvolvimento Tecnológico (FNEDDT); amplia competências da Indústrias Nucleares do Brasil S.A. (INB) para atuação estratégica em minerais estratégicos; altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967 (Código de Mineração), a Lei nº 6.189, de 16 de dezembro de 1974, e a Lei nº 13.575, de 26 de dezembro de 2017; e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2617957",
+          "termo_busca": "terras raras",
+          "data_deteccao": "2026-10-01T14:24:44.437630"
+        }
+      ],
+      "lexml": []
+    },
+    "soberania_digital": {
+      "termos_monitorados": [
+        "soberania digital",
+        "soberania tecnológica"
+      ],
+      "senado": [],
+      "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641166",
+          "sigla": "PL 4479/2026",
+          "ementa": "Institui a Política Nacional de Proteção da Autonomia Tecnológica Brasileira, estabelece diretrizes para a soberania tecnológica nacional, a proteção das infraestruturas digitais estratégicas, a resiliência computacional, a inteligência artificial estratégica, a soberania dos dados críticos, a computação em nuvem de interesse nacional, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641166",
+          "termo_busca": "soberania digital",
+          "data_deteccao": "2026-10-01T14:24:50.513712"
+        }
+      ],
       "lexml": []
     },
     "Sustação dos Decretos 12.975 e 12.976/2026": {
@@ -496,6 +770,167 @@
       "lexml": []
     }
   },
-  "novidades_detectadas": [],
-  "total_novidades": 0
+  "novidades_detectadas": [
+    {
+      "tema": "ia",
+      "fonte": "senado",
+      "sigla": "PL 750/2026",
+      "ementa": "Institui o Programa Nacional de Monitoramento de Agressores com Uso de Tecnologia por Inteligência Artificial (PNM-IA), com a finalidade de prevenir a violência doméstica; assegurar a efetividade das medidas protetivas de urgência; ampliar a proteção das vítimas por meio do uso de tecnologias digitais e de inteligência artificial; e subsidiar a atuação preventiva e repressiva dos órgãos de segurança pública, do Ministério Público e do Poder Judiciário.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
+      "data_deteccao": "2026-10-01T14:21:50.609150"
+    },
+    {
+      "tema": "ia",
+      "fonte": "senado",
+      "sigla": "PL 846/2026",
+      "ementa": "Institui a Lei de Governança de Inteligência Artificial no Setor Público",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
+      "data_deteccao": "2026-10-01T14:21:50.609321"
+    },
+    {
+      "tema": "ia",
+      "fonte": "senado",
+      "sigla": "PL 931/2026",
+      "ementa": "Dispõe sobre os princípios éticos, diretrizes de governança, requisitos de transparência e mecanismos de controle aplicáveis ao uso de sistemas de Inteligência Artificial (IA) na área da saúde, e dá outras providências.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
+      "data_deteccao": "2026-10-01T14:21:50.609498"
+    },
+    {
+      "tema": "ia",
+      "fonte": "senado",
+      "sigla": "PL 2397/2026",
+      "ementa": "Estabelece os parâmetros de ética nacional para o uso da inteligência artificial nas instituições de ensino públicas e privadas e dá outras providências.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
+      "data_deteccao": "2026-10-01T14:21:50.612271"
+    },
+    {
+      "tema": "ia",
+      "fonte": "senado",
+      "sigla": "PL 2991/2026",
+      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre o crime de manipulação fraudulenta de sistema de inteligência artificial, quando o fato não constituir crime mais grave.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
+      "data_deteccao": "2026-10-01T14:21:50.613280"
+    },
+    {
+      "tema": "menores",
+      "fonte": "senado",
+      "sigla": "PL 2164/2026",
+      "ementa": "Altera as Leis nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), e nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para estabelecer mecanismos com o objetivo de restringir a circulação não autorizada, na internet, de imagens, vídeos e conteúdos que retratem crianças e adolescentes.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173870",
+      "data_deteccao": "2026-10-01T14:22:28.239950"
+    },
+    {
+      "tema": "infraestrutura_digital",
+      "fonte": "senado",
+      "sigla": "PL 278/2026",
+      "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter (Redata), e a Lei nº 15.211, de 17 de setembro de 2025.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
+      "data_deteccao": "2026-10-01T14:23:47.773092"
+    },
+    {
+      "tema": "infraestrutura_digital",
+      "fonte": "senado",
+      "sigla": "PLP 74/2026",
+      "ementa": "Altera a Lei Complementar nº 229, de 30 de março de 2026, para incluir o regime especial de tributação para serviços de datacenter, o programa federal de financiamento de ações de apoio às pessoas com câncer e às pessoas com deficiência, bem como a desoneração do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL) das sociedades resseguradoras locais entre as exceções às regras aplicáveis à concessão de benefícios tributários e altera a Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal).",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
+      "data_deteccao": "2026-10-01T14:23:47.779819"
+    },
+    {
+      "tema": "infraestrutura_digital",
+      "fonte": "camara",
+      "sigla": "PLP 74/2026",
+      "ementa": "Dispõe sobre regras relativas a benefícios tributários e despesas obrigatórias no exercício de 2026.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
+      "data_deteccao": "2026-10-01T14:23:51.881758"
+    },
+    {
+      "tema": "infraestrutura_digital",
+      "fonte": "camara",
+      "sigla": "PL 278/2026",
+      "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter – REDATA, e a Lei nº 15.211, de 17 de setembro de 2025.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
+      "data_deteccao": "2026-10-01T14:23:51.881769"
+    },
+    {
+      "tema": "mercados_digitais",
+      "fonte": "camara",
+      "sigla": "PL 4675/2025",
+      "ementa": "Altera a Lei nº 12.529, de 30 de novembro de 2011, dispõe sobre os processos de designação de agentes econômicos de relevância sistêmica em mercados digitais e de determinação de obrigações especiais a agentes econômicos de relevância sistêmica e cria a Superintendência de Mercados Digitais no âmbito do Conselho Administrativo de Defesa Econômica",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2562481",
+      "data_deteccao": "2026-10-01T14:24:16.912022"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "senado",
+      "sigla": "PL 3050/2026",
+      "ementa": "Altera a Lei nº 8.001, de 13 de março de 1990, para destinar pelo menos 50% (cinquenta por cento) dos recursos arrecadados com a Compensação Financeira pela Exploração de Recursos Minerais (CFEM) decorrentes da exploração de minerais classificados como críticos ou estratégicos ao financiamento de políticas públicas de saúde e educação, sendo 25% (vinte e cinco por cento) para cada área.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
+      "data_deteccao": "2026-10-01T14:24:27.653469"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "senado",
+      "sigla": "PLP 114/2026",
+      "ementa": "Dispõe sobre regras para renúncias de receita com o objetivo de mitigar os impactos econômicos causados pelo choque no mercado internacional de energia decorrente do conflito no Oriente Médio e excepcionaliza os benefícios tributários destinados à Política Nacional de Minerais Críticos e Estratégicos, ao Programa de Desenvolvimento da Indústria de Fertilizantes e à realização da Copa do Mundo Feminina, e dá outras providências.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
+      "data_deteccao": "2026-10-01T14:24:27.655646"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 2166/2026",
+      "ementa": "Dispõe sobre critérios para o enquadramento de minerais estratégicos no âmbito da Política Nacional de Minerais Críticos e Estratégicos e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
+      "data_deteccao": "2026-10-01T14:24:36.143971"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 2780/2024",
+      "ementa": "Institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE), o Comitê de Minerais Críticos e Estratégicos (CMCE), vinculado ao Conselho Nacional de Política Mineral, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
+      "data_deteccao": "2026-10-01T14:24:36.143983"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 2988/2026",
+      "ementa": "Dispõe sobre a participação de estrangeiros em pessoas jurídicas que explorem recursos minerais classificados como críticos e estratégicos e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
+      "data_deteccao": "2026-10-01T14:24:44.437611"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 2448/2026",
+      "ementa": "Institui a Lei de Análise sobre Investimentos Estratégicos (LAIE), regulamenta o art. 172 da Constituição Federal para disciplinar, com base no interesse nacional, o investimento de capital estrangeiro no Brasil e instituir o Câmara de Análise sobre Investimentos Estratégicos (CAIE).",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2625485",
+      "data_deteccao": "2026-10-01T14:24:44.437623"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 1984/2026",
+      "ementa": "Altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967, para estabelecer requisitos específicos para a outorga de direitos minerários relativos a minerais estratégicos, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
+      "data_deteccao": "2026-10-01T14:24:44.437628"
+    },
+    {
+      "tema": "minerais_criticos",
+      "fonte": "camara",
+      "sigla": "PL 1939/2026",
+      "ementa": "Institui o Regime Nacional de Proteção dos Minerais Estratégicos (RNPME); dispõe sobre o controle de direitos minerários e de operações societárias envolvendo minerais estratégicos; cria o Fundo Nacional Estratégico de Defesa e Desenvolvimento Tecnológico (FNEDDT); amplia competências da Indústrias Nucleares do Brasil S.A. (INB) para atuação estratégica em minerais estratégicos; altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967 (Código de Mineração), a Lei nº 6.189, de 16 de dezembro de 1974, e a Lei nº 13.575, de 26 de dezembro de 2017; e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2617957",
+      "data_deteccao": "2026-10-01T14:24:44.437630"
+    },
+    {
+      "tema": "soberania_digital",
+      "fonte": "camara",
+      "sigla": "PL 4479/2026",
+      "ementa": "Institui a Política Nacional de Proteção da Autonomia Tecnológica Brasileira, estabelece diretrizes para a soberania tecnológica nacional, a proteção das infraestruturas digitais estratégicas, a resiliência computacional, a inteligência artificial estratégica, a soberania dos dados críticos, a computação em nuvem de interesse nacional, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641166",
+      "data_deteccao": "2026-10-01T14:24:50.513712"
+    }
+  ],
+  "total_novidades": 20
 }
