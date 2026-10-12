@@ -30,7 +30,7 @@ Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de 
 
 ## Acesso
 
-**App:** [lex-io-graph-compliance-map.streamlit.app](https://lex-io-graph-compliance-map.streamlit.app)
+**App:** [lexiograph.hubstry.dev](https://lexiograph.hubstry.dev) · reserva: [lex-io-graph-compliance-map.streamlit.app](https://lex-io-graph-compliance-map.streamlit.app)
 **Site:** [hubstry.dev/lex-io-graph](https://hubstry.dev/lex-io-graph)
 **Demo / parceria:** globaldeeptechecosystem@hubstry.dev
 
