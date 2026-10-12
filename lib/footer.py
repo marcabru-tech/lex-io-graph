@@ -3,6 +3,14 @@ from lib.constants import ODIN_URL
 
 
 def render_footer():
+    # Contador de visitas sem cookies (lib/telemetria.py). O rodapé é chamado
+    # por todas as páginas; o arquivo de quem chamou identifica a página.
+    try:
+        import sys
+        from lib.telemetria import registrar_visita
+        registrar_visita(sys._getframe(1).f_globals.get("__file__", "desconhecida"))
+    except Exception:
+        pass
     st.markdown("---")
     odin = (
         f'<a href="{ODIN_URL}" target="_blank" '

@@ -1,5 +1,13 @@
 # Changelog — Lex-IO-Graph
 
+## [v0.16.2] — 2026-10-12
+
+- Contador de visitas sem cookies (`lib/telemetria.py`): registra a primeira abertura de
+  cada página por sessão (página, hora UTC, código aleatório de sessão, ambiente). Não
+  registra IP, navegador, localização nem cookies. No Google Cloud Run, as linhas vão
+  para o Cloud Logging e podem ser somadas em painel. Acionado pelo rodapé, comum a
+  todas as páginas.
+
 ## [v0.16.1] — 2026-10-01
 
 - Radar: métrica do topo passa a contar novidades pendentes de curadoria (17), igual à
