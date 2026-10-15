@@ -27,6 +27,24 @@ def load_json(filename: str) -> dict:
         return json.load(f)
 
 
+def _metadados_verificacao() -> dict[str, dict]:
+    """Metadados de verificação de jurisprudencia.json, indexados pelo id do registro."""
+    try:
+        registros = load_json("jurisprudencia.json")["jurisprudencia"]
+    except FileNotFoundError:
+        return {}
+    return {
+        r["id"]: {
+            "estado_verificacao": r.get("estado_verificacao"),
+            "nivel_autoridade": r.get("nivel_autoridade"),
+            "fonte_oficial_url": r.get("fonte_oficial_url"),
+            "verificacao_obs": (r.get("proveniencia") or {}).get("observacao"),
+        }
+        for r in registros
+        if "id" in r
+    }
+
+
 def build_compliance_graph(
     themes: Optional[list[str]] = None,
     norm_types: Optional[list[str]] = None,
@@ -63,6 +81,8 @@ def build_compliance_graph(
         if e["source"] in node_ids and e["target"] in node_ids
     ]
 
+    verificacao = _metadados_verificacao()
+
     # Construir grafo
     G = nx.DiGraph()
 
@@ -81,6 +101,8 @@ def build_compliance_graph(
             ano=node.get("ano", ""),
             color=NODE_COLORS.get(node["tipo"], "#888888"),
         )
+        # Só por id exato; nó sem registro fica sem metadados (não é "verificado").
+        G.nodes[node["id"]].update(verificacao.get(node["id"], {}))
 
     for edge in filtered_edges:
         G.add_edge(

@@ -7,8 +7,12 @@ apontar para um nó existente ou para uma referência externa declarada em
 data/referencias_externas.json.
 
 Uso:
-    python -m lib.validacao            # valida tudo
-    python -m lib.validacao --radar    # só o snapshot do radar (usado pelo workflow)
+    python -m lib.validacao            # valida tudo: corpus, radar e jurisprudência
+    python -m lib.validacao --radar    # só o snapshot do radar (usado pelo workflow);
+                                       # não toca em jurisprudência
+
+Advertências (ex.: assimetrias entre jurisprudencia.json e normas.json) são
+impressas, mas não alteram o código de saída.
 
 Retorna código 1 se houver erro, para que o CI e o workflow do radar parem.
 Sem dependências além da biblioteca padrão: roda no runner do radar, que só
@@ -157,9 +161,96 @@ def validar_radar(radar: dict | None = None) -> list[str]:
     return erros
 
 
+ESTADOS_VERIFICACAO = ("verificado", "pendente", "contestado")
+CAMPOS_JURISPRUDENCIA_NOVOS = (
+    "estado_verificacao", "fonte_oficial_url", "orgao_julgador", "relator",
+    "data_julgamento", "data_publicacao", "nivel_autoridade", "proveniencia",
+)
+CAMPOS_PROVENIENCIA = ("origem", "data_consulta", "observacao")
+EXIGIDOS_SE_VERIFICADO = (
+    "fonte_oficial_url", "orgao_julgador", "relator", "data_julgamento",
+)
+
+_NUMERO_CNJ = re.compile(r"\b(\d{7})-(\d{2})\.(\d{4})\.(\d)\.(\d{2})\.(\d{4})\b")
+
+
+def digito_cnj(sequencial: str, ano: str, segmento: str, tribunal: str, origem: str) -> int:
+    """Dígito verificador do padrão CNJ: 98 − (NNNNNNNAAAAJTROOOO00 mod 97)."""
+    return 98 - int(f"{sequencial}{ano}{segmento}{tribunal}{origem}00") % 97
+
+
+def validar_jurisprudencia(juris: dict | None = None, normas: dict | None = None
+                           ) -> tuple[list[str], list[str]]:
+    """Valida data/jurisprudencia.json. Retorna (erros, advertencias).
+
+    Erros bloqueiam; advertências não. Divergência de dígito CNJ é erro em
+    registro verificado e advertência nos demais. As assimetrias entre
+    jurisprudencia.json e normas.json são sempre advertências.
+    """
+    erros: list[str] = []
+    avisos: list[str] = []
+    registros = (juris if juris is not None else _ler("jurisprudencia.json"))["jurisprudencia"]
+    nos = (normas if normas is not None else _ler("normas.json"))["nodes"]
+
+    for r in registros:
+        rid = r.get("id")
+        pref = f"jurisprudencia.json [{rid}]"
+        ausentes = [c for c in CAMPOS_JURISPRUDENCIA_NOVOS if c not in r]
+        for c in ausentes:
+            erros.append(f"{pref}: campo obrigatório ausente '{c}'")
+
+        estado = r.get("estado_verificacao")
+        if "estado_verificacao" in r and estado not in ESTADOS_VERIFICACAO:
+            erros.append(f"{pref}: estado_verificacao inválido '{estado}'")
+
+        prov = r.get("proveniencia")
+        if "proveniencia" in r:
+            if not isinstance(prov, dict):
+                erros.append(f"{pref}: proveniencia deve ser objeto")
+            else:
+                for c in CAMPOS_PROVENIENCIA:
+                    if c not in prov:
+                        erros.append(f"{pref}: proveniencia sem '{c}'")
+
+        if estado == "verificado":
+            for c in EXIGIDOS_SE_VERIFICADO:
+                if not r.get(c):
+                    erros.append(f"{pref}: registro verificado exige '{c}' não nulo")
+            if r.get("nivel_autoridade") in (None, "desconhecido"):
+                erros.append(f"{pref}: registro verificado exige nivel_autoridade diferente de 'desconhecido'")
+
+        for m in _NUMERO_CNJ.finditer(str(r.get("numero", ""))):
+            seq, dv, ano, seg, tr, org = m.groups()
+            esperado = digito_cnj(seq, ano, seg, tr, org)
+            if int(dv) != esperado:
+                msg = (f"{pref}: número '{m.group(0)}' com dígito verificador {dv} "
+                       f"divergente do padrão CNJ (esperado {esperado:02d})")
+                if estado == "verificado":
+                    erros.append(msg)
+                else:
+                    avisos.append(msg + f" — registro {estado or 'sem estado'}, não bloqueante")
+
+    ids_juris = {r.get("id") for r in registros}
+    ids_nos = {n.get("id") for n in nos if n.get("tipo") == "jurisprudencia"}
+    for i in sorted(ids_juris - ids_nos, key=str):
+        avisos.append(f"assimetria: registro de jurisprudência '{i}' sem nó em normas.json")
+    for i in sorted(ids_nos - ids_juris, key=str):
+        avisos.append(f"assimetria: nó de jurisprudência '{i}' sem registro em jurisprudencia.json")
+    return erros, avisos
+
+
 def main(argv: list[str]) -> int:
     sys.path.insert(0, str(RAIZ))
-    erros = validar_radar() if "--radar" in argv else validar_corpus() + validar_radar()
+    avisos: list[str] = []
+    if "--radar" in argv:
+        erros = validar_radar()
+    else:
+        erros_jur, avisos = validar_jurisprudencia()
+        erros = validar_corpus() + validar_radar() + erros_jur
+    if avisos:
+        print(f"⚠ {len(avisos)} advertência(s), não bloqueiam:")
+        for a in avisos:
+            print(f"  ~ {a}")
     if erros:
         print(f"✗ {len(erros)} erro(s) de integridade:")
         for e in erros:

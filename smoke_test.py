@@ -27,13 +27,19 @@ def etapa(titulo: str):
 
 
 etapa("1. Integridade dos dados")
-from lib.validacao import validar_corpus, validar_radar  # noqa: E402
+from lib.validacao import validar_corpus, validar_jurisprudencia, validar_radar  # noqa: E402
 
 for erro in validar_corpus() + validar_radar():
     falhas.append(f"dados: {erro}")
     print(f"  ✗ {erro}")
+_erros_jur, _avisos_jur = validar_jurisprudencia()
+for erro in _erros_jur:
+    falhas.append(f"dados: {erro}")
+    print(f"  ✗ {erro}")
+for aviso in _avisos_jur:
+    print(f"  ⚠ {aviso}")
 if not falhas:
-    print("  ✓ corpus, teoria e radar consistentes")
+    print("  ✓ corpus, teoria, radar e jurisprudência consistentes (advertências acima não bloqueiam)")
 
 etapa("2. Módulos de lib/")
 for arq in sorted((RAIZ / "lib").glob("*.py")):
