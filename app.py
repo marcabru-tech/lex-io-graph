@@ -2,30 +2,7 @@ import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
 from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
-from lib.validacao import SEM_ESTADO, contar_estados
-
-
-def _quantidade(n: int, singular: str, plural: str) -> str:
-    """'1 verificado', '0 verificados', '3 pendentes'."""
-    return f"{n} {singular if n == 1 else plural}"
-
-
-def _resumo_verificacao(registros: list[dict]) -> str:
-    """Legenda da métrica de jurisprudência: contagem por estado de verificação.
-
-    Formatação de apresentação; a contagem vem de lib.validacao.contar_estados.
-    'sem estado' só entra quando há registro sem estado válido, para não
-    anunciar uma categoria vazia nem esconder uma preenchida.
-    """
-    c = contar_estados(registros)
-    partes = [
-        _quantidade(c["verificado"], "verificado", "verificados"),
-        _quantidade(c["pendente"], "pendente", "pendentes"),
-        _quantidade(c["contestado"], "contestado", "contestados"),
-    ]
-    if c[SEM_ESTADO]:
-        partes.append(f"{c[SEM_ESTADO]} sem estado")
-    return " · ".join(partes)
+from lib.formato import resumo_verificacao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — {APP_TAGLINE}",
@@ -102,7 +79,7 @@ col_a, col_b, col_c, col_d = st.columns(4)
 col_a.metric("Normas mapeadas", len(G.nodes))
 col_b.metric("Conexões normativas", len(raw_edges))
 col_c.metric("Jurisprudência registrada", len(raw_juris))
-col_c.caption(_resumo_verificacao(raw_juris))
+col_c.caption(resumo_verificacao(raw_juris))
 col_d.metric("Temas regulatórios", len(THEMES))
 
 st.divider()
