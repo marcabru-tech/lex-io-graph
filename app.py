@@ -5,6 +5,11 @@ from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUB
 from lib.validacao import SEM_ESTADO, contar_estados
 
 
+def _quantidade(n: int, singular: str, plural: str) -> str:
+    """'1 verificado', '0 verificados', '3 pendentes'."""
+    return f"{n} {singular if n == 1 else plural}"
+
+
 def _resumo_verificacao(registros: list[dict]) -> str:
     """Legenda da métrica de jurisprudência: contagem por estado de verificação.
 
@@ -14,9 +19,9 @@ def _resumo_verificacao(registros: list[dict]) -> str:
     """
     c = contar_estados(registros)
     partes = [
-        f"{c['verificado']} verificados",
-        f"{c['pendente']} pendentes",
-        f"{c['contestado']} contestados",
+        _quantidade(c["verificado"], "verificado", "verificados"),
+        _quantidade(c["pendente"], "pendente", "pendentes"),
+        _quantidade(c["contestado"], "contestado", "contestados"),
     ]
     if c[SEM_ESTADO]:
         partes.append(f"{c[SEM_ESTADO]} sem estado")
