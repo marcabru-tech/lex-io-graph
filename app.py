@@ -2,6 +2,7 @@ import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
 from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
+from lib.formato import resumo_verificacao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — {APP_TAGLINE}",
@@ -77,7 +78,8 @@ raw_juris = load_json("jurisprudencia.json")["jurisprudencia"]
 col_a, col_b, col_c, col_d = st.columns(4)
 col_a.metric("Normas mapeadas", len(G.nodes))
 col_b.metric("Conexões normativas", len(raw_edges))
-col_c.metric("Jurisprudência vinculada", len(raw_juris))
+col_c.metric("Jurisprudência registrada", len(raw_juris))
+col_c.caption(resumo_verificacao(raw_juris))
 col_d.metric("Temas regulatórios", len(THEMES))
 
 st.divider()

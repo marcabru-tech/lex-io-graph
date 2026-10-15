@@ -3,6 +3,7 @@
 import contextlib
 import copy
 import io
+import json
 import sys
 import unittest
 from unittest import mock
@@ -11,7 +12,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from lib import validacao  # noqa: E402
-from lib.validacao import digito_cnj, validar_jurisprudencia  # noqa: E402
+from lib.validacao import (  # noqa: E402
+    ESTADOS_VERIFICACAO,
+    SEM_ESTADO,
+    contar_estados,
+    digito_cnj,
+    validar_jurisprudencia,
+)
 
 NUMERO_VALIDO = "5012345-32.2022.4.04.7100"
 NUMERO_DIVERGENTE = "5012345-67.2022.4.04.7100"
@@ -131,6 +138,63 @@ class TestMain(unittest.TestCase):
         self.assertEqual(codigo, 0)
         self.assertIn("aviso x", saida)
         self.assertIn("não bloqueiam", saida)
+
+
+class TestContarEstados(unittest.TestCase):
+    def test_lista_vazia_devolve_zeros(self):
+        c = contar_estados([])
+        self.assertEqual(set(c), set(ESTADOS_VERIFICACAO) | {SEM_ESTADO})
+        self.assertEqual(sum(c.values()), 0)
+
+    def test_campo_ausente_cai_em_sem_estado(self):
+        c = contar_estados([{"id": "a"}])
+        self.assertEqual(c[SEM_ESTADO], 1)
+        self.assertEqual(sum(c.values()), 1)
+
+    def test_estado_nulo_cai_em_sem_estado(self):
+        self.assertEqual(
+            contar_estados([{"id": "a", "estado_verificacao": None}])[SEM_ESTADO], 1
+        )
+
+    def test_estado_invalido_cai_em_sem_estado(self):
+        c = contar_estados([{"id": "a", "estado_verificacao": "verificadoo"}])
+        self.assertEqual(c[SEM_ESTADO], 1)
+        self.assertEqual(c["verificado"], 0)
+
+    def test_soma_fecha_com_total(self):
+        registros = [
+            {"id": "a", "estado_verificacao": "verificado"},
+            {"id": "b", "estado_verificacao": "pendente"},
+            {"id": "c", "estado_verificacao": "contestado"},
+            {"id": "d", "estado_verificacao": "xpto"},
+            {"id": "e"},
+        ]
+        c = contar_estados(registros)
+        self.assertEqual(sum(c.values()), len(registros))
+        self.assertEqual(c["verificado"], 1)
+        self.assertEqual(c["pendente"], 1)
+        self.assertEqual(c["contestado"], 1)
+        self.assertEqual(c[SEM_ESTADO], 2)
+
+
+class TestContarEstadosCorpusReal(unittest.TestCase):
+    """Trava os números que a home exibe hoje: 5 registros, 0/3/2 e nenhum sem estado."""
+
+    def setUp(self):
+        caminho = Path(__file__).resolve().parent.parent / "data" / "jurisprudencia.json"
+        with open(caminho, encoding="utf-8") as f:
+            self.registros = json.load(f)["jurisprudencia"]
+
+    def test_total_e_distribuicao(self):
+        c = contar_estados(self.registros)
+        self.assertEqual(len(self.registros), 5)
+        self.assertEqual(c["verificado"], 0)
+        self.assertEqual(c["pendente"], 3)
+        self.assertEqual(c["contestado"], 2)
+        self.assertEqual(c[SEM_ESTADO], 0)
+
+    def test_soma_fecha_com_total_do_corpus(self):
+        self.assertEqual(sum(contar_estados(self.registros).values()), len(self.registros))
 
 
 if __name__ == "__main__":

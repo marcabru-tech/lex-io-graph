@@ -171,6 +171,28 @@ EXIGIDOS_SE_VERIFICADO = (
     "fonte_oficial_url", "orgao_julgador", "relator", "data_julgamento",
 )
 
+SEM_ESTADO = "sem_estado"
+
+
+def contar_estados(registros: list[dict]) -> dict[str, int]:
+    """Conta registros de jurisprudência por estado de verificação.
+
+    Devolve uma chave por estado de ESTADOS_VERIFICACAO mais SEM_ESTADO, que
+    recolhe o que não é estado válido — campo ausente, nulo ou valor
+    desconhecido. Assim a soma das categorias sempre fecha com o total de
+    registros, e um registro mal preenchido fica visível na contagem em vez de
+    desaparecer dela.
+
+    Contagem apenas: a formatação para exibição é responsabilidade da interface.
+    """
+    contagem = {estado: 0 for estado in ESTADOS_VERIFICACAO}
+    contagem[SEM_ESTADO] = 0
+    for r in registros:
+        estado = r.get("estado_verificacao")
+        contagem[estado if estado in ESTADOS_VERIFICACAO else SEM_ESTADO] += 1
+    return contagem
+
+
 _NUMERO_CNJ = re.compile(r"\b(\d{7})-(\d{2})\.(\d{4})\.(\d)\.(\d{2})\.(\d{4})\b")
 
 
