@@ -1,0 +1,47 @@
+# ADR 007 — Estados de verificação da jurisprudência
+
+**Status:** aceito
+
+## Contexto
+
+`data/jurisprudencia.json` guarda cinco registros cujos números, teses e anos
+não foram conferidos em fonte oficial. Já há evidência de problemas: a tese de
+`stf_adimc` diverge da controvérsia registrada no portal do STF, e o número de
+`trf4_lgpd_cookies` não passa na verificação do dígito do padrão CNJ (esperado
+32). Sem um estado explícito, um registro duvidoso é indistinguível de um
+confirmado.
+
+## Decisão
+
+1. Cada registro passa a declarar `estado_verificacao` (`verificado`,
+   `pendente` ou `contestado`), além de `fonte_oficial_url`, `orgao_julgador`,
+   `relator`, `data_julgamento`, `data_publicacao`, `nivel_autoridade` e
+   `proveniencia` (`origem`, `data_consulta`, `observacao`).
+2. Distinguimos três coisas que não devem se misturar:
+   - **dado recuperado** — o que uma fonte efetivamente disse (campos
+     factuais e `proveniencia`);
+   - **qualificação jurídica** — o que o dado significa (tese, resumo,
+     `nivel_autoridade`);
+   - **decisão editorial do curador** — a classificação em si
+     (`estado_verificacao`) e sua justificativa (`observacao`).
+3. Nenhum registro é promovido a `verificado` sem conferência humana em fonte
+   oficial. Ferramentas automáticas podem sugerir, apontar divergência ou
+   rebaixar, mas não promover.
+4. Campo desconhecido é `null` (ou `desconhecido` em `nivel_autoridade`), nunca
+   preenchido por suposição. `data_consulta` é a data real da consulta à fonte
+   oficial; a data de uma migração ou edição não a substitui.
+5. `lib/validacao.py::validar_jurisprudencia` impõe as regras: registro
+   `verificado` exige fonte oficial, órgão julgador, relator, data de
+   julgamento e autoridade conhecida. Divergência do dígito CNJ é erro em
+   registro `verificado` e advertência em registro `pendente`/`contestado`.
+   Assimetrias com `normas.json` são advertências.
+
+## Consequências
+
+- Dados existentes são preservados; resumos e números não são corrigidos até
+  que haja conferência em fonte oficial.
+- O grafo exibe o estado e um marcador para nós não verificados.
+- Os cinco registros iniciais são `pendente` ou `contestado`; nenhum
+  `verificado`.
+- Pendência conhecida: a métrica "Jurisprudência vinculada" da página inicial
+  ainda conta todos os registros sem distinguir estados.

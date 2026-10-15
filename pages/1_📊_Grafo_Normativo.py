@@ -298,6 +298,10 @@ if _grafo_ok:
                 art_txt = "\nArtigos: " + " | ".join(art[:4])
                 if len(art) > 4:
                     art_txt += " ..."
+            estado = d.get("estado_verificacao")
+            nao_verificado = bool(estado) and estado != "verificado"
+            verif_txt = ("\nVerificação: " + estado.upper()
+                         + " (não verificado em fonte oficial)") if nao_verificado else ""
             tip = (
                 d.get("nome", "") + "\n"
                 + "-" * 36 + "\n"
@@ -307,11 +311,12 @@ if _grafo_ok:
                 + "Status: " + d.get("status", "") + "\n"
                 + "Orgao:  " + d.get("orgao", "") + "\n"
                 + "Ano:    " + str(d.get("ano", ""))
+                + verif_txt
                 + art_txt
             )
             net.add_node(
                 node_id,
-                label=d.get("label", node_id),
+                label=d.get("label", node_id) + (" ⚠" if nao_verificado else ""),
                 title=tip,
                 color={"background": d.get("color", "#888888"), "border": d.get("color", "#888888")},
                 size=node_size,
@@ -390,6 +395,14 @@ if _grafo_ok:
                 st.markdown("**Status:** " + nd.get("status", ""))
                 st.markdown("**Órgão:** " + nd.get("orgao", ""))
                 st.markdown("**Ano:** " + str(nd.get("ano", "")))
+                estado_sel = nd.get("estado_verificacao")
+                if estado_sel and estado_sel != "verificado":
+                    st.warning(
+                        f"⚠ Estado de verificação: **{estado_sel}**. "
+                        + (nd.get("verificacao_obs") or "")
+                    )
+                elif estado_sel:
+                    st.markdown("**Verificação:** verificado")
                 st.markdown("**Ementa:** " + nd.get("ementa", ""))
             with col_art:
                 art = nd.get("artigos_chave", [])
