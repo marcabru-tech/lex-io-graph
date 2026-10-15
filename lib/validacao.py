@@ -7,8 +7,12 @@ apontar para um nó existente ou para uma referência externa declarada em
 data/referencias_externas.json.
 
 Uso:
-    python -m lib.validacao            # valida tudo
-    python -m lib.validacao --radar    # só o snapshot do radar (usado pelo workflow)
+    python -m lib.validacao            # valida tudo: corpus, radar e jurisprudência
+    python -m lib.validacao --radar    # só o snapshot do radar (usado pelo workflow);
+                                       # não toca em jurisprudência
+
+Advertências (ex.: assimetrias entre jurisprudencia.json e normas.json) são
+impressas, mas não alteram o código de saída.
 
 Retorna código 1 se houver erro, para que o CI e o workflow do radar parem.
 Sem dependências além da biblioteca padrão: roda no runner do radar, que só
@@ -237,7 +241,16 @@ def validar_jurisprudencia(juris: dict | None = None, normas: dict | None = None
 
 def main(argv: list[str]) -> int:
     sys.path.insert(0, str(RAIZ))
-    erros = validar_radar() if "--radar" in argv else validar_corpus() + validar_radar()
+    avisos: list[str] = []
+    if "--radar" in argv:
+        erros = validar_radar()
+    else:
+        erros_jur, avisos = validar_jurisprudencia()
+        erros = validar_corpus() + validar_radar() + erros_jur
+    if avisos:
+        print(f"⚠ {len(avisos)} advertência(s), não bloqueiam:")
+        for a in avisos:
+            print(f"  ~ {a}")
     if erros:
         print(f"✗ {len(erros)} erro(s) de integridade:")
         for e in erros:

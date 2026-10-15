@@ -1,12 +1,16 @@
 """Testes de validar_jurisprudencia. Uso: python -m unittest discover tests"""
 
+import contextlib
 import copy
+import io
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from lib import validacao  # noqa: E402
 from lib.validacao import digito_cnj, validar_jurisprudencia  # noqa: E402
 
 NUMERO_VALIDO = "5012345-32.2022.4.04.7100"
@@ -86,6 +90,47 @@ class TestDadosReais(unittest.TestCase):
         self.assertEqual(erros, [])
         self.assertEqual(sum("sem nó em normas.json" in a for a in avisos), 2)
         self.assertEqual(sum("sem registro em jurisprudencia.json" in a for a in avisos), 1)
+
+
+def rodar_main(argv, erros_jur=(), avisos_jur=()):
+    """Executa validacao.main com todas as validações substituídas; devolve (código, saída, chamadas)."""
+    chamadas = []
+
+    def falso(nome, retorno):
+        def f(*a, **k):
+            chamadas.append(nome)
+            return retorno
+        return f
+
+    with mock.patch.object(validacao, "validar_corpus", falso("corpus", [])),          mock.patch.object(validacao, "validar_radar", falso("radar", [])),          mock.patch.object(validacao, "validar_jurisprudencia",
+                           falso("jurisprudencia", (list(erros_jur), list(avisos_jur)))):
+        saida = io.StringIO()
+        with contextlib.redirect_stdout(saida):
+            codigo = validacao.main(argv)
+    return codigo, saida.getvalue(), chamadas
+
+
+class TestMain(unittest.TestCase):
+    def test_modo_normal_executa_jurisprudencia(self):
+        codigo, _, chamadas = rodar_main([])
+        self.assertEqual(codigo, 0)
+        self.assertEqual(sorted(chamadas), ["corpus", "jurisprudencia", "radar"])
+
+    def test_modo_radar_nao_executa_jurisprudencia(self):
+        codigo, _, chamadas = rodar_main(["--radar"])
+        self.assertEqual(codigo, 0)
+        self.assertEqual(chamadas, ["radar"])
+
+    def test_erro_de_jurisprudencia_bloqueia(self):
+        codigo, saida, _ = rodar_main([], erros_jur=["boom"])
+        self.assertEqual(codigo, 1)
+        self.assertIn("boom", saida)
+
+    def test_advertencia_nao_bloqueia_e_e_impressa(self):
+        codigo, saida, _ = rodar_main([], avisos_jur=["aviso x"])
+        self.assertEqual(codigo, 0)
+        self.assertIn("aviso x", saida)
+        self.assertIn("não bloqueiam", saida)
 
 
 if __name__ == "__main__":
