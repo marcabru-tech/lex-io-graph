@@ -93,7 +93,9 @@ juris_relativa = [
 
 if juris_relativa:
     for j in juris_relativa:
-        with st.expander(f"**{j['tribunal']} — {j['numero']}** ({j['ano']})"):
+        with st.expander(
+            f"**{j['tribunal']} — {j['numero']}** ({ano_exibicao(j.get('ano'))})"
+        ):
             st.markdown(f"**Tema:** {j['tema']}")
             st.markdown(f"**Resumo:** {j['resumo']}")
             st.markdown(f"**Impacto para equipes técnicas sem revisão de compliance:** {j['impacto_dev_junior']}")
