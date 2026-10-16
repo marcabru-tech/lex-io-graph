@@ -217,7 +217,7 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "estratégico",
         "status": "ativo — maio/2026",
         "sintese": (
-            "A encíclica Magnifica Humanitas (Leão XIV, 25/05/2026) posiciona a Igreja "
+            "A encíclica Magnifica Humanitas (Leão XIV, 15/05/2026) posiciona a Igreja "
             "Católica como ator normativo global no debate sobre IA — não apenas ético, "
             "mas com capacidade de influenciar legisladores em 1,3 bilhão de católicos "
             "globalmente, incluindo o Brasil (cerca de 57% da população, Censo 2022 do IBGE)."

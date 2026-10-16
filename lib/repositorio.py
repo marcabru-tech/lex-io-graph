@@ -296,7 +296,7 @@ TRADICOES_JURIDICAS = {
         "nome": "Direito Canônico Católico",
         "paises": ["Vaticano (Estado independente)", "aplicável a 1,3 bilhão de católicos globalmente"],
         "caracteristicas": "Corpus Iuris Canonici (séc. XII — Graciano). Código de Direito Canônico atual (1983). Distinção foro interno (consciência) / foro externo (atos jurídicos da Igreja). Influência histórica decisiva no direito civil europeu e brasileiro",
-        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, 25/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
+        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, 15/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
         "codigos_referencia": "Decreto de Graciano (1140); Corpus Iuris Canonici (1582); Código de Direito Canônico (1983)"
     }
 }
