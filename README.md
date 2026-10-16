@@ -10,7 +10,7 @@
 
 Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de compliance, mas um sistema vivo que conecta normas, jurisprudência, doutrina, inteligência estratégica e radar legislativo automático.
 
-**9 páginas · 18 normas mapeadas · 30 conexões normativas · IPII Engine proprietário**
+**10 páginas · 29 normas mapeadas · 49 conexões normativas · IPII Engine proprietário**
 
 ### Páginas
 
@@ -25,6 +25,7 @@ Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de 
 | 7 | Hermenêutica | Correntes hermenêuticas, fontes do direito, 7 constituições brasileiras |
 | 8 | Radar Legislativo | APIs do Senado, Câmara e LexML — atualização automática via GitHub Actions |
 | 9 | IPII Engine | Interação Paramétrica Iterativa por Interoperabilidade — descoberta assistida de arestas |
+| 10 | Teoria dos Conjuntos Jurídicos | Conjuntos do corpus calculados a partir de `normas.json` e arquitetura teórica |
 
 ---
 
@@ -50,7 +51,8 @@ lex-io-graph/
 │   ├── 6_🎯_Inteligencia.py       # Inteligência estratégica
 │   ├── 7_⚖️_Hermeneutica.py       # Hermenêutica e fontes
 │   ├── 8_📡_Radar_Legislativo.py  # Radar de PLs e normas
-│   └── 9_🔬_IPII_Engine.py        # Engine proprietário
+│   ├── 9_🔬_IPII_Engine.py        # Engine proprietário
+│   └── 10_Teoria_Conjuntos.py     # Conjuntos do corpus e arquitetura teórica
 ├── lib/
 │   ├── constants.py               # Identidade, paleta semiótica, constantes
 │   ├── footer.py                  # Rodapé Lexiograph | Hubstry
@@ -65,16 +67,19 @@ lex-io-graph/
 │       ├── matcher.py             # Matching contextual par-a-par
 │       └── validator.py           # Validação e curadoria assistida
 ├── data/
-│   ├── normas.json                # Corpus normativo curado (18 nós)
-│   ├── arestas.json               # Conexões tipadas (30 arestas)
+│   ├── normas.json                # Corpus normativo curado (29 nós)
+│   ├── arestas.json               # Conexões tipadas (49 arestas)
 │   ├── jurisprudencia.json        # Jurisprudência vinculada
-│   └── radar_legislativo.json     # Resultado do radar automático
+│   ├── radar_legislativo.json     # Resultado do radar automático
+│   ├── teoria.json                # Arquitetura teórica vinculada ao corpus
+│   └── referencias_externas.json  # Referências citadas fora do corpus normativo
 ├── docs/
 │   └── adr/                       # Architecture Decision Records
 ├── ipii_engine.py                 # Runner IPII Engine
 ├── updater.py                     # Runner Radar Legislativo
 ├── .github/workflows/
-│   └── update-radar.yml           # GitHub Action — atualização semanal
+│   ├── ci.yml                     # CI — testes unitários + smoke test
+│   └── update-radar.yml           # GitHub Action — atualização semanal do radar
 ├── CHANGELOG.md
 └── ARCHITECTURE.md
 ```
