@@ -29,13 +29,16 @@ não seu significado.
 
 ## Princípios gerais (propostos)
 
-1. **Cada campo tem um único significado por tipo**, declarado neste ADR.
-   O significado pode variar entre tipos, mas nunca dentro de um tipo.
-2. **Identidade, não trajetória.** `orgao`, `ano` e `sigla` descrevem a
-   identidade do instrumento representado pelo nó. Trajetória, tramitação,
-   vigência de partes, alterações posteriores e marcos institucionais vão para
-   `historia`. `status` continua sendo o rótulo de alto nível já existente
-   (fora do escopo deste ADR).
+1. **Significado consistente por tipo.** Cada campo tem um único significado
+   dentro de cada tipo, declarado neste ADR. O significado pode variar entre
+   tipos, mas nunca dentro de um tipo. O **valor** pode mudar ao longo do tempo
+   quando o significado declarado o exigir (caso de `orgao` em `pl`); nesse
+   caso, `historia` registra a mudança e a data da última conferência.
+2. **Campos estruturados, não narrativa.** `orgao`, `ano` e `sigla` guardam
+   valores curtos e definidos por este ADR. Trajetória, tramitação, vigência de
+   partes, alterações posteriores e marcos institucionais vão para `historia`.
+   `status` continua sendo o rótulo de alto nível já existente (fora do escopo
+   deste ADR).
 3. **O nó representa o instrumento nomeado em `nome`.** Quando nome e campos
    apontarem para instrumentos diferentes (por exemplo, o tratado e o decreto
    que o promulga), prevalece o instrumento do `nome`.
@@ -76,20 +79,21 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **`ano`:** ano de instituição da norma representada pelo nó. Substituições
   integrais de texto, inclusões de capítulos e vigências de partes ficam em
   `historia`.
-- **Ponto a ratificar:** se o nó representa a norma como série contínua (NR-1,
-  instituída em 1978) ou o ato que aprovou o texto hoje vigente. A proposta é a
-  série contínua, por coerência com o `nome`.
+- **Ponto a ratificar:** se o nó representa a norma como série contínua ou o
+  ato que aprovou o texto hoje vigente. A proposta é a série contínua, por
+  coerência com o `nome`. Para a NR-1, a série começa com a Portaria MTb
+  nº 3.214, de 8 de junho de 1978, que aprovou as NRs (texto no portal do MTE).
 - **Fonte:** portaria de instituição e portarias de alteração, no DOU ou no
   portal oficial do órgão.
 
 ### `pl`
 - **`orgao`:** Casa legislativa que analisa o projeto **atualmente** (decisão A
-  do briefing). Não a Casa de origem. Sem anotações de estado no valor
-  (`(pendente)` sai).
-- **Custo dessa escolha:** `orgao` passa a ser o único campo de identidade que
-  muda com o tempo. Alternativa a ratificar: `orgao` = Casa de origem (estável)
-  e Casa atual apenas em `historia`. A proposta mantém a decisão A, desde que
-  `historia` registre a data da última conferência da tramitação.
+  do briefing), não a Casa de origem. Sem anotações de estado no valor
+  (`(pendente)` sai). O significado é fixo; o valor muda quando o projeto muda
+  de Casa (princípio 1). Cada mudança exige que `historia` registre a passagem
+  entre as Casas e a data da última conferência no portal oficial.
+- **Abrangência:** a regra vale para os três projetos do corpus: `pl_ia`,
+  `pl_cc_digital` e `pl_misoginia`.
 - **`ano`:** ano da apresentação da proposição, que coincide com o ano do
   número de identificação. Não o ano da votação mais recente.
 - **`sigla`:** número de identificação, sem estado de tramitação.
@@ -102,11 +106,17 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **`orgao`:** tribunal (`STF`, `STJ`). O órgão julgador interno (Plenário,
   Turma, Seção) já tem campo próprio, `orgao_julgador`, em
   `data/jurisprudencia.json`, e não é duplicado aqui.
-- **`ano`:** ano de `data_julgamento` da decisão representada (o acórdão de
-  mérito ou o julgamento que fixou a tese). A publicação fica em
-  `data_publicacao`. Enquanto `data_julgamento` for `null`, `ano` é tratado como
-  não verificado e não pode servir de base para promoção a `verificado`
-  (ADR 007).
+- **`ano`:** ano da data de julgamento da **decisão efetivamente representada
+  pelo registro** — uma única decisão por registro. Decisões anteriores ou
+  posteriores do mesmo processo (embargos, fixação de tese em outro momento,
+  modulação) ficam em `historia`, ou em registros separados quando o modelo
+  justificar. A publicação fica em `data_publicacao` e nunca substitui o
+  julgamento.
+- **Sem inferência:** se a data de julgamento da decisão representada não
+  estiver identificada em fonte oficial, `ano` não é preenchido a partir de
+  outra data (publicação, autuação, outra decisão do processo). Valores atuais
+  nessa situação são tratados como não verificados e não servem de base para
+  promoção a `verificado` (ADR 007).
 - **Coerência:** `ano` em `normas.json` e em `jurisprudencia.json` deve ser o
   mesmo para o mesmo `id`.
 - **Fonte:** portal do tribunal (acompanhamento processual e inteiro teor).
@@ -123,8 +133,18 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **`orgao`:** organização internacional que adotou o instrumento ou, se não
   houver, as partes que o celebraram. Para documento unilateral (encíclica), o
   emissor.
-- **`ano`:** ano de adoção ou assinatura do instrumento internacional, e não o
-  da incorporação brasileira. Motivos: o `nome` identifica o instrumento; o tipo
+- **`ano`:** um único evento por categoria de instrumento, nunca o da
+  incorporação brasileira:
+  - **tratados e acordos:** ano da **assinatura** do texto (para tratado
+    multilateral aberto a assinatura, a data de abertura registrada pelo
+    depositário);
+  - **documentos unilaterais** (encíclica, declaração de um único emissor): ano
+    da **data do documento** (emissão), não o da apresentação ou divulgação;
+  - **instrumentos adotados sem assinatura** (resolução ou declaração aprovada
+    por organização internacional): ano da **adoção** pelo órgão competente.
+    É o único caso em que a assinatura não se aplica.
+
+  Motivos para não usar a incorporação: o `nome` identifica o instrumento; o tipo
   inclui documentos que nunca são incorporados (encíclica, acordo ainda não
   promulgado); e a incorporação já tem identificador próprio (o decreto de
   promulgação).
@@ -134,8 +154,8 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **Ponto a ratificar:** se a prioridade do produto é o direito brasileiro
   vigente, a alternativa é `ano` = ano da incorporação. Este ADR recomenda o
   instrumento.
-- **Fonte:** depositário do tratado ou organização emissora, e decreto de
-  promulgação no Planalto.
+- **Fonte:** depositário do tratado (assinatura), organização ou emissor
+  oficial (adoção ou data do documento) e decreto de promulgação no Planalto.
 
 ## `sigla`, `historia` e `status`
 
@@ -164,21 +184,21 @@ Separado em dois grupos. Nenhuma linha autoriza alteração antes da ratificaç�
 | `pl_misoginia` | `sigla` | `PL 896/2023 (aprovado Senado — aguarda Câmara)` | identificador sem tramitação | Estado de tramitação na sigla | Confirmar número na Casa atual |
 | `anpd` | `ano` | 2020 | ano do ato que criou a entidade do `nome` | Lei 15.352/2026, art. 1º (novo art. 55-A da LGPD: "Fica criada a Agência Nacional de Proteção de Dados") e art. 15 (sucessora da Autoridade) | Ratificar se o nó representa a Agência (2026) ou a instituição contínua desde a Autoridade (MP 869/2018) |
 | `anpd` | `orgao` | `Governo Federal` | vinculação administrativa | Lei 15.352/2026, art. 1º (art. 55-A: autarquia vinculada ao Ministério da Justiça e Segurança Pública) | Ratificar regra do tipo `orgao` |
+| `cf88` | `orgao` | `Congresso Nacional` | órgão que promulgou o texto originário | Preâmbulo da CF/88 no Planalto: promulgada pela Assembleia Nacional Constituinte | Ratificar regra de `constituicao` |
 
 ### B. Candidatos — exigem fonte primária antes de qualquer juízo
 
 | ID | Campo | Valor atual | Convenção aplicada | Fonte primária necessária | Decisão pendente |
 |---|---|---|---|---|---|
-| `cf88` | `orgao` | `Congresso Nacional` | órgão que promulgou | Preâmbulo da CF/88 (Assembleia Nacional Constituinte) | Ratificar regra de `constituicao` |
 | `lgpd` | `orgao` | `Congresso Nacional / ANPD` | só o emissor | Lei 13.709/2018 | A ANPD não emitiu a lei |
 | `eca`, `eca_digital` | `orgao` | `Congresso Nacional / ECA-TISEA` | só o emissor | Identificar o que é "ECA-TISEA" | Termo sem fonte identificada no corpus |
 | `decreto_12975_2026` | `orgao` | `Presidência da República / ANPD` | só o emissor | Decreto 12.975/2026 | Verificar se há coautoria formal |
-| `nr1` | `ano` | 2026 | ano de instituição | Portaria de 1978 que aprovou as NRs; portaria que aprovou a redação atual da NR-1 (a confirmar) | Ratificar série contínua × ato vigente |
+| `nr1` | `ano` | 2026 | ano de instituição (série contínua) | Portaria MTb nº 3.214/1978 (portal do MTE) sustenta 1978 | Ratificar série contínua × ato que aprovou o texto vigente |
 | `nr1` | `orgao` | `Ministério do Trabalho e Emprego` | emissor, denominação atual | — | Provavelmente compatível |
 | `pl_ia` | `orgao` | `Senado Federal` | Casa atual | Portais do Senado e da Câmara | Confirmar tramitação atual |
 | `pl_cc_digital` | `orgao` | `Senado Federal` | Casa atual | Portal do Senado | Confirmar tramitação atual |
 | `pl_ia`, `pl_cc_digital` | `ano` | 2023, 2025 | ano da apresentação | Portais legislativos | Provavelmente compatíveis |
-| `convencao_viena_1969` | `ano` | 2009 | ano de adoção | Texto da Convenção; Decreto 7.030/2009 | 1969 se ratificada a regra do instrumento |
+| `convencao_viena_1969` | `ano` | 2009 | ano da assinatura | Registro do depositário (ONU); Decreto 7.030/2009 | 1969 se ratificada a regra do instrumento |
 | `convencao_viena_1969` | `sigla` | `CVDT — Decreto 7.030/2009` | identificador do instrumento | — | Decreto iria para `historia` |
 | `tratado_assuncao_1991` | `orgao` | `Mercosul` | partes celebrantes | Texto do Tratado | O Mercosul foi constituído pelo próprio tratado |
 | `acordo_mercosul_singapura`, `acordo_mercosul_efta`, `acordo_mercosul_ue_ita` | `ano`, `orgao`, `sigla` | 2026; `Mercosul`; decreto | ano de assinatura; partes; identificador do instrumento | Data de assinatura de cada acordo; decretos de promulgação | `orgao` hoje omite a contraparte |
