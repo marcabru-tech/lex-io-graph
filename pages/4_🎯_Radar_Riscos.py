@@ -20,36 +20,36 @@ riscos = [
         "entrega": "Coleta de dados sem base legal",
         "risco": 9,
         "normas": ["LGPD art. 7º", "CF art. 5º"],
-        "descricao": "Formulários que coletam CPF, e-mail, telefone sem consentimento explícito ou outra base legal.",
-        "acao": "Mapear cada campo de dado coletado e documentar a base legal. Implementar checkbox de consentimento granular.",
+        "descricao": "Formulários que coletam CPF, e-mail, telefone sem base legal identificada (o consentimento é uma das hipóteses do art. 7º).",
+        "acao": "Mapear cada campo de dado coletado e documentar a base legal. Se a base for o consentimento, coletá-lo por finalidade.",
     },
     {
-        "entrega": "Dados de menores sem consentimento parental",
+        "entrega": "Dados de crianças e adolescentes sem base legal adequada",
         "risco": 10,
-        "normas": ["ECA Digital art. 10, 12", "LGPD art. 14"],
-        "descricao": "Cadastro de menores de 14 anos sem verificação de idade e consentimento do responsável legal.",
-        "acao": "Implementar fluxo de verificação de idade e consentimento parental qualificado conforme ECA Digital.",
+        "normas": ["LGPD art. 14, caput e § 1º", "ECA Digital arts. 10 e 24"],
+        "descricao": "Tratamento de dados de crianças e adolescentes sem base legal definida no seu melhor interesse, ou sem os mecanismos de idade e supervisão exigidos para o tipo de serviço.",
+        "acao": "Definir a base legal no melhor interesse (para crianças, consentimento específico de um dos pais ou responsável quando essa for a base) e aplicar os mecanismos do ECA Digital cabíveis ao serviço.",
     },
     {
         "entrega": "Logs sem retenção adequada",
         "risco": 7,
-        "normas": ["Marco Civil art. 13, 15", "STF ADI 5527"],
-        "descricao": "Aplicação não mantém registros de conexão e acesso por 6 meses a 1 ano conforme exigido.",
+        "normas": ["Marco Civil art. 13 (conexão)", "Marco Civil art. 15 (aplicações)"],
+        "descricao": "Provedor de aplicações não mantém registros de acesso a aplicações por 6 meses (art. 15); provedor de conexão não mantém registros de conexão por 1 ano (art. 13).",
         "acao": "Configurar retenção de logs com período mínimo legal. Documentar política de retenção.",
     },
     {
         "entrega": "Banner de cookies genérico",
         "risco": 6,
-        "normas": ["LGPD art. 7º", "TRF-4 (cookies)"],
+        "normas": ["LGPD art. 7º", "LGPD art. 8º"],
         "descricao": "Botão 'aceitar todos' sem categorização (analytics, marketing, funcional) ou possibilidade de recusa.",
-        "acao": "Implementar consentimento granular por categoria de cookie. Permitir recusa sem prejudicar funcionalidade.",
+        "acao": "Para cookies não essenciais baseados em consentimento, coletá-lo por categoria e permitir a recusa sem prejudicar a funcionalidade.",
     },
     {
         "entrega": "IA sem governança ou transparência",
         "risco": 8,
-        "normas": ["PL 2.338 art. 16, 19", "LGPD art. 20"],
+        "normas": ["LGPD art. 20", "PL 2.338/2023 (referência, em tramitação)"],
         "descricao": "Sistema de IA que toma decisões automatizadas (aprovação, recomendação, scoring) sem direito à explicação.",
-        "acao": "Documentar lógica do modelo. Implementar mecanismo de revisão humana conforme LGPD art. 20 e PL 2.338.",
+        "acao": "Permitir que o titular solicite a revisão de decisões automatizadas e informar os critérios utilizados (LGPD art. 20). Como boa prática, documentar a lógica do modelo.",
     },
     {
         "entrega": "Monitoramento de produtividade sem base legal",
@@ -61,22 +61,22 @@ riscos = [
     {
         "entrega": "Sem HTTPS ou criptografia de dados em repouso",
         "risco": 9,
-        "normas": ["LGPD art. 46", "STJ REsp 1.777.780"],
-        "descricao": "Dados pessoais transmitidos em texto claro ou armazenados sem criptografia. Vazamento gera dano moral in re ipsa.",
+        "normas": ["LGPD art. 46", "LGPD arts. 42 e 52"],
+        "descricao": "Dados pessoais transmitidos em texto claro ou armazenados sem criptografia. O vazamento expõe a responsabilização civil (LGPD art. 42) e a sanções administrativas (art. 52); para dados pessoais comuns, o STJ decidiu que o vazamento, por si só, não gera dano moral presumido (AREsp 2.130.619/SP, 2ª Turma, 07/03/2023).",
         "acao": "Implementar TLS em todas as rotas. Criptografar dados sensíveis em repouso. Usar hash bcrypt para senhas.",
     },
     {
-        "entrega": "Dark patterns em interface para menores",
+        "entrega": "Interface manipulativa ou coleta excessiva de dados de crianças",
         "risco": 10,
-        "normas": ["ECA Digital art. 16", "LGPD art. 6º"],
-        "descricao": "Interface que manipula crianças/adolescentes a consentir ou a fornecer dados além do necessário.",
+        "normas": ["ECA Digital art. 18, § 2º", "LGPD art. 14, § 4º", "LGPD art. 6º, III"],
+        "descricao": "(a) Interface projetada ou manipulada para comprometer a autonomia ou a escolha do usuário, sobretudo se enfraquece a supervisão parental ou salvaguardas (ECA Digital art. 18, § 2º); (b) condicionar a participação de crianças em jogos ou aplicações ao fornecimento de dados além dos estritamente necessários (LGPD art. 14, § 4º). Outros padrões de design manipulativo entram como avaliação de risco, sem atribuição legal específica.",
         "acao": "Revisar UX com foco em design protegido. Eliminar elementos manipulativos. Princípio da necessidade.",
     },
     {
         "entrega": "Sem mecanismo de exclusão de dados",
         "risco": 7,
-        "normas": ["LGPD art. 18", "Marco Civil art. 7º"],
-        "descricao": "Sistema não permite ao usuário solicitar exclusão dos seus dados pessoais (direito ao esquecimento).",
+        "normas": ["LGPD art. 18, IV e VI", "Marco Civil art. 7º, X"],
+        "descricao": "Sistema não permite ao usuário solicitar a eliminação dos seus dados pessoais (direito de eliminação, LGPD art. 18).",
         "acao": "Implementar endpoint de exclusão/anonimização. Documentar processo de atendimento ao titular.",
     },
     {
@@ -163,10 +163,10 @@ st.markdown("---")
 st.markdown("""
 ### Insight: o gap entre entrega técnica e conformidade regulatória
 
-Os três riscos mais críticos (nota 9-10) compartilham um padrão:
+Os quatro riscos mais críticos (nota 9–10) compartilham um padrão:
 
-1. **Envolvem dados de populações vulneráveis** (menores) ou **dados sensíveis** (CPF, saúde)
-2. **A norma é recente ou em tramitação** (ECA Digital 2025, PL 2.338)
+1. **Envolvem dados de populações vulneráveis** (menores) ou **dados pessoais** de identificação (ex.: CPF) e **sensíveis** (ex.: saúde)
+2. **A norma é recente ou em tramitação** (ECA Digital 2025; PL 2.338/2023 em tramitação, sem efeito obrigatório)
 3. **A equipe técnica não tem referência regulatória** — não é negligência, é lacuna de processo
 
 O Compliance Map existe para **preencher essa lacuna visualmente** — antes que a entrega

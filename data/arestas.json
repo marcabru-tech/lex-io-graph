@@ -33,14 +33,14 @@
       "target": "eca_digital",
       "tipo": "intersecao",
       "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital.",
-      "artigos": "LGPD art. 14 ↔ ECA Digital art. 12"
+      "artigos": "LGPD art. 14 ↔ ECA Digital arts. 7º, 16 e 26"
     },
     {
       "source": "eca_digital",
       "target": "marco_civil",
       "tipo": "intersecao",
       "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil.",
-      "artigos": "ECA Digital art. 18 ↔ MC art. 7º"
+      "artigos": "ECA Digital ↔ MC art. 7º (dispositivo do ECA Digital em conferência)"
     },
     {
       "source": "eca_digital",
@@ -60,7 +60,7 @@
       "source": "marco_civil",
       "target": "stj_resp_plat",
       "tipo": "interpreta",
-      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucionalidade parcial declarada pelo STF (Tema 987, jun./2025).",
+      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada como interpretação do art. 19.",
       "artigos": "REsp 1.907.924 ↔ RE 1.037.396"
     },
     {
@@ -117,7 +117,7 @@
       "target": "eca_digital",
       "tipo": "complementaridade",
       "descricao": "A inconstitucionalidade parcial do art. 19 do MCI dialoga com o ECA Digital: plataformas que atingem menores têm deveres reforçados de remoção independentemente de ordem judicial.",
-      "artigos": "RE 1.037.396 ↔ ECA Digital art. 18"
+      "artigos": "RE 1.037.396 ↔ ECA Digital art. 29"
     },
     {
       "source": "stf_tema987",
@@ -145,7 +145,7 @@
       "target": "eca_digital",
       "tipo": "complementaridade",
       "descricao": "Decreto 12.976/2026 e ECA Digital convergem na proteção de vulneráveis no ambiente digital — o decreto amplia para mulheres adultas o regime de remoção rápida de conteúdo que o ECA Digital exige para menores.",
-      "artigos": "Decreto 12.976/2026 ↔ ECA Digital art. 18"
+      "artigos": "Decreto 12.976/2026 ↔ ECA Digital art. 29"
     },
     {
       "source": "decreto_12976_2026",

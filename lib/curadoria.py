@@ -12,7 +12,7 @@ CALENDLY = "https://calendly.com/guilhermegmachado22/30min"
 
 TEXTO_ABERTURA = """
 O IPII Engine calcula scoring de relevância normativa com base no seu perfil — \
-matemática determinística sobre corpus curado, sem alucinação, com base legal real \
+matemática determinística sobre corpus curado, com a fonte indicada \
 em cada ação recomendada. Isso é o que você vê abaixo.
 
 Mas há uma distinção que consideramos inegociável, e que precisa ser dita \

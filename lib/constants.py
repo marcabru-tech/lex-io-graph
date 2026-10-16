@@ -157,7 +157,7 @@ EMPRESAS_MODELO = [
         "nome": "Fintech (pagamentos digitais)",
         "setor": "Financeiro",
         "risco_base": "muito_alto",
-        "descricao": "Dados sensíveis financeiros, open banking, regulação BACEN (Banco Central do Brasil) + LGPD + Marco Civil",
+        "descricao": "Dados financeiros e cadastrais, open banking, regulação BACEN (Banco Central do Brasil) + LGPD + Marco Civil",
     },
     {
         "nome": "Agência Digital (marketing + dados)",

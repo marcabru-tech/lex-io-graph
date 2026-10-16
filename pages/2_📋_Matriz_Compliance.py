@@ -76,13 +76,13 @@ O risco não está no nível técnico do desenvolvedor — está na **ausência 
 antes da entrega. Quando uma equipe técnica implementa uma feature sem mapear:
 
 1. **Quais dados estão sendo coletados** → LGPD art. 7º (base legal)
-2. **Se há menores envolvidos** → ECA Digital (consentimento parental, design protegido)
-3. **Se decisões são automatizadas** → PL 2.338 (classificação de risco)
+2. **Se há menores envolvidos** → LGPD art. 14 e ECA Digital (base legal no melhor interesse; mecanismos de idade e supervisão conforme o serviço)
+3. **Se decisões são automatizadas** → LGPD art. 20 (revisão de decisões automatizadas); PL 2.338/2023 como referência, em tramitação
 4. **Se funcionários estão sendo monitorados** → NR-1 (riscos psicossociais)
-5. **Se logs estão sendo retidos corretamente** → Marco Civil (6 meses a 1 ano)
+5. **Se logs estão sendo retidos corretamente** → Marco Civil (6 meses para aplicações, art. 15; 1 ano para conexão, art. 13)
 
 ...a empresa fica exposta a sanções administrativas (ANPD), responsabilização civil
-(STJ — dano moral in re ipsa) e, nos casos mais graves, ação penal.
+(LGPD art. 42; para dados pessoais comuns, o STJ não presume o dano moral pelo vazamento em si — AREsp 2.130.619/SP) e, nos casos mais graves, ação penal.
 
 **O Lexiograph existe para tornar essas interseções visíveis
 antes que se tornem problemas.**
