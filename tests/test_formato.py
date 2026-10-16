@@ -8,6 +8,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from lib.formato import (  # noqa: E402
+    ANO_NAO_CONFIRMADO,
+    ano_exibicao,
+    cartao_norma_html,
     link_fonte_oficial,
     quantidade,
     resumo_verificacao,
@@ -103,6 +106,67 @@ class TestLinkFonteOficial(unittest.TestCase):
         sem_link = [n for n in nos if not link_fonte_oficial(n.get("fonte_oficial_url"))]
         self.assertEqual(len(com_link), 27)
         self.assertEqual({n["id"] for n in sem_link}, {"stj_resp", "stj_resp_plat"})
+
+
+class TestAnoExibicao(unittest.TestCase):
+    def test_ano_presente(self):
+        self.assertEqual(ano_exibicao(2014), "2014")
+        self.assertEqual(ano_exibicao("1988"), "1988")
+
+    def test_ano_nulo_ou_vazio(self):
+        self.assertEqual(ano_exibicao(None), ANO_NAO_CONFIRMADO)
+        self.assertEqual(ano_exibicao(""), ANO_NAO_CONFIRMADO)
+
+    def test_nunca_exibe_none(self):
+        self.assertNotIn("None", ano_exibicao(None))
+
+    def test_corpus_real_so_o_adi_5527_esta_sem_ano(self):
+        caminho = Path(__file__).resolve().parent.parent / "data" / "normas.json"
+        with open(caminho, encoding="utf-8") as f:
+            nos = json.load(f)["nodes"]
+        sem_ano = {n["id"] for n in nos if n.get("ano") in (None, "")}
+        self.assertEqual(sem_ano, {"stf_adimc"})
+
+
+class TestCartaoNormaHtml(unittest.TestCase):
+    MALICIOSO = {
+        "id": "x",
+        "tipo": "lei",
+        "sigla": '<script>alert("sigla")</script>',
+        "nome": "<img src=x onerror=alert(1)>",
+        "ementa": "texto com <b>tag</b> & e-comercial",
+        "artigos_chave": ["<i>Art. 1º</i>"],
+        "fonte_oficial_url": None,
+    }
+
+    def test_campos_do_corpus_sao_escapados(self):
+        h = cartao_norma_html(self.MALICIOSO)
+        self.assertNotIn("<script>", h)
+        self.assertNotIn("<img", h)
+        self.assertNotIn("<b>", h)
+        self.assertNotIn("<i>", h)
+        self.assertIn("&lt;script&gt;", h)
+        self.assertIn("&amp;", h)
+
+    def test_html_estrutural_permanece(self):
+        h = cartao_norma_html(self.MALICIOSO)
+        for marca in ('<div class="norma-item">', '<span class="pill ',
+                      "<strong>", '<div class="norma-ementa">', "</div>"):
+            self.assertIn(marca, h)
+
+    def test_pilula_por_tipo(self):
+        self.assertIn("pill--lex", cartao_norma_html({"tipo": "constituicao"}))
+        self.assertIn("pill--graph", cartao_norma_html({"tipo": "jurisprudencia"}))
+        self.assertIn("pill--io", cartao_norma_html({"tipo": "lei"}))
+
+    def test_campos_ausentes_nao_quebram_nem_exibem_none(self):
+        h = cartao_norma_html({"tipo": "lei"})
+        self.assertNotIn("None", h)
+
+    def test_link_entra_quando_ha_fonte(self):
+        no = dict(self.MALICIOSO, fonte_oficial_url="https://www.planalto.gov.br/x.htm")
+        self.assertIn("Fonte oficial", cartao_norma_html(no))
+        self.assertNotIn("Fonte oficial", cartao_norma_html(self.MALICIOSO))
 
 
 class TestResumoComCorpusReal(unittest.TestCase):

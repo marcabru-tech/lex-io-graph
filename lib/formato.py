@@ -40,6 +40,57 @@ def resumo_verificacao(registros: list[dict]) -> str:
     return " · ".join(partes)
 
 
+ANO_NAO_CONFIRMADO = "não confirmado"
+
+
+def ano_exibicao(valor) -> str:
+    """Ano para exibição; 'não confirmado' quando o corpus não afirma um ano.
+
+    Um nó cujo ano não foi confirmado em fonte oficial carrega null, e não um
+    ano provável. Exibir 'None' ou vazio no lugar devolveria ao leitor a
+    impressão de defeito, quando o que há é lacuna declarada.
+    """
+    if valor is None or valor == "":
+        return ANO_NAO_CONFIRMADO
+    return str(valor)
+
+
+def cartao_norma_html(node: dict) -> str:
+    """HTML do cartão de norma da home.
+
+    Todo texto vindo do corpus é escapado: o cartão é inserido com
+    unsafe_allow_html, então conteúdo de dados não pode carregar marcação.
+    Só o HTML estrutural deste módulo é literal.
+    """
+    tipo = node.get("tipo")
+    if tipo == "constituicao":
+        pilula = "pill--lex"
+    elif tipo == "jurisprudencia":
+        pilula = "pill--graph"
+    else:
+        pilula = "pill--io"
+
+    def esc(valor) -> str:
+        return html.escape(str(valor if valor is not None else ""))
+
+    artigos = node.get("artigos_chave") or []
+    partes = [
+        '<div class="norma-item">',
+        f'<span class="pill {pilula}">{esc(node.get("sigla"))}</span> ',
+        f'<strong>{esc(node.get("nome"))}</strong>',
+        f'<div class="norma-ementa">{esc(node.get("ementa"))}</div>',
+    ]
+    if artigos:
+        partes.append(
+            '<div class="norma-artigos">'
+            + " | ".join(esc(a) for a in artigos)
+            + "</div>"
+        )
+    partes.append(link_fonte_oficial(node.get("fonte_oficial_url")))
+    partes.append("</div>")
+    return "".join(partes)
+
+
 def link_fonte_oficial(url) -> str:
     """Trecho HTML do link 'Fonte oficial' do cartão de norma.
 

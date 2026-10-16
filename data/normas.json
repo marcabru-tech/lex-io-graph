@@ -404,7 +404,7 @@
         "dados_pessoais"
       ],
       "orgao": "STF",
-      "ano": 2019,
+      "ano": null,
       "historia": "STF — ADI 5527, de relatoria da Min. Rosa Weber, conforme a identificação oficial do processo. A ação questiona dispositivos do Marco Civil da Internet (Lei 12.965/2014), entre eles o art. 12, que prevê sanções por descumprimento da obrigação de guarda de registros de conexão e de acesso a aplicações. O resultado do julgamento não está confirmado em fonte oficial, e a afirmação anterior de julgamento em 2019 foi retirada por não se sustentar na consulta processual. Enquanto a conferência não se completar, o registro não serve de precedente para a validade do regime de guarda de logs nem para sua extensão à LGPD.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A comparação entre o regime brasileiro de guarda e o europeu depende do resultado da ADI 5527, que está em conferência: a hipótese de tensão com o princípio de minimização de dados da LGPD permanece em aberto, não é conclusão deste registro.",
       "autores": [

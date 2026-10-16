@@ -9,6 +9,7 @@ import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.constants import EDGE_TYPE_LABELS, THEMES
 from lib.footer import render_footer
+from lib.formato import ano_exibicao
 
 st.set_page_config(page_title="Comparação Normativa — Lexiograph", layout="wide", page_icon="⚖️")
 
@@ -55,7 +56,7 @@ with col_a:
     st.markdown(f"**Tipo:** {data_a['tipo']}")
     st.markdown(f"**Status:** {data_a['status']}")
     st.markdown(f"**Órgão:** {data_a['orgao']}")
-    st.markdown(f"**Ano:** {data_a['ano']}")
+    st.markdown(f"**Ano:** {ano_exibicao(data_a['ano'])}")
     st.markdown(f"**Ementa:** {data_a['ementa']}")
     if data_a.get("artigos_chave"):
         st.markdown("**Artigos-chave:** " + " · ".join(data_a["artigos_chave"]))
@@ -66,7 +67,7 @@ with col_b:
     st.markdown(f"**Tipo:** {data_b['tipo']}")
     st.markdown(f"**Status:** {data_b['status']}")
     st.markdown(f"**Órgão:** {data_b['orgao']}")
-    st.markdown(f"**Ano:** {data_b['ano']}")
+    st.markdown(f"**Ano:** {ano_exibicao(data_b['ano'])}")
     st.markdown(f"**Ementa:** {data_b['ementa']}")
     if data_b.get("artigos_chave"):
         st.markdown("**Artigos-chave:** " + " · ".join(data_b["artigos_chave"]))
