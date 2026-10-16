@@ -38,11 +38,18 @@ class TestResumoVerificacao(unittest.TestCase):
             "0 verificados · 0 pendentes · 0 contestados",
         )
 
-    def test_distribuicao_atual_do_corpus_em_plural(self):
+    def test_distribuicao_em_plural(self):
         registros = [reg("pendente")] * 3 + [reg("contestado")] * 2
         self.assertEqual(
             resumo_verificacao(registros),
             "0 verificados · 3 pendentes · 2 contestados",
+        )
+
+    def test_distribuicao_hipotetica_com_dois_contestados(self):
+        registros = [reg("pendente")] * 3 + [reg("contestado")]
+        self.assertEqual(
+            resumo_verificacao(registros),
+            "0 verificados · 3 pendentes · 1 contestado",
         )
 
     def test_um_de_cada_fica_no_singular(self):
@@ -105,7 +112,7 @@ class TestResumoComCorpusReal(unittest.TestCase):
             registros = json.load(f)["jurisprudencia"]
         self.assertEqual(
             resumo_verificacao(registros),
-            "0 verificados · 3 pendentes · 2 contestados",
+            "0 verificados · 3 pendentes · 1 contestado",
         )
 
 
