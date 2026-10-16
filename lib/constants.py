@@ -151,7 +151,7 @@ EMPRESAS_MODELO = [
         "nome": "Edtech (plataforma educacional para menores)",
         "setor": "Educação",
         "risco_base": "muito_alto",
-        "descricao": "Trata dados de crianças e adolescentes, precisa de consentimento parental, ECA Digital (Estatuto da Criança e do Adolescente Digital — Lei 15.211/2025) se aplica integralmente",
+        "descricao": "Trata dados de crianças e adolescentes, precisa de consentimento parental, ECA Digital (Estatuto Digital da Criança e do Adolescente — Lei 15.211/2025) se aplica integralmente",
     },
     {
         "nome": "Fintech (pagamentos digitais)",

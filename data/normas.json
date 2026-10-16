@@ -187,7 +187,7 @@
     },
     {
       "id": "eca_digital",
-      "nome": "Estatuto da Criança e do Adolescente Digital",
+      "nome": "Estatuto Digital da Criança e do Adolescente",
       "sigla": "ECA Digital — Lei 15.211/2025",
       "tipo": "lei",
       "artigos_chave": [
@@ -305,7 +305,7 @@
     {
       "id": "nr1",
       "nome": "Norma Regulamentadora de Segurança e Saúde no Trabalho",
-      "sigla": "NR-1 (Portaria MTE 1.419/2024, vigente desde 26/05/2026)",
+      "sigla": "NR-1 (cap. 1.5 incluído pela Portaria MTE 1.419/2024, vigência punitiva desde 26/05/2026)",
       "tipo": "norma_regulamentar",
       "artigos_chave": [
         "1.5.3",
@@ -632,7 +632,7 @@
     },
     {
       "id": "lei_15409_2026",
-      "nome": "Lei nº 15.409/2026 — Cadastro Nacional de Agressores (CNVM)",
+      "nome": "Lei nº 15.409/2026 — Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM)",
       "sigla": "Lei 15.409/2026",
       "tipo": "lei",
       "artigos_chave": [
@@ -711,7 +711,7 @@
     {
       "id": "magnifica_humanitas",
       "nome": "Encíclica Magnifica Humanitas — Papa Leão XIV",
-      "sigla": "Magnifica Humanitas (Leão XIV, 25/05/2026)",
+      "sigla": "Magnifica Humanitas (Leão XIV, 15/05/2026; apresentada em 25/05/2026)",
       "tipo": "documento_internacional",
       "artigos_chave": [
         "Cap. I — Doutrina Social da Igreja e IA",

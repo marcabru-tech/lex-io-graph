@@ -121,7 +121,7 @@ with col_al3:
 Livro VI: Direito Civil Digital. ANPD e CGI.br alertam sobreposição com LGPD e Marco Civil.
 
 **Lei 15.409/2026 — CNVM**
-Cadastro Nacional de Agressores. Vigor: jul./2026.
+Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Vigor: jul./2026.
 """)
 
 st.divider()
