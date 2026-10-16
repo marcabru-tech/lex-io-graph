@@ -9,6 +9,8 @@ inteira ao ser importado, o que impede teste unitário do que mora nele.
 Sem dependência de Streamlit: só texto.
 """
 
+import html
+
 from lib.validacao import SEM_ESTADO, contar_estados
 
 
@@ -36,3 +38,24 @@ def resumo_verificacao(registros: list[dict]) -> str:
     if c[SEM_ESTADO]:
         partes.append(f"{c[SEM_ESTADO]} sem estado")
     return " · ".join(partes)
+
+
+def link_fonte_oficial(url) -> str:
+    """Trecho HTML do link 'Fonte oficial' do cartão de norma.
+
+    Devolve string vazia quando o nó não tem URL confirmada — campo nulo,
+    ausente ou vazio —, para que o cartão simplesmente não exiba link, sem
+    marcador de ausência.
+
+    Só aceita http(s). URL de outro esquema não é renderizada: um dado
+    malformado no corpus não deve virar link ativo na página. O valor é
+    escapado porque o cartão é montado como HTML.
+    """
+    if not isinstance(url, str) or not url.startswith(("https://", "http://")):
+        return ""
+    seguro = html.escape(url, quote=True)
+    return (
+        '<div class="norma-fonte">'
+        f'<a href="{seguro}" target="_blank" rel="noopener noreferrer">Fonte oficial ↗</a>'
+        "</div>"
+    )

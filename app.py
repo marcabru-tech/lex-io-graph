@@ -2,7 +2,7 @@ import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
 from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
-from lib.formato import resumo_verificacao
+from lib.formato import link_fonte_oficial, resumo_verificacao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — {APP_TAGLINE}",
@@ -40,6 +40,15 @@ st.markdown("""
         font-size: 11px;
         color: #706a60;
         margin-top: 6px;
+    }
+    .norma-fonte {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+    .norma-fonte a {
+        color: #3dc8e6;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(61,200,230,0.3);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -167,6 +176,7 @@ for node in normas_data:
     item_html += '<div class="norma-ementa">' + ementa_completa + '</div>'
     if artigos_str:
         item_html += '<div class="norma-artigos">' + artigos_str + '</div>'
+    item_html += link_fonte_oficial(node.get("fonte_oficial_url"))
     item_html += '</div>'
 
     st.markdown(item_html, unsafe_allow_html=True)
