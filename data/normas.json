@@ -431,34 +431,34 @@
       "sigla": "STJ — REsp 1.777.780",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Vazamento de dados pessoais gera dano moral in re ipsa. Precedente relevante para responsabilização civil pós-LGPD.",
+      "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
       "status": "vigente",
       "temas": [
         "dados_pessoais"
       ],
       "orgao": "STJ",
-      "ano": 2020,
-      "historia": "STJ — REsp 1.777.780, julgado em 2020. Estabeleceu que vazamento de dados pessoais gera dano moral in re ipsa — dispensando comprovação de efetivo prejuízo. Precedente que antecedeu a vigência plena das sanções da LGPD (ago./2021) e demonstrou que o Judiciário já aplicava proteção de dados antes da ANPD existir. Relator: Min. Paulo de Tarso Sanseverino. É a prova histórica de que a proteção de dados no Brasil tem raiz jurisprudencial anterior à lei — dialogismo pancrônico entre common law e civil law.",
-      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 82 — responsabilidade civil por violação de dados pessoais; CCPA — California Consumer Privacy Act (2018) — dano estatutário sem prova de prejuízo; common law americano — tort de invasion of privacy. O STJ antecipou o modelo europeu de dano in re ipsa por vazamento de dados — convergência espontânea glocal antes da vigência da LGPD.",
+      "ano": null,
+      "historia": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 82 — responsabilidade civil por violação de dados pessoais; CCPA — California Consumer Privacy Act (2018) — dano estatutário sem prova de prejuízo; common law americano — tort de invasion of privacy.",
       "autores": [
         {
           "nome": "Danilo Doneda",
           "datas": "1974–2022",
           "obra": "Da Privacidade à Proteção de Dados Pessoais, 2006",
-          "contribuicao": "Obra fundadora do direito de proteção de dados no Brasil — base doutrinária do REsp 1.777.780 e da LGPD"
+          "contribuicao": "Obra fundadora do direito de proteção de dados no Brasil — base doutrinária da LGPD"
         },
         {
           "nome": "Laura Schertel Mendes",
           "datas": "1983–",
           "obra": "Privacidade, Proteção de Dados e Defesa do Consumidor, 2014",
-          "contribuicao": "Doutrinadora que fundamentou o dano in re ipsa por vazamento — argumento acolhido pelo STJ no REsp 1.777.780"
+          "contribuicao": "Doutrinadora de referência em proteção de dados e defesa do consumidor"
         }
       ],
       "latim": [
         {
           "original": "In re ipsa",
           "traducao_literal": "Na coisa em si",
-          "traducao_juridica": "O dano existe na própria violação — não precisa ser demonstrado separadamente. O STJ aplicou ao vazamento de dados pessoais: a exposição é o dano",
+          "traducao_juridica": "O dano existe na própria violação — não precisa ser demonstrado separadamente",
           "contexto_romano": "Doutrina da presunção de dano — aplicada originalmente em casos de diffamatio (difamação) no direito romano clássico"
         }
       ],
@@ -470,29 +470,29 @@
       "sigla": "STJ — REsp 1.907.924",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Plataformas digitais têm dever de remoção de conteúdo ilícito após notificação. Interpretação do art. 19 do Marco Civil — precedente agora modulado pela inconstitucionalidade parcial declarada pelo STF (Tema 987/2025).",
+      "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
       "status": "vigente",
       "temas": [
         "internet",
         "menores"
       ],
       "orgao": "STJ",
-      "ano": 2021,
-      "historia": "STJ — REsp 1.907.924, julgado em 2021. Estabeleceu que plataformas digitais têm dever de remoção de conteúdo ilícito após notificação — interpretação dinâmica do art. 19 do Marco Civil da Internet. Precedente que deve ser relido à luz da inconstitucionalidade parcial declarada pelo STF no Tema 987 (jun./2025): o regime de responsabilidade de plataformas está em transição — o STJ antecipou o que o STF formalizou.",
-      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU DSA — Digital Services Act (2022) — notice-and-takedown como obrigação geral; Section 230 do CDA (EUA, 1996) — imunidade ampla, sem dever de remoção por notificação; NetzDG — Netzwerkdurchsetzungsgesetz (Alemanha, 2017) — remoção em 24h para conteúdo ilegal. O REsp 1.907.924 posicionou o Brasil entre o modelo europeu (dever de remoção) e o americano (imunidade ampla) — posição agora consolidada pelo Tema 987 + Decreto 12.975/2026.",
+      "ano": null,
+      "historia": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU DSA — Digital Services Act (2022) — notice-and-takedown como obrigação geral; Section 230 do CDA (EUA, 1996) — imunidade ampla, sem dever de remoção por notificação; NetzDG — Netzwerkdurchsetzungsgesetz (Alemanha, 2017) — remoção em 24h para conteúdo ilegal.",
       "autores": [
         {
           "nome": "Carlos Affonso Pereira de Souza",
           "datas": "1978–",
           "obra": "Responsabilidade Civil dos Provedores de Internet, 2007",
-          "contribuicao": "Principal doutrinador do Marco Civil — suas análises sobre responsabilidade de plataformas fundamentaram o REsp 1.907.924"
+          "contribuicao": "Doutrinador de referência sobre o Marco Civil e a responsabilidade de plataformas"
         }
       ],
       "latim": [
         {
           "original": "Qui tacet consentire videtur",
           "traducao_literal": "Quem cala parece consentir",
-          "traducao_juridica": "A plataforma que não remove conteúdo ilícito após notificação parece consentir com o ilícito — fundamento do dever de remoção estabelecido no REsp 1.907.924",
+          "traducao_juridica": "Brocardo invocado no debate sobre a omissão de plataformas após notificação; não é fundamento normativo de dever de remoção",
           "contexto_romano": "Brocardo medieval do direito canônico — incorporado à teoria da responsabilidade civil por omissão"
         }
       ],

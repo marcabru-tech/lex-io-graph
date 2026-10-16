@@ -224,7 +224,7 @@ FONTES_DIREITO = {
                 "precedentes do STJ orientam sem vincular formalmente. "
                 "Aproximação crescente com o common law via CPC/2015."
             ),
-            "exemplo_digital": "STF Tema 987 (art. 19 Marco Civil), STJ REsp 1.777.780 (dano moral por vazamento de dados)",
+            "exemplo_digital": "STF Tema 987 (art. 19 Marco Civil)",
             "latim": "Stare decisis — respeitar o que foi decidido (common law); no Brasil: força vinculante restrita às súmulas"
         },
         {

@@ -290,8 +290,8 @@ ACOES_POR_TAG = {
     },
     "consentimento": {
         "prioridade": "critica",
-        "acao": "Implementar mecanismo de consentimento granular",
-        "base": "LGPD art. 7º, I",
+        "acao": "Quando a base legal escolhida for o consentimento, coletá-lo de forma livre, informada e inequívoca, para finalidades determinadas",
+        "base": "LGPD art. 7º, I (uma das hipóteses do art. 7º); art. 8º",
     },
     "bases_legais": {
         "prioridade": "critica",
@@ -300,8 +300,8 @@ ACOES_POR_TAG = {
     },
     "dpo": {
         "prioridade": "critica",
-        "acao": "Nomear DPO (Encarregado de Proteção de Dados)",
-        "base": "LGPD art. 41",
+        "acao": "Indicar encarregado (DPO), observada a dispensa regulamentar para agentes de tratamento de pequeno porte, que devem manter canal de comunicação com o titular",
+        "base": "LGPD art. 41, caput e § 3º; Resolução CD/ANPD nº 2/2022",
     },
     "seguranca_dados": {
         "prioridade": "critica",
@@ -315,27 +315,27 @@ ACOES_POR_TAG = {
     },
     "inteligencia_artificial": {
         "prioridade": "alta",
-        "acao": "Documentar AI BOM (Bill of Materials) do modelo",
-        "base": "PL 2.338 + NIST AI RMF 1.0",
+        "acao": "Boa prática (não é obrigação vigente): documentar componentes, dados e versões do modelo",
+        "base": "Referência, não obrigação vigente: PL 2.338/2023 (em tramitação na Câmara); NIST AI RMF 1.0 (norma técnica)",
     },
     "alto_risco": {
         "prioridade": "alta",
-        "acao": "Realizar Relatório de Impacto (RIPA) para sistema de alto risco",
-        "base": "PL 2.338 art. 12",
+        "acao": "Boa prática (não é obrigação vigente): avaliar o impacto de sistemas de IA de maior risco",
+        "base": "Referência, não obrigação vigente: PL 2.338/2023 (em tramitação; numeração de artigos sujeita à versão do texto)",
     },
     "transparencia_algoritmos": {
         "prioridade": "alta",
-        "acao": "Implementar transparência algorítmica e direito de revisão humana",
-        "base": "LGPD art. 20 + PL 2.338",
+        "acao": "Informar, quando solicitado, os critérios e procedimentos de decisões automatizadas e assegurar o direito do titular de solicitar sua revisão",
+        "base": "LGPD art. 20, caput e § 1º",
     },
     "discriminacao_algoritmica": {
         "prioridade": "alta",
-        "acao": "Auditar modelo para viés discriminatório",
-        "base": "PL 2.338 + CF art. 5º",
+        "acao": "Avaliar o modelo quanto a efeitos discriminatórios",
+        "base": "LGPD art. 6º, IX (princípio da não discriminação); referência, não obrigação vigente: PL 2.338/2023 (em tramitação)",
     },
     "decisao_automatizada": {
         "prioridade": "alta",
-        "acao": "Garantir revisão humana para decisões automatizadas com impacto",
+        "acao": "Garantir canal para o titular solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses (a LGPD não exige que a revisão seja feita por pessoa natural)",
         "base": "LGPD art. 20",
     },
     "responsabilidade_plataformas": {
@@ -345,23 +345,23 @@ ACOES_POR_TAG = {
     },
     "dever_proativo": {
         "prioridade": "alta",
-        "acao": "Implementar deveres proativos de remoção de conteúdo ilícito",
+        "acao": "Verificar se o serviço está no âmbito do Decreto 12.975/2026, que trata de forma diferente cada tipo de serviço, e, se estiver, adotar os deveres de prevenção e resposta nele previstos",
         "base": "Decreto 12.975/2026",
     },
     "crianca_adolescente": {
         "prioridade": "critica",
-        "acao": "Implementar verificação de idade e consentimento parental",
-        "base": "LGPD art. 14 + ECA Digital",
+        "acao": "Avaliar se o produto ou serviço é direcionado a crianças e adolescentes ou de acesso provável por eles (ECA Digital art. 1º) e, se for, aplicar os mecanismos de idade e supervisão cabíveis ao tipo de serviço",
+        "base": "ECA Digital arts. 1º, 10 a 18 e 24; LGPD art. 14",
     },
     "consentimento_pais": {
         "prioridade": "critica",
-        "acao": "Obter consentimento específico de ao menos 1 responsável",
-        "base": "LGPD art. 14, I + ECA Digital art. 12",
+        "acao": "Definir a base legal de cada tratamento de dados de crianças e adolescentes, sempre no seu melhor interesse (as hipóteses dos arts. 7º e 11 são admitidas). Quando a base for o consentimento, para crianças ele deve ser específico e em destaque, dado por ao menos um dos pais ou responsável. Verificar à parte as obrigações do ECA Digital que dependem do serviço: consentimento dos responsáveis para download em lojas de aplicativos (art. 12, § 2º) e vinculação de contas de usuários de até 16 anos à de um responsável em redes sociais (art. 24)",
+        "base": "LGPD art. 14, caput e § 1º; Enunciado CD/ANPD nº 1/2023; ECA Digital arts. 12, § 2º, e 24",
     },
     "verificacao_idade": {
         "prioridade": "critica",
-        "acao": "Implementar mecanismo verificável de idade",
-        "base": "ECA Digital + LGPD art. 14",
+        "acao": "Para conteúdo, produto ou serviço impróprio, inadequado ou proibido a menores de 18 anos: adotar mecanismo confiável de verificação de idade a cada acesso, vedada a autodeclaração",
+        "base": "ECA Digital art. 9º, § 1º",
     },
     "riscos_psicossociais": {
         "prioridade": "alta",
@@ -376,7 +376,7 @@ ACOES_POR_TAG = {
     "vigilancia_trabalhador": {
         "prioridade": "alta",
         "acao": "Limitar vigilância contínua — direito à desconexão",
-        "base": "CLT art. 227-A + NR-1",
+        "base": "Boa prática (a CLT não prevê expressamente o direito à desconexão); NR-1, gerenciamento de riscos ocupacionais",
     },
     "remocao_conteudo": {
         "prioridade": "alta",
@@ -391,12 +391,12 @@ ACOES_POR_TAG = {
     "violencia_genero": {
         "prioridade": "critica",
         "acao": "Implementar protocolo de remoção rápida para deepfakes e conteúdo íntimo",
-        "base": "Decreto 12.976/2026 + PL 896/2023",
+        "base": "Decreto 12.976/2026, arts. 4º a 8º e 12 (o PL 896/2023 é proposta em tramitação, não obrigação)",
     },
     "deepfake": {
         "prioridade": "critica",
-        "acao": "Detector de deepfake + remoção em até 24h",
-        "base": "Decreto 12.976/2026",
+        "acao": "Conteúdo íntimo de terceiro divulgado sem autorização, inclusive o produzido ou manipulado por IA: indisponibilizar em até 2h após a notificação (art. 7º, § 1º; art. 3º, I). Até regulamentação pela autoridade competente, demais hipóteses de violência contra a mulher no ambiente digital: no prazo de 6h (art. 12, I) ou de 24h (art. 12, II), remover o conteúdo ou comunicar ao notificante o fundamento da manutenção e os meios de contestação. Aplicações que geram conteúdo por IA: vedada a geração ou modificação de conteúdo íntimo de terceiro (art. 9º) e exigidas salvaguardas para bloquear essas solicitações, conforme regulamento (art. 10)",
+        "base": "Decreto 12.976/2026, arts. 3º, I, 7º, 9º, 10 e 12",
     },
     "transferencia_internacional": {
         "prioridade": "media",
@@ -405,18 +405,18 @@ ACOES_POR_TAG = {
     },
     "dados_sensiveis": {
         "prioridade": "critica",
-        "acao": "Tratamento de dados sensíveis requer consentimento específico e destacado",
-        "base": "LGPD art. 11",
+        "acao": "Identificar a hipótese legal de cada tratamento de dado sensível: consentimento específico e destacado (art. 11, I) ou uma das hipóteses do art. 11, II",
+        "base": "LGPD art. 11, I e II",
     },
     "guarda_logs": {
         "prioridade": "alta",
-        "acao": "Implementar guarda de logs de conexão por 1 ano",
-        "base": "Marco Civil art. 13",
+        "acao": "Provedor de aplicações constituído como pessoa jurídica que exerça a atividade de forma organizada, profissional e com fins econômicos: guardar os registros de acesso a aplicações por 6 meses (art. 15). A guarda de registros de conexão por 1 ano (art. 13) cabe ao provedor de conexão",
+        "base": "Marco Civil arts. 13 e 15",
     },
     "etica_ia": {
         "prioridade": "media",
-        "acao": "Adotar princípios éticos de IA (dignidade, transparência, não-discriminação)",
-        "base": "PL 2.338 art. 5º + Magnifica Humanitas",
+        "acao": "Boa prática (não é obrigação vigente): adotar princípios éticos de IA (dignidade, transparência, não discriminação)",
+        "base": "Referência, não obrigação vigente: PL 2.338/2023 (em tramitação); encíclica Magnifica Humanitas (referência ética)",
     },
 }
 

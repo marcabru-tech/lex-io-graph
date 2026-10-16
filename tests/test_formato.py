@@ -120,12 +120,14 @@ class TestAnoExibicao(unittest.TestCase):
     def test_nunca_exibe_none(self):
         self.assertNotIn("None", ano_exibicao(None))
 
-    def test_corpus_real_so_o_adi_5527_esta_sem_ano(self):
+    def test_corpus_real_sem_ano_so_jurisprudencia_nao_conferida(self):
         caminho = Path(__file__).resolve().parent.parent / "data" / "normas.json"
         with open(caminho, encoding="utf-8") as f:
             nos = json.load(f)["nodes"]
         sem_ano = {n["id"] for n in nos if n.get("ano") in (None, "")}
-        self.assertEqual(sem_ano, {"stf_adimc"})
+        # ADR 008: ano de jurisprudência não é inferido sem data de julgamento
+        # conferida em fonte oficial (ADI 5527 contestada; dois REsp pendentes).
+        self.assertEqual(sem_ano, {"stf_adimc", "stj_resp", "stj_resp_plat"})
 
 
 class TestCartaoNormaHtml(unittest.TestCase):
