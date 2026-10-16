@@ -1,9 +1,15 @@
 name: CI — Smoke test
 
 # Roda em todo PR para main e em todo push para main.
-# É a verificação que o ADR 005 pressupunha e não existia: barra dados
-# inconsistentes, ImportError e página quebrada antes do deploy do
-# Streamlit Cloud (que publica automaticamente o que chega em main).
+#
+# Executa duas verificações: os testes unitários (tests/) e o smoke test, que
+# cobre integridade dos dados, ImportError e renderização das páginas.
+#
+# O que este workflow NÃO faz: bloquear merge ou deploy. Bloquear merge depende
+# de o check ser exigido nas regras de proteção da branch main, configuração
+# externa a este arquivo. A implantação é gerida separadamente pelo trigger do
+# Cloud Build, que publica no Cloud Run — fluxo independente deste workflow, sem
+# precedência garantida entre os dois.
 
 on:
   pull_request:
@@ -28,6 +34,9 @@ jobs:
 
       - name: Instalar dependências
         run: pip install -r requirements.txt
+
+      - name: Testes unitários
+        run: python -u -m unittest discover tests -v
 
       - name: Smoke test
         run: python -u smoke_test.py
