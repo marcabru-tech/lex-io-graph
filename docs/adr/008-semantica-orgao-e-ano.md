@@ -127,6 +127,14 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
   criação.
 - **`ano`:** ano do ato legal que criou a entidade identificada no `nome`.
   Entidades predecessoras e transformações ficam em `historia`.
+- **Ponto a ratificar — continuidade institucional:** quando uma lei cria uma
+  entidade nova e a declara sucessora de outra, é preciso decidir se o nó
+  representa a entidade nova ou a instituição contínua. Caso concreto: a Lei
+  15.352/2026 cria a Agência Nacional de Proteção de Dados (novo art. 55-A da
+  LGPD) e a declara sucessora da Autoridade Nacional de Proteção de Dados
+  (art. 15). Se o nó representa a Agência, a regra leva a 2026; se representa a
+  instituição contínua, leva ao primeiro ato de criação da Autoridade. Nenhum
+  valor de `anpd.ano` deve ser classificado como erro antes dessa decisão.
 - **Fonte:** lei de criação e lei vigente de regência (Planalto).
 
 ### `documento_internacional`
@@ -173,7 +181,7 @@ autorização explícita própria.
 
 ## Inventário de divergências
 
-Separado em dois grupos. Nenhuma linha autoriza alteração antes da ratificação.
+Separado em três grupos. Nenhuma linha autoriza alteração antes da ratificação.
 
 ### A. Divergências confirmadas pela própria identificação ou por fonte já lida
 
@@ -182,7 +190,6 @@ Separado em dois grupos. Nenhuma linha autoriza alteração antes da ratificaç�
 | `pl_misoginia` | `ano` | 2026 | ano da apresentação | O número `PL 896/2023` indica 2023 | Confirmar data de apresentação no portal; ratificar regra de `pl` |
 | `pl_misoginia` | `orgao` | `Câmara dos Deputados (pendente)` | Casa atual, sem estado | Anotação de estado no valor | Confirmar Casa atual; ratificar decisão A |
 | `pl_misoginia` | `sigla` | `PL 896/2023 (aprovado Senado — aguarda Câmara)` | identificador sem tramitação | Estado de tramitação na sigla | Confirmar número na Casa atual |
-| `anpd` | `ano` | 2020 | ano do ato que criou a entidade do `nome` | Lei 15.352/2026, art. 1º (novo art. 55-A da LGPD: "Fica criada a Agência Nacional de Proteção de Dados") e art. 15 (sucessora da Autoridade) | Ratificar se o nó representa a Agência (2026) ou a instituição contínua desde a Autoridade (MP 869/2018) |
 | `anpd` | `orgao` | `Governo Federal` | vinculação administrativa | Lei 15.352/2026, art. 1º (art. 55-A: autarquia vinculada ao Ministério da Justiça e Segurança Pública) | Ratificar regra do tipo `orgao` |
 | `cf88` | `orgao` | `Congresso Nacional` | órgão que promulgou o texto originário | Preâmbulo da CF/88 no Planalto: promulgada pela Assembleia Nacional Constituinte | Ratificar regra de `constituicao` |
 
@@ -207,6 +214,15 @@ Separado em dois grupos. Nenhuma linha autoriza alteração antes da ratificaç�
 | `stf_tema987` | `ano` | 2025 | ano do julgamento | Portal do STF | Conferir na Sprint 4 |
 | `stj_resp`, `stj_resp_plat` | `ano` | 2020, 2021 | ano do julgamento | Inteiro teor (Sprint 4) | Registros `pendente` sem `data_julgamento` |
 | `stf_adimc` | `ano` | `null` | ano do julgamento | Portal do STF | Permanece `null` até conferência |
+
+### C. Decisões semânticas pendentes
+
+O valor só pode ser avaliado depois de ratificada a semântica indicada. Não são
+divergências confirmadas.
+
+| ID | Campo | Valor atual | Questão semântica | Fonte já lida | Resultado conforme a decisão |
+|---|---|---|---|---|---|
+| `anpd` | `ano` | 2020 | O nó representa a Agência criada em 2026 ou a instituição contínua desde a Autoridade? (ver tipo `orgao`) | Lei 15.352/2026, art. 1º (novo art. 55-A da LGPD) e art. 15 | Agência: 2026. Instituição contínua: ano do primeiro ato de criação da Autoridade (MP 869/2018, a conferir). Pela regra proposta, nenhuma das duas leituras leva a 2020 |
 
 ## Consequências
 
