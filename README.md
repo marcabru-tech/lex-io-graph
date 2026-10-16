@@ -10,7 +10,7 @@
 
 Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de compliance, mas um sistema vivo que conecta normas, jurisprudência, doutrina, inteligência estratégica e radar legislativo automático.
 
-**9 páginas · 18 normas mapeadas · 30 conexões normativas · IPII Engine proprietário**
+**10 páginas · 29 nós no corpus · 49 conexões no grafo · IPII Engine proprietário**
 
 ### Páginas
 
@@ -25,6 +25,7 @@ Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de 
 | 7 | Hermenêutica | Correntes hermenêuticas, fontes do direito, 7 constituições brasileiras |
 | 8 | Radar Legislativo | APIs do Senado, Câmara e LexML — atualização automática via GitHub Actions |
 | 9 | IPII Engine | Interação Paramétrica Iterativa por Interoperabilidade — descoberta assistida de arestas |
+| 10 | Teoria dos Conjuntos Jurídicos | Conjuntos do corpus calculados a partir de `normas.json` e arquitetura teórica |
 
 ---
 
@@ -50,31 +51,45 @@ lex-io-graph/
 │   ├── 6_🎯_Inteligencia.py       # Inteligência estratégica
 │   ├── 7_⚖️_Hermeneutica.py       # Hermenêutica e fontes
 │   ├── 8_📡_Radar_Legislativo.py  # Radar de PLs e normas
-│   └── 9_🔬_IPII_Engine.py        # Engine proprietário
+│   ├── 9_🔬_IPII_Engine.py        # Engine proprietário
+│   └── 10_Teoria_Conjuntos.py     # Conjuntos do corpus e arquitetura teórica
 ├── lib/
+│   ├── __init__.py                # Pacote de módulos do Lexiograph
+│   ├── conformidade.py            # Questionário, radar e relatório de conformidade
+│   ├── conjuntos.py               # Operações sobre conjuntos calculados do corpus
 │   ├── constants.py               # Identidade, paleta semiótica, constantes
+│   ├── curadoria.py               # Princípio de curadoria humana
+│   ├── estado_regulador.py        # Linha do tempo das agências reguladoras
 │   ├── footer.py                  # Rodapé Lexiograph | Hubstry
+│   ├── formato.py                 # Formatação de textos derivados do corpus
 │   ├── graph_builder.py           # Construção do grafo NetworkX
+│   ├── hermeneutica.py            # Correntes hermenêuticas, fontes, constituições
+│   ├── inteligencia.py            # Casos estratégicos, epistemologia
+│   ├── ipii/
+│   │   ├── tokenizer.py           # GuruMatrix 5D aplicada ao corpus normativo
+│   │   ├── matcher.py             # Matching contextual par-a-par
+│   │   └── validator.py           # Validação e curadoria assistida
+│   ├── multisemiose.py            # Citações literárias, obras de arte, glossário
+│   ├── natureza.py                # Selos de natureza epistêmica das afirmações
 │   ├── radar.py                   # APIs Senado, Câmara, LexML
 │   ├── repositorio.py             # Inventário doutrinário
-│   ├── multisemiose.py            # Citações literárias, obras de arte, glossário
-│   ├── inteligencia.py            # Casos estratégicos, epistemologia
-│   ├── hermeneutica.py            # Correntes hermenêuticas, fontes, constituições
-│   └── ipii/
-│       ├── tokenizer.py           # GuruMatrix 5D aplicada ao corpus normativo
-│       ├── matcher.py             # Matching contextual par-a-par
-│       └── validator.py           # Validação e curadoria assistida
+│   ├── taxonomia.py               # Ligação entre temas do radar e vetores do grafo
+│   ├── telemetria.py              # Contagem de visitas sem dados pessoais
+│   └── validacao.py               # Validação de integridade do corpus e dados derivados
 ├── data/
-│   ├── normas.json                # Corpus normativo curado (18 nós)
-│   ├── arestas.json               # Conexões tipadas (30 arestas)
+│   ├── normas.json                # Corpus normativo curado (29 nós)
+│   ├── arestas.json               # Conexões tipadas (49 arestas)
 │   ├── jurisprudencia.json        # Jurisprudência vinculada
-│   └── radar_legislativo.json     # Resultado do radar automático
+│   ├── radar_legislativo.json     # Resultado do radar automático
+│   ├── teoria.json                # Arquitetura teórica vinculada ao corpus
+│   └── referencias_externas.json  # Referências citadas fora do corpus normativo
 ├── docs/
 │   └── adr/                       # Architecture Decision Records
 ├── ipii_engine.py                 # Runner IPII Engine
 ├── updater.py                     # Runner Radar Legislativo
 ├── .github/workflows/
-│   └── update-radar.yml           # GitHub Action — atualização semanal
+│   ├── ci.yml                     # CI — testes unitários + smoke test
+│   └── update-radar.yml           # GitHub Action — atualização semanal do radar
 ├── CHANGELOG.md
 └── ARCHITECTURE.md
 ```
