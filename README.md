@@ -54,18 +54,28 @@ lex-io-graph/
 │   ├── 9_🔬_IPII_Engine.py        # Engine proprietário
 │   └── 10_Teoria_Conjuntos.py     # Conjuntos do corpus e arquitetura teórica
 ├── lib/
+│   ├── __init__.py                # Pacote de módulos do Lexiograph
+│   ├── conformidade.py            # Questionário, radar e relatório de conformidade
+│   ├── conjuntos.py               # Operações sobre conjuntos calculados do corpus
 │   ├── constants.py               # Identidade, paleta semiótica, constantes
+│   ├── curadoria.py               # Princípio de curadoria humana
+│   ├── estado_regulador.py        # Linha do tempo das agências reguladoras
 │   ├── footer.py                  # Rodapé Lexiograph | Hubstry
+│   ├── formato.py                 # Formatação de textos derivados do corpus
 │   ├── graph_builder.py           # Construção do grafo NetworkX
+│   ├── hermeneutica.py            # Correntes hermenêuticas, fontes, constituições
+│   ├── inteligencia.py            # Casos estratégicos, epistemologia
+│   ├── ipii/
+│   │   ├── tokenizer.py           # GuruMatrix 5D aplicada ao corpus normativo
+│   │   ├── matcher.py             # Matching contextual par-a-par
+│   │   └── validator.py           # Validação e curadoria assistida
+│   ├── multisemiose.py            # Citações literárias, obras de arte, glossário
+│   ├── natureza.py                # Selos de natureza epistêmica das afirmações
 │   ├── radar.py                   # APIs Senado, Câmara, LexML
 │   ├── repositorio.py             # Inventário doutrinário
-│   ├── multisemiose.py            # Citações literárias, obras de arte, glossário
-│   ├── inteligencia.py            # Casos estratégicos, epistemologia
-│   ├── hermeneutica.py            # Correntes hermenêuticas, fontes, constituições
-│   └── ipii/
-│       ├── tokenizer.py           # GuruMatrix 5D aplicada ao corpus normativo
-│       ├── matcher.py             # Matching contextual par-a-par
-│       └── validator.py           # Validação e curadoria assistida
+│   ├── taxonomia.py               # Ligação entre temas do radar e vetores do grafo
+│   ├── telemetria.py              # Contagem de visitas sem dados pessoais
+│   └── validacao.py               # Validação de integridade do corpus e dados derivados
 ├── data/
 │   ├── normas.json                # Corpus normativo curado (29 nós)
 │   ├── arestas.json               # Conexões tipadas (49 arestas)
