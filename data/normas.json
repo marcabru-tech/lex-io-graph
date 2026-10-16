@@ -397,7 +397,7 @@
       "sigla": "STF — ADI 5527",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Declaração de constitucionalidade do art. 12 do Marco Civil. Validade das sanções civis por descumprimento de guarda de dados.",
+      "ementa": "Ação direta de inconstitucionalidade que questiona dispositivos do Marco Civil da Internet. O resultado do julgamento e a tese dele decorrente estão em conferência em fonte oficial; este registro não deve ser citado como entendimento assentado.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -405,21 +405,21 @@
       ],
       "orgao": "STF",
       "ano": 2019,
-      "historia": "STF — ADI 5527, julgada em 2019. Declarou a constitucionalidade do art. 12 do Marco Civil da Internet (Lei 12.965/2014), que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações. Relatora: Min. Rosa Weber. Precedente relevante para a validade do regime de guarda de logs imposto ao Marco Civil e, por extensão, à LGPD.",
-      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A ADI 5527 validou um regime de guarda mais amplo que o europeu — tensão com o princípio de minimização de dados da LGPD.",
+      "historia": "STF — ADI 5527, de relatoria da Min. Rosa Weber, conforme a identificação oficial do processo. A ação questiona dispositivos do Marco Civil da Internet (Lei 12.965/2014), entre eles o art. 12, que prevê sanções por descumprimento da obrigação de guarda de registros de conexão e de acesso a aplicações. O resultado do julgamento não está confirmado em fonte oficial, e a afirmação anterior de julgamento em 2019 foi retirada por não se sustentar na consulta processual. Enquanto a conferência não se completar, o registro não serve de precedente para a validade do regime de guarda de logs nem para sua extensão à LGPD.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A comparação entre o regime brasileiro de guarda e o europeu depende do resultado da ADI 5527, que está em conferência: a hipótese de tensão com o princípio de minimização de dados da LGPD permanece em aberto, não é conclusão deste registro.",
       "autores": [
         {
           "nome": "Ronald Dworkin",
           "datas": "1931–2013",
           "obra": "O Império do Direito (Law's Empire), 1986",
-          "contribuicao": "Integridade como romance em cadeia — a ADI 5527 como continuidade da proteção constitucional da privacidade, não ruptura; validade das sanções como consequência necessária do sistema"
+          "contribuicao": "Integridade como romance em cadeia — chave de leitura para examinar se o julgamento da ADI 5527 representa continuidade ou ruptura na proteção constitucional da privacidade. A leitura depende do resultado, que está em conferência"
         }
       ],
       "latim": [
         {
           "original": "Ubi ius ibi remedium",
           "traducao_literal": "Onde há direito, há remédio",
-          "traducao_juridica": "As sanções do art. 12 do Marco Civil são o remédio constitucional para o descumprimento do dever de guarda — validadas pelo STF na ADI 5527",
+          "traducao_juridica": "O art. 12 do Marco Civil institui sanções como remédio para o descumprimento do dever de guarda. Se o STF as validou na ADI 5527 é questão em conferência, não premissa deste registro",
           "contexto_romano": "Brocardo do common law incorporado à tradição romano-germânica — base do direito de ação e das sanções administrativas"
         }
       ],
