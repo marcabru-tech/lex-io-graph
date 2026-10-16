@@ -305,7 +305,7 @@
     {
       "id": "nr1",
       "nome": "Norma Regulamentadora de Segurança e Saúde no Trabalho",
-      "sigla": "NR-1 (Portaria MTE 1.419/2024, vigente desde 26/05/2026)",
+      "sigla": "NR-1 (cap. 1.5 incluído pela Portaria MTE 1.419/2024, vigência punitiva desde 26/05/2026)",
       "tipo": "norma_regulamentar",
       "artigos_chave": [
         "1.5.3",
