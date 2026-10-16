@@ -21,6 +21,7 @@ from lib.constants import (
     THEMES, NODE_TYPE_LABELS, NODE_SHAPES, HIERARCHY_LEVELS
 )
 from lib.footer import render_footer
+from lib.formato import ano_exibicao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Grafo Normativo",
@@ -310,7 +311,7 @@ if _grafo_ok:
                 + "Tipo:   " + d.get("tipo_label", "") + "\n"
                 + "Status: " + d.get("status", "") + "\n"
                 + "Orgao:  " + d.get("orgao", "") + "\n"
-                + "Ano:    " + str(d.get("ano", ""))
+                + "Ano:    " + ano_exibicao(d.get("ano"))
                 + verif_txt
                 + art_txt
             )
@@ -394,7 +395,7 @@ if _grafo_ok:
                 st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
                 st.markdown("**Status:** " + nd.get("status", ""))
                 st.markdown("**Órgão:** " + nd.get("orgao", ""))
-                st.markdown("**Ano:** " + str(nd.get("ano", "")))
+                st.markdown("**Ano:** " + ano_exibicao(nd.get("ano")))
                 estado_sel = nd.get("estado_verificacao")
                 if estado_sel and estado_sel != "verificado":
                     st.warning(

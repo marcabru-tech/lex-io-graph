@@ -50,7 +50,8 @@
           "traducao_juridica": "Critério de resolução de antinomia por hierarquia normativa",
           "contexto": "Brocardo da teoria geral do direito — aplicado pelo STF no controle de constitucionalidade"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
     },
     {
       "id": "lgpd",
@@ -106,7 +107,8 @@
           "traducao_juridica": "Em caso de dúvida interpretativa, prevalece a interpretação mais favorável aos direitos do titular dos dados",
           "contexto": "Princípio aplicado pela ANPD na interpretação da LGPD"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm"
     },
     {
       "id": "marco_civil",
@@ -160,7 +162,8 @@
           "traducao_juridica": "Interpretação favorável à liberdade de expressão em casos ambíguos de moderação de conteúdo",
           "contexto": "Princípio hermenêutico aplicado ao art. 19 do Marco Civil"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
     },
     {
       "id": "eca",
@@ -179,7 +182,8 @@
         "menores"
       ],
       "orgao": "Congresso Nacional / ECA-TISEA",
-      "ano": 1990
+      "ano": 1990,
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
     },
     {
       "id": "eca_digital",
@@ -230,7 +234,8 @@
           "traducao_juridica": "Doutrina pela qual o Estado assume a tutela protetiva de quem não pode se proteger — fundamenta a intervenção regulatória sobre plataformas que atingem menores",
           "contexto": "Common law inglês — incorporado à doutrina brasileira de proteção integral"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm"
     },
     {
       "id": "pl_ia",
@@ -270,7 +275,8 @@
           "traducao_juridica": "Princípio implícito no debate sobre personalidade jurídica da IA — a IA não é sujeito de direitos nem de deveres, apenas instrumento",
           "contexto": "Princípio derivado da doutrina jurídica romana — res (coisa) vs. persona (sujeito) — central na discussão sobre responsabilidade por danos causados por IA"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/157233"
     },
     {
       "id": "pl_cc_digital",
@@ -293,7 +299,8 @@
         "ia"
       ],
       "orgao": "Senado Federal",
-      "ano": 2025
+      "ano": 2025,
+      "fonte_oficial_url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/166998"
     },
     {
       "id": "nr1",
@@ -332,7 +339,8 @@
           "traducao_juridica": "Princípio geral do direito — fundamenta a responsabilidade do empregador pela saúde psicossocial do trabalhador",
           "contexto": "Um dos três preceitos do direito romano de Ulpiano (170–228 d.C.) — base da responsabilidade civil"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1"
     },
     {
       "id": "stf_tema987",
@@ -380,7 +388,8 @@
           "traducao_juridica": "Princípio constitucional (CF/88 art. 2º) tensionado pelo Tema 987 — o judiciário legislou ao declarar inconstitucionalidade progressiva sem alternativa normativa",
           "contexto": "Princípio sistematizado por Montesquieu (1748), constitucionalizado em 1788 (EUA) e 1824 (Brasil)"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5160549"
     },
     {
       "id": "stf_adimc",
@@ -388,32 +397,33 @@
       "sigla": "STF — ADI 5527",
       "tipo": "jurisprudencia",
       "artigos_chave": [],
-      "ementa": "Declaração de constitucionalidade do art. 12 do Marco Civil. Validade das sanções civis por descumprimento de guarda de dados.",
+      "ementa": "Ação direta de inconstitucionalidade que questiona dispositivos do Marco Civil da Internet. O resultado do julgamento e a tese dele decorrente estão em conferência em fonte oficial; este registro não deve ser citado como entendimento assentado.",
       "status": "vigente",
       "temas": [
         "internet",
         "dados_pessoais"
       ],
       "orgao": "STF",
-      "ano": 2019,
-      "historia": "STF — ADI 5527, julgada em 2019. Declarou a constitucionalidade do art. 12 do Marco Civil da Internet (Lei 12.965/2014), que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações. Relatora: Min. Rosa Weber. Precedente relevante para a validade do regime de guarda de logs imposto ao Marco Civil e, por extensão, à LGPD.",
-      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A ADI 5527 validou um regime de guarda mais amplo que o europeu — tensão com o princípio de minimização de dados da LGPD.",
+      "ano": null,
+      "historia": "STF — ADI 5527, de relatoria da Min. Rosa Weber, conforme a identificação oficial do processo. A ação questiona dispositivos do Marco Civil da Internet (Lei 12.965/2014), entre eles o art. 12, que prevê sanções por descumprimento da obrigação de guarda de registros de conexão e de acesso a aplicações. O resultado do julgamento não está confirmado em fonte oficial, e a afirmação anterior de julgamento em 2019 foi retirada por não se sustentar na consulta processual. Enquanto a conferência não se completar, o registro não serve de precedente para a validade do regime de guarda de logs nem para sua extensão à LGPD.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): GDPR art. 5º(1)(e) — limitação da conservação de dados pessoais; ePrivacy Directive (UE, 2002) — guarda de dados de comunicações eletrônicas. A comparação entre o regime brasileiro de guarda e o europeu depende do resultado da ADI 5527, que está em conferência: a hipótese de tensão com o princípio de minimização de dados da LGPD permanece em aberto, não é conclusão deste registro.",
       "autores": [
         {
           "nome": "Ronald Dworkin",
           "datas": "1931–2013",
           "obra": "O Império do Direito (Law's Empire), 1986",
-          "contribuicao": "Integridade como romance em cadeia — a ADI 5527 como continuidade da proteção constitucional da privacidade, não ruptura; validade das sanções como consequência necessária do sistema"
+          "contribuicao": "Integridade como romance em cadeia — chave de leitura para examinar se o julgamento da ADI 5527 representa continuidade ou ruptura na proteção constitucional da privacidade. A leitura depende do resultado, que está em conferência"
         }
       ],
       "latim": [
         {
           "original": "Ubi ius ibi remedium",
           "traducao_literal": "Onde há direito, há remédio",
-          "traducao_juridica": "As sanções do art. 12 do Marco Civil são o remédio constitucional para o descumprimento do dever de guarda — validadas pelo STF na ADI 5527",
+          "traducao_juridica": "O art. 12 do Marco Civil institui sanções como remédio para o descumprimento do dever de guarda. Se o STF as validou na ADI 5527 é questão em conferência, não premissa deste registro",
           "contexto_romano": "Brocardo do common law incorporado à tradição romano-germânica — base do direito de ação e das sanções administrativas"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4983282"
     },
     {
       "id": "stj_resp",
@@ -451,7 +461,8 @@
           "traducao_juridica": "O dano existe na própria violação — não precisa ser demonstrado separadamente. O STJ aplicou ao vazamento de dados pessoais: a exposição é o dano",
           "contexto_romano": "Doutrina da presunção de dano — aplicada originalmente em casos de diffamatio (difamação) no direito romano clássico"
         }
-      ]
+      ],
+      "fonte_oficial_url": null
     },
     {
       "id": "stj_resp_plat",
@@ -484,7 +495,8 @@
           "traducao_juridica": "A plataforma que não remove conteúdo ilícito após notificação parece consentir com o ilícito — fundamento do dever de remoção estabelecido no REsp 1.907.924",
           "contexto_romano": "Brocardo medieval do direito canônico — incorporado à teoria da responsabilidade civil por omissão"
         }
-      ]
+      ],
+      "fonte_oficial_url": null
     },
     {
       "id": "anpd",
@@ -523,7 +535,8 @@
           "traducao_juridica": "A ANPD vinculada ao Executivo — quem fiscaliza o fiscalizador quando o governo é parte interessada? Questão central da independência regulatória",
           "contexto_romano": "Juvenal, Sátiras VI (séc. II d.C.) — aplicado ao debate sobre independência de agências reguladoras"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.gov.br/anpd/pt-br"
     },
     {
       "id": "decreto_12975_2026",
@@ -574,7 +587,8 @@
           "traducao_juridica": "O silêncio legislativo sobre moderação de conteúdo não autoriza o executivo a legislar — argumento da oposição contra o decreto",
           "contexto_romano": "Brocardo de hermenêutica legislativa — interpretação restritiva do poder regulamentar"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12975.htm"
     },
     {
       "id": "decreto_12976_2026",
@@ -613,7 +627,8 @@
           "traducao_juridica": "Princípio que fundamenta a responsabilidade das plataformas por danos causados por conteúdo íntimo ilegal — o dano digital é tão real quanto o físico",
           "contexto_romano": "Ulpiano (170–228 d.C.) — Digesto de Justiniano (533 d.C.) — um dos três preceitos do direito romano"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12976.htm"
     },
     {
       "id": "lei_15409_2026",
@@ -651,7 +666,8 @@
           "traducao_juridica": "O CNVM como instrumento de transparência pública — impede que agressores reincidentes se apresentem como pessoas sem histórico de violência",
           "contexto_romano": "Princípio do juiz natural — aplicado aqui como princípio de transparência: a sociedade tem direito de conhecer o histórico de condenados"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15409.htm"
     },
     {
       "id": "pl_misoginia",
@@ -689,7 +705,8 @@
           "traducao_juridica": "O PL 896/2023 como lex specialis para misoginia dentro da Lei do Racismo (lex generalis para crimes de discriminação) — critério de Bobbio (1909–2004)",
           "contexto_romano": "Terceiro critério de resolução de antinomias de Bobbio — o mais complexo, exige identificação precisa do âmbito de aplicação"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2612930"
     },
     {
       "id": "magnifica_humanitas",
@@ -747,7 +764,8 @@
           "traducao_juridica": "São Tomás de Aquino (1225–1274) — a IA que viola a dignidade humana não pode ser considerada tecnologia legítima; argumento central da encíclica",
           "contexto_romano": "Agostinho de Hipona (354–430 d.C.) → São Tomás — fundamento do jusnaturalismo católico"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.vatican.va/content/leo-xiv/pt/encyclicals/documents/20260515-magnifica-humanitas.html"
     },
     {
       "id": "res_cnj_615",
@@ -797,7 +815,8 @@
           "traducao_juridica": "A jurisdição é indelegável e vinculada à lei — fundamento da vedação de decisão exclusivamente automatizada.",
           "contexto": "Tradição romano-germânica"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://atos.cnj.jus.br/atos/detalhar/6001"
     },
     {
       "id": "lei_15504_2026",
@@ -843,7 +862,8 @@
           "traducao_juridica": "Quem recebe o benefício fiscal assume as contrapartidas: mercado interno, energia, água e P&D. O REDATA positiva o brocardo no art. 11-B, § 1º",
           "contexto_romano": "Brocardo da tradição romanística, aplicado à repartição de riscos e encargos no direito civil e administrativo"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15504.htm"
     },
     {
       "id": "lei_15506_2026",
@@ -884,7 +904,8 @@
           "traducao_juridica": "Os recursos minerais pertencem à União (CF, art. 20, IX); a concessão de lavra não transfere a titularidade do subsolo — a política de minerais críticos regula o uso de um bem público",
           "contexto_romano": "Categoria romana dos bens de uso comum e do patrimônio público, retomada na teoria dos bens públicos"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15506.htm"
     },
     {
       "id": "decreto_13118_2026",
@@ -907,7 +928,8 @@
       "historia": "Editado em 16/09/2026, junto com a sanção da Lei 15.506/2026. Atribui ao CIMCE a definição da lista de minerais críticos e estratégicos e a homologação de operações societárias; o rito detalhado da triagem de investimentos ainda depende de regulamentação. Verificado em 01/10/2026 (Planalto).",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA — CFIUS (Committee on Foreign Investment in the United States), triagem de investimento estrangeiro por segurança nacional; União Europeia — Regulamento (UE) 2019/452, quadro de triagem de investimento estrangeiro direto. O CIMCE reúne em um só colegiado a política industrial e a triagem.",
       "autores": [],
-      "latim": []
+      "latim": [],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13118.htm"
     },
     {
       "artigos_chave": [
@@ -944,7 +966,8 @@
       "temas": [
         "direito_internacional_publico"
       ],
-      "ementa": "Codifica as normas internacionais sobre celebração, entrada em vigor, aplicação, interpretação e extinção de tratados. Promulgada no Brasil pelo Decreto 7.030/2009, com reserva aos arts. 25 e 66."
+      "ementa": "Codifica as normas internacionais sobre celebração, entrada em vigor, aplicação, interpretação e extinção de tratados. Promulgada no Brasil pelo Decreto 7.030/2009, com reserva aos arts. 25 e 66.",
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7030.htm"
     },
     {
       "artigos_chave": [
@@ -973,7 +996,8 @@
         "direito_internacional_publico",
         "direito_economico"
       ],
-      "ementa": "Tratado para a constituição de um mercado comum entre Argentina, Brasil, Paraguai e Uruguai. Base da estrutura jurídica e institucional sob a qual o Mercosul negocia acordos comerciais externos."
+      "ementa": "Tratado para a constituição de um mercado comum entre Argentina, Brasil, Paraguai e Uruguai. Base da estrutura jurídica e institucional sob a qual o Mercosul negocia acordos comerciais externos.",
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/decreto/1990-1994/D0350.htm"
     },
     {
       "artigos_chave": [
@@ -1016,7 +1040,8 @@
       "temas": [
         "direito_internacional_privado"
       ],
-      "ementa": "Norma de sobredireito: disciplina a aplicação das leis no tempo e no espaço. Os arts. 7º a 17 são as regras clássicas de conflito de leis do Direito Internacional Privado brasileiro."
+      "ementa": "Norma de sobredireito: disciplina a aplicação das leis no tempo e no espaço. Os arts. 7º a 17 são as regras clássicas de conflito de leis do Direito Internacional Privado brasileiro.",
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm"
     },
     {
       "artigos_chave": [
@@ -1058,7 +1083,8 @@
           "desde": "",
           "fonte": "Ministério do Comércio e Indústria de Singapura (declaração)"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13081.htm"
     },
     {
       "artigos_chave": [
@@ -1117,7 +1143,8 @@
           "desde": "",
           "fonte": "EFTA"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13126.htm"
     },
     {
       "artigos_chave": [
@@ -1147,7 +1174,8 @@
           "desde": "2026-05-01",
           "fonte": "Decreto 12.953/2026, art. 23.3"
         }
-      ]
+      ],
+      "fonte_oficial_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12953.htm"
     },
     {
       "id": "acordo_mercosul_ue_empa",
@@ -1166,7 +1194,8 @@
       "historia": "Firmado em Assunção em 17/01/2026, junto com o Acordo Provisório de Comércio (ITA). A tramitação brasileira identificada (MSC 93/2026, PDL 41/2026, Decreto Legislativo 14/2026) refere-se ao Acordo Provisório de Comércio. Do lado europeu, por ser acordo de competência mista, depende também de ratificação pelos Estados-membros. Passa a 'incorporado' quando houver decreto legislativo e decreto de promulgação próprios. Verificado em 01/10/2026.",
       "direito_comparado": "",
       "autores": [],
-      "latim": []
+      "latim": [],
+      "fonte_oficial_url": "https://www.gov.br/siscomex/pt-br/acordos-comerciais/acordo-mercosul-ue/parceria-empa-portugues-br"
     }
   ]
 }

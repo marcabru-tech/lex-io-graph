@@ -2,7 +2,7 @@ import streamlit as st
 from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
 from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
-from lib.formato import resumo_verificacao
+from lib.formato import cartao_norma_html, resumo_verificacao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — {APP_TAGLINE}",
@@ -40,6 +40,15 @@ st.markdown("""
         font-size: 11px;
         color: #706a60;
         margin-top: 6px;
+    }
+    .norma-fonte {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+    .norma-fonte a {
+        color: #3dc8e6;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(61,200,230,0.3);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -149,27 +158,7 @@ st.markdown("#### Normas mapeadas")
 normas_data = load_json("normas.json")["nodes"]
 
 for node in normas_data:
-    tipo = node["tipo"]
-    if tipo == "constituicao":
-        pill_class = "pill--lex"
-    elif tipo == "jurisprudencia":
-        pill_class = "pill--graph"
-    else:
-        pill_class = "pill--io"
-
-    ementa_completa = node["ementa"]
-    artigos = node.get("artigos_chave", [])
-    artigos_str = " | ".join(artigos) if artigos else ""
-
-    item_html = '<div class="norma-item">'
-    item_html += '<span class="pill ' + pill_class + '">' + node["sigla"] + '</span> '
-    item_html += '<strong>' + node["nome"] + '</strong>'
-    item_html += '<div class="norma-ementa">' + ementa_completa + '</div>'
-    if artigos_str:
-        item_html += '<div class="norma-artigos">' + artigos_str + '</div>'
-    item_html += '</div>'
-
-    st.markdown(item_html, unsafe_allow_html=True)
+    st.markdown(cartao_norma_html(node), unsafe_allow_html=True)
 
 st.markdown("---")
 

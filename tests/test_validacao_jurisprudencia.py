@@ -93,9 +93,10 @@ class TestAssimetrias(unittest.TestCase):
 
 class TestDadosReais(unittest.TestCase):
     def test_sem_erros_e_assimetrias_conhecidas(self):
+        """As duas assimetrias que restam: stj_menor_online sem nó, stf_tema987 sem registro."""
         erros, avisos = validar_jurisprudencia()
         self.assertEqual(erros, [])
-        self.assertEqual(sum("sem nó em normas.json" in a for a in avisos), 2)
+        self.assertEqual(sum("sem nó em normas.json" in a for a in avisos), 1)
         self.assertEqual(sum("sem registro em jurisprudencia.json" in a for a in avisos), 1)
 
 
@@ -178,7 +179,7 @@ class TestContarEstados(unittest.TestCase):
 
 
 class TestContarEstadosCorpusReal(unittest.TestCase):
-    """Trava os números que a home exibe hoje: 5 registros, 0/3/2 e nenhum sem estado."""
+    """Trava os números que a home exibe hoje: 4 registros, 0/3/1 e nenhum sem estado."""
 
     def setUp(self):
         caminho = Path(__file__).resolve().parent.parent / "data" / "jurisprudencia.json"
@@ -187,10 +188,10 @@ class TestContarEstadosCorpusReal(unittest.TestCase):
 
     def test_total_e_distribuicao(self):
         c = contar_estados(self.registros)
-        self.assertEqual(len(self.registros), 5)
+        self.assertEqual(len(self.registros), 4)
         self.assertEqual(c["verificado"], 0)
         self.assertEqual(c["pendente"], 3)
-        self.assertEqual(c["contestado"], 2)
+        self.assertEqual(c["contestado"], 1)
         self.assertEqual(c[SEM_ESTADO], 0)
 
     def test_soma_fecha_com_total_do_corpus(self):

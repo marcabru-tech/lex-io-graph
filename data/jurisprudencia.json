@@ -4,11 +4,11 @@
       "id": "stf_adimc",
       "tribunal": "STF",
       "numero": "ADI 5527",
-      "ano": 2019,
-      "tema": "Constitucionalidade das sanções civis do Marco Civil",
+      "ano": null,
+      "tema": "Questionamento das sanções civis do Marco Civil",
       "normas_relacionadas": ["marco_civil", "cf88"],
-      "resumo": "O Plenário do STF declarou a constitucionalidade do art. 12 do Marco Civil, que prevê sanções por descumprimento de obrigação de guarda de registros de conexão e acesso a aplicações.",
-      "impacto_dev_junior": "Empresas que não mantêm logs conforme o Marco Civil estão sujeitas a sanções. Dev júnior precisa implementar mecanismos de retenção adequados.",
+      "resumo": "Ação direta de inconstitucionalidade que questiona dispositivos do Marco Civil, entre eles o art. 12, que prevê sanções por descumprimento da obrigação de guarda de registros de conexão e de acesso a aplicações. O resultado do julgamento não está confirmado em fonte oficial e a tese antes atribuída a esta ação está em conferência.",
+      "impacto_dev_junior": "Nada a concluir deste registro enquanto a conferência não se completar. O dever de guarda de registros e as sanções por descumprimento decorrem do próprio texto do Marco Civil, não desta decisão; é por ele que a implementação de retenção deve se orientar.",
       "estado_verificacao": "contestado",
       "fonte_oficial_url": null,
       "orgao_julgador": null,
@@ -64,28 +64,6 @@
         "origem": null,
         "data_consulta": null,
         "observacao": "Identificador não confirmado em fonte primária. Falta conferir número, tese, ano e dados do julgamento em fonte oficial."
-      }
-    },
-    {
-      "id": "trf4_lgpd_cookies",
-      "tribunal": "TRF-4",
-      "numero": "5012345-67.2022.4.04.7100",
-      "ano": 2023,
-      "tema": "Cookies e consentimento — LGPD",
-      "normas_relacionadas": ["lgpd", "marco_civil"],
-      "resumo": "Decisão que determinou a adequação de banners de cookies para conformidade com a LGPD, exigindo consentimento granular e não apenas aceitação genérica.",
-      "impacto_dev_junior": "Implementar banners de cookie que permitam consentimento por categoria (analytics, marketing, funcional). Não basta um botão 'aceitar todos'.",
-      "estado_verificacao": "contestado",
-      "fonte_oficial_url": null,
-      "orgao_julgador": null,
-      "relator": null,
-      "data_julgamento": null,
-      "data_publicacao": null,
-      "nivel_autoridade": "desconhecido",
-      "proveniencia": {
-        "origem": null,
-        "data_consulta": null,
-        "observacao": "O número não passa na verificação do dígito do padrão CNJ (dígito esperado: 32). Falta confirmar o número correto e a existência da decisão em fonte oficial."
       }
     },
     {
