@@ -2,9 +2,10 @@
 
 **Status:** aceito — ratificado em 16/10/2026 pelo mantenedor, após revisão
 independente. As seis decisões em aberto da proposta estão registradas na seção
-"Decisões ratificadas". A aplicação ao corpus ocorre na Sprint 3b, com fonte
-primária para cada valor alterado. A ratificação aprova a semântica; não
-valida nenhum valor do corpus.
+"Decisões ratificadas". A ratificação aprova a semântica; não valida nenhum
+valor do corpus nem autoriza alterá-lo. A aplicação ao corpus (Sprint 3b)
+depende de planejamento e autorização próprios e de fonte primária para cada
+valor alterado.
 
 ## Contexto
 
@@ -188,9 +189,11 @@ nem a Sprint 3b nem a regra geral de `sigla` os alteram:
 
 ## Inventário de divergências
 
-Separado em dois grupos. Com a ratificação, as linhas do grupo A podem ser
-corrigidas na Sprint 3b; as do grupo B dependem antes da fonte primária
-indicada. Cada alteração exige fonte primária citada na própria PR.
+Separado em dois grupos. As linhas do grupo A são candidatas à correção na
+Sprint 3b; as do grupo B dependem antes da fonte primária indicada. Nenhuma
+linha autoriza, por si, a alteração do corpus: a Sprint 3b depende de
+planejamento e autorização próprios, e cada alteração exige fonte primária
+citada na própria PR.
 
 ### A. Divergências confirmadas pela própria identificação ou por fonte já lida
 
@@ -242,8 +245,11 @@ PR correspondente.
 
 ## Consequências
 
-- **Sprint 3b**, autorizada por esta ratificação, aplica as convenções com uma PR por tipo ou por grupo
-  coerente de nós, cada uma com fonte primária por valor alterado.
+- **Sprint 3b não é autorizada por esta ratificação.** A ratificação aprova as
+  convenções semânticas; a aplicação ao corpus depende de planejamento e
+  autorização próprios do mantenedor. Quando autorizada, será feita com uma PR
+  por tipo ou por grupo coerente de nós, cada uma com fonte primária por valor
+  alterado.
 - **Testes de semântica** serão escritos depois da ratificação, por tipo (por
   exemplo: `ano` de `lei`/`decreto`/`pl` igual ao ano do número em `sigla`;
   `orgao` sem anotações entre parênteses; `ano` igual entre `normas.json` e
