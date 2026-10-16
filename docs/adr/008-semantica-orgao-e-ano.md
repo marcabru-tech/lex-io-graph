@@ -1,7 +1,10 @@
 # ADR 008 — Semântica dos campos `orgao`, `ano` e `sigla`
 
-**Status:** proposto para revisão — não ratificado. Nenhum dado do corpus deve
-ser alterado com base neste documento antes da ratificação explícita.
+**Status:** aceito — ratificado em 16/10/2026 pelo mantenedor, após revisão
+independente. As seis decisões em aberto da proposta estão registradas na seção
+"Decisões ratificadas". A aplicação ao corpus ocorre na Sprint 3b, com fonte
+primária para cada valor alterado. A ratificação aprova a semântica; não
+valida nenhum valor do corpus.
 
 ## Contexto
 
@@ -27,7 +30,7 @@ declarada, troca uma inconsistência por outra. A trava atual
 `test_corpus_real_so_o_adi_5527_esta_sem_ano` só verifica presença de `ano`,
 não seu significado.
 
-## Princípios gerais (propostos)
+## Princípios gerais
 
 1. **Significado consistente por tipo.** Cada campo tem um único significado
    dentro de cada tipo, declarado neste ADR. O significado pode variar entre
@@ -51,7 +54,7 @@ não seu significado.
    multilateral). Fiscalizador, implementador ou regulamentador não entram em
    `orgao`; vão para `historia`.
 
-## Decisão proposta por tipo
+## Decisão por tipo
 
 ### `constituicao`
 - **`orgao`:** órgão que promulgou o texto originário.
@@ -79,10 +82,11 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **`ano`:** ano de instituição da norma representada pelo nó. Substituições
   integrais de texto, inclusões de capítulos e vigências de partes ficam em
   `historia`.
-- **Ponto a ratificar:** se o nó representa a norma como série contínua ou o
-  ato que aprovou o texto hoje vigente. A proposta é a série contínua, por
-  coerência com o `nome`. Para a NR-1, a série começa com a Portaria MTb
-  nº 3.214, de 8 de junho de 1978, que aprovou as NRs (texto no portal do MTE).
+- **Decisão ratificada (1):** o nó representa a norma como série contínua, não
+  o ato que aprovou o texto hoje vigente, em coerência com o caráter de
+  "inventário pancrônico" declarado no `README.md`. Para a NR-1, a série começa com a
+  Portaria MTb nº 3.214, de 8 de junho de 1978, que aprovou as NRs (texto no
+  portal do MTE); as alterações posteriores ficam em `historia`.
 - **Fonte:** portaria de instituição e portarias de alteração, no DOU ou no
   portal oficial do órgão.
 
@@ -97,9 +101,10 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **`ano`:** ano da apresentação da proposição, que coincide com o ano do
   número de identificação. Não o ano da votação mais recente.
 - **`sigla`:** número de identificação, sem estado de tramitação.
-- **Ponto a ratificar:** quando a Casa revisora atribui número próprio ao
-  projeto, qual número é a `sigla` estável. Depende de confirmação nos portais
-  da Câmara e do Senado.
+- **Decisão ratificada (5):** a `sigla` canônica é o número original atribuído
+  pela Casa de origem. Se a Casa revisora atribuir outro identificador, a
+  referência cruzada vai para `historia`, com a data da conferência. Assim,
+  `orgao` acompanha a tramitação e `sigla` preserva a identidade do projeto.
 - **Fonte:** portais de tramitação da Câmara dos Deputados e do Senado Federal.
 
 ### `jurisprudencia`
@@ -123,18 +128,17 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 
 ### `orgao` (tipo)
 - **`orgao`:** ente ao qual a instituição está vinculada administrativamente,
-  conforme a lei que a rege. Alternativa a ratificar: o emissor do ato de
-  criação.
+  conforme a lei que a rege — não o emissor do ato de criação **(decisão
+  ratificada 2)**.
 - **`ano`:** ano do ato legal que criou a entidade identificada no `nome`.
   Entidades predecessoras e transformações ficam em `historia`.
-- **Ponto a ratificar — continuidade institucional:** quando uma lei cria uma
-  entidade nova e a declara sucessora de outra, é preciso decidir se o nó
-  representa a entidade nova ou a instituição contínua. Caso concreto: a Lei
-  15.352/2026 cria a Agência Nacional de Proteção de Dados (novo art. 55-A da
-  LGPD) e a declara sucessora da Autoridade Nacional de Proteção de Dados
-  (art. 15). Se o nó representa a Agência, a regra leva a 2026; se representa a
-  instituição contínua, leva ao primeiro ato de criação da Autoridade. Nenhum
-  valor de `anpd.ano` deve ser classificado como erro antes dessa decisão.
+- **Decisão ratificada (3) — continuidade institucional:** quando uma lei cria
+  uma entidade nova e a declara sucessora de outra, o nó representa a entidade
+  identificada no `nome`, e a continuidade com a predecessora fica em
+  `historia`. Caso concreto: a Lei 15.352/2026 cria a Agência Nacional de
+  Proteção de Dados (novo art. 55-A da LGPD) e a declara sucessora da
+  Autoridade Nacional de Proteção de Dados (art. 15). O nó `anpd` se chama
+  Agência; logo, `ano` = 2026, com a trajetória da Autoridade em `historia`.
 - **Fonte:** lei de criação e lei vigente de regência (Planalto).
 
 ### `documento_internacional`
@@ -159,9 +163,8 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
 - **Decreto de promulgação:** registrado em `historia`. Se o produto precisar
   dele como dado estruturado, a decisão é criar campo próprio, não reutilizar
   `ano` ou `sigla`.
-- **Ponto a ratificar:** se a prioridade do produto é o direito brasileiro
-  vigente, a alternativa é `ano` = ano da incorporação. Este ADR recomenda o
-  instrumento.
+- **Decisão ratificada (4):** `ano` segue o instrumento internacional, pelas
+  três regras acima, e não a incorporação brasileira.
 - **Fonte:** depositário do tratado (assinatura), organização ou emissor
   oficial (adoção ou data do documento) e decreto de promulgação no Planalto.
 
@@ -173,39 +176,50 @@ Inclui decretos-leis classificados como `lei` (caso `lindb`).
   institucionais e a data da última conferência quando o dado for mutável.
 - **`status`:** inalterado por este ADR.
 
-**Conflito com decisão ratificada.** A PR #38 definiu as siglas de `nr1` e
-`magnifica_humanitas` com datas de vigência e de apresentação. A regra acima as
-tornaria incompatíveis. Este ADR **não** propõe revertê-las: aplicar a regra
-de `sigla` a esses dois nós reabriria uma decisão já ratificada e exige
-autorização explícita própria.
+**Revisão futura (decisão 6).** A PR #38 definiu as siglas de `nr1` e
+`magnifica_humanitas` com datas de vigência e de apresentação, o que é
+incompatível com a regra geral de `sigla`. Essas duas siglas **não** são
+exceções permanentes: ficam reabertas para uma decisão específica, a ser
+tomada fora deste ADR. Até essa decisão, os valores atuais são preservados, e
+nem a Sprint 3b nem a regra geral de `sigla` os alteram:
+
+- `nr1`: `NR-1 (cap. 1.5 incluído pela Portaria MTE 1.419/2024, vigência punitiva desde 26/05/2026)`
+- `magnifica_humanitas`: `Magnifica Humanitas (Leão XIV, 15/05/2026; apresentada em 25/05/2026)`
 
 ## Inventário de divergências
 
-Separado em três grupos. Nenhuma linha autoriza alteração antes da ratificação.
+Separado em dois grupos. Com a ratificação, as linhas do grupo A podem ser
+corrigidas na Sprint 3b; as do grupo B dependem antes da fonte primária
+indicada. Cada alteração exige fonte primária citada na própria PR.
 
 ### A. Divergências confirmadas pela própria identificação ou por fonte já lida
 
-| ID | Campo | Valor atual | Convenção aplicada | Evidência | Decisão pendente |
+A semântica está ratificada; a última coluna lista o trabalho restante na
+Sprint 3b. Mesmo aqui, nenhum valor é alterado sem a fonte primária citada na
+PR correspondente.
+
+| ID | Campo | Valor atual | Convenção aplicada | Evidência | Trabalho na Sprint 3b |
 |---|---|---|---|---|---|
-| `pl_misoginia` | `ano` | 2026 | ano da apresentação | O número `PL 896/2023` indica 2023 | Confirmar data de apresentação no portal; ratificar regra de `pl` |
-| `pl_misoginia` | `orgao` | `Câmara dos Deputados (pendente)` | Casa atual, sem estado | Anotação de estado no valor | Confirmar Casa atual; ratificar decisão A |
-| `pl_misoginia` | `sigla` | `PL 896/2023 (aprovado Senado — aguarda Câmara)` | identificador sem tramitação | Estado de tramitação na sigla | Confirmar número na Casa atual |
-| `anpd` | `orgao` | `Governo Federal` | vinculação administrativa | Lei 15.352/2026, art. 1º (art. 55-A: autarquia vinculada ao Ministério da Justiça e Segurança Pública) | Ratificar regra do tipo `orgao` |
-| `cf88` | `orgao` | `Congresso Nacional` | órgão que promulgou o texto originário | Preâmbulo da CF/88 no Planalto: promulgada pela Assembleia Nacional Constituinte | Ratificar regra de `constituicao` |
+| `pl_misoginia` | `ano` | 2026 | ano da apresentação | O número `PL 896/2023` indica 2023 | Conferir a data de apresentação no portal; corrigir para o ano conferido |
+| `pl_misoginia` | `orgao` | `Câmara dos Deputados (pendente)` | Casa atual, sem estado | Anotação de estado no valor | Conferir a Casa atual no portal; remover a anotação; registrar tramitação e data da conferência em `historia` |
+| `pl_misoginia` | `sigla` | `PL 896/2023 (aprovado Senado — aguarda Câmara)` | número da Casa de origem, sem tramitação (decisão 5) | Estado de tramitação na sigla; a ficha da Câmara registra `PL 896/2023` com origem no Senado (conferência da revisão independente) | Reduzir a `PL 896/2023`; mover a tramitação para `historia` |
+| `anpd` | `orgao` | `Governo Federal` | vinculação administrativa | Lei 15.352/2026, art. 1º (art. 55-A: autarquia vinculada ao Ministério da Justiça e Segurança Pública) | Corrigir para a vinculação prevista na lei, com o texto da Lei 15.352/2026 citado na PR |
+| `cf88` | `orgao` | `Congresso Nacional` | órgão que promulgou o texto originário | Preâmbulo da CF/88 no Planalto: promulgada pela Assembleia Nacional Constituinte | Corrigir para `Assembleia Nacional Constituinte`, com o preâmbulo citado na PR |
+| `nr1` | `ano` | 2026 | ano de instituição, série contínua (decisão 1) | Portaria MTb nº 3.214/1978 (portal do MTE) | Corrigir para 1978; registrar as alterações posteriores em `historia` |
+| `anpd` | `ano` | 2020 | ano do ato que criou a entidade do `nome` (decisão 3) | Lei 15.352/2026, art. 1º (novo art. 55-A da LGPD) e art. 15 | Corrigir para 2026; registrar a trajetória da Autoridade em `historia` (efeito no IPII registrado na PR) |
+| `lgpd` | `orgao` | `Congresso Nacional / ANPD` | só o emissor (princípio 5) | A Lei 13.709/2018 é ato do Congresso Nacional; a ANPD não é coautora da lei (sua criação é posterior, por ato próprio) | Corrigir para `Congresso Nacional`; registrar o papel da ANPD em `historia` se pertinente |
 
 ### B. Candidatos — exigem fonte primária antes de qualquer juízo
 
-| ID | Campo | Valor atual | Convenção aplicada | Fonte primária necessária | Decisão pendente |
+| ID | Campo | Valor atual | Convenção aplicada | Fonte primária necessária | Pendência |
 |---|---|---|---|---|---|
-| `lgpd` | `orgao` | `Congresso Nacional / ANPD` | só o emissor | Lei 13.709/2018 | A ANPD não emitiu a lei |
 | `eca`, `eca_digital` | `orgao` | `Congresso Nacional / ECA-TISEA` | só o emissor | Identificar o que é "ECA-TISEA" | Termo sem fonte identificada no corpus |
 | `decreto_12975_2026` | `orgao` | `Presidência da República / ANPD` | só o emissor | Decreto 12.975/2026 | Verificar se há coautoria formal |
-| `nr1` | `ano` | 2026 | ano de instituição (série contínua) | Portaria MTb nº 3.214/1978 (portal do MTE) sustenta 1978 | Ratificar série contínua × ato que aprovou o texto vigente |
 | `nr1` | `orgao` | `Ministério do Trabalho e Emprego` | emissor, denominação atual | — | Provavelmente compatível |
 | `pl_ia` | `orgao` | `Senado Federal` | Casa atual | Portais do Senado e da Câmara | Confirmar tramitação atual |
 | `pl_cc_digital` | `orgao` | `Senado Federal` | Casa atual | Portal do Senado | Confirmar tramitação atual |
 | `pl_ia`, `pl_cc_digital` | `ano` | 2023, 2025 | ano da apresentação | Portais legislativos | Provavelmente compatíveis |
-| `convencao_viena_1969` | `ano` | 2009 | ano da assinatura | Registro do depositário (ONU); Decreto 7.030/2009 | 1969 se ratificada a regra do instrumento |
+| `convencao_viena_1969` | `ano` | 2009 | ano da assinatura | Registro do depositário (ONU); Decreto 7.030/2009 | Conferir a data de assinatura no depositário; pela decisão 4, o valor esperado é 1969 |
 | `convencao_viena_1969` | `sigla` | `CVDT — Decreto 7.030/2009` | identificador do instrumento | — | Decreto iria para `historia` |
 | `tratado_assuncao_1991` | `orgao` | `Mercosul` | partes celebrantes | Texto do Tratado | O Mercosul foi constituído pelo próprio tratado |
 | `acordo_mercosul_singapura`, `acordo_mercosul_efta`, `acordo_mercosul_ue_ita` | `ano`, `orgao`, `sigla` | 2026; `Mercosul`; decreto | ano de assinatura; partes; identificador do instrumento | Data de assinatura de cada acordo; decretos de promulgação | `orgao` hoje omite a contraparte |
@@ -215,18 +229,20 @@ Separado em três grupos. Nenhuma linha autoriza alteração antes da ratificaç
 | `stj_resp`, `stj_resp_plat` | `ano` | 2020, 2021 | ano do julgamento | Inteiro teor (Sprint 4) | Registros `pendente` sem `data_julgamento` |
 | `stf_adimc` | `ano` | `null` | ano do julgamento | Portal do STF | Permanece `null` até conferência |
 
-### C. Decisões semânticas pendentes
+## Decisões ratificadas
 
-O valor só pode ser avaliado depois de ratificada a semântica indicada. Não são
-divergências confirmadas.
-
-| ID | Campo | Valor atual | Questão semântica | Fonte já lida | Resultado conforme a decisão |
-|---|---|---|---|---|---|
-| `anpd` | `ano` | 2020 | O nó representa a Agência criada em 2026 ou a instituição contínua desde a Autoridade? (ver tipo `orgao`) | Lei 15.352/2026, art. 1º (novo art. 55-A da LGPD) e art. 15 | Agência: 2026. Instituição contínua: ano do primeiro ato de criação da Autoridade (MP 869/2018, a conferir). Pela regra proposta, nenhuma das duas leituras leva a 2020 |
+| # | Questão | Decisão |
+|---|---|---|
+| 1 | `norma_regulamentar`: série contínua ou ato do texto vigente | Série contínua (inventário pancrônico); NR-1 desde 1978 |
+| 2 | `orgao` no tipo institucional | Vinculação administrativa prevista na lei de regência |
+| 3 | Continuidade institucional (`anpd`) | O nó representa a entidade do `nome`: Agência, 2026; continuidade em `historia` |
+| 4 | `ano` em `documento_internacional` | Instrumento (assinatura, data do documento ou adoção), não incorporação |
+| 5 | `sigla` de PL com número próprio na Casa revisora | Número original da Casa de origem; referência cruzada em `historia` |
+| 6 | Siglas de `nr1` e `magnifica_humanitas` (PR #38) | Reabertas para decisão específica futura; valores atuais preservados até lá, sem caráter de exceção permanente |
 
 ## Consequências
 
-- **Sprint 3b só começa após ratificação**, com uma PR por tipo ou por grupo
+- **Sprint 3b**, autorizada por esta ratificação, aplica as convenções com uma PR por tipo ou por grupo
   coerente de nós, cada uma com fonte primária por valor alterado.
 - **Testes de semântica** serão escritos depois da ratificação, por tipo (por
   exemplo: `ano` de `lei`/`decreto`/`pl` igual ao ano do número em `sigla`;
@@ -234,5 +250,7 @@ divergências confirmadas.
   `jurisprudencia.json`). Nenhuma trava é criada nesta PR.
 - **IPII:** mudanças de `ano` alteram o componente temporal das comparações
   (`lib/ipii/matcher.py`). A Sprint 3b deve registrar esse efeito.
+- **Decisão específica pendente:** reavaliação das siglas de `nr1` e
+  `magnifica_humanitas` (decisão 6), independente da Sprint 3b.
 - **Fora do escopo:** `status`, o snapshot do radar legislativo (ADR 006) e o
   conteúdo editorial de `historia`.
