@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-12T20:58:55.388755",
+  "ultima_atualizacao": "2026-10-19T18:24:58.635583",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -18,7 +18,7 @@
           "autor": "Senador Eduardo Braga (MDB/AM)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:58:58.943631"
+          "data_deteccao": "2026-10-19T18:25:01.599182"
         },
         {
           "fonte": "Senado Federal",
@@ -30,7 +30,7 @@
           "autor": "Senador Marcio Bittar (PL/AC)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:58:58.943795"
+          "data_deteccao": "2026-10-19T18:25:01.599377"
         },
         {
           "fonte": "Senado Federal",
@@ -42,7 +42,7 @@
           "autor": "Senadora Dra. Eudócia (PL/AL)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:58:58.943968"
+          "data_deteccao": "2026-10-19T18:25:01.599552"
         },
         {
           "fonte": "Senado Federal",
@@ -54,7 +54,7 @@
           "autor": "Senador Jader Barbalho (MDB/PA)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:58:58.946699"
+          "data_deteccao": "2026-10-19T18:25:01.602337"
         },
         {
           "fonte": "Senado Federal",
@@ -66,10 +66,21 @@
           "autor": "Senador Eduardo Girão (NOVO/CE)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:58:58.947682"
+          "data_deteccao": "2026-10-19T18:25:01.603362"
         }
       ],
       "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2647780",
+          "sigla": "PL 5580/2026",
+          "ementa": "Institui a Política Nacional de Formação de Talentos, destinada ao desenvolvimento de competências, à orientação educacional e profissional e à preparação dos estudantes para as transformações tecnológicas, econômicas e ocupacionais, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647780",
+          "termo_busca": "inteligência artificial",
+          "data_deteccao": "2026-10-19T18:25:02.889978"
+        },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2646413",
@@ -79,7 +90,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:59:00.640092"
+          "data_deteccao": "2026-10-19T18:25:02.889994"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -90,7 +101,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:59:00.640104"
+          "data_deteccao": "2026-10-19T18:25:02.889998"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -101,7 +112,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:59:00.640108"
+          "data_deteccao": "2026-10-19T18:25:02.890002"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -112,18 +123,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
           "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:59:00.640110"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2643605",
-          "sigla": "PL 5058/2026",
-          "ementa": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para assegurar a inviolabilidade do exercício da liberdade religiosa, garantindo a livre manifestação de fé, a pregação, o proselitismo e a citação literal de textos ou escritos sagrados na internet e nos meios de comunicação.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2643605",
-          "termo_busca": "inteligência artificial",
-          "data_deteccao": "2026-10-12T20:59:00.640113"
+          "data_deteccao": "2026-10-19T18:25:02.890005"
         }
       ],
       "lexml": []
@@ -138,6 +138,28 @@
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
+          "id": "2648344",
+          "sigla": "PL 5594/2026",
+          "ementa": "Dispõe sobre a transparência patrimonial, fiscal e financeira dos candidatos à Presidência da República, estabelece mecanismos de autorização de acesso a informações protegidas por sigilo e altera a Lei nº 9.504, de 30 de setembro de 1997.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648344",
+          "termo_busca": "dados pessoais",
+          "data_deteccao": "2026-10-19T18:25:04.239649"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2648297",
+          "sigla": "PL 5586/2026",
+          "ementa": "Altera a Lei nº 12.527, de 18 de novembro de 2011, para estabelecer critérios de fundamentação, proporcionalidade, acesso parcial e revisão das restrições de acesso a informações pessoais, assegurando a proteção do interesse público e geral preponderante.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648297",
+          "termo_busca": "dados pessoais",
+          "data_deteccao": "2026-10-19T18:25:04.239661"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
           "id": "2647228",
           "sigla": "PL 5498/2026",
           "ementa": "Dispõe sobre medidas complementares de proteção de crianças e adolescentes no uso de redes sociais e altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente).",
@@ -145,7 +167,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647228",
           "termo_busca": "dados pessoais",
-          "data_deteccao": "2026-10-12T20:59:02.680979"
+          "data_deteccao": "2026-10-19T18:25:04.239664"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -156,7 +178,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646974",
           "termo_busca": "dados pessoais",
-          "data_deteccao": "2026-10-12T20:59:02.680987"
+          "data_deteccao": "2026-10-19T18:25:04.239666"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -167,29 +189,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646308",
           "termo_busca": "dados pessoais",
-          "data_deteccao": "2026-10-12T20:59:02.680996"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646307",
-          "sigla": "PL 5330/2026",
-          "ementa": "Dispõe sobre o direito dos usuários de redes sociais à escolha de forma de ordenação de conteúdo não baseada em perfilamento, estabelece deveres de transparência e controle sobre sistemas de recomendação personalizada e altera as Leis nº 12.965, de 23 de abril de 2014, nº 13.709, de 14 de agosto de 2018, e nº 15.211, de 17 de setembro de 2025.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646307",
-          "termo_busca": "dados pessoais",
-          "data_deteccao": "2026-10-12T20:59:02.680998"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2642209",
-          "sigla": "PL 4935/2026",
-          "ementa": "Altera o Decreto-Lei n° 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar a conduta de divulgar, expor ou disponibilizar dados pessoais, biométricos ou informações que permitam a identificação de vítimas de violência doméstica, familiar ou crimes contra a dignidade sexual.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642209",
-          "termo_busca": "dados pessoais",
-          "data_deteccao": "2026-10-12T20:59:02.681000"
+          "data_deteccao": "2026-10-19T18:25:04.239668"
         }
       ],
       "lexml": []
@@ -211,7 +211,19 @@
           "autor": "Senador Jader Barbalho (MDB/PA)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173870",
           "termo_busca": "criança adolescente digital",
-          "data_deteccao": "2026-10-12T20:59:03.696332"
+          "data_deteccao": "2026-10-19T18:25:05.004602"
+        },
+        {
+          "fonte": "Senado Federal",
+          "id": "175985",
+          "sigla": "PL 5593/2026",
+          "ementa": "Altera o art. 9º da Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para admitir a estimativa de idade por biometria facial como mecanismo de verificação de idade e para ampliar, de forma graduada, as categorias de serviços digitais de acesso restrito a maiores de 18 (dezoito) anos.",
+          "ano": "2026",
+          "status": "Apresentada em 2026-10-19",
+          "autor": "Senador Dr. Hiran (PP/RR)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175985",
+          "termo_busca": "criança adolescente digital",
+          "data_deteccao": "2026-10-19T18:25:05.009959"
         }
       ],
       "camara": [],
@@ -234,7 +246,7 @@
           "autor": "Senador Marcelo Castro (MDB/PI)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173290",
           "termo_busca": "plataformas digitais",
-          "data_deteccao": "2026-10-12T20:59:05.899789"
+          "data_deteccao": "2026-10-19T18:25:06.592356"
         },
         {
           "fonte": "Senado Federal",
@@ -246,7 +258,7 @@
           "autor": "Senador Ciro Nogueira (PP/PI)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175170",
           "termo_busca": "plataformas digitais",
-          "data_deteccao": "2026-10-12T20:59:05.904166"
+          "data_deteccao": "2026-10-19T18:25:06.596838"
         },
         {
           "fonte": "Senado Federal",
@@ -258,7 +270,7 @@
           "autor": "Senador Sérgio Petecão (PSD/AC)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas digitais",
-          "data_deteccao": "2026-10-12T20:59:05.905498"
+          "data_deteccao": "2026-10-19T18:25:06.598189"
         }
       ],
       "camara": [
@@ -271,7 +283,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2337417",
           "termo_busca": "plataformas digitais",
-          "data_deteccao": "2026-10-12T20:59:07.906911"
+          "data_deteccao": "2026-10-19T18:25:07.268027"
         }
       ],
       "lexml": []
@@ -293,21 +305,10 @@
           "autor": "Senador Sérgio Petecão (PSD/AC)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas de trabalho",
-          "data_deteccao": "2026-10-12T20:59:09.819981"
+          "data_deteccao": "2026-10-19T18:25:08.962095"
         }
       ],
       "camara": [
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2640149",
-          "sigla": "PLP 214/2026",
-          "ementa": "Institui o marco legal das micropensões e altera a Lei Complementar nº 109, de 29 de maio de 2001, a Lei nº 13.636, de 20 de março de 2018, e a Lei nº9.249, de 26 de dezembro de 1995, para promover a inclusão previdenciária de trabalhadores autônomos, informais, microempreendedores individuais e trabalhadores vinculados a plataformas digitais.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2640149",
-          "termo_busca": "trabalho por aplicativo",
-          "data_deteccao": "2026-10-12T20:59:09.811344"
-        },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2525925",
@@ -317,7 +318,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2525925",
           "termo_busca": "trabalho por aplicativo",
-          "data_deteccao": "2026-10-12T20:59:09.811352"
+          "data_deteccao": "2026-10-19T18:25:08.952883"
         }
       ],
       "lexml": []
@@ -338,7 +339,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
           "termo_busca": "datacenter",
-          "data_deteccao": "2026-10-12T20:59:10.803269"
+          "data_deteccao": "2026-10-19T18:25:09.491850"
         },
         {
           "fonte": "Senado Federal",
@@ -350,7 +351,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
           "termo_busca": "datacenter",
-          "data_deteccao": "2026-10-12T20:59:10.809936"
+          "data_deteccao": "2026-10-19T18:25:09.498615"
         }
       ],
       "camara": [
@@ -363,7 +364,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
           "termo_busca": "datacenter",
-          "data_deteccao": "2026-10-12T20:59:11.629611"
+          "data_deteccao": "2026-10-19T18:25:10.156687"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -374,29 +375,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
           "termo_busca": "datacenter",
-          "data_deteccao": "2026-10-12T20:59:11.629621"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2641048",
-          "sigla": "PL 4364/2026",
-          "ementa": "Altera a Lei nº 14.133, de 1º de abril de 2021, para estabelecer diretrizes aplicáveis às contratações de serviços de computação em nuvem pela administração pública federal, fortalecer a soberania digital brasileira, incentivar o desenvolvimento da infraestrutura tecnológica nacional e utilizar o poder de compra do Estado como instrumento de desenvolvimento científico, tecnológico e industrial.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641048",
-          "termo_busca": "computação em nuvem",
-          "data_deteccao": "2026-10-12T20:59:12.640403"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2641047",
-          "sigla": "PL 4363/2026",
-          "ementa": "Institui a Política Nacional de Computação em Nuvem Soberana da Região Norte, estabelece diretrizes para incentivo à instalação de infraestrutura de armazenamento, processamento e segurança de dados na Região Norte, fortalece a soberania digital, a conectividade estratégica e o desenvolvimento tecnológico regional, e dá outras providências.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641047",
-          "termo_busca": "computação em nuvem",
-          "data_deteccao": "2026-10-12T20:59:12.640455"
+          "data_deteccao": "2026-10-19T18:25:10.156699"
         }
       ],
       "lexml": []
@@ -417,7 +396,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2562481",
           "termo_busca": "mercados digitais",
-          "data_deteccao": "2026-10-12T20:59:13.649898"
+          "data_deteccao": "2026-10-19T18:25:11.271650"
         }
       ],
       "lexml": []
@@ -438,7 +417,7 @@
           "autor": "Senadora Ana Paula Lobato (PSB/MA)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
           "termo_busca": "minerais críticos",
-          "data_deteccao": "2026-10-12T20:59:15.095152"
+          "data_deteccao": "2026-10-19T18:25:11.848725"
         },
         {
           "fonte": "Senado Federal",
@@ -450,7 +429,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
           "termo_busca": "minerais críticos",
-          "data_deteccao": "2026-10-12T20:59:15.097291"
+          "data_deteccao": "2026-10-19T18:25:11.850896"
         }
       ],
       "camara": [
@@ -463,7 +442,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
           "termo_busca": "minerais críticos",
-          "data_deteccao": "2026-10-12T20:59:15.847072"
+          "data_deteccao": "2026-10-19T18:25:12.594249"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -474,7 +453,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
           "termo_busca": "minerais críticos",
-          "data_deteccao": "2026-10-12T20:59:15.847081"
+          "data_deteccao": "2026-10-19T18:25:12.594260"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -485,7 +464,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
           "termo_busca": "terras raras",
-          "data_deteccao": "2026-10-12T20:59:16.528209"
+          "data_deteccao": "2026-10-19T18:25:13.328949"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -496,7 +475,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
           "termo_busca": "terras raras",
-          "data_deteccao": "2026-10-12T20:59:16.528219"
+          "data_deteccao": "2026-10-19T18:25:13.328962"
         }
       ],
       "lexml": []
@@ -538,7 +517,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172821",
           "termo_busca": "aprova o texto do acordo",
-          "data_deteccao": "2026-10-12T20:59:18.242056"
+          "data_deteccao": "2026-10-19T18:25:14.668545"
         },
         {
           "fonte": "Senado Federal",
@@ -550,7 +529,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172822",
           "termo_busca": "aprova o texto do acordo",
-          "data_deteccao": "2026-10-12T20:59:18.242095"
+          "data_deteccao": "2026-10-19T18:25:14.668573"
         },
         {
           "fonte": "Senado Federal",
@@ -562,7 +541,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172823",
           "termo_busca": "aprova o texto do acordo",
-          "data_deteccao": "2026-10-12T20:59:18.242114"
+          "data_deteccao": "2026-10-19T18:25:14.668591"
         },
         {
           "fonte": "Senado Federal",
@@ -574,7 +553,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174513",
           "termo_busca": "aprova o texto do acordo",
-          "data_deteccao": "2026-10-12T20:59:18.245995"
+          "data_deteccao": "2026-10-19T18:25:14.672515"
         },
         {
           "fonte": "Senado Federal",
@@ -586,7 +565,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174726",
           "termo_busca": "aprova o texto do acordo",
-          "data_deteccao": "2026-10-12T20:59:18.246534"
+          "data_deteccao": "2026-10-19T18:25:14.673029"
         },
         {
           "fonte": "Senado Federal",
@@ -598,7 +577,7 @@
           "autor": "Senador Jorge Seif (PL/SC)",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173375",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:18.888487"
+          "data_deteccao": "2026-10-19T18:25:15.182430"
         },
         {
           "fonte": "Senado Federal",
@@ -610,7 +589,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174727",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:18.891385"
+          "data_deteccao": "2026-10-19T18:25:15.185418"
         },
         {
           "fonte": "Senado Federal",
@@ -622,7 +601,7 @@
           "autor": "Câmara dos Deputados",
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174759",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:18.891410"
+          "data_deteccao": "2026-10-19T18:25:15.185443"
         }
       ],
       "camara": [
@@ -635,7 +614,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647289",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:19.551820"
+          "data_deteccao": "2026-10-19T18:25:15.986167"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -646,7 +625,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642748",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:19.551834"
+          "data_deteccao": "2026-10-19T18:25:15.986178"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -657,7 +636,18 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2630667",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:19.551837"
+          "data_deteccao": "2026-10-19T18:25:15.986181"
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2620905",
+          "sigla": "PDL 274/2026",
+          "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2620905",
+          "termo_busca": "Mercosul",
+          "data_deteccao": "2026-10-19T18:25:15.986183"
         },
         {
           "fonte": "Câmara dos Deputados",
@@ -668,18 +658,7 @@
           "status": "Em tramitação",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2539121",
           "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:19.551840"
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2324978",
-          "sigla": "PDL 162/2022",
-          "ementa": "Aprova o texto da Decisão do Conselho do Mercado Comum nº 07/2019, aprovada em Santa Fé, em 16 de julho de 2019.",
-          "ano": "2022",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2324978",
-          "termo_busca": "Mercosul",
-          "data_deteccao": "2026-10-12T20:59:19.551842"
+          "data_deteccao": "2026-10-19T18:25:15.986186"
         }
       ],
       "lexml": []
@@ -1018,20 +997,22 @@
     }
   },
   "proveniencia": {
-    "coletado_em": "2026-10-12T20:58:55.388755",
+    "coletado_em": "2026-10-19T18:24:58.635583",
     "executor": "github-actions",
-    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/38307695201",
-    "sha256_temas": "4461ebabc67bdbe82dc56b1f6d687174ac78155a64a3622202df30bb3c0d9c85",
+    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/39302278851",
+    "sha256_temas": "288f6bf724d75bc626f45260bf0abcc4174773536cec3c276fea9948da518897",
     "fontes": {
       "senado": {
         "estado": "parcial",
-        "itens_coletados": 22,
+        "itens_coletados": 23,
         "temas_herdados_do_snapshot_anterior": []
       },
       "camara": {
         "estado": "ativa",
-        "itens_coletados": 28,
-        "temas_herdados_do_snapshot_anterior": []
+        "itens_coletados": 24,
+        "temas_herdados_do_snapshot_anterior": [
+          "soberania_digital"
+        ]
       },
       "lexml": {
         "estado": "desativada",
@@ -1042,21 +1023,45 @@
   },
   "novidades_detectadas": [
     {
-      "tema": "acordos_internacionais",
+      "tema": "ia",
       "fonte": "camara",
-      "sigla": "PL 5513/2026",
-      "ementa": "Altera as Leis nº 14.597, de 14 de junho de 2023, e nº 15.522, de 28 de setembro de 2026, para estabelecer que atletas nascidos em países integrantes do Mercado Comum do Sul – Mercosul não sejam considerados estrangeiros para fins esportivos, especialmente para inscrição, registro, escalação, participação e composição de equipes e elencos.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647289",
-      "data_deteccao": "2026-10-12T20:59:19.551820"
+      "sigla": "PL 5580/2026",
+      "ementa": "Institui a Política Nacional de Formação de Talentos, destinada ao desenvolvimento de competências, à orientação educacional e profissional e à preparação dos estudantes para as transformações tecnológicas, econômicas e ocupacionais, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647780",
+      "data_deteccao": "2026-10-19T18:25:02.889978"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 5594/2026",
+      "ementa": "Dispõe sobre a transparência patrimonial, fiscal e financeira dos candidatos à Presidência da República, estabelece mecanismos de autorização de acesso a informações protegidas por sigilo e altera a Lei nº 9.504, de 30 de setembro de 1997.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648344",
+      "data_deteccao": "2026-10-19T18:25:04.239649"
+    },
+    {
+      "tema": "dados",
+      "fonte": "camara",
+      "sigla": "PL 5586/2026",
+      "ementa": "Altera a Lei nº 12.527, de 18 de novembro de 2011, para estabelecer critérios de fundamentação, proporcionalidade, acesso parcial e revisão das restrições de acesso a informações pessoais, assegurando a proteção do interesse público e geral preponderante.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648297",
+      "data_deteccao": "2026-10-19T18:25:04.239661"
+    },
+    {
+      "tema": "menores",
+      "fonte": "senado",
+      "sigla": "PL 5593/2026",
+      "ementa": "Altera o art. 9º da Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente), para admitir a estimativa de idade por biometria facial como mecanismo de verificação de idade e para ampliar, de forma graduada, as categorias de serviços digitais de acesso restrito a maiores de 18 (dezoito) anos.",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175985",
+      "data_deteccao": "2026-10-19T18:25:05.009959"
     },
     {
       "tema": "acordos_internacionais",
       "fonte": "camara",
-      "sigla": "PDL 162/2022",
-      "ementa": "Aprova o texto da Decisão do Conselho do Mercado Comum nº 07/2019, aprovada em Santa Fé, em 16 de julho de 2019.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2324978",
-      "data_deteccao": "2026-10-12T20:59:19.551842"
+      "sigla": "PDL 274/2026",
+      "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2620905",
+      "data_deteccao": "2026-10-19T18:25:15.986183"
     }
   ],
-  "total_novidades": 2
+  "total_novidades": 5
 }
