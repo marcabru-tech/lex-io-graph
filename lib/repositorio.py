@@ -21,7 +21,7 @@ AUTORES = {
         "obra_principal": "Teoria do Ordenamento Jurídico (Teoria dell'ordinamento giuridico), 1960",
         "contribuicao": "Sistematização das antinomias jurídicas e seus critérios de resolução: lex superior, lex posterior, lex specialis. O ordenamento como sistema coerente, pleno e fechado.",
         "corrente": "Positivismo jurídico analítico",
-        "relevancia_brasil": "Critérios de resolução de antinomias aplicados pelo STJ e STF — especialmente lex specialis (LGPD vs. PL 4/2025)"
+        "relevancia_brasil": "Critérios de resolução de antinomias — especialmente lex specialis (LGPD vs. PL 4/2025, leitura do Lexiograph)"
     },
     "canaris": {
         "nome": "Claus-Wilhelm Canaris",
@@ -46,9 +46,9 @@ AUTORES = {
         "datas": "1873–1960",
         "nacionalidade": "Brasileiro",
         "obra_principal": "Hermenêutica e Aplicação do Direito, 1924",
-        "contribuicao": "Obra fundadora da hermenêutica jurídica brasileira. Síntese dos métodos: gramatical, lógico, histórico, sistemático e teleológico. Ainda referência obrigatória no STJ.",
+        "contribuicao": "Obra fundadora da hermenêutica jurídica brasileira. Síntese dos métodos: gramatical, lógico, histórico, sistemático e teleológico.",
         "corrente": "Hermenêutica jurídica clássica brasileira",
-        "relevancia_brasil": "Referência direta em votos do STJ e STF — método de interpretação das normas digitais brasileiras"
+        "relevancia_brasil": "Método de interpretação aplicável às normas digitais brasileiras (leitura do Lexiograph)"
     },
     "pontes_miranda": {
         "nome": "Francisco Cavalcanti Pontes de Miranda",
@@ -180,7 +180,7 @@ BROCARDOS = [
         "traducao_literal": "A lei posterior derroga a anterior",
         "traducao_juridica": "Critério de resolução de antinomia por temporalidade — norma mais recente prevalece sobre a mais antiga de mesmo grau",
         "contexto_romano": "Brocardo romano clássico — um dos três critérios de Bobbio (1909–2004) para resolução de antinomias",
-        "uso_brasil": "Aplicado na relação entre o CC/2002 e o Código Comercial de 1850 — o posterior absorveu o anterior",
+        "uso_brasil": "Aplicado na relação entre o CC/2002 e o Código Comercial de 1850 — o CC/2002 revogou expressamente a Parte Primeira do Código Comercial de 1850",
         "relacao_norma": "lgpd"
     },
     {
@@ -188,7 +188,7 @@ BROCARDOS = [
         "traducao_literal": "A lei especial derroga a geral",
         "traducao_juridica": "Critério de resolução de antinomia por especialidade — norma específica prevalece sobre a geral",
         "contexto_romano": "Terceiro critério de Bobbio — o mais complexo, pois exige identificação do âmbito de aplicação de cada norma",
-        "uso_brasil": "LGPD como lex specialis em relação ao PL 4/2025 (Livro VI CC Digital) — alerta da ANPD (Agência Nacional de Proteção de Dados)",
+        "uso_brasil": "LGPD como lex specialis em relação ao PL 4/2025 (Livro VI proposto, Direito Civil Digital) — leitura do Lexiograph",
         "relacao_norma": "pl_cc_digital"
     },
     {
@@ -274,8 +274,8 @@ TRADICOES_JURIDICAS = {
             "(global + local, Robertson, 1990s) e para o inventário pancrônico: "
             "a Halachá influenciou o direito canônico medieval e, via este, "
             "o direito civil europeu e brasileiro. O conceito de Tikkun Olam "
-            "(reparação do mundo) dialoga com a virada preventiva do CC/2025 "
-            "(resgate de Pontes de Miranda)."
+            "(reparação do mundo) dialoga, na leitura do Lexiograph, com a proposta de "
+            "atualização do Código Civil (PL 4/2025, em tramitação)."
         ),
         "codigos_referencia": (
             "Torah (séc. XIII–V a.C.); Mishná (200 d.C.); "

@@ -196,9 +196,9 @@ elif secao == "🌐 Direito Comparado Glocal":
         {
             "titulo": "Codificação civil — arco histórico pancrônico",
             "normas": [
-                ("🇧🇷 Brasil", "CC/1916 → CC/2002 → Reforma 2025 (PL 4/2025)", "CC/2002 absorveu o Código Comercial de 1850. Reforma 2025 cria Livro VI — Direito Civil Digital."),
-                ("🇩🇪 Alemanha", "BGB (1896) + HGB (1897) — separados e vigentes", "Modelo oposto ao Brasil: civil e comercial separados até hoje."),
-                ("🇮🇹 Itália", "Codice Civile (1942)", "Unificou civil e comercial — mesmo caminho do Brasil, 60 anos antes."),
+                ("🇧🇷 Brasil", "CC/1916 → CC/2002 → Reforma 2025 (PL 4/2025)", "O Código Civil de 2002 revogou expressamente a Parte Primeira do Código Comercial de 1850, promovendo uma unificação parcial do direito privado. A Parte Segunda trata do comércio marítimo. O PL 4/2025 propõe a inclusão do Livro VI — Direito Civil Digital."),
+                ("🇩🇪 Alemanha", "BGB (1896) + HGB (1897) — separados e vigentes", "O BGB e o HGB permanecem como códigos distintos; no Brasil, o CC/2002 promoveu unificação parcial do direito privado."),
+                ("🇮🇹 Itália", "Codice Civile (1942)", "Unificou civil e comercial em 1942; o Brasil promoveu unificação parcial do direito privado em 2002."),
                 ("🇫🇷 França", "Code Civil (1804) — Código Napoleônico", "Manteve separação com o Code de Commerce (1807)."),
             ]
         }
@@ -217,10 +217,7 @@ elif secao == "📖 Literatura e Arte":
     st.markdown("## Literatura e Arte")
     st.markdown(
         "A literatura universal como instrumento de fundamentação jurídica — "
-        "tradição dos grandes doutrinadores e da jurisprudência brasileira. "
-        "Rui Barbosa citava Shakespeare no plenário. "
-        "Pontes de Miranda citava Goethe. "
-        "O STF tem Dostoiévski e Kafka em votos sobre devido processo legal."
+        "tradição dos grandes doutrinadores e da jurisprudência brasileira."
     )
 
     aba_lit, aba_arte = st.tabs(["📚 Citações Literárias", "🖼️ Obras de Arte"])

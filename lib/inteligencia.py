@@ -22,15 +22,14 @@ NATUREZA_ENSAIO_PADRAO = (
 CASOS_ESTRATEGICOS = [
     {
         "id": "art19_guerra_institucional",
-        "titulo": "Art. 19 do Marco Civil — Guerra Institucional Tripartite",
+        "titulo": "Art. 19 do Marco Civil — Judiciário, Executivo e Legislativo",
         "normas_relacionadas": ["marco_civil", "stf_tema987", "decreto_12975_2026", "decreto_12976_2026"],
         "nivel_tensao": "crítico",
         "status": "em curso — eleições outubro/2026",
         "sintese": (
             "O campo normativo do art. 19 do Marco Civil da Internet (Lei 12.965/2014) "
-            "é o epicentro da maior crise institucional do direito digital brasileiro. "
-            "Três poderes entraram no mesmo campo em direções incompatíveis, "
-            "em contexto de ano eleitoral com instabilidade institucional elevada."
+            "reúne os três Poderes em direções distintas, em contexto de ano eleitoral "
+            "(leitura do Lexiograph)."
         ),
         "camadas": [
             {
@@ -565,7 +564,7 @@ EPISTEMOLOGIA = {
             "autor": "Jürgen Habermas",
             "datas": "1929–",
             "contribuicao": "Teoria da ação comunicativa (1981): a legitimidade do direito deriva de procedimento discursivo racional — a norma é válida se derivada de processo em que todos os afetados puderam participar em condições de igualdade.",
-            "conexao_direito": "Fundamenta o processo legislativo participativo do Marco Civil da Internet (2009–2014) — construído via plataforma online com participação da sociedade civil; e questiona a legitimidade dos Decretos 12.975/2026 (não passaram pelo debate habermasiano)"
+            "conexao_direito": "Fundamenta o processo legislativo participativo do Marco Civil da Internet (2009–2014) — construído via plataforma online com participação da sociedade civil. Interpretação do Lexiograph: o procedimento habermasiano pode servir de parâmetro crítico para os Decretos 12.975/2026"
         },
         {
             "autor": "Ronald Dworkin",
@@ -584,8 +583,8 @@ EPISTEMOLOGIA = {
         {
             "posicao": "Direito Natural Contemporâneo",
             "autores": "Lon Fuller (1902–1978), John Finnis (1940–)",
-            "tese": "Fuller (A Moralidade do Direito, 1964): a lei precisa satisfazer critérios mínimos de moralidade interna — generalidade, publicidade, não retroatividade, clareza, não contradição — para ser válida. Finnis (Lei Natural e Direitos Naturais, 1980): direito natural como fundamento dos direitos humanos sem recorrer à teologia.",
-            "relevancia_brasil": "Os decretos 12.975 e 12.976/2026 violam o critério fullerniano de publicidade processual — foram editados sem debate parlamentar prévio. A 'moralidade interna do direito' como critério crítico dos decretos."
+            "tese": "Fuller (A Moralidade do Direito, 1964): a lei precisa satisfazer critérios mínimos de moralidade interna — entre eles generalidade, publicidade, não retroatividade, clareza, não contradição — para ser válida. Finnis (Lei Natural e Direitos Naturais, 1980): direito natural como fundamento dos direitos humanos sem recorrer à teologia.",
+            "relevancia_brasil": "Interpretação do Lexiograph: a 'moralidade interna do direito' de Fuller pode servir de critério crítico para os decretos 12.975 e 12.976/2026."
         },
         {
             "posicao": "Positivismo Jurídico",

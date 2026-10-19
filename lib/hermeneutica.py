@@ -153,8 +153,8 @@ CORRENTES_HERMENEUTICAS = [
         "no_brasil": (
             "Fundamenta o processo participativo do Marco Civil da Internet (2009–2014) — "
             "construído via plataforma online com participação da sociedade civil. "
-            "Questiona a legitimidade dos Decretos 12.975 e 12.976/2026 — editados "
-            "sem debate parlamentar prévio, violando o procedimento habermasiano."
+            "Interpretação do Lexiograph: o procedimento habermasiano pode servir de parâmetro "
+            "crítico para os Decretos 12.975 e 12.976/2026."
         ),
         "tensao_norma": "Marco Civil da Internet — processo participativo; Decretos 12.975/2026 — deficit democrático"
     },
@@ -271,9 +271,10 @@ FONTES_DIREITO = {
             "cor": "#1a5276",
             "hierarquia": 2,
             "descricao": (
-                "No Brasil: status supralegal (acima das leis ordinárias, abaixo da CF/88) "
-                "para tratados comuns — RE 466.343/STF (2008). "
-                "Tratados de direitos humanos aprovados com quórum de EC: status constitucional. "
+                "No Brasil: tratados comuns têm, em regra, status equivalente ao de lei ordinária. "
+                "Tratados de direitos humanos aprovados sem o rito do art. 5º, § 3º, da CF têm status "
+                "supralegal (RE 466.343/STF, 2008). Os aprovados pelo rito do art. 5º, § 3º, "
+                "equivalem a emendas constitucionais. "
                 "No direito digital: Convenção 108+ do Conselho da Europa sobre proteção de dados "
                 "influencia o padrão brasileiro."
             ),
@@ -309,14 +310,16 @@ ARCO_CC = {
         {
             "nome": "Código Comercial de 1850",
             "ano": 1850,
-            "contexto": "Brasil Império — segundo ano do reinado de Pedro II",
-            "vigencia": "1850–2002 (parte terrestre); parte marítima ainda vigente",
+            "contexto": "Brasil Império, 1850",
+            "vigencia": "1850 — Parte Primeira revogada pelo CC/2002 (em vigor desde 2003)",
             "caracteristica": (
                 "Lei 556/1850 — inspirado no Code de Commerce francês (1807) e no Código "
-                "Comercial português (1833). Segundo ano do reinado de Pedro II — "
+                "Comercial português (1833). Brasil Império, 1850 — "
                 "o mesmo ano da Lei Eusébio de Queirós (abolição do tráfico de escravizados) "
-                "e da Lei de Terras. O CC/2002 absorveu a parte terrestre — "
-                "comparação glocal (global + local, Robertson, 1990s): Itália unificou em 1942, "
+                "e da Lei de Terras. O Código Civil de 2002 revogou expressamente a Parte Primeira "
+                "do Código Comercial de 1850, promovendo uma unificação parcial do direito privado. "
+                "A Parte Segunda trata do comércio marítimo. "
+                "Comparação glocal (global + local, Robertson, 1990s): Itália unificou em 1942, "
                 "Alemanha mantém o HGB (Handelsgesetzbuch — Código Comercial alemão, 1897) separado até hoje."
             ),
             "influencia": "Code de Commerce francês (1807); Código Comercial português (1833)"
@@ -345,7 +348,7 @@ ARCO_CC = {
                 "Teoria tridimensional do direito (fato + valor + norma) como fundamento. "
                 "Três cláusulas gerais estruturantes: boa-fé objetiva (art. 422), "
                 "função social do contrato (art. 421) e função social da propriedade. "
-                "Absorveu o Código Comercial de 1850 — unificação do direito privado. "
+                "Revogou expressamente a Parte Primeira do Código Comercial de 1850 — unificação parcial do direito privado. "
                 "Ihering (1818–1892) como matriz hermenêutica dominante — fins sociais."
             ),
             "influencia": "Teoria tridimensional de Reale; CC italiano de 1942; CF/88"
@@ -356,14 +359,14 @@ ARCO_CC = {
             "contexto": "Era digital — IA, dados pessoais, plataformas, identidade digital",
             "vigencia": "Em tramitação no Senado Federal",
             "caracteristica": (
-                "Proposta de comissão de juristas presidida pelo Min. Luís Felipe Salomão (STJ). "
-                "Livro VI — Do Direito Civil Digital: personalidade digital, responsabilidade "
+                "Proposta de autoria do Sen. Rodrigo Pacheco, apresentada em 31/01/2025. "
+                "Propõe a inclusão do Livro VI — Do Direito Civil Digital: personalidade digital, responsabilidade "
                 "de plataformas, assinatura eletrônica, patrimônio digital, IA como instrumento jurídico. "
-                "Resgate da doutrina de Pontes de Miranda (1892–1979): distinção ato ilícito / "
-                "responsabilidade civil — virada do paradigma reparatório para o preventivo. "
-                "Tensão antinômica com LGPD e Marco Civil — alertas da ANPD e do CGI.br (Comitê Gestor da Internet no Brasil)."
+                "Leitura do Lexiograph: a distinção entre ato ilícito e responsabilidade civil e a "
+                "passagem do paradigma reparatório ao preventivo como eixo do debate. "
+                "Tensão antinômica com LGPD e Marco Civil — leitura do Lexiograph."
             ),
-            "influencia": "Pontes de Miranda; GDPR europeu; CC italiano de 1942; doutrina de Salomão"
+            "influencia": "GDPR europeu; CC italiano de 1942"
         }
     ]
 }
@@ -418,7 +421,7 @@ BRASIL_IMPERIO = {
         {
             "nome": "Código Comercial de 1850 (Lei 556)",
             "ano": 1850,
-            "destaque": "Segundo ano do reinado de Pedro II — mesmo ano da Lei de Terras",
+            "destaque": "Brasil Império, 1850 — mesmo ano da Lei de Terras",
             "descricao": (
                 "O ano de 1850 é o mais denso do Brasil Império em termos legislativos: "
                 "Lei Eusébio de Queirós (abolição do tráfico), Lei de Terras, Código Comercial. "
@@ -508,7 +511,7 @@ PRINCIPIOS_PENAIS = [
         "id": "pessoalidade",
         "nome": "Princípio da Pessoalidade da Pena",
         "latim": "Nulla poena sine culpa / Intranscendência da pena",
-        "autor": "CIDH art. 3º — CF/88 art. 5º, XLV",
+        "autor": "Convenção Americana sobre Direitos Humanos, art. 5º, item 3 — CF/88 art. 5º, XLV",
         "descricao": (
             "Nenhuma pena passará da pessoa do condenado. Também chamado de princípio da "
             "impessoalidade, personalidade, intransmissibilidade, intranscendência ou "
