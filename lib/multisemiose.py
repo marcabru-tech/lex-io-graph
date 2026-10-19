@@ -19,7 +19,7 @@ CITACOES = [
         "idioma_original": "Alemão",
         "traducao": "Alguém havia caluniado Josef K., pois sem ter feito nada de mal, ele foi preso numa manhã.",
         "contexto_juridico": "A opacidade do sistema normativo — o indivíduo submetido a um processo cujas regras não conhece e cuja autoridade não pode questionar. Metáfora da responsabilidade de plataformas sem transparência algorítmica.",
-        "uso_jurisprudencia": "Citado em votos do STF sobre devido processo legal e transparência — Min. Gilmar Mendes utiliza O Processo para ilustrar a arbitrariedade sem contraditório",
+        "uso_jurisprudencia": "Leitura do Lexiograph: O Processo ilustra a arbitrariedade sem contraditório e a opacidade do devido processo legal.",
         "normas_relacionadas": ["marco_civil", "stf_tema987", "pl_ia"],
         "tema": "devido processo legal, transparência algorítmica, opacidade normativa"
     },
@@ -31,8 +31,8 @@ CITACOES = [
         "citacao_original": "Боль и страдание всегда обязательны для широкого сознания и глубокого сердца.",
         "idioma_original": "Russo",
         "traducao": "A dor e o sofrimento são sempre inevitáveis para uma consciência ampla e um coração profundo.",
-        "contexto_juridico": "A tensão entre culpa subjetiva e responsabilidade objetiva — central na virada paradigmática do CC/2025 (resgate de Pontes de Miranda). A responsabilidade civil não como punição mas como prevenção.",
-        "uso_jurisprudencia": "Dostoiévski é citado em votos sobre dosimetria da pena e ressocialização — STJ REsp sobre proporcionalidade da sanção digital",
+        "contexto_juridico": "A tensão entre culpa subjetiva e responsabilidade objetiva — central no debate sobre a proposta de atualização do Código Civil (PL 4/2025, em tramitação). A responsabilidade civil não como punição mas como prevenção.",
+        "uso_jurisprudencia": "Leitura do Lexiograph: a obra dialoga com o debate sobre culpa, pena e prevenção de danos.",
         "normas_relacionadas": ["pl_cc_digital", "lgpd"],
         "tema": "responsabilidade civil, culpa, prevenção de danos"
     },
@@ -44,8 +44,8 @@ CITACOES = [
         "citacao_original": "The quality of mercy is not strained; it droppeth as the gentle rain from heaven upon the place beneath.",
         "idioma_original": "Inglês",
         "traducao": "A qualidade da misericórdia não é forçada; cai como a suave chuva do céu sobre o lugar abaixo.",
-        "contexto_juridico": "Portia defende que a letra da lei (Shylock e a libra de carne) sem equidade é injustiça. Precursor da distinção entre legalidade e legitimidade — antinomia entre norma positiva e princípio de justiça. O Mercador de Veneza é Kafka avant la lettre: a lei como instrumento de crueldade.",
-        "uso_jurisprudencia": "Citado por Rui Barbosa em defesas no Supremo — a equidade como instrumento hermenêutico. Min. Marco Aurélio citou Shakespeare em voto sobre proporcionalidade",
+        "contexto_juridico": "Portia defende que a letra da lei (Shylock e a libra de carne) sem equidade é injustiça. Precursor da distinção entre legalidade e legitimidade — antinomia entre norma positiva e princípio de justiça. Leitura do Lexiograph: a lei como instrumento de crueldade (paralelo com Kafka).",
+        "uso_jurisprudencia": "Leitura do Lexiograph: a equidade como instrumento hermenêutico, a correção da letra da lei pela justiça do caso concreto.",
         "normas_relacionadas": ["cf88", "stf_tema987"],
         "tema": "equidade, legalidade vs. legitimidade, hermenêutica, proporcionalidade"
     },
@@ -53,14 +53,14 @@ CITACOES = [
         "id": "machado_memorias",
         "autor": "Machado de Assis",
         "datas": "1839–1908",
-        "obra": "Memórias Póstumas de Brás Cubas, 1881",
-        "citacao_original": "Ao vencedor, as batatas.",
+        "obra": "Quincas Borba, 1891 (cap. VI — Humanitismo)",
+        "citacao_original": "Ao vencido, ódio ou compaixão; ao vencedor, as batatas.",
         "idioma_original": "Português",
-        "traducao": "Ao vencedor, as batatas. (ironia sobre a lógica do poder e da lei)",
-        "contexto_juridico": "A crítica machadiana ao positivismo jurídico formal — a lei que serve ao vencedor, não à justiça. O Brasil oitocentista de Machado é o mesmo que produziu o Código Comercial de 1850 e a Lei de Terras de 1850 — legislação que favoreceu estruturalmente as elites. Pancronia: a crítica de 1881 ilumina o debate atual sobre acesso à justiça digital.",
-        "uso_jurisprudencia": "Machado de Assis é a referência literária mais citada na jurisprudência brasileira — STJ e STF utilizam seus personagens para ilustrar hipocrisia normativa e formalismo vazio",
+        "traducao": "Ao vencido, ódio ou compaixão; ao vencedor, as batatas. (ironia sobre a lógica do poder e da lei)",
+        "contexto_juridico": "Leitura do Lexiograph: a fórmula humanitista como ironia sobre a lógica do poder e da lei. O Brasil oitocentista de Machado é o mesmo que produziu o Código Comercial de 1850 e a Lei de Terras de 1850. Pancronia: a ironia ilumina o debate atual sobre acesso à justiça digital.",
+        "uso_jurisprudencia": "Leitura do Lexiograph: o formalismo vazio e a hipocrisia normativa como temas da obra de Machado de Assis.",
         "normas_relacionadas": ["cf88", "lgpd"],
-        "tema": "acesso à justiça, formalismo jurídico, crítica ao positivismo, pancronia"
+        "tema": "acesso à justiça, formalismo jurídico, ironia sobre o poder e a lei, pancronia"
     },
     {
         "id": "goethe_fausto",
@@ -71,7 +71,7 @@ CITACOES = [
         "idioma_original": "Alemão",
         "traducao": "No princípio era a Ação. (Fausto reinterpretando João 1:1 — 'No princípio era o Verbo')",
         "contexto_juridico": "O pacto fáustico como metáfora do contrato de adesão digital — o usuário que aceita termos sem ler troca sua privacidade (alma) por serviços (conhecimento/poder). Pacta sunt servanda vs. autonomia da vontade informada. Citado na doutrina de contratos eletrônicos.",
-        "uso_jurisprudencia": "Savigny (1779–1861) era contemporâneo de Goethe — o Volksgeist (espírito do povo) de Savigny dialoga com o individualismo fáustico. Citado em votos sobre autonomia contratual e consentimento livre e informado (LGPD art. 7º)",
+        "uso_jurisprudencia": "Savigny (1779–1861) era contemporâneo de Goethe — o Volksgeist (espírito do povo) de Savigny dialoga com o individualismo fáustico.",
         "normas_relacionadas": ["lgpd", "marco_civil"],
         "tema": "contrato, consentimento, autonomia da vontade, privacidade"
     },
@@ -84,7 +84,7 @@ CITACOES = [
         "idioma_original": "Português",
         "traducao": "A cidade da Bahia tem mistérios que nem os seus habitantes conhecem.",
         "contexto_juridico": "Capitães da Areia narra crianças abandonadas à margem da lei — precursor literário da doutrina da proteção integral do ECA (1990). A obra foi censurada pelo Estado Novo (1937) — ironia: o Estado que censurou é o mesmo que deveria proteger. Dialoga com o ECA Digital sobre proteção de menores em ambientes opacos (plataformas digitais = a cidade com mistérios que nem os habitantes conhecem).",
-        "uso_jurisprudencia": "Jorge Amado é citado em votos do STJ sobre direitos de crianças em situação de vulnerabilidade — a ficção como documento histórico do fracasso da proteção estatal",
+        "uso_jurisprudencia": "Leitura do Lexiograph: a ficção como documento histórico do fracasso da proteção estatal a crianças em situação de vulnerabilidade.",
         "normas_relacionadas": ["eca", "eca_digital"],
         "tema": "proteção integral de menores, vulnerabilidade digital, censura, acesso à justiça"
     },
@@ -96,8 +96,8 @@ CITACOES = [
         "citacao_original": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
         "idioma_original": "Português",
         "traducao": "O Dr. Bacamarte examinou a questão sob todos os lados, meditou, orou; e ao cabo de três semanas declarou que ia meter a vila inteira no hospício.",
-        "contexto_juridico": "A antinomia bacamartiana — o sistema normativo que muda os critérios retroativamente, internando quem antes era são. Bacamarte é simultaneamente legislador, juiz e executor: a concentração de poder que Montesquieu (1689–1755) quis evitar com a separação dos três poderes. No fim, interna a si mesmo — a norma que se volta contra seu criador. Metáfora da crise do art. 19 do Marco Civil: o Estado que criou a regra (exigência de ordem judicial) e doze anos depois a declara insuficiente via STF e decretos, gerando insegurança jurídica total. Machado antecipou em 1882 o que Fuller (1902–1978) teorizaria em 1964: a lei que muda seus critérios continuamente viola a moralidade interna do direito.",
-        "uso_jurisprudencia": "O Alienista é a obra de Machado de Assis mais citada em votos sobre insegurança jurídica e arbitrariedade normativa — STJ e STF utilizam Bacamarte para ilustrar sistemas que perdem a capacidade de distinguir normalidade de patologia. Min. Luis Felipe Salomão citou O Alienista em voto sobre responsabilidade civil por dano institucional.",
+        "contexto_juridico": "A antinomia bacamartiana — o sistema normativo que muda os critérios retroativamente, internando quem antes era são. Bacamarte é simultaneamente legislador, juiz e executor: a concentração de poder que Montesquieu (1689–1755) quis evitar com a separação dos três poderes. No fim, interna a si mesmo — a norma que se volta contra seu criador. Metáfora da crise do art. 19 do Marco Civil: o Estado que criou a regra (exigência de ordem judicial) e doze anos depois a declara insuficiente via STF e decretos, gerando insegurança jurídica total. Leitura do Lexiograph: Machado antecipou em 1882 o que Fuller (1902–1978) teorizaria em 1964: a lei que muda seus critérios continuamente viola a moralidade interna do direito.",
+        "uso_jurisprudencia": "Leitura do Lexiograph: Bacamarte ilustra sistemas que perdem a capacidade de distinguir normalidade de patologia, e a insegurança jurídica e a arbitrariedade normativa que daí decorrem.",
         "normas_relacionadas": ["marco_civil", "stf_tema987", "decreto_12975_2026", "cf88"],
         "tema": "insegurança jurídica, separação de poderes, antinomia institucional, moralidade interna do direito"
     },
@@ -142,8 +142,8 @@ CITACOES = [
             "O mandado é citado na doutrina penal brasileira como exemplo histórico extremo "
             "da violação do princípio da pessoalidade (também chamado de impessoalidade, "
             "personalidade, intransmissibilidade, intranscendência ou incontagiabilidade da pena). "
-            "A Convenção Interamericana de Direitos Humanos (art. 3º) é explícita: "
-            "'A pena não pode passar da pessoa do delinquente.' "
+            "A Convenção Americana sobre Direitos Humanos (art. 5º, item 3) é explícita: "
+            "'A pena não pode passar da pessoa do delinqüente.' "
             "O constitucionalismo de 1988 positivou essa garantia no art. 5º, XLV — "
             "196 anos após a execução de Tiradentes."
         ),
@@ -272,7 +272,7 @@ GLOSSARIO = [
         "latim": "Antinomia (do grego: anti = contra + nomos = lei)",
         "definicao": "Conflito entre duas normas jurídicas de mesmo ordenamento cuja aplicação simultânea é impossível ou gera resultado contraditório. Bobbio (1909–2004) sistematizou três critérios de resolução: lex superior (hierarquia), lex posterior (temporalidade), lex specialis (especialidade).",
         "corrente": "Positivismo jurídico analítico (Bobbio)",
-        "exemplo_brasil": "PL 4/2025 (Livro VI CC Digital) × LGPD — antinomia apontada pela ANPD (Agência Nacional de Proteção de Dados): mesma matéria regulada por dois diplomas com critérios distintos"
+        "exemplo_brasil": "PL 4/2025 (Livro VI proposto, Direito Civil Digital) × LGPD — leitura do Lexiograph: possível antinomia, por haver mesma matéria regulada por dois diplomas com critérios distintos"
     },
     {
         "termo": "Hermenêutica jurídica",
@@ -307,7 +307,7 @@ GLOSSARIO = [
         "latim": "Lex specialis derogat generali (a lei especial derroga a geral)",
         "definicao": "Critério de resolução de antinomia por especialidade — quando duas normas de mesmo grau e mesma época regulam o mesmo fato, a mais específica prevalece. Terceiro critério de Bobbio, o mais complexo: exige identificação precisa do âmbito de aplicação.",
         "corrente": "Positivismo jurídico analítico (Bobbio, 1909–2004)",
-        "exemplo_brasil": "LGPD (Lei Geral de Proteção de Dados Pessoais — Lei 13.709/2018) como lex specialis em relação ao PL 4/2025 (Código Civil Digital) — alerta da ANPD sobre sobreposição normativa"
+        "exemplo_brasil": "LGPD (Lei Geral de Proteção de Dados Pessoais — Lei 13.709/2018) como lex specialis em relação ao PL 4/2025 (proposta de atualização do Código Civil, com Livro VI sobre Direito Civil Digital) — leitura do Lexiograph"
     },
     {
         "termo": "Mutação constitucional",

@@ -117,8 +117,8 @@ Aprovado no Senado (24/03/2026). Aguarda Câmara.
 
 with col_al3:
     st.info("""
-**PL 4/2025 — Código Civil Digital**
-Livro VI: Direito Civil Digital. ANPD e CGI.br alertam sobreposição com LGPD e Marco Civil.
+**PL 4/2025 — proposta de atualização do Código Civil**
+Propõe a inclusão do Livro VI: Direito Civil Digital. Em tramitação no Senado.
 
 **Lei 15.409/2026 — CNVM**
 Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Vigor: jul./2026.

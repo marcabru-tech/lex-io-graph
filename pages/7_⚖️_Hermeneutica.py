@@ -193,13 +193,14 @@ elif secao == "🇧🇷 Constituições Brasileiras":
             "nome": "Constituição da República",
             "contexto": "Primeira República — proclamação por Deodoro da Fonseca (1889)",
             "vigencia": "39 anos",
-            "destaque": "Federalismo, separação Igreja/Estado, voto descoberto (sem sigilo)",
+            "destaque": "Federalismo, separação Igreja/Estado, sufrágio restrito e excludente",
             "descricao": (
                 "Influência direta da Constituição americana de 1787 — "
                 "federalismo presidencialista, separação dos poderes sem Moderador. "
                 "Separação formal entre Igreja e Estado — laicidade como projeto republicano. "
-                "Voto descoberto e censitário: só votavam homens alfabetizados, "
-                "excluindo a maioria da população. "
+                "Sufrágio restrito e excludente: o art. 70 excluía do alistamento mendigos, "
+                "analfabetos, praças de pret e religiosos sujeitos a voto de obediência; "
+                "as mulheres, na prática eleitoral histórica, não votavam. "
                 "A 'política do café com leite' (SP e MG) como oligarquia constitucional. "
                 "Rui Barbosa como grande constitucionalista da era — "
                 "habeas corpus como remédio hermenêutico expansivo ('teoria brasileira do HC')."
@@ -237,8 +238,9 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "Vargas governou por decretos-lei. "
                 "Primeiro caso brasileiro de constituição outorgada e não respeitada "
                 "pelo próprio outorgante. "
-                "Fuller (1902–1978): a Polaca viola todos os 8 critérios de moralidade "
-                "interna do direito — não era lei, era instrumento de dominação. "
+                "Interpretação do Lexiograph: a moralidade interna do direito de Fuller "
+                "(1902–1978) pode servir de parâmetro para examinar uma constituição "
+                "outorgada e não respeitada pelo próprio outorgante. "
                 "Pancronia: o debate sobre 'constituição que não se aplica' ressurge "
                 "no contexto dos decretos executivos que tentam legislar sem o Congresso."
             ),
@@ -273,9 +275,8 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "uma nova constituição — não mera emenda. "
                 "O AI-5 (Ato Institucional nº 5, 1968) suspendeu direitos constitucionais "
                 "e é o marco mais autoritário da história republicana brasileira. "
-                "Pancronia: o AI-5 é a referência implícita em todo debate sobre "
-                "estado de exceção no Brasil — incluindo a tentativa de golpe de 2022 "
-                "(ex-presidente indiciado no PL 2.253/2024)."
+                "Pancronia (interpretação do Lexiograph): o AI-5 é referência recorrente "
+                "em debates sobre estado de exceção no Brasil."
             ),
             "conexao_digital": "O AI-5 como antecedente histórico do debate sobre limites do poder executivo — vetor de inteligência estratégica para o contexto pré-eleitoral de 2026"
         },
