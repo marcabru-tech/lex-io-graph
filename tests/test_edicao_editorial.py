@@ -39,6 +39,11 @@ ATRIBUICAO_JURISPRUDENCIAL = re.compile(
 
 
 class TestEdicaoEditorial(unittest.TestCase):
+    def test_atribuicao_jurisprudencial_casa_abreviatura_de_ministro(self):
+        # r"Min\." exige o ponto literal: casa a abreviatura, não a palavra.
+        self.assertIsNotNone(ATRIBUICAO_JURISPRUDENCIAL.search("voto do Min. Fux"))
+        self.assertIsNone(ATRIBUICAO_JURISPRUDENCIAL.search("Ministério da Fazenda"))
+
     def test_frases_corrigidas_nao_retornam(self):
         for arquivo in ARQUIVOS:
             texto = arquivo.read_text(encoding="utf-8")
@@ -46,7 +51,8 @@ class TestEdicaoEditorial(unittest.TestCase):
                 self.assertNotIn(frase, texto, f"{arquivo.name}: {frase}")
 
     def test_comparacao_alemanha_com_unificacao_parcial_no_brasil(self):
-        pagina = next((RAIZ / "pages").glob("5_*.py"))
+        pagina = next((RAIZ / "pages").glob("5_*.py"), None)
+        self.assertIsNotNone(pagina, "página 5 (Repositório) não encontrada em pages/")
         self.assertIn(
             "O BGB e o HGB permanecem como códigos distintos; no Brasil, "
             "o CC/2002 promoveu unificação parcial do direito privado.",
@@ -63,13 +69,15 @@ class TestEdicaoEditorial(unittest.TestCase):
             )
 
     def test_batatas_atribuida_a_quincas_borba(self):
-        cit = next(c for c in CITACOES if c["id"] == "machado_memorias")
+        cit = next((c for c in CITACOES if c["id"] == "machado_memorias"), None)
+        self.assertIsNotNone(cit, "citação 'machado_memorias' ausente de CITACOES")
         self.assertIn("Quincas Borba", cit["obra"])
         self.assertNotIn("Memórias Póstumas", cit["obra"])
         self.assertIn("ao vencedor, as batatas", cit["citacao_original"])
 
     def test_pena_pessoal_na_convencao_americana_art_5(self):
-        cit = next(c for c in CITACOES if c["id"] == "tiradentes_mandado")
+        cit = next((c for c in CITACOES if c["id"] == "tiradentes_mandado"), None)
+        self.assertIsNotNone(cit, "citação 'tiradentes_mandado' ausente de CITACOES")
         self.assertIn("Convenção Americana sobre Direitos Humanos (art. 5º, item 3)",
                       cit["uso_jurisprudencia"])
 
