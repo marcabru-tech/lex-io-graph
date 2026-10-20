@@ -366,8 +366,8 @@ ACOES_POR_TAG = {
     },
     "riscos_psicossociais": {
         "prioridade": "alta",
-        "acao": "Avaliar riscos psicossociais de IA no ambiente de trabalho",
-        "base": "NR-1 item 1.5.3",
+        "acao": "Avaliar os fatores de risco psicossociais relacionados ao trabalho, incluindo, na leitura do Lexiograph, os ligados ao uso de IA na organização do trabalho",
+        "base": "NR-1 item 1.5.3.1.4",
     },
     "monitoramento": {
         "prioridade": "alta",
