@@ -1,11 +1,11 @@
 """Travas de segurança do Radar Legislativo.
 
-O cartão do radar entra na página com unsafe_allow_html=True. Estes testes
-garantem que texto vindo das APIs não vira tag ativa nem Markdown, que o link
-"ver fonte" só aponta para as fontes oficiais, por https, e que o link da
+O cartão, os termos monitorados e a legenda de proveniência entram na página
+como blocos HTML com unsafe_allow_html=True. Estes testes garantem que texto
+vindo das APIs não vira tag ativa nem Markdown (nem autolink do GFM), que o
+link "ver fonte" só aponta para as fontes oficiais, por https, e que o link da
 proveniência só aponta para uma execução do Actions deste repositório.
 """
-import html as html_mod
 import json
 import re
 import unittest
@@ -13,9 +13,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from unittest import mock
 
-from lib.radar_cartao import html_cartao
-from lib.seguranca import (normalizar_espacos, texto_markdown_seguro,
-                           url_execucao_segura, url_segura)
+from lib.radar_cartao import html_cartao, html_proveniencia, html_termos_monitorados
+from lib.seguranca import normalizar_espacos, url_execucao_segura, url_segura
 
 RAIZ = Path(__file__).resolve().parent.parent
 
@@ -224,35 +223,100 @@ class TestUrlExecucaoSegura(unittest.TestCase):
                 self.assertIsNone(url_execucao_segura(url))
 
 
-def _como_exibido(md: str) -> str:
-    """O que o Markdown mostra: sem as barras de escape e com entidades decodificadas."""
-    return html_mod.unescape(re.sub(r"\\([!-/:-@\[-`{-~])", r"\1", md))
+class _Texto(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.partes: list[str] = []
+
+    def handle_data(self, data):
+        self.partes.append(data)
 
 
-class TestTextoMarkdownSeguro(unittest.TestCase):
-    def test_link_e_tag_viram_texto(self):
-        t = texto_markdown_seguro("[link](https://evil.com) <b>x</b>")
-        self.assertEqual(t, r"\[link\]\(https://evil\.com\) &lt;b&gt;x&lt;/b&gt;")
-        self.assertIsNone(re.search(r"(?<!\\)[\[\]()<>]", t))
-        self.assertEqual(_como_exibido(t), "[link](https://evil.com) <b>x</b>")
+def _texto_exibido(html: str) -> str:
+    p = _Texto()
+    p.feed(html)
+    p.close()
+    return "".join(p.partes)
 
-    def test_todos_os_especiais_sao_escapados(self):
-        especiais = "\\`*_{}[]()#+-.!|~$"
-        self.assertEqual(texto_markdown_seguro(especiais), "".join("\\" + c for c in especiais))
 
-    def test_espacos_normalizados(self):
-        self.assertEqual(texto_markdown_seguro("  dados\n\n\tpessoais  "), "dados pessoais")
+# Endereços que o autolink do GFM transformaria em link se o texto fosse
+# Markdown; num bloco HTML ficam inertes. Mais a tentativa de fechar o bloco.
+HOSTIS = (
+    "www.attacker.example/path",
+    "contato@attacker.example",
+    "https://attacker.example/path",
+    "[x](https://attacker.example) <a href=https://attacker.example>y</a>",
+    "fim\n\n<img src=x onerror=alert(1)>",
+)
 
-    def test_aspa_simples_nao_vira_entidade(self):
-        self.assertEqual(texto_markdown_seguro("d'água"), "d'água")
+
+class _BlocoHtmlInerte:
+    """Requisitos comuns aos blocos que saem do Markdown para HTML."""
+
+    def assertBlocoInerte(self, html: str, links_esperados: list[str]):
+        self.assertTrue(html.startswith("<div"), "bloco HTML precisa começar com <div>")
+        self.assertNotIn("\n", html)
+        tags = _tags(html)
+        self.assertLessEqual({t for t, _ in tags}, {"div", "strong", "a"})
+        self.assertEqual([a.get("href") for t, a in tags if t == "a"], links_esperados)
+        for tag, attrs in tags:
+            for nome in attrs:
+                self.assertFalse(nome.startswith("on"), f"{tag}: atributo {nome}")
+
+
+class TestTermosMonitorados(_BlocoHtmlInerte, unittest.TestCase):
+    def test_termos_hostis_ficam_texto(self):
+        html = html_termos_monitorados(list(HOSTIS))
+        self.assertBlocoInerte(html, [])
+        exibido = _texto_exibido(html)
+        for termo in HOSTIS:
+            self.assertIn(normalizar_espacos(termo), exibido)
+        self.assertNotIn("\\", exibido)
+
+    def test_rotulo_em_negrito(self):
+        self.assertEqual(html_termos_monitorados(["dados pessoais", "LGPD"]),
+                         "<div><strong>Termos monitorados:</strong> dados pessoais, LGPD</div>")
+
+    def test_aspas_nao_viram_entidade(self):
+        self.assertIn("d'água \"x\"", html_termos_monitorados(["d'água \"x\""]))
 
     def test_termos_reais_aparecem_iguais(self):
         termos = [t for d in _ler_radar().get("temas", {}).values()
                   for t in d.get("termos_monitorados", [])]
         self.assertTrue(termos)
-        for termo in termos:
-            with self.subTest(termo=termo):
-                self.assertEqual(_como_exibido(texto_markdown_seguro(termo)), normalizar_espacos(termo))
+        html = html_termos_monitorados(termos)
+        self.assertBlocoInerte(html, [])
+        self.assertEqual(_texto_exibido(html),
+                         "Termos monitorados: " + ", ".join(normalizar_espacos(t) for t in termos))
+
+
+class TestProveniencia(_BlocoHtmlInerte, unittest.TestCase):
+    VALIDA = TestUrlExecucaoSegura.VALIDA
+
+    def test_executor_e_hash_hostis_ficam_texto(self):
+        for hostil in HOSTIS:
+            with self.subTest(hostil=hostil):
+                html = html_proveniencia(hostil, self.VALIDA, hostil)
+                self.assertBlocoInerte(html, [self.VALIDA])
+                self.assertIn(normalizar_espacos(hostil), _texto_exibido(html))
+
+    def test_url_de_execucao_invalida_nao_vira_link(self):
+        for url in HOSTIS + ("javascript:alert(1)", None):
+            with self.subTest(url=url):
+                html = html_proveniencia("github-actions", url, "288f6bf724d75bc6")
+                self.assertBlocoInerte(html, [])
+                self.assertNotIn("ver execução", html)
+
+    def test_texto_igual_a_legenda_anterior(self):
+        html = html_proveniencia("github-actions", self.VALIDA, "288f6bf724d75bc626f4")
+        self.assertBlocoInerte(html, [self.VALIDA])
+        self.assertEqual(_texto_exibido(html), "Proveniência do snapshot: coletado por github-actions "
+                                               "(ver execução) · sha256 288f6bf724d7…")
+
+    def test_sem_url_e_sem_hash(self):
+        html = html_proveniencia("local", None, None)
+        self.assertBlocoInerte(html, [])
+        self.assertEqual(_texto_exibido(html), "Proveniência do snapshot: coletado por local")
 
 
 if __name__ == "__main__":

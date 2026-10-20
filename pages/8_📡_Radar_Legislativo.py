@@ -6,8 +6,7 @@ from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, THEMES
 from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
-from lib.radar_cartao import html_cartao
-from lib.seguranca import normalizar_espacos, texto_markdown_seguro, url_execucao_segura
+from lib.radar_cartao import html_cartao, html_proveniencia, html_termos_monitorados
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Radar Legislativo",
@@ -151,15 +150,12 @@ for _col, (_f, _decl) in zip(_cols, ESTADO_FONTES.items()):
         unsafe_allow_html=True,
     )
 if _prov:
-    # st.caption interpreta Markdown: executor e hash entram como texto literal,
-    # e o link só aparece se for uma execução do Actions deste repositório.
-    _exec = texto_markdown_seguro(_prov.get("executor", "?"))
-    _url = url_execucao_segura(_prov.get("execucao_url"))
-    _hash = texto_markdown_seguro(normalizar_espacos(_prov.get("sha256_temas") or "")[:12])
-    st.caption(
-        f"Proveniência do snapshot: coletado por {_exec}"
-        + (f" ([ver execução]({_url}))" if _url else "")
-        + (f" · sha256 {_hash}…" if _hash else "")
+    # Bloco HTML, não st.caption: em Markdown o autolink do GFM tornaria
+    # clicável um endereço no executor ou no hash (ver lib/radar_cartao.py).
+    st.markdown(
+        html_proveniencia(_prov.get("executor", "?"), _prov.get("execucao_url"),
+                          _prov.get("sha256_temas")),
+        unsafe_allow_html=True,
     )
 else:
     st.caption("Proveniência detalhada é gravada a partir da próxima coleta (ADR 006). "
@@ -280,7 +276,7 @@ elif secao == "📋 Por Tema":
 
         termos = tema_data.get("termos_monitorados", [])
         if termos:
-            st.markdown("**Termos monitorados:** " + ", ".join(texto_markdown_seguro(t) for t in termos))
+            st.markdown(html_termos_monitorados(termos), unsafe_allow_html=True)
 
         for fonte in ["senado", "camara", "lexml"]:
             itens = tema_data.get(fonte, [])

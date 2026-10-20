@@ -6,12 +6,12 @@ da Câmara e do LexML. A página do radar insere esse texto em HTML com
 unsafe_allow_html=True; por isso o texto é escapado e o link só é exibido se
 apontar para uma das fontes oficiais.
 
-Texto que entra em Markdown (st.markdown, st.caption) passa por
-texto_markdown_seguro, que escapa HTML e a sintaxe de Markdown.
+Dado externo não é exibido via Markdown: escapar a sintaxe com barra
+invertida não desliga o autolink do GFM (www.x.com, a@x.com) e deixa a barra
+visível. Os blocos são montados em HTML por lib/radar_cartao.py.
 """
 
 import re
-from html import escape
 from urllib.parse import urlsplit
 
 # Domínios das fontes do radar (lib/radar.py). Aceita o domínio exato e
@@ -81,19 +81,3 @@ _ESPACOS = re.compile(r"[ \t\n\r\f\v]+")
 def normalizar_espacos(texto) -> str:
     """Uma linha só: impede a linha em branco que encerra um bloco HTML no Markdown."""
     return _ESPACOS.sub(" ", str(texto)).strip(" ")
-
-
-# Caracteres com função no Markdown do Streamlit. Além da lista pedida
-# (\ ` * _ {} [] () # + - . ! | > <), ~ (riscado, GFM) e $ (fórmula LaTeX,
-# recurso do Streamlit).
-_MARKDOWN = frozenset("\\`*_{}[]()#+-.!|<>~$")
-
-
-def texto_markdown_seguro(texto) -> str:
-    """Texto exibido literalmente em Markdown: sem tag, link, imagem ou ênfase.
-
-    quote=False: em Markdown não há atributo a proteger, e a entidade &#x27;
-    da aspa simples teria o # escapado e apareceria crua na tela.
-    """
-    t = escape(normalizar_espacos(texto), quote=False)
-    return "".join("\\" + c if c in _MARKDOWN else c for c in t)
