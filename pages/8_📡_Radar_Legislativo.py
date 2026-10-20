@@ -7,6 +7,7 @@ from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, T
 from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
 from lib.radar_cartao import html_cartao
+from lib.seguranca import normalizar_espacos, texto_markdown_seguro, url_execucao_segura
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Radar Legislativo",
@@ -150,9 +151,11 @@ for _col, (_f, _decl) in zip(_cols, ESTADO_FONTES.items()):
         unsafe_allow_html=True,
     )
 if _prov:
-    _exec = _prov.get("executor", "?")
-    _url = _prov.get("execucao_url")
-    _hash = (_prov.get("sha256_temas") or "")[:12]
+    # st.caption interpreta Markdown: executor e hash entram como texto literal,
+    # e o link só aparece se for uma execução do Actions deste repositório.
+    _exec = texto_markdown_seguro(_prov.get("executor", "?"))
+    _url = url_execucao_segura(_prov.get("execucao_url"))
+    _hash = texto_markdown_seguro(normalizar_espacos(_prov.get("sha256_temas") or "")[:12])
     st.caption(
         f"Proveniência do snapshot: coletado por {_exec}"
         + (f" ([ver execução]({_url}))" if _url else "")
@@ -277,7 +280,7 @@ elif secao == "📋 Por Tema":
 
         termos = tema_data.get("termos_monitorados", [])
         if termos:
-            st.markdown(f"**Termos monitorados:** {', '.join(termos)}")
+            st.markdown("**Termos monitorados:** " + ", ".join(texto_markdown_seguro(t) for t in termos))
 
         for fonte in ["senado", "camara", "lexml"]:
             itens = tema_data.get(fonte, [])

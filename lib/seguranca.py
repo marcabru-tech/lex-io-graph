@@ -5,8 +5,13 @@ O radar grava em data/radar_legislativo.json texto vindo das APIs do Senado,
 da Câmara e do LexML. A página do radar insere esse texto em HTML com
 unsafe_allow_html=True; por isso o texto é escapado e o link só é exibido se
 apontar para uma das fontes oficiais.
+
+Texto que entra em Markdown (st.markdown, st.caption) passa por
+texto_markdown_seguro, que escapa HTML e a sintaxe de Markdown.
 """
 
+import re
+from html import escape
 from urllib.parse import urlsplit
 
 # Domínios das fontes do radar (lib/radar.py). Aceita o domínio exato e
@@ -46,3 +51,49 @@ def url_segura(url) -> str | None:
     if not _host_permitido(host):
         return None
     return url
+
+
+# Execução do workflow que gravou o snapshot (updater.montar_proveniencia).
+# [0-9] e não \d: em str, \d aceita dígitos de qualquer escrita Unicode.
+# fullmatch e não $: $ aceita uma quebra de linha no fim.
+_EXECUCAO = re.compile(r"https://github\.com/marcabru-tech/lex-io-graph/actions/runs/[0-9]+")
+
+
+def url_execucao_segura(url) -> str | None:
+    """Devolve a URL se for exatamente uma execução do Actions deste repositório."""
+    if not isinstance(url, str) or not _EXECUCAO.fullmatch(url):
+        return None
+    try:
+        partes = urlsplit(url)
+    except ValueError:
+        return None
+    if (partes.scheme, partes.netloc) != ("https", "github.com") or partes.query or partes.fragment:
+        return None
+    return url
+
+
+# Sequências de espaço, tabulação e quebra de linha. Não inclui o espaço não
+# separável (U+00A0): ele não forma linha em branco no Markdown e, em HTML,
+# não é colapsado, então trocá-lo mudaria o visual.
+_ESPACOS = re.compile(r"[ \t\n\r\f\v]+")
+
+
+def normalizar_espacos(texto) -> str:
+    """Uma linha só: impede a linha em branco que encerra um bloco HTML no Markdown."""
+    return _ESPACOS.sub(" ", str(texto)).strip(" ")
+
+
+# Caracteres com função no Markdown do Streamlit. Além da lista pedida
+# (\ ` * _ {} [] () # + - . ! | > <), ~ (riscado, GFM) e $ (fórmula LaTeX,
+# recurso do Streamlit).
+_MARKDOWN = frozenset("\\`*_{}[]()#+-.!|<>~$")
+
+
+def texto_markdown_seguro(texto) -> str:
+    """Texto exibido literalmente em Markdown: sem tag, link, imagem ou ênfase.
+
+    quote=False: em Markdown não há atributo a proteger, e a entidade &#x27;
+    da aspa simples teria o # escapado e apareceria crua na tela.
+    """
+    t = escape(normalizar_espacos(texto), quote=False)
+    return "".join("\\" + c if c in _MARKDOWN else c for c in t)
