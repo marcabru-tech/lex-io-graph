@@ -172,7 +172,7 @@ elif secao == "🌐 Direito Comparado Glocal":
             "titulo": "Proteção de dados pessoais",
             "normas": [
                 ("🇧🇷 Brasil", "LGPD — Lei Geral de Proteção de Dados Pessoais (Lei 13.709/2018)", "Inspirada no GDPR. ANPD como autoridade supervisora. Efeito territorial com exceções."),
-                ("🇪🇺 União Europeia", "GDPR — General Data Protection Regulation (2016)", "Efeito extraterritorial — empresas brasileiras com usuários europeus estão sujeitas. Multas de até 4% do faturamento global."),
+                ("🇪🇺 União Europeia", "GDPR — General Data Protection Regulation (2016)", "Efeito extraterritorial — empresas brasileiras que oferecem bens ou serviços a titulares de dados na União, ou controlam o comportamento deles ali, estão sujeitas (art. 3º, n.º 2). Multas de até 4% do faturamento global."),
                 ("🇺🇸 Califórnia/EUA", "CCPA — California Consumer Privacy Act (2018)", "Direito à não venda de dados pessoais. Abordagem setorial americana — sem lei federal equivalente ao GDPR."),
             ]
         },

@@ -328,7 +328,7 @@ GLOSSARIO = [
         "latim": "Neologismo: global + local (Roland Robertson, sociólogo escocês, 1992)",
         "definicao": "Dinâmica pela qual fenômenos globais se manifestam com características locais e vice-versa. No direito: normas internacionais (GDPR, EU AI Act) que impactam o ordenamento brasileiro e normas brasileiras (LGPD, Marco Civil) com efeito extraterritorial.",
         "corrente": "Sociologia jurídica / Direito internacional comparado",
-        "exemplo_brasil": "LGPD e GDPR: empresas brasileiras com usuários europeus sujeitas a ambas simultaneamente — o glocal como realidade normativa cotidiana"
+        "exemplo_brasil": "LGPD e GDPR: empresas brasileiras que oferecem bens ou serviços a titulares de dados na União, ou controlam o comportamento deles ali, sujeitas a ambas simultaneamente (GDPR, art. 3º, n.º 2) — o glocal como realidade normativa cotidiana"
     },
     {
         "termo": "Titular de dados",
