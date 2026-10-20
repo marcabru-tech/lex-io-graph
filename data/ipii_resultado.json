@@ -947,7 +947,7 @@
       "source": "marco_civil",
       "target": "stj_resp_plat",
       "tipo": "interpreta",
-      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucionalidade parcial declarada pelo STF (Tema 987, jun./2025).",
+      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada como interpretação do art. 19.",
       "artigos": "REsp 1.907.924 ↔ RE 1.037.396"
     },
     {
@@ -1076,7 +1076,7 @@
     {
       "par": "marco_civil ↔ stj_resp_plat",
       "tipo": "interpreta",
-      "descricao": "STJ interpretou o art. 19 do Marco Civil: dever de remoção após notificação. Precedente a ser relido após inconstitucion"
+      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada "
     },
     {
       "par": "cf88 ↔ stf_tema987",

@@ -398,7 +398,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Ação direta de inconstitucionalidade que questiona dispositivos do Marco Civil da Internet. O resultado do julgamento e a tese dele decorrente estão em conferência em fonte oficial; este registro não deve ser citado como entendimento assentado.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "internet",
         "dados_pessoais"
@@ -432,7 +432,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "dados_pessoais"
       ],
@@ -471,7 +471,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "internet",
         "menores"
