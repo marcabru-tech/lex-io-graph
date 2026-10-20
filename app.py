@@ -102,7 +102,7 @@ with col_al1:
 **STF — Tema 987 (RE 1.037.396)**
 Art. 19 do Marco Civil declarado **parcialmente inconstitucional** (jun./2025).
 **Tese definitiva fixada em 17/06/2026** (Temas 987 e 533), após julgamento dos embargos.
-Deveres regulamentados pelos **Decretos 12.975 e 12.976/2026** (vigentes desde 20/07/2026).
+O **Decreto 12.975/2026** alterou o regulamento do Marco Civil (Decreto 8.771/2016); o **Decreto 12.976/2026** trata da proteção de mulheres no ambiente digital (ambos vigentes desde 20/07/2026).
 """)
 
 with col_al2:

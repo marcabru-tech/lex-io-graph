@@ -549,7 +549,7 @@
         "Notice-and-takedown extrajudicial",
         "Dados de anúncios para responsabilização"
       ],
-      "ementa": "Atualiza a regulamentação do Marco Civil da Internet (revogando parcialmente o Decreto 8.771/2016) para operacionalizar a decisão do STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
+      "ementa": "Altera o Decreto 8.771/2016, que regulamenta o Marco Civil da Internet (Lei 12.965/2014), e nele inclui capítulo sobre a responsabilidade dos provedores de aplicações de internet, matéria julgada pelo STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -558,7 +558,7 @@
       ],
       "orgao": "Presidência da República / ANPD",
       "ano": 2026,
-      "historia": "Decreto 12.975, de 20 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Altera o Decreto 8.771/2016. Atribui à ANPD (Agência Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
+      "historia": "Decreto 12.975, de 20 de maio de 2026, altera o Decreto 8.771/2016, que regulamenta o Marco Civil da Internet (Lei 12.965/2014), após a decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Atribui à ANPD (Agência Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
       "direito_comparado": "O Decreto 12.975/2026 converge com o DSA — Digital Services Act (União Europeia, 2022): ambos impõem deveres proativos de moderação a plataformas digitais sem exigir ordem judicial específica. Diverge do modelo americano da Section 230 do CDA — Communications Decency Act (EUA, 1996), que mantém imunidade ampla das plataformas. Glocal (global + local, Robertson, 1990s): o Brasil está convergindo para o modelo europeu via decreto executivo, sem aprovação legislativa — caminho distinto do DSA, que passou pelo Parlamento Europeu.",
       "autores": [
         {
@@ -601,7 +601,7 @@
         "Responsabilidade de plataformas por violência de gênero online",
         "Integração com Pacto Nacional Brasil Contra o Feminicídio"
       ],
-      "ementa": "Reforça a proteção das mulheres no ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
+      "ementa": "Estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
       "status": "vigente",
       "temas": [
         "internet",

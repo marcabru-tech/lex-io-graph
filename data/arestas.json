@@ -123,14 +123,14 @@
       "source": "stf_tema987",
       "target": "decreto_12975_2026",
       "tipo": "regulamenta",
-      "descricao": "O Decreto 12.975/2026 operacionaliza a decisão do STF no Tema 987, definindo os deveres proativos das plataformas e atribuindo à ANPD competência para fiscalizar o Marco Civil.",
+      "descricao": "Após a decisão do STF no Tema 987, o Decreto 12.975/2026 incluiu no regulamento do Marco Civil (Decreto 8.771/2016) capítulo sobre a responsabilidade dos provedores de aplicações, definindo os deveres proativos das plataformas e atribuindo à ANPD competência para fiscalizar o Marco Civil.",
       "artigos": "RE 1.037.396 → Decreto 12.975/2026"
     },
     {
       "source": "marco_civil",
       "target": "decreto_12975_2026",
       "tipo": "regulamenta",
-      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
+      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, alterando o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
       "artigos": "MCI Lei 12.965/2014 → Decreto 12.975/2026"
     },
     {

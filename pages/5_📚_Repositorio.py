@@ -179,7 +179,7 @@ elif secao == "🌐 Direito Comparado Glocal":
         {
             "titulo": "Regulação de plataformas digitais",
             "normas": [
-                ("🇧🇷 Brasil", "Marco Civil art. 19 + Decretos 12.975 e 12.976/2026", "Art. 19 parcialmente inconstitucional (STF Tema 987). Regime em transição — 24+ PDLs da oposição."),
+                ("🇧🇷 Brasil", "Marco Civil art. 19 + Decretos 12.975 e 12.976/2026", "Art. 19 parcialmente inconstitucional (STF Tema 987). O Decreto 12.975 altera o regulamento do Marco Civil; o 12.976 trata da proteção de mulheres no ambiente digital. Regime em transição — 24+ PDLs da oposição."),
                 ("🇪🇺 União Europeia", "DSA — Digital Services Act (2022)", "Deveres proativos para plataformas de grande porte. Notice-and-takedown sem ordem judicial."),
                 ("🇺🇸 EUA", "Section 230 — Communications Decency Act (1996)", "Imunidade ampla — sob pressão similar ao art. 19 brasileiro."),
             ]
