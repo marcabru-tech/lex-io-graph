@@ -187,8 +187,8 @@ elif secao == "🌐 Direito Comparado Glocal":
         {
             "titulo": "Regulação de IA (Inteligência Artificial)",
             "normas": [
-                ("🇧🇷 Brasil", "PL 2.338/2023 — Marco Legal da IA (em tramitação)", "Abordagem por risco. Inspirado no EU AI Act. Mais avançado da América Latina."),
-                ("🇪🇺 União Europeia", "EU AI Act (2024)", "Primeiro marco regulatório de IA do mundo. Proibições absolutas para IA de alto risco. Transparência algorítmica obrigatória."),
+                ("🇧🇷 Brasil", "PL 2.338/2023 — Marco Legal da IA (em tramitação)", "Abordagem por risco. Inspirado no EU AI Act."),
+                ("🇪🇺 União Europeia", "EU AI Act (2024)", "Um dos primeiros marcos regulatórios abrangentes de IA. Proíbe práticas específicas de IA (art. 5º) e estabelece requisitos de gestão de riscos, documentação, supervisão e conformidade para sistemas classificados como de alto risco. Transparência algorítmica obrigatória."),
                 ("🇨🇳 China", "Regulamento de IA Generativa (2023)", "Controle centralizado — alinhamento com valores socialistas. Registro obrigatório de modelos de IA."),
                 ("🕊️ Vaticano", "Magnifica Humanitas — Leão XIV (25/05/2026)", "Dignidade humana como limite intransponível. IA deve ser 'desarmada' de lógicas de dominação."),
             ]
