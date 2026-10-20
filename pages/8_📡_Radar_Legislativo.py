@@ -1,10 +1,12 @@
 import streamlit as st
 import json
+from html import escape
 from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, THEMES
 from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
+from lib.radar_cartao import html_cartao
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Radar Legislativo",
@@ -137,12 +139,12 @@ for _col, (_f, _decl) in zip(_cols, ESTADO_FONTES.items()):
     if _coletados is not None:
         _linhas.append(f"{_coletados} coletado(s) na última execução")
     if _herdados:
-        _linhas.append(f"herdado(s) da coleta anterior em: {', '.join(_herdados)}")
+        _linhas.append(f"herdado(s) da coleta anterior em: {escape(', '.join(map(str, _herdados)))}")
     _cor = _COR_ESTADO.get(_estado, "#8a8478")
     _col.markdown(
         f"<div style='border:1px solid {_cor}55;border-left:3px solid {_cor};border-radius:4px;"
         f"padding:8px 12px;font-size:12px'>"
-        f"<b>{_NOME_FONTE.get(_f, _f)}</b> · <span style='color:{_cor}'>{_estado.upper()}</span><br>"
+        f"<b>{_NOME_FONTE.get(_f, _f)}</b> · <span style='color:{_cor}'>{escape(str(_estado).upper())}</span><br>"
         f"<span style='color:#b8b2a6'>{'<br>'.join(_linhas)}</span><br>"
         f"<span style='color:#706a60;font-size:11px'>{_decl['nota']}</span></div>",
         unsafe_allow_html=True,
@@ -206,23 +208,8 @@ except Exception:
 
 
 def render_item(item: dict, novidade: bool = False):
-    no_corpus = norma_no_corpus(item, _INDICE_CORPUS)
-    if no_corpus:
-        rotulo = no_corpus.get("sigla") or no_corpus.get("nome")
-        badge = (f'<span style="margin-left:8px;padding:2px 8px;border-radius:999px;font-size:10px;'
-                 f'background:rgba(46,204,113,0.12);border:1px solid rgba(46,204,113,0.35);color:#2ecc71;">'
-                 f'JÁ NO GRAFO · {rotulo}</span>')
-    else:
-        badge = '<span class="novidade-badge">NOVO</span>' if novidade else ""
-    url = item.get("url", "")
-    link = f'<a href="{url}" target="_blank" style="color:#1abc9c;font-size:10px;">↗ ver fonte</a>' if url else ""
-    st.markdown(f"""
-<div class="radar-card">
-  <div class="radar-sigla">{item.get('sigla', 'Sem sigla')}{badge} {link}</div>
-  <div class="radar-fonte">{item.get('fonte', '')} · Detectado: {(item.get('data_deteccao') or '')[:10]}</div>
-  <div class="radar-ementa">{item.get('ementa', 'Sem ementa disponível')}</div>
-  <div class="radar-status">Status: {item.get('status', 'Desconhecido')}</div>
-</div>""", unsafe_allow_html=True)
+    st.markdown(html_cartao(item, norma_no_corpus(item, _INDICE_CORPUS), novidade),
+                unsafe_allow_html=True)
 
 # =============================================================
 # SEÇÃO 1 — Novidades
@@ -268,11 +255,11 @@ elif secao == "📋 Por Tema":
             chips_v = " ".join(
                 f'<span style="display:inline-block;padding:3px 10px;margin:2px;border-radius:999px;'
                 f'background:rgba(212,168,83,0.15);border:1px solid rgba(212,168,83,0.35);color:#d4a853;'
-                f'font-size:12px;">{THEMES.get(v, v)}</span>' for v in vetores)
+                f'font-size:12px;">{escape(str(THEMES.get(v, v)))}</span>' for v in vetores)
             chips_n = " ".join(
                 f'<span style="display:inline-block;padding:3px 10px;margin:2px;border-radius:999px;'
                 f'background:rgba(61,200,230,0.10);border:1px solid rgba(61,200,230,0.30);color:#3dc8e6;'
-                f'font-size:12px;">{n.get("sigla") or n["nome"]}</span>'
+                f'font-size:12px;">{escape(str(n.get("sigla") or n["nome"]))}</span>'
                 for n in sorted(rel, key=lambda n: n.get("sigla") or n["nome"]))
             st.markdown(
                 '<div style="border:1px solid rgba(212,168,83,0.35);border-radius:8px;padding:12px 14px;'
@@ -334,7 +321,7 @@ elif secao == "🔍 Buscar":
             st.markdown(f"**{len(encontrados)} resultado(s) para '{busca}'**")
             for item in encontrados:
                 st.markdown(
-                    f'<div class="tema-header">{TEMA_LABELS.get(item.get("tema",""), item.get("tema",""))}</div>',
+                    f'<div class="tema-header">{escape(str(TEMA_LABELS.get(item.get("tema",""), item.get("tema",""))))}</div>',
                     unsafe_allow_html=True
                 )
                 render_item(item)
