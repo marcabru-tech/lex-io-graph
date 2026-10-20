@@ -313,7 +313,7 @@
         "1.5.4.4 alínea e",
         "Anexo I"
       ],
-      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. Inclui IA e algoritmos como fatores de risco.",
+      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. O texto da NR-1 não menciona inteligência artificial nem algoritmos. Interpretação do Lexiograph: riscos ligados à organização do trabalho mediada por sistemas algorítmicos podem exigir avaliação no PGR, como fatores de risco psicossociais relacionados ao trabalho (item 1.5.3.1.4).",
       "status": "vigente",
       "temas": [
         "trabalho",
@@ -322,7 +322,7 @@
       ],
       "orgao": "Ministério do Trabalho e Emprego",
       "ano": 2026,
-      "historia": "NR-1 (Norma Regulamentadora 1) — norma geral de segurança e saúde no trabalho, base do sistema de NRs do Brasil. Portaria MTE (Ministério do Trabalho e Emprego) 1.419/2024 incluiu obrigatoriamente os FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva desde 26/05/2026 (Portaria MTE 765/2025 encerrou período educativo). Primeira norma trabalhista brasileira a incluir explicitamente IA (Inteligência Artificial) e algoritmos como fatores de risco psicossocial.",
+      "historia": "NR-1 (Norma Regulamentadora 1) — norma geral de segurança e saúde no trabalho, base do sistema de NRs do Brasil. Portaria MTE (Ministério do Trabalho e Emprego) 1.419/2024 incluiu obrigatoriamente os FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva desde 26/05/2026 (Portaria MTE 765/2025 encerrou período educativo). O texto da NR-1 não menciona inteligência artificial nem algoritmos. Interpretação do Lexiograph: riscos ligados à organização do trabalho mediada por sistemas algorítmicos podem exigir avaliação no PGR, como fatores de risco psicossociais relacionados ao trabalho (item 1.5.3.1.4).",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (União Europeia, 2024) classifica sistemas de IA de RH como alto risco; OSHA (Occupational Safety and Health Administration — EUA) não tem norma equivalente sobre riscos psicossociais; ISO 45003:2021 (gestão de riscos psicossociais) é a referência internacional que influenciou a revisão da NR-1.",
       "autores": [
         {
@@ -730,7 +730,7 @@
       "orgao": "Santa Sé / Vaticano",
       "ano": 2026,
       "historia": "Apresentada em 25/05/2026 na Sala Nova do Sínodo, no Vaticano. Papa Leão XIV (primeiro papa norte-americano, eleito maio/2025) escolheu o nome Leão XIV pela continuidade com Leão XIII, autor da Rerum Novarum (1891) — que enfrentou os dilemas sociais da Revolução Industrial. O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic. Convergência histórica: na mesma semana de maio/2026, o Vaticano, o STF e o Executivo brasileiro convergiram independentemente no mesmo campo normativo sobre IA e plataformas digitais.",
-      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais de IA no trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
+      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais relacionados ao trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
       "autores": [
         {
           "nome": "Papa Leão XIV (Robert Francis Prevost)",

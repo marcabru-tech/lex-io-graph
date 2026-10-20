@@ -220,10 +220,10 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "A CLT (1943) é o desdobramento infraconstitucional dessa virada social. "
                 "Direitos trabalhistas como direitos fundamentais — "
                 "Ihering (1818–1892) aplicado: o direito serve a fins sociais concretos. "
-                "Pancronia: a NR-1 com riscos psicossociais de IA (2026) é herdeira "
+                "Pancronia: a NR-1 com riscos psicossociais (2026) é herdeira "
                 "direta dos direitos trabalhistas de 1934."
             ),
-            "conexao_digital": "Direitos trabalhistas → CLT (1943) → NR-1 (2026): arco de 92 anos de proteção do trabalhador, agora incluindo riscos de IA"
+            "conexao_digital": "Direitos trabalhistas → CLT (1943) → NR-1 (2026): arco de 92 anos de proteção do trabalhador, agora incluindo riscos psicossociais"
         },
         {
             "ano": 1937,
