@@ -247,10 +247,12 @@ elif secao == "⚠️ Gap do engine":
   {f'<div class="aresta-temas">{g["descricao"]}</div>' if g.get('descricao') else ''}
 </div>""", unsafe_allow_html=True)
     st.markdown(
-        "**Diagnóstico:** o engine é forte em interseções temáticas e hierárquicas (detecta ~87%). "
-        "É fraco em conexões institucionais orgânicas — `regulamenta` quando um decreto "
-        "atribui competência a um órgão, não quando regula uma matéria temática. "
-        "Solução prevista na próxima versão do engine: dimensão **vínculo institucional**."
+        "**IPII experimental — apoio à curadoria.** O motor sugere relações com base nas "
+        "dimensões implementadas; uma pontuação não comprova, por si só, uma relação jurídica. "
+        "O curador deve verificar cada sugestão em fontes primárias antes de aceitá-la. "
+        "A precisão e a cobertura apresentadas no topo desta página vêm do relatório atual "
+        "`data/ipii_resultado.json` e são atualizadas quando o relatório é regenerado. "
+        "**O motor sugere; o curador decide.**"
     )
 
 # =============================================================
