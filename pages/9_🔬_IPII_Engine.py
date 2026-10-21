@@ -2,6 +2,7 @@
 # Todos os direitos reservados.
 import streamlit as st
 import json
+from html import escape
 from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
@@ -101,6 +102,9 @@ if not resultado:
 
 # ---- Métricas ----
 meta = resultado.get("metadata", {})
+# O resultado do engine contabiliza arestas; a quantidade de normas vem do corpus.
+with open(Path("data/normas.json"), encoding="utf-8") as f:
+    total_normas_corpus = len(json.load(f).get("nodes", []))
 gerado = meta.get("gerado_em", "")
 if gerado:
     try:
@@ -113,7 +117,7 @@ st.markdown(f"""
 <div class="metric-row">
   <div class="metric-box">
     <div class="metric-label">Normas analisadas</div>
-    <div class="metric-value">{resultado.get('total_existentes', 0) + resultado.get('novas', 0)}</div>
+    <div class="metric-value">{total_normas_corpus}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Arestas sugeridas</div>
@@ -146,7 +150,7 @@ st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 # ---- Navegação ----
 secao = st.radio(
     "Seção",
-    ["🆕 Novas arestas descobertas", "✅ Arestas confirmadas", "⚠️ Gap do engine"],
+    ["🆕 Novas arestas descobertas", "✅ Arestas confirmadas", "⚠️ Gap do engine", "🚫 Fora do IPII"],
     horizontal=True,
     label_visibility="collapsed"
 )
@@ -247,6 +251,29 @@ elif secao == "⚠️ Gap do engine":
         "atribui competência a um órgão, não quando regula uma matéria temática. "
         "Solução prevista na próxima versão do engine: dimensão **vínculo institucional**."
     )
+
+# =============================================================
+elif secao == "🚫 Fora do IPII":
+    fora = resultado.get("fora_do_ipii", [])
+    st.markdown(f"## {len(fora)} aresta(s) fora do IPII")
+    st.markdown(
+        "Relações existentes que envolvem ao menos uma norma excluída da formação de pares "
+        "(por exemplo, decisão judicial em conferência). Permanecem visíveis para rastreabilidade, "
+        "mas não entram nas métricas de precisão/cobertura nem são tratadas como falhas de detecção."
+    )
+    if not fora:
+        st.info("Nenhuma aresta fora do IPII neste relatório.")
+    for item in fora:
+        par = escape(str(item.get("par", "Par não identificado")))
+        tipo_original = str(item.get("tipo", ""))
+        tipo = escape(TIPO_LABELS.get(tipo_original, tipo_original or "Não especificado"))
+        descricao = escape(str(item.get("descricao") or ""))
+        st.markdown(f"""
+<div class="tier-card tier-3">
+  <div class="aresta-par">{par}</div>
+  <div class="aresta-tipo">Tipo registrado: {tipo}</div>
+  <div class="aresta-temas">{descricao}</div>
+</div>""", unsafe_allow_html=True)
 
 st.markdown(
     '<div class="principio">O engine alerta — o curador decide · IPII Engine © 2026 Hubstry Deep Tech</div>',
