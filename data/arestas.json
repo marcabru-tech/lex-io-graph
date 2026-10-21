@@ -67,7 +67,7 @@
       "source": "pl_ia",
       "target": "nr1",
       "tipo": "intersecao",
-      "descricao": "IA no ambiente de trabalho: PL 2.338 classifica sistemas de alto risco; NR-1 exige avaliação de riscos psicossociais incluindo automação e monitoramento.",
+      "descricao": "IA no ambiente de trabalho: PL 2.338 classifica sistemas de alto risco; NR-1 exige que o gerenciamento de riscos abranja os fatores de risco psicossociais relacionados ao trabalho (item 1.5.3.1.4), o que, na leitura do Lexiograph, pode alcançar automação e monitoramento.",
       "artigos": "PL 2.338 art. 14 ↔ NR-1 item 1.5.3"
     },
     {
@@ -123,14 +123,14 @@
       "source": "stf_tema987",
       "target": "decreto_12975_2026",
       "tipo": "regulamenta",
-      "descricao": "O Decreto 12.975/2026 operacionaliza a decisão do STF no Tema 987, definindo os deveres proativos das plataformas e atribuindo à ANPD competência para fiscalizar o Marco Civil.",
+      "descricao": "Após a decisão do STF no Tema 987, o Decreto 12.975/2026 incluiu no regulamento do Marco Civil (Decreto 8.771/2016) capítulo sobre a responsabilidade dos provedores de aplicações, definindo os deveres proativos das plataformas e atribuindo à ANPD competência para fiscalizar o Marco Civil.",
       "artigos": "RE 1.037.396 → Decreto 12.975/2026"
     },
     {
       "source": "marco_civil",
       "target": "decreto_12975_2026",
       "tipo": "regulamenta",
-      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, revogando parcialmente o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
+      "descricao": "Decreto 12.975/2026 atualiza a regulamentação do Marco Civil da Internet, alterando o Decreto 8.771/2016 e incorporando o regime pós-Tema 987.",
       "artigos": "MCI Lei 12.965/2014 → Decreto 12.975/2026"
     },
     {
@@ -207,7 +207,7 @@
       "source": "magnifica_humanitas",
       "target": "nr1",
       "tipo": "complementaridade",
-      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu riscos psicossociais de IA no PGR (Programa de Gerenciamento de Riscos).",
+      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu os fatores de risco psicossociais relacionados ao trabalho no PGR (Programa de Gerenciamento de Riscos).",
       "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
     },
     {

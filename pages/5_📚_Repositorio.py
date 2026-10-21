@@ -172,14 +172,14 @@ elif secao == "🌐 Direito Comparado Glocal":
             "titulo": "Proteção de dados pessoais",
             "normas": [
                 ("🇧🇷 Brasil", "LGPD — Lei Geral de Proteção de Dados Pessoais (Lei 13.709/2018)", "Inspirada no GDPR. ANPD como autoridade supervisora. Efeito territorial com exceções."),
-                ("🇪🇺 União Europeia", "GDPR — General Data Protection Regulation (2016)", "Efeito extraterritorial — empresas brasileiras com usuários europeus estão sujeitas. Multas de até 4% do faturamento global."),
+                ("🇪🇺 União Europeia", "GDPR — General Data Protection Regulation (2016)", "Efeito extraterritorial — empresas brasileiras que oferecem bens ou serviços a titulares de dados na União, ou controlam o comportamento deles ali, estão sujeitas (art. 3º, n.º 2). Multas de até 4% do faturamento global."),
                 ("🇺🇸 Califórnia/EUA", "CCPA — California Consumer Privacy Act (2018)", "Direito à não venda de dados pessoais. Abordagem setorial americana — sem lei federal equivalente ao GDPR."),
             ]
         },
         {
             "titulo": "Regulação de plataformas digitais",
             "normas": [
-                ("🇧🇷 Brasil", "Marco Civil art. 19 + Decretos 12.975 e 12.976/2026", "Art. 19 parcialmente inconstitucional (STF Tema 987). Regime em transição — 24+ PDLs da oposição."),
+                ("🇧🇷 Brasil", "Marco Civil art. 19 + Decretos 12.975 e 12.976/2026", "Art. 19 parcialmente inconstitucional (STF Tema 987). O Decreto 12.975 altera o regulamento do Marco Civil; o 12.976 trata da proteção de mulheres no ambiente digital. Regime em transição — 24+ PDLs da oposição."),
                 ("🇪🇺 União Europeia", "DSA — Digital Services Act (2022)", "Deveres proativos para plataformas de grande porte. Notice-and-takedown sem ordem judicial."),
                 ("🇺🇸 EUA", "Section 230 — Communications Decency Act (1996)", "Imunidade ampla — sob pressão similar ao art. 19 brasileiro."),
             ]
@@ -187,8 +187,8 @@ elif secao == "🌐 Direito Comparado Glocal":
         {
             "titulo": "Regulação de IA (Inteligência Artificial)",
             "normas": [
-                ("🇧🇷 Brasil", "PL 2.338/2023 — Marco Legal da IA (em tramitação)", "Abordagem por risco. Inspirado no EU AI Act. Mais avançado da América Latina."),
-                ("🇪🇺 União Europeia", "EU AI Act (2024)", "Primeiro marco regulatório de IA do mundo. Proibições absolutas para IA de alto risco. Transparência algorítmica obrigatória."),
+                ("🇧🇷 Brasil", "PL 2.338/2023 — Marco Legal da IA (em tramitação)", "Abordagem por risco. Inspirado no EU AI Act."),
+                ("🇪🇺 União Europeia", "EU AI Act (2024)", "Um dos primeiros marcos regulatórios abrangentes de IA. Proíbe práticas específicas de IA (art. 5º) e estabelece requisitos de gestão de riscos, documentação, supervisão e conformidade para sistemas classificados como de alto risco. Transparência algorítmica obrigatória."),
                 ("🇨🇳 China", "Regulamento de IA Generativa (2023)", "Controle centralizado — alinhamento com valores socialistas. Registro obrigatório de modelos de IA."),
                 ("🕊️ Vaticano", "Magnifica Humanitas — Leão XIV (25/05/2026)", "Dignidade humana como limite intransponível. IA deve ser 'desarmada' de lógicas de dominação."),
             ]

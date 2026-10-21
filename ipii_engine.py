@@ -31,7 +31,8 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent))
 
 from lib.ipii.tokenizer import tokenizar_corpus
-from lib.ipii.matcher import calcular_todas_intersecoes, THRESHOLD_FRACA
+from lib.ipii.matcher import (calcular_todas_intersecoes, excluida_do_ipii,
+                              STATUS_EXCLUIDOS_DO_IPII, THRESHOLD_FRACA)
 from lib.ipii.validator import validar_arestas, filtrar_por_tier
 
 DATA_DIR = Path("data")
@@ -67,6 +68,10 @@ def main():
     print("Tokenizando corpus (GuruMatrix 5D)...")
     tokens = tokenizar_corpus(normas)
     print(f"  Tokens gerados: {len(tokens)}")
+    excluidas = frozenset(i for i, t in tokens.items() if excluida_do_ipii(t))
+    if excluidas:
+        print(f"  Fora do IPII (status {', '.join(STATUS_EXCLUIDOS_DO_IPII)}): "
+              f"{', '.join(sorted(excluidas))}")
 
     # 2. Matching
     print("\nCalculando interseções par-a-par...")
@@ -75,7 +80,7 @@ def main():
 
     # 3. Validar
     print("\nValidando contra arestas existentes...")
-    resultado = validar_arestas(sugeridas, arestas)
+    resultado = validar_arestas(sugeridas, arestas, excluidas)
 
     # 4. Relatório
     print(f"\n{'='*60}")
@@ -116,6 +121,8 @@ def main():
         "gerado_em": datetime.now().isoformat(),
         "threshold": args.threshold,
         "tier_filtro": args.tier,
+        "status_excluidos": list(STATUS_EXCLUIDOS_DO_IPII),
+        "normas_excluidas": sorted(excluidas),
         "engine": "IPII Engine v1.0",
         "propriedade": "Hubstry Deep Tech © 2026",
         "principio": "O engine alerta, o curador decide.",

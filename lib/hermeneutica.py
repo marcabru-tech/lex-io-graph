@@ -219,13 +219,16 @@ FONTES_DIREITO = {
             "hierarquia": 2,
             "descricao": (
                 "Conjunto de decisões reiteradas dos tribunais sobre determinada matéria. "
-                "No Brasil: súmulas vinculantes do STF têm força de lei; "
+                "No Brasil: súmulas vinculantes do STF têm efeito vinculante para os "
+                "demais órgãos do Judiciário e para a administração pública (CF, art. 103-A); "
                 "repercussão geral vincula todos os tribunais; "
-                "precedentes do STJ orientam sem vincular formalmente. "
+                "juízes e tribunais devem observar os acórdãos do STJ em recursos especiais "
+                "repetitivos (CPC, art. 927, III); os demais precedentes do STJ orientam "
+                "sem vincular formalmente. "
                 "Aproximação crescente com o common law via CPC/2015."
             ),
             "exemplo_digital": "STF Tema 987 (art. 19 Marco Civil)",
-            "latim": "Stare decisis — respeitar o que foi decidido (common law); no Brasil: força vinculante restrita às súmulas"
+            "latim": "Stare decisis — respeitar o que foi decidido (common law); no Brasil: efeito vinculante das súmulas vinculantes (CF, art. 103-A) e dever de observância dos precedentes do CPC, art. 927"
         },
         {
             "nome": "Doutrina (produção científica dos juristas)",

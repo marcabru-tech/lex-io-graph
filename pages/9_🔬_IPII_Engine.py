@@ -2,6 +2,7 @@
 # Todos os direitos reservados.
 import streamlit as st
 import json
+from html import escape
 from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
@@ -77,7 +78,8 @@ Nenhuma aresta é adicionada automaticamente ao grafo.
 """, unsafe_allow_html=True)
 
 # ---- Carregar resultado ----
-RESULTADO_PATH = Path("data/ipii_resultado.json")
+RAIZ = Path(__file__).resolve().parent.parent
+RESULTADO_PATH = RAIZ / "data" / "ipii_resultado.json"
 
 @st.cache_data(ttl=300)
 def carregar_resultado() -> dict:
@@ -101,6 +103,9 @@ if not resultado:
 
 # ---- Métricas ----
 meta = resultado.get("metadata", {})
+# O resultado do engine contabiliza arestas; a quantidade de normas vem do corpus.
+with open(RAIZ / "data" / "normas.json", encoding="utf-8") as f:
+    total_normas_corpus = len(json.load(f).get("nodes", []))
 gerado = meta.get("gerado_em", "")
 if gerado:
     try:
@@ -113,7 +118,7 @@ st.markdown(f"""
 <div class="metric-row">
   <div class="metric-box">
     <div class="metric-label">Normas analisadas</div>
-    <div class="metric-value">{resultado.get('total_existentes', 0) + resultado.get('novas', 0)}</div>
+    <div class="metric-value">{total_normas_corpus}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Arestas sugeridas</div>
@@ -146,7 +151,7 @@ st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 # ---- Navegação ----
 secao = st.radio(
     "Seção",
-    ["🆕 Novas arestas descobertas", "✅ Arestas confirmadas", "⚠️ Gap do engine"],
+    ["🆕 Novas arestas descobertas", "✅ Arestas confirmadas", "⚠️ Gap do engine", "🚫 Fora do IPII"],
     horizontal=True,
     label_visibility="collapsed"
 )
@@ -242,11 +247,36 @@ elif secao == "⚠️ Gap do engine":
   {f'<div class="aresta-temas">{g["descricao"]}</div>' if g.get('descricao') else ''}
 </div>""", unsafe_allow_html=True)
     st.markdown(
-        "**Diagnóstico:** o engine é forte em interseções temáticas e hierárquicas (detecta ~87%). "
-        "É fraco em conexões institucionais orgânicas — `regulamenta` quando um decreto "
-        "atribui competência a um órgão, não quando regula uma matéria temática. "
-        "Solução prevista na próxima versão do engine: dimensão **vínculo institucional**."
+        "**IPII experimental — apoio à curadoria.** O motor sugere relações com base nas "
+        "dimensões implementadas; uma pontuação não comprova, por si só, uma relação jurídica. "
+        "O curador deve verificar cada sugestão em fontes primárias antes de aceitá-la. "
+        "A precisão e a cobertura apresentadas no topo desta página vêm do relatório atual "
+        "`data/ipii_resultado.json` e são atualizadas quando o relatório é regenerado. "
+        "**O motor sugere; o curador decide.**"
     )
+
+# =============================================================
+elif secao == "🚫 Fora do IPII":
+    fora = resultado.get("fora_do_ipii", [])
+    st.markdown(f"## {len(fora)} aresta(s) fora do IPII")
+    st.markdown(
+        "Relações existentes que envolvem ao menos uma norma excluída da formação de pares "
+        "(por exemplo, decisão judicial em conferência). Permanecem visíveis para rastreabilidade, "
+        "mas não entram nas métricas de precisão/cobertura nem são tratadas como falhas de detecção."
+    )
+    if not fora:
+        st.info("Nenhuma aresta fora do IPII neste relatório.")
+    for item in fora:
+        par = escape(str(item.get("par", "Par não identificado")))
+        tipo_original = str(item.get("tipo", ""))
+        tipo = escape(TIPO_LABELS.get(tipo_original, tipo_original or "Não especificado"))
+        descricao = escape(str(item.get("descricao") or ""))
+        st.markdown(f"""
+<div class="tier-card tier-3">
+  <div class="aresta-par">{par}</div>
+  <div class="aresta-tipo">Tipo registrado: {tipo}</div>
+  <div class="aresta-temas">{descricao}</div>
+</div>""", unsafe_allow_html=True)
 
 st.markdown(
     '<div class="principio">O engine alerta — o curador decide · IPII Engine © 2026 Hubstry Deep Tech</div>',

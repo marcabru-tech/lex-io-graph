@@ -177,6 +177,9 @@ STATUS_LABELS = {
     "vigente_parcial":      "Vigente (parcial, por Parte)",
     "aplicacao_provisoria": "Em aplicação provisória",
     "instrumento_externo":  "Instrumento internacional não incorporado",
+    # Decisão judicial cujo registro em data/jurisprudencia.json não está
+    # "verificado" (pendente ou contestado): não é precedente utilizável.
+    "em_conferencia":       "Em conferência (não verificado em fonte oficial)",
 }
 
 STATUS_COLORS = {
@@ -188,4 +191,5 @@ STATUS_COLORS = {
     "vigente_parcial":      "#a3d977",
     "aplicacao_provisoria": "#e6c13d",
     "instrumento_externo":  "#6b6458",
+    "em_conferencia":       "#d9822b",
 }

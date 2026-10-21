@@ -324,7 +324,7 @@ MAGNIFICA_HUMANITAS = {
     "continuidade_historica": (
         "Leão XIII / Rerum Novarum (1891) → questão social da Revolução Industrial "
         "→ direitos trabalhistas → CLT brasileira (1943) → NR-1 com riscos psicossociais "
-        "de IA (2026) → Leão XIV / Magnifica Humanitas (2026) → questão social da IA. "
+        "(2026) → Leão XIV / Magnifica Humanitas (2026) → questão social da IA. "
         "Arco de 135 anos de magistério social católico sobre tecnologia e trabalho."
     ),
     "convergencia_maio_2026": (
@@ -341,7 +341,7 @@ MAGNIFICA_HUMANITAS = {
     ),
     "impacto_brasil": [
         "PL 2.338/2023 (Marco Legal da IA): reforço ético ao princípio da dignidade humana",
-        "NR-1: convergência sobre riscos psicossociais de IA no trabalho",
+        "NR-1: convergência sobre riscos psicossociais no trabalho",
         "Decretos 12.975 e 12.976/2026: convergência sobre responsabilidade de plataformas",
         "CF/88 art. 1º, III: dignidade humana como fundamento normativo supremo"
     ]

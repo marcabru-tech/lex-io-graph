@@ -67,7 +67,7 @@
         "Art. 50",
         "Arts. 33 a 36 — transferência internacional de dados pessoais (soberania de dados)"
       ],
-      "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. Dados de menores exigem consentimento específico do responsável legal.",
+      "ementa": "Regula o tratamento de dados pessoais, define bases legais, cria a ANPD e o papel do DPO. O tratamento de dados de crianças e adolescentes deve observar o seu melhor interesse (art. 14, caput); para dados de crianças, exige-se consentimento específico e em destaque dado por pelo menos um dos pais ou pelo responsável legal (art. 14, § 1º).",
       "status": "vigente",
       "temas": [
         "dados_pessoais",
@@ -78,8 +78,8 @@
       ],
       "orgao": "Congresso Nacional / ANPD",
       "ano": 2018,
-      "historia": "Sancionada em 14 de agosto de 2018 (Lei 13.709/2018), com vigência plena a partir de agosto de 2020 e sanções desde agosto de 2021. Resultado de 8 anos de debates no Congresso Nacional. Inspirada diretamente no GDPR (General Data Protection Regulation — Regulamento Geral de Proteção de Dados) europeu (2016). Criou a ANPD (Agência Nacional de Proteção de Dados) como autarquia federal independente.",
-      "direito_comparado": "LGPD (Brasil, 2018) ↔ GDPR — General Data Protection Regulation (União Europeia, 2016) ↔ CCPA — California Consumer Privacy Act (Califórnia/EUA, 2018). Abordagem glocal (global + local, Robertson, 1990s): o GDPR tem efeito extraterritorial — empresas brasileiras que tratam dados de cidadãos europeus estão sujeitas ao GDPR simultaneamente à LGPD. A CCPA influenciou a discussão sobre o direito de não venda de dados pessoais. Tradição romano-germânica no Brasil e na Europa continental; abordagem setorial nos EUA (common law).",
+      "historia": "Sancionada em 14 de agosto de 2018 (Lei 13.709/2018), com vigência plena a partir de agosto de 2020 e sanções desde agosto de 2021. Resultado de 8 anos de debates no Congresso Nacional. Inspirada diretamente no GDPR (General Data Protection Regulation — Regulamento Geral de Proteção de Dados) europeu (2016). A ANPD (hoje Agência Nacional de Proteção de Dados) foi criada em 2018 como órgão da administração pública federal integrante da Presidência da República (MP 869/2018, convertida na Lei 13.853/2019, que incluiu o art. 55-A na LGPD); tornou-se autarquia de natureza especial em 2022 (Lei 14.460/2022) e agência reguladora em 2026 (Lei 15.352/2026, art. 8º, que a inclui no rol do art. 2º da Lei 13.848/2019).",
+      "direito_comparado": "LGPD (Brasil, 2018) ↔ GDPR — General Data Protection Regulation (União Europeia, 2016) ↔ CCPA — California Consumer Privacy Act (Califórnia/EUA, 2018). Abordagem glocal (global + local, Robertson, 1990s): o GDPR tem efeito extraterritorial — empresas brasileiras sem estabelecimento na União ficam sujeitas ao GDPR, simultaneamente à LGPD, quando oferecem bens ou serviços a titulares de dados na União ou controlam o comportamento deles que ali tenha lugar (art. 3º, n.º 2). A CCPA influenciou a discussão sobre o direito de não venda de dados pessoais. Tradição romano-germânica no Brasil e na Europa continental; abordagem setorial nos EUA (common law).",
       "autores": [
         {
           "nome": "Laura Schertel Mendes",
@@ -256,10 +256,10 @@
         "dados_pessoais",
         "trabalho"
       ],
-      "orgao": "Senado Federal",
+      "orgao": "Câmara dos Deputados",
       "ano": 2023,
-      "historia": "PL 2.338/2023 — proposto pelo Sen. Rodrigo Pacheco com base em anteprojeto elaborado por comissão de juristas coordenada pelo Min. Ricardo Villas Bôas Cueva (STJ). Em tramitação no Senado Federal desde 2023. Inspirado no EU AI Act (União Europeia, 2024) — primeiro marco regulatório de IA do mundo. Debate central: abordagem baseada em risco vs. abordagem baseada em direitos. Tensão com LGPD (Lei Geral de Proteção de Dados Pessoais) sobre sobreposição de regimes.",
-      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (2024) — abordagem por risco, proibições absolutas para IA de alto risco; Executive Order on AI — EUA (2023) — abordagem voluntária; China — Regulamento de IA Generativa (2023) — controle centralizado. PL 2.338/2023 é o mais avançado da América Latina e dialoga diretamente com o EU AI Act.",
+      "historia": "PL 2.338/2023 — proposto pelo Sen. Rodrigo Pacheco com base em anteprojeto elaborado por comissão de juristas coordenada pelo Min. Ricardo Villas Bôas Cueva (STJ). Aprovado pelo Senado Federal em 10/12/2024, na forma de substitutivo, e remetido à Câmara dos Deputados em 17/03/2025. Na Câmara, aguarda parecer do relator, Dep. Aguinaldo Ribeiro (PP-PB), na Comissão Especial sobre Inteligência Artificial (situação consultada em 20/10/2026). Inspirado no EU AI Act (União Europeia, 2024) — um dos primeiros marcos regulatórios abrangentes de IA. Debate central: abordagem baseada em risco vs. abordagem baseada em direitos. Tensão com LGPD (Lei Geral de Proteção de Dados Pessoais) sobre sobreposição de regimes.",
+      "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (2024) — abordagem por risco: o AI Act proíbe práticas específicas de IA (art. 5º) e estabelece requisitos de gestão de riscos, documentação, supervisão e conformidade para sistemas classificados como de alto risco; Executive Order on AI — EUA (2023) — abordagem voluntária; China — Regulamento de IA Generativa (2023) — controle centralizado. O PL 2.338/2023 dialoga diretamente com o EU AI Act.",
       "autores": [
         {
           "nome": "Fabiano Hartmann Peixoto",
@@ -313,7 +313,7 @@
         "1.5.4.4 alínea e",
         "Anexo I"
       ],
-      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. Inclui IA e algoritmos como fatores de risco.",
+      "ementa": "Disposições gerais de SST (Segurança e Saúde no Trabalho). Portaria MTE 1.419/2024 incluiu FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva: 26/05/2026. O texto da NR-1 não menciona inteligência artificial nem algoritmos. Interpretação do Lexiograph: riscos ligados à organização do trabalho mediada por sistemas algorítmicos podem exigir avaliação no PGR, como fatores de risco psicossociais relacionados ao trabalho (item 1.5.3.1.4).",
       "status": "vigente",
       "temas": [
         "trabalho",
@@ -322,7 +322,7 @@
       ],
       "orgao": "Ministério do Trabalho e Emprego",
       "ano": 2026,
-      "historia": "NR-1 (Norma Regulamentadora 1) — norma geral de segurança e saúde no trabalho, base do sistema de NRs do Brasil. Portaria MTE (Ministério do Trabalho e Emprego) 1.419/2024 incluiu obrigatoriamente os FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva desde 26/05/2026 (Portaria MTE 765/2025 encerrou período educativo). Primeira norma trabalhista brasileira a incluir explicitamente IA (Inteligência Artificial) e algoritmos como fatores de risco psicossocial.",
+      "historia": "NR-1 (Norma Regulamentadora 1) — norma geral de segurança e saúde no trabalho, base do sistema de NRs do Brasil. Portaria MTE (Ministério do Trabalho e Emprego) 1.419/2024 incluiu obrigatoriamente os FRPRT (Fatores de Riscos Psicossociais Relacionados ao Trabalho) no PGR (Programa de Gerenciamento de Riscos). Vigência punitiva desde 26/05/2026 (Portaria MTE 765/2025 encerrou período educativo). O texto da NR-1 não menciona inteligência artificial nem algoritmos. Interpretação do Lexiograph: riscos ligados à organização do trabalho mediada por sistemas algorítmicos podem exigir avaliação no PGR, como fatores de risco psicossociais relacionados ao trabalho (item 1.5.3.1.4).",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EU AI Act (União Europeia, 2024) classifica sistemas de IA de RH como alto risco; OSHA (Occupational Safety and Health Administration — EUA) não tem norma equivalente sobre riscos psicossociais; ISO 45003:2021 (gestão de riscos psicossociais) é a referência internacional que influenciou a revisão da NR-1.",
       "autores": [
         {
@@ -398,7 +398,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Ação direta de inconstitucionalidade que questiona dispositivos do Marco Civil da Internet. O resultado do julgamento e a tese dele decorrente estão em conferência em fonte oficial; este registro não deve ser citado como entendimento assentado.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "internet",
         "dados_pessoais"
@@ -432,7 +432,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "dados_pessoais"
       ],
@@ -471,7 +471,7 @@
       "tipo": "jurisprudencia",
       "artigos_chave": [],
       "ementa": "Registro pendente de conferência em fonte oficial: número, relator, data e tese atribuídos não foram confirmados. Não usar como fundamento.",
-      "status": "vigente",
+      "status": "em_conferencia",
       "temas": [
         "internet",
         "menores"
@@ -512,7 +512,7 @@
       ],
       "orgao": "Governo Federal",
       "ano": 2020,
-      "historia": "Criada pela LGPD (Lei 13.709/2018, art. 55-A) como Autoridade Nacional de Proteção de Dados, sem personalidade jurídica própria e vinculada à Presidência da República. Levou três anos para ter estrutura funcional plena. A Lei 14.460/2022 a transformou em autarquia de natureza especial. A Lei 15.352/2026 (conversão da MP 1.317/2025) a converteu em Agência Nacional de Proteção de Dados, vinculada ao Ministério da Justiça e Segurança Pública, inserindo-a no rol da Lei 13.848/2019 e criando a Carreira de Regulação e Fiscalização de Proteção de Dados. O Decreto 12.881/2026 aprovou a estrutura regimental. O Decreto 12.975/2026 expandiu suas competências para o Marco Civil da Internet, deslocando-a de autoridade de dados para reguladora digital ampla. Verificado em 16/08/2026.",
+      "historia": "Criada pela MP 869/2018 (convertida na Lei 13.853/2019), que incluiu o art. 55-A na LGPD, como Autoridade Nacional de Proteção de Dados, órgão da administração pública federal integrante da Presidência da República, sem personalidade jurídica própria. Levou três anos para ter estrutura funcional plena. A Lei 14.460/2022 a transformou em autarquia de natureza especial. A Lei 15.352/2026 (conversão da MP 1.317/2025) a converteu em Agência Nacional de Proteção de Dados, vinculada ao Ministério da Justiça e Segurança Pública, inserindo-a no rol da Lei 13.848/2019 e criando a Carreira de Regulação e Fiscalização de Proteção de Dados. O Decreto 12.881/2026 aprovou a estrutura regimental. O Decreto 12.975/2026 expandiu suas competências para o Marco Civil da Internet, deslocando-a de autoridade de dados para reguladora digital ampla. Verificado em 16/08/2026.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): CNIL — Commission Nationale de l'Informatique et des Libertés (França, 1978) — autoridade independente, modelo europeu de referência; ICO — Information Commissioner's Office (UK) — autoridade independente do governo; FTC — Federal Trade Commission (EUA) — sem mandato específico de proteção de dados, usa poderes gerais antitruste. A ANPD nasceu vinculada ao Executivo — tensão com o princípio da independência regulatória que o GDPR exige das autoridades supervisoras nacionais (art. 52).",
       "autores": [
         {
@@ -549,7 +549,7 @@
         "Notice-and-takedown extrajudicial",
         "Dados de anúncios para responsabilização"
       ],
-      "ementa": "Atualiza a regulamentação do Marco Civil da Internet (revogando parcialmente o Decreto 8.771/2016) para operacionalizar a decisão do STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
+      "ementa": "Altera o Decreto 8.771/2016, que regulamenta o Marco Civil da Internet (Lei 12.965/2014), e nele inclui capítulo sobre a responsabilidade dos provedores de aplicações de internet, matéria julgada pelo STF no Tema 987. Define deveres proativos para plataformas, atribui à ANPD competência para regular e fiscalizar o MCI, estabelece fluxo de denúncia/contestação análogo a devido processo legal interno. Assinado em 20/05/2026, na cerimônia dos 100 dias do Pacto Nacional Brasil Contra o Feminicídio.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -558,7 +558,7 @@
       ],
       "orgao": "Presidência da República / ANPD",
       "ano": 2026,
-      "historia": "Decreto 12.975, de 20 de maio de 2026, regulamenta o Marco Civil da Internet (Lei 12.965/2014) à luz da decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Altera o Decreto 8.771/2016. Atribui à ANPD (Agência Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
+      "historia": "Decreto 12.975, de 20 de maio de 2026, altera o Decreto 8.771/2016, que regulamenta o Marco Civil da Internet (Lei 12.965/2014), após a decisão do STF no Tema 987 (RE 1.037.396, jun./2025). Atribui à ANPD (Agência Nacional de Proteção de Dados) competência para fiscalizar o Marco Civil. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio. Gerou crise institucional: 27 PDLs (Projetos de Decreto Legislativo, base da Camara em 15/08/2026) da oposição para derrubar o decreto.",
       "direito_comparado": "O Decreto 12.975/2026 converge com o DSA — Digital Services Act (União Europeia, 2022): ambos impõem deveres proativos de moderação a plataformas digitais sem exigir ordem judicial específica. Diverge do modelo americano da Section 230 do CDA — Communications Decency Act (EUA, 1996), que mantém imunidade ampla das plataformas. Glocal (global + local, Robertson, 1990s): o Brasil está convergindo para o modelo europeu via decreto executivo, sem aprovação legislativa — caminho distinto do DSA, que passou pelo Parlamento Europeu.",
       "autores": [
         {
@@ -601,7 +601,7 @@
         "Responsabilidade de plataformas por violência de gênero online",
         "Integração com Pacto Nacional Brasil Contra o Feminicídio"
       ],
-      "ementa": "Reforça a proteção das mulheres no ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
+      "ementa": "Estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital. Obriga plataformas a adotar mecanismos de remoção rápida de conteúdo íntimo ilegal e deepfakes sexuais. Integra o pacote de 100 dias do Pacto Nacional Brasil Contra o Feminicídio (fev./2026). Assinado em 20/05/2026 conjuntamente com o Decreto 12.975/2026 e a sanção das Leis 15.409 e 15.410/2026.",
       "status": "vigente",
       "temas": [
         "internet",
@@ -641,7 +641,7 @@
         "Localização de foragidos",
         "Prevenção de reincidência"
       ],
-      "ementa": "Institui o Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM), consolidando em tempo real dados de condenados por feminicídio, violência doméstica, assédio, violência psicológica e crimes correlatos. Vigência: 60 dias após 21/05/2026.",
+      "ementa": "Institui o Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher (CNVM), com dados de pessoas condenadas por sentença penal transitada em julgado por feminicídio, violência doméstica, assédio, violência psicológica e crimes correlatos. A lei cria o cadastro; a gestão do banco de dados pelo Poder Executivo da União se dará conforme regulamento (art. 3º). Vigência: 60 dias após a publicação (art. 6º).",
       "status": "vigente",
       "temas": [
         "menores",
@@ -649,7 +649,7 @@
       ],
       "orgao": "Congresso Nacional",
       "ano": 2026,
-      "historia": "Lei 15.409/2026, sancionada em 21/05/2026 conjuntamente com a Lei 15.410/2026 e os Decretos 12.975 e 12.976/2026. Institui o CNVM — Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Consolida em tempo real dados de condenados por feminicídio, violência doméstica, assédio e crimes correlatos. Vigor: 60 dias após 21/05/2026. Integra o Pacto Nacional Brasil Contra o Feminicídio.",
+      "historia": "Lei 15.409, de 20/05/2026, publicada no DOU de 21/05/2026, editada conjuntamente com a Lei 15.410/2026 e os Decretos 12.975 e 12.976/2026. Institui o CNVM — Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Reúne dados de condenados por feminicídio, violência doméstica, assédio e crimes correlatos, a serem atualizados periodicamente (art. 4º). A criação legal do cadastro não se confunde com sua implementação operacional, que depende de regulamento do Poder Executivo da União (art. 3º). Vigência: 60 dias após a publicação (art. 6º). Integra o Pacto Nacional Brasil Contra o Feminicídio.",
       "direito_comparado": "Comparação glocal (global + local, Robertson, 1990s): EUA — National Sex Offender Public Website (NSOPW) — cadastro federal de agressores sexuais; UK — Sarah's Law (2011) — direito de saber se parceiro tem histórico de violência; Espanha — Registro Central de Delincuentes Sexuales (2016). O CNVM é o mais abrangente da América Latina — inclui feminicídio e violência psicológica, não apenas crimes sexuais.",
       "autores": [
         {
@@ -730,7 +730,7 @@
       "orgao": "Santa Sé / Vaticano",
       "ano": 2026,
       "historia": "Apresentada em 25/05/2026 na Sala Nova do Sínodo, no Vaticano. Papa Leão XIV (primeiro papa norte-americano, eleito maio/2025) escolheu o nome Leão XIV pela continuidade com Leão XIII, autor da Rerum Novarum (1891) — que enfrentou os dilemas sociais da Revolução Industrial. O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic. Convergência histórica: na mesma semana de maio/2026, o Vaticano, o STF e o Executivo brasileiro convergiram independentemente no mesmo campo normativo sobre IA e plataformas digitais.",
-      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais de IA no trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
+      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais relacionados ao trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
       "autores": [
         {
           "nome": "Papa Leão XIV (Robert Francis Prevost)",

@@ -2,7 +2,8 @@
 lib/conformidade.py
 Quadro de Conformidade — Lexiograph v2
 Questionário + Radar de Conformidade + Relatório
-Não coleta dados pessoais. LGPD compliant.
+As respostas do questionário não são armazenadas nem enviadas; o contador de
+visitas (lib/telemetria.py) é descrito em render_disclaimer.
 """
 
 import streamlit as st
@@ -365,8 +366,8 @@ ACOES_POR_TAG = {
     },
     "riscos_psicossociais": {
         "prioridade": "alta",
-        "acao": "Avaliar riscos psicossociais de IA no ambiente de trabalho",
-        "base": "NR-1 item 1.5.3",
+        "acao": "Avaliar os fatores de risco psicossociais relacionados ao trabalho, incluindo, na leitura do Lexiograph, os ligados ao uso de IA na organização do trabalho",
+        "base": "NR-1 item 1.5.3.1.4",
     },
     "monitoramento": {
         "prioridade": "alta",
@@ -423,11 +424,14 @@ ACOES_POR_TAG = {
 
 def render_disclaimer():
     st.info(
-        "**Privacidade:** Este aplicativo não coleta, armazena nem "
-        "compartilha dados pessoais. As respostas são processadas "
-        "exclusivamente durante a sua sessão e não são persistidas. "
-        "Nenhum dado identificável (nome, email, CPF, CNPJ) é solicitado. "
-        "LGPD (Lei 13.709/2018)."
+        "**Privacidade:** As respostas deste questionário não são "
+        "armazenadas nem enviadas: ficam apenas na memória da sua sessão "
+        "enquanto ela durar. Nenhum dado identificável (nome, email, CPF, "
+        "CNPJ) é solicitado. O app mantém um contador de visitas: na primeira "
+        "abertura de cada página, registra a página, a data e a hora, o "
+        "ambiente e um código aleatório de sessão nos registros da "
+        "hospedagem (Google Cloud). O contador não usa cookies e não grava "
+        "IP, navegador nem localização."
     )
 
 

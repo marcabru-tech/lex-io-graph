@@ -24,13 +24,22 @@ def _par(source: str, target: str) -> tuple:
     return tuple(sorted([source, target]))
 
 
-def validar_arestas(sugeridas: list, existentes: list) -> dict:
+def validar_arestas(sugeridas: list, existentes: list, excluidas: frozenset = frozenset()) -> dict:
     """
     Compara arestas sugeridas vs existentes.
+
+    `excluidas` são ids de normas fora do IPII (matcher.STATUS_EXCLUIDOS_DO_IPII).
+    Aresta existente com uma delas não pode ser sugerida por regra, não por
+    limite do engine: sai de total_existentes, faltando e gap_engine, para não
+    rebaixar a cobertura nem aparecer como "não detectada", e é listada em
+    fora_do_ipii.
 
     Returns:
         dict com métricas de precisão/cobertura e listas detalhadas.
     """
+
+    fora_do_ipii = [e for e in existentes if {e["source"], e["target"]} & excluidas]
+    existentes = [e for e in existentes if not {e["source"], e["target"]} & excluidas]
 
     # Indexar existentes por par canônico
     existentes_idx = {}
@@ -86,6 +95,14 @@ def validar_arestas(sugeridas: list, existentes: list) -> dict:
                 "descricao": e.get("descricao", "")[:120],
             }
             for e in faltando
+        ],
+        "fora_do_ipii": [
+            {
+                "par": f"{e['source']} ↔ {e['target']}",
+                "tipo": e["tipo"],
+                "descricao": e.get("descricao", "")[:120],
+            }
+            for e in fora_do_ipii
         ],
     }
 
