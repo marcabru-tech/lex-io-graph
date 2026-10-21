@@ -1,12 +1,38 @@
 {
-  "total_sugeridas": 36,
-  "total_existentes": 33,
-  "confirmadas": 13,
-  "novas": 23,
-  "faltando": 20,
-  "precisao": 0.361,
-  "cobertura": 0.394,
+  "total_sugeridas": 35,
+  "total_existentes": 47,
+  "confirmadas": 14,
+  "novas": 21,
+  "faltando": 33,
+  "precisao": 0.4,
+  "cobertura": 0.298,
   "detalhe_confirmadas": [
+    {
+      "source": "lei_15506_2026",
+      "target": "decreto_13118_2026",
+      "score": 0.605,
+      "classificacao": "moderada",
+      "tier": 3,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.167
+      },
+      "temas_comuns": [
+        "direito_economico",
+        "soberania_tecnologica"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "regulamenta",
+      "match_tipo": true
+    },
     {
       "source": "stf_tema987",
       "target": "decreto_12975_2026",
@@ -20,7 +46,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.034
+        "ementa": 0.032
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -38,7 +64,7 @@
     {
       "source": "decreto_12975_2026",
       "target": "decreto_12976_2026",
-      "score": 0.541,
+      "score": 0.544,
       "classificacao": "fraca",
       "tier": 4,
       "tipo_sugerido": "complementaridade",
@@ -48,12 +74,38 @@
         "hermeneutica": 0.0,
         "comparado": 0.5,
         "temporal": 1.0,
-        "ementa": 0.143
+        "ementa": 0.161
       },
       "temas_comuns": [
         "dados_pessoais",
         "internet",
         "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": true
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_efta",
+      "score": 0.52,
+      "classificacao": "fraca",
+      "tier": 4,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 1.0,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.2,
+        "ementa": 0.036
+      },
+      "temas_comuns": [
+        "direito_economico",
+        "direito_internacional_publico"
       ],
       "jurisdicoes_comuns": [
         "UE"
@@ -92,7 +144,7 @@
     {
       "source": "pl_ia",
       "target": "nr1",
-      "score": 0.495,
+      "score": 0.493,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "complementaridade",
@@ -102,7 +154,7 @@
         "hermeneutica": 0.0,
         "comparado": 0.5,
         "temporal": 0.7,
-        "ementa": 0.033
+        "ementa": 0.023
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -117,27 +169,25 @@
       "match_tipo": false
     },
     {
-      "source": "eca_digital",
-      "target": "decreto_12976_2026",
-      "score": 0.466,
+      "source": "acordo_mercosul_ue_ita",
+      "target": "acordo_mercosul_ue_empa",
+      "score": 0.475,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.7,
+        "temas": 1.0,
+        "hierarquia": 0.3,
         "hermeneutica": 0.0,
-        "comparado": 0.333,
+        "comparado": 0.0,
         "temporal": 1.0,
-        "ementa": 0.071
+        "ementa": 0.2
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "menores"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
+      "jurisdicoes_comuns": [],
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
       "match_tipo": false
@@ -145,7 +195,7 @@
     {
       "source": "marco_civil",
       "target": "decreto_12975_2026",
-      "score": 0.463,
+      "score": 0.465,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "regulamenta",
@@ -155,7 +205,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 0.4,
-        "ementa": 0.12
+        "ementa": 0.132
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -168,6 +218,32 @@
       "correntes_comuns": [],
       "tipo_existente": "regulamenta",
       "match_tipo": true
+    },
+    {
+      "source": "eca_digital",
+      "target": "decreto_12976_2026",
+      "score": 0.465,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.333,
+        "temporal": 1.0,
+        "ementa": 0.065
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": false
     },
     {
       "source": "marco_civil",
@@ -197,84 +273,6 @@
       "match_tipo": true
     },
     {
-      "source": "marco_civil",
-      "target": "stf_adimc",
-      "score": 0.455,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.5,
-        "temporal": 0.7,
-        "ementa": 0.034
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "internet"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
-      "correntes_comuns": [],
-      "tipo_existente": "interpreta",
-      "match_tipo": true
-    },
-    {
-      "source": "cf88",
-      "target": "marco_civil",
-      "score": 0.45,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "hierarquia",
-      "scores_parciais": {
-        "temas": 1.0,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.0,
-        "temporal": 0.4,
-        "ementa": 0.032
-      },
-      "temas_comuns": [
-        "acesso",
-        "dados_pessoais",
-        "internet"
-      ],
-      "jurisdicoes_comuns": [],
-      "correntes_comuns": [],
-      "tipo_existente": "hierarquia",
-      "match_tipo": true
-    },
-    {
-      "source": "lgpd",
-      "target": "pl_ia",
-      "score": 0.45,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "complementaridade",
-      "scores_parciais": {
-        "temas": 0.75,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.333,
-        "temporal": 0.7,
-        "ementa": 0.0
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "ia",
-        "trabalho"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
-      "correntes_comuns": [],
-      "tipo_existente": "complementaridade",
-      "match_tipo": true
-    },
-    {
       "source": "pl_ia",
       "target": "res_cnj_615",
       "score": 0.42,
@@ -301,6 +299,32 @@
       "match_tipo": true
     },
     {
+      "source": "lei_15504_2026",
+      "target": "lei_15506_2026",
+      "score": 0.42,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.3,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "direito_economico",
+        "soberania_tecnologica"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "complementaridade",
+      "match_tipo": true
+    },
+    {
       "source": "decreto_12976_2026",
       "target": "lei_15409_2026",
       "score": 0.415,
@@ -313,7 +337,7 @@
         "hermeneutica": 0.0,
         "comparado": 0.0,
         "temporal": 1.0,
-        "ementa": 0.065
+        "ementa": 0.068
       },
       "temas_comuns": [
         "internet",
@@ -326,22 +350,23 @@
     },
     {
       "source": "lgpd",
-      "target": "res_cnj_615",
-      "score": 0.403,
+      "target": "pl_ia",
+      "score": 0.405,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "complementaridade",
       "scores_parciais": {
-        "temas": 0.5,
+        "temas": 0.6,
         "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.5,
+        "comparado": 0.333,
         "temporal": 0.7,
-        "ementa": 0.022
+        "ementa": 0.0
       },
       "temas_comuns": [
         "dados_pessoais",
-        "ia"
+        "ia",
+        "trabalho"
       ],
       "jurisdicoes_comuns": [
         "UE"
@@ -353,22 +378,47 @@
   ],
   "detalhe_novas": [
     {
-      "source": "stj_resp",
-      "target": "anpd",
-      "score": 0.563,
+      "source": "acordo_mercosul_efta",
+      "target": "acordo_mercosul_ue_empa",
+      "score": 0.6,
       "classificacao": "moderada",
       "tier": 3,
       "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 1.0,
-        "hierarquia": 0.7,
+        "hierarquia": 0.3,
         "hermeneutica": 0.0,
-        "comparado": 0.333,
+        "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.056
+        "ementa": 0.033
       },
       "temas_comuns": [
-        "dados_pessoais"
+        "direito_economico",
+        "direito_internacional_publico"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lei_15504_2026",
+      "target": "decreto_13118_2026",
+      "score": 0.555,
+      "classificacao": "moderada",
+      "tier": 3,
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.667,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 1.0,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "direito_economico",
+        "soberania_tecnologica"
       ],
       "jurisdicoes_comuns": [
         "UE"
@@ -401,30 +451,28 @@
       "correntes_comuns": []
     },
     {
-      "source": "stf_tema987",
-      "target": "stf_adimc",
-      "score": 0.509,
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_ue_empa",
+      "score": 0.515,
       "classificacao": "fraca",
       "tier": 4,
       "tipo_sugerido": "complementaridade",
       "scores_parciais": {
-        "temas": 0.667,
+        "temas": 1.0,
         "hierarquia": 0.3,
-        "hermeneutica": 0.7,
-        "comparado": 0.5,
-        "temporal": 0.7,
-        "ementa": 0.094
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.2,
+        "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "internet"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
       "jurisdicoes_comuns": [
         "UE"
       ],
-      "correntes_comuns": [
-        "integridade"
-      ]
+      "correntes_comuns": []
     },
     {
       "source": "eca_digital",
@@ -454,7 +502,7 @@
     {
       "source": "nr1",
       "target": "res_cnj_615",
-      "score": 0.495,
+      "score": 0.5,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "complementaridade",
@@ -464,7 +512,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.0
+        "ementa": 0.033
       },
       "temas_comuns": [
         "dados_pessoais",
@@ -476,124 +524,91 @@
       "correntes_comuns": []
     },
     {
-      "source": "lgpd",
-      "target": "nr1",
-      "score": 0.475,
+      "source": "acordo_mercosul_singapura",
+      "target": "acordo_mercosul_ue_ita",
+      "score": 0.472,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "complementaridade",
-      "scores_parciais": {
-        "temas": 0.75,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.5,
-        "temporal": 0.7,
-        "ementa": 0.0
-      },
-      "temas_comuns": [
-        "dados_pessoais",
-        "ia",
-        "trabalho"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
-      "correntes_comuns": []
-    },
-    {
-      "source": "stj_resp_plat",
-      "target": "lei_15409_2026",
-      "score": 0.475,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 1.0,
-        "hierarquia": 0.7,
+        "hierarquia": 0.3,
         "hermeneutica": 0.0,
         "comparado": 0.0,
-        "temporal": 0.7,
-        "ementa": 0.0
+        "temporal": 1.0,
+        "ementa": 0.182
       },
       "temas_comuns": [
-        "internet",
-        "menores"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
       "jurisdicoes_comuns": [],
       "correntes_comuns": []
     },
     {
-      "source": "stf_adimc",
-      "target": "decreto_12976_2026",
-      "score": 0.465,
+      "source": "acordo_mercosul_singapura",
+      "target": "acordo_mercosul_efta",
+      "score": 0.47,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "interpreta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.667,
+        "temas": 1.0,
         "hierarquia": 0.3,
         "hermeneutica": 0.0,
-        "comparado": 1.0,
-        "temporal": 0.7,
-        "ementa": 0.0
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.167
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "internet"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
+      "jurisdicoes_comuns": [],
       "correntes_comuns": []
     },
     {
-      "source": "lgpd",
-      "target": "decreto_12975_2026",
-      "score": 0.454,
+      "source": "acordo_mercosul_efta",
+      "target": "acordo_mercosul_ue_ita",
+      "score": 0.464,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.4,
-        "hierarquia": 0.7,
+        "temas": 1.0,
+        "hierarquia": 0.3,
         "hermeneutica": 0.0,
-        "comparado": 1.0,
-        "temporal": 0.7,
-        "ementa": 0.061
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.125
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "menores"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
-      "jurisdicoes_comuns": [
-        "EUA",
-        "UE"
-      ],
+      "jurisdicoes_comuns": [],
       "correntes_comuns": []
     },
     {
-      "source": "lgpd",
-      "target": "stf_tema987",
-      "score": 0.445,
+      "source": "acordo_mercosul_singapura",
+      "target": "acordo_mercosul_ue_empa",
+      "score": 0.45,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "interpreta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.4,
-        "hierarquia": 0.7,
+        "temas": 1.0,
+        "hierarquia": 0.3,
         "hermeneutica": 0.0,
-        "comparado": 1.0,
-        "temporal": 0.7,
-        "ementa": 0.0
+        "comparado": 0.0,
+        "temporal": 1.0,
+        "ementa": 0.034
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "menores"
+        "direito_economico",
+        "direito_internacional_publico"
       ],
-      "jurisdicoes_comuns": [
-        "EUA",
-        "UE"
-      ],
+      "jurisdicoes_comuns": [],
       "correntes_comuns": []
     },
     {
@@ -621,45 +636,94 @@
     },
     {
       "source": "lgpd",
-      "target": "stj_resp",
-      "score": 0.442,
+      "target": "decreto_12975_2026",
+      "score": 0.432,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "interpreta",
+      "tipo_sugerido": "regulamenta",
+      "scores_parciais": {
+        "temas": 0.333,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.7,
+        "ementa": 0.048
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "menores"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "lgpd",
+      "target": "nr1",
+      "score": 0.43,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "complementaridade",
+      "scores_parciais": {
+        "temas": 0.6,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 0.5,
+        "temporal": 0.7,
+        "ementa": 0.0
+      },
+      "temas_comuns": [
+        "dados_pessoais",
+        "ia",
+        "trabalho"
+      ],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
+      "correntes_comuns": []
+    },
+    {
+      "source": "res_cnj_615",
+      "target": "lei_15504_2026",
+      "score": 0.43,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 0.25,
         "hierarquia": 0.7,
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.077
+        "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais"
+        "ia"
       ],
       "jurisdicoes_comuns": [
-        "EUA",
         "UE"
       ],
       "correntes_comuns": []
     },
     {
-      "source": "stf_adimc",
-      "target": "anpd",
-      "score": 0.439,
+      "source": "lei_15504_2026",
+      "target": "acordo_mercosul_efta",
+      "score": 0.43,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "complementaridade",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.5,
+        "temas": 0.25,
         "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.5,
+        "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.059
+        "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais"
+        "direito_economico"
       ],
       "jurisdicoes_comuns": [
         "UE"
@@ -667,58 +731,31 @@
       "correntes_comuns": []
     },
     {
-      "source": "stf_tema987",
-      "target": "stj_resp_plat",
-      "score": 0.431,
+      "source": "lei_15504_2026",
+      "target": "acordo_mercosul_ue_empa",
+      "score": 0.43,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "complementaridade",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.3,
+        "temas": 0.25,
+        "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.667,
-        "temporal": 0.7,
-        "ementa": 0.105
+        "comparado": 1.0,
+        "temporal": 1.0,
+        "ementa": 0.0
       },
       "temas_comuns": [
-        "internet",
-        "menores"
+        "direito_economico"
       ],
       "jurisdicoes_comuns": [
-        "EUA",
         "UE"
       ],
       "correntes_comuns": []
     },
     {
-      "source": "stj_resp_plat",
-      "target": "decreto_12975_2026",
-      "score": 0.427,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 0.667,
-        "hierarquia": 0.3,
-        "hermeneutica": 0.0,
-        "comparado": 0.667,
-        "temporal": 0.7,
-        "ementa": 0.082
-      },
-      "temas_comuns": [
-        "internet",
-        "menores"
-      ],
-      "jurisdicoes_comuns": [
-        "EUA",
-        "UE"
-      ],
-      "correntes_comuns": []
-    },
-    {
-      "source": "marco_civil",
-      "target": "stj_resp",
+      "source": "lgpd",
+      "target": "stf_tema987",
       "score": 0.425,
       "classificacao": "fraca",
       "tier": 5,
@@ -732,7 +769,8 @@
         "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais"
+        "dados_pessoais",
+        "menores"
       ],
       "jurisdicoes_comuns": [
         "EUA",
@@ -741,55 +779,32 @@
       "correntes_comuns": []
     },
     {
-      "source": "eca_digital",
-      "target": "stj_resp",
-      "score": 0.425,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 0.5,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.667,
-        "temporal": 0.7,
-        "ementa": 0.0
-      },
-      "temas_comuns": [
-        "dados_pessoais"
-      ],
-      "jurisdicoes_comuns": [
-        "EUA",
-        "UE"
-      ],
-      "correntes_comuns": []
-    },
-    {
-      "source": "stf_adimc",
-      "target": "pl_misoginia",
+      "source": "nr1",
+      "target": "lei_15504_2026",
       "score": 0.415,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "intersecao",
       "scores_parciais": {
-        "temas": 1.0,
-        "hierarquia": 0.3,
+        "temas": 0.2,
+        "hierarquia": 0.7,
         "hermeneutica": 0.0,
-        "comparado": 0.0,
-        "temporal": 0.7,
+        "comparado": 1.0,
+        "temporal": 1.0,
         "ementa": 0.0
       },
       "temas_comuns": [
-        "dados_pessoais",
-        "internet"
+        "ia"
       ],
-      "jurisdicoes_comuns": [],
+      "jurisdicoes_comuns": [
+        "UE"
+      ],
       "correntes_comuns": []
     },
     {
       "source": "decreto_12975_2026",
       "target": "lei_15409_2026",
-      "score": 0.413,
+      "score": 0.412,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "regulamenta",
@@ -799,36 +814,13 @@
         "hermeneutica": 0.0,
         "comparado": 0.0,
         "temporal": 1.0,
-        "ementa": 0.056
+        "ementa": 0.044
       },
       "temas_comuns": [
         "internet",
         "menores"
       ],
       "jurisdicoes_comuns": [],
-      "correntes_comuns": []
-    },
-    {
-      "source": "eca_digital",
-      "target": "anpd",
-      "score": 0.407,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "intersecao",
-      "scores_parciais": {
-        "temas": 0.5,
-        "hierarquia": 1.0,
-        "hermeneutica": 0.0,
-        "comparado": 0.25,
-        "temporal": 0.7,
-        "ementa": 0.0
-      },
-      "temas_comuns": [
-        "dados_pessoais"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
       "correntes_comuns": []
     },
     {
@@ -851,29 +843,6 @@
         "menores"
       ],
       "jurisdicoes_comuns": [],
-      "correntes_comuns": []
-    },
-    {
-      "source": "anpd",
-      "target": "res_cnj_615",
-      "score": 0.403,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "complementaridade",
-      "scores_parciais": {
-        "temas": 0.5,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 0.5,
-        "temporal": 0.7,
-        "ementa": 0.018
-      },
-      "temas_comuns": [
-        "dados_pessoais"
-      ],
-      "jurisdicoes_comuns": [
-        "UE"
-      ],
       "correntes_comuns": []
     },
     {
@@ -909,6 +878,13 @@
       "artigos": "CF art. 5º, LXXIX ↔ LGPD art. 1º"
     },
     {
+      "source": "cf88",
+      "target": "marco_civil",
+      "tipo": "hierarquia",
+      "descricao": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de comunicação.",
+      "artigos": "CF art. 5º, IX, XII ↔ MC art. 2º, 3º"
+    },
+    {
       "source": "lgpd",
       "target": "anpd",
       "tipo": "regulamenta",
@@ -927,14 +903,14 @@
       "target": "eca_digital",
       "tipo": "intersecao",
       "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital.",
-      "artigos": "LGPD art. 14 ↔ ECA Digital art. 12"
+      "artigos": "LGPD art. 14 ↔ ECA Digital arts. 7º, 16 e 26"
     },
     {
       "source": "eca_digital",
       "target": "marco_civil",
       "tipo": "intersecao",
       "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil.",
-      "artigos": "ECA Digital art. 18 ↔ MC art. 7º"
+      "artigos": "ECA Digital ↔ MC art. 7º (dispositivo do ECA Digital em conferência)"
     },
     {
       "source": "eca_digital",
@@ -942,13 +918,6 @@
       "tipo": "intersecao",
       "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteções específicas do ECA Digital.",
       "artigos": "ECA Digital art. 10 ↔ PL 2.338 art. 12"
-    },
-    {
-      "source": "marco_civil",
-      "target": "stj_resp_plat",
-      "tipo": "interpreta",
-      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada como interpretação do art. 19.",
-      "artigos": "REsp 1.907.924 ↔ RE 1.037.396"
     },
     {
       "source": "cf88",
@@ -1035,11 +1004,102 @@
       "artigos": "Magnifica Humanitas ↔ NR-1 item 1.5.4.4"
     },
     {
+      "source": "res_cnj_615",
+      "target": "lgpd",
+      "tipo": "complementaridade",
+      "descricao": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário e remete expressamente à legislação de proteção de dados, exigindo anonimização e observância do segredo de justiça.",
+      "artigos": "Res. CNJ 615 art. 7º ↔ LGPD art. 1º e art. 11"
+    },
+    {
       "source": "cf88",
       "target": "res_cnj_615",
       "tipo": "hierarquia",
       "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e autoriza a expedição de atos regulamentares no âmbito de sua competência. A Resolução exerce essa competência ao disciplinar desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de IA pelos órgãos do Judiciário, preservada a autonomia dos tribunais e excetuado o STF. A competência não é legislativa geral: permanece sujeita à legalidade, aos direitos fundamentais e aos limites materiais do controle administrativo.",
       "artigos": "CF art. 103-B, § 4º, I ↔ Res. CNJ 615/2025 art. 1º"
+    },
+    {
+      "source": "cf88",
+      "target": "lei_15504_2026",
+      "tipo": "hierarquia",
+      "descricao": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art. 174), mercado interno como patrimônio nacional (art. 219) e defesa do meio ambiente como princípio da ordem econômica (art. 170, VI) — este último é o parâmetro constitucional do debate sobre o gás natural.",
+      "artigos": "CF arts. 170, VI; 174; 219 ↔ Lei 11.196/2005 art. 11-B"
+    },
+    {
+      "source": "lei_15504_2026",
+      "target": "pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem a outra produz infraestrutura sem governança ou governança sem infraestrutura.",
+      "artigos": "Lei 11.196/2005 art. 11-B ↔ PL 2.338/2023"
+    },
+    {
+      "source": "cf88",
+      "target": "lei_15506_2026",
+      "tipo": "hierarquia",
+      "descricao": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no interesse nacional (art. 176). A PNMCE regula o aproveitamento de bem público dentro da ordem econômica constitucional (art. 170).",
+      "artigos": "CF arts. 20, IX; 170; 176 ↔ Lei 15.506/2026 art. 5º"
+    },
+    {
+      "source": "cf88",
+      "target": "convencao_viena_1969",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 496/2009 → Decreto 7.030/2009.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "tratado_assuncao_1991",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 197/1991 → Decreto 350/1991.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_singapura",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 147/2026 → Decreto 13.081/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_efta",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 146/2026 → Decreto 13.126/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "cf88",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 14/2026 → Decreto 12.953/2026.",
+      "artigos": "CF arts. 49, I; 84, VIII"
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_singapura",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica.",
+      "artigos": "Tratado de Assunção, art. 1º"
+    },
+    {
+      "source": "tratado_assuncao_1991",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica.",
+      "artigos": "Tratado de Assunção, art. 1º"
+    },
+    {
+      "source": "convencao_viena_1969",
+      "target": "acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA (art. 23.3) só começou após a aprovação pelo Congresso (DL 14/2026), coerente com a reserva.",
+      "artigos": "CVDT art. 25 (reservado) ↔ ITA art. 23.3"
+    },
+    {
+      "source": "cf88",
+      "target": "lindb",
+      "tipo": "hierarquia",
+      "descricao": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem pública, bons costumes) dialogam com os fundamentos constitucionais da soberania (art. 1º, I).",
+      "artigos": "CF art. 1º, I ↔ LINDB art. 17"
     }
   ],
   "gap_engine": [
@@ -1047,6 +1107,11 @@
       "par": "cf88 ↔ lgpd",
       "tipo": "hierarquia",
       "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88."
+    },
+    {
+      "par": "cf88 ↔ marco_civil",
+      "tipo": "hierarquia",
+      "descricao": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de "
     },
     {
       "par": "lgpd ↔ anpd",
@@ -1072,11 +1137,6 @@
       "par": "eca_digital ↔ pl_ia",
       "tipo": "intersecao",
       "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteçõe"
-    },
-    {
-      "par": "marco_civil ↔ stj_resp_plat",
-      "tipo": "interpreta",
-      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada "
     },
     {
       "par": "cf88 ↔ stf_tema987",
@@ -1139,15 +1199,100 @@
       "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MT"
     },
     {
+      "par": "res_cnj_615 ↔ lgpd",
+      "tipo": "complementaridade",
+      "descricao": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário e"
+    },
+    {
       "par": "cf88 ↔ res_cnj_615",
       "tipo": "hierarquia",
       "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao "
+    },
+    {
+      "par": "cf88 ↔ lei_15504_2026",
+      "tipo": "hierarquia",
+      "descricao": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art. 1"
+    },
+    {
+      "par": "lei_15504_2026 ↔ pl_ia",
+      "tipo": "complementaridade",
+      "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem"
+    },
+    {
+      "par": "cf88 ↔ lei_15506_2026",
+      "tipo": "hierarquia",
+      "descricao": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no inter"
+    },
+    {
+      "par": "cf88 ↔ convencao_viena_1969",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+    },
+    {
+      "par": "cf88 ↔ tratado_assuncao_1991",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+    },
+    {
+      "par": "cf88 ↔ acordo_mercosul_singapura",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+    },
+    {
+      "par": "cf88 ↔ acordo_mercosul_efta",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+    },
+    {
+      "par": "cf88 ↔ acordo_mercosul_ue_ita",
+      "tipo": "hierarquia",
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+    },
+    {
+      "par": "tratado_assuncao_1991 ↔ acordo_mercosul_singapura",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tr"
+    },
+    {
+      "par": "tratado_assuncao_1991 ↔ acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pe"
+    },
+    {
+      "par": "convencao_viena_1969 ↔ acordo_mercosul_ue_ita",
+      "tipo": "complementaridade",
+      "descricao": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA (ar"
+    },
+    {
+      "par": "cf88 ↔ lindb",
+      "tipo": "hierarquia",
+      "descricao": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem públi"
+    }
+  ],
+  "fora_do_ipii": [
+    {
+      "par": "marco_civil ↔ stf_adimc",
+      "tipo": "interpreta",
+      "descricao": "Relação registrada entre o Marco Civil e a ADI 5527, ação que questiona dispositivos da lei no STF. A tese atribuída a e"
+    },
+    {
+      "par": "marco_civil ↔ stj_resp_plat",
+      "tipo": "interpreta",
+      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada "
     }
   ],
   "metadata": {
-    "gerado_em": "2026-08-22T09:20:38.686271",
+    "gerado_em": "2026-10-20T21:10:05.411406",
     "threshold": 0.4,
     "tier_filtro": 5,
+    "status_excluidos": [
+      "em_conferencia"
+    ],
+    "normas_excluidas": [
+      "stf_adimc",
+      "stj_resp",
+      "stj_resp_plat"
+    ],
     "engine": "IPII Engine v1.0",
     "propriedade": "Hubstry Deep Tech © 2026",
     "principio": "O engine alerta, o curador decide."
