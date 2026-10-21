@@ -42,6 +42,17 @@ THRESHOLD_FORTE = 0.75
 THRESHOLD_MODERADA = 0.55
 THRESHOLD_FRACA = 0.40
 
+# Normas com estes status não geram sugestão de ligação: "em_conferencia" marca
+# decisão judicial não verificada em fonte oficial (data/jurisprudencia.json),
+# que não pode servir de base para propor aresta. Os pesos e a fórmula dos
+# demais pares não mudam; a norma só sai da formação de pares.
+STATUS_EXCLUIDOS_DO_IPII = ("em_conferencia",)
+
+
+def excluida_do_ipii(token: dict) -> bool:
+    """A norma fica fora das sugestões do IPII (ver STATUS_EXCLUIDOS_DO_IPII)."""
+    return token["temporal"]["status"] in STATUS_EXCLUIDOS_DO_IPII
+
 
 def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     """Calcula score de interseção entre dois tokens normativos."""
@@ -189,10 +200,11 @@ def calcular_todas_intersecoes(
     tokens: dict,
     threshold: float = THRESHOLD_FRACA
 ) -> list:
-    """Calcula interseção para todos os pares do corpus."""
+    """Calcula interseção para todos os pares do corpus, exceto os que têm
+    de um lado uma norma excluída do IPII."""
 
     resultados = []
-    ids = list(tokens.keys())
+    ids = [i for i, t in tokens.items() if not excluida_do_ipii(t)]
 
     for id_a, id_b in combinations(ids, 2):
         resultado = calcular_intersecao(tokens[id_a], tokens[id_b])
