@@ -21,17 +21,16 @@ ARQUIVOS = (
     + list((RAIZ / "docs").glob("*.html"))
 )
 
-# Frases que não podem voltar em nenhum arquivo.
+# Frases que não podem voltar em nenhum arquivo. A comparação usa casefold():
+# "Proibições absolutas" e "PROIBIÇÕES ABSOLUTAS" também são barradas.
 PROIBIDAS = (
     "cidadãos europeus",
     "usuários europeus",
     "proibições absolutas",
-    "Proibições absolutas",
     "sancionada em 21/05/2026",
     "LGPD compliant",
     "Em tramitação no Senado Federal desde 2023",
     "primeiro marco regulatório de IA do mundo",
-    "Primeiro marco regulatório de IA do mundo",
     "autarquia federal independente",
     "Inclui IA e algoritmos como fatores de risco",
     "incluir explicitamente IA",
@@ -56,16 +55,16 @@ def _texto_do_no(no: dict) -> str:
 class TestFrasesCorrigidas(unittest.TestCase):
     def test_frases_corrigidas_nao_retornam(self):
         for arquivo in ARQUIVOS:
-            texto = arquivo.read_text(encoding="utf-8")
+            texto = arquivo.read_text(encoding="utf-8").casefold()
             for frase in PROIBIDAS:
-                self.assertNotIn(frase, texto, f"{arquivo.name}: {frase}")
+                self.assertNotIn(frase.casefold(), texto, f"{arquivo.name}: {frase}")
 
     def test_forca_de_lei_fora_da_jurisprudencia(self):
         # "Força de lei" é termo correto para medida provisória (CF, art. 62);
         # a trava vale para a descrição da jurisprudência, onde estava o erro.
         jur = next((f for f in FONTES_DIREITO["fontes"] if f["nome"].startswith("Jurisprudência")), None)
         self.assertIsNotNone(jur, "fonte 'Jurisprudência' ausente de FONTES_DIREITO")
-        self.assertNotIn("força de lei", jur["descricao"])
+        self.assertNotIn("força de lei", jur["descricao"].casefold())
         self.assertIn("CF, art. 103-A", jur["descricao"])
         self.assertIn("CPC, art. 927", jur["descricao"])
 
@@ -73,7 +72,7 @@ class TestFrasesCorrigidas(unittest.TestCase):
         no = _normas().get("lei_15409_2026")
         self.assertIsNotNone(no, "nó lei_15409_2026 ausente")
         texto = _texto_do_no(no)
-        self.assertNotIn("tempo real", texto)
+        self.assertNotIn("tempo real", texto.casefold())
         self.assertIn("Lei 15.409, de 20/05/2026, publicada no DOU de 21/05/2026", texto)
         self.assertIn("60 dias após a publicação", texto)
         self.assertIn("regulamento", texto)
