@@ -78,7 +78,8 @@ Nenhuma aresta é adicionada automaticamente ao grafo.
 """, unsafe_allow_html=True)
 
 # ---- Carregar resultado ----
-RESULTADO_PATH = Path("data/ipii_resultado.json")
+RAIZ = Path(__file__).resolve().parent.parent
+RESULTADO_PATH = RAIZ / "data" / "ipii_resultado.json"
 
 @st.cache_data(ttl=300)
 def carregar_resultado() -> dict:
@@ -103,7 +104,7 @@ if not resultado:
 # ---- Métricas ----
 meta = resultado.get("metadata", {})
 # O resultado do engine contabiliza arestas; a quantidade de normas vem do corpus.
-with open(Path("data/normas.json"), encoding="utf-8") as f:
+with open(RAIZ / "data" / "normas.json", encoding="utf-8") as f:
     total_normas_corpus = len(json.load(f).get("nodes", []))
 gerado = meta.get("gerado_em", "")
 if gerado:
