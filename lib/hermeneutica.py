@@ -290,7 +290,7 @@ FONTES_DIREITO = {
 # ---- Arco histórico do Código Civil ----
 ARCO_CC = {
     "introducao": (
-        "O Código Civil brasileiro percorreu um arco de 170 anos — do Império à era digital. "
+        "O direito civil codificado no Brasil percorreu um arco de mais de quatro séculos — das Ordenações Filipinas (1603) à era digital. "
         "Cada código é um projeto político: o CC/1916 era o Brasil da Primeira República "
         "agrária e patriarcal; o CC/2002 é o Brasil da redemocratização e do Estado social; "
         "o PL 4/2025 é o Brasil da era digital tentando legislar o que ainda não existe plenamente. "
@@ -301,7 +301,7 @@ ARCO_CC = {
         {
             "nome": "Ordenações Filipinas",
             "ano": 1603,
-            "contexto": "Brasil colonial — Portugal sob domínio espanhol (Filipe II)",
+            "contexto": "Brasil colonial — Portugal sob domínio espanhol (Filipe II de Portugal, III de Espanha)",
             "vigencia": "1603–1916 — 313 anos de vigência parcial no Brasil",
             "caracteristica": (
                 "Direito medieval português com influência do direito romano, canônico e germânico. "
@@ -533,7 +533,7 @@ PRINCIPIOS_PENAIS = [
     {
         "id": "proporcionalidade",
         "nome": "Princípio da Proporcionalidade",
-        "latim": "Ne bis in idem / Proportionalitas",
+        "latim": "Proportionalitas",
         "autor": "Beccaria — dogmática alemã (Verhältnismäßigkeit) — CF/88 implícito",
         "descricao": (
             "A pena deve ser proporcional à gravidade do fato. Três subprincípios: "

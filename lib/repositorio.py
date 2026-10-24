@@ -54,10 +54,10 @@ AUTORES = {
         "nome": "Francisco Cavalcanti Pontes de Miranda",
         "datas": "1892–1979",
         "nacionalidade": "Brasileiro",
-        "obra_principal": "Tratado de Direito Privado (58 volumes), 1954–1969",
+        "obra_principal": "Tratado de Direito Privado (60 tomos), 1954–1969",
         "contribuicao": "Distinção tripartite: fato jurídico / ato jurídico / ato ilícito. Separação entre responsabilidade civil e ilicitude — superação do paradigma patrimonialista reparatório em favor do preventivo.",
         "corrente": "Pandectismo brasileiro / Teoria geral do direito privado",
-        "relevancia_brasil": "Resgatado na reforma do CC (Código Civil — Lei 10.406/2002) em 2025 — virada paradigmática do patrimonialismo para a prevenção"
+        "relevancia_brasil": "Resgatado no projeto de reforma do CC (Código Civil — Lei 10.406/2002), o PL 4/2025, em tramitação — virada paradigmática do patrimonialismo para a prevenção"
     },
     "savigny": {
         "nome": "Friedrich Carl von Savigny",
@@ -296,7 +296,7 @@ TRADICOES_JURIDICAS = {
         "nome": "Direito Canônico Católico",
         "paises": ["Vaticano (Estado independente)", "aplicável a 1,3 bilhão de católicos globalmente"],
         "caracteristicas": "Corpus Iuris Canonici (séc. XII — Graciano). Código de Direito Canônico atual (1983). Distinção foro interno (consciência) / foro externo (atos jurídicos da Igreja). Influência histórica decisiva no direito civil europeu e brasileiro",
-        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, 15/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
+        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
         "codigos_referencia": "Decreto de Graciano (1140); Corpus Iuris Canonici (1582); Código de Direito Canônico (1983)"
     }
 }
@@ -305,7 +305,7 @@ TRADICOES_JURIDICAS = {
 MAGNIFICA_HUMANITAS = {
     "titulo": "Magnifica Humanitas",
     "autor": "Papa Leão XIV (Robert Francis Prevost, 1955–)",
-    "data": "25 de maio de 2026",
+    "data": "25 de maio de 2026 (apresentação; assinada em 15/05/2026)",
     "local": "Sala Nova do Sínodo, Vaticano",
     "tema_central": "Custódia da pessoa humana na era da Inteligência Artificial (IA)",
     "tese_principal": (
@@ -331,7 +331,7 @@ MAGNIFICA_HUMANITAS = {
         "Entre 20 e 27 de maio de 2026, três instâncias independentes convergiram "
         "no mesmo campo normativo: (1) Executivo brasileiro — Decretos 12.975 e 12.976/2026 "
         "sobre responsabilidade de plataformas; (2) Vaticano — Magnifica Humanitas sobre "
-        "dignidade humana e IA; (3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "
+        "dignidade humana e IA; (3) Congresso — 27 PDLs (base da Câmara, 15/08/2026) para derrubar os decretos. "
         "Momento civilizatório singular documentado."
     ),
     "presenca_anthropic": (

@@ -115,7 +115,7 @@ CITACOES = [
             "e que ficando infame para sempre seus filhos e netos lhe sejam confiscados seus bens "
             "para a Coroa e Câmara Real."
         ),
-        "idioma_original": "Português (séculos XVIII)",
+        "idioma_original": "Português (século XVIII)",
         "traducao": "Mandado de execução da pena capital — execução pública em 21 de abril de 1792.",
         "contexto_juridico": (
             "Leitura semiótica da Lexiograph — atos de fala como tecnologia jurídica: "

@@ -40,7 +40,7 @@
       "target": "marco_civil",
       "tipo": "intersecao",
       "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil.",
-      "artigos": "ECA Digital ↔ MC art. 7º (dispositivo do ECA Digital em conferência)"
+      "artigos": "ECA Digital ↔ MC art. 7º"
     },
     {
       "source": "eca_digital",
@@ -193,7 +193,7 @@
       "source": "magnifica_humanitas",
       "target": "decreto_12975_2026",
       "tipo": "complementaridade",
-      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, 21/05) agiram independentemente no mesmo campo — responsabilidade de plataformas e proteção da dignidade humana na era digital.",
+      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975, de 20/05/2026) agiram independentemente no mesmo campo — responsabilidade de plataformas e proteção da dignidade humana na era digital.",
       "artigos": "Magnifica Humanitas ↔ Decreto 12.975/2026"
     },
     {
