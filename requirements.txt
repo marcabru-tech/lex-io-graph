@@ -1,5 +1,5 @@
 # GERADO a partir do requirements.in. Não edite à mão; veja o requirements.in.
-# Comando: uv pip compile requirements.in -o requirements.txt --python-version 3.12
+# Comando: uv pip compile requirements.in -o requirements.txt --python-version 3.13
 altair==6.3.0
     # via streamlit
 anyio==4.15.1
@@ -133,8 +133,6 @@ typing-extensions==4.16.0
     # via
     #   altair
     #   anyio
-    #   referencing
-    #   starlette
     #   streamlit
 tzdata==2026.5
     # via python-dateutil

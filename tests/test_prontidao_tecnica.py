@@ -26,7 +26,12 @@ class TestDependencias(unittest.TestCase):
         self.assertRegex(txt, r"(?m)^pillow==13\.0\.0$")
 
     def test_python_fixado(self):
-        self.assertEqual((RAIZ / ".python-version").read_text().strip(), "3.12")
+        # O builder do Google (Ubuntu 24.04) só oferece Python 3.13 ou mais novo.
+        versao = (RAIZ / ".python-version").read_text().strip()
+        self.assertEqual(versao, "3.13")
+        ci = (RAIZ / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
+        self.assertIn(f"python-version: '{versao}'", ci, "CI e produção devem usar o mesmo Python")
+        self.assertIn(f"python:{versao}-slim", (RAIZ / "cloudbuild.yaml").read_text(encoding="utf-8"))
 
 
 class TestBarreiraDeDeploy(unittest.TestCase):

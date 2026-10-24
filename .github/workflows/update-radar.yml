@@ -21,10 +21,10 @@ jobs:
       - name: Checkout repositório
         uses: actions/checkout@v5
 
-      - name: Configurar Python 3.12
+      - name: Configurar Python 3.13
         uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Instalar dependências
         run: pip install requests==2.33.1  # mesma versão do app (requirements.in)
