@@ -52,7 +52,7 @@ class TestNumeros(unittest.TestCase):
 
 class TestAfirmacoes(unittest.TestCase):
     PROIBIDAS = ("o único atlas", "único produto", "risco regulatório zero", "O risco regulatório é zero",
-                 "LGPD compliant", "Zero dados coletados", "(consentimento existe) AND (base legal válida)",
+                 "LGPD compliant", "Zero dados coletados", "(consentimento existe) AND (base legal válida)", "tratamento pode ser realizado",
                  "inaliável", "ARTIGO 1 DE 3", "onmicrosoft.com", "7 princípios")
 
     def test_index_sem_afirmacoes_retiradas(self):
@@ -66,6 +66,8 @@ class TestAfirmacoes(unittest.TestCase):
         self.assertIn("não é certificação de conformidade", index)
         self.assertIn('id="privacidade"', index)
         self.assertIn("30 dias", index)
+        self.assertIn("Responsável pelo tratamento", index)
+        self.assertIn("art. 18", index)
 
     def test_artigos_sem_erros_corrigidos(self):
         textos = "\n".join(p.read_text(encoding="utf-8") for p in (RAIZ / "artigos").glob("*.html"))

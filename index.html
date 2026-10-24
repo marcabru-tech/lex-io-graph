@@ -961,7 +961,7 @@
       </p>
       <p>
         O direito opera na mesma gramática. Se o ato é lícito, permissão. Se é ilícito, punição.
-        Sem hipótese legal, o tratamento de dados é vedado; com ela, ainda precisa cumprir os demais requisitos da LGPD.
+        Sem hipótese legal aplicável, o tratamento não deve ser realizado. A existência de uma hipótese legal, por si só, não torna o tratamento automaticamente lícito: também é necessário cumprir os princípios do art. 6º e os demais requisitos da LGPD — e, para dados sensíveis e dados de crianças e adolescentes, os arts. 11 e 14. O descumprimento pode caracterizar tratamento irregular (art. 44) e, conforme o caso, sujeitar o agente às sanções administrativas cabíveis (art. 52).
         Se a norma A intersecta a norma B, há risco regulatório. Se não há interseção, há vácuo.
       </p>
       <div class="logic-block">
@@ -970,10 +970,10 @@
         <span class="logic-else-kw">else</span>:<br>
         &nbsp;&nbsp;&nbsp;&nbsp;→ permissão<br>
         <br>
-        <span class="logic-keyword">if</span> (consentimento OU outra hipótese legal do art. 7º) AND (princípios e demais requisitos da LGPD):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ tratamento pode ser realizado (LGPD arts. 6º e 7º)</span><br>
+        <span class="logic-keyword">if</span> (hipótese legal aplicável — art. 7º; sensíveis: art. 11; crianças e adolescentes: art. 14) AND (princípios do art. 6º e demais requisitos):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ tratamento potencialmente lícito, condicionado ao cumprimento dos demais deveres</span><br>
         <span class="logic-else-kw">else</span>:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;→ tratamento irregular → sujeito a sanção (LGPD art. 52)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;→ possível irregularidade (art. 44), sujeita à avaliação do caso e às consequências legais cabíveis (art. 52)<br>
         <br>
         <span class="logic-keyword">if</span> (norma A intersecta norma B):<br>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="logic-then">→ risco mapeado</span><br>
@@ -1621,20 +1621,20 @@
 
     <!-- ======================== PRIVACIDADE ======================== -->
     <section id="privacidade" class="reveal" style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.06);">
-      <h2>Privacidade</h2>
+      <h2>Privacidade e dados técnicos</h2>
       <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
-        O Lexiograph não pede cadastro nem dados pessoais. Este aviso descreve, de forma direta, o que é registrado quando você usa o site e o app.
+        <strong>Responsável pelo tratamento:</strong> Guilherme Gonçalves Machado (Hubstry Deep Tech), Rio de Janeiro, Brasil.
+        Contato para dúvidas e solicitações sobre dados pessoais: <a href="mailto:globaldeeptechecosystem@hubstry.dev">globaldeeptechecosystem@hubstry.dev</a>.
+        O Lexiograph não pede cadastro, nome, e-mail, CPF ou CNPJ.
       </p>
       <ul style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
-        <li><strong>Questionário de conformidade:</strong> as respostas ficam só na memória da sua sessão no app, enquanto ela durar. Não são gravadas nem enviadas a terceiros.</li>
-        <li><strong>Contador de visitas do app:</strong> na primeira abertura de cada página, registra a página, a data e a hora, o ambiente e um código aleatório de sessão. Não usa cookies e não grava IP, navegador nem localização.</li>
-        <li><strong>Registros técnicos da hospedagem:</strong> o app roda no Google Cloud (Cloud Run), que, como qualquer servidor, registra dados técnicos de cada acesso, como o endereço IP, para operação e segurança. Esses registros são mantidos por 30 dias. Este site é hospedado pelo GitHub Pages, que mantém seus próprios registros de acesso.</li>
-        <li><strong>Recursos de terceiros:</strong> ao abrir o grafo do app, o seu navegador baixa bibliotecas dos serviços cdnjs (Cloudflare) e jsDelivr; ao abrir este site, baixa fontes do Google Fonts. Esses serviços recebem o seu endereço IP para entregar os arquivos.</li>
-        <li><strong>Finalidade:</strong> funcionamento, segurança e contagem agregada de uso. Nada é vendido nem usado para publicidade.</li>
+        <li><strong>Questionário de conformidade:</strong> as respostas são enviadas ao servidor do app apenas para calcular o quadro e ficam na memória da sua sessão enquanto ela durar. Não são gravadas em banco de dados nem em arquivo e não são compartilhadas com terceiros.</li>
+        <li><strong>Contador de visitas do app:</strong> na primeira abertura de cada página, registra a página, a data e a hora, o ambiente e um código aleatório de sessão. Não usa cookies nem grava o endereço IP em seu próprio mecanismo. Isso não significa que nenhuma informação técnica seja processada (ver o item seguinte).</li>
+        <li><strong>Registros técnicos da hospedagem:</strong> o app roda no Google Cloud (Cloud Run), em servidores nos Estados Unidos. Cada requisição pode gerar registros técnicos, incluindo endereço IP e metadados da requisição, usados para operação e segurança. Esses registros ficam no bucket <code>_Default</code> do Cloud Logging, com retenção configurada de 30 dias.</li>
+        <li><strong>Página de apresentação e recursos de terceiros:</strong> esta página é hospedada no GitHub Pages. Ao abrir esta página ou o grafo do app, o seu navegador se conecta diretamente a cdnjs (Cloudflare), jsDelivr e Google Fonts para baixar bibliotecas e fontes; esses fornecedores podem receber dados técnicos da requisição, como o endereço IP.</li>
+        <li><strong>Finalidade e base legal:</strong> funcionamento, segurança e contagem agregada de uso, com base no legítimo interesse (LGPD, art. 7º, IX). Nada é vendido nem usado para publicidade.</li>
+        <li><strong>Seus direitos:</strong> você pode pedir informações sobre o tratamento, acesso, correção ou eliminação de dados e exercer os demais direitos do art. 18 da LGPD pelo e-mail acima.</li>
       </ul>
-      <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
-        Dúvidas ou pedidos sobre privacidade: <a href="mailto:globaldeeptechecosystem@hubstry.dev">globaldeeptechecosystem@hubstry.dev</a>.
-      </p>
     </section>
 
     <!-- ======================== FOOTER ======================== -->
