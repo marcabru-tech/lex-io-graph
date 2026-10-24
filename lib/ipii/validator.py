@@ -19,6 +19,22 @@ Propriedade intelectual: Hubstry Deep Tech © 2026.
 """
 
 
+LIMITE_RESUMO = 120
+
+
+def resumir(texto, limite: int = LIMITE_RESUMO) -> str:
+    """Resumo legível: corta em palavra inteira e indica a continuação com "…".
+
+    O texto integral é guardado à parte (campo descricao_completa) para que a
+    interface permita lê-lo inteiro.
+    """
+    texto = " ".join(str(texto or "").split())
+    if len(texto) <= limite:
+        return texto
+    corte = texto[:limite].rsplit(" ", 1)[0] or texto[:limite]
+    return corte.rstrip(" ,;:.—-") + "…"
+
+
 def _par(source: str, target: str) -> tuple:
     """Par canônico ordenado alfabeticamente."""
     return tuple(sorted([source, target]))
@@ -92,7 +108,8 @@ def validar_arestas(sugeridas: list, existentes: list, excluidas: frozenset = fr
             {
                 "par": f"{e['source']} ↔ {e['target']}",
                 "tipo": e["tipo"],
-                "descricao": e.get("descricao", "")[:120],
+                "descricao": resumir(e.get("descricao")),
+                "descricao_completa": e.get("descricao") or "",
             }
             for e in faltando
         ],
@@ -100,7 +117,8 @@ def validar_arestas(sugeridas: list, existentes: list, excluidas: frozenset = fr
             {
                 "par": f"{e['source']} ↔ {e['target']}",
                 "tipo": e["tipo"],
-                "descricao": e.get("descricao", "")[:120],
+                "descricao": resumir(e.get("descricao")),
+                "descricao_completa": e.get("descricao") or "",
             }
             for e in fora_do_ipii
         ],

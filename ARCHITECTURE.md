@@ -76,7 +76,7 @@ Consulta APIs públicas semanalmente via GitHub Actions:
 - **Câmara dos Deputados** — `dadosabertos.camara.leg.br/api/v2`
 - **LexML** — `lexml.gov.br/busca/search` (output Atom XML)
 
-**Princípio:** o radar alerta via PR — o curador aprova o merge.
+**Princípio:** o radar alerta, o curador decide. O snapshot entra por commit direto na `main`, restrito a `data/radar_legislativo.json` e validado antes do commit (ADR 006); nada entra em `normas.json` sem curadoria humana.
 
 ---
 
@@ -94,6 +94,6 @@ Ver `docs/adr/` para decisões de arquitetura documentadas.
 | Grafo | NetworkX + PyVis |
 | APIs | requests |
 | Dados | JSON curado |
-| Deploy | Streamlit Cloud |
-| CI/CD | GitHub Actions |
+| Deploy | Cloud Build → Cloud Run (`cloudbuild.yaml`; testes antes do deploy). Reserva: Streamlit Community Cloud |
+| CI/CD | GitHub Actions (testes, smoke test e `pip-audit` em PR e push) + Cloud Build (testes e deploy) |
 | IP proprietária | lib/ipii/ (licença comercial Hubstry) |

@@ -40,3 +40,12 @@ jobs:
 
       - name: Smoke test
         run: python -u smoke_test.py
+
+      # Varredura de vulnerabilidades conhecidas nas dependências fixadas.
+      # Por ora só avisa (não bloqueia): um aviso vermelho aqui pede decisão
+      # registrada — atualizar a dependência ou aceitar o risco com justificativa.
+      - name: Auditoria de dependências (pip-audit)
+        continue-on-error: true
+        run: |
+          pip install pip-audit==2.10.1
+          pip-audit -r requirements.txt --progress-spinner off

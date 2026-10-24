@@ -2,6 +2,7 @@ import streamlit as st
 import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
+import os
 import tempfile
 import json
 
@@ -349,10 +350,19 @@ if _grafo_ok:
                 smooth={"type": "continuous", "roundness": 0.5},
             )
 
+        # O PyVis só grava em arquivo; o temporário é apagado logo após a leitura
+        # para não acumular um arquivo por renderização no contêiner.
         tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
-        net.save_graph(tmp.name)
-        with open(tmp.name, "r", encoding="utf-8") as f:
-            html_content = f.read()
+        tmp.close()
+        try:
+            net.save_graph(tmp.name)
+            with open(tmp.name, "r", encoding="utf-8") as f:
+                html_content = f.read()
+        finally:
+            try:
+                os.unlink(tmp.name)
+            except OSError:
+                pass
 
         injected_css = """
         <style>

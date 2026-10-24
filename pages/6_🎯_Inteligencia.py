@@ -5,6 +5,7 @@ from lib.natureza import selo, legenda
 from lib.footer import render_footer
 from lib.estado_regulador import figura_linha_do_tempo, SINTESE_LIVRO, FONTE_LIVRO
 from lib.constants import ODIN_URL
+from lib.graph_builder import DATA_DIR
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Inteligência Estratégica",
@@ -122,7 +123,7 @@ if secao == "⚡ Casos Estratégicos":
                     f"{caso.get('natureza') or NATUREZA_CASO_PADRAO}</span>", unsafe_allow_html=True)
         if caso.get("matriz_vigencia"):
             import json as _json
-            with open("data/normas.json", encoding="utf-8") as _f:
+            with open(DATA_DIR / "normas.json", encoding="utf-8") as _f:
                 _por_id = {n["id"]: n for n in _json.load(_f)["nodes"]}
             with st.expander("Matriz de vigência por Parte"):
                 for _nid in caso["matriz_vigencia"]:

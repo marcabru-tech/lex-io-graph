@@ -1106,183 +1106,218 @@
     {
       "par": "cf88 ↔ lgpd",
       "tipo": "hierarquia",
-      "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88."
+      "descricao": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88.",
+      "descricao_completa": "LGPD regulamenta os direitos fundamentais de privacidade e proteção de dados previstos no art. 5º da CF/88."
     },
     {
       "par": "cf88 ↔ marco_civil",
       "tipo": "hierarquia",
-      "descricao": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de "
+      "descricao": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de…",
+      "descricao_completa": "Marco Civil regulamenta o uso da internet com base nos princípios constitucionais de liberdade de expressão e sigilo de comunicação."
     },
     {
       "par": "lgpd ↔ anpd",
       "tipo": "regulamenta",
-      "descricao": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil."
+      "descricao": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil.",
+      "descricao_completa": "A ANPD é a autoridade criada pela LGPD para fiscalizar e regulamentar a proteção de dados no Brasil."
     },
     {
       "par": "eca ↔ eca_digital",
       "tipo": "hierarquia",
-      "descricao": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital."
+      "descricao": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital.",
+      "descricao_completa": "ECA Digital expande e especializa a proteção integral do ECA para o ambiente digital."
     },
     {
       "par": "lgpd ↔ eca_digital",
       "tipo": "intersecao",
-      "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital."
+      "descricao": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital.",
+      "descricao_completa": "Ambas as normas regulam o tratamento de dados de menores, sendo a ECA Digital mais específica sobre o ambiente digital."
     },
     {
       "par": "eca_digital ↔ marco_civil",
       "tipo": "intersecao",
-      "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Ci"
+      "descricao": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco…",
+      "descricao_completa": "ECA Digital impõe obrigações adicionais a provedores de aplicação que tratam dados de menores, complementando o Marco Civil."
     },
     {
       "par": "eca_digital ↔ pl_ia",
       "tipo": "intersecao",
-      "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteçõe"
+      "descricao": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 +…",
+      "descricao_completa": "Sistemas de IA que atingem crianças e adolescentes ficam sujeitos a ambos: classificação de risco do PL 2.338 + proteções específicas do ECA Digital."
     },
     {
       "par": "cf88 ↔ stf_tema987",
       "tipo": "hierarquia",
-      "descricao": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do M"
+      "descricao": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do…",
+      "descricao_completa": "O STF aplicou os direitos fundamentais constitucionais para declarar insuficiente a proteção conferida pelo art. 19 do Marco Civil — inconstitucionalidade por omissão parcial."
     },
     {
       "par": "pl_cc_digital ↔ lgpd",
       "tipo": "antinomia",
-      "descricao": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de sobreposição"
+      "descricao": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de…",
+      "descricao_completa": "PL 4/2025 (Livro VI — Direito Civil Digital) trata de matérias já disciplinadas pela LGPD, criando risco de sobreposição normativa. ANPD e CGI.br emitiram alertas de insegurança jurídica."
     },
     {
       "par": "pl_cc_digital ↔ marco_civil",
       "tipo": "antinomia",
-      "descricao": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil — j"
+      "descricao": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil…",
+      "descricao_completa": "PL 4/2025 introduz regime de responsabilidade de plataformas que precisa ser coordenado com o art. 19 do Marco Civil — já objeto de inconstitucionalidade parcial pelo STF (Tema 987)."
     },
     {
       "par": "cf88 ↔ pl_cc_digital",
       "tipo": "hierarquia",
-      "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º"
+      "descricao": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art…",
+      "descricao_completa": "Reforma do Código Civil deve respeitar o bloco constitucional de direitos digitais, inclusive proteção de dados (art. 5º, LXXIX) e liberdade de expressão."
     },
     {
       "par": "anpd ↔ decreto_12975_2026",
       "tipo": "regulamenta",
-      "descricao": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da "
+      "descricao": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da…",
+      "descricao_completa": "ANPD recebe pelo Decreto 12.975/2026 competência expressa para regular, fiscalizar e apurar infrações ao Marco Civil da Internet — expansão significativa de atribuições."
     },
     {
       "par": "marco_civil ↔ decreto_12976_2026",
       "tipo": "regulamenta",
-      "descricao": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção de"
+      "descricao": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção…",
+      "descricao_completa": "Decreto 12.976/2026 complementa o Marco Civil no eixo de proteção à mulher, criando obrigações específicas de remoção de deepfakes sexuais e conteúdo íntimo ilegal."
     },
     {
       "par": "pl_misoginia ↔ marco_civil",
       "tipo": "intersecao",
-      "descricao": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino serão"
+      "descricao": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino…",
+      "descricao_completa": "PL 896/2023 (criminalização da misoginia) intersecta com o Marco Civil: plataformas que hospedam conteúdo misógino serão responsabilizadas sob o novo regime do art. 19 + Decreto 12.975/2026."
     },
     {
       "par": "cf88 ↔ pl_misoginia",
       "tipo": "hierarquia",
-      "descricao": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88 — crim"
+      "descricao": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88…",
+      "descricao_completa": "PL 896/2023 altera a Lei do Racismo (Lei 7.716/1989), que tem fundamento constitucional no art. 5º, XLII da CF/88 — crimes de discriminação são inafiançáveis e imprescritíveis."
     },
     {
       "par": "magnifica_humanitas ↔ pl_ia",
       "tipo": "complementaridade",
-      "descricao": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite da"
+      "descricao": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite…",
+      "descricao_completa": "Magnifica Humanitas (2026) e PL 2.338/2023 (Marco Legal da IA) convergem no princípio da dignidade humana como limite da IA — o Vaticano como ator normativo global no debate regulatório brasileiro."
     },
     {
       "par": "magnifica_humanitas ↔ decreto_12975_2026",
       "tipo": "complementaridade",
-      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, "
+      "descricao": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026…",
+      "descricao_completa": "Convergência histórica de maio/2026: Vaticano (Magnifica Humanitas, 25/05) e Executivo brasileiro (Decreto 12.975/2026, 21/05) agiram independentemente no mesmo campo — responsabilidade de plataformas e proteção da dignidade humana na era digital."
     },
     {
       "par": "magnifica_humanitas ↔ cf88",
       "tipo": "complementaridade",
-      "descricao": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana com"
+      "descricao": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana…",
+      "descricao_completa": "Magnifica Humanitas e a CF/88 (Constituição Federal de 1988) art. 1º, III convergem no princípio da dignidade humana como fundamento normativo supremo — a encíclica reforça eticamente o que a CF/88 positivou juridicamente."
     },
     {
       "par": "magnifica_humanitas ↔ nr1",
       "tipo": "complementaridade",
-      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MT"
+      "descricao": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria…",
+      "descricao_completa": "Magnifica Humanitas alerta sobre IA no trabalho e riscos à dignidade do trabalhador — convergência com NR-1 (Portaria MTE 1.419/2024) que incluiu os fatores de risco psicossociais relacionados ao trabalho no PGR (Programa de Gerenciamento de Riscos)."
     },
     {
       "par": "res_cnj_615 ↔ lgpd",
       "tipo": "complementaridade",
-      "descricao": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário e"
+      "descricao": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário…",
+      "descricao_completa": "A Resolução não regulamenta a LGPD: estabelece obrigações próprias para o uso de dados em soluções de IA no Judiciário e remete expressamente à legislação de proteção de dados, exigindo anonimização e observância do segredo de justiça."
     },
     {
       "par": "cf88 ↔ res_cnj_615",
       "tipo": "hierarquia",
-      "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao "
+      "descricao": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao…",
+      "descricao_completa": "A Constituição fundamenta a validade e delimita a competência normativa da Resolução. O art. 103-B, § 4º, I, atribui ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e autoriza a expedição de atos regulamentares no âmbito de sua competência. A Resolução exerce essa competência ao disciplinar desenvolvimento, governança, auditoria, monitoramento e uso responsável de soluções de IA pelos órgãos do Judiciário, preservada a autonomia dos tribunais e excetuado o STF. A competência não é legislativa geral: permanece sujeita à legalidade, aos direitos fundamentais e aos limites materiais do controle administrativo."
     },
     {
       "par": "cf88 ↔ lei_15504_2026",
       "tipo": "hierarquia",
-      "descricao": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art. 1"
+      "descricao": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art…",
+      "descricao_completa": "O REDATA é instrumento de política econômica fundado na ordem econômica constitucional: incentivo e planejamento (art. 174), mercado interno como patrimônio nacional (art. 219) e defesa do meio ambiente como princípio da ordem econômica (art. 170, VI) — este último é o parâmetro constitucional do debate sobre o gás natural."
     },
     {
       "par": "lei_15504_2026 ↔ pl_ia",
       "tipo": "complementaridade",
-      "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem"
+      "descricao": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada…",
+      "descricao_completa": "O REDATA trata da capacidade física de computar; o PL 2.338/2023 trata de direitos e riscos no uso de IA. Uma camada sem a outra produz infraestrutura sem governança ou governança sem infraestrutura."
     },
     {
       "par": "cf88 ↔ lei_15506_2026",
       "tipo": "hierarquia",
-      "descricao": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no inter"
+      "descricao": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no…",
+      "descricao_completa": "Os recursos minerais são bens da União (art. 20, IX); a pesquisa e a lavra dependem de autorização ou concessão no interesse nacional (art. 176). A PNMCE regula o aproveitamento de bem público dentro da ordem econômica constitucional (art. 170)."
     },
     {
       "par": "cf88 ↔ convencao_viena_1969",
       "tipo": "hierarquia",
-      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A…",
+      "descricao_completa": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 496/2009 → Decreto 7.030/2009."
     },
     {
       "par": "cf88 ↔ tratado_assuncao_1991",
       "tipo": "hierarquia",
-      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A…",
+      "descricao_completa": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 197/1991 → Decreto 350/1991."
     },
     {
       "par": "cf88 ↔ acordo_mercosul_singapura",
       "tipo": "hierarquia",
-      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A…",
+      "descricao_completa": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 147/2026 → Decreto 13.081/2026."
     },
     {
       "par": "cf88 ↔ acordo_mercosul_efta",
       "tipo": "hierarquia",
-      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A…",
+      "descricao_completa": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 146/2026 → Decreto 13.126/2026."
     },
     {
       "par": "cf88 ↔ acordo_mercosul_ue_ita",
       "tipo": "hierarquia",
-      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituiç"
+      "descricao": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A…",
+      "descricao_completa": "Incorporação de tratado: o Congresso aprova (art. 49, I) e o Presidente celebra e promulga (art. 84, VIII). A Constituição — não a Convenção de Viena — é o fundamento interno de validade. Decreto Legislativo 14/2026 → Decreto 12.953/2026."
     },
     {
       "par": "tratado_assuncao_1991 ↔ acordo_mercosul_singapura",
       "tipo": "complementaridade",
-      "descricao": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tr"
+      "descricao": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo…",
+      "descricao_completa": "O acordo com Singapura é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica."
     },
     {
       "par": "tratado_assuncao_1991 ↔ acordo_mercosul_ue_ita",
       "tipo": "complementaridade",
-      "descricao": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pe"
+      "descricao": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada…",
+      "descricao_completa": "O acordo com União Europeia é negociado pelo Mercosul como bloco, dentro da estrutura jurídica e institucional criada pelo Tratado de Assunção; cada Estado Parte o internaliza e ratifica."
     },
     {
       "par": "convencao_viena_1969 ↔ acordo_mercosul_ue_ita",
       "tipo": "complementaridade",
-      "descricao": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA (ar"
+      "descricao": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA…",
+      "descricao_completa": "A CVDT disciplina a aplicação provisória (art. 25), dispositivo reservado pelo Brasil. A aplicação provisória do ITA (art. 23.3) só começou após a aprovação pelo Congresso (DL 14/2026), coerente com a reserva."
     },
     {
       "par": "cf88 ↔ lindb",
       "tipo": "hierarquia",
-      "descricao": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem públi"
+      "descricao": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem…",
+      "descricao_completa": "A LINDB, decreto-lei de 1942, foi recepcionada pela CF/88; os limites à lei estrangeira (art. 17: soberania, ordem pública, bons costumes) dialogam com os fundamentos constitucionais da soberania (art. 1º, I)."
     }
   ],
   "fora_do_ipii": [
     {
       "par": "marco_civil ↔ stf_adimc",
       "tipo": "interpreta",
-      "descricao": "Relação registrada entre o Marco Civil e a ADI 5527, ação que questiona dispositivos da lei no STF. A tese atribuída a e"
+      "descricao": "Relação registrada entre o Marco Civil e a ADI 5527, ação que questiona dispositivos da lei no STF. A tese atribuída a…",
+      "descricao_completa": "Relação registrada entre o Marco Civil e a ADI 5527, ação que questiona dispositivos da lei no STF. A tese atribuída a este julgamento está em conferência em fonte oficial e não deve ser lida como entendimento assentado."
     },
     {
       "par": "marco_civil ↔ stj_resp_plat",
       "tipo": "interpreta",
-      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada "
+      "descricao": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada…",
+      "descricao_completa": "Registro pendente de conferência em fonte oficial; a tese atribuída a este REsp não foi confirmada e não deve ser usada como interpretação do art. 19."
     }
   ],
   "metadata": {
-    "gerado_em": "2026-10-20T21:10:05.411406",
+    "gerado_em": "2026-10-24T11:21:50.045528",
     "threshold": 0.4,
     "tier_filtro": 5,
     "status_excluidos": [

@@ -1,0 +1,66 @@
+# Build e deploy do Lexiograph no Cloud Run, disparado pelo gatilho do Cloud Build
+# a cada push na main. Os passos rodam em sequência (sem waitFor): se o passo
+# "Testes" falhar, o build para e nada é publicado — o site segue na revisão
+# anterior. Os quatro passos seguintes reproduzem a configuração em linha que o
+# gatilho usava antes desta mudança (auditoria de prontidão, item B10).
+# As variáveis $_AR_HOSTNAME etc. vêm das substituições do gatilho.
+steps:
+  - id: Testes
+    name: python:3.12-slim
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        set -e
+        pip install --no-cache-dir -q -r requirements.txt
+        python -u -m unittest discover tests
+        python -u smoke_test.py
+
+  - id: Buildpack
+    name: gcr.io/k8s-skaffold/pack
+    entrypoint: pack
+    args:
+      - build
+      - $_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
+      - --builder=gcr.io/buildpacks/builder:latest
+      - --network=cloudbuild
+      - --publish
+      - --path=.
+
+  - id: Pull
+    name: gcr.io/cloud-builders/docker
+    args:
+      - pull
+      - $_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
+
+  - id: Push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - $_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
+
+  - id: Deploy
+    name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    entrypoint: gcloud
+    args:
+      - run
+      - services
+      - update
+      - $_SERVICE_NAME
+      - --platform=managed
+      - --image=$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
+      - --labels=managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$_TRIGGER_ID
+      - --region=$_DEPLOY_REGION
+      - --quiet
+
+images:
+  - $_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
+
+options:
+  substitutionOption: ALLOW_LOOSE
+  logging: CLOUD_LOGGING_ONLY
+
+tags:
+  - gcp-cloud-build-deploy-cloud-run
+  - gcp-cloud-build-deploy-cloud-run-managed
+  - lexiograph

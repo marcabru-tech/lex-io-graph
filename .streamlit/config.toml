@@ -8,3 +8,13 @@ font = "monospace"
 
 [server]
 headless = true
+
+[client]
+# Em produção, exceções e avisos de depreciação não aparecem para o visitante;
+# o detalhe completo continua nos logs do Cloud Run.
+showErrorDetails = "none"
+
+[browser]
+# Não enviar estatísticas de uso ao Streamlit (coerente com o aviso de
+# privacidade: a única telemetria é a de lib/telemetria.py).
+gatherUsageStats = false
