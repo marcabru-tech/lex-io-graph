@@ -90,9 +90,37 @@ lex-io-graph/
 ├── .github/workflows/
 │   ├── ci.yml                     # CI — testes unitários + smoke test
 │   └── update-radar.yml           # GitHub Action — atualização semanal do radar
+├── cloudbuild.yaml                # Cloud Build — testes, build e deploy no Cloud Run
+├── requirements.in                # Dependências diretas (editar este)
+├── requirements.txt               # Versões exatas, geradas a partir do .in
 ├── CHANGELOG.md
 └── ARCHITECTURE.md
 ```
+
+---
+
+## Deploy e reversão
+
+**Produção:** Cloud Run, serviço `lexiograph` (região `us-central1`), domínio `lexiograph.hubstry.dev`. A reserva no Streamlit Community Cloud não é o ambiente oficial.
+
+**Fluxo:** todo push na `main` dispara o gatilho do Cloud Build, que roda o `cloudbuild.yaml` em sequência: **testes unitários e smoke test → build com buildpacks (`Procfile`, Python de `.python-version`) → deploy**. Se um teste falhar, nada é publicado e o site segue na revisão anterior. A CI do GitHub Actions roda os mesmos testes em cada PR, antes do merge.
+
+**Reversão** (Cloud Shell):
+
+```bash
+# 1. Ver as revisões recentes
+gcloud run revisions list --service=lexiograph --region=us-central1 --limit=5
+
+# 2. Mandar 100% do tráfego para a revisão boa
+gcloud run services update-traffic lexiograph --region=us-central1 --to-revisions=NOME_DA_REVISAO=100
+
+# 3. Depois de corrigir, voltar a seguir a revisão mais recente (obrigatório)
+gcloud run services update-traffic lexiograph --region=us-central1 --to-latest
+```
+
+Atenção: enquanto o tráfego estiver fixado numa revisão (passo 2), os deploys novos são publicados mas **não recebem visitas** até o passo 3.
+
+**Deploy manual** (console ou `gcloud run deploy`): só em emergência, porque pula os testes do gatilho. Registrar o motivo no CHANGELOG.
 
 ---
 

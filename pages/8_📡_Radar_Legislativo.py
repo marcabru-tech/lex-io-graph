@@ -4,6 +4,7 @@ from html import escape
 from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION, RADAR_CADENCIA, THEMES
+from lib.graph_builder import DATA_DIR
 from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
 from lib.radar_cartao import html_cartao, html_proveniencia, html_termos_monitorados
@@ -97,7 +98,7 @@ if ultima and ultima != "Nunca":
 # Novidades pendentes de curadoria: as que já viraram nó do grafo depois da
 # coleta saem da contagem, como saem da lista da seção Novidades.
 try:
-    with open("data/normas.json", encoding="utf-8") as _fi:
+    with open(DATA_DIR / "normas.json", encoding="utf-8") as _fi:
         _idx_topo = indice_corpus(json.load(_fi)["nodes"])
 except Exception:
     _idx_topo = {}
@@ -200,7 +201,7 @@ FONTE_LABELS = {
 }
 
 try:
-    with open("data/normas.json", encoding="utf-8") as _fc:
+    with open(DATA_DIR / "normas.json", encoding="utf-8") as _fc:
         _INDICE_CORPUS = indice_corpus(json.load(_fc)["nodes"])
 except Exception:
     _INDICE_CORPUS = {}
@@ -246,7 +247,7 @@ elif secao == "📋 Por Tema":
         vetores = vetores_do_tema_radar(tema_sel)
         if vetores:
             try:
-                with open("data/normas.json", encoding="utf-8") as _f:
+                with open(DATA_DIR / "normas.json", encoding="utf-8") as _f:
                     _normas = json.load(_f)["nodes"]
             except Exception:
                 _normas = []

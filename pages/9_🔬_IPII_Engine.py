@@ -156,6 +156,18 @@ secao = st.radio(
     label_visibility="collapsed"
 )
 
+def _texto_completo(item: dict) -> None:
+    """Mostra a descrição integral quando o resumo do relatório foi encurtado."""
+    completa = str(item.get("descricao_completa") or "").strip()
+    resumo = str(item.get("descricao") or "").strip()
+    if completa and completa != resumo:
+        with st.expander("Ver texto completo"):
+            st.markdown(
+                f'<div class="aresta-temas" style="white-space:pre-wrap">{escape(completa)}</div>',
+                unsafe_allow_html=True,
+            )
+
+
 TIER_LABELS = {
     1: ("tier-1", "TIER 1 — FORTE (≥ 0.75)"),
     2: ("tier-2", "TIER 2 — FORTE (0.65–0.74)"),
@@ -239,13 +251,15 @@ elif secao == "⚠️ Gap do engine":
         "(ANPD criada por lei, decreto atribui competência)."
     )
     for g in gap:
-        tipo_label = TIPO_LABELS.get(g.get("tipo", ""), g.get("tipo", ""))
+        tipo_label = escape(str(TIPO_LABELS.get(g.get("tipo", ""), g.get("tipo", ""))))
+        resumo = escape(str(g.get("descricao") or ""))
         st.markdown(f"""
 <div class="tier-card tier-3">
-  <div class="aresta-par">{g['par']}</div>
+  <div class="aresta-par">{escape(str(g.get('par', '')))}</div>
   <div class="aresta-tipo">Tipo: {tipo_label}</div>
-  {f'<div class="aresta-temas">{g["descricao"]}</div>' if g.get('descricao') else ''}
+  {f'<div class="aresta-temas">{resumo}</div>' if resumo else ''}
 </div>""", unsafe_allow_html=True)
+        _texto_completo(g)
     st.markdown(
         "**IPII experimental — apoio à curadoria.** O motor sugere relações com base nas "
         "dimensões implementadas; uma pontuação não comprova, por si só, uma relação jurídica. "
@@ -277,6 +291,7 @@ elif secao == "🚫 Fora do IPII":
   <div class="aresta-tipo">Tipo registrado: {tipo}</div>
   <div class="aresta-temas">{descricao}</div>
 </div>""", unsafe_allow_html=True)
+        _texto_completo(item)
 
 st.markdown(
     '<div class="principio">O engine alerta — o curador decide · IPII Engine © 2026 Hubstry Deep Tech</div>',

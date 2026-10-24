@@ -27,7 +27,7 @@ jobs:
           python-version: '3.12'
 
       - name: Instalar dependências
-        run: pip install requests
+        run: pip install requests==2.33.1  # mesma versão do app (requirements.in)
 
       - name: Verificar se o notebook ja coletou esta semana
         id: frescor
@@ -44,7 +44,11 @@ jobs:
               f.write(f"fresco={'true' if fresco else 'false'}\n")
           PY
 
+      # continue-on-error preserva o snapshot anterior e deixa as travas e o
+      # commit rodarem; o último passo marca a execução como FALHA se o coletor
+      # quebrou, para que a falha não passe por atualização bem-sucedida.
       - name: Executar radar legislativo
+        id: coletor
         if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
         run: python -u updater.py
         continue-on-error: true
@@ -92,6 +96,12 @@ jobs:
           git push origin main
 
           echo "Snapshot atualizado em main."
+
+      - name: Sinalizar falha do coletor
+        if: steps.coletor.outcome == 'failure'
+        run: |
+          echo "::error::O coletor (updater.py) falhou. O snapshot anterior foi preservado, mas esta execução NÃO é uma atualização bem-sucedida. Ver o log do passo 'Executar radar legislativo'."
+          exit 1
 
 # ─────────────────────────────────────────────────────────────────────
 # GOVERNANÇA — ver docs/adr/006-ingestao-automatizada-de-dados.md

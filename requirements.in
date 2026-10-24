@@ -1,0 +1,15 @@
+# Dependências diretas do Lexiograph. Edite este arquivo, não o requirements.txt.
+# Depois de editar, regenere o requirements.txt (versões exatas de tudo, inclusive
+# das dependências indiretas) com:
+#   uv pip compile requirements.in -o requirements.txt --python-version 3.12
+# e rode a suíte (python -m unittest discover tests; python smoke_test.py).
+# Conferir as páginas do Grafo e da Teoria dos Conjuntos, que usam APIs do
+# Streamlit marcadas para remoção.
+streamlit==1.66.1
+networkx==3.6.1
+pyvis==0.3.2
+requests==2.33.1
+plotly==7.1.0
+# Pillow chega pelo Streamlit; fixado aqui para a versão sem as vulnerabilidades
+# conhecidas da 12.x (auditoria de prontidão de 23/10/2026).
+pillow==13.0.0
