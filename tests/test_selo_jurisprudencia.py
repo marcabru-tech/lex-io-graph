@@ -11,7 +11,9 @@ class TestSeloComparacao(unittest.TestCase):
         from lib.graph_builder import load_json
 
         juris = load_json("jurisprudencia.json")["jurisprudencia"]
-        alvo = next(j for j in juris if j.get("estado_verificacao") != "verificado")
+        alvo = next((j for j in juris if j.get("estado_verificacao") != "verificado"), None)
+        if alvo is None:
+            self.skipTest("Nenhum registro não verificado em jurisprudencia.json")
         norma = alvo["normas_relacionadas"][0]
         outra = next(n["id"] for n in load_json("normas.json")["nodes"] if n["id"] != norma)
 
