@@ -6,7 +6,7 @@
 # As variáveis $_AR_HOSTNAME etc. vêm das substituições do gatilho.
 steps:
   - id: Testes
-    name: python:3.12-slim
+    name: python:3.13-slim
     entrypoint: bash
     args:
       - -c
