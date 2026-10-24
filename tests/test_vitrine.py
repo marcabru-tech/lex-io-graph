@@ -66,6 +66,7 @@ class TestAfirmacoes(unittest.TestCase):
         self.assertIn("não é certificação de conformidade", index)
         self.assertIn('id="privacidade"', index)
         self.assertIn("30 dias", index)
+        self.assertIn("configuração técnica atual", index, "os 30 dias não podem soar como conclusão jurídica")
         self.assertIn("Responsável pelo tratamento", index)
         self.assertIn("art. 18", index)
 
