@@ -42,6 +42,7 @@ class TestNumeros(unittest.TestCase):
         for n in self._todos(r"(\d+) páginas de inteligência", self.index):
             self.assertEqual(n, self.n_paginas)
         linhas = re.findall(r"<td>(\d+)</td>\s*<td style=\"color: var\(--(?:lex|io)\);\">", self.index)
+        self.assertTrue(linhas, "padrão da tabela do app não encontrado em index.html")
         self.assertEqual(sorted(map(int, linhas))[-1], self.n_paginas, "a tabela do app deve listar todas as páginas")
 
     def test_readme(self):
@@ -52,7 +53,7 @@ class TestNumeros(unittest.TestCase):
 class TestAfirmacoes(unittest.TestCase):
     PROIBIDAS = ("o único atlas", "único produto", "risco regulatório zero", "O risco regulatório é zero",
                  "LGPD compliant", "Zero dados coletados", "(consentimento existe) AND (base legal válida)",
-                 "inaliável", "ARTIGO 1 DE 3", "onmicrosoft.com")
+                 "inaliável", "ARTIGO 1 DE 3", "onmicrosoft.com", "7 princípios")
 
     def test_index_sem_afirmacoes_retiradas(self):
         index = (RAIZ / "index.html").read_text(encoding="utf-8")
@@ -69,7 +70,7 @@ class TestAfirmacoes(unittest.TestCase):
     def test_artigos_sem_erros_corrigidos(self):
         textos = "\n".join(p.read_text(encoding="utf-8") for p in (RAIZ / "artigos").glob("*.html"))
         for frase in ("por 8 a 2", "Decreto 38/1935", "positivia", "7 Princípios", "São Bernardo, três",
-                      "9 páginas de inteligência", "DE 3"):
+                      "9 páginas de inteligência", "DE 3", "onmicrosoft.com"):
             with self.subTest(frase=frase):
                 self.assertNotIn(frase, textos)
 
