@@ -66,7 +66,7 @@ AUTORES = {
         "obra_principal": "Sistema do Direito Romano Atual (System des heutigen römischen Rechts), 1840",
         "contribuicao": "Hermenêutica histórica — a lei deve ser interpretada pela intenção original do legislador e pelo espírito do povo (Volksgeist). Fundador da Escola Histórica do Direito.",
         "corrente": "Escola Histórica do Direito",
-        "relevancia_brasil": "Influência no CC/1916 de Clóvis Beviláqua — interpretação originalista ainda presente na jurisprudência conservadora"
+        "relevancia_brasil": "Influência no CC/1916 de Clóvis Beviláqua — interpretação originalista ainda presente em parte da jurisprudência"
     },
     "ihering": {
         "nome": "Rudolf von Ihering",
@@ -262,8 +262,7 @@ TRADICOES_JURIDICAS = {
         "paises": ["Israel (sistema híbrido)", "comunidades judaicas globalmente"],
         "caracteristicas": (
             "Fontes: Torah, Talmude (Mishná + Guemará), responsa rabínica (teshuvot). "
-            "3.000 anos de jurisprudência contínua — o sistema jurídico com registro "
-            "ininterrupto mais antigo do mundo. Metodologia talmúdica: argumento e "
+            "Tradição jurídica milenar, com corpus normativo e interpretativo desenvolvido ao longo de muitos séculos. Metodologia talmúdica: argumento e "
             "contra-argumento registrados simultaneamente — minoria preservada junto "
             "com maioria. Forma de polifonia bakhtiniana avant la lettre (Bakhtin, 1895–1975). "
             "Israel: sistema híbrido — Estado secular com tribunais rabínicos (Batei Din) "

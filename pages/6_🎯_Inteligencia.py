@@ -242,7 +242,7 @@ elif secao == "🧠 Epistemologia do Direito":
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown("### O valor epistemológico do Lex-IO-Graph")
     st.markdown("""
-O Lex-IO-Graph é o único atlas jurídico brasileiro que articula explicitamente:
+O Lex-IO-Graph é um atlas de relações normativas e conceituais que articula explicitamente:
 
 - **Hermenêutica geral** (Schleiermacher, Dilthey, Gadamer) como fundamento da hermenêutica jurídica
 - **Teoria do conhecimento** (Verstehen vs. Erklären) como critério de avaliação dos métodos jurídicos  
