@@ -31,3 +31,11 @@ class TestBeaconCloudflare(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRetencaoContador(unittest.TestCase):
+    def test_aviso_informa_prazo_do_contador(self):
+        texto = (RAIZ / "index.html").read_text(encoding="utf-8")
+        self.assertIn("mantidos no Google Cloud Logging por até 12 meses", texto)
+        self.assertIn("não inclui endereço IP nem URL da requisição", texto)
+        self.assertIn("retenção configurada de 30 dias", texto)
