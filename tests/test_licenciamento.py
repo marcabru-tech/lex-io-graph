@@ -6,7 +6,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 EMAIL = "globaldeeptechecosystem@hubstry.dev"
 ARQUIVOS_IPII = [
     "lib/ipii/__init__.py", "lib/ipii/matcher.py", "lib/ipii/tokenizer.py",
-    "lib/ipii/validator.py", "ipii_engine.py",
+    "lib/ipii/validator.py", "ipii_engine.py", "pages/9_🔬_IPII_Engine.py",
 ]
 
 

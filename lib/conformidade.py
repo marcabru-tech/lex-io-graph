@@ -8,6 +8,7 @@ visitas (lib/telemetria.py) é descrito em render_disclaimer.
 
 import streamlit as st
 from datetime import datetime
+from html import escape as _esc
 
 
 NORMA_TAGS = {
@@ -26,7 +27,7 @@ NORMA_TAGS = {
     ],
     "marco_civil": [
         "internet", "plataformas", "responsabilidade_plataformas",
-        "guarda_logs", "neutridade_rede", "sigilo_comunicacao",
+        "guarda_logs", "neutralidade_rede", "sigilo_comunicacao",
         "liberdade_expressao", "remocao_conteudo", "moderacao_conteudo",
         "provedor_aplicacao", "dados_usuario",
     ],
@@ -65,7 +66,7 @@ NORMA_TAGS = {
         "inteligencia_artificial", "alto_risco", "transparencia_algoritmos",
         "discriminacao_algoritmica", "responsabilidade_ia", "impacto_social",
         "direitos_humanos", "auditoria_ia", "governanca_ia",
-        "decisao_automatizada", "viies_algoritmico",
+        "decisao_automatizada", "vies_algoritmico",
     ],
     "decreto_12975_2026": [
         "plataformas", "responsabilidade_plataformas", "dever_proativo",
@@ -181,7 +182,7 @@ PERFIL_TEMA_MAP = {
             "inteligencia_artificial", "alto_risco",
             "transparencia_algoritmos", "decisao_automatizada",
             "auditoria_ia", "governanca_ia", "responsabilidade_ia",
-            "viies_algoritmico", "discriminacao_algoritmica",
+            "vies_algoritmico", "discriminacao_algoritmica",
         ],
         "Não": [],
         "Estou avaliando": ["inteligencia_artificial", "governanca_ia"],
@@ -261,7 +262,7 @@ ACOES_POR_TAG = {
     },
     "acordo_comercial": {
         "prioridade": "media",
-        "acao": "Confirmar a vigência por país de destino: Mercosul–EFTA vale com a Islândia desde 01/10/2026; o acordo com a UE está em aplicação provisória desde 01/05/2026",
+        "acao": "Confirmar a vigência por país de destino: Mercosul–EFTA aplica-se com a Islândia desde 01/10/2026 e, com a Noruega, a partir de 01/11/2026 (Suíça e Liechtenstein dependem de internalização); o acordo com a UE está em aplicação provisória desde 01/05/2026",
         "base": "Decreto 13.126/2026; Decreto 12.953/2026, art. 23.3 do Acordo",
     },
     "datacenter": {
@@ -282,7 +283,7 @@ ACOES_POR_TAG = {
     "investimento_estrangeiro": {
         "prioridade": "critica",
         "acao": "Mapear mudanças de controle e participação estrangeira relevante sujeitas à homologação do CIMCE",
-        "base": "Lei 15.506/2026, art. 41; Decreto 13.118/2026",
+        "base": "Lei 15.506/2026, art. 3º, § 2º, e art. 41; Decreto 13.118/2026",
     },
     "rastreabilidade": {
         "prioridade": "alta",
@@ -431,16 +432,17 @@ def render_disclaimer():
         "abertura de cada página, registra a página, a data e a hora, o "
         "ambiente e um código aleatório de sessão nos registros da "
         "hospedagem (Google Cloud). O contador não usa cookies e não grava "
-        "IP, navegador nem localização."
+        "IP, navegador nem localização. Como qualquer servidor, a hospedagem "
+        "registra por tempo limitado dados técnicos de cada acesso (como o IP)."
     )
 
 
 def render_disclaimer_rodape():
     st.markdown("---")
     st.caption(
-        "⚠️ Quadro de diagnóstico preliminar. "
-        "Não substitui assessoria jurídica ou técnica especializada. "
-        "Scores calculados pelo IPII Engine com base no corpus atualizado. "
+        "⚠️ Triagem informativa, não é certificação de conformidade nem parecer jurídico. "
+        "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus "
+        "curado (indicador heurístico); não medem risco jurídico nem obrigação aplicável. "
         f"Gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M')}"
     )
 
@@ -533,6 +535,19 @@ def _gerar_acoes(perfil: dict) -> list:
     return acoes_unicas
 
 
+STATUS_PROPOSTA = {"tramitacao"}
+STATUS_EM_CONFERENCIA = {"em_conferencia"}
+
+
+def _grupo(status: str) -> str:
+    """Separa o que é norma vigente do que não pode ser lido como obrigação."""
+    if status in STATUS_EM_CONFERENCIA:
+        return "em_conferencia"
+    if status in STATUS_PROPOSTA:
+        return "proposta"
+    return "vigente"
+
+
 def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     tags_perfil = _temas_do_perfil(perfil)
 
@@ -546,6 +561,7 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
                 "nome": norma.get("nome", norma["id"]),
                 "tipo": norma.get("tipo", ""),
                 "status": norma.get("status", ""),
+                "grupo": _grupo(norma.get("status", "")),
                 "score": score,
                 "pct": int(score * 100),
                 "tags_match": sorted(tags_match),
@@ -555,14 +571,20 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     normas_scored.sort(key=lambda x: x["score"], reverse=True)
     ids_relevantes = {n["id"] for n in normas_scored}
 
+    grupo_de = {n["id"]: n["grupo"] for n in normas_scored}
     arestas_filtradas = [
-        e for e in arestas
+        dict(e) for e in arestas  # cópia: não altera os dados do corpus
         if e["source"] in ids_relevantes and e["target"] in ids_relevantes
     ]
 
     for a in arestas_filtradas:
+        grupos = {grupo_de.get(a["source"]), grupo_de.get(a["target"])}
         tipo = a.get("tipo", "")
-        if tipo == "antinomia":
+        if "em_conferencia" in grupos:
+            a["risco"] = "em_conferencia"
+        elif "proposta" in grupos:
+            a["risco"] = "prospectivo"
+        elif tipo == "antinomia":
             a["risco"] = "alto"
         elif tipo == "intersecao":
             a["risco"] = "medio"
@@ -570,10 +592,11 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
             a["risco"] = "baixo"
 
     arestas_filtradas.sort(
-        key=lambda x: {"alto": 0, "medio": 1, "baixo": 2}.get(x["risco"], 3)
+        key=lambda x: ORDEM_RISCO.get(x["risco"], 9)
     )
 
     return {
+        "total_corpus": len(normas),
         "tags_perfil": sorted(tags_perfil),
         "normas": normas_scored,
         "arestas": arestas_filtradas,
@@ -581,38 +604,72 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     }
 
 
-RISCO_ICO = {"alto": "🔴", "medio": "🟡", "baixo": "🟢"}
+RISCO_ICO = {"alto": "🔴", "medio": "🟡", "baixo": "🟢", "prospectivo": "🔵", "em_conferencia": "⚠️"}
+RISCO_ROTULO = {
+    "prospectivo": "envolve proposta em tramitação (risco prospectivo, não obrigação vigente)",
+    "em_conferencia": "envolve decisão em conferência (não utilizar como precedente)",
+}
+ORDEM_RISCO = {"alto": 0, "medio": 1, "baixo": 2, "prospectivo": 3, "em_conferencia": 4}
+TITULOS_GRUPO = {
+    "vigente": "Normas vigentes com interseção temática",
+    "proposta": "Propostas em tramitação — risco prospectivo, não obrigação vigente",
+    "em_conferencia": "Decisões em conferência — não utilizar como precedente",
+}
 PRIO_ICO = {"critica": "🔴", "alta": "🟠", "media": "🟡", "baixa": "🟢"}
+
+
+def _por_grupo(radar: dict) -> dict:
+    grupos = {"vigente": [], "proposta": [], "em_conferencia": []}
+    for n in radar["normas"]:
+        grupos[n.get("grupo", "vigente")].append(n)
+    return grupos
 
 
 def render_radar(radar: dict):
     st.markdown("---")
     st.markdown("### Seu Quadro de Conformidade")
-
-    n_criticas = len([a for a in radar["acoes"] if a["prioridade"] == "critica"])
-    risco_max = (
-        radar["arestas"][0]["risco"] if radar["arestas"] else "nenhum"
+    st.caption(
+        "Triagem informativa: os percentuais medem a interseção temática entre o seu perfil "
+        "e cada norma do corpus curado. Não confirmam conformidade ou desconformidade nem "
+        "substituem parecer jurídico."
     )
+
+    grupos = _por_grupo(radar)
+    n_criticas = len([a for a in radar["acoes"] if a["prioridade"] == "critica"])
+    riscos_vigentes = [a["risco"] for a in radar["arestas"] if a["risco"] in ("alto", "medio", "baixo")]
+    risco_max = riscos_vigentes[0] if riscos_vigentes else "nenhum"
     risco_display = {
         "alto": "🔴 Alto", "medio": "🟡 Médio",
         "baixo": "🟢 Baixo", "nenhum": "⚪ Nenhum",
     }.get(risco_max, "⚪")
 
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Normas aplicáveis", len(radar["normas"]))
+    c1.metric("Normas vigentes relacionadas", len(grupos["vigente"]))
     c2.metric("Interseções", len(radar["arestas"]))
     c3.metric("Ações críticas", n_criticas)
-    c4.metric("Risco máximo", risco_display)
+    c4.metric("Maior interseção entre vigentes", risco_display)
 
-    st.markdown("#### Normas aplicáveis")
-    for norma in radar["normas"][:15]:
-        ico = "🔴" if norma["pct"] >= 60 else "🟡" if norma["pct"] >= 30 else "🟢"
-        with st.expander(f"{ico} {norma['nome']} — relevância {norma['pct']}%"):
-            st.markdown(f"**Tipo:** {norma['tipo']} · **Status:** {norma['status']}")
-            if norma["tags_match"]:
-                st.markdown(f"**Tags em comum:** {', '.join(norma['tags_match'][:8])}")
-            if norma["artigos_chave"]:
-                st.markdown(f"**Artigos-chave:** {', '.join(norma['artigos_chave'][:5])}")
+    for chave in ("vigente", "proposta", "em_conferencia"):
+        lista = grupos[chave]
+        if not lista:
+            continue
+        st.markdown(f"#### {TITULOS_GRUPO[chave]}")
+        if chave == "em_conferencia":
+            st.warning(
+                "Registros judiciais ainda não conferidos na fonte oficial (ADR 007). "
+                "Aparecem só para transparência; não são precedente utilizável."
+            )
+        for norma in lista[:15]:
+            if chave == "vigente":
+                ico = "🔴" if norma["pct"] >= 60 else "🟡" if norma["pct"] >= 30 else "🟢"
+            else:
+                ico = RISCO_ICO["prospectivo" if chave == "proposta" else "em_conferencia"]
+            with st.expander(f"{ico} {norma['nome']} — interseção temática {norma['pct']}%"):
+                st.markdown(f"**Tipo:** {norma['tipo']} · **Status:** {norma['status']}")
+                if norma["tags_match"]:
+                    st.markdown(f"**Temas em comum:** {', '.join(norma['tags_match'][:8])}")
+                if norma["artigos_chave"]:
+                    st.markdown(f"**Artigos-chave:** {', '.join(norma['artigos_chave'][:5])}")
 
     if radar["arestas"]:
         st.markdown("#### Interseções regulatórias")
@@ -621,6 +678,8 @@ def render_radar(radar: dict):
             st.markdown(
                 f"{ico} **{a['source']} ↔ {a['target']}** ({a.get('tipo', '')})"
             )
+            if a["risco"] in RISCO_ROTULO:
+                st.caption(f"⚑ {RISCO_ROTULO[a['risco']]}")
             if a.get("descricao"):
                 st.caption(a["descricao"])
 
@@ -632,30 +691,63 @@ def render_radar(radar: dict):
             st.caption(f"Base legal: {a['base']}")
 
 
+AVISO_TRIAGEM_HTML = (
+    "<strong>Triagem informativa — não é certificação de conformidade.</strong> "
+    "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado. "
+    "Os indicadores não confirmam conformidade ou desconformidade, não garantem a identificação "
+    "de todas as obrigações aplicáveis e não constituem auditoria, certificação ou parecer jurídico. "
+    "Consulte os textos oficiais e submeta decisões relevantes a profissional habilitado."
+)
+
+
 def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
     now = datetime.now().strftime("%d/%m/%Y %H:%M")
+    e = lambda v: _esc(str(v))  # todo valor interpolado é escapado
+    grupos = _por_grupo(radar)
 
     rows_perfil = "".join(
-        f"<tr><td>{PERGUNTAS[k]['label']}</td><td>{v}</td></tr>"
+        f"<tr><td>{e(PERGUNTAS[k]['label'])}</td><td>{e(v)}</td></tr>"
         for k, v in perfil.items()
     )
-    rows_normas = "".join(
-        f"<tr><td>{i}</td><td>{n['nome']}</td><td>{n['pct']}%</td>"
-        f"<td>{n['status']}</td><td>{', '.join(n['tags_match'][:3])}</td></tr>"
-        for i, n in enumerate(radar["normas"][:15], 1)
-    )
+
+    def tabela_normas(lista):
+        return "".join(
+            f"<tr><td>{i}</td><td>{e(n['nome'])}</td><td>{n['pct']}%</td>"
+            f"<td>{e(n['status'])}</td><td>{e(', '.join(n['tags_match'][:3]))}</td></tr>"
+            for i, n in enumerate(lista[:15], 1)
+        )
+
+    secoes_normas = ""
+    for chave in ("vigente", "proposta", "em_conferencia"):
+        lista = grupos[chave]
+        if not lista:
+            continue
+        nota = ""
+        if chave == "em_conferencia":
+            nota = ('<p style="font-size:13px;color:#a05a00">Registros judiciais ainda não '
+                    "conferidos na fonte oficial; aparecem só para transparência e não são "
+                    "precedente utilizável.</p>")
+        secoes_normas += (
+            f"<h2>{e(TITULOS_GRUPO[chave])} ({len(lista)})</h2>{nota}"
+            "<table><tr><th>#</th><th>Norma</th><th>Interseção temática</th><th>Status</th><th>Temas</th></tr>"
+            f"{tabela_normas(lista)}</table>"
+        )
+
     rows_arestas = "".join(
         f"<tr><td>{RISCO_ICO.get(a['risco'],'ℹ️')}</td>"
-        f"<td>{a['source']} ↔ {a['target']}</td>"
-        f"<td>{a.get('tipo','')}</td>"
-        f"<td>{a.get('descricao','')}</td></tr>"
+        f"<td>{e(a['source'])} ↔ {e(a['target'])}</td>"
+        f"<td>{e(a.get('tipo',''))}</td>"
+        f"<td>{e(a.get('descricao',''))}"
+        + (f"<br><em>{e(RISCO_ROTULO[a['risco']])}</em>" if a['risco'] in RISCO_ROTULO else "")
+        + "</td></tr>"
         for a in radar["arestas"][:10]
     )
     rows_acoes = "".join(
         f"<tr><td>{PRIO_ICO.get(a['prioridade'],'⚪')}</td>"
-        f"<td>{a['acao']}</td><td>{a['base']}</td></tr>"
+        f"<td>{e(a['acao'])}</td><td>{e(a['base'])}</td></tr>"
         for a in radar["acoes"]
     )
+    total_corpus = radar.get("total_corpus", "")
 
     return f"""<!DOCTYPE html>
 <html lang="pt-br">
@@ -672,19 +764,19 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
        border-bottom: 2px solid #ddd; font-size: 11px; text-transform: uppercase; }}
   td {{ padding: 8px; border-bottom: 1px solid #eee; }}
   .meta {{ font-size: 12px; color: #888; }}
+  .aviso {{ font-size: 13px; background: #fff8e6; border-left: 3px solid #d4a853; padding: 10px 14px; }}
   @media print {{ body {{ margin: 20px; }} }}
 </style>
 </head>
 <body>
 <h1>Lexiograph — Quadro de Conformidade</h1>
-<p class="meta">Gerado em: {now} · Engine IPII v0.2.0 · Corpus: 18 normas · Hubstry Deep Tech</p>
+<p class="meta">Gerado em: {now} · Triagem temática heurística · Corpus curado: {total_corpus} normas · Hubstry Deep Tech</p>
+<p class="aviso">{AVISO_TRIAGEM_HTML}</p>
 <h2>Perfil</h2>
 <table><tr><th>Dimensão</th><th>Resposta</th></tr>{rows_perfil}</table>
-<h2>Tags do Perfil ({len(radar['tags_perfil'])})</h2>
-<p style="font-size:13px">{', '.join(radar['tags_perfil'][:30])}</p>
-<h2>Normas Aplicáveis ({len(radar['normas'])})</h2>
-<table><tr><th>#</th><th>Norma</th><th>Relevância</th><th>Status</th><th>Tags</th></tr>
-{rows_normas}</table>
+<h2>Temas do perfil ({len(radar['tags_perfil'])})</h2>
+<p style="font-size:13px">{e(', '.join(radar['tags_perfil'][:30]))}</p>
+{secoes_normas}
 <h2>Interseções Regulatórias ({len(radar['arestas'])})</h2>
 <table><tr><th>Risco</th><th>Par</th><th>Tipo</th><th>Descrição</th></tr>
 {rows_arestas}</table>
@@ -692,7 +784,7 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
 <table><tr><th>Prioridade</th><th>Ação</th><th>Base Legal</th></tr>
 {rows_acoes}</table>
 <p class="meta" style="margin-top:40px; border-top:1px solid #eee; padding-top:16px;">
-  ⚠️ Diagnóstico preliminar. Não substitui assessoria jurídica ou técnica especializada.<br>
+  ⚠️ Triagem informativa. Não substitui assessoria jurídica ou técnica especializada.<br>
   Lexiograph · Hubstry Deep Tech · 2026
 </p>
 </body></html>"""

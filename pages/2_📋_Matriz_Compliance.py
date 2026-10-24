@@ -16,6 +16,11 @@ st.set_page_config(page_title="Matriz de Compliance — Lexiograph", layout="wid
 
 st.markdown("# 📋 Matriz de Compliance")
 st.markdown("Tabela cruzada: perfis de empresa × normas do ordenamento jurídico digital.")
+st.info(
+    "**Indicadores heurísticos e exploratórios.** Os níveis medem a interseção temática entre "
+    "perfis-modelo de empresa e as normas do corpus curado. Não são diagnóstico de conformidade "
+    "nem parecer jurídico: a aplicação de uma norma depende dos fatos, do serviço e do setor."
+)
 
 # ---- Construir matriz ----
 matrix = build_compliance_matrix()
@@ -30,9 +35,9 @@ df = pd.DataFrame(matrix)
 st.markdown("""
 | Cor | Significado |
 |-----|-------------|
-| 🔴 **Alto** | Interseção direta com múltiplas normas — alto risco de não-conformidade |
-| 🟡 **Médio** | Interseção parcial — risco moderado, requer atenção |
-| 🟢 **Baixo** | Interseção mínima — risco baixo, mas não nulo |
+| 🔴 **Alto** | Interseção temática alta com a norma — prioridade de análise |
+| 🟡 **Médio** | Interseção temática parcial — vale verificar |
+| 🟢 **Baixo** | Interseção temática pequena |
 | ⚪ **Aplicável** | Norma fundamental que se aplica a todos |
 """)
 
@@ -42,7 +47,7 @@ st.markdown("### Empresas × Normas")
 for idx, empresa in enumerate(EMPRESAS_MODELO):
     row = matrix[idx]
 
-    with st.expander(f"**{empresa['nome']}** — Risco geral: **{empresa['risco_base'].upper()}**", expanded=(idx == 0)):
+    with st.expander(f"**{empresa['nome']}** — Exposição temática geral: **{empresa['risco_base'].upper()}**", expanded=(idx == 0)):
         st.markdown(f"*{empresa['descricao']}*")
 
         cols = st.columns(len(leis))
@@ -57,13 +62,13 @@ for idx, empresa in enumerate(EMPRESAS_MODELO):
 st.markdown("### Visão consolidada")
 
 display_df = df[["empresa", "risco"] + [s for s in lei_siglas if s in df.columns]].copy()
-display_df.columns = ["Empresa", "Risco Geral"] + [s.split("—")[0].strip() for s in lei_siglas if s in df.columns]
+display_df.columns = ["Empresa", "Exposição temática"] + [s.split("—")[0].strip() for s in lei_siglas if s in df.columns]
 
 # Substituir valores por emoji
 emoji_map = {"alto": "🔴 Alto", "medio": "🟡 Médio", "baixo": "🟢 Baixo", "aplicavel": "⚪ Aplicável", "muito_alto": "🔴 Muito Alto"}
 for col in display_df.columns[2:]:
     display_df[col] = display_df[col].map(lambda x: emoji_map.get(x, x))
-display_df["Risco Geral"] = display_df["Risco Geral"].map(lambda x: emoji_map.get(x, x))
+display_df["Exposição temática"] = display_df["Exposição temática"].map(lambda x: emoji_map.get(x, x))
 
 st.dataframe(display_df, use_container_width=True, hide_index=True)
 

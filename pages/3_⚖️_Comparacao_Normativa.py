@@ -7,7 +7,7 @@ Análise lado a lado de pares de normas com interseções.
 import streamlit as st
 
 from lib.graph_builder import build_compliance_graph, load_json
-from lib.constants import EDGE_TYPE_LABELS, THEMES
+from lib.constants import EDGE_TYPE_LABELS, THEMES, STATUS_LABELS
 from lib.footer import render_footer
 from lib.formato import ano_exibicao
 
@@ -93,9 +93,19 @@ juris_relativa = [
 
 if juris_relativa:
     for j in juris_relativa:
+        # ADR 007: registro não verificado não é precedente utilizável e
+        # sempre aparece com o selo, no título e no corpo.
+        _verificado = j.get("estado_verificacao") == "verificado"
+        _selo = "" if _verificado else "⚠ Em conferência · "
         with st.expander(
-            f"**{j['tribunal']} — {j['numero']}** ({ano_exibicao(j.get('ano'))})"
+            f"{_selo}**{j['tribunal']} — {j['numero']}** ({ano_exibicao(j.get('ano'))})"
         ):
+            if not _verificado:
+                st.warning(
+                    f"{STATUS_LABELS['em_conferencia']}. Estado do registro: "
+                    f"**{j.get('estado_verificacao') or 'sem estado'}**. "
+                    "Não utilizar como precedente até a conferência na fonte oficial."
+                )
             st.markdown(f"**Tema:** {j['tema']}")
             st.markdown(f"**Resumo:** {j['resumo']}")
             st.markdown(f"**Impacto para equipes técnicas sem revisão de compliance:** {j['impacto_dev_junior']}")
