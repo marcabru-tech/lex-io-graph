@@ -432,7 +432,8 @@ def render_disclaimer():
         "CNPJ) é solicitado. O app mantém um contador de visitas: na primeira "
         "abertura de cada página, registra a página, a data e a hora, o "
         "ambiente e um código aleatório de sessão nos registros da "
-        "hospedagem (Google Cloud). O contador não usa cookies e não grava "
+        "hospedagem (Google Cloud), guardados por até 12 meses para estatística "
+        "agregada. O contador não usa cookies e não grava "
         "IP, navegador nem localização. Como qualquer servidor, a hospedagem "
         "registra por tempo limitado dados técnicos de cada acesso (como o IP)."
     )
