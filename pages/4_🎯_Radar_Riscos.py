@@ -13,6 +13,11 @@ st.set_page_config(page_title="Radar de Riscos — Lexiograph", layout="wide", p
 
 st.markdown("# 🎯 Radar de Riscos Regulatórios")
 st.markdown("Mapa de calor das exposições regulatórias mais comuns em entregas de desenvolvedores júnior.")
+st.info(
+    "**Indicadores ilustrativos.** As notas de 1 a 10 são exemplos definidos pela curadoria do "
+    "Lexiograph para entregas típicas de software; não resultam de avaliação da sua empresa, "
+    "não são diagnóstico de conformidade e não constituem parecer jurídico."
+)
 
 # ---- Base de riscos ----
 riscos = [
@@ -82,7 +87,7 @@ riscos = [
     {
         "entrega": "Provedor de aplicação sem contato legal",
         "risco": 5,
-        "normas": ["Marco Civil art. 7º, 15", "LGPD art. 41"],
+        "normas": ["LGPD art. 9º, IV", "LGPD art. 41", "Marco Civil art. 7º, VI e VIII"],
         "descricao": "Aplicação sem identificação clara do controlador de dados ou canal de comunicação com o usuário.",
         "acao": "Publicar política de privacidade com dados do controlador. Disponibilizar canal direto para o titular.",
     },
@@ -155,7 +160,7 @@ for risco in sorted(riscos, key=lambda x: x["risco"], reverse=True):
 
     with st.expander(f"{emoji} {risco['entrega']} — Risco: {risco['risco']}/10"):
         st.markdown(f"**Descrição:** {risco['descricao']}")
-        st.markdown(f"**Normas aplicáveis:** {' · '.join(risco['normas'])}")
+        st.markdown(f"**Normas relacionadas:** {' · '.join(risco['normas'])}")
         st.markdown(f"**Ação recomendada:** {risco['acao']}")
 
 # ---- Insight ----

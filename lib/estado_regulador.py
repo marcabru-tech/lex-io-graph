@@ -47,8 +47,8 @@ AGENCIAS = [
      "data": "2001-06-05", "setor": "Transportes", "nota": "Criada pela mesma lei da ANTT."},
     {"sigla": "ANTT", "nome": "Agência Nacional de Transportes Terrestres", "ato": "Lei 10.233",
      "data": "2001-06-05", "setor": "Transportes", "nota": "Criada pela mesma lei da Antaq."},
-    {"sigla": "Ancine", "nome": "Agência Nacional do Cinema", "ato": "MP 2.228",
-     "data": "2001-09-06", "setor": "Cultura", "nota": "Única criada por medida provisória até a ANPD."},
+    {"sigla": "Ancine", "nome": "Agência Nacional do Cinema", "ato": "MP 2.228-1",
+     "data": "2001-09-06", "setor": "Cultura", "nota": "Regida pela MP 2.228-1/2001, que segue em vigor sem conversão em lei (EC 32/2001, art. 2º)."},
     {"sigla": "Anac", "nome": "Agência Nacional de Aviação Civil", "ato": "Lei 11.182",
      "data": "2005-09-27", "setor": "Transportes", "nota": ""},
     {"sigla": "ANM", "nome": "Agência Nacional de Mineração", "ato": "Lei 13.575",
@@ -56,7 +56,7 @@ AGENCIAS = [
      "nota": "Sucede o DNPM (Departamento Nacional de Produção Mineral). Atua na PNMCE (Lei 15.506/2026)."},
     {"sigla": "ANPD", "nome": "Agência Nacional de Proteção de Dados", "ato": "MP 1.317",
      "data": "2025-09-17", "setor": "Dados pessoais",
-     "nota": "Convertida na Lei 15.352/2026: primeira agência da regulação digital."},
+     "nota": "Transformada em agência reguladora pela MP 1.317/2025, convertida na Lei 15.352/2026. Antes: órgão criado pela MP 869/2018 (Lei 13.853/2019) e autarquia de natureza especial pela Lei 14.460/2022."},
 ]
 
 MARCOS = [
