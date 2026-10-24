@@ -87,8 +87,8 @@ riscos = [
     {
         "entrega": "Provedor de aplicação sem contato legal",
         "risco": 5,
-        "normas": ["LGPD art. 9º, IV", "LGPD art. 41", "Marco Civil art. 7º, VI e VIII"],
-        "descricao": "Aplicação sem identificação clara do controlador de dados ou canal de comunicação com o usuário.",
+        "normas": ["LGPD art. 9º, IV (contato do controlador)", "LGPD art. 41 (encarregado; dispensa para agente de pequeno porte, que mantém canal com o titular — Resolução CD/ANPD nº 2/2022)", "Marco Civil art. 7º, VIII (informação sobre coleta e uso de dados)"],
+        "descricao": "Aplicação sem identificação clara do controlador de dados ou sem canal de comunicação com o titular. A ausência de encarregado só indica irregularidade depois de avaliar se a dispensa para agentes de pequeno porte se aplica.",
         "acao": "Publicar política de privacidade com dados do controlador. Disponibilizar canal direto para o titular.",
     },
 ]

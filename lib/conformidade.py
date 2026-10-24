@@ -425,9 +425,10 @@ ACOES_POR_TAG = {
 
 def render_disclaimer():
     st.info(
-        "**Privacidade:** As respostas deste questionário não são "
-        "armazenadas nem enviadas: ficam apenas na memória da sua sessão "
-        "enquanto ela durar. Nenhum dado identificável (nome, email, CPF, "
+        "**Privacidade:** As respostas deste questionário são enviadas ao "
+        "servidor do app apenas para calcular o quadro e ficam na memória da "
+        "sua sessão enquanto ela durar; não são gravadas em banco de dados nem "
+        "em arquivo. Nenhum dado identificável (nome, email, CPF, "
         "CNPJ) é solicitado. O app mantém um contador de visitas: na primeira "
         "abertura de cada página, registra a página, a data e a hora, o "
         "ambiente e um código aleatório de sessão nos registros da "
