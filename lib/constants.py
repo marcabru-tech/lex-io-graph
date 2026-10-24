@@ -151,7 +151,7 @@ EMPRESAS_MODELO = [
         "nome": "Edtech (plataforma educacional para menores)",
         "setor": "Educação",
         "risco_base": "muito_alto",
-        "descricao": "Trata dados de crianças e adolescentes: tratamento no melhor interesse (LGPD art. 14), com consentimento parental específico quando a base legal for o consentimento; sujeita-se ao ECA Digital (Estatuto Digital da Criança e do Adolescente — Lei 15.211/2025)",
+        "descricao": "Trata dados de crianças e adolescentes: tratamento no melhor interesse (LGPD art. 14). Para dados de crianças, quando a base legal for o consentimento, ele deve ser específico e dado por pelo menos um dos pais ou pelo responsável legal (art. 14, § 1º) — não é exigência parental absoluta para toda hipótese de tratamento. Sujeita-se ao ECA Digital (Estatuto Digital da Criança e do Adolescente — Lei 15.211/2025)",
     },
     {
         "nome": "Fintech (pagamentos digitais)",
