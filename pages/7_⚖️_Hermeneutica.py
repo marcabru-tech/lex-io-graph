@@ -215,7 +215,7 @@ elif secao == "🇧🇷 Constituições Brasileiras":
             "destaque": "Primeira constituição brasileira com direitos sociais",
             "descricao": (
                 "Influência da Constituição de Weimar (Alemanha, 1919) — "
-                "primeira a incluir direitos econômicos e sociais numa constituição. "
+                "uma das pioneiras, depois da Constituição mexicana de 1917, a incluir direitos econômicos e sociais numa constituição. "
                 "Voto secreto, voto feminino, Justiça Eleitoral, Justiça do Trabalho. "
                 "A CLT (1943) é o desdobramento infraconstitucional dessa virada social. "
                 "Direitos trabalhistas como direitos fundamentais — "
@@ -255,7 +255,7 @@ elif secao == "🇧🇷 Constituições Brasileiras":
             "descricao": (
                 "Promulgada pela Assembleia Constituinte democraticamente eleita. "
                 "Restaurou direitos civis e políticos suspensos desde 1937. "
-                "Influência da Declaração Universal dos Direitos Humanos (ONU, 1948). "
+                "Sintonia com o espírito do pós-guerra que culminaria na Declaração Universal dos Direitos Humanos (ONU, 1948). "
                 "O período 1946–1964 é o único de democracia plena antes da CF/88. "
                 "Goulart deposto pelo golpe de 1964 — a constituição de 1946 "
                 "sucumbiu ao mesmo processo que a de 1934: golpe antes do amadurecimento democrático."

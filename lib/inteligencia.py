@@ -118,7 +118,7 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "moderado",
         "status": "em consolidação — ANPD ganha competências via Decreto 12.975/2026",
         "sintese": (
-            "A ANPD (Agência Nacional de Proteção de Dados) foi criada em 2018 (MP 869/2018, "
+            "A ANPD (então Autoridade Nacional de Proteção de Dados; Agência desde a Lei 15.352/2026) foi criada em 2018 (MP 869/2018, "
             "convertida na Lei 13.853/2019) como órgão da Presidência da República; tornou-se "
             "autarquia de natureza especial em 2022 (Lei 14.460) e agência reguladora em 2026 "
             "(Lei 15.352). A estrutura funcional começou a se formar com a posse do Conselho "
@@ -218,7 +218,7 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "estratégico",
         "status": "ativo — maio/2026",
         "sintese": (
-            "A encíclica Magnifica Humanitas (Leão XIV, 15/05/2026) posiciona a Igreja "
+            "A encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026 e apresentada em 25/05/2026) posiciona a Igreja "
             "Católica como ator normativo global no debate sobre IA — não apenas ético, "
             "mas com capacidade de influenciar legisladores em 1,3 bilhão de católicos "
             "globalmente, incluindo o Brasil (cerca de 57% da população, Censo 2022 do IBGE)."
@@ -230,7 +230,7 @@ CASOS_ESTRATEGICOS = [
                     "Entre 20 e 27 de maio de 2026, três instâncias independentes "
                     "convergiram no mesmo campo normativo: (1) Executivo brasileiro — "
                     "Decretos 12.975 e 12.976/2026; (2) Vaticano — Magnifica Humanitas; "
-                    "(3) Congresso — 27 PDLs (base da Camara, 15/08/2026) para derrubar os decretos. "
+                    "(3) Congresso — 27 PDLs (base da Câmara, 15/08/2026) para derrubar os decretos. "
                     "A convergência Vaticano-Executivo e a divergência Congresso-STF "
                     "mapeiam o campo de forças: de um lado, atores que priorizam "
                     "proteção de direitos fundamentais; de outro, atores que priorizam "
@@ -547,7 +547,7 @@ EPISTEMOLOGIA = {
         {
             "autor": "Friedrich Schleiermacher",
             "datas": "1768–1834",
-            "contribuicao": "Fundador da hermenêutica moderna como disciplina geral — antes da aplicação ao direito. O círculo hermenêutico: compreender o todo pelo parte e a parte pelo todo. A interpretação como diálogo entre intérprete e texto.",
+            "contribuicao": "Fundador da hermenêutica moderna como disciplina geral — antes da aplicação ao direito. O círculo hermenêutico: compreender o todo pela parte e a parte pelo todo. A interpretação como diálogo entre intérprete e texto.",
             "conexao_direito": "Base de toda hermenêutica jurídica subsequente — o texto legal como texto a ser compreendido, não apenas aplicado mecanicamente"
         },
         {
@@ -624,7 +624,7 @@ EPISTEMOLOGIA = {
             "periodo": "Codificadores modernos (séc. XIX–XX)",
             "figura_central": "Napoleão (Code Civil, 1804), Clóvis Beviláqua (CC/1916), Miguel Reale (CC/2002)",
             "metodo": "Transposição da dogmática para código — o direito como sistema positivo escrito, completo, acessível. A codificação como projeto político de modernização e unificação nacional.",
-            "conexao_pancronica": "O CC/2002 de Reale é o último grande código brasileiro — o PL 4/2025 (Livro VI Digital) é o primeiro pós-digital. A codificação como projeto político continua: agora o objeto é o ambiente digital."
+            "conexao_pancronica": "O CC/2002 de Reale é o último grande código brasileiro — o PL 4/2025, em tramitação, propõe o Livro VI (Direito Civil Digital), que seria o primeiro pós-digital. A codificação como projeto político continua: agora o objeto é o ambiente digital."
         }
     ]
 }
@@ -768,7 +768,7 @@ CASO_PARADIGMA_PREVENTIVO = {
             "titulo": "Tensão 3 — O paradigma preventivo como imperativo constitucional",
             "descricao": (
                 "A convergência de múltiplos vetores aponta para o paradigma preventivo: "
-                "reforma do Código Civil (nova redação do art. 186 — ilícito sem dano), "
+                "proposta de reforma do Código Civil (PL 4/2025, em tramitação: nova redação proposta para o art. 186 — ilícito sem dano), "
                 "STF Tema 987 (falha sistêmica — responsabilidade ex ante, não apenas ex post), "
                 "ECA Digital (proibição de profiling de menores — tutela inibitória por natureza), "
                 "PL 2338/2023 — AI Act brasileiro (abordagem baseada em risco — controle antes do deployment). "
