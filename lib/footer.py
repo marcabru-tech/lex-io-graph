@@ -64,7 +64,7 @@ Parte do ecossistema <strong style="color:#e8e4dc">Hubstry Deep Tech</strong> â€
    style="color: #c44b4b; text-decoration: none; font-size: 11px; letter-spacing: 0.05em;">
 &#x2197; contato
 </a>
-<span style="color: #454040; font-size: 11px;">Apache License 2.0 | 2026 Lexiograph</span>
+<span style="color: #454040; font-size: 11px;">Apache License 2.0 (IPII: PolyForm Noncommercial 1.0.0) | 2026 Lexiograph</span>
 </div>
 
 </div>

@@ -1,8 +1,8 @@
 # Copyright © 2026 Hubstry Deep Tech — Guilherme Gonçalves Machado
 # IPII (Interação Paramétrica Iterativa por Interoperabilidade) para Lex-IO-Graph / Lexiograph
-# Todos os direitos reservados.
-# Uso comercial, reprodução ou distribuição sem autorização escrita
-# da Hubstry Deep Tech é expressamente proibido.
+# Licença: PolyForm Noncommercial 1.0.0 (ver lib/ipii/LICENSE).
+# Estudo e pesquisa liberados; uso comercial somente com autorização
+# prévia e por escrito do titular.
 # Contato: globaldeeptechecosystem@hubstry.dev
 # hubstry.dev/lex-io-graph
 """

@@ -96,4 +96,4 @@ Ver `docs/adr/` para decisões de arquitetura documentadas.
 | Dados | JSON curado |
 | Deploy | Cloud Build → Cloud Run (`cloudbuild.yaml`; testes antes do deploy). Reserva: Streamlit Community Cloud |
 | CI/CD | GitHub Actions (testes, smoke test e `pip-audit` em PR e push) + Cloud Build (testes e deploy) |
-| IP proprietária | lib/ipii/ (licença comercial Hubstry) |
+| Licenças | Apache 2.0, exceto o IPII Engine (`lib/ipii/`, `ipii_engine.py`, página 9): PolyForm Noncommercial 1.0.0 — ver `NOTICE` |
