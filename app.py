@@ -3,6 +3,8 @@ from lib.graph_builder import build_compliance_graph, load_json
 from lib.footer import render_footer
 from lib.constants import APP_NAME, APP_SHORT, APP_TAGLINE, APP_MODULOS, APP_SUBTITLE, APP_VERSION, THEMES
 from lib.formato import cartao_norma_html, resumo_verificacao
+from lib.alertas import ALERTAS_PRAZO, situacao_prazo
+from datetime import date as _date
 
 st.set_page_config(
     page_title=f"{APP_NAME} — {APP_TAGLINE}",
@@ -101,7 +103,7 @@ with col_al1:
     st.error("""
 **STF — Tema 987 (RE 1.037.396)**
 Art. 19 do Marco Civil declarado **parcialmente inconstitucional** (jun./2025).
-**Tese definitiva fixada em 17/06/2026** (Temas 987 e 533), após julgamento dos embargos.
+**Tese de repercussão geral fixada em 17/06/2026** (Temas 987 e 533), após os embargos; trânsito em julgado registrado pelo STF na mesma data.
 O **Decreto 12.975/2026** alterou o regulamento do Marco Civil (Decreto 8.771/2016); o **Decreto 12.976/2026** trata da proteção de mulheres no ambiente digital (ambos vigentes desde 20/07/2026).
 """)
 
@@ -123,6 +125,21 @@ Propõe a inclusão do Livro VI: Direito Civil Digital. Em tramitação no Senad
 **Lei 15.409/2026 — CNVM**
 Cadastro Nacional de Pessoas Condenadas por Violência contra a Mulher. Vigor: jul./2026.
 """)
+
+# Alertas com prazo (lib/alertas.py): informação regulatória, não conclusão
+# de que um negócio específico — nem o próprio Lexiograph — está obrigado.
+for _al in ALERTAS_PRAZO:
+    _fontes = " · ".join(f"[{t}]({u})" for t, u in _al["fontes"])
+    st.warning(
+        f"**{_al['tipo']} · {_al['categoria']}** — atualizado em {_al['atualizado_em'].strftime('%d/%m/%Y')}\n\n"
+        f"**{_al['titulo']}**\n\n"
+        f"{_al['texto']}\n\n"
+        f"**Quem deve verificar o enquadramento.** {_al['escopo']}\n\n"
+        f"**Prazo:** {_al['prazo_dias']} dias a partir da publicação. {situacao_prazo(_al, _date.today())} "
+        f"{_al['ressalva_prazo']}\n\n"
+        f"**Etapa seguinte.** {_al['etapa_seguinte']}\n\n"
+        f"Fonte: {_fontes}"
+    )
 
 st.divider()
 
