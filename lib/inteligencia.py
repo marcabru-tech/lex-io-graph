@@ -55,10 +55,10 @@ CASOS_ESTRATEGICOS = [
                     "de sanidade, interna metade da vila, revê os critérios, interna a outra "
                     "metade, e no fim interna a si mesmo. O Estado brasileiro criou o art. 19 "
                     "do Marco Civil (2014) como proteção à liberdade de expressão e ao "
-                    "desenvolvimento da internet. Doze anos depois, o mesmo Estado — via STF — "
-                    "declara essa norma insuficiente e a reconstrói sem base legislativa. "
-                    "A insegurança jurídica resultante não é patologia do sistema — é o sistema "
-                    "funcionando sem o componente que deveria funcionar: o Congresso. "
+                    "desenvolvimento da internet. Doze anos depois, o STF reconheceu a inconstitucionalidade "
+                    "parcial e progressiva do art. 19. Na interpretação deste ensaio, a decisão reconstrói "
+                    "judicialmente o regime de responsabilização e levanta questões sobre a segurança jurídica "
+                    "e o papel do Congresso. "
                     "Bacamarte é Montesquieu às avessas: concentração de poder diagnóstico, "
                     "terapêutico e sancionador nas mesmas mãos."
                 )
@@ -132,9 +132,11 @@ CASOS_ESTRATEGICOS = [
                 "analise": (
                     "O GDPR (2016) criou autoridades supervisoras nacionais com independência "
                     "e recursos. A ANPD nasceu subordinada à Presidência da República — "
-                    "tensão com o princípio da independência regulatória. A expansão de "
-                    "competências via decreto (não via lei) replica o problema estrutural: "
-                    "regulação robusta sendo construída por instrumento frágil. "
+                    "tensão com o princípio da independência regulatória. A ampliação das "
+                    "atribuições regulatórias da ANPD deve ser examinada à luz das leis aplicáveis "
+                    "e dos atos infralegais que detalham sua atuação. A análise deve considerar o "
+                    "fundamento legal de cada atribuição, os limites da competência regulamentar "
+                    "e os efeitos concretos dos atos. "
                     "Glocal (global + local, Robertson, 1990s): o modelo europeu funciona "
                     "porque as autoridades de proteção de dados têm independência constitucional. "
                     "No Brasil, a autonomia foi construída por etapas: autarquia em 2022 e "
@@ -201,8 +203,8 @@ CASOS_ESTRATEGICOS = [
             ),
             "36_meses": (
                 "O ECA Digital pode se tornar o modelo para legislação regional na "
-                "América Latina — primeiro diploma abrangente de proteção digital "
-                "de menores da região."
+                "América Latina, por reunir um conjunto abrangente de disposições "
+                "sobre proteção digital de menores."
             ),
             "lacuna_remanescente": (
                 "Verificação de idade efetiva sem violar privacidade — problema técnico "
@@ -536,7 +538,7 @@ CASOS_ESTRATEGICOS = [
 # ---- Epistemologia do direito ----
 EPISTEMOLOGIA = {
     "introducao": (
-        "O Lex-IO-Graph faz uma interseção que nenhum app jurídico articula: "
+        "O Lex-IO-Graph articula, neste protótipo, relações entre "
         "hermenêutica geral, teoria do conhecimento e direito positivo como camadas "
         "de um mesmo sistema. O grafo não é apenas mapa normativo — é instrumento "
         "de Verstehen jurídico (compreensão, Dilthey, 1833–1911) e não apenas "
@@ -789,8 +791,9 @@ CASO_PARADIGMA_PREVENTIVO = {
         "auditorias algorítmicas e governança preventiva — estarão posicionadas para capturar "
         "os dividendos econômicos da confiança institucional. "
         "A prevenção não é apenas opção regulatória. É imperativo civilizatório. "
-        "Para deep techs como a Hubstry, a consolidação do paradigma preventivo "
-        "não representa ameaça — é oportunidade estrutural."
+        "Para empresas que desenvolvem tecnologias, a consolidação de deveres de prevenção "
+        "pode exigir a revisão de processos, a avaliação de riscos e a documentação de controles, "
+        "conforme as obrigações efetivamente aplicáveis a cada atividade."
     ),
     "fonte": "Guilherme Gonçalves Machado — Founder & CEO, Hubstry Deep Tech · guilhermemachado.ceo@hubstry.dev",
 }

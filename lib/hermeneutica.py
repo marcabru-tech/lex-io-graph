@@ -4,7 +4,7 @@ Camada hermenêutica e de fontes do direito do Lex-IO-Graph.
 Sprint 6 — Hermenêutica, fontes do direito, arco histórico
 do Código Civil brasileiro e Brasil Império como camada do ordenamento.
 
-O Lex-IO-Graph faz a interseção que nenhum app jurídico articula:
+O Lex-IO-Graph articula, neste protótipo, relações entre
 hermenêutica geral, teoria do conhecimento e direito positivo
 como camadas de um mesmo sistema de inteligência.
 """
@@ -35,7 +35,7 @@ CORRENTES_HERMENEUTICAS = [
         ),
         "no_brasil": (
             "Influência no CC/1916 de Clóvis Beviláqua. "
-            "Interpretação originalista ainda presente na jurisprudência conservadora — "
+            "Interpretação originalista ainda invocada em parte da jurisprudência — "
             "especialmente em votos que invocam 'a vontade do constituinte originário' "
             "para resistir a mutações constitucionais."
         ),
@@ -182,9 +182,7 @@ CORRENTES_HERMENEUTICAS = [
             "Carlos Maximiliano não oferece hierarquia clara."
         ),
         "no_brasil": (
-            "Referência obrigatória no STJ (Superior Tribunal de Justiça) e STF — "
-            "citado em votos sobre interpretação de normas digitais (LGPD, Marco Civil, ECA Digital). "
-            "A obra de 1924 continua sendo o manual prático mais citado na jurisprudência brasileira."
+            "A obra de 1924 integra a tradição brasileira de estudos sobre interpretação jurídica."
         ),
         "tensao_norma": "Toda norma do ordenamento digital brasileiro — método pluralista de interpretação"
     }
@@ -426,7 +424,7 @@ BRASIL_IMPERIO = {
             "ano": 1850,
             "destaque": "Brasil Império, 1850 — mesmo ano da Lei de Terras",
             "descricao": (
-                "O ano de 1850 é o mais denso do Brasil Império em termos legislativos: "
+                "O ano de 1850 concentrou leis estruturantes do Brasil Império: "
                 "Lei Eusébio de Queirós (abolição do tráfico), Lei de Terras, Código Comercial. "
                 "Três leis que estruturaram a economia e a sociedade brasileiras por décadas. "
                 "Direito comparado glocal (global + local, Robertson, 1990s): "

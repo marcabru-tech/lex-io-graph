@@ -236,7 +236,7 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "Concentração de poderes no Executivo, intervenção federal, "
                 "suspensão do Legislativo. Nunca foi plenamente aplicada — "
                 "Vargas governou por decretos-lei. "
-                "Primeiro caso brasileiro de constituição outorgada e não respeitada "
+                "Caso emblemático de constituição outorgada e não respeitada "
                 "pelo próprio outorgante. "
                 "Interpretação do Lexiograph: a moralidade interna do direito de Fuller "
                 "(1902–1978) pode servir de parâmetro para examinar uma constituição "
@@ -244,7 +244,7 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "Pancronia: o debate sobre 'constituição que não se aplica' ressurge "
                 "no contexto dos decretos executivos que tentam legislar sem o Congresso."
             ),
-            "conexao_digital": "Precedente para o debate sobre legitimidade dos Decretos 12.975 e 12.976/2026: ato do executivo sem base legislativa — quando o decreto vira substituto da lei"
+            "conexao_digital": "Analogia histórica crítica para o debate sobre os Decretos 12.975 e 12.976/2026: a análise deve considerar seus fundamentos legais, os limites da competência regulamentar do Executivo e os efeitos concretos de cada ato. A aproximação com o Estado Novo não demonstra, por si só, equivalência jurídica ou institucional"
         },
         {
             "ano": 1946,
@@ -256,7 +256,7 @@ elif secao == "🇧🇷 Constituições Brasileiras":
                 "Promulgada pela Assembleia Constituinte democraticamente eleita. "
                 "Restaurou direitos civis e políticos suspensos desde 1937. "
                 "Sintonia com o espírito do pós-guerra que culminaria na Declaração Universal dos Direitos Humanos (ONU, 1948). "
-                "O período 1946–1964 é o único de democracia plena antes da CF/88. "
+                "O período 1946–1964 foi marcado por eleições competitivas e pela vigência de direitos civis e políticos, mas também por exclusões e restrições importantes: analfabetos não tinham direito de voto, e o registro do PCB foi cancelado em 1947. "
                 "Goulart deposto pelo golpe de 1964 — a constituição de 1946 "
                 "sucumbiu ao mesmo processo que a de 1934: golpe antes do amadurecimento democrático."
             ),
@@ -357,7 +357,7 @@ elif secao == "✨ O Valor Epistemológico do Lex-IO-Graph":
     st.markdown("""
 <div class="lexiograph-value">
 <strong style="color:#d4a853;font-size:14px;">
-O Lex-IO-Graph é o único atlas jurídico brasileiro que articula explicitamente
+O Lex-IO-Graph é um atlas de relações normativas e conceituais que articula explicitamente
 sete camadas simultâneas de inteligência:
 </strong><br><br>
 
@@ -369,7 +369,7 @@ sete camadas simultâneas de inteligência:
 <strong style="color:#c44b4b;">6. Inteligência estratégica</strong> — o jogo de forças por trás da norma<br>
 <strong style="color:#1abc9c;">7. Epistemologia do direito</strong> — de onde vem o conhecimento jurídico, como se forma, como se valida<br><br>
 
-<strong style="color:#e8e4dc;">A interseção que nenhuma equipe de TI ou escritório de advocacia replicam sozinhos:</strong><br>
+<strong style="color:#e8e4dc;">A interseção que o Lex-IO-Graph organiza num só lugar:</strong><br>
 Schleiermacher → Dilthey → Gadamer → Habermas → Dworkin como arco epistemológico.<br>
 Direito natural → positivo → tridimensional (Reale) como arco ontológico.<br>
 Glosadores de Bolonha → comentadores → pandectistas → codificadores como arco metodológico.<br>
