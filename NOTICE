@@ -1,0 +1,15 @@
+Lexiograph (Lex-IO-Graph)
+Copyright (c) 2026 Guilherme Gonçalves Machado — Hubstry Deep Tech
+
+Licenciamento por componente:
+
+- Todo o projeto, EXCETO o IPII Engine, está sob a Apache License 2.0
+  (arquivo LICENSE na raiz).
+
+- O IPII Engine — os arquivos em lib/ipii/, ipii_engine.py e
+  pages/9_🔬_IPII_Engine.py — está sob a PolyForm Noncommercial License 1.0.0
+  (arquivo lib/ipii/LICENSE): uso pessoal, estudo e pesquisa liberados;
+  uso comercial somente com autorização prévia e por escrito do titular,
+  solicitada por e-mail a globaldeeptechecosystem@hubstry.dev.
+
+Esta separação vale a partir do commit que introduziu este arquivo.

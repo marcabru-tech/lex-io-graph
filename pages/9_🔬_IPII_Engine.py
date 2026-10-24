@@ -1,5 +1,5 @@
 # Copyright © 2026 Hubstry Deep Tech — Guilherme Gonçalves Machado
-# Todos os direitos reservados.
+# Licença: PolyForm Noncommercial 1.0.0 (ver lib/ipii/LICENSE).
 import streamlit as st
 import json
 from html import escape
@@ -62,9 +62,10 @@ O <strong style="color:#e8e4dc;">IPII Engine</strong>
 é propriedade intelectual exclusiva da
 <strong style="color:#d4a853;">Hubstry Deep Tech</strong>
 — Guilherme Gonçalves Machado, Rio de Janeiro, Brasil. © 2026.<br><br>
-É expressamente proibido o uso comercial, reprodução, adaptação ou distribuição
-desta implementação — incluindo tokenizer, matcher e validator — sem autorização
-escrita da Hubstry Deep Tech.<br><br>
+Licença <strong style="color:#e8e4dc;">PolyForm Noncommercial 1.0.0</strong>:
+uso pessoal, estudo e pesquisa liberados. O uso comercial desta implementação —
+incluindo tokenizer, matcher e validator — depende de autorização prévia e por
+escrito da Hubstry Deep Tech.<br><br>
 Para licenciamento comercial ou parcerias:
 <a href="mailto:globaldeeptechecosystem@hubstry.dev"
    style="color:#d4a853;">globaldeeptechecosystem@hubstry.dev</a>

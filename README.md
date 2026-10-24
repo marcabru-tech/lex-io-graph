@@ -126,17 +126,19 @@ Atenção: enquanto o tráfego estiver fixado numa revisão (passo 2), os deploy
 
 ## Licença e propriedade intelectual
 
-### Camada pública
+O projeto tem duas licenças, uma por componente (ver `NOTICE`).
 
-O código das páginas, módulos de lib (exceto `lib/ipii/`) e dados normativos (`data/`) estão disponíveis sob **Apache License 2.0**.
+### Camada pública — Apache License 2.0
 
-### Camada proprietária — IPII Engine
+Tudo o que não é IPII: páginas, módulos de `lib/` (exceto `lib/ipii/`) e dados normativos (`data/`). Texto integral em `LICENSE`.
 
-O **IPII Engine** (Interação Paramétrica Iterativa por Interoperabilidade — `lib/ipii/`, `ipii_engine.py`) é propriedade intelectual exclusiva da **Hubstry Deep Tech** — Guilherme Gonçalves Machado © 2026.
+### IPII Engine — PolyForm Noncommercial 1.0.0
 
-**É expressamente proibido** o uso comercial, reprodução, adaptação ou distribuição desta implementação sem autorização escrita da Hubstry Deep Tech.
+O **IPII Engine** (Interação Paramétrica Iterativa por Interoperabilidade — `lib/ipii/`, `ipii_engine.py` e a página `9_🔬_IPII_Engine.py`) é de Guilherme Gonçalves Machado / Hubstry Deep Tech © 2026, sob a **PolyForm Noncommercial 1.0.0**. Texto integral em `lib/ipii/LICENSE`.
 
-Para licenciamento comercial: globaldeeptechecosystem@hubstry.dev
+- ✅ **Permitido:** uso pessoal (estudo, hobby, experimento) e uso acadêmico / pesquisa.
+- ❌ **Proibido:** qualquer uso comercial sem autorização prévia e por escrito do titular.
+- 💼 **Licença comercial:** [globaldeeptechecosystem@hubstry.dev](mailto:globaldeeptechecosystem@hubstry.dev).
 
 ### Princípio de curadoria
 
