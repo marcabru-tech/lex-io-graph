@@ -62,10 +62,16 @@ class TestQuadro(unittest.TestCase):
     def test_relatorio_escapa_valores(self):
         radar = gerar_radar(self.perfil, self.normas, self.arestas)
         radar = copy.deepcopy(radar)
-        radar["normas"][0]["nome"] = "<script>alert(1)</script>"
+        carga = "<script>alert(1)</script>"
+        radar["normas"][0]["nome"] = carga
+        self.assertTrue(radar["arestas"] and radar["acoes"], "o perfil de teste deve gerar arestas e ações")
+        radar["arestas"][0]["source"] = carga
+        radar["arestas"][0]["descricao"] = carga
+        radar["acoes"][0]["acao"] = carga
+        radar["acoes"][0]["base"] = carga
         html = gerar_relatorio_html(radar, self.perfil)
-        self.assertNotIn("<script>alert(1)</script>", html)
-        self.assertIn("&lt;script&gt;", html)
+        self.assertNotIn(carga, html)
+        self.assertGreaterEqual(html.count("&lt;script&gt;"), 5)
 
 
 class TestTextosDaFerramenta(unittest.TestCase):

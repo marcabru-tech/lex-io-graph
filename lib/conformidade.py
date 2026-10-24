@@ -692,6 +692,8 @@ def render_radar(radar: dict):
             st.caption(f"Base legal: {a['base']}")
 
 
+# HTML FIXO E CONFIÁVEL: texto do código, com marcação proposital (<strong>).
+# Não interpolar aqui nenhum valor variável ou vindo do usuário; esses passam por _esc.
 AVISO_TRIAGEM_HTML = (
     "<strong>Triagem informativa — não é certificação de conformidade.</strong> "
     "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado. "
