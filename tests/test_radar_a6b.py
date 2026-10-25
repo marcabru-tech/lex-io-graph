@@ -41,12 +41,16 @@ class TestPromocao(unittest.TestCase):
         r = _radar("dados", camara=[_camara("PL 13/2026", "Trata de impostos")])
         self.assertEqual(updater.detectar_novidades(r, r), [])
 
-    def test_ja_principal_pelo_senado_nao_alerta_quando_camara_entra(self):
+    def test_ja_principal_pelo_senado_alerta_so_a_camara_quando_ela_entra(self):
+        # Revisado na A6-e (identidade por registro): antes, a Câmara que chegava
+        # com a mesma ementa era suprimida pelo Senado já conhecido.
         senado = {"id": "s1", "sigla": "PL 14/2026", "ementa": "Trata de impostos", "termo_busca": "dados pessoais"}
         semana1 = _radar("dados", senado=[senado])
         semana2 = _radar("dados", senado=[senado],
-                         camara=[_camara("PL 14/2026", "Trata de impostos")])
-        self.assertEqual(updater.detectar_novidades(semana2, semana1), [])
+                         camara=[_camara("PL 14/2026", "Trata de impostos", termo_na_ementa=True)])
+        nov = updater.detectar_novidades(semana2, semana1)
+        self.assertEqual([(n["sigla"], n["fonte"]) for n in nov], [("PL 14/2026", "Câmara dos Deputados")])
+        self.assertEqual(updater.detectar_novidades(semana2, semana2), [])
 
     def test_retrato_anterior_sem_o_campo_e_reclassificado(self):
         # Retrato pré-A2 como anterior: nada do próprio retrato vira novidade.

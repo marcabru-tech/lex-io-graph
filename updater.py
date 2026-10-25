@@ -71,34 +71,45 @@ def detectar_novidades(radar_novo: dict, radar_anterior: dict) -> list[dict]:
     """
     Compara radares e detecta proposições novas (A2).
 
-    Identidade pela chave normalizada (tipo + número + ano), não pelo id de cada
-    Casa: a mesma proposição no Senado e na Câmara gera uma novidade só por
-    tema. Só cartões com termo monitorado na ementa geram novidade; os demais
+    Identidade por registro: (tema, designação tipo + número + ano, Casa). Um
+    cartão gera um alerta se tiver algum registro novo, e o alerta cita só as
+    Casas novas: a proposição que aparece nas duas Casas na mesma coleta gera
+    uma novidade; a que chega à segunda Casa depois gera outra, para essa Casa
+    (A6-e). Só cartões com termo monitorado na ementa geram novidade; os demais
     continuam no snapshot, na seção "conferir" da página, sem alerta.
     """
-    # Identidade da novidade: (tema, chave normalizada). A mesma proposição num
-    # tema novo é um contexto novo para a curadoria e continua elegível.
-    # A6-b: só contam como "já vistos" os cartões principais do retrato anterior.
-    # Um item que estava em "conferir" e passa a "principal" é novidade, porque
-    # nunca foi alertado. O retrato anterior é reclassificado com as regras atuais.
+    # Identidade da novidade: (tema, designação, Casa) de cada registro do
+    # cartão. A mesma proposição num tema novo é contexto novo e continua
+    # elegível. A6-b: só contam como "já vistos" os cartões principais do
+    # retrato anterior, reclassificado com as regras atuais. A6-e: a
+    # identidade é por registro, não pela chave do cartão, para que a fusão ou
+    # a separação entre Casas não crie nem apague novidades.
     anteriores = set()
     for tema, tema_data in radar_anterior.get("temas", {}).items():
         for cartao in consolidar_tema(tema_data, tema)["principal"]:
-            anteriores.add((tema, cartao["chave"]))
+            for designacao, casa in cartao["identidades"]:
+                anteriores.add((tema, designacao, casa))
 
     novidades = []
     for tema, tema_data in radar_novo.get("temas", {}).items():
         for cartao in consolidar_tema(tema_data, tema)["principal"]:
-            if (tema, cartao["chave"]) in anteriores:
+            # Registros do cartão que não estavam em nenhum cartão principal do
+            # retrato anterior. Um alerta por cartão, só para esses registros:
+            # a Casa já conhecida não suprime a nova, nem gera alerta repetido.
+            novos = [(d, casa) for d, casa in cartao["identidades"] if (tema, d, casa) not in anteriores]
+            if not novos:
                 continue
+            casas_novas = {casa for _, casa in novos}
+            fontes_novas = [f for f in cartao["fontes"] if f["casa"] in casas_novas]
             novidades.append({
                 "tema": tema,
-                "fonte": cartao["fonte"],
+                "fonte": " + ".join(f["fonte"] for f in fontes_novas),
                 "sigla": cartao["sigla"],
                 "ementa": cartao["ementa"],
-                "url": cartao["url"],
+                "url": fontes_novas[0]["url"] if fontes_novas else cartao["url"],
                 "data_deteccao": cartao["data_deteccao"],
                 "chave": cartao["chave"],
+                "identidades_novas": [list(x) for x in novos],
             })
 
     return novidades
@@ -120,7 +131,7 @@ def salvar_radar(radar: dict, novidades: list[dict]) -> None:
         print("\n📋 Novidades para revisão:")
         for n in novidades[:10]:
             print(f"  [{n['tema']}] {n['fonte']}: {n['sigla']}")
-            print(f"    {n['ementa'][:80]}...")
+            print(f"    {(n.get('ementa') or '')[:80]}...")
             print(f"    URL: {n['url']}")
 
 

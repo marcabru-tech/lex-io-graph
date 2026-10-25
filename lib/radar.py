@@ -157,14 +157,14 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
                     str(p.get("numero", "")) + "/" +
                     str(p.get("ano", ""))
                 ).strip(),
-                "ementa": p.get("ementa", ""),
+                "ementa": p.get("ementa") or "",
                 "ano": str(p.get("ano", "")),
                 "status": p.get("statusProposicao", {}).get("descricaoSituacao", "Em tramitação"),
                 "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=" + str(p.get("id", "")),
                 "termo_busca": termo,
                 # A busca da Câmara olha indexação e texto, não só a ementa: o item
                 # é marcado (nunca descartado) quando o termo não está na ementa.
-                "termo_na_ementa": _casa_termo(termo, p.get("ementa", "")),
+                "termo_na_ementa": _casa_termo(termo, p.get("ementa") or ""),
                 "data_deteccao": datetime.now().isoformat(),
             })
 
@@ -346,13 +346,32 @@ def termo_na_ementa(item: dict) -> bool:
     termos = termos_do_item(item)
     if not termos:
         return True
-    return any(_casa_termo(t, item.get("ementa", "")) for t in termos)
+    return any(_casa_termo(t, item.get("ementa") or "") for t in termos)
 
 
 def _chave_item(fonte: str, item: dict) -> str:
     from lib.taxonomia import chave_proposicao
     chaves = chave_proposicao(item.get("sigla", ""))
     return chaves[0] if chaves else f"{fonte}:{item.get('id', '')}"
+
+
+def ementa_normalizada(ementa) -> str:
+    """Forma canônica e conservadora da ementa, só para comparar Casas (A6-e).
+
+    Uniformiza codificação (NFKC), caixa, espaços e pontuação convencional.
+    Não usa similaridade aproximada, truncamento nem interpretação.
+    """
+    import re
+    import unicodedata
+    # Formas convencionais que a pontuação-como-espaço não pode separar:
+    # "n.º"/"n.°"/"n°" -> "nº" (antes da NFKC, que transforma "º" em "o") e
+    # separador de milhar ("11.196" -> "11196").
+    t = re.sub(r"\b([nN])\s*\.?\s*[º°]", r"\1º", ementa or "")
+    t = unicodedata.normalize("NFKC", t).casefold()
+    t = re.sub(r"(?<=\d)\.(?=\d)", "", t)
+    # Demais pontuações viram separador (espaço): "ab-cd" ≠ "abcd", "a/b" ≠ "ab".
+    t = re.sub(r"[.,;:!?\"'“”‘’()\[\]\-–—/]+", " ", t)
+    return " ".join(t.split())
 
 
 def consolidar_tema(tema_data: dict, tema: Optional[str] = None) -> dict:
@@ -363,23 +382,46 @@ def consolidar_tema(tema_data: dict, tema: Optional[str] = None) -> dict:
     "principal" se algum item tiver termo na ementa; senão, para "conferir".
     Tema curado (fora de TEMAS_RADAR, incluído à mão pelo curador) não passa
     pela marca: tudo nele é principal.
+
+    A6-e: Senado e Câmara numeram as proposições separadamente. Mesma
+    designação (tipo, número, ano) em Casas diferentes só vira um cartão se as
+    ementas normalizadas forem iguais e não vazias; senão, cartões separados,
+    o segundo com a chave sufixada pela Casa ("PLP 74/2026@camara"). Cada
+    cartão guarda em "fontes" o id, o link e a ementa de cada registro.
     """
     curado = tema is not None and tema not in TEMAS_RADAR
     cartoes = {}
     ordem = []
+    por_designacao = {}
     for fonte in ("senado", "camara", "lexml"):
         for item in tema_data.get(fonte, []):
-            chave = _chave_item(fonte, item)
-            c = cartoes.get(chave)
+            designacao = _chave_item(fonte, item)
+            ementa = item.get("ementa") or ""
+            norma = ementa_normalizada(ementa)
+            c = None
+            for chave_existente in por_designacao.get(designacao, []):
+                cand = cartoes[chave_existente]
+                casas = {f["casa"] for f in cand["fontes"]}
+                if fonte in casas or (norma and norma in cand["_ementas"]):
+                    c = cand
+                    break
             if c is None:
-                c = {"chave": chave, "sigla": item.get("sigla", ""), "ementa": item.get("ementa", ""),
+                chave = designacao
+                if designacao in cartoes:
+                    chave = f"{designacao}@{fonte}"
+                    if chave in cartoes:
+                        chave = f"{designacao}@{fonte}:{item.get('id', '')}"
+                c = {"chave": chave, "sigla": item.get("sigla", ""), "ementa": ementa,
                      "status": item.get("status", ""), "data_deteccao": item.get("data_deteccao", ""),
-                     "fontes": [], "termos": [], "termo_na_ementa": False, "itens": 0}
+                     "fontes": [], "termos": [], "termo_na_ementa": False, "itens": 0, "_ementas": set()}
                 cartoes[chave] = c
                 ordem.append(chave)
+                por_designacao.setdefault(designacao, []).append(chave)
             c["itens"] += 1
-            c["fontes"].append({"fonte": NOMES_FONTE.get(fonte, fonte), "url": item.get("url", ""),
-                                "id": item.get("id", "")})
+            if norma:
+                c["_ementas"].add(norma)
+            c["fontes"].append({"fonte": NOMES_FONTE.get(fonte, fonte), "casa": fonte, "designacao": designacao,
+                                "url": item.get("url", ""), "id": item.get("id", ""), "ementa": ementa})
             for t in termos_do_item(item):
                 if t not in c["termos"]:
                     c["termos"].append(t)
@@ -389,7 +431,12 @@ def consolidar_tema(tema_data: dict, tema: Optional[str] = None) -> dict:
             c["termo_na_ementa"] = (c["termo_na_ementa"] or not sujeito_a_marca
                                     or termo_na_ementa(item))
             if not c["ementa"]:
-                c["ementa"] = item.get("ementa", "")
+                c["ementa"] = ementa
+    for c in cartoes.values():
+        del c["_ementas"]
+        # Identidade estável para novidades: (designação, Casa) de cada registro,
+        # independente do sufixo que o cartão recebeu nesta coleta.
+        c["identidades"] = sorted({(f["designacao"], f["casa"]) for f in c["fontes"]})
     principal = [cartoes[k] for k in ordem if cartoes[k]["termo_na_ementa"]]
     conferir = [cartoes[k] for k in ordem if not cartoes[k]["termo_na_ementa"]]
     for c in principal + conferir:
