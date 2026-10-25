@@ -163,15 +163,18 @@ def _sugerir_tipo(
     ont_a = token_a["ontologia"]
     ont_b = token_b["ontologia"]
 
+    # Interpreta: jurisprudência interpreta a Constituição, lei ou decreto.
+    # Vem antes da hierarquia: decisão judicial não é norma inferior à CF, e o
+    # par jurisprudência ↔ constituição é interpretação constitucional (A4).
+    interpretaveis = ("constituicao", "lei", "decreto", "norma_regulamentar")
+    if ont_a == "jurisprudencia" and ont_b in interpretaveis:
+        return "interpreta"
+    if ont_b == "jurisprudencia" and ont_a in interpretaveis:
+        return "interpreta"
+
     # Hierarquia: constituição fundamenta norma inferior
     if ont_a == "constituicao" or ont_b == "constituicao":
         return "hierarquia"
-
-    # Interpreta: jurisprudência interpreta lei ou decreto
-    if ont_a == "jurisprudencia" and ont_b in ("lei", "decreto", "norma_regulamentar"):
-        return "interpreta"
-    if ont_b == "jurisprudencia" and ont_a in ("lei", "decreto", "norma_regulamentar"):
-        return "interpreta"
 
     # Regulamenta: decreto regulamenta lei
     if (ont_a == "decreto" and ont_b == "lei") or \
