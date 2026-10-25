@@ -104,7 +104,7 @@ class TestLinkFonteOficial(unittest.TestCase):
             nos = json.load(f)["nodes"]
         com_link = [n for n in nos if link_fonte_oficial(n.get("fonte_oficial_url"))]
         sem_link = [n for n in nos if not link_fonte_oficial(n.get("fonte_oficial_url"))]
-        self.assertEqual(len(com_link), 27)
+        self.assertEqual(len(com_link), 31)
         self.assertEqual({n["id"] for n in sem_link}, {"stj_resp", "stj_resp_plat"})
 
 
@@ -178,7 +178,7 @@ class TestResumoComCorpusReal(unittest.TestCase):
             registros = json.load(f)["jurisprudencia"]
         self.assertEqual(
             resumo_verificacao(registros),
-            "0 verificados · 3 pendentes · 1 contestado",
+            "0 verificados · 7 pendentes · 1 contestado",
         )
 
 

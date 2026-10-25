@@ -51,9 +51,16 @@ confirmado.
 Nota de contagem; a decisão acima não muda. O Contexto e as Consequências
 descrevem o corpus na data da decisão, com cinco registros.
 
-- **Contagem atual: 4 registros** em `data/jurisprudencia.json`, nenhum
+- **Contagem atual: 8 registros** em `data/jurisprudencia.json`, nenhum
   `verificado`: `stf_adimc` (`contestado`), `stj_resp` (`pendente`), `stj_resp_plat`
-  (`pendente`) e `stj_menor_online` (`pendente`).
+  (`pendente`), `stj_menor_online` (`pendente`), `tse_respel_0600359_pr`
+  (`pendente`), `tse_agr_0600528_sp` (`pendente`), `tse_ed_0600528_sp`
+  (`pendente`) e `tst_rr_0000284_pe` (`pendente`).
+- Os quatro últimos (incluídos em 25/10/2026) vêm de inteiro teor assinado,
+  fornecido pelo mantenedor (material do grupo de estudos GEDD). Seguem
+  `pendente` até a conferência humana no portal oficial; os nós
+  correspondentes em `normas.json` têm `status` `em_conferencia` e ficam fora
+  do IPII.
 - O quinto registro, `trf4_lgpd_cookies`, citado no Contexto pelo dígito CNJ
   divergente, foi removido do corpus em 16/10/2026 (commit `c0bb9d7`).
 - A pendência sobre a métrica da página inicial continua: ela hoje se chama

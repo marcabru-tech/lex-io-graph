@@ -188,9 +188,9 @@ class TestContarEstadosCorpusReal(unittest.TestCase):
 
     def test_total_e_distribuicao(self):
         c = contar_estados(self.registros)
-        self.assertEqual(len(self.registros), 4)
+        self.assertEqual(len(self.registros), 8)
         self.assertEqual(c["verificado"], 0)
-        self.assertEqual(c["pendente"], 3)
+        self.assertEqual(c["pendente"], 7)
         self.assertEqual(c["contestado"], 1)
         self.assertEqual(c[SEM_ESTADO], 0)
 

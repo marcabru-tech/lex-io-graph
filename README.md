@@ -10,7 +10,7 @@
 
 Atlas interativo do ordenamento jurídico digital brasileiro — não um PDF de compliance, mas um sistema vivo que conecta normas, jurisprudência, doutrina, inteligência estratégica e radar legislativo automático.
 
-**10 páginas · 29 nós no corpus · 49 conexões no grafo · IPII Engine proprietário**
+**10 páginas · 33 nós no corpus · 49 conexões no grafo · IPII Engine proprietário**
 
 ### Páginas
 
@@ -77,7 +77,7 @@ lex-io-graph/
 │   ├── telemetria.py              # Contagem de visitas sem dados pessoais
 │   └── validacao.py               # Validação de integridade do corpus e dados derivados
 ├── data/
-│   ├── normas.json                # Corpus normativo curado (29 nós)
+│   ├── normas.json                # Corpus normativo curado (33 nós)
 │   ├── arestas.json               # Conexões tipadas (49 arestas)
 │   ├── jurisprudencia.json        # Jurisprudência vinculada
 │   ├── radar_legislativo.json     # Resultado do radar automático
