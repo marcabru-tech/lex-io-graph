@@ -18,7 +18,7 @@ from datetime import datetime
 # Adicionar raiz ao path para importar lib/
 sys.path.insert(0, str(Path(__file__).parent))
 
-from lib.radar import coletar_radar, TEMAS_RADAR, ESTADO_FONTES
+from lib.radar import coletar_radar, TEMAS_RADAR, ESTADO_FONTES, consolidar_tema, _chave_item
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -69,29 +69,35 @@ def carregar_radar_anterior() -> dict:
 
 def detectar_novidades(radar_novo: dict, radar_anterior: dict) -> list[dict]:
     """
-    Compara radares e detecta itens novos.
-    Retorna lista de novidades para log.
+    Compara radares e detecta proposições novas (A2).
+
+    Identidade pela chave normalizada (tipo + número + ano), não pelo id de cada
+    Casa: a mesma proposição no Senado e na Câmara gera uma novidade só por
+    tema. Só cartões com termo monitorado na ementa geram novidade; os demais
+    continuam no snapshot, na seção "conferir" da página, sem alerta.
     """
+    # Identidade da novidade: (tema, chave normalizada). A mesma proposição num
+    # tema novo é um contexto novo para a curadoria e continua elegível.
+    anteriores = set()
+    for tema, tema_data in radar_anterior.get("temas", {}).items():
+        for fonte in ["senado", "camara", "lexml"]:
+            for item in tema_data.get(fonte, []):
+                anteriores.add((tema, _chave_item(fonte, item)))
+
     novidades = []
-
-    ids_anteriores = set()
-    for tema_data in radar_anterior.get("temas", {}).values():
-        for fonte in ["senado", "camara", "lexml"]:
-            for item in tema_data.get(fonte, []):
-                ids_anteriores.add(item.get("id", ""))
-
     for tema, tema_data in radar_novo.get("temas", {}).items():
-        for fonte in ["senado", "camara", "lexml"]:
-            for item in tema_data.get(fonte, []):
-                if item.get("id", "") not in ids_anteriores and item.get("id", ""):
-                    novidades.append({
-                        "tema": tema,
-                        "fonte": fonte,
-                        "sigla": item.get("sigla", ""),
-                        "ementa": item.get("ementa", ""),
-                        "url": item.get("url", ""),
-                        "data_deteccao": item.get("data_deteccao", ""),
-                    })
+        for cartao in consolidar_tema(tema_data, tema)["principal"]:
+            if (tema, cartao["chave"]) in anteriores:
+                continue
+            novidades.append({
+                "tema": tema,
+                "fonte": cartao["fonte"],
+                "sigla": cartao["sigla"],
+                "ementa": cartao["ementa"],
+                "url": cartao["url"],
+                "data_deteccao": cartao["data_deteccao"],
+                "chave": cartao["chave"],
+            })
 
     return novidades
 

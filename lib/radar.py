@@ -116,6 +116,7 @@ def buscar_senado(termo: str, max_resultados: int = 10) -> list[dict]:
             "autor": m.get("Autor", ""),
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/" + codigo,
             "termo_busca": termo,
+            "termo_na_ementa": True,  # o Senado só entra aqui se o termo casar com a ementa
             "data_deteccao": datetime.now().isoformat(),
         })
         if len(resultados) >= max_resultados:
@@ -161,6 +162,9 @@ def buscar_camara(termo: str, max_resultados: int = 10) -> list[dict]:
                 "status": p.get("statusProposicao", {}).get("descricaoSituacao", "Em tramitação"),
                 "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=" + str(p.get("id", "")),
                 "termo_busca": termo,
+                # A busca da Câmara olha indexação e texto, não só a ementa: o item
+                # é marcado (nunca descartado) quando o termo não está na ementa.
+                "termo_na_ementa": _casa_termo(termo, p.get("ementa", "")),
                 "data_deteccao": datetime.now().isoformat(),
             })
 
@@ -298,14 +302,110 @@ def coletar_radar(
             print(f"  [{tema}] LexML: '{termo}'")
             resultados["temas"][tema]["lexml"] += buscar_lexml(termo, max_por_fonte)
 
-        # Deduplicar por ID dentro de cada fonte
+        # Deduplicar por ID dentro de cada fonte, agregando os termos que
+        # encontraram o item (e a marca de termo na ementa de qualquer deles).
         for fonte in ["senado", "camara", "lexml"]:
-            vistos = set()
+            por_id = {}
             dedup = []
             for item in resultados["temas"][tema][fonte]:
-                if item["id"] not in vistos:
-                    vistos.add(item["id"])
+                atual = por_id.get(item["id"])
+                if atual is None:
+                    item = dict(item, termos_busca=termos_do_item(item))
+                    por_id[item["id"]] = item
                     dedup.append(item)
+                    continue
+                for t in termos_do_item(item):
+                    if t not in atual["termos_busca"]:
+                        atual["termos_busca"].append(t)
+                atual["termo_na_ementa"] = termo_na_ementa(atual) or termo_na_ementa(item)
             resultados["temas"][tema][fonte] = dedup
 
     return resultados
+
+
+# ---- Marca de evidência textual e consolidação entre as Casas (A2) ----
+NOMES_FONTE = {"senado": "Senado Federal", "camara": "Câmara dos Deputados", "lexml": "LexML"}
+
+
+def termos_do_item(item: dict) -> list:
+    """Termos monitorados que encontraram o item (snapshots antigos têm só termo_busca)."""
+    termos = item.get("termos_busca")
+    if termos:
+        return list(termos)
+    return [item["termo_busca"]] if item.get("termo_busca") else []
+
+
+def termo_na_ementa(item: dict) -> bool:
+    """O item tem algum termo monitorado na ementa?
+
+    Usa o campo gravado quando existe; em snapshot antigo, recalcula a partir de
+    termo_busca e ementa. Sem termo registrado não há base para sinalizar: True.
+    """
+    if "termo_na_ementa" in item:
+        return bool(item["termo_na_ementa"])
+    termos = termos_do_item(item)
+    if not termos:
+        return True
+    return any(_casa_termo(t, item.get("ementa", "")) for t in termos)
+
+
+def _chave_item(fonte: str, item: dict) -> str:
+    from lib.taxonomia import chave_proposicao
+    chaves = chave_proposicao(item.get("sigla", ""))
+    return chaves[0] if chaves else f"{fonte}:{item.get('id', '')}"
+
+
+def consolidar_tema(tema_data: dict, tema: Optional[str] = None) -> dict:
+    """Um cartão por proposição no tema, com todas as fontes que a trouxeram.
+
+    Não altera o snapshot (a proveniência por fonte continua nos dados): só
+    organiza a apresentação e a detecção de novidades. O cartão vai para
+    "principal" se algum item tiver termo na ementa; senão, para "conferir".
+    Tema curado (fora de TEMAS_RADAR, incluído à mão pelo curador) não passa
+    pela marca: tudo nele é principal.
+    """
+    curado = tema is not None and tema not in TEMAS_RADAR
+    cartoes = {}
+    ordem = []
+    for fonte in ("senado", "camara", "lexml"):
+        for item in tema_data.get(fonte, []):
+            chave = _chave_item(fonte, item)
+            c = cartoes.get(chave)
+            if c is None:
+                c = {"chave": chave, "sigla": item.get("sigla", ""), "ementa": item.get("ementa", ""),
+                     "status": item.get("status", ""), "data_deteccao": item.get("data_deteccao", ""),
+                     "fontes": [], "termos": [], "termo_na_ementa": False, "itens": 0}
+                cartoes[chave] = c
+                ordem.append(chave)
+            c["itens"] += 1
+            c["fontes"].append({"fonte": NOMES_FONTE.get(fonte, fonte), "url": item.get("url", ""),
+                                "id": item.get("id", "")})
+            for t in termos_do_item(item):
+                if t not in c["termos"]:
+                    c["termos"].append(t)
+            # Só a Câmara está sujeita à marca (a busca dela olha indexação e texto);
+            # Senado já vem filtrado pela ementa, e outras fontes não passam pela regra.
+            sujeito_a_marca = fonte == "camara" and not curado
+            c["termo_na_ementa"] = (c["termo_na_ementa"] or not sujeito_a_marca
+                                    or termo_na_ementa(item))
+            if not c["ementa"]:
+                c["ementa"] = item.get("ementa", "")
+    principal = [cartoes[k] for k in ordem if cartoes[k]["termo_na_ementa"]]
+    conferir = [cartoes[k] for k in ordem if not cartoes[k]["termo_na_ementa"]]
+    for c in principal + conferir:
+        c["fonte"] = " + ".join(f["fonte"] for f in c["fontes"])
+        c["url"] = c["fontes"][0]["url"] if c["fontes"] else ""
+    return {"principal": principal, "conferir": conferir}
+
+
+def resumo_consolidacao(radar: dict) -> dict:
+    """Contagens para o registro de antes e depois da A2."""
+    itens = principal = conferir = consolidadas = 0
+    for tema, tema_data in radar.get("temas", {}).items():
+        itens += sum(len(tema_data.get(f, [])) for f in ("senado", "camara", "lexml"))
+        c = consolidar_tema(tema_data, tema)
+        principal += len(c["principal"])
+        conferir += len(c["conferir"])
+        consolidadas += sum(1 for x in c["principal"] + c["conferir"] if len(x["fontes"]) > 1)
+    return {"itens_coletados": itens, "cartoes_principais": principal,
+            "cartoes_a_conferir": conferir, "proposicoes_consolidadas": consolidadas}

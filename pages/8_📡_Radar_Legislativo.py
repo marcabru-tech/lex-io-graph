@@ -8,6 +8,7 @@ from lib.graph_builder import DATA_DIR
 from lib.taxonomia import vetores_do_tema_radar, normas_relacionadas, indice_corpus, norma_no_corpus
 from lib.footer import render_footer
 from lib.radar_cartao import html_cartao, html_proveniencia, html_termos_monitorados
+from lib.radar import consolidar_tema
 
 st.set_page_config(
     page_title=f"{APP_NAME} — Radar Legislativo",
@@ -279,15 +280,27 @@ elif secao == "📋 Por Tema":
         if termos:
             st.markdown(html_termos_monitorados(termos), unsafe_allow_html=True)
 
-        for fonte in ["senado", "camara", "lexml"]:
-            itens = tema_data.get(fonte, [])
-            if itens:
-                st.markdown(
-                    f'<div class="tema-header">{FONTE_LABELS.get(fonte, fonte)} ({len(itens)})</div>',
-                    unsafe_allow_html=True
+        # Um cartão por proposição, com as Casas que a trouxeram (A2). Os itens
+        # da Câmara sem termo monitorado na ementa ficam num bloco recolhido.
+        consolidado = consolidar_tema(tema_data, tema_sel)
+        if consolidado["principal"]:
+            st.markdown(
+                f'<div class="tema-header">Proposições ({len(consolidado["principal"])})</div>',
+                unsafe_allow_html=True
+            )
+            for cartao in consolidado["principal"]:
+                render_item(cartao)
+        if consolidado["conferir"]:
+            with st.expander(
+                f"Resultados da Câmara sem o termo na ementa — conferir ({len(consolidado['conferir'])})"
+            ):
+                st.caption(
+                    "A busca da Câmara considera indexação e texto, não só a ementa. Estes "
+                    "resultados não geram alerta de novidade, mas continuam disponíveis para "
+                    "conferência."
                 )
-                for item in itens:
-                    render_item(item)
+                for cartao in consolidado["conferir"]:
+                    render_item(cartao)
 
         total_tema = sum(len(tema_data.get(f, [])) for f in ["senado", "camara", "lexml"])
         if total_tema == 0:
