@@ -141,6 +141,10 @@ st.markdown(f"""
     <div class="metric-label">Precisão</div>
     <div class="metric-value">{resultado.get('precisao', 0):.0%}</div>
   </div>
+  <div class="metric-box">
+    <div class="metric-label">Precisão de tipo</div>
+    <div class="metric-value">{resultado.get('precisao_tipo', 0):.0%}</div>
+  </div>
 </div>
 <div style="font-family:monospace;font-size:10px;color:#454040;margin-bottom:16px;">
   Última rodagem: {gerado} · Threshold: {meta.get('threshold', 0.40)} · {meta.get('engine', 'IPII Engine')}

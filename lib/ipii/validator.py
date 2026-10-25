@@ -101,6 +101,10 @@ def validar_arestas(sugeridas: list, existentes: list, excluidas: frozenset = fr
         "faltando": len(faltando),
         "precisao": round(len(confirmadas) / total_sug, 3) if total_sug else 0,
         "cobertura": round(len(confirmadas) / total_ex, 3) if total_ex else 0,
+        # Entre as confirmadas (par certo), quantas têm também o tipo certo.
+        "acertos_tipo": sum(1 for c in confirmadas if c["match_tipo"]),
+        "precisao_tipo": (round(sum(1 for c in confirmadas if c["match_tipo"]) / len(confirmadas), 3)
+                          if confirmadas else 0),
         "detalhe_confirmadas": confirmadas,
         "detalhe_novas": novas,
         "detalhe_faltando": faltando,
