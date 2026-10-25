@@ -194,10 +194,10 @@ if secao == "🆕 Novas arestas descobertas":
 
     tier_sel = st.selectbox(
         "Filtrar por tier",
-        ["Todos", "Tier 1 (≥ 0.75)", "Tier 2 (0.65–0.74)", "Tier 3 (0.55–0.64)"]
+        ["Todos", "Tier 1 (≥ 0.750)", "Tier 2 (0.650–0.749)", "Tier 3 (0.550–0.649)"]
     )
 
-    tier_map = {"Todos": 5, "Tier 1 (≥ 0.75)": 1, "Tier 2 (0.65–0.74)": 2, "Tier 3 (0.55–0.64)": 3}
+    tier_map = {"Todos": 5, "Tier 1 (≥ 0.750)": 1, "Tier 2 (0.650–0.749)": 2, "Tier 3 (0.550–0.649)": 3}
     tier_max = tier_map[tier_sel]
 
     filtradas = filtrar_por_tier(novas, tier_max)
