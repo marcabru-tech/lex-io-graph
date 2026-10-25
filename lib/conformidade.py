@@ -611,6 +611,10 @@ def _tags_pontuaveis(normas: list) -> set:
     return tags & TAGS_OBSERVAVEIS
 
 
+# Grupos cujas arestas não recebem risco automático (A6-d).
+GRUPOS_SO_REFERENCIA = frozenset({"nao_incorporado", "desconhecido", "referencia"})
+
+
 def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     tags_perfil = _temas_do_perfil(perfil)
     tags_perfil_pontuaveis = tags_perfil & _tags_pontuaveis(normas)
@@ -650,6 +654,12 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
         tipo = a.get("tipo", "")
         if "em_conferencia" in grupos:
             a["risco"] = "em_conferencia"
+        elif grupos & GRUPOS_SO_REFERENCIA:
+            # A6-d (decisão da Luna, 25/10/2026): relação com instrumento não
+            # incorporado, de status não reconhecido ou não vinculante não recebe
+            # risco automático. Fica visível como referência, fora da priorização
+            # e de "Maior interseção entre vigentes".
+            a["risco"] = "referencia"
         elif "proposta" in grupos:
             a["risco"] = "prospectivo"
         elif tipo == "antinomia":
@@ -689,12 +699,15 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     }
 
 
-RISCO_ICO = {"alto": "🔴", "medio": "🟡", "baixo": "🟢", "prospectivo": "🔵", "em_conferencia": "⚠️"}
+RISCO_ICO = {"alto": "🔴", "medio": "🟡", "baixo": "🟢", "prospectivo": "🔵", "em_conferencia": "⚠️",
+             "referencia": "📎"}
 RISCO_ROTULO = {
     "prospectivo": "envolve proposta em tramitação (risco prospectivo, não obrigação vigente)",
     "em_conferencia": "envolve decisão em conferência (não utilizar como precedente)",
+    "referencia": ("envolve instrumento não incorporado, não vinculante ou de status não reconhecido "
+                   "(referência, sem classificação de risco)"),
 }
-ORDEM_RISCO = {"alto": 0, "medio": 1, "baixo": 2, "prospectivo": 3, "em_conferencia": 4}
+ORDEM_RISCO = {"alto": 0, "medio": 1, "baixo": 2, "prospectivo": 3, "em_conferencia": 4, "referencia": 5}
 TITULOS_GRUPO = {
     "vigente": "Normas vigentes com interseção temática",
     "proposta": "Propostas em tramitação — risco prospectivo, não obrigação vigente",
@@ -832,7 +845,7 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
     grupos = _por_grupo(radar)
 
     rows_perfil = "".join(
-        f"<tr><td>{e(PERGUNTAS[k]['label'])}</td><td>{e(v)}</td></tr>"
+        f"<tr><td>{e(PERGUNTAS.get(k, {}).get('label', k))}</td><td>{e(v)}</td></tr>"
         for k, v in perfil.items()
     )
 

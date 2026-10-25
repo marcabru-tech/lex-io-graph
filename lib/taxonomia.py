@@ -41,7 +41,9 @@ def normas_relacionadas(tema: str, normas: list[dict]) -> list[dict]:
 import re as _re
 
 # O ano é capturado inteiro (\d+) e validado depois: só 2 ou 4 dígitos valem.
-_RE_PROP = _re.compile(r"\b(PLP|PL|PEC|MPV|MP|PDL)\s*(?:n[º°o.]\s*)?([\d.]+)\s*/\s*(\d+)")
+# Número começa por dígito (antes, "PL ./2024" virava "PL 0/2024") e o ano
+# termina em fronteira de palavra (antes, "PL 2338/2023abc" casava) — A6-d.
+_RE_PROP = _re.compile(r"\b(PLP|PL|PEC|MPV|MP|PDL)\s*(?:n[º°o.]\s*)?(\d[\d.]*)\s*/\s*(\d+)\b")
 
 
 def _ano_completo(ano: str, pivo: int) -> str | None:
