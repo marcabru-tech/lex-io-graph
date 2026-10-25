@@ -132,7 +132,7 @@ class TestCartaoRadar(unittest.TestCase):
         }
         esperado = f"""
 <div class="radar-card">
-  <div class="radar-sigla">PL 2338/2023<span class="novidade-badge">NOVO</span> <a href="{URL_SENADO}" target="_blank" style="color:#1abc9c;font-size:10px;">↗ ver fonte</a></div>
+  <div class="radar-sigla">PL 2338/2023<span class="novidade-badge">NOVO</span> <a href="{URL_SENADO}" target="_blank" rel="noopener noreferrer" style="color:#1abc9c;font-size:10px;">↗ ver fonte</a></div>
   <div class="radar-fonte">Senado Federal · Detectado: 2026-10-19</div>
   <div class="radar-ementa">Dispõe sobre o uso da Inteligência Artificial.</div>
   <div class="radar-status">Status: Em tramitação</div>

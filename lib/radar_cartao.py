@@ -46,12 +46,12 @@ def html_cartao(item: dict, no_corpus: dict | None = None, novidade: bool = Fals
         for f in item["fontes"]:
             u = url_segura(f.get("url", ""))
             if u:
-                links.append(f'<a href="{escape(u, quote=True)}" target="_blank" '
+                links.append(f'<a href="{escape(u, quote=True)}" target="_blank" rel="noopener noreferrer" '
                              f'style="color:#1abc9c;font-size:10px;">↗ {_texto(f.get("fonte", "fonte"))}</a>')
         link = " ".join(links)
     else:
         url = url_segura(item.get("url", ""))
-        link = (f'<a href="{escape(url, quote=True)}" target="_blank" style="color:#1abc9c;font-size:10px;">'
+        link = (f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer" style="color:#1abc9c;font-size:10px;">'
                 f'↗ ver fonte</a>') if url else ""
     return f"""
 <div class="radar-card">

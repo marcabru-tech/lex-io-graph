@@ -42,16 +42,26 @@ class TestCasosMedidos(unittest.TestCase):
             self.assertIsNotNone(grupo, sigla)  # continua acessível (principal ou conferir)
 
     def test_proposicao_nas_duas_casas_vira_um_cartao_com_as_duas_fontes(self):
-        c = consolidar_tema(SNAPSHOT["temas"]["infraestrutura_digital"])
-        for sigla in ("PL 278/2026", "PLP 74/2026"):
-            cartoes = [x for x in c["principal"] + c["conferir"] if x["sigla"] == sigla]
-            self.assertEqual(len(cartoes), 1, sigla)
-            fontes = {f["fonte"] for f in cartoes[0]["fontes"]}
-            self.assertEqual(fontes, {"Senado Federal", "Câmara dos Deputados"})
-            self.assertTrue(all(f["url"] for f in cartoes[0]["fontes"]))
-            html = html_cartao(cartoes[0])
-            self.assertIn("↗ Senado Federal", html)
-            self.assertIn("↗ Câmara dos Deputados", html)
+        # PL 278/2026: mesma ementa no Senado e na Câmara -> um cartão, duas fontes.
+        c = consolidar_tema(SNAPSHOT["temas"]["infraestrutura_digital"], "infraestrutura_digital")
+        cartoes = [x for x in c["principal"] + c["conferir"] if x["sigla"] == "PL 278/2026"]
+        self.assertEqual(len(cartoes), 1)
+        fontes = {f["fonte"] for f in cartoes[0]["fontes"]}
+        self.assertEqual(fontes, {"Senado Federal", "Câmara dos Deputados"})
+        self.assertTrue(all(f["url"] and f["id"] for f in cartoes[0]["fontes"]))
+        html = html_cartao(cartoes[0])
+        self.assertIn("↗ Senado Federal", html)
+        self.assertIn("↗ Câmara dos Deputados", html)
+
+    def test_mesma_designacao_com_ementas_diferentes_nao_funde(self):
+        # PLP 74/2026: o do Senado altera a LC 229; o da Câmara trata de
+        # benefícios tributários. São proposições distintas (A6-e).
+        c = consolidar_tema(SNAPSHOT["temas"]["infraestrutura_digital"], "infraestrutura_digital")
+        cartoes = [x for x in c["principal"] + c["conferir"] if x["sigla"] == "PLP 74/2026"]
+        self.assertEqual(len(cartoes), 2)
+        self.assertEqual(sorted(x["chave"] for x in cartoes), ["PLP 74/2026", "PLP 74/2026@camara"])
+        self.assertEqual(sorted(f["casa"] for x in cartoes for f in x["fontes"]), ["camara", "senado"])
+        self.assertNotEqual(cartoes[0]["ementa"], cartoes[1]["ementa"])
 
     def test_tema_curado_nao_passa_pela_marca(self):
         tema = "Sustação dos Decretos 12.975 e 12.976/2026"
