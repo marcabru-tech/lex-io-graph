@@ -102,6 +102,8 @@ class TestPaginaComRelatorioMalformado(unittest.TestCase):
         hash_antes = hashlib.sha256(real.read_bytes()).hexdigest()
         # Cópia malformada numa pasta temporária, apagada mesmo se o teste falhar.
         pasta = tempfile.TemporaryDirectory()
+        # addCleanup roda em ordem inversa ao registro (LIFO): o cache do
+        # Streamlit é limpo primeiro e a pasta temporária é apagada depois.
         self.addCleanup(pasta.cleanup)
         self.addCleanup(st.cache_data.clear)
         rel = Path(pasta.name) / "ipii_resultado.json"
