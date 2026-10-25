@@ -19,7 +19,8 @@ from lib.conformidade import (
 from lib.graph_builder import build_compliance_graph, get_intersections
 from lib.constants import (
     APP_NAME, APP_SUBTITLE, APP_VERSION,
-    THEMES, NODE_TYPE_LABELS, NODE_SHAPES, HIERARCHY_LEVELS
+    THEMES, NODE_TYPE_LABELS, NODE_SHAPES, HIERARCHY_LEVELS, rotulo_status,
+    cor_borda_status,
 )
 from lib.footer import render_footer
 from lib.formato import ano_exibicao
@@ -216,7 +217,7 @@ if _grafo_ok:
     border-radius:6px;padding:12px 16px;margin-bottom:8px;">
     <span style="color:#d4a853;font-family:monospace;font-weight:bold;">{nd.get("label",nid)}</span>
     <span style="color:#706a60;font-size:11px;margin-left:8px;">
-    {nd.get("tipo_label","")} · {nd.get("status","")} · {conexoes} conexão(ões)</span><br>
+    {nd.get("tipo_label","")} · {rotulo_status(nd.get("status",""))} · {conexoes} conexão(ões)</span><br>
     <span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")}</span>
     </div>""", unsafe_allow_html=True)
 
@@ -310,17 +311,19 @@ if _grafo_ok:
                 + d.get("ementa", "") + "\n"
                 + "-" * 36 + "\n"
                 + "Tipo:   " + d.get("tipo_label", "") + "\n"
-                + "Status: " + d.get("status", "") + "\n"
+                + "Status: " + rotulo_status(d.get("status", "")) + "\n"
                 + "Orgao:  " + d.get("orgao", "") + "\n"
                 + "Ano:    " + ano_exibicao(d.get("ano"))
                 + verif_txt
                 + art_txt
             )
+            borda, espessura = cor_borda_status(d.get("status", ""), d.get("color", "#888888"))
             net.add_node(
                 node_id,
                 label=d.get("label", node_id) + (" ⚠" if nao_verificado else ""),
                 title=tip,
-                color={"background": d.get("color", "#888888"), "border": d.get("color", "#888888")},
+                color={"background": d.get("color", "#888888"), "border": borda},
+                borderWidth=espessura,
                 size=node_size,
                 shape=shape,
                 y=y_pos,
@@ -403,7 +406,7 @@ if _grafo_ok:
                 st.markdown("#### " + nd.get("nome", ""))
                 st.markdown("**Sigla:** " + nd.get("label", ""))
                 st.markdown("**Tipo:** " + nd.get("tipo_label", ""))
-                st.markdown("**Status:** " + nd.get("status", ""))
+                st.markdown("**Status:** " + rotulo_status(nd.get("status", "")))
                 st.markdown("**Órgão:** " + nd.get("orgao", ""))
                 st.markdown("**Ano:** " + ano_exibicao(nd.get("ano")))
                 estado_sel = nd.get("estado_verificacao")

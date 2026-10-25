@@ -177,6 +177,9 @@ STATUS_LABELS = {
     "vigente_parcial":      "Vigente (parcial, por Parte)",
     "aplicacao_provisoria": "Em aplicação provisória",
     "instrumento_externo":  "Instrumento internacional não incorporado",
+    # Documento sem força jurídica no direito brasileiro (ex.: encíclica papal).
+    # Aparece no atlas, mas nunca é pontuado como norma no quadro de conformidade.
+    "referencia_etica":     "Referência ética (não vinculante)",
     # Decisão judicial cujo registro em data/jurisprudencia.json não está
     # "verificado" (pendente ou contestado): não é precedente utilizável.
     "em_conferencia":       "Em conferência (não verificado em fonte oficial)",
@@ -191,5 +194,23 @@ STATUS_COLORS = {
     "vigente_parcial":      "#a3d977",
     "aplicacao_provisoria": "#e6c13d",
     "instrumento_externo":  "#6b6458",
+    "referencia_etica":     "#9b7fd1",
     "em_conferencia":       "#d9822b",
 }
+
+
+def rotulo_status(status: str) -> str:
+    """Rótulo legível do status de uma norma (o próprio valor, se desconhecido)."""
+    return STATUS_LABELS.get(status, status)
+
+
+# Status sem força jurídica no direito brasileiro: o grafo destaca o nó com a
+# borda na cor do status (STATUS_COLORS), mantendo a cor de preenchimento do tipo.
+STATUS_COM_BORDA = frozenset({"referencia_etica", "instrumento_externo"})
+
+
+def cor_borda_status(status: str, cor_do_tipo: str) -> tuple[str, int]:
+    """Cor e espessura da borda do nó no grafo, conforme o status."""
+    if status in STATUS_COM_BORDA:
+        return STATUS_COLORS.get(status, cor_do_tipo), 4
+    return cor_do_tipo, 1

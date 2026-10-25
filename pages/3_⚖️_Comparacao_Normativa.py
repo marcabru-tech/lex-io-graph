@@ -7,7 +7,7 @@ Análise lado a lado de pares de normas com interseções.
 import streamlit as st
 
 from lib.graph_builder import build_compliance_graph, load_json
-from lib.constants import EDGE_TYPE_LABELS, THEMES, STATUS_LABELS
+from lib.constants import EDGE_TYPE_LABELS, THEMES, STATUS_LABELS, rotulo_status
 from lib.footer import render_footer
 from lib.formato import ano_exibicao
 
@@ -54,7 +54,7 @@ with col_a:
     st.markdown(f"#### {data_a['sigla']}")
     st.markdown(f"**Nome completo:** {data_a['nome']}")
     st.markdown(f"**Tipo:** {data_a['tipo']}")
-    st.markdown(f"**Status:** {data_a['status']}")
+    st.markdown(f"**Status:** {rotulo_status(data_a['status'])}")
     st.markdown(f"**Órgão:** {data_a['orgao']}")
     st.markdown(f"**Ano:** {ano_exibicao(data_a['ano'])}")
     st.markdown(f"**Ementa:** {data_a['ementa']}")
@@ -65,7 +65,7 @@ with col_b:
     st.markdown(f"#### {data_b['sigla']}")
     st.markdown(f"**Nome completo:** {data_b['nome']}")
     st.markdown(f"**Tipo:** {data_b['tipo']}")
-    st.markdown(f"**Status:** {data_b['status']}")
+    st.markdown(f"**Status:** {rotulo_status(data_b['status'])}")
     st.markdown(f"**Órgão:** {data_b['orgao']}")
     st.markdown(f"**Ano:** {ano_exibicao(data_b['ano'])}")
     st.markdown(f"**Ementa:** {data_b['ementa']}")

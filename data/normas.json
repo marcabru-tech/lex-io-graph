@@ -715,54 +715,52 @@
       "sigla": "Magnifica Humanitas (Leão XIV, 15/05/2026; apresentada em 25/05/2026)",
       "tipo": "documento_internacional",
       "artigos_chave": [
-        "Cap. I — Doutrina Social da Igreja e IA",
-        "Cap. IV — Ecologia da comunicação e verdade",
-        "IA deve ser 'desarmada' de lógicas de dominação",
-        "Transparência nos algoritmos de seleção de conteúdo",
-        "Proibição de IA autônoma em decisões sobre vida humana"
+        "Tema (síntese): história da doutrina social da Igreja desde a Rerum Novarum (cap. 1)",
+        "Tema (síntese): princípios — dignidade humana, bem comum e subsidiariedade (cap. 2)",
+        "Tema (síntese): diagnóstico da IA e a proposta de \"desarmá-la\" (cap. 3; § 110)",
+        "Tema (síntese): verdade, ecologia digital e educação (cap. 4)",
+        "Tema (síntese): geopolítica, guerra e paz (cap. 5)"
       ],
-      "ementa": "Primeira encíclica integralmente dedicada à custódia da pessoa humana na era da IA (Inteligência Artificial). Leão XIV: 'A IA precisa ser desarmada, livre das lógicas que a transformam em instrumento de dominação, exclusão ou morte.' Pede regulamentação estatal da IA. Continuidade histórica: Leão XIII/Rerum Novarum (1891) → questão social da Revolução Industrial; Leão XIV/Magnifica Humanitas (2026) → questão social da IA. Lançada com presença de Chris Olah, cofundador da Anthropic.",
-      "status": "vigente",
+      "ementa": "Carta encíclica de Leão XIV sobre a salvaguarda da pessoa humana na era da IA (Inteligência Artificial), a primeira encíclica do seu pontificado. Propõe \"desarmar\" a IA, no sentido de romper a equivalência entre poder técnico e direito de governar (paráfrase do § 110). Retoma a linha de Leão XIII, autor da Rerum Novarum (1891), que tratou da questão social da Revolução Industrial. Referência ética, sem força jurídica no direito brasileiro.",
+      "status": "referencia_etica",
       "temas": [
-        "ia",
-        "dados_pessoais",
-        "internet"
+        "ia"
       ],
       "orgao": "Santa Sé / Vaticano",
       "ano": 2026,
-      "historia": "Apresentada em 25/05/2026 na Sala Nova do Sínodo, no Vaticano. Papa Leão XIV (primeiro papa norte-americano, eleito maio/2025) escolheu o nome Leão XIV pela continuidade com Leão XIII, autor da Rerum Novarum (1891) — que enfrentou os dilemas sociais da Revolução Industrial. O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic. Convergência histórica: na mesma semana de maio/2026, o Vaticano, o STF e o Executivo brasileiro convergiram independentemente no mesmo campo normativo sobre IA e plataformas digitais.",
-      "direito_comparado": "A encíclica dialoga com o EU AI Act (União Europeia, 2024) no princípio da dignidade humana como limite intransponível da IA. O Vaticano assinou o Rome Call for AI Ethics (2020) com Microsoft e IBM — antecipou o EU AI Act. Abordagem glocal (global + local, Robertson, 1990s): documento universal com impacto direto no PL 2.338/2023 (Marco Legal da IA — Projeto de Lei) brasileiro, na NR-1 (riscos psicossociais relacionados ao trabalho) e no debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026).",
+      "historia": "Assinada em 15/05/2026 e apresentada em 25/05/2026 no Vaticano. Leão XIV (Robert Francis Prevost), primeiro papa norte-americano, eleito em maio de 2025, associou a escolha do nome a Leão XIII e à Rerum Novarum. Convergência temática: os Decretos 12.975 e 12.976, de 20/05/2026, e a encíclica, de maio de 2026, trataram de forma independente de temas próximos (IA, plataformas digitais e proteção da pessoa).",
+      "direito_comparado": "Leitura do Lexiograph: a encíclica dialoga com o EU AI Act (União Europeia, 2024) ao tratar a dignidade humana como limite da IA. O Rome Call for AI Ethics (2020) foi promovido pela Pontifícia Academia para a Vida e assinado também por Microsoft e IBM. Abordagem glocal (global + local, Robertson, 1990s): convergência temática com o PL 2.338/2023 (Marco Legal da IA — Projeto de Lei), com a NR-1 (riscos psicossociais relacionados ao trabalho) e com o debate sobre responsabilidade de plataformas (Decretos 12.975 e 12.976/2026), sem relação causal demonstrada.",
       "autores": [
         {
           "nome": "Papa Leão XIV (Robert Francis Prevost)",
           "datas": "1955–",
           "obra": "Magnifica Humanitas, 2026",
-          "contribuicao": "Primeira encíclica papal inteiramente dedicada à IA — posiciona a Igreja Católica como ator normativo global no debate sobre regulação de tecnologia"
+          "contribuicao": "Primeira encíclica do pontificado, dedicada à salvaguarda da pessoa humana na era da IA"
         },
         {
           "nome": "Papa Leão XIII (Vincenzo Pecci)",
           "datas": "1810–1903",
           "obra": "Rerum Novarum, 1891",
-          "contribuicao": "Antecedente histórico direto — enfrentou os dilemas sociais da Revolução Industrial; inspirou o nome e a abordagem de Leão XIV sobre a IA"
+          "contribuicao": "Antecedente histórico: a Rerum Novarum enfrentou os dilemas sociais da Revolução Industrial; Leão XIV associou a ela a escolha do seu nome"
         },
         {
           "nome": "John Finnis",
           "datas": "1940–",
           "obra": "Lei Natural e Direitos Naturais (Natural Law and Natural Rights), 1980",
-          "contribuicao": "Fundamentação jusnaturalista sem teologia — a dignidade humana como limite da IA é argumento de razão prática, acessível a crentes e não-crentes; base filosófica da encíclica"
+          "contribuicao": "Leitura do Lexiograph, não fonte declarada da encíclica: a fundamentação jusnaturalista sem teologia ajuda a ler a dignidade humana como limite da IA como argumento de razão prática"
         }
       ],
       "latim": [
         {
           "original": "Humanitas",
           "traducao_literal": "Humanidade / Condição humana",
-          "traducao_juridica": "Conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e excelência humanas — a Magnifica Humanitas afirma que a IA deve servir à humanitas, nunca subjugá-la",
+          "traducao_juridica": "Conceito romano (Cícero, 106–43 a.C.) de cultivo da dignidade e da excelência humanas. Leitura do Lexiograph: a encíclica pede que a IA sirva à pessoa humana, nunca a subjugue",
           "contexto_romano": "Cícero, De Officiis (44 a.C.) — humanitas como fundamento ético da vida pública; incorporado ao magistério social católico"
         },
         {
           "original": "Lex iniusta non est lex",
           "traducao_literal": "A lei injusta não é lei",
-          "traducao_juridica": "São Tomás de Aquino (1225–1274) — a IA que viola a dignidade humana não pode ser considerada tecnologia legítima; argumento central da encíclica",
+          "traducao_juridica": "Formulação associada a Agostinho e a Tomás de Aquino. Leitura do Lexiograph, não argumento declarado da encíclica: tecnologia que viola a dignidade humana perde legitimidade",
           "contexto_romano": "Agostinho de Hipona (354–430 d.C.) → São Tomás — fundamento do jusnaturalismo católico"
         }
       ],
