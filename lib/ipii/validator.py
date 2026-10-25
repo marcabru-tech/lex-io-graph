@@ -130,8 +130,10 @@ def validar_arestas(sugeridas: list, existentes: list, excluidas: frozenset = fr
 
 
 def filtrar_por_tier(novas: list, tier_max: int = 3) -> list:
-    """Filtra novas arestas por tier (1 = mais forte)."""
-    return [n for n in novas if n.get("tier", 5) <= tier_max]
+    """Filtra novas arestas por tier (1 = mais forte). Tier 0 ("irrelevante")
+    ou ausente/inválido nunca passa (A6-c)."""
+    return [n for n in novas
+            if type(n.get("tier")) is int and 1 <= n["tier"] <= tier_max]
 
 
 def formatar_para_grafo(aresta_sugerida: dict, curador: str = "") -> dict:

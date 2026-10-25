@@ -11,12 +11,13 @@ import json
 from html import escape
 from pathlib import Path
 
+# Faixas iguais às de lib/ipii/matcher.py (THRESHOLD_* e cortes 0.65 e 0.50).
 TIER_LABELS = {
     1: ("tier-1", "TIER 1 — FORTE (≥ 0.75)"),
-    2: ("tier-2", "TIER 2 — FORTE (0.65–0.74)"),
+    2: ("tier-2", "TIER 2 — MODERADA (0.65–0.74)"),
     3: ("tier-3", "TIER 3 — MODERADA (0.55–0.64)"),
-    4: ("tier-3", "TIER 4 — MODERADA (0.45–0.54)"),
-    5: ("tier-3", "TIER 5 — FRACA (0.40–0.44)"),
+    4: ("tier-3", "TIER 4 — FRACA (0.50–0.54)"),
+    5: ("tier-3", "TIER 5 — FRACA (0.40–0.49)"),
 }
 TIPO_LABELS = {
     "hierarquia": "Hierarquia normativa",
@@ -65,10 +66,20 @@ def so_objetos(valor) -> list:
 
 
 def filtrar_por_tier(novas, tier_max: int) -> list:
-    """Arestas novas até o tier escolhido, ignorando entradas que não são objetos."""
+    """Arestas novas até o tier escolhido, ignorando entradas que não são objetos.
+
+    Tier 0 é a decisão do motor de que o par é "irrelevante": não aparece (A6-c).
+    Outros valores malformados continuam exibidos como tier 5.
+    """
     if not isinstance(novas, list):
         return []
-    return [n for n in novas if isinstance(n, dict) and tier_valido(n.get("tier", 5)) <= tier_max]
+    return [n for n in novas if isinstance(n, dict) and not _irrelevante(n)
+            and tier_valido(n.get("tier", 5)) <= tier_max]
+
+
+def _irrelevante(aresta: dict) -> bool:
+    tier = aresta.get("tier")
+    return (type(tier) is int and tier == 0) or aresta.get("classificacao") == "irrelevante"
 
 
 def _lista(valores) -> str:

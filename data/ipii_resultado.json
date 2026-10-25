@@ -405,8 +405,8 @@
       "source": "lgpd",
       "target": "anpd",
       "score": 0.4,
-      "classificacao": "irrelevante",
-      "tier": 0,
+      "classificacao": "fraca",
+      "tier": 5,
       "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 0.167,
@@ -1365,7 +1365,7 @@
     }
   ],
   "metadata": {
-    "gerado_em": "2026-10-25T10:54:43.816599",
+    "gerado_em": "2026-10-25T11:59:05.458721",
     "threshold": 0.4,
     "tier_filtro": 5,
     "status_excluidos": [
