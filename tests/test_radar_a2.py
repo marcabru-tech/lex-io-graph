@@ -39,7 +39,8 @@ class TestCasosMedidos(unittest.TestCase):
                             ("minerais_criticos", "PL 1984/2026"), ("ia", "PL 5349/2026"),
                             ("dados", "PL 5498/2026")):
             grupo, _ = _cartao(tema, sigla)
-            self.assertIsNotNone(grupo, sigla)  # continua acessível (principal ou conferir)
+            esperado = "principal" if sigla == "PLP 74/2026" else "conferir"  # medido no recorte
+            self.assertEqual(grupo, esperado, sigla)  # acessível, no grupo medido
 
     def test_proposicao_nas_duas_casas_vira_um_cartao_com_as_duas_fontes(self):
         # PL 278/2026: mesma ementa no Senado e na Câmara -> um cartão, duas fontes.

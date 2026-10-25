@@ -1,4 +1,4 @@
-"""PR 7b: mesmos critérios editoriais da PR 7 nos ensaios e no Repositório."""
+"""PR #60: mesmos critérios editoriais da PR #59 nos ensaios e no Repositório."""
 import ast
 import unittest
 from pathlib import Path

@@ -480,7 +480,8 @@ def render_disclaimer_rodape():
     st.caption(
         "⚠️ Triagem informativa, não é certificação de conformidade nem parecer jurídico. "
         "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus "
-        "curado, considerando só os temas que o questionário consegue avaliar (indicador "
+        "curado, considerando só os temas que o questionário consegue avaliar e que alguma "
+        "norma pontuada do corpus aborda (indicador "
         "heurístico); não medem risco jurídico nem obrigação aplicável. "
         f"Gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M')}"
     )
@@ -772,7 +773,7 @@ def render_radar(radar: dict):
     st.caption(
         "Triagem informativa: os percentuais medem a interseção temática entre o seu perfil "
         "e cada norma do corpus curado, considerando só os temas que este questionário "
-        "consegue avaliar. Não confirmam conformidade ou desconformidade nem "
+        "consegue avaliar e que alguma norma pontuada do corpus aborda. Não confirmam conformidade ou desconformidade nem "
         "substituem parecer jurídico."
     )
 
@@ -824,9 +825,11 @@ def render_radar(radar: dict):
                 if norma["artigos_chave"]:
                     st.markdown(f"**Artigos-chave:** {', '.join(norma['artigos_chave'][:5])}")
                 if norma.get("temas_fora_do_questionario"):
+                    # Base constitucional não exibe percentual (A6-g): a legenda não o cita.
                     st.caption(
                         f"{norma['temas_fora_do_questionario']} tema(s) desta norma não são "
-                        "avaliados por este questionário e ficaram fora do percentual."
+                        "avaliados por este questionário"
+                        + ("." if norma.get("base_constitucional") else " e ficaram fora do percentual.")
                     )
 
     if radar.get("referencias"):
@@ -863,7 +866,8 @@ def render_radar(radar: dict):
 AVISO_TRIAGEM_HTML = (
     "<strong>Triagem informativa — não é certificação de conformidade.</strong> "
     "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado, "
-    "considerando só os temas que o questionário consegue avaliar. "
+    "considerando só os temas que o questionário consegue avaliar e que alguma norma pontuada "
+    "do corpus aborda. "
     "Os indicadores não confirmam conformidade ou desconformidade, não garantem a identificação "
     "de todas as obrigações aplicáveis e não constituem auditoria, certificação ou parecer jurídico. "
     "Consulte os textos oficiais e submeta decisões relevantes a profissional habilitado."

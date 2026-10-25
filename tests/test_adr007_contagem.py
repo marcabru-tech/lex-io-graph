@@ -17,9 +17,9 @@ class TestContagemDoAdr007(unittest.TestCase):
 
     def test_ids_e_estados_declarados_batem_com_o_corpus(self):
         bloco = ADR.split("## Atualização")[-1]
-        for r in REGISTROS:
-            self.assertIn(f"`{r['id']}`", bloco, r["id"])
-            self.assertIn(f"`{r['estado_verificacao']}`", bloco, r["id"])
+        # Par a par: cada id com o próprio estado entre parênteses (A6-g).
+        declarados = dict(re.findall(r"`(\w+)`\s*\(`(\w+)`\)", " ".join(bloco.split())))
+        self.assertEqual(declarados, {r["id"]: r["estado_verificacao"] for r in REGISTROS})
         self.assertFalse(any(r["estado_verificacao"] == "verificado" for r in REGISTROS))
         self.assertIn("nenhum", bloco)
 
