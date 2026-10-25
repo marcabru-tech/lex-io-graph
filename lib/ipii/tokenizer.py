@@ -127,7 +127,7 @@ def _extrair_jurisdicoes(norma: dict) -> list:
 
     mapa = {
         "UE": ["gdpr", "dsa", "ai act", "eu ai act", "união europeia", "europeu"],
-        "EUA": ["ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano"],
+        "EUA": ["eua", "ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano"],
         "Alemanha": ["bgb", "hgb", "alemanha", "alemão"],
         "França": ["code civil", "frança", "francês", "napoleônico"],
         "Itália": ["codice civile", "itália", "italiano"],

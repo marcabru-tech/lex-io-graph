@@ -99,6 +99,10 @@ class TestEtapa4Jurisdicao(unittest.TestCase):
         self.assertIn("UE", self._jur("O DSA (Digital Services Act) de 2022."))
         self.assertIn("EUA", self._jur("Análoga à Section 230 dos Estados Unidos."))
 
+    def test_sigla_eua(self):
+        self.assertIn("EUA", self._jur("Executive Order on AI — EUA (2023)."))
+        self.assertNotIn("EUA", self._jur("Uma eutanásia e a teuar não são siglas."))
+
     def test_negacao_explicita_nao_conta(self):
         self.assertNotIn("UE", self._jur("A Suíça negocia acordos próprios, distintos dos da União Europeia."))
         self.assertNotIn("EUA", self._jur("Modelo diferente do adotado nos Estados Unidos."))
