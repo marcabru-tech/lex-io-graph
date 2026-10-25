@@ -32,7 +32,8 @@ STOPWORDS = {
 }
 
 
-_RE_LEI = re.compile(r"\bLei\s*(?:n[º°o.]\s*)?(\d[\d.]*)\s*/\s*(\d{4})\b", re.IGNORECASE)
+# "nº", "n°", "no", "n.º", "n.°", "n." (A6-f: antes, "n.º" não casava).
+_RE_LEI = re.compile(r"\bLei\s*(?:n\.?\s*[º°o]?\.?\s*)?(\d[\d.]*)\s*/\s*(\d{4})\b", re.IGNORECASE)
 
 
 def _numeros_de_lei(texto: str) -> set:
@@ -41,7 +42,11 @@ def _numeros_de_lei(texto: str) -> set:
 
 
 def tokenizar_norma(norma: dict) -> dict:
-    """Converte nó do normas.json em token normativo 5D (GuruMatrix)."""
+    """Converte nó do normas.json em token normativo 5D (GuruMatrix).
+
+    Campo presente com valor nulo vale como ausente (A6-f): texto vira "",
+    lista vira [].
+    """
     return {
         "id": norma["id"],
 
@@ -49,17 +54,17 @@ def tokenizar_norma(norma: dict) -> dict:
         "ontologia": norma.get("tipo", "indefinido"),
 
         # (j) Campo do Conhecimento
-        "temas": norma.get("temas", []),
+        "temas": norma.get("temas") or [],
 
         # (k) Nível Hermenêutico
         "hermeneutica": {
             "autores": [
-                {"nome": a.get("nome", ""), "obra": a.get("obra", "")}
-                for a in norma.get("autores", [])
+                {"nome": a.get("nome") or "", "obra": a.get("obra") or ""}
+                for a in _lista(norma, "autores")
             ],
             "brocardos": [
-                lat.get("original", "")
-                for lat in norma.get("latim", [])
+                lat.get("original") or ""
+                for lat in _lista(norma, "latim")
             ],
             "correntes": _extrair_correntes(norma),
         },
@@ -75,27 +80,37 @@ def tokenizar_norma(norma: dict) -> dict:
         "jurisdicao": _extrair_jurisdicoes(norma),
 
         # Metadados auxiliares
-        "artigos_chave": norma.get("artigos_chave", []),
-        "orgao": norma.get("orgao", ""),
-        "ementa_tokens": _tokenizar_ementa(norma.get("ementa", "")),
+        "artigos_chave": norma.get("artigos_chave") or [],
+        "orgao": norma.get("orgao") or "",
+        "ementa_tokens": _tokenizar_ementa(_texto(norma, "ementa")),
 
         # Evidência textual para "regulamenta" (A4): o número da própria lei,
         # tirado da sigla, e as leis que a norma cita na ementa ou na história.
-        "numero_lei": (sorted(_numeros_de_lei(norma.get("sigla", "")))[:1] or [None])[0]
+        "numero_lei": (sorted(_numeros_de_lei(_texto(norma, "sigla")))[:1] or [None])[0]
                       if norma.get("tipo") == "lei" else None,
-        "leis_citadas": sorted(_numeros_de_lei(" ".join([norma.get("ementa", ""), norma.get("historia", "")]))),
+        "leis_citadas": sorted(_numeros_de_lei(" ".join([_texto(norma, "ementa"), _texto(norma, "historia")]))),
     }
+
+
+def _texto(norma: dict, campo: str) -> str:
+    valor = norma.get(campo)
+    return valor if isinstance(valor, str) else ""
+
+
+def _lista(norma: dict, campo: str) -> list:
+    valor = norma.get(campo)
+    return [x for x in valor if isinstance(x, dict)] if isinstance(valor, list) else []
 
 
 def _extrair_correntes(norma: dict) -> list:
     """Extrai correntes hermenêuticas dos autores e da ementa."""
     correntes = []
     textos = [
-        norma.get("ementa", ""),
-        norma.get("historia", ""),
+        _texto(norma, "ementa"),
+        _texto(norma, "historia"),
     ] + [
-        a.get("contribuicao", "")
-        for a in norma.get("autores", [])
+        a.get("contribuicao") or ""
+        for a in _lista(norma, "autores")
     ]
     texto = " ".join(textos).lower()
 
@@ -121,20 +136,24 @@ def _extrair_correntes(norma: dict) -> list:
 def _extrair_jurisdicoes(norma: dict) -> list:
     """Extrai jurisdições mencionadas no direito comparado glocal."""
     texto = " ".join([
-        norma.get("direito_comparado", ""),
-        norma.get("historia", ""),
-        norma.get("ementa", ""),
+        _texto(norma, "direito_comparado"),
+        _texto(norma, "historia"),
+        _texto(norma, "ementa"),
     ]).lower()
 
+    # A6-f: a busca por palavra inteira (A4) deixou de casar o plural pela
+    # substring do singular ("americanos" contém "americano"). Os plurais
+    # entram explicitamente, só no masculino, como nos termos já listados.
     mapa = {
-        "UE": ["gdpr", "dsa", "ai act", "eu ai act", "união europeia", "europeu"],
-        "EUA": ["eua", "ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano"],
-        "Alemanha": ["bgb", "hgb", "alemanha", "alemão"],
-        "França": ["code civil", "frança", "francês", "napoleônico"],
-        "Itália": ["codice civile", "itália", "italiano"],
-        "China": ["china", "chinês", "regulamento chinês"],
+        "UE": ["gdpr", "dsa", "ai act", "eu ai act", "união europeia", "europeu", "europeus"],
+        "EUA": ["eua", "ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano",
+                "americanos"],
+        "Alemanha": ["bgb", "hgb", "alemanha", "alemão", "alemães"],
+        "França": ["code civil", "frança", "francês", "franceses", "napoleônico"],
+        "Itália": ["codice civile", "itália", "italiano", "italianos"],
+        "China": ["china", "chinês", "chineses", "regulamento chinês"],
         "UK": ["reino unido", "common law inglês", "magna carta"],
-        "Vaticano": ["vaticano", "encíclica", "leão xiv", "santa sé"],
+        "Vaticano": ["vaticano", "encíclica", "encíclicas", "leão xiv", "santa sé"],
         "ONU": ["onu", "nações unidas", "convenção da onu"],
     }
 
