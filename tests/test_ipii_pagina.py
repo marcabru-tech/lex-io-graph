@@ -72,11 +72,13 @@ if __name__ == "__main__":
 class TestTierEValoresMalformados(unittest.TestCase):
     def test_tier_invalido_nao_quebra_o_filtro(self):
         from lib.ipii_pagina import filtrar_por_tier, tier_valido
-        for ruim in ("x", None, [1], {"a": 1}, 0, 9, True, 2.7):
-            self.assertIn(tier_valido(ruim), range(1, 6), ruim)
-        novas = [{"tier": "x"}, {"tier": 1}, {"tier": [2]}, "não é objeto", {"tier": 3}]
-        self.assertEqual(len(filtrar_por_tier(novas, 5)), 4)
-        self.assertEqual(len(filtrar_por_tier(novas, 1)), 1)
+        for valido in (1, 2, 3, 4, 5):
+            self.assertEqual(tier_valido(valido), valido)
+        for ruim in ("2", "x", "", 2.7, 2.0, True, False, None, [1], {"a": 1}, 0, -1, 6, 9):
+            self.assertEqual(tier_valido(ruim), 5, repr(ruim))
+        novas = [{"tier": "x"}, {"tier": 1}, {"tier": [2]}, "não é objeto", {"tier": 3}, {"tier": "1"}]
+        self.assertEqual(len(filtrar_por_tier(novas, 5)), 5)
+        self.assertEqual(len(filtrar_por_tier(novas, 1)), 1)  # "1" (texto) não conta como tier 1
         self.assertEqual(filtrar_por_tier("não é lista", 5), [])
 
     def test_tipo_lista_ou_dict_nao_quebra(self):

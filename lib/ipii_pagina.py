@@ -42,14 +42,14 @@ def pct(valor) -> str:
 
 
 def tier_valido(valor) -> int:
-    """Tier inteiro de 1 a 5; qualquer outro valor (texto, lista, None) vira 5."""
-    if isinstance(valor, bool):
-        return 5
-    try:
-        t = int(valor)
-    except (TypeError, ValueError):
-        return 5
-    return t if 1 <= t <= 5 else 5
+    """Só um inteiro de 1 a 5 é aceito; qualquer outro valor vira 5.
+
+    Sem conversão: "2" (texto), 2.7 ou 2.0 (decimal), True (bool), lista,
+    dicionário e None não são tiers válidos.
+    """
+    if type(valor) is int and 1 <= valor <= 5:
+        return valor
+    return 5
 
 
 def rotulo_tipo(valor, padrao: str = "") -> str:
