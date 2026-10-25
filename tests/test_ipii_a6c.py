@@ -52,10 +52,11 @@ class TestFaixas(unittest.TestCase):
                 continue
             rotulo = TIER_LABELS[tier][1]
             self.assertIn(cls.upper(), rotulo, (score, rotulo))
-            nums = [float(x) for x in re.findall(r"\d\.\d\d", rotulo)]
+            nums = [float(x) for x in re.findall(r"\d\.\d{3}", rotulo)]
+            self.assertTrue(nums, f"faixa ausente no rótulo: {rotulo}")
             self.assertGreaterEqual(score, nums[0], rotulo)
             if len(nums) > 1:
-                self.assertLessEqual(score, nums[1] + 0.009, rotulo)
+                self.assertLessEqual(score, nums[1], rotulo)
 
 
 class TestFiltros(unittest.TestCase):
