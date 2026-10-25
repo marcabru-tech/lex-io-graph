@@ -150,7 +150,7 @@ PERFIL_TEMA_MAP = {
             "dados_pessoais", "remocao_conteudo",
         ],
         "Govtech / Órgão Público": [
-            "dados_pessoais", "transparencia", "governanca", "seguranca",
+            "dados_pessoais", "transparencia", "seguranca",
         ],
         "Mídia / Comunicação": [
             "liberdade_expressao", "moderacao_conteudo",
@@ -182,10 +182,10 @@ PERFIL_TEMA_MAP = {
             "inteligencia_artificial", "alto_risco",
             "transparencia_algoritmos", "decisao_automatizada",
             "auditoria_ia", "governanca_ia", "responsabilidade_ia",
-            "vies_algoritmico", "discriminacao_algoritmica",
+            "vies_algoritmico", "discriminacao_algoritmica", "etica_ia",
         ],
         "Não": [],
-        "Estou avaliando": ["inteligencia_artificial", "governanca_ia"],
+        "Estou avaliando": ["inteligencia_artificial", "governanca_ia", "etica_ia"],
     },
     "trata_dados": {
         "Sim — clientes": [
@@ -209,7 +209,7 @@ PERFIL_TEMA_MAP = {
             "plataformas", "responsabilidade_plataformas",
             "moderacao_conteudo", "remocao_conteudo",
             "guarda_logs", "dados_usuario", "dever_proativo",
-            "conteudo_ilicito",
+            "conteudo_ilicito", "deepfake", "violencia_genero",
         ],
         "Sim — site institucional": [
             "internet", "dados_pessoais", "consentimento",
@@ -218,11 +218,11 @@ PERFIL_TEMA_MAP = {
     },
     "porte": {
         "Startup / MEI": [],
-        "PME (10–250 funcionários)": ["governanca", "compliance"],
-        "Grande empresa (250+)": [
-            "governanca", "compliance", "relatorio_impacto", "dpo",
-        ],
-        "Órgão público": ["governanca", "compliance", "transparencia"],
+        # "governanca" e "compliance" saíram (25/10/2026): nenhuma norma nem
+        # ação usava essas tags, que só inflavam o perfil sem correspondência.
+        "PME (10–250 funcionários)": [],
+        "Grande empresa (250+)": ["relatorio_impacto", "dpo"],
+        "Órgão público": ["transparencia"],
     },
 }
 
@@ -392,12 +392,12 @@ ACOES_POR_TAG = {
     },
     "violencia_genero": {
         "prioridade": "critica",
-        "acao": "Implementar protocolo de remoção rápida para deepfakes e conteúdo íntimo",
-        "base": "Decreto 12.976/2026, arts. 4º a 8º e 12 (o PL 896/2023 é proposta em tramitação, não obrigação)",
+        "acao": "Verifique o enquadramento: o questionário não confirma se a aplicação intermedeia conteúdo gerado por terceiros nem identifica todas as suas funcionalidades de IA. Os deveres dos arts. 4º, 5º e 8º pressupõem intermediação de conteúdo de terceiros; os arts. 7º, 9º e 10 tratam de hipóteses específicas relacionadas a conteúdo íntimo e inteligência artificial. A aplicação de cada dispositivo depende das características do serviço. Deveres gerais: manter canal oficial de notificação que informe o Ligue 180 (art. 5º, § 1º); confirmar o recebimento, decidir e comunicar o fundamento e os meios de contestação ao notificante e, se houver remoção, a quem publicou (art. 6º); adotar medidas técnicas e proporcionais para reduzir o alcance de ataques coordenados contra mulheres, mesmo sem notificação (art. 8º). A falha sistêmica na indisponibilização gera responsabilização (art. 4º)",
+        "base": "Decreto 12.976/2026, arts. 4º, 5º, 6º e 8º (o PL 896/2023 é proposta em tramitação, não obrigação)",
     },
     "deepfake": {
         "prioridade": "critica",
-        "acao": "Conteúdo íntimo de terceiro divulgado sem autorização, inclusive o produzido ou manipulado por IA: indisponibilizar em até 2h após a notificação (art. 7º, § 1º; art. 3º, I). Até regulamentação pela autoridade competente, demais hipóteses de violência contra a mulher no ambiente digital: no prazo de 6h (art. 12, I) ou de 24h (art. 12, II), remover o conteúdo ou comunicar ao notificante o fundamento da manutenção e os meios de contestação. Aplicações que geram conteúdo por IA: vedada a geração ou modificação de conteúdo íntimo de terceiro (art. 9º) e exigidas salvaguardas para bloquear essas solicitações, conforme regulamento (art. 10)",
+        "acao": "Verifique o enquadramento: o questionário não confirma se a aplicação intermedeia conteúdo gerado por terceiros nem identifica todas as suas funcionalidades de IA. Os deveres dos arts. 4º, 5º e 8º pressupõem intermediação de conteúdo de terceiros; os arts. 7º, 9º e 10 tratam de hipóteses específicas relacionadas a conteúdo íntimo e inteligência artificial. A aplicação de cada dispositivo depende das características do serviço. Conteúdo íntimo de terceiro divulgado sem autorização, inclusive o produzido ou manipulado por IA: indisponibilizar em até 2h após a notificação (art. 7º, § 1º; art. 3º, I). Até regulamentação pela autoridade competente, demais casos de violência contra a mulher no ambiente digital: remover o conteúdo ou comunicar ao notificante o fundamento da manutenção e os meios de contestação em até 6h, quando o conteúdo for manifestamente ilegal (art. 12, I), ou em até 24h, nos demais casos (art. 12, II). Aplicações que geram conteúdo por IA: vedada a geração ou modificação de conteúdo íntimo de terceiro (art. 9º) e exigidas salvaguardas para bloquear essas solicitações, conforme regulamento (art. 10)",
         "base": "Decreto 12.976/2026, arts. 3º, I, 7º, 9º, 10 e 12",
     },
     "transferencia_internacional": {
@@ -444,7 +444,8 @@ def render_disclaimer_rodape():
     st.caption(
         "⚠️ Triagem informativa, não é certificação de conformidade nem parecer jurídico. "
         "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus "
-        "curado (indicador heurístico); não medem risco jurídico nem obrigação aplicável. "
+        "curado, considerando só os temas que o questionário consegue avaliar (indicador "
+        "heurístico); não medem risco jurídico nem obrigação aplicável. "
         f"Gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M')}"
     )
 
@@ -490,9 +491,36 @@ def _tags_norma(norma_id: str, norma: dict) -> set:
     return tags
 
 
+def _tags_observaveis() -> set:
+    """Temas que o questionário consegue avaliar (gerados por alguma resposta)."""
+    tags = set()
+    for respostas in PERFIL_TEMA_MAP.values():
+        for lista in respostas.values():
+            tags.update(lista)
+    return tags
+
+
+TAGS_OBSERVAVEIS = _tags_observaveis()
+
+# Fora do conjunto pontuado até decisão do mantenedor sobre a classificação
+# (25/10/2026). A encíclica é referência ética, e o quadro não pode
+# apresentá-la como norma vinculante só por pertinência temática à ética em
+# IA. Continua no corpus, no grafo e no repositório.
+FORA_DA_PONTUACAO = frozenset({"magnifica_humanitas"})
+
+
 def _score_norma(norma: dict, tags_perfil: set) -> float:
+    """Interseção temática entre o perfil e a norma.
+
+    Considera só os temas da norma que o questionário consegue avaliar
+    (TAGS_OBSERVAVEIS). Temas fora do questionário não entram na conta e são
+    informados à parte (ver gerar_radar), para não penalizar a norma em
+    silêncio nem sugerir uma avaliação que o questionário não faz.
+    """
     norma_id = norma["id"]
-    tags_norma = _tags_norma(norma_id, norma)
+    if norma_id in FORA_DA_PONTUACAO:
+        return 0.0
+    tags_norma = _tags_norma(norma_id, norma) & TAGS_OBSERVAVEIS
 
     if not tags_perfil or not tags_norma:
         return 0.0
@@ -567,6 +595,7 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
                 "score": score,
                 "pct": int(score * 100),
                 "tags_match": sorted(tags_match),
+                "temas_fora_do_questionario": len(_tags_norma(norma["id"], norma) - TAGS_OBSERVAVEIS),
                 "artigos_chave": norma.get("artigos_chave", []),
             })
 
@@ -632,7 +661,8 @@ def render_radar(radar: dict):
     st.markdown("### Seu Quadro de Conformidade")
     st.caption(
         "Triagem informativa: os percentuais medem a interseção temática entre o seu perfil "
-        "e cada norma do corpus curado. Não confirmam conformidade ou desconformidade nem "
+        "e cada norma do corpus curado, considerando só os temas que este questionário "
+        "consegue avaliar. Não confirmam conformidade ou desconformidade nem "
         "substituem parecer jurídico."
     )
 
@@ -672,6 +702,11 @@ def render_radar(radar: dict):
                     st.markdown(f"**Temas em comum:** {', '.join(norma['tags_match'][:8])}")
                 if norma["artigos_chave"]:
                     st.markdown(f"**Artigos-chave:** {', '.join(norma['artigos_chave'][:5])}")
+                if norma.get("temas_fora_do_questionario"):
+                    st.caption(
+                        f"{norma['temas_fora_do_questionario']} tema(s) desta norma não são "
+                        "avaliados por este questionário e ficaram fora do percentual."
+                    )
 
     if radar["arestas"]:
         st.markdown("#### Interseções regulatórias")
@@ -697,7 +732,8 @@ def render_radar(radar: dict):
 # Não interpolar aqui nenhum valor variável ou vindo do usuário; esses passam por _esc.
 AVISO_TRIAGEM_HTML = (
     "<strong>Triagem informativa — não é certificação de conformidade.</strong> "
-    "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado. "
+    "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado, "
+    "considerando só os temas que o questionário consegue avaliar. "
     "Os indicadores não confirmam conformidade ou desconformidade, não garantem a identificação "
     "de todas as obrigações aplicáveis e não constituem auditoria, certificação ou parecer jurídico. "
     "Consulte os textos oficiais e submeta decisões relevantes a profissional habilitado."
