@@ -112,7 +112,7 @@ class TestNovidadesComNovaIdentidade(unittest.TestCase):
         self.assertEqual(len(nov), 1)
         self.assertEqual(nov[0]["identidades_novas"], [["PL 9/2026", "camara"]])
         self.assertEqual(nov[0]["fonte"], "Câmara dos Deputados")
-        self.assertTrue(nov[0]["url"].startswith("https://www.camara.leg.br"))
+        self.assertEqual(nov[0]["url"], "https://www.camara.leg.br/x")  # link do registro da Câmara
         # Na coleta seguinte, nada se repete.
         self.assertEqual(updater.detectar_novidades(depois, depois), [])
 
