@@ -31,6 +31,14 @@ STOPWORDS = {
 }
 
 
+_RE_LEI = re.compile(r"\bLei\s*(?:n[º°o.]\s*)?(\d[\d.]*)\s*/\s*(\d{4})\b", re.IGNORECASE)
+
+
+def _numeros_de_lei(texto: str) -> set:
+    """'Lei 12.965/2014' e 'Lei nº 12965/2014' -> {'12965/2014'}."""
+    return {f"{num.replace('.', '').lstrip('0')}/{ano}" for num, ano in _RE_LEI.findall(texto or "")}
+
+
 def tokenizar_norma(norma: dict) -> dict:
     """Converte nó do normas.json em token normativo 5D (GuruMatrix)."""
     return {
@@ -69,6 +77,12 @@ def tokenizar_norma(norma: dict) -> dict:
         "artigos_chave": norma.get("artigos_chave", []),
         "orgao": norma.get("orgao", ""),
         "ementa_tokens": _tokenizar_ementa(norma.get("ementa", "")),
+
+        # Evidência textual para "regulamenta" (A4): o número da própria lei,
+        # tirado da sigla, e as leis que a norma cita na ementa ou na história.
+        "numero_lei": (sorted(_numeros_de_lei(norma.get("sigla", "")))[:1] or [None])[0]
+                      if norma.get("tipo") == "lei" else None,
+        "leis_citadas": sorted(_numeros_de_lei(" ".join([norma.get("ementa", ""), norma.get("historia", "")]))),
     }
 
 

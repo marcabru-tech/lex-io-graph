@@ -54,5 +54,39 @@ class TestEtapa2Interpreta(unittest.TestCase):
             self.assertNotEqual(_sugerir_tipo(ZERO, _tok("jurisprudencia"), _tok(outro), set()), "interpreta", outro)
 
 
+
+class TestEtapa3RegulamentaComEvidencia(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from lib.ipii.tokenizer import tokenizar_corpus
+        normas = json.loads((RAIZ / "data" / "normas.json").read_text(encoding="utf-8"))["nodes"]
+        cls.tok = tokenizar_corpus(normas)
+
+    def _tipo(self, a, b):
+        return _sugerir_tipo(ZERO, self.tok[a], self.tok[b], set())
+
+    def test_controles_positivos_com_a_lei_citada(self):
+        # Decreto 13.118 "Regulamenta a Lei 15.506/2026"; Decreto 12.975 cita a Lei 12.965/2014
+        self.assertEqual(self._tipo("lei_15506_2026", "decreto_13118_2026"), "regulamenta")
+        self.assertEqual(self._tipo("decreto_12975_2026", "marco_civil"), "regulamenta")
+
+    def test_casos_sem_evidencia_nao_viram_regulamenta(self):
+        self.assertNotEqual(self._tipo("lei_15504_2026", "decreto_13118_2026"), "regulamenta")
+        self.assertNotEqual(self._tipo("eca_digital", "decreto_12975_2026"), "regulamenta")
+
+    def test_numero_de_outra_lei_no_decreto_nao_basta(self):
+        decreto = {"ontologia": "decreto", "leis_citadas": ["12965/2014"]}
+        lei = {"ontologia": "lei", "numero_lei": "15504/2026"}
+        self.assertNotEqual(_sugerir_tipo(ZERO, decreto, lei, set()), "regulamenta")
+        lei_certa = {"ontologia": "lei", "numero_lei": "12965/2014"}
+        self.assertEqual(_sugerir_tipo(ZERO, decreto, lei_certa, set()), "regulamenta")
+
+    def test_extracao_de_numero_de_lei(self):
+        from lib.ipii.tokenizer import _numeros_de_lei
+        self.assertEqual(_numeros_de_lei("altera a Lei nº 12.965/2014 e a Lei 8.069/1990"),
+                         {"12965/2014", "8069/1990"})
+        self.assertEqual(_numeros_de_lei("Decreto 12.975/2026"), set())
+
+
 if __name__ == "__main__":
     unittest.main()

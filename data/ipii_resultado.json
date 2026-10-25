@@ -6,8 +6,8 @@
   "faltando": 33,
   "precisao": 0.412,
   "cobertura": 0.298,
-  "acertos_tipo": 8,
-  "precisao_tipo": 0.571,
+  "acertos_tipo": 9,
+  "precisao_tipo": 0.643,
   "detalhe_confirmadas": [
     {
       "source": "lei_15506_2026",
@@ -227,7 +227,7 @@
       "score": 0.465,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.7,
@@ -245,7 +245,7 @@
       ],
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
-      "match_tipo": false
+      "match_tipo": true
     },
     {
       "source": "marco_civil",
@@ -332,7 +332,7 @@
       "score": 0.415,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.7,
@@ -409,7 +409,7 @@
       "score": 0.555,
       "classificacao": "moderada",
       "tier": 3,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.7,
@@ -482,7 +482,7 @@
       "score": 0.505,
       "classificacao": "fraca",
       "tier": 4,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "complementaridade",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.7,
@@ -619,7 +619,7 @@
       "score": 0.432,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 0.333,
         "hierarquia": 0.7,
@@ -786,7 +786,7 @@
       "score": 0.412,
       "classificacao": "fraca",
       "tier": 5,
-      "tipo_sugerido": "regulamenta",
+      "tipo_sugerido": "intersecao",
       "scores_parciais": {
         "temas": 0.667,
         "hierarquia": 0.7,
@@ -1296,7 +1296,7 @@
     }
   ],
   "metadata": {
-    "gerado_em": "2026-10-25T10:52:35.730551",
+    "gerado_em": "2026-10-25T10:53:13.243751",
     "threshold": 0.4,
     "tier_filtro": 5,
     "status_excluidos": [

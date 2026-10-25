@@ -176,10 +176,13 @@ def _sugerir_tipo(
     if ont_a == "constituicao" or ont_b == "constituicao":
         return "hierarquia"
 
-    # Regulamenta: decreto regulamenta lei
-    if (ont_a == "decreto" and ont_b == "lei") or \
-       (ont_b == "decreto" and ont_a == "lei"):
-        return "regulamenta"
+    # Regulamenta: só com evidência textual de que o decreto se refere à lei
+    # do par (o número da lei aparece na ementa ou na história do decreto).
+    # Sem evidência, o par segue a regra geral abaixo (A4).
+    if {ont_a, ont_b} == {"decreto", "lei"}:
+        decreto, lei = (token_a, token_b) if ont_a == "decreto" else (token_b, token_a)
+        if lei.get("numero_lei") and lei["numero_lei"] in decreto.get("leis_citadas", []):
+            return "regulamenta"
 
     # ANTINOMIA DESATIVADA (ago/2026): a regra anterior inferia conflito
     # normativo a partir de "mesmo nivel hierarquico + temas sobrepostos".
