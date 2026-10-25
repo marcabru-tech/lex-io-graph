@@ -92,6 +92,15 @@ class TestAgregacaoDeTermos(unittest.TestCase):
         self.assertTrue(itens[0]["termo_na_ementa"])
 
 
+class TestPrecisaoTipoSemConfirmadas(unittest.TestCase):
+    def test_zero_confirmadas_da_zero_sem_excecao(self):
+        from lib.ipii.validator import validar_arestas
+        r = validar_arestas([{"source": "a", "target": "b", "score": 0.5, "tipo_sugerido": "intersecao",
+                              "classificacao": "fraca", "tier": 4}],
+                            [{"source": "c", "target": "d", "tipo": "hierarquia"}])
+        self.assertEqual((r["confirmadas"], r["acertos_tipo"], r["precisao_tipo"]), (0, 0, 0))
+
+
 class TestVerificacaoGoogle(unittest.TestCase):
     def test_arquivo_do_search_console_continua_publicado(self):
         # Verifica a propriedade https://hubstry.dev/lex-io-graph/ no Google Search Console.

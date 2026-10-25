@@ -26,7 +26,11 @@ class TestPrecisaoDeTipo(unittest.TestCase):
         r = json.loads((RAIZ / "data" / "ipii_resultado.json").read_text(encoding="utf-8"))
         self.assertIn("precisao_tipo", r)
         self.assertEqual(r["acertos_tipo"], sum(1 for c in r["detalhe_confirmadas"] if c["match_tipo"]))
-        self.assertEqual(r["precisao_tipo"], round(r["acertos_tipo"] / len(r["detalhe_confirmadas"]), 3))
+        confirmadas = len(r["detalhe_confirmadas"])
+        # Mesma regra do validator: sem confirmadas, precisao_tipo é 0 (sem divisão por zero).
+        esperado = round(r["acertos_tipo"] / confirmadas, 3) if confirmadas else 0
+        self.assertEqual(r["precisao_tipo"], esperado)
+        self.assertEqual(r["confirmadas"], confirmadas)
 
 
 
