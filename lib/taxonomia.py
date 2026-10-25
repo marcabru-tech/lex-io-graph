@@ -40,17 +40,40 @@ def normas_relacionadas(tema: str, normas: list[dict]) -> list[dict]:
 # ---- Proposicoes que ja estao no corpus ----
 import re as _re
 
-_RE_PROP = _re.compile(r"\b(PLP|PL|PEC|MPV|MP|PDL)\s*(?:n[º°o.]\s*)?([\d.]+)\s*/\s*(\d{2,4})")
+# O ano é capturado inteiro (\d+) e validado depois: só 2 ou 4 dígitos valem.
+_RE_PROP = _re.compile(r"\b(PLP|PL|PEC|MPV|MP|PDL)\s*(?:n[º°o.]\s*)?([\d.]+)\s*/\s*(\d+)")
 
 
-def chave_proposicao(texto: str):
-    """'PL 2.780/2024', 'PL 2780/2024' e 'MP 1.317/2025' -> chaves normalizadas."""
+def _ano_completo(ano: str, pivo: int) -> str | None:
+    """'2024' -> '2024'; '23' -> '2023'; '98' -> '1998'; 3 ou 5+ dígitos -> None.
+
+    Ano de 2 dígitos vai para o século atual se não passar do ano corrente
+    (pivo = dois últimos dígitos do ano corrente); senão, para o século XX.
+    Nunca concatena "20" a um ano já longo (antes: '205' virava '20205').
+    """
+    if len(ano) == 4:
+        return ano
+    if len(ano) == 2:
+        return ("20" if int(ano) <= pivo else "19") + ano
+    return None
+
+
+def chave_proposicao(texto: str, pivo: int | None = None):
+    """'PL 2.780/2024', 'PL 2780/2024' e 'MP 1.317/2025' -> chaves normalizadas.
+
+    Entradas com ano inválido (3 dígitos, 5 ou mais) não geram chave.
+    """
+    if pivo is None:
+        from datetime import date
+        pivo = date.today().year % 100
     out = []
     for tipo, num, ano in _RE_PROP.findall(texto or ""):
+        ano_ok = _ano_completo(ano, pivo)
+        if ano_ok is None:
+            continue
         tipo = "MPV" if tipo == "MP" else tipo
         num = num.replace(".", "").lstrip("0") or "0"
-        ano = ano if len(ano) == 4 else "20" + ano
-        out.append(f"{tipo} {num}/{ano}")
+        out.append(f"{tipo} {num}/{ano_ok}")
     return out
 
 
