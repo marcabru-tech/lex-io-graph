@@ -11,7 +11,9 @@ from lib.radar import consolidar_tema, resumo_consolidacao, termo_na_ementa, ter
 from lib.radar_cartao import html_cartao
 
 RAIZ = Path(__file__).resolve().parent.parent
-SNAPSHOT = json.loads((RAIZ / "data" / "radar_legislativo.json").read_text(encoding="utf-8"))
+# Casos medidos da A2: recorte congelado da coleta de 23/10/2026 (anterior à A2).
+# Não lê data/radar_legislativo.json, que muda a cada coleta semanal.
+SNAPSHOT = json.loads((RAIZ / "tests" / "fixtures" / "radar_snapshot_pre_a2.json").read_text(encoding="utf-8"))
 
 
 def _cartao(tema: str, sigla: str):
@@ -67,7 +69,7 @@ class TestCasosMedidos(unittest.TestCase):
         for tema_data in temas.values():
             for fonte in ("senado", "camara", "lexml"):
                 for item in tema_data.get(fonte, []):
-                    self.assertNotIn("termo_na_ementa", item)  # snapshot atual é anterior à A2
+                    self.assertNotIn("termo_na_ementa", item)  # recorte congelado, anterior à A2
         total_antes = sum(len(t.get(f, [])) for t in temas.values() for f in ("senado", "camara", "lexml"))
         r = resumo_consolidacao(SNAPSHOT)
         self.assertEqual(r["itens_coletados"], total_antes)  # nada apagado
@@ -139,6 +141,29 @@ class TestRegras(unittest.TestCase):
         tema = copy.deepcopy(SNAPSHOT["temas"]["infraestrutura_digital"])
         consolidar_tema(tema)
         self.assertEqual(tema, SNAPSHOT["temas"]["infraestrutura_digital"])
+
+
+class TestRetratoVivo(unittest.TestCase):
+    """Só invariantes: valem antes e depois de qualquer coleta semanal."""
+
+    def test_consolidacao_preserva_todos_os_itens(self):
+        vivo = json.loads((RAIZ / "data" / "radar_legislativo.json").read_text(encoding="utf-8"))
+        total = sum(len(t.get(f, [])) for t in vivo.get("temas", {}).values()
+                    for f in ("senado", "camara", "lexml"))
+        self.assertEqual(resumo_consolidacao(vivo)["itens_coletados"], total)
+
+    def test_retrato_gravado_depois_da_a2_continua_legivel(self):
+        # Simula a coleta de segunda-feira: o campo termo_na_ementa passa a vir gravado.
+        depois = copy.deepcopy(SNAPSHOT)
+        for tema, dados in depois["temas"].items():
+            for item in dados.get("camara", []):
+                item["termo_na_ementa"] = termo_na_ementa(item)
+        for tema in SNAPSHOT["temas"]:
+            antes = consolidar_tema(SNAPSHOT["temas"][tema], tema)
+            gravado = consolidar_tema(depois["temas"][tema], tema)
+            for grupo in ("principal", "conferir"):
+                self.assertEqual([c["chave"] for c in antes[grupo]],
+                                 [c["chave"] for c in gravado[grupo]], (tema, grupo))
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@
 # Licença: PolyForm Noncommercial 1.0.0 (ver lib/ipii/LICENSE).
 import streamlit as st
 import json
+import os
 from html import escape
 from pathlib import Path
 from datetime import datetime
@@ -82,7 +83,8 @@ Nenhuma aresta é adicionada automaticamente ao grafo.
 
 # ---- Carregar resultado ----
 RAIZ = Path(__file__).resolve().parent.parent
-RESULTADO_PATH = RAIZ / "data" / "ipii_resultado.json"
+# LEXIOGRAPH_IPII_RESULTADO só é usado pelos testes, para não tocar no arquivo real.
+RESULTADO_PATH = Path(os.environ.get("LEXIOGRAPH_IPII_RESULTADO") or RAIZ / "data" / "ipii_resultado.json")
 
 @st.cache_data(ttl=300)
 def carregar_resultado() -> dict:
