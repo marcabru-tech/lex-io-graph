@@ -70,8 +70,10 @@ class TestFiltros(unittest.TestCase):
         tiers = [n.get("tier") for n in filtrar_pagina(self.NOVAS, 5)]
         self.assertNotIn(0, tiers)
         self.assertEqual(len(filtrar_pagina([{"tier": 2, "classificacao": "irrelevante"}], 5)), 0)
-        # Malformados continuam visíveis como tier 5 (comportamento da A4).
-        self.assertEqual(len(tiers), 6)
+        # Os tiers válidos e os malformados seguem visíveis conforme o contrato da A4.
+        sobreviventes = filtrar_pagina(self.NOVAS, 5)
+        self.assertEqual(sobreviventes, self.NOVAS[1:])
+        self.assertTrue(all(n.get("classificacao") != "irrelevante" for n in sobreviventes))
 
 
 if __name__ == "__main__":
