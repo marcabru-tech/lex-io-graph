@@ -79,7 +79,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 1.0,
-        "ementa": 0.032
+        "ementa": 0.031
       },
       "dimensoes_sem_dado": [],
       "temas_comuns": [
@@ -261,34 +261,6 @@
       "match_tipo": true
     },
     {
-      "source": "marco_civil",
-      "target": "stf_tema987",
-      "score": 0.456,
-      "classificacao": "fraca",
-      "tier": 5,
-      "tipo_sugerido": "interpreta",
-      "scores_parciais": {
-        "temas": 0.5,
-        "hierarquia": 0.7,
-        "hermeneutica": 0.0,
-        "comparado": 1.0,
-        "temporal": 0.4,
-        "ementa": 0.071
-      },
-      "dimensoes_sem_dado": [],
-      "temas_comuns": [
-        "dados_pessoais",
-        "internet"
-      ],
-      "jurisdicoes_comuns": [
-        "EUA",
-        "UE"
-      ],
-      "correntes_comuns": [],
-      "tipo_existente": "interpreta",
-      "match_tipo": true
-    },
-    {
       "source": "lgpd",
       "target": "pl_ia",
       "score": 0.455,
@@ -315,6 +287,34 @@
       ],
       "correntes_comuns": [],
       "tipo_existente": "complementaridade",
+      "match_tipo": true
+    },
+    {
+      "source": "marco_civil",
+      "target": "stf_tema987",
+      "score": 0.455,
+      "classificacao": "fraca",
+      "tier": 5,
+      "tipo_sugerido": "interpreta",
+      "scores_parciais": {
+        "temas": 0.5,
+        "hierarquia": 0.7,
+        "hermeneutica": 0.0,
+        "comparado": 1.0,
+        "temporal": 0.4,
+        "ementa": 0.068
+      },
+      "dimensoes_sem_dado": [],
+      "temas_comuns": [
+        "dados_pessoais",
+        "internet"
+      ],
+      "jurisdicoes_comuns": [
+        "EUA",
+        "UE"
+      ],
+      "correntes_comuns": [],
+      "tipo_existente": "interpreta",
       "match_tipo": true
     },
     {
@@ -589,7 +589,7 @@
     {
       "source": "stf_tema987",
       "target": "lei_15409_2026",
-      "score": 0.48,
+      "score": 0.483,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "interpreta",
@@ -599,7 +599,7 @@
         "hermeneutica": 0.0,
         "comparado": 0.5,
         "temporal": 1.0,
-        "ementa": 0.0
+        "ementa": 0.018
       },
       "dimensoes_sem_dado": [],
       "temas_comuns": [
@@ -755,7 +755,7 @@
     {
       "source": "lgpd",
       "target": "stf_tema987",
-      "score": 0.425,
+      "score": 0.428,
       "classificacao": "fraca",
       "tier": 5,
       "tipo_sugerido": "interpreta",
@@ -765,7 +765,7 @@
         "hermeneutica": 0.0,
         "comparado": 1.0,
         "temporal": 0.7,
-        "ementa": 0.0
+        "ementa": 0.019
       },
       "dimensoes_sem_dado": [],
       "temas_comuns": [
@@ -1365,7 +1365,7 @@
     }
   ],
   "metadata": {
-    "gerado_em": "2026-10-25T11:59:05.458721",
+    "gerado_em": "2026-10-25T16:22:13.487383",
     "threshold": 0.4,
     "tier_filtro": 5,
     "status_excluidos": [
@@ -1374,7 +1374,11 @@
     "normas_excluidas": [
       "stf_adimc",
       "stj_resp",
-      "stj_resp_plat"
+      "stj_resp_plat",
+      "tse_agr_0600528_sp",
+      "tse_ed_0600528_sp",
+      "tse_respel_0600359_pr",
+      "tst_rr_0000284_pe"
     ],
     "engine": "IPII Engine v1.0",
     "propriedade": "Hubstry Deep Tech © 2026",
