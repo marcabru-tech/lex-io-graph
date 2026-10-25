@@ -190,7 +190,7 @@ elif secao == "🌐 Direito Comparado Glocal":
                 ("🇧🇷 Brasil", "PL 2.338/2023 — Marco Legal da IA (em tramitação)", "Abordagem por risco. Inspirado no EU AI Act."),
                 ("🇪🇺 União Europeia", "EU AI Act (2024)", "Um dos primeiros marcos regulatórios abrangentes de IA. Proíbe práticas específicas de IA (art. 5º) e estabelece requisitos de gestão de riscos, documentação, supervisão e conformidade para sistemas classificados como de alto risco. Transparência algorítmica obrigatória."),
                 ("🇨🇳 China", "Regulamento de IA Generativa (2023)", "Controle centralizado — alinhamento com valores socialistas. Registro obrigatório de modelos de IA."),
-                ("🕊️ Vaticano", "Magnifica Humanitas — Leão XIV (25/05/2026)", "Dignidade humana como limite intransponível. IA deve ser 'desarmada' de lógicas de dominação."),
+                ("🕊️ Santa Sé", "Magnifica Humanitas — Leão XIV (25/05/2026)", "Referência ética, não vinculante. Propõe \"desarmar\" a IA: romper a equivalência entre poder técnico e direito de governar (paráfrase do § 110)."),
             ]
         },
         {
@@ -300,21 +300,19 @@ elif secao == "📋 Magnifica Humanitas":
         f"{MAGNIFICA_HUMANITAS['data']} · "
         f"{MAGNIFICA_HUMANITAS['local']}"
     )
+    st.markdown(f"**Natureza:** {MAGNIFICA_HUMANITAS['natureza']}")
     st.markdown(f"**Tema central:** {MAGNIFICA_HUMANITAS['tema_central']}")
-    with st.expander("Tese principal"):
-        tese = MAGNIFICA_HUMANITAS['tese_principal']
-        st.markdown(f"*{tese}*")
-    with st.expander("Capítulos"):
+    with st.expander("Tese principal (síntese)"):
+        st.markdown(MAGNIFICA_HUMANITAS['tese_principal'])
+    with st.expander("Capítulos (temas em síntese)"):
         for cap in MAGNIFICA_HUMANITAS['capitulos']:
             st.markdown(f"- {cap}")
     with st.expander("Continuidade histórica pancrônica"):
         st.markdown(MAGNIFICA_HUMANITAS['continuidade_historica'])
-    with st.expander("Convergência histórica — 20 a 27 de maio de 2026"):
+    with st.expander("Convergência temática — maio de 2026"):
         st.markdown(MAGNIFICA_HUMANITAS['convergencia_maio_2026'])
-    with st.expander("Presença da Anthropic no lançamento"):
-        st.markdown(MAGNIFICA_HUMANITAS['presenca_anthropic'])
-    with st.expander("Impacto no ordenamento jurídico brasileiro"):
-        for item in MAGNIFICA_HUMANITAS['impacto_brasil']:
+    with st.expander("Convergências temáticas com o ordenamento brasileiro"):
+        for item in MAGNIFICA_HUMANITAS['convergencias_brasil']:
             st.markdown(f"- {item}")
 
 st.markdown('<hr class="section-divider">', unsafe_allow_html=True)

@@ -295,7 +295,7 @@ TRADICOES_JURIDICAS = {
         "nome": "Direito Canônico Católico",
         "paises": ["Vaticano (Estado independente)", "aplicável a 1,3 bilhão de católicos globalmente"],
         "caracteristicas": "Corpus Iuris Canonici (séc. XII — Graciano). Código de Direito Canônico atual (1983). Distinção foro interno (consciência) / foro externo (atos jurídicos da Igreja). Influência histórica decisiva no direito civil europeu e brasileiro",
-        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026) como vetor ético sobre IA com impacto no PL 2.338/2023",
+        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026) como referência ética sobre IA, em convergência temática com o PL 2.338/2023",
         "codigos_referencia": "Decreto de Graciano (1140); Corpus Iuris Canonici (1582); Código de Direito Canônico (1983)"
     }
 }
@@ -305,43 +305,40 @@ MAGNIFICA_HUMANITAS = {
     "titulo": "Magnifica Humanitas",
     "autor": "Papa Leão XIV (Robert Francis Prevost, 1955–)",
     "data": "25 de maio de 2026 (apresentação; assinada em 15/05/2026)",
-    "local": "Sala Nova do Sínodo, Vaticano",
-    "tema_central": "Custódia da pessoa humana na era da Inteligência Artificial (IA)",
+    "local": "Vaticano",
+    "natureza": "Referência ética, sem força jurídica no direito brasileiro",
+    "tema_central": "Salvaguarda da pessoa humana na era da Inteligência Artificial (IA)",
     "tese_principal": (
-        "A IA precisa ser desarmada, livre das lógicas que a transformam em "
-        "instrumento de dominação, exclusão ou morte. A tecnologia não é neutra — "
-        "pode proteger ou ameaçar a dignidade humana. A escolha não é entre aceitar "
-        "ou rejeitar a IA, mas entre usos que prejudicam ou protegem a dignidade humana."
+        "Síntese do Lexiograph, não citação literal: a encíclica propõe \"desarmar\" a IA, "
+        "no sentido de romper a equivalência entre poder técnico e direito de governar "
+        "(paráfrase do § 110), e trata a dignidade da pessoa humana como critério para "
+        "avaliar os usos da tecnologia."
     ),
     "capitulos": [
-        "Cap. I — Doutrina Social da Igreja (DSI) e IA: teologia da comunhão na história",
-        "Cap. II — Reconhecimento dos direitos das minorias, especialmente mulheres",
-        "Cap. III — Cinco princípios da DSC: bem comum, solidariedade, subsidiariedade, participação, destinação universal dos bens",
-        "Cap. IV — Ecologia da comunicação baseada na verdade; transparência nos algoritmos de seleção de conteúdo",
-        "Cap. V — IA em conflitos armados: rejeição da automação de decisões sobre vida humana"
+        "Tema (síntese): história da doutrina social da Igreja desde a Rerum Novarum (cap. 1)",
+        "Tema (síntese): princípios — dignidade humana, bem comum e subsidiariedade (cap. 2)",
+        "Tema (síntese): diagnóstico da IA e a proposta de \"desarmá-la\" (cap. 3; § 110)",
+        "Tema (síntese): verdade, ecologia digital e educação (cap. 4)",
+        "Tema (síntese): geopolítica, guerra e paz (cap. 5)"
     ],
     "continuidade_historica": (
-        "Leão XIII / Rerum Novarum (1891) → questão social da Revolução Industrial "
-        "→ direitos trabalhistas → CLT brasileira (1943) → NR-1 com riscos psicossociais "
-        "(2026) → Leão XIV / Magnifica Humanitas (2026) → questão social da IA. "
-        "Arco de 135 anos de magistério social católico sobre tecnologia e trabalho."
+        "Leitura do Lexiograph: Leão XIII / Rerum Novarum (1891) tratou da questão social "
+        "da Revolução Industrial; Leão XIV associou a escolha do nome a essa encíclica e "
+        "trata a IA como a questão social do presente. A influência da Rerum Novarum sobre "
+        "a legislação trabalhista do século XX, inclusive a CLT brasileira (1943), é "
+        "sustentada por parte da historiografia, não demonstrada aqui."
     ),
     "convergencia_maio_2026": (
-        "Entre 20 e 27 de maio de 2026, três instâncias independentes convergiram "
-        "no mesmo campo normativo: (1) Executivo brasileiro — Decretos 12.975 e 12.976/2026 "
-        "sobre responsabilidade de plataformas; (2) Vaticano — Magnifica Humanitas sobre "
-        "dignidade humana e IA; (3) Congresso — 27 PDLs (base da Câmara, 15/08/2026) para derrubar os decretos. "
-        "Momento civilizatório singular documentado."
+        "Convergência temática, sem relação causal demonstrada: os Decretos 12.975 e "
+        "12.976, de 20/05/2026, sobre responsabilidade de plataformas, e a Magnifica "
+        "Humanitas, apresentada em 25/05/2026, trataram de forma independente de temas "
+        "próximos. Em seguida, o Congresso reagiu com projetos de decreto legislativo "
+        "para sustar os decretos (27 PDLs na base da Câmara em 15/08/2026)."
     ),
-    "presenca_anthropic": (
-        "O evento de lançamento contou com a presença de Chris Olah, cofundador da Anthropic "
-        "— criadora do Claude. Sinal do reconhecimento do Vaticano de que as empresas de IA "
-        "são interlocutores normativos relevantes no debate sobre dignidade humana."
-    ),
-    "impacto_brasil": [
-        "PL 2.338/2023 (Marco Legal da IA): reforço ético ao princípio da dignidade humana",
-        "NR-1: convergência sobre riscos psicossociais no trabalho",
-        "Decretos 12.975 e 12.976/2026: convergência sobre responsabilidade de plataformas",
-        "CF/88 art. 1º, III: dignidade humana como fundamento normativo supremo"
+    "convergencias_brasil": [
+        "PL 2.338/2023 (Marco Legal da IA): convergência sobre a dignidade humana como limite da IA",
+        "NR-1: convergência temática sobre riscos psicossociais no trabalho",
+        "Decretos 12.975 e 12.976/2026: convergência temática sobre responsabilidade de plataformas",
+        "CF/88 art. 1º, III: dignidade da pessoa humana como fundamento da República"
     ]
 }
