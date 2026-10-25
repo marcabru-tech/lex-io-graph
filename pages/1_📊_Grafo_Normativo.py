@@ -23,6 +23,7 @@ from lib.constants import (
     cor_borda_status,
 )
 from lib.footer import render_footer
+from lib.grafo_cartao import html_cartao_norma
 from lib.formato import ano_exibicao
 
 st.set_page_config(
@@ -210,16 +211,8 @@ if _grafo_ok:
         for nid in sorted(G.nodes, key=lambda x: G.nodes[x].get("label",x)):
             nd = G.nodes[nid]
             destaque = nid in nos_destacados and bool(busca_texto)
-            border_color = "#d4a853" if destaque else "rgba(255,255,255,0.08)"
             conexoes = len(list(G.edges(nid)))
-            st.markdown(f"""
-    <div style="background:rgba(255,255,255,0.03);border:1px solid {border_color};
-    border-radius:6px;padding:12px 16px;margin-bottom:8px;">
-    <span style="color:#d4a853;font-family:monospace;font-weight:bold;">{nd.get("label",nid)}</span>
-    <span style="color:#706a60;font-size:11px;margin-left:8px;">
-    {nd.get("tipo_label","")} · {rotulo_status(nd.get("status",""))} · {conexoes} conexão(ões)</span><br>
-    <span style="color:#8a8478;font-size:12px;">{nd.get("ementa","")}</span>
-    </div>""", unsafe_allow_html=True)
+            st.markdown(html_cartao_norma(nid, nd, conexoes, destaque), unsafe_allow_html=True)
 
     if modo_viz == "🕸️ Grafo":
         GRAFO_ALTURA = 900
