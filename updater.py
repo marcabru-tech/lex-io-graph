@@ -18,7 +18,7 @@ from datetime import datetime
 # Adicionar raiz ao path para importar lib/
 sys.path.insert(0, str(Path(__file__).parent))
 
-from lib.radar import coletar_radar, TEMAS_RADAR, ESTADO_FONTES, consolidar_tema, _chave_item
+from lib.radar import coletar_radar, TEMAS_RADAR, ESTADO_FONTES, consolidar_tema
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -78,11 +78,13 @@ def detectar_novidades(radar_novo: dict, radar_anterior: dict) -> list[dict]:
     """
     # Identidade da novidade: (tema, chave normalizada). A mesma proposição num
     # tema novo é um contexto novo para a curadoria e continua elegível.
+    # A6-b: só contam como "já vistos" os cartões principais do retrato anterior.
+    # Um item que estava em "conferir" e passa a "principal" é novidade, porque
+    # nunca foi alertado. O retrato anterior é reclassificado com as regras atuais.
     anteriores = set()
     for tema, tema_data in radar_anterior.get("temas", {}).items():
-        for fonte in ["senado", "camara", "lexml"]:
-            for item in tema_data.get(fonte, []):
-                anteriores.add((tema, _chave_item(fonte, item)))
+        for cartao in consolidar_tema(tema_data, tema)["principal"]:
+            anteriores.add((tema, cartao["chave"]))
 
     novidades = []
     for tema, tema_data in radar_novo.get("temas", {}).items():
