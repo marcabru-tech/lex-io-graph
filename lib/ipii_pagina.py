@@ -13,11 +13,11 @@ from pathlib import Path
 
 # Faixas iguais às de lib/ipii/matcher.py (THRESHOLD_* e cortes 0.65 e 0.50).
 TIER_LABELS = {
-    1: ("tier-1", "TIER 1 — FORTE (≥ 0.75)"),
-    2: ("tier-2", "TIER 2 — MODERADA (0.65–0.74)"),
-    3: ("tier-3", "TIER 3 — MODERADA (0.55–0.64)"),
-    4: ("tier-3", "TIER 4 — FRACA (0.50–0.54)"),
-    5: ("tier-3", "TIER 5 — FRACA (0.40–0.49)"),
+    1: ("tier-1", "TIER 1 — FORTE (≥ 0.750)"),
+    2: ("tier-2", "TIER 2 — MODERADA (0.650–0.749)"),
+    3: ("tier-3", "TIER 3 — MODERADA (0.550–0.649)"),
+    4: ("tier-3", "TIER 4 — FRACA (0.500–0.549)"),
+    5: ("tier-3", "TIER 5 — FRACA (0.400–0.499)"),
 }
 TIPO_LABELS = {
     "hierarquia": "Hierarquia normativa",
