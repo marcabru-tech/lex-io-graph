@@ -264,9 +264,12 @@ ENQUADRAMENTO_DECRETO_12976_IA = (
     "em serviço online. O questionário não determina a incidência jurídica de cada dispositivo "
     "do decreto. Confira se a empresa oferece uma aplicação de internet. Confira também se essa "
     "aplicação disponibiliza funcionalidades de IA e se elas entram nas hipóteses específicas do "
-    "decreto. O art. 9º veda, nas hipóteses que prevê, a geração ou modificação de conteúdo íntimo "
-    "de terceiros por IA ou recurso equivalente. O art. 10 trata das salvaguardas a cargo dos "
-    "provedores de aplicações baseados em funcionalidades de IA. O simples uso de IA pela empresa "
+    "decreto. O art. 9º veda aos provedores de aplicações de internet gerar ou modificar conteúdo "
+    "íntimo de terceiros mediante inteligência artificial ou outro recurso tecnológico que altere a "
+    "imagem ou o som da vítima. O art. 10 exige dos provedores de aplicações baseados em "
+    "funcionalidades de IA ou tecnologia equivalente salvaguardas técnicas e procedimentais para "
+    "identificar e bloquear solicitações de geração desse conteúdo, conforme a regulamentação da "
+    "autoridade competente. O simples uso de IA pela empresa "
     "não atrai, por si só, essas obrigações."
 )
 USA_IA_AVISO_DECRETO = frozenset({"Sim", "Estou avaliando"})

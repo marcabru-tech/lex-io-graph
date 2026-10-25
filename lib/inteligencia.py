@@ -66,11 +66,11 @@ CASOS_ESTRATEGICOS = [
             {
                 "titulo": "Tensão 3 — A reação legislativa: 27 PDLs (base da Câmara, 15/08/2026) e o argumento de competência",
                 "analise": (
-                    "Parlamentares de partidos de oposição (PL, Republicanos, União Brasil, Novo) "
-                    "protocolaram 27 PDLs (Projetos de Decreto Legislativo; base da Câmara, "
-                    "15/08/2026) para sustar os Decretos 12.975 e 12.976/2026, com fundamento na "
-                    "extrapolação do poder regulamentar (CF, art. 49, V) e na proteção à liberdade "
-                    "de expressão. A tensão institucional: o argumento de que a matéria é de "
+                    "Deputados protocolaram PDLs (Projetos de Decreto Legislativo) para sustar os "
+                    "Decretos 12.975 e 12.976/2026: o levantamento do Radar do Lexiograph na API de "
+                    "Dados Abertos da Câmara contou 27 em 15/08/2026 (contagem do levantamento, não "
+                    "total oficial da Câmara). O instrumento é o do art. 49, V, da CF, que permite "
+                    "sustar atos normativos que exorbitem do poder regulamentar. A tensão institucional: o argumento de que a matéria é de "
                     "competência do Congresso convive com a ausência de lei aprovada sobre o tema. "
                     "O calendário eleitoral (outubro/2026) aumenta a visibilidade política da disputa."
                 )
@@ -233,8 +233,8 @@ CASOS_ESTRATEGICOS = [
                     "Os Decretos 12.975 e 12.976, de 20/05/2026, e a Magnifica Humanitas, "
                     "apresentada em 25/05/2026, trataram de forma independente de temas próximos, "
                     "sem relação causal demonstrada. Em seguida, o Congresso reagiu com projetos de "
-                    "decreto legislativo para sustar os decretos (27 PDLs na base da Câmara em "
-                    "15/08/2026). Na leitura deste ensaio, esse quadro mapeia um campo de forças: "
+                    "decreto legislativo para sustar os decretos (27 PDLs, segundo o levantamento do "
+                    "Radar do Lexiograph na API de Dados Abertos da Câmara em 15/08/2026). Na leitura deste ensaio, esse quadro mapeia um campo de forças: "
                     "de um lado, atores que priorizam a proteção de direitos fundamentais; de outro, "
                     "atores que priorizam a liberdade de expressão e a não interferência estatal."
                 )

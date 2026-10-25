@@ -301,6 +301,7 @@ elif secao == "📋 Magnifica Humanitas":
         f"{MAGNIFICA_HUMANITAS['local']}"
     )
     st.markdown(f"**Natureza:** {MAGNIFICA_HUMANITAS['natureza']}")
+    st.markdown(f"**Texto oficial:** [vatican.va]({MAGNIFICA_HUMANITAS['fonte_oficial_url']})")
     st.markdown(f"**Tema central:** {MAGNIFICA_HUMANITAS['tema_central']}")
     with st.expander("Tese principal (síntese)"):
         st.markdown(MAGNIFICA_HUMANITAS['tese_principal'])
