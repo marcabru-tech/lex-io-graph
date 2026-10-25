@@ -139,10 +139,31 @@ def _extrair_jurisdicoes(norma: dict) -> list:
 
     jurisdicoes = []
     for jur, termos in mapa.items():
-        if any(t in texto for t in termos):
+        if any(_menciona(texto, t) for t in termos):
             jurisdicoes.append(jur)
 
     return list(set(jurisdicoes))
+
+
+# Contexto negativo explícito: "distintos dos da União Europeia" contrasta,
+# não toma a jurisdição como referência. Vale dentro da mesma oração.
+_NEGACAO_ANTES = re.compile(r"\b(distint[oa]s?|diferentes?)\b[^.;:()]*$")
+_LETRA = "a-z0-9à-ü"
+
+
+def _menciona(texto: str, termo: str) -> bool:
+    """O termo aparece como palavra inteira e fora de contexto negativo?
+
+    Palavra inteira evita casar dentro de outra palavra (ex.: "dsa"). Uma
+    ocorrência precedida, na mesma oração, por "distinto(s)/diferente(s)" não
+    conta. Basta uma ocorrência válida.
+    """
+    padrao = re.compile(rf"(?<![{_LETRA}]){re.escape(termo)}(?![{_LETRA}])")
+    for m in padrao.finditer(texto):
+        antes = texto[max(0, m.start() - 60):m.start()]
+        if not _NEGACAO_ANTES.search(antes):
+            return True
+    return False
 
 
 def _tokenizar_ementa(ementa: str) -> list:

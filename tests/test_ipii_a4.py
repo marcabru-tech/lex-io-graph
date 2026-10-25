@@ -88,5 +88,39 @@ class TestEtapa3RegulamentaComEvidencia(unittest.TestCase):
         self.assertEqual(_numeros_de_lei("Decreto 12.975/2026"), set())
 
 
+
+class TestEtapa4Jurisdicao(unittest.TestCase):
+    def _jur(self, texto):
+        from lib.ipii.tokenizer import _extrair_jurisdicoes
+        return set(_extrair_jurisdicoes({"direito_comparado": texto}))
+
+    def test_positivos(self):
+        self.assertIn("UE", self._jur("Inspirada no GDPR (União Europeia, 2016)."))
+        self.assertIn("UE", self._jur("O DSA (Digital Services Act) de 2022."))
+        self.assertIn("EUA", self._jur("Análoga à Section 230 dos Estados Unidos."))
+
+    def test_negacao_explicita_nao_conta(self):
+        self.assertNotIn("UE", self._jur("A Suíça negocia acordos próprios, distintos dos da União Europeia."))
+        self.assertNotIn("EUA", self._jur("Modelo diferente do adotado nos Estados Unidos."))
+
+    def test_negacao_vale_so_na_mesma_oracao(self):
+        texto = "Acordos distintos dos da Suíça. A União Europeia adota o GDPR."
+        self.assertIn("UE", self._jur(texto))
+
+    def test_uma_ocorrencia_valida_basta(self):
+        texto = "Regras distintas da União Europeia em tarifas; inspirada no GDPR em dados."
+        self.assertIn("UE", self._jur(texto))
+
+    def test_dsa_dentro_de_outra_palavra_nao_casa(self):
+        # sigla dentro de palavra (erro de digitação ou composição) não é a jurisdição
+        self.assertNotIn("UE", self._jur("A responsabilidsade civil e a pradsa local."))
+
+    def test_caso_real_efta(self):
+        from lib.ipii.tokenizer import tokenizar_corpus
+        normas = json.loads((RAIZ / "data" / "normas.json").read_text(encoding="utf-8"))["nodes"]
+        tok = tokenizar_corpus([n for n in normas if n["id"] == "acordo_mercosul_efta"])
+        self.assertNotIn("UE", tok["acordo_mercosul_efta"]["jurisdicao"])
+
+
 if __name__ == "__main__":
     unittest.main()
