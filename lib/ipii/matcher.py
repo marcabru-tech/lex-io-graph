@@ -102,8 +102,12 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     # 5. Temporal — proximidade histórica
     ano_a = token_a["temporal"]["ano"]
     ano_b = token_b["temporal"]["ano"]
-    diff_anos = abs(ano_a - ano_b) if (ano_a and ano_b) else 100
-    if diff_anos <= 2:
+    # Ano ausente é desconhecido, não distância de 100 anos: a dimensão sai do
+    # cálculo deste par (None) e os pesos restantes são redistribuídos (A4).
+    diff_anos = abs(ano_a - ano_b) if (ano_a and ano_b) else None
+    if diff_anos is None:
+        scores["temporal"] = None
+    elif diff_anos <= 2:
         scores["temporal"] = 1.0
     elif diff_anos <= 10:
         scores["temporal"] = 0.7
@@ -119,8 +123,12 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     i_ementa = ementa_a & ementa_b
     scores["ementa"] = len(i_ementa) / len(u_ementa) if u_ementa else 0.0
 
-    # Score final ponderado
-    score_final = sum(scores[k] * PESOS[k] for k in PESOS)
+    # Score final ponderado só sobre as dimensões utilizáveis, com os pesos
+    # redistribuídos proporcionalmente. Sem nenhuma dimensão utilizável, o
+    # motor não inventa pontuação: score 0 e o par não é sugerido.
+    utilizaveis = {k: PESOS[k] for k in PESOS if scores.get(k) is not None}
+    soma_pesos = sum(utilizaveis.values())
+    score_final = (sum(scores[k] * w for k, w in utilizaveis.items()) / soma_pesos) if soma_pesos else 0.0
 
     # Classificação
     if score_final >= THRESHOLD_FORTE:
@@ -145,7 +153,8 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
         "classificacao": classificacao,
         "tier": tier,
         "tipo_sugerido": tipo_sugerido,
-        "scores_parciais": {k: round(v, 3) for k, v in scores.items()},
+        "scores_parciais": {k: (round(v, 3) if v is not None else None) for k, v in scores.items()},
+        "dimensoes_sem_dado": sorted(k for k in PESOS if scores.get(k) is None),
         "temas_comuns": sorted(list(intersecao)),
         "jurisdicoes_comuns": sorted(list(i_jur)),
         "correntes_comuns": sorted(list(i_correntes)),
@@ -163,20 +172,26 @@ def _sugerir_tipo(
     ont_a = token_a["ontologia"]
     ont_b = token_b["ontologia"]
 
+    # Interpreta: jurisprudência interpreta a Constituição, lei ou decreto.
+    # Vem antes da hierarquia: decisão judicial não é norma inferior à CF, e o
+    # par jurisprudência ↔ constituição é interpretação constitucional (A4).
+    interpretaveis = ("constituicao", "lei", "decreto", "norma_regulamentar")
+    if ont_a == "jurisprudencia" and ont_b in interpretaveis:
+        return "interpreta"
+    if ont_b == "jurisprudencia" and ont_a in interpretaveis:
+        return "interpreta"
+
     # Hierarquia: constituição fundamenta norma inferior
     if ont_a == "constituicao" or ont_b == "constituicao":
         return "hierarquia"
 
-    # Interpreta: jurisprudência interpreta lei ou decreto
-    if ont_a == "jurisprudencia" and ont_b in ("lei", "decreto", "norma_regulamentar"):
-        return "interpreta"
-    if ont_b == "jurisprudencia" and ont_a in ("lei", "decreto", "norma_regulamentar"):
-        return "interpreta"
-
-    # Regulamenta: decreto regulamenta lei
-    if (ont_a == "decreto" and ont_b == "lei") or \
-       (ont_b == "decreto" and ont_a == "lei"):
-        return "regulamenta"
+    # Regulamenta: só com evidência textual de que o decreto se refere à lei
+    # do par (o número da lei aparece na ementa ou na história do decreto).
+    # Sem evidência, o par segue a regra geral abaixo (A4).
+    if {ont_a, ont_b} == {"decreto", "lei"}:
+        decreto, lei = (token_a, token_b) if ont_a == "decreto" else (token_b, token_a)
+        if lei.get("numero_lei") and lei["numero_lei"] in decreto.get("leis_citadas", []):
+            return "regulamenta"
 
     # ANTINOMIA DESATIVADA (ago/2026): a regra anterior inferia conflito
     # normativo a partir de "mesmo nivel hierarquico + temas sobrepostos".

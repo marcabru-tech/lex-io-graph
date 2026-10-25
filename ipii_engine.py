@@ -92,6 +92,8 @@ def main():
     print(f"  Não detectadas:       {resultado['faltando']}")
     print(f"  Precisão:             {resultado['precisao']:.1%}")
     print(f"  Cobertura:            {resultado['cobertura']:.1%}")
+    print(f"  Precisão de tipo:     {resultado['precisao_tipo']:.1%} "
+          f"({resultado['acertos_tipo']}/{resultado['confirmadas']} confirmadas com o tipo curado)")
 
     # 5. Novas por tier
     novas_filtradas = filtrar_por_tier(resultado["detalhe_novas"], args.tier)

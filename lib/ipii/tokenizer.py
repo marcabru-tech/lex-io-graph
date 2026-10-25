@@ -19,6 +19,7 @@ Propriedade intelectual: Hubstry Deep Tech © 2026.
 """
 
 import re
+from functools import lru_cache
 
 
 STOPWORDS = {
@@ -29,6 +30,14 @@ STOPWORDS = {
     "esta", "esse", "essa", "pelo", "pela", "pelos", "pelas", "entre",
     "sobre", "após", "ante", "até", "desde", "durante", "contra", "sem",
 }
+
+
+_RE_LEI = re.compile(r"\bLei\s*(?:n[º°o.]\s*)?(\d[\d.]*)\s*/\s*(\d{4})\b", re.IGNORECASE)
+
+
+def _numeros_de_lei(texto: str) -> set:
+    """'Lei 12.965/2014' e 'Lei nº 12965/2014' -> {'12965/2014'}."""
+    return {f"{num.replace('.', '').lstrip('0')}/{ano}" for num, ano in _RE_LEI.findall(texto or "")}
 
 
 def tokenizar_norma(norma: dict) -> dict:
@@ -69,6 +78,12 @@ def tokenizar_norma(norma: dict) -> dict:
         "artigos_chave": norma.get("artigos_chave", []),
         "orgao": norma.get("orgao", ""),
         "ementa_tokens": _tokenizar_ementa(norma.get("ementa", "")),
+
+        # Evidência textual para "regulamenta" (A4): o número da própria lei,
+        # tirado da sigla, e as leis que a norma cita na ementa ou na história.
+        "numero_lei": (sorted(_numeros_de_lei(norma.get("sigla", "")))[:1] or [None])[0]
+                      if norma.get("tipo") == "lei" else None,
+        "leis_citadas": sorted(_numeros_de_lei(" ".join([norma.get("ementa", ""), norma.get("historia", "")]))),
     }
 
 
@@ -113,7 +128,7 @@ def _extrair_jurisdicoes(norma: dict) -> list:
 
     mapa = {
         "UE": ["gdpr", "dsa", "ai act", "eu ai act", "união europeia", "europeu"],
-        "EUA": ["ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano"],
+        "EUA": ["eua", "ccpa", "section 230", "coppa", "estados unidos", "califórnia", "americano"],
         "Alemanha": ["bgb", "hgb", "alemanha", "alemão"],
         "França": ["code civil", "frança", "francês", "napoleônico"],
         "Itália": ["codice civile", "itália", "italiano"],
@@ -125,10 +140,36 @@ def _extrair_jurisdicoes(norma: dict) -> list:
 
     jurisdicoes = []
     for jur, termos in mapa.items():
-        if any(t in texto for t in termos):
+        if any(_menciona(texto, t) for t in termos):
             jurisdicoes.append(jur)
 
     return list(set(jurisdicoes))
+
+
+# Contexto negativo explícito: "distintos dos da União Europeia" contrasta,
+# não toma a jurisdição como referência. Vale dentro da mesma oração.
+_NEGACAO_ANTES = re.compile(r"\b(distint[oa]s?|diferentes?)\b[^.;:()]*$")
+_LETRA = "a-z0-9à-ü"
+
+
+@lru_cache(maxsize=None)
+def _padrao_termo(termo: str) -> "re.Pattern":
+    """Padrão de palavra inteira do termo, compilado uma vez por termo."""
+    return re.compile(rf"(?<![{_LETRA}]){re.escape(termo)}(?![{_LETRA}])")
+
+
+def _menciona(texto: str, termo: str) -> bool:
+    """O termo aparece como palavra inteira e fora de contexto negativo?
+
+    Palavra inteira evita casar dentro de outra palavra (ex.: "dsa"). Uma
+    ocorrência precedida, na mesma oração, por "distinto(s)/diferente(s)" não
+    conta. Basta uma ocorrência válida.
+    """
+    for m in _padrao_termo(termo).finditer(texto):
+        antes = texto[max(0, m.start() - 60):m.start()]
+        if not _NEGACAO_ANTES.search(antes):
+            return True
+    return False
 
 
 def _tokenizar_ementa(ementa: str) -> list:
