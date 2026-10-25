@@ -16,7 +16,7 @@ from unittest import mock
 import lib.conformidade as conformidade
 
 from lib.conformidade import (ACOES_POR_TAG, ENQUADRAMENTO_DECRETO_12976, NORMA_TAGS, STATUS_FORA_DA_PONTUACAO,
-                              TAGS_OBSERVAVEIS, _gerar_acoes, _score_norma, _tags_norma,
+                              TAGS_OBSERVAVEIS, _gerar_acoes, _score_norma,
                               gerar_radar, gerar_relatorio_html)
 
 RAIZ = Path(__file__).resolve().parent.parent
