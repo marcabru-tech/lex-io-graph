@@ -102,8 +102,12 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     # 5. Temporal — proximidade histórica
     ano_a = token_a["temporal"]["ano"]
     ano_b = token_b["temporal"]["ano"]
-    diff_anos = abs(ano_a - ano_b) if (ano_a and ano_b) else 100
-    if diff_anos <= 2:
+    # Ano ausente é desconhecido, não distância de 100 anos: a dimensão sai do
+    # cálculo deste par (None) e os pesos restantes são redistribuídos (A4).
+    diff_anos = abs(ano_a - ano_b) if (ano_a and ano_b) else None
+    if diff_anos is None:
+        scores["temporal"] = None
+    elif diff_anos <= 2:
         scores["temporal"] = 1.0
     elif diff_anos <= 10:
         scores["temporal"] = 0.7
@@ -119,8 +123,12 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     i_ementa = ementa_a & ementa_b
     scores["ementa"] = len(i_ementa) / len(u_ementa) if u_ementa else 0.0
 
-    # Score final ponderado
-    score_final = sum(scores[k] * PESOS[k] for k in PESOS)
+    # Score final ponderado só sobre as dimensões utilizáveis, com os pesos
+    # redistribuídos proporcionalmente. Sem nenhuma dimensão utilizável, o
+    # motor não inventa pontuação: score 0 e o par não é sugerido.
+    utilizaveis = {k: PESOS[k] for k in PESOS if scores.get(k) is not None}
+    soma_pesos = sum(utilizaveis.values())
+    score_final = (sum(scores[k] * w for k, w in utilizaveis.items()) / soma_pesos) if soma_pesos else 0.0
 
     # Classificação
     if score_final >= THRESHOLD_FORTE:
@@ -145,7 +153,8 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
         "classificacao": classificacao,
         "tier": tier,
         "tipo_sugerido": tipo_sugerido,
-        "scores_parciais": {k: round(v, 3) for k, v in scores.items()},
+        "scores_parciais": {k: (round(v, 3) if v is not None else None) for k, v in scores.items()},
+        "dimensoes_sem_dado": sorted(k for k in PESOS if scores.get(k) is None),
         "temas_comuns": sorted(list(intersecao)),
         "jurisdicoes_comuns": sorted(list(i_jur)),
         "correntes_comuns": sorted(list(i_correntes)),

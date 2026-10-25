@@ -24,6 +24,7 @@
         "temporal": 1.0,
         "ementa": 0.167
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "soberania_tecnologica"
@@ -51,6 +52,7 @@
         "temporal": 1.0,
         "ementa": 0.161
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet",
@@ -79,6 +81,7 @@
         "temporal": 1.0,
         "ementa": 0.032
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet",
@@ -107,6 +110,7 @@
         "temporal": 0.7,
         "ementa": 0.023
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "ia",
@@ -135,6 +139,7 @@
         "temporal": 1.0,
         "ementa": 0.065
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -162,6 +167,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -189,6 +195,7 @@
         "temporal": 1.0,
         "ementa": 0.068
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "internet",
         "menores"
@@ -215,6 +222,7 @@
         "temporal": 1.0,
         "ementa": 0.2
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -239,6 +247,7 @@
         "temporal": 0.4,
         "ementa": 0.132
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet"
@@ -266,6 +275,7 @@
         "temporal": 0.4,
         "ementa": 0.071
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet"
@@ -293,6 +303,7 @@
         "temporal": 0.7,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "ia",
@@ -321,6 +332,7 @@
         "temporal": 0.4,
         "ementa": 0.061
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet"
@@ -348,6 +360,7 @@
         "temporal": 0.4,
         "ementa": 0.032
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "acesso",
         "dados_pessoais",
@@ -375,6 +388,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "soberania_tecnologica"
@@ -402,6 +416,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais"
       ],
@@ -430,6 +445,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "internet",
@@ -456,6 +472,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "soberania_tecnologica"
@@ -481,6 +498,7 @@
         "temporal": 0.2,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -505,6 +523,7 @@
         "temporal": 0.7,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "ia",
@@ -531,6 +550,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -556,6 +576,7 @@
         "temporal": 1.0,
         "ementa": 0.044
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "internet",
         "menores"
@@ -580,6 +601,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "internet",
         "menores"
@@ -604,6 +626,7 @@
         "temporal": 1.0,
         "ementa": 0.182
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -626,6 +649,7 @@
         "temporal": 1.0,
         "ementa": 0.167
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -648,6 +672,7 @@
         "temporal": 1.0,
         "ementa": 0.125
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -670,6 +695,7 @@
         "temporal": 1.0,
         "ementa": 0.034
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -692,6 +718,7 @@
         "temporal": 1.0,
         "ementa": 0.033
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico",
         "direito_internacional_publico"
@@ -714,6 +741,7 @@
         "temporal": 0.7,
         "ementa": 0.048
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -739,6 +767,7 @@
         "temporal": 0.7,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -764,6 +793,7 @@
         "temporal": 0.7,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "menores"
@@ -789,6 +819,7 @@
         "temporal": 1.0,
         "ementa": 0.033
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais",
         "ia"
@@ -813,6 +844,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "ia"
       ],
@@ -837,6 +869,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "ia"
       ],
@@ -861,6 +894,7 @@
         "temporal": 0.7,
         "ementa": 0.038
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "direito_economico"
       ],
@@ -885,6 +919,7 @@
         "temporal": 1.0,
         "ementa": 0.0
       },
+      "dimensoes_sem_dado": [],
       "temas_comuns": [
         "dados_pessoais"
       ],
@@ -1330,7 +1365,7 @@
     }
   ],
   "metadata": {
-    "gerado_em": "2026-10-25T10:54:10.309152",
+    "gerado_em": "2026-10-25T10:54:43.816599",
     "threshold": 0.4,
     "tier_filtro": 5,
     "status_excluidos": [

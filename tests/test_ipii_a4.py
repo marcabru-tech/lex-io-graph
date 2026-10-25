@@ -126,5 +126,51 @@ class TestEtapa4Jurisdicao(unittest.TestCase):
         self.assertNotIn("UE", tok["acordo_mercosul_efta"]["jurisdicao"])
 
 
+
+def _token(id_, ano, temas=("dados_pessoais",), ontologia="lei"):
+    return {"id": id_, "ontologia": ontologia, "temas": list(temas),
+            "hermeneutica": {"autores": [], "brocardos": [], "correntes": []},
+            "temporal": {"ano": ano, "status": "vigente", "em_vigor": True},
+            "jurisdicao": [], "ementa_tokens": ["dados"], "numero_lei": None, "leis_citadas": []}
+
+
+class TestEtapa5AnoDesconhecido(unittest.TestCase):
+    def test_ano_ausente_tira_a_dimensao_e_redistribui_os_pesos(self):
+        from lib.ipii.matcher import PESOS, calcular_intersecao
+        r = calcular_intersecao(_token("a", None), _token("b", 2020))
+        self.assertIsNone(r["scores_parciais"]["temporal"])
+        self.assertEqual(r["dimensoes_sem_dado"], ["temporal"])
+        sp = r["scores_parciais"]
+        resto = {k: w for k, w in PESOS.items() if k != "temporal"}
+        esperado = sum(sp[k] * w for k, w in resto.items()) / sum(resto.values())
+        self.assertAlmostEqual(r["score"], round(esperado, 3), places=3)
+
+    def test_ano_ausente_nao_e_tratado_como_cem_anos(self):
+        from lib.ipii.matcher import calcular_intersecao
+        sem_ano = calcular_intersecao(_token("a", None), _token("b", 2020))["score"]
+        cem_anos = calcular_intersecao(_token("a", 1900), _token("b", 2020))["score"]
+        self.assertGreater(sem_ano, cem_anos)
+
+    def test_com_os_dois_anos_nada_muda(self):
+        from lib.ipii.matcher import PESOS, calcular_intersecao
+        r = calcular_intersecao(_token("a", 2019), _token("b", 2020))
+        self.assertEqual(r["dimensoes_sem_dado"], [])
+        self.assertAlmostEqual(r["score"], round(sum(r["scores_parciais"][k] * w for k, w in PESOS.items()), 3), places=3)
+
+    def test_sem_nenhuma_dimensao_utilizavel_nao_inventa_pontuacao(self):
+        from unittest import mock
+        import lib.ipii.matcher as m
+        with mock.patch.dict(m.PESOS, {"temas": 0, "hierarquia": 0, "hermeneutica": 0,
+                                       "comparado": 0, "temporal": 1.0, "ementa": 0}, clear=True):
+            r = m.calcular_intersecao(_token("a", None), _token("b", None))
+        self.assertEqual(r["score"], 0.0)
+        self.assertEqual(r["classificacao"], "irrelevante")
+
+    def test_campos_ano_orgao_sigla_intactos(self):
+        normas = json.loads((RAIZ / "data" / "normas.json").read_text(encoding="utf-8"))["nodes"]
+        sem_ano = {n["id"] for n in normas if not n.get("ano")}
+        self.assertEqual(sem_ano, {"stf_adimc", "stj_resp", "stj_resp_plat"})
+
+
 if __name__ == "__main__":
     unittest.main()
