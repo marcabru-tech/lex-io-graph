@@ -54,6 +54,17 @@ def excluida_do_ipii(token: dict) -> bool:
     return token["temporal"]["status"] in STATUS_EXCLUIDOS_DO_IPII
 
 
+def classificar(score: float) -> tuple[str, int]:
+    """Classificação e tier de um score já arredondado (fonte única das faixas)."""
+    if score >= THRESHOLD_FORTE:
+        return "forte", 1
+    if score >= THRESHOLD_MODERADA:
+        return "moderada", (2 if score >= 0.65 else 3)
+    if score >= THRESHOLD_FRACA:
+        return "fraca", (4 if score >= 0.50 else 5)
+    return "irrelevante", 0
+
+
 def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     """Calcula score de interseção entre dois tokens normativos."""
 
@@ -130,26 +141,19 @@ def calcular_intersecao(token_a: dict, token_b: dict) -> dict:
     soma_pesos = sum(utilizaveis.values())
     score_final = (sum(scores[k] * w for k, w in utilizaveis.items()) / soma_pesos) if soma_pesos else 0.0
 
-    # Classificação
-    if score_final >= THRESHOLD_FORTE:
-        classificacao = "forte"
-        tier = 1
-    elif score_final >= THRESHOLD_MODERADA:
-        classificacao = "moderada"
-        tier = 2 if score_final >= 0.65 else 3
-    elif score_final >= THRESHOLD_FRACA:
-        classificacao = "fraca"
-        tier = 4 if score_final >= 0.50 else 5
-    else:
-        classificacao = "irrelevante"
-        tier = 0
+    # A6-c: um único valor de score para exibir, classificar e filtrar. Sem isso,
+    # ruído de ponto flutuante (0.39999…) classificava o par como "irrelevante"
+    # enquanto o filtro, sobre o valor arredondado (0.4), o sugeria.
+    score_final = round(score_final, 3)
+
+    classificacao, tier = classificar(score_final)
 
     tipo_sugerido = _sugerir_tipo(scores, token_a, token_b, intersecao)
 
     return {
         "source": token_a["id"],
         "target": token_b["id"],
-        "score": round(score_final, 3),
+        "score": score_final,
         "classificacao": classificacao,
         "tier": tier,
         "tipo_sugerido": tipo_sugerido,
