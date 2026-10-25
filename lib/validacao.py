@@ -106,13 +106,15 @@ def validar_corpus() -> list[str]:
             if e.get(lado) and e[lado] not in ids:
                 erros.append(f"arestas.json #{i}: {lado} '{e[lado]}' não existe no corpus")
 
-    # Instrumento não incorporado não retira validade da CF nem fundamenta outra
-    # norma: não pode participar de aresta de hierarquia.
-    nao_incorporados = {n["id"] for n in normas if n.get("status") == "instrumento_externo"}
+    # Instrumento não incorporado e referência ética não retiram validade da CF
+    # nem fundamentam outra norma: não podem participar de aresta de hierarquia,
+    # nem como origem nem como destino.
+    sem_forca_normativa = {n["id"] for n in normas
+                           if n.get("status") in ("instrumento_externo", "referencia_etica")}
     for i, e in enumerate(arestas):
-        if e.get("tipo") == "hierarquia" and {e.get("source"), e.get("target")} & nao_incorporados:
+        if e.get("tipo") == "hierarquia" and {e.get("source"), e.get("target")} & sem_forca_normativa:
             erros.append(f"arestas.json #{i}: aresta de hierarquia com instrumento não incorporado "
-                         f"({e.get('source')} → {e.get('target')})")
+                         f"ou referência ética ({e.get('source')} → {e.get('target')})")
 
     externos = ids_externos()
     sobrepostos = ids & set(externos)

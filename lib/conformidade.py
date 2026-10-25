@@ -7,6 +7,7 @@ visitas (lib/telemetria.py) é descrito em render_disclaimer.
 """
 
 import streamlit as st
+from lib.constants import STATUS_COLORS, rotulo_status
 from datetime import datetime
 from html import escape as _esc
 
@@ -509,14 +510,10 @@ def _tags_observaveis() -> set:
 
 TAGS_OBSERVAVEIS = _tags_observaveis()
 
-# Atenção: o status sozinho não tira um nó do quadro. _grupo() manda todo
-# status que não seja tramitacao/em_conferencia para "vigente"; só remova um id
-# daqui quando o status dele tiver grupo próprio em _grupo().
-# Fora do conjunto pontuado até decisão do mantenedor sobre a classificação
-# (25/10/2026). A encíclica é referência ética, e o quadro não pode
-# apresentá-la como norma vinculante só por pertinência temática à ética em
-# IA. Continua no corpus, no grafo e no repositório.
-FORA_DA_PONTUACAO = frozenset({"magnifica_humanitas"})
+# Status que nunca entram no percentual de interseção temática: o documento
+# não tem força jurídica no direito brasileiro. Quando tem tema em comum com o
+# perfil, aparece à parte, sem percentual (ver gerar_radar e render_radar).
+STATUS_FORA_DA_PONTUACAO = frozenset({"referencia_etica"})
 
 
 def _score_norma(norma: dict, tags_perfil: set) -> float:
@@ -528,7 +525,7 @@ def _score_norma(norma: dict, tags_perfil: set) -> float:
     silêncio nem sugerir uma avaliação que o questionário não faz.
     """
     norma_id = norma["id"]
-    if norma_id in FORA_DA_PONTUACAO:
+    if norma.get("status") in STATUS_FORA_DA_PONTUACAO:
         return 0.0
     tags_norma = _tags_norma(norma_id, norma) & TAGS_OBSERVAVEIS
 
@@ -576,17 +573,29 @@ def _gerar_acoes(perfil: dict) -> list:
     return acoes_unicas
 
 
-STATUS_PROPOSTA = {"tramitacao"}
-STATUS_EM_CONFERENCIA = {"em_conferencia"}
+
+
+# Classificação explícita de TODO status conhecido. Status fora desta tabela
+# não cai em "vigente": vai para "desconhecido", exibido à parte para conferência.
+GRUPO_POR_STATUS = {
+    "vigente": "vigente",
+    "vigente_com_ressalva": "vigente",
+    "vigente_parcial": "vigente",
+    "aplicacao_provisoria": "vigente",
+    # Grupo visual próprio: o instrumento não foi incorporado ao direito brasileiro.
+    # A pontuação não muda (continua pontuado como antes); só o título da seção.
+    "instrumento_externo": "nao_incorporado",
+    "pendente_embargos": "vigente",
+    "transitado_julgado": "vigente",
+    "tramitacao": "proposta",
+    "em_conferencia": "em_conferencia",
+    "referencia_etica": "referencia",
+}
 
 
 def _grupo(status: str) -> str:
     """Separa o que é norma vigente do que não pode ser lido como obrigação."""
-    if status in STATUS_EM_CONFERENCIA:
-        return "em_conferencia"
-    if status in STATUS_PROPOSTA:
-        return "proposta"
-    return "vigente"
+    return GRUPO_POR_STATUS.get(status, "desconhecido")
 
 
 def _tags_pontuaveis(normas: list) -> set:
@@ -597,7 +606,7 @@ def _tags_pontuaveis(normas: list) -> set:
     """
     tags = set()
     for n in normas:
-        if n["id"] not in FORA_DA_PONTUACAO:
+        if n.get("status") not in STATUS_FORA_DA_PONTUACAO:
             tags |= _tags_norma(n["id"], n)
     return tags & TAGS_OBSERVAVEIS
 
@@ -654,10 +663,27 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
         key=lambda x: ORDEM_RISCO.get(x["risco"], 9)
     )
 
+    # Referências não vinculantes com tema em comum: listadas à parte, sem percentual.
+    referencias = []
+    for norma in normas:
+        if norma.get("status") not in STATUS_FORA_DA_PONTUACAO:
+            continue
+        comuns = tags_perfil & _tags_norma(norma["id"], norma) & TAGS_OBSERVAVEIS
+        if comuns:
+            referencias.append({
+                "id": norma["id"],
+                "nome": norma.get("nome", norma["id"]),
+                "status": norma.get("status", ""),
+                "rotulo": rotulo_status(norma.get("status", "")),
+                "tags_match": sorted(comuns),
+            })
+    referencias.sort(key=lambda x: x["nome"])
+
     return {
         "total_corpus": len(normas),
         "tags_perfil": sorted(tags_perfil),
         "normas": normas_scored,
+        "referencias": referencias,
         "arestas": arestas_filtradas,
         "acoes": _gerar_acoes(perfil),
     }
@@ -673,14 +699,27 @@ TITULOS_GRUPO = {
     "vigente": "Normas vigentes com interseção temática",
     "proposta": "Propostas em tramitação — risco prospectivo, não obrigação vigente",
     "em_conferencia": "Decisões em conferência — não utilizar como precedente",
+    "nao_incorporado": "Instrumentos externos — não incorporados ao direito brasileiro",
+    "desconhecido": "Status não reconhecido — conferir antes de usar",
 }
+ORDEM_GRUPOS = ("vigente", "proposta", "nao_incorporado", "em_conferencia", "desconhecido")
 PRIO_ICO = {"critica": "🔴", "alta": "🟠", "media": "🟡", "baixa": "🟢"}
+TEXTO_NAO_INCORPORADO = (
+    "Tratados e acordos ainda não incorporados ao ordenamento jurídico interno não são "
+    "apresentados aqui como normas internas vigentes. A eventual vinculação internacional do "
+    "Brasil deve ser verificada conforme o instrumento e sua situação jurídica."
+)
+TEXTO_REFERENCIAS = (
+    "Documentos sem força jurídica no direito brasileiro, com tema em comum com o perfil. "
+    "Aparecem para contexto ético e não entram no percentual de interseção temática."
+)
 
 
 def _por_grupo(radar: dict) -> dict:
-    grupos = {"vigente": [], "proposta": [], "em_conferencia": []}
+    grupos = {"vigente": [], "proposta": [], "nao_incorporado": [], "em_conferencia": [],
+              "desconhecido": [], "referencia": []}
     for n in radar["normas"]:
-        grupos[n.get("grupo", "vigente")].append(n)
+        grupos.setdefault(n.get("grupo", "vigente"), []).append(n)
     return grupos
 
 
@@ -714,7 +753,7 @@ def render_radar(radar: dict):
     )
     c4.metric("Maior interseção entre vigentes", risco_display)
 
-    for chave in ("vigente", "proposta", "em_conferencia"):
+    for chave in ORDEM_GRUPOS:
         lista = grupos[chave]
         if not lista:
             continue
@@ -724,16 +763,19 @@ def render_radar(radar: dict):
                 "Registros judiciais ainda não conferidos na fonte oficial (ADR 007). "
                 "Aparecem só para transparência; não são precedente utilizável."
             )
+        if chave == "nao_incorporado":
+            st.caption(TEXTO_NAO_INCORPORADO)
         for norma in lista[:15]:
             if chave == "vigente":
                 ico = "🔴" if norma["pct"] >= 60 else "🟡" if norma["pct"] >= 30 else "🟢"
             else:
-                ico = RISCO_ICO["prospectivo" if chave == "proposta" else "em_conferencia"]
+                ico = {"proposta": RISCO_ICO["prospectivo"], "nao_incorporado": "🌐"}.get(
+                    chave, RISCO_ICO["em_conferencia"])
             rotulo = ("incluída como base constitucional, sem tema em comum com o perfil"
                       if norma.get("base_constitucional")
                       else f"interseção temática {norma['pct']}%")
             with st.expander(f"{ico} {norma['nome']} — {rotulo}"):
-                st.markdown(f"**Tipo:** {norma['tipo']} · **Status:** {norma['status']}")
+                st.markdown(f"**Tipo:** {norma['tipo']} · **Status:** {rotulo_status(norma['status'])}")
                 if norma["tags_match"]:
                     st.markdown(f"**Temas em comum:** {', '.join(norma['tags_match'][:8])}")
                 if norma["artigos_chave"]:
@@ -743,6 +785,12 @@ def render_radar(radar: dict):
                         f"{norma['temas_fora_do_questionario']} tema(s) desta norma não são "
                         "avaliados por este questionário e ficaram fora do percentual."
                     )
+
+    if radar.get("referencias"):
+        st.markdown("#### Referências não vinculantes relacionadas")
+        st.caption(TEXTO_REFERENCIAS)
+        for r in radar["referencias"]:
+            st.markdown(f"- **{r['nome']}** — :violet[{r['rotulo']}] · temas em comum: {', '.join(r['tags_match'][:6])}")
 
     if radar["arestas"]:
         st.markdown("#### Interseções regulatórias")
@@ -794,16 +842,18 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
             + ("<td>base constitucional, sem tema em comum</td>" if n.get("base_constitucional")
                else f"<td>{n['pct']}%</td>")
             + f"<td>{n.get('temas_fora_do_questionario', 0)}</td>"
-            f"<td>{e(n['status'])}</td><td>{e(', '.join(n['tags_match'][:3]))}</td></tr>"
+            f"<td>{e(rotulo_status(n['status']))}</td><td>{e(', '.join(n['tags_match'][:3]))}</td></tr>"
             for i, n in enumerate(lista[:15], 1)
         )
 
     secoes_normas = ""
-    for chave in ("vigente", "proposta", "em_conferencia"):
+    for chave in ORDEM_GRUPOS:
         lista = grupos[chave]
         if not lista:
             continue
         nota = ""
+        if chave == "nao_incorporado":
+            nota = f'<p style="font-size:13px">{e(TEXTO_NAO_INCORPORADO)}</p>'
         if chave == "em_conferencia":
             nota = ('<p style="font-size:13px;color:#a05a00">Registros judiciais ainda não '
                     "conferidos na fonte oficial; aparecem só para transparência e não são "
@@ -813,6 +863,21 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
             "<table><tr><th>#</th><th>Norma</th><th>Interseção temática</th>"
             "<th>Temas fora do questionário</th><th>Status</th><th>Temas em comum</th></tr>"
             f"{tabela_normas(lista)}</table>"
+        )
+
+    secao_referencias = ""
+    if radar.get("referencias"):
+        itens = "".join(
+            f"<tr><td>{e(r['nome'])}</td>"
+            f"<td style=\"color:{STATUS_COLORS.get(r['status'], '#333')};font-weight:600\">{e(r['rotulo'])}</td>"
+            f"<td>{e(', '.join(r['tags_match'][:6]))}</td></tr>"
+            for r in radar["referencias"]
+        )
+        secao_referencias = (
+            f"<h2>Referências não vinculantes relacionadas ({len(radar['referencias'])})</h2>"
+            f'<p style="font-size:13px">{e(TEXTO_REFERENCIAS)}</p>'
+            "<table><tr><th>Documento</th><th>Natureza</th><th>Temas em comum</th></tr>"
+            f"{itens}</table>"
         )
 
     rows_arestas = "".join(
@@ -863,6 +928,7 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
 <h2>Temas do perfil ({len(radar['tags_perfil'])})</h2>
 <p style="font-size:13px">{e(', '.join(radar['tags_perfil'][:30]))}</p>
 {secoes_normas}
+{secao_referencias}
 <h2>Interseções Regulatórias ({len(radar['arestas'])})</h2>
 <table><tr><th>Risco</th><th>Par</th><th>Tipo</th><th>Descrição</th></tr>
 {rows_arestas}</table>

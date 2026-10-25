@@ -15,7 +15,7 @@ from unittest import mock
 
 import lib.conformidade as conformidade
 
-from lib.conformidade import (ACOES_POR_TAG, ENQUADRAMENTO_DECRETO_12976, FORA_DA_PONTUACAO, NORMA_TAGS,
+from lib.conformidade import (ACOES_POR_TAG, ENQUADRAMENTO_DECRETO_12976, NORMA_TAGS, STATUS_FORA_DA_PONTUACAO,
                               PERFIL_TEMA_MAP, TAGS_OBSERVAVEIS, _gerar_acoes, _score_norma, _tags_norma,
                               gerar_radar, gerar_relatorio_html)
 
@@ -175,8 +175,8 @@ class TestEscopoDaIntersecao(unittest.TestCase):
         self.assertEqual(lgpd["temas_fora_do_questionario"], esperado)
 
     def test_magnifica_humanitas_fora_do_conjunto_pontuado(self):
-        self.assertIn("magnifica_humanitas", FORA_DA_PONTUACAO)
-        self.assertTrue(any(n["id"] == "magnifica_humanitas" for n in NORMAS))  # continua no corpus
+        mh = next(n for n in NORMAS if n["id"] == "magnifica_humanitas")  # continua no corpus
+        self.assertIn(mh["status"], STATUS_FORA_DA_PONTUACAO)
         for usa_ia in ("Sim", "Estou avaliando"):
             radar = gerar_radar({"usa_ia": usa_ia, "setor": "Outro"}, NORMAS, ARESTAS)
             self.assertNotIn("magnifica_humanitas", {n["id"] for n in radar["normas"]})
