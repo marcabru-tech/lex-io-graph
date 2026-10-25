@@ -295,7 +295,7 @@ TRADICOES_JURIDICAS = {
         "nome": "Direito Canônico Católico",
         "paises": ["Vaticano (Estado independente)", "aplicável a 1,3 bilhão de católicos globalmente"],
         "caracteristicas": "Corpus Iuris Canonici (séc. XII — Graciano). Código de Direito Canônico atual (1983). Distinção foro interno (consciência) / foro externo (atos jurídicos da Igreja). Influência histórica decisiva no direito civil europeu e brasileiro",
-        "brasil": "Influência via Portugal — casamento canônico teve efeitos civis até 1916. Encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026) como referência ética sobre IA, em convergência temática com o PL 2.338/2023",
+        "brasil": "No Brasil imperial, o Decreto de 3 de novembro de 1827 determinou a observância das disposições do Concílio de Trento e da Constituição do Arcebispado da Bahia sobre matrimônio. O Decreto nº 181/1890 estabeleceu que, a partir de 24 de maio de 1890, só seriam válidos os casamentos celebrados conforme a lei civil. A Constituição de 1934 (art. 146) voltou a reconhecer efeitos civis ao casamento religioso, desde que observados os requisitos civis e feito o registro. Encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026) como referência ética sobre IA, em convergência temática com o PL 2.338/2023",
         "codigos_referencia": "Decreto de Graciano (1140); Corpus Iuris Canonici (1582); Código de Direito Canônico (1983)"
     }
 }
@@ -306,6 +306,7 @@ MAGNIFICA_HUMANITAS = {
     "autor": "Papa Leão XIV (Robert Francis Prevost, 1955–)",
     "data": "25 de maio de 2026 (apresentação; assinada em 15/05/2026)",
     "local": "Vaticano",
+    "fonte_oficial_url": "https://www.vatican.va/content/leo-xiv/pt/encyclicals/documents/20260515-magnifica-humanitas.html",
     "natureza": "Referência ética, sem força jurídica no direito brasileiro",
     "tema_central": "Salvaguarda da pessoa humana na era da Inteligência Artificial (IA)",
     "tese_principal": (
@@ -333,7 +334,8 @@ MAGNIFICA_HUMANITAS = {
         "12.976, de 20/05/2026, sobre responsabilidade de plataformas, e a Magnifica "
         "Humanitas, apresentada em 25/05/2026, trataram de forma independente de temas "
         "próximos. Em seguida, o Congresso reagiu com projetos de decreto legislativo "
-        "para sustar os decretos (27 PDLs na base da Câmara em 15/08/2026)."
+        "para sustar os decretos (27 PDLs, segundo o levantamento do Radar do Lexiograph "
+        "na API de Dados Abertos da Câmara em 15/08/2026)."
     ),
     "convergencias_brasil": [
         "PL 2.338/2023 (Marco Legal da IA): convergência sobre a dignidade humana como limite da IA",
