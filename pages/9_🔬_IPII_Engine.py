@@ -7,6 +7,8 @@ from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.footer import render_footer
+from lib.ipii_pagina import (TIPO_LABELS, esc, html_aresta_confirmada, html_aresta_nova,
+                             ler_total_normas, pct)
 
 st.set_page_config(
     page_title=f"{APP_NAME} — IPII Engine",
@@ -105,8 +107,11 @@ if not resultado:
 # ---- Métricas ----
 meta = resultado.get("metadata", {})
 # O resultado do engine contabiliza arestas; a quantidade de normas vem do corpus.
-with open(RAIZ / "data" / "normas.json", encoding="utf-8") as f:
-    total_normas_corpus = len(json.load(f).get("nodes", []))
+total_normas_corpus, erro_corpus = ler_total_normas(RAIZ / "data" / "normas.json")
+if erro_corpus:
+    st.error(f"{erro_corpus} A página do IPII precisa do corpus para exibir as métricas.")
+    render_footer()
+    st.stop()
 gerado = meta.get("gerado_em", "")
 if gerado:
     try:
@@ -123,31 +128,31 @@ st.markdown(f"""
   </div>
   <div class="metric-box">
     <div class="metric-label">Arestas sugeridas</div>
-    <div class="metric-value">{resultado.get('total_sugeridas', 0)}</div>
+    <div class="metric-value">{esc(resultado.get('total_sugeridas', 0))}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Confirmadas</div>
-    <div class="metric-value">{resultado.get('confirmadas', 0)}</div>
+    <div class="metric-value">{esc(resultado.get('confirmadas', 0))}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Novas descobertas</div>
-    <div class="metric-value" style="color:#d4a853;">{resultado.get('novas', 0)}</div>
+    <div class="metric-value" style="color:#d4a853;">{esc(resultado.get('novas', 0))}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Cobertura</div>
-    <div class="metric-value">{resultado.get('cobertura', 0):.0%}</div>
+    <div class="metric-value">{pct(resultado.get('cobertura'))}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Precisão</div>
-    <div class="metric-value">{resultado.get('precisao', 0):.0%}</div>
+    <div class="metric-value">{pct(resultado.get('precisao'))}</div>
   </div>
   <div class="metric-box">
     <div class="metric-label">Precisão de tipo</div>
-    <div class="metric-value">{resultado.get('precisao_tipo', 0):.0%}</div>
+    <div class="metric-value">{pct(resultado.get('precisao_tipo'))}</div>
   </div>
 </div>
 <div style="font-family:monospace;font-size:10px;color:#454040;margin-bottom:16px;">
-  Última rodagem: {gerado} · Threshold: {meta.get('threshold', 0.40)} · {meta.get('engine', 'IPII Engine')}
+  Última rodagem: {esc(gerado)} · Threshold: {esc(meta.get('threshold', 0.40))} · {esc(meta.get('engine', 'IPII Engine'))}
 </div>
 """, unsafe_allow_html=True)
 
@@ -173,22 +178,7 @@ def _texto_completo(item: dict) -> None:
             )
 
 
-TIER_LABELS = {
-    1: ("tier-1", "TIER 1 — FORTE (≥ 0.75)"),
-    2: ("tier-2", "TIER 2 — FORTE (0.65–0.74)"),
-    3: ("tier-3", "TIER 3 — MODERADA (0.55–0.64)"),
-    4: ("tier-3", "TIER 4 — MODERADA (0.45–0.54)"),
-    5: ("tier-3", "TIER 5 — FRACA (0.40–0.44)"),
-}
-
-TIPO_LABELS = {
-    "hierarquia": "Hierarquia normativa",
-    "interpreta": "Interpretação judicial",
-    "regulamenta": "Regulamentação",
-    "intersecao": "Interseção temática",
-    "complementaridade": "Complementaridade",
-    "antinomia": "Antinomia",
-}
+# TIER_LABELS e TIPO_LABELS vêm de lib/ipii_pagina.py
 
 # =============================================================
 if secao == "🆕 Novas arestas descobertas":
@@ -212,21 +202,7 @@ if secao == "🆕 Novas arestas descobertas":
     st.markdown(f"**{len(filtradas)}** aresta(s) exibida(s)")
 
     for n in filtradas:
-        tier = n.get("tier", 5)
-        css_class, tier_label = TIER_LABELS.get(tier, ("tier-3", f"TIER {tier}"))
-        tipo_label = TIPO_LABELS.get(n.get("tipo_sugerido", ""), n.get("tipo_sugerido", ""))
-        temas = ", ".join(n.get("temas_comuns", []))
-        jurs = ", ".join(n.get("jurisdicoes_comuns", []))
-
-        st.markdown(f"""
-<div class="tier-card {css_class}">
-  <div class="tier-label">{tier_label}</div>
-  <div class="aresta-par">{n['source']} ↔ {n['target']}</div>
-  <div class="aresta-score">Score: {n['score']} · {n['classificacao'].upper()}</div>
-  <div class="aresta-tipo">Tipo sugerido: {tipo_label}</div>
-  <div class="aresta-temas">Temas comuns: {temas or '—'}</div>
-  {f'<div class="aresta-temas">Jurisdições: {jurs}</div>' if jurs else ''}
-</div>""", unsafe_allow_html=True)
+        st.markdown(html_aresta_nova(n), unsafe_allow_html=True)
 
 # =============================================================
 elif secao == "✅ Arestas confirmadas":
@@ -236,15 +212,7 @@ elif secao == "✅ Arestas confirmadas":
         "Arestas que o engine sugeriu e já existem no grafo — validação da precisão do engine."
     )
     for c in confirmadas:
-        match = c.get("match_tipo", False)
-        tipo_sug = TIPO_LABELS.get(c.get("tipo_sugerido", ""), c.get("tipo_sugerido", ""))
-        tipo_ex = TIPO_LABELS.get(c.get("tipo_existente", ""), c.get("tipo_existente", ""))
-        st.markdown(f"""
-<div class="tier-card tier-3">
-  <div class="aresta-par">{c['source']} ↔ {c['target']}</div>
-  <div class="aresta-score">Score: {c['score']}</div>
-  <div class="aresta-tipo">Tipo sugerido: {tipo_sug} · Tipo existente: {tipo_ex} · {"✓ match" if match else "≠ divergente"}</div>
-</div>""", unsafe_allow_html=True)
+        st.markdown(html_aresta_confirmada(c), unsafe_allow_html=True)
 
 # =============================================================
 elif secao == "⚠️ Gap do engine":

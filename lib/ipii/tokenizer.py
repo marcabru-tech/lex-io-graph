@@ -19,6 +19,7 @@ Propriedade intelectual: Hubstry Deep Tech © 2026.
 """
 
 import re
+from functools import lru_cache
 
 
 STOPWORDS = {
@@ -151,6 +152,12 @@ _NEGACAO_ANTES = re.compile(r"\b(distint[oa]s?|diferentes?)\b[^.;:()]*$")
 _LETRA = "a-z0-9à-ü"
 
 
+@lru_cache(maxsize=None)
+def _padrao_termo(termo: str) -> "re.Pattern":
+    """Padrão de palavra inteira do termo, compilado uma vez por termo."""
+    return re.compile(rf"(?<![{_LETRA}]){re.escape(termo)}(?![{_LETRA}])")
+
+
 def _menciona(texto: str, termo: str) -> bool:
     """O termo aparece como palavra inteira e fora de contexto negativo?
 
@@ -158,8 +165,7 @@ def _menciona(texto: str, termo: str) -> bool:
     ocorrência precedida, na mesma oração, por "distinto(s)/diferente(s)" não
     conta. Basta uma ocorrência válida.
     """
-    padrao = re.compile(rf"(?<![{_LETRA}]){re.escape(termo)}(?![{_LETRA}])")
-    for m in padrao.finditer(texto):
+    for m in _padrao_termo(termo).finditer(texto):
         antes = texto[max(0, m.start() - 60):m.start()]
         if not _NEGACAO_ANTES.search(antes):
             return True
