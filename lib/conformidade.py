@@ -257,6 +257,34 @@ ENQUADRAMENTO_DECRETO_12976 = (
 )
 TAGS_DECRETO_12976 = frozenset({"deepfake", "violencia_genero"})
 
+# Aviso para quem usa ou avalia IA em serviço online sem ação do decreto
+# (decisão da Luna, 25/10/2026): informativo, não cria obrigação nem ação.
+ENQUADRAMENTO_DECRETO_12976_IA = (
+    "Verifique o enquadramento: o perfil indica uso ou avaliação de inteligência artificial "
+    "em serviço online. O questionário não determina a incidência jurídica de cada dispositivo "
+    "do decreto. Confira se a empresa oferece uma aplicação de internet. Confira também se essa "
+    "aplicação disponibiliza funcionalidades de IA e se elas entram nas hipóteses específicas do "
+    "decreto. O art. 9º veda, nas hipóteses que prevê, a geração ou modificação de conteúdo íntimo "
+    "de terceiros por IA ou recurso equivalente. O art. 10 trata das salvaguardas a cargo dos "
+    "provedores de aplicações baseados em funcionalidades de IA. O simples uso de IA pela empresa "
+    "não atrai, por si só, essas obrigações."
+)
+USA_IA_AVISO_DECRETO = frozenset({"Sim", "Estou avaliando"})
+ONLINE_AVISO_DECRETO = frozenset({"Sim — site institucional", "Sim — plataforma / app"})
+
+
+def aviso_decreto_12976(perfil: dict, acoes: list) -> str | None:
+    """Texto do aviso de enquadramento do Decreto 12.976/2026, ou None.
+
+    Um aviso só: com ação do decreto, o enquadramento das ações; sem ação, mas
+    com IA (Sim ou Estou avaliando) em serviço online, o aviso informativo.
+    """
+    if any(a.get("tag_origem") in TAGS_DECRETO_12976 for a in acoes):
+        return ENQUADRAMENTO_DECRETO_12976
+    if perfil.get("usa_ia") in USA_IA_AVISO_DECRETO and perfil.get("online") in ONLINE_AVISO_DECRETO:
+        return ENQUADRAMENTO_DECRETO_12976_IA
+    return None
+
 ACOES_POR_TAG = {
     "regras_origem": {
         "prioridade": "alta",
@@ -689,13 +717,15 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
             })
     referencias.sort(key=lambda x: x["nome"])
 
+    acoes = _gerar_acoes(perfil)
     return {
         "total_corpus": len(normas),
         "tags_perfil": sorted(tags_perfil),
         "normas": normas_scored,
         "referencias": referencias,
         "arestas": arestas_filtradas,
-        "acoes": _gerar_acoes(perfil),
+        "acoes": acoes,
+        "aviso_decreto_12976": aviso_decreto_12976(perfil, acoes),
     }
 
 
@@ -817,10 +847,11 @@ def render_radar(radar: dict):
             if a.get("descricao"):
                 st.caption(a["descricao"])
 
-    if radar["acoes"]:
+    aviso_decreto = radar.get("aviso_decreto_12976")
+    if radar["acoes"] or aviso_decreto:
         st.markdown("#### Ações recomendadas")
-        if any(a.get("tag_origem") in TAGS_DECRETO_12976 for a in radar["acoes"]):
-            st.info(f"**Decreto 12.976/2026.** {ENQUADRAMENTO_DECRETO_12976}")
+        if aviso_decreto:
+            st.info(f"**Decreto 12.976/2026.** {aviso_decreto}")
         for a in radar["acoes"]:
             ico = PRIO_ICO.get(a["prioridade"], "⚪")
             st.markdown(f"{ico} **{a['acao']}**")
@@ -909,8 +940,8 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
     )
     total_corpus = radar.get("total_corpus", "")
     aviso_decreto = (
-        f'<p class="aviso"><strong>Decreto 12.976/2026.</strong> {e(ENQUADRAMENTO_DECRETO_12976)}</p>'
-        if any(a.get("tag_origem") in TAGS_DECRETO_12976 for a in radar["acoes"]) else ""
+        f'<p class="aviso"><strong>Decreto 12.976/2026.</strong> {e(radar["aviso_decreto_12976"])}</p>'
+        if radar.get("aviso_decreto_12976") else ""
     )
 
     return f"""<!DOCTYPE html>
