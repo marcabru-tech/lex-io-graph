@@ -42,14 +42,56 @@ class TestRegistros(unittest.TestCase):
             self.assertLessEqual(set(JURIS[rid]["normas_relacionadas"]), set(NOS), rid)
 
     def test_divergencia_do_valor_da_multa_registrada(self):
-        for rid in ("tse_agr_0600528_sp", "tse_ed_0600528_sp"):
-            self.assertIn("Divergência", JURIS[rid]["proveniencia"]["observacao"], rid)
+        # A divergência foi resolvida pela leitura dos acórdãos: vale a decisão monocrática (5 SM);
+        # os embargos citam R$ 5.000,00 só em obiter dictum.
+        self.assertIn("obiter dictum", JURIS["tse_agr_0600528_sp"]["proveniencia"]["observacao"])
+        self.assertIn("5 salários mínimos", JURIS["tse_ed_0600528_sp"]["proveniencia"]["observacao"])
         self.assertIn("5 salários mínimos", JURIS["tse_agr_0600528_sp"]["resumo"])
         self.assertIn("R$ 5.000,00", JURIS["tse_ed_0600528_sp"]["resumo"])
 
     def test_divergencia_tse_tst_sobre_o_advogado(self):
         self.assertIn("só as partes respondem", JURIS["tse_respel_0600359_pr"]["resumo"])
         self.assertIn("ao advogado subscritor", JURIS["tst_rr_0000284_pe"]["resumo"])
+        # O contraste é leitura do Lexiograph, não conteúdo do acórdão do TST (revisão independente).
+        self.assertNotIn("tse_respel", JURIS["tst_rr_0000284_pe"]["resumo"])
+        self.assertIn("Nota editorial do Lexiograph (não consta do acórdão)",
+                      JURIS["tst_rr_0000284_pe"]["proveniencia"]["observacao"])
+
+    def test_tst_artigos_por_sancao(self):
+        r = JURIS["tst_rr_0000284_pe"]["resumo"]
+        parte, advogado = r.split("Aplicou também ao advogado")
+        self.assertNotIn("139", parte)  # o art. 139, III fundamenta só a penalidade ao advogado
+        self.assertIn("CPC, arts. 77, I e II, e 80, I e II", parte)
+        self.assertIn("139, III", advogado)
+        self.assertIn("possível infração ao art. 34", r)
+        self.assertIn("apenas como hipótese", r)
+        self.assertEqual(JURIS["tst_rr_0000284_pe"]["relator"], "Min. Antônio Fabrício de Matos Gonçalves")
+
+    def test_datas_de_publicacao_do_portal(self):
+        self.assertEqual(JURIS["tst_rr_0000284_pe"]["data_publicacao"], "2026-03-03")
+        self.assertEqual(JURIS["tse_ed_0600528_sp"]["data_publicacao"], "2026-08-28")
+        self.assertEqual(JURIS["tse_agr_0600528_sp"]["data_publicacao"], "2026-06-10")
+        self.assertEqual(JURIS["tse_respel_0600359_pr"]["data_publicacao"], "2025-05-22")
+
+    def test_situacao_processual_registrada(self):
+        self.assertIn("trânsito em julgado em 21/08/2025", JURIS["tse_respel_0600359_pr"]["proveniencia"]["observacao"])
+        for rid in ("tse_agr_0600528_sp", "tse_ed_0600528_sp"):
+            self.assertIn("recurso extraordinário interposto em 31/08/2026", JURIS[rid]["proveniencia"]["observacao"], rid)
+
+    def test_tese_3_completa(self):
+        self.assertIn("e/ou pelo respectivo órgão de classe, a quem a autoridade judicial oficiará",
+                      JURIS["tse_respel_0600359_pr"]["resumo"])
+
+    def test_valor_da_multa_que_vale(self):
+        self.assertIn("5 salários mínimos, fixado na decisão monocrática e mantido",
+                      JURIS["tse_agr_0600528_sp"]["proveniencia"]["observacao"])
+        self.assertIn("apenas em obiter dictum", JURIS["tse_agr_0600528_sp"]["proveniencia"]["observacao"])
+
+    def test_nos_sem_atribuir_ia_onde_o_acordao_nao_constatou(self):
+        self.assertNotIn("IA", NOS["tst_rr_0000284_pe"]["nome"])
+        self.assertNotIn("IA", NOS["tse_agr_0600528_sp"]["nome"])
+        for rid in NOVOS:
+            self.assertIn(JURIS[rid]["resumo"], NOS[rid]["ementa"], rid)
 
     def test_precedente_sem_inteiro_teor_nao_vira_registro(self):
         self.assertFalse(any("0600016" in r["numero"] for r in JURIS.values()))
