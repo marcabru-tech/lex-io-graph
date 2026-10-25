@@ -29,6 +29,13 @@ class TestNormalizacao(unittest.TestCase):
                          ementa_normalizada("dispõe sobre dados pessoais"))
         self.assertEqual(ementa_normalizada("Altera a Lei nº 11.196, de 2005"),
                          ementa_normalizada("Altera a Lei n.º 11.196 de 2005"))
+        self.assertEqual(ementa_normalizada("Lei nº 1"), ementa_normalizada("Lei N.º 1"))
+        self.assertEqual(ementa_normalizada("Lei nº 1"), ementa_normalizada("Lei n° 1"))
+        # Pontuação vira separador: palavras coladas continuam diferentes.
+        self.assertNotEqual(ementa_normalizada("ab-cd"), ementa_normalizada("abcd"))
+        self.assertNotEqual(ementa_normalizada("a/b"), ementa_normalizada("ab"))
+        self.assertEqual(ementa_normalizada("ab-cd"), ementa_normalizada("ab cd"))
+        self.assertNotEqual(ementa_normalizada("Lei 11.196"), ementa_normalizada("Lei 11 196"))
         # Acento e palavra diferente continuam diferentes (sem aproximação).
         self.assertNotEqual(ementa_normalizada("Dispõe sobre dados"), ementa_normalizada("Dispoe sobre dados"))
         self.assertNotEqual(ementa_normalizada("Dispõe sobre dados pessoais"),
@@ -91,6 +98,31 @@ class TestNovidadesComNovaIdentidade(unittest.TestCase):
                                                   termo_na_ementa=True)])}}
         nov = updater.detectar_novidades(depois, antes)
         self.assertEqual([(n["chave"], n["fonte"]) for n in nov], [("PL 9/2026@camara", "Câmara dos Deputados")])
+
+
+    def test_senado_antigo_e_camara_nova_com_ementa_igual(self):
+        # Caso da revisão da Luna: Senado conhecido, Câmara ausente antes, ementas
+        # iguais -> um cartão consolidado, e o registro novo da Câmara alerta.
+        antes = {"temas": {"dados": _tema([_item("senado", "PL 9/2026", "Trata de dados pessoais")])}}
+        depois = {"temas": {"dados": _tema([_item("senado", "PL 9/2026", "Trata de dados pessoais")],
+                                           [_item("camara", "PL 9/2026", "Trata de dados pessoais.",
+                                                  termo_na_ementa=True)])}}
+        self.assertEqual(len(_todos(consolidar_tema(depois["temas"]["dados"], "dados"))), 1)
+        nov = updater.detectar_novidades(depois, antes)
+        self.assertEqual(len(nov), 1)
+        self.assertEqual(nov[0]["identidades_novas"], [["PL 9/2026", "camara"]])
+        self.assertEqual(nov[0]["fonte"], "Câmara dos Deputados")
+        self.assertTrue(nov[0]["url"].startswith("https://www.camara.leg.br"))
+        # Na coleta seguinte, nada se repete.
+        self.assertEqual(updater.detectar_novidades(depois, depois), [])
+
+    def test_duas_casas_novas_na_mesma_coleta_um_alerta(self):
+        depois = {"temas": {"dados": _tema([_item("senado", "PL 9/2026", "Trata de dados pessoais")],
+                                           [_item("camara", "PL 9/2026", "Trata de dados pessoais",
+                                                  termo_na_ementa=True)])}}
+        nov = updater.detectar_novidades(depois, {})
+        self.assertEqual(len(nov), 1)
+        self.assertEqual(nov[0]["identidades_novas"], [["PL 9/2026", "camara"], ["PL 9/2026", "senado"]])
 
 
 class TestEmentaNula(unittest.TestCase):

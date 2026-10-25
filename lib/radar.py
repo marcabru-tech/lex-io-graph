@@ -363,10 +363,14 @@ def ementa_normalizada(ementa) -> str:
     """
     import re
     import unicodedata
-    t = unicodedata.normalize("NFKC", ementa or "").casefold()
-    # Pontuação removida sem deixar espaço: "nº" e "n.º", "11.196" e "11196"
-    # ficam iguais; o espaço já existente entre palavras é preservado.
-    t = re.sub(r"[.,;:!?\"'“”‘’()\[\]\-–—/]+", "", t)
+    # Formas convencionais que a pontuação-como-espaço não pode separar:
+    # "n.º"/"n.°"/"n°" -> "nº" (antes da NFKC, que transforma "º" em "o") e
+    # separador de milhar ("11.196" -> "11196").
+    t = re.sub(r"\b([nN])\s*\.?\s*[º°]", r"\1º", ementa or "")
+    t = unicodedata.normalize("NFKC", t).casefold()
+    t = re.sub(r"(?<=\d)\.(?=\d)", "", t)
+    # Demais pontuações viram separador (espaço): "ab-cd" ≠ "abcd", "a/b" ≠ "ab".
+    t = re.sub(r"[.,;:!?\"'“”‘’()\[\]\-–—/]+", " ", t)
     return " ".join(t.split())
 
 

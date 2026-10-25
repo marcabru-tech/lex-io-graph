@@ -127,8 +127,14 @@ class TestRegras(unittest.TestCase):
         nov = updater.detectar_novidades(self.NOVO, {})
         self.assertEqual(len(nov), 1)
         self.assertEqual((nov[0]["tema"], nov[0]["chave"]), ("t", "PL 278/2026"))
-        # já vista no MESMO tema por outra Casa, com outro id: não é novidade
+        # A6-e: identidade por registro. Se a Câmara já era conhecida, a chegada
+        # do Senado é novidade só para o Senado; a Câmara não alerta de novo.
         anterior = {"temas": {"t": {"camara": [{"id": "outro", "sigla": "PL 278/2026"}]}}}
+        nov = updater.detectar_novidades(self.NOVO, anterior)
+        self.assertEqual([(n["chave"], n["fonte"]) for n in nov], [("PL 278/2026", "Senado Federal")])
+        self.assertEqual(nov[0]["identidades_novas"], [["PL 278/2026", "senado"]])
+        # As duas Casas já conhecidas: nenhum alerta.
+        anterior = {"temas": {"t": self.NOVO["temas"]["t"]}}
         self.assertEqual(updater.detectar_novidades(self.NOVO, anterior), [])
 
     def test_mesma_proposicao_em_tema_novo_continua_elegivel(self):
