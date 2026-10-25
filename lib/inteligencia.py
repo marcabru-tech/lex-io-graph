@@ -220,26 +220,23 @@ CASOS_ESTRATEGICOS = [
         "nivel_tensao": "estratégico",
         "status": "ativo — maio/2026",
         "sintese": (
-            "A encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026 e apresentada em 25/05/2026) posiciona a Igreja "
-            "Católica como ator normativo global no debate sobre IA — não apenas ético, "
-            "mas com capacidade de influenciar legisladores em 1,3 bilhão de católicos "
-            "globalmente, incluindo o Brasil (cerca de 57% da população, Censo 2022 do IBGE)."
+            "Na leitura deste ensaio, a encíclica Magnifica Humanitas (Leão XIV, assinada em 15/05/2026 "
+            "e apresentada em 25/05/2026) posiciona a Igreja Católica como interlocutora no debate "
+            "sobre IA. É referência ética, sem força jurídica no direito brasileiro, mas com potencial "
+            "de influência sobre fiéis e legisladores, inclusive no Brasil, onde 56,7% das pessoas "
+            "com 10 anos ou mais se declararam católicas no Censo 2022 do IBGE."
         ),
         "camadas": [
             {
-                "titulo": "Convergência histórica de maio/2026",
+                "titulo": "Convergência temática de maio/2026",
                 "analise": (
-                    "Entre 20 e 27 de maio de 2026, três instâncias independentes "
-                    "convergiram no mesmo campo normativo: (1) Executivo brasileiro — "
-                    "Decretos 12.975 e 12.976/2026; (2) Vaticano — Magnifica Humanitas; "
-                    "(3) Congresso — 27 PDLs (base da Câmara, 15/08/2026) para derrubar os decretos. "
-                    "A convergência Vaticano-Executivo e a divergência Congresso-STF "
-                    "mapeiam o campo de forças: de um lado, atores que priorizam "
-                    "proteção de direitos fundamentais; de outro, atores que priorizam "
-                    "liberdade de expressão e não-interferência estatal. "
-                    "A presença de Chris Olah (Anthropic) no lançamento da encíclica "
-                    "sinaliza que as empresas de IA reconhecem o Vaticano como "
-                    "interlocutor normativo relevante — não apenas moral."
+                    "Os Decretos 12.975 e 12.976, de 20/05/2026, e a Magnifica Humanitas, "
+                    "apresentada em 25/05/2026, trataram de forma independente de temas próximos, "
+                    "sem relação causal demonstrada. Em seguida, o Congresso reagiu com projetos de "
+                    "decreto legislativo para sustar os decretos (27 PDLs na base da Câmara em "
+                    "15/08/2026). Na leitura deste ensaio, esse quadro mapeia um campo de forças: "
+                    "de um lado, atores que priorizam a proteção de direitos fundamentais; de outro, "
+                    "atores que priorizam a liberdade de expressão e a não interferência estatal."
                 )
             },
             {
@@ -270,12 +267,12 @@ CASOS_ESTRATEGICOS = [
             ),
             "36_meses": (
                 "A encíclica pode se tornar referência doutrinária nos debates da ONU "
-                "sobre governança global de IA — o Vaticano tem status de observador "
-                "permanente e capacidade de mobilizar coalizões de países."
+                "sobre governança global de IA — a Santa Sé tem status de Estado observador "
+                "permanente na ONU e capacidade de mobilizar coalizões de países."
             ),
             "lacuna_remanescente": (
-                "A encíclica diagnostica sem prescrever tecnicamente — não define "
-                "o que é 'IA desarmada' em termos jurídicos operacionais. "
+                "A encíclica formula o princípio de \"desarmar\" a IA (§ 110), mas não o "
+                "traduz em critérios jurídicos operacionais. "
                 "A ponte entre o princípio moral e a norma técnica é o trabalho "
                 "que o PL 2.338/2023 precisa fazer."
             )
