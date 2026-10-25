@@ -150,7 +150,7 @@ PERFIL_TEMA_MAP = {
             "dados_pessoais", "remocao_conteudo",
         ],
         "Govtech / Órgão Público": [
-            "dados_pessoais", "transparencia", "governanca", "seguranca",
+            "dados_pessoais", "transparencia", "seguranca",
         ],
         "Mídia / Comunicação": [
             "liberdade_expressao", "moderacao_conteudo",
@@ -182,10 +182,10 @@ PERFIL_TEMA_MAP = {
             "inteligencia_artificial", "alto_risco",
             "transparencia_algoritmos", "decisao_automatizada",
             "auditoria_ia", "governanca_ia", "responsabilidade_ia",
-            "vies_algoritmico", "discriminacao_algoritmica",
+            "vies_algoritmico", "discriminacao_algoritmica", "etica_ia",
         ],
         "Não": [],
-        "Estou avaliando": ["inteligencia_artificial", "governanca_ia"],
+        "Estou avaliando": ["inteligencia_artificial", "governanca_ia", "etica_ia"],
     },
     "trata_dados": {
         "Sim — clientes": [
@@ -209,7 +209,7 @@ PERFIL_TEMA_MAP = {
             "plataformas", "responsabilidade_plataformas",
             "moderacao_conteudo", "remocao_conteudo",
             "guarda_logs", "dados_usuario", "dever_proativo",
-            "conteudo_ilicito",
+            "conteudo_ilicito", "deepfake", "violencia_genero",
         ],
         "Sim — site institucional": [
             "internet", "dados_pessoais", "consentimento",
@@ -218,11 +218,11 @@ PERFIL_TEMA_MAP = {
     },
     "porte": {
         "Startup / MEI": [],
-        "PME (10–250 funcionários)": ["governanca", "compliance"],
-        "Grande empresa (250+)": [
-            "governanca", "compliance", "relatorio_impacto", "dpo",
-        ],
-        "Órgão público": ["governanca", "compliance", "transparencia"],
+        # "governanca" e "compliance" saíram (25/10/2026): nenhuma norma nem
+        # ação usava essas tags, que só inflavam o perfil sem correspondência.
+        "PME (10–250 funcionários)": [],
+        "Grande empresa (250+)": ["relatorio_impacto", "dpo"],
+        "Órgão público": ["transparencia"],
     },
 }
 
@@ -248,6 +248,13 @@ PERGUNTAS = {
         "opcoes": list(PERFIL_TEMA_MAP["porte"].keys()),
     },
 }
+
+# Aviso exibido UMA vez, antes das ações do Decreto 12.976/2026, quando
+# alguma delas aparece (tela e relatório).
+ENQUADRAMENTO_DECRETO_12976 = (
+    "Verifique o enquadramento: o questionário não confirma se a aplicação intermedeia conteúdo gerado por terceiros nem identifica todas as suas funcionalidades de IA. Os deveres dos arts. 4º, 5º e 8º pressupõem intermediação de conteúdo gerado por terceiros; o art. 6º disciplina as providências do provedor após o recebimento de notificação; os arts. 7º, 9º e 10 tratam de hipóteses específicas relacionadas à remoção de conteúdo íntimo e à geração ou modificação desse conteúdo por inteligência artificial, incluindo salvaguardas aplicáveis aos provedores baseados em IA; o art. 12 estabelece prazos transitórios até a regulamentação pela autoridade competente, sem afastar o prazo de até duas horas previsto no art. 7º, § 1º. A aplicação de cada dispositivo depende das características do serviço."
+)
+TAGS_DECRETO_12976 = frozenset({"deepfake", "violencia_genero"})
 
 ACOES_POR_TAG = {
     "regras_origem": {
@@ -392,12 +399,12 @@ ACOES_POR_TAG = {
     },
     "violencia_genero": {
         "prioridade": "critica",
-        "acao": "Implementar protocolo de remoção rápida para deepfakes e conteúdo íntimo",
-        "base": "Decreto 12.976/2026, arts. 4º a 8º e 12 (o PL 896/2023 é proposta em tramitação, não obrigação)",
+        "acao": "Manter canal oficial de notificação que informe o Ligue 180 (art. 5º, § 1º); confirmar o recebimento, decidir e comunicar o fundamento e os meios de contestação ao notificante e, se houver remoção, a quem publicou (art. 6º); adotar medidas técnicas e proporcionais para reduzir o alcance de ataques coordenados contra mulheres, mesmo sem notificação (art. 8º). A falha sistêmica na indisponibilização gera responsabilização (art. 4º)",
+        "base": "Decreto 12.976/2026, arts. 4º, 5º, 6º e 8º (o PL 896/2023 é proposta em tramitação, não obrigação)",
     },
     "deepfake": {
         "prioridade": "critica",
-        "acao": "Conteúdo íntimo de terceiro divulgado sem autorização, inclusive o produzido ou manipulado por IA: indisponibilizar em até 2h após a notificação (art. 7º, § 1º; art. 3º, I). Até regulamentação pela autoridade competente, demais hipóteses de violência contra a mulher no ambiente digital: no prazo de 6h (art. 12, I) ou de 24h (art. 12, II), remover o conteúdo ou comunicar ao notificante o fundamento da manutenção e os meios de contestação. Aplicações que geram conteúdo por IA: vedada a geração ou modificação de conteúdo íntimo de terceiro (art. 9º) e exigidas salvaguardas para bloquear essas solicitações, conforme regulamento (art. 10)",
+        "acao": "Conteúdo íntimo de terceiro divulgado sem autorização, inclusive o produzido ou manipulado por IA: indisponibilizar em até 2h após a notificação (art. 7º, § 1º; art. 3º, I). Até regulamentação pela autoridade competente, demais casos de violência contra a mulher no ambiente digital: remover o conteúdo ou comunicar ao notificante o fundamento da manutenção e os meios de contestação em até 6h, quando o conteúdo for manifestamente ilegal (art. 12, I), ou em até 24h, nos demais casos (art. 12, II). Aplicações que geram conteúdo por IA: vedada a geração ou modificação de conteúdo íntimo de terceiro (art. 9º) e exigidas salvaguardas para bloquear essas solicitações, conforme regulamento (art. 10)",
         "base": "Decreto 12.976/2026, arts. 3º, I, 7º, 9º, 10 e 12",
     },
     "transferencia_internacional": {
@@ -444,7 +451,8 @@ def render_disclaimer_rodape():
     st.caption(
         "⚠️ Triagem informativa, não é certificação de conformidade nem parecer jurídico. "
         "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus "
-        "curado (indicador heurístico); não medem risco jurídico nem obrigação aplicável. "
+        "curado, considerando só os temas que o questionário consegue avaliar (indicador "
+        "heurístico); não medem risco jurídico nem obrigação aplicável. "
         f"Gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M')}"
     )
 
@@ -490,9 +498,39 @@ def _tags_norma(norma_id: str, norma: dict) -> set:
     return tags
 
 
+def _tags_observaveis() -> set:
+    """Temas que o questionário consegue avaliar (gerados por alguma resposta)."""
+    tags = set()
+    for respostas in PERFIL_TEMA_MAP.values():
+        for lista in respostas.values():
+            tags.update(lista)
+    return tags
+
+
+TAGS_OBSERVAVEIS = _tags_observaveis()
+
+# Atenção: o status sozinho não tira um nó do quadro. _grupo() manda todo
+# status que não seja tramitacao/em_conferencia para "vigente"; só remova um id
+# daqui quando o status dele tiver grupo próprio em _grupo().
+# Fora do conjunto pontuado até decisão do mantenedor sobre a classificação
+# (25/10/2026). A encíclica é referência ética, e o quadro não pode
+# apresentá-la como norma vinculante só por pertinência temática à ética em
+# IA. Continua no corpus, no grafo e no repositório.
+FORA_DA_PONTUACAO = frozenset({"magnifica_humanitas"})
+
+
 def _score_norma(norma: dict, tags_perfil: set) -> float:
+    """Interseção temática entre o perfil e a norma.
+
+    Considera só os temas da norma que o questionário consegue avaliar
+    (TAGS_OBSERVAVEIS). Temas fora do questionário não entram na conta e são
+    informados à parte (ver gerar_radar), para não penalizar a norma em
+    silêncio nem sugerir uma avaliação que o questionário não faz.
+    """
     norma_id = norma["id"]
-    tags_norma = _tags_norma(norma_id, norma)
+    if norma_id in FORA_DA_PONTUACAO:
+        return 0.0
+    tags_norma = _tags_norma(norma_id, norma) & TAGS_OBSERVAVEIS
 
     if not tags_perfil or not tags_norma:
         return 0.0
@@ -519,7 +557,7 @@ def _gerar_acoes(perfil: dict) -> list:
     tags = _temas_do_perfil(perfil)
     acoes = []
 
-    for tag in tags:
+    for tag in sorted(tags):
         if tag in ACOES_POR_TAG:
             acao = dict(ACOES_POR_TAG[tag])
             acao["tag_origem"] = tag
@@ -533,7 +571,8 @@ def _gerar_acoes(perfil: dict) -> list:
             acoes_unicas.append(a)
 
     ordem = {"critica": 0, "alta": 1, "media": 2, "baixa": 3}
-    acoes_unicas.sort(key=lambda x: ordem.get(x["prioridade"], 4))
+    # Desempate explícito pela tag, para a ordem não variar entre execuções.
+    acoes_unicas.sort(key=lambda x: (ordem.get(x["prioridade"], 4), x["tag_origem"], x["acao"]))
     return acoes_unicas
 
 
@@ -550,12 +589,26 @@ def _grupo(status: str) -> str:
     return "vigente"
 
 
+def _tags_pontuaveis(normas: list) -> set:
+    """Temas que o questionário avalia E que alguma norma pontuável carrega.
+
+    Tag do perfil que só aciona ação (sem nenhuma norma pontuável com ela) não
+    entra no denominador da cobertura: senão diluiria a nota de todas as normas.
+    """
+    tags = set()
+    for n in normas:
+        if n["id"] not in FORA_DA_PONTUACAO:
+            tags |= _tags_norma(n["id"], n)
+    return tags & TAGS_OBSERVAVEIS
+
+
 def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
     tags_perfil = _temas_do_perfil(perfil)
+    tags_perfil_pontuaveis = tags_perfil & _tags_pontuaveis(normas)
 
     normas_scored = []
     for norma in normas:
-        score = _score_norma(norma, tags_perfil)
+        score = _score_norma(norma, tags_perfil_pontuaveis)
         if score > 0.05:
             tags_match = tags_perfil & _tags_norma(norma["id"], norma)
             normas_scored.append({
@@ -567,6 +620,10 @@ def gerar_radar(perfil: dict, normas: list, arestas: list) -> dict:
                 "score": score,
                 "pct": int(score * 100),
                 "tags_match": sorted(tags_match),
+                "temas_fora_do_questionario": len(_tags_norma(norma["id"], norma) - TAGS_OBSERVAVEIS),
+                # Piso de 25% da Constituição sem nenhum tema em comum: é critério
+                # de inclusão (base do ordenamento), não interseção temática.
+                "base_constitucional": norma.get("tipo") == "constituicao" and not tags_match,
                 "artigos_chave": norma.get("artigos_chave", []),
             })
 
@@ -632,7 +689,8 @@ def render_radar(radar: dict):
     st.markdown("### Seu Quadro de Conformidade")
     st.caption(
         "Triagem informativa: os percentuais medem a interseção temática entre o seu perfil "
-        "e cada norma do corpus curado. Não confirmam conformidade ou desconformidade nem "
+        "e cada norma do corpus curado, considerando só os temas que este questionário "
+        "consegue avaliar. Não confirmam conformidade ou desconformidade nem "
         "substituem parecer jurídico."
     )
 
@@ -648,7 +706,12 @@ def render_radar(radar: dict):
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Normas vigentes relacionadas", len(grupos["vigente"]))
     c2.metric("Interseções", len(radar["arestas"]))
-    c3.metric("Ações críticas", n_criticas)
+    c3.metric(
+        "Ações críticas", n_criticas,
+        help=("Inclui ações do Decreto 12.976/2026 condicionadas ao enquadramento indicado "
+              "na seção de ações." if any(a.get("tag_origem") in TAGS_DECRETO_12976
+                                          for a in radar["acoes"]) else None),
+    )
     c4.metric("Maior interseção entre vigentes", risco_display)
 
     for chave in ("vigente", "proposta", "em_conferencia"):
@@ -666,12 +729,20 @@ def render_radar(radar: dict):
                 ico = "🔴" if norma["pct"] >= 60 else "🟡" if norma["pct"] >= 30 else "🟢"
             else:
                 ico = RISCO_ICO["prospectivo" if chave == "proposta" else "em_conferencia"]
-            with st.expander(f"{ico} {norma['nome']} — interseção temática {norma['pct']}%"):
+            rotulo = ("incluída como base constitucional, sem tema em comum com o perfil"
+                      if norma.get("base_constitucional")
+                      else f"interseção temática {norma['pct']}%")
+            with st.expander(f"{ico} {norma['nome']} — {rotulo}"):
                 st.markdown(f"**Tipo:** {norma['tipo']} · **Status:** {norma['status']}")
                 if norma["tags_match"]:
                     st.markdown(f"**Temas em comum:** {', '.join(norma['tags_match'][:8])}")
                 if norma["artigos_chave"]:
                     st.markdown(f"**Artigos-chave:** {', '.join(norma['artigos_chave'][:5])}")
+                if norma.get("temas_fora_do_questionario"):
+                    st.caption(
+                        f"{norma['temas_fora_do_questionario']} tema(s) desta norma não são "
+                        "avaliados por este questionário e ficaram fora do percentual."
+                    )
 
     if radar["arestas"]:
         st.markdown("#### Interseções regulatórias")
@@ -687,6 +758,8 @@ def render_radar(radar: dict):
 
     if radar["acoes"]:
         st.markdown("#### Ações recomendadas")
+        if any(a.get("tag_origem") in TAGS_DECRETO_12976 for a in radar["acoes"]):
+            st.info(f"**Decreto 12.976/2026.** {ENQUADRAMENTO_DECRETO_12976}")
         for a in radar["acoes"]:
             ico = PRIO_ICO.get(a["prioridade"], "⚪")
             st.markdown(f"{ico} **{a['acao']}**")
@@ -697,7 +770,8 @@ def render_radar(radar: dict):
 # Não interpolar aqui nenhum valor variável ou vindo do usuário; esses passam por _esc.
 AVISO_TRIAGEM_HTML = (
     "<strong>Triagem informativa — não é certificação de conformidade.</strong> "
-    "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado. "
+    "Os percentuais medem a interseção temática entre o perfil e cada norma do corpus curado, "
+    "considerando só os temas que o questionário consegue avaliar. "
     "Os indicadores não confirmam conformidade ou desconformidade, não garantem a identificação "
     "de todas as obrigações aplicáveis e não constituem auditoria, certificação ou parecer jurídico. "
     "Consulte os textos oficiais e submeta decisões relevantes a profissional habilitado."
@@ -716,7 +790,10 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
 
     def tabela_normas(lista):
         return "".join(
-            f"<tr><td>{i}</td><td>{e(n['nome'])}</td><td>{n['pct']}%</td>"
+            f"<tr><td>{i}</td><td>{e(n['nome'])}</td>"
+            + ("<td>base constitucional, sem tema em comum</td>" if n.get("base_constitucional")
+               else f"<td>{n['pct']}%</td>")
+            + f"<td>{n.get('temas_fora_do_questionario', 0)}</td>"
             f"<td>{e(n['status'])}</td><td>{e(', '.join(n['tags_match'][:3]))}</td></tr>"
             for i, n in enumerate(lista[:15], 1)
         )
@@ -733,7 +810,8 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
                     "precedente utilizável.</p>")
         secoes_normas += (
             f"<h2>{e(TITULOS_GRUPO[chave])} ({len(lista)})</h2>{nota}"
-            "<table><tr><th>#</th><th>Norma</th><th>Interseção temática</th><th>Status</th><th>Temas</th></tr>"
+            "<table><tr><th>#</th><th>Norma</th><th>Interseção temática</th>"
+            "<th>Temas fora do questionário</th><th>Status</th><th>Temas em comum</th></tr>"
             f"{tabela_normas(lista)}</table>"
         )
 
@@ -752,6 +830,10 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
         for a in radar["acoes"]
     )
     total_corpus = radar.get("total_corpus", "")
+    aviso_decreto = (
+        f'<p class="aviso"><strong>Decreto 12.976/2026.</strong> {e(ENQUADRAMENTO_DECRETO_12976)}</p>'
+        if any(a.get("tag_origem") in TAGS_DECRETO_12976 for a in radar["acoes"]) else ""
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="pt-br">
@@ -785,6 +867,7 @@ def gerar_relatorio_html(radar: dict, perfil: dict) -> str:
 <table><tr><th>Risco</th><th>Par</th><th>Tipo</th><th>Descrição</th></tr>
 {rows_arestas}</table>
 <h2>Ações Recomendadas ({len(radar['acoes'])})</h2>
+{aviso_decreto}
 <table><tr><th>Prioridade</th><th>Ação</th><th>Base Legal</th></tr>
 {rows_acoes}</table>
 <p class="meta" style="margin-top:40px; border-top:1px solid #eee; padding-top:16px;">
