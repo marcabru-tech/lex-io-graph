@@ -26,6 +26,7 @@ class TestPrecisaoDeTipo(unittest.TestCase):
         r = json.loads((RAIZ / "data" / "ipii_resultado.json").read_text(encoding="utf-8"))
         self.assertIn("precisao_tipo", r)
         self.assertEqual(r["acertos_tipo"], sum(1 for c in r["detalhe_confirmadas"] if c["match_tipo"]))
+        self.assertEqual(r["precisao_tipo"], round(r["acertos_tipo"] / len(r["detalhe_confirmadas"]), 3))
 
 
 
@@ -140,10 +141,9 @@ class TestEtapa5AnoDesconhecido(unittest.TestCase):
         r = calcular_intersecao(_token("a", None), _token("b", 2020))
         self.assertIsNone(r["scores_parciais"]["temporal"])
         self.assertEqual(r["dimensoes_sem_dado"], ["temporal"])
-        sp = r["scores_parciais"]
-        resto = {k: w for k, w in PESOS.items() if k != "temporal"}
-        esperado = sum(sp[k] * w for k, w in resto.items()) / sum(resto.values())
-        self.assertAlmostEqual(r["score"], round(esperado, 3), places=3)
+        # (0,30·1 + 0,15·0,3 + 0 + 0 + 0,15·1) / 0,90, com os PESOS de 25/10/2026.
+        self.assertAlmostEqual(r["score"], 0.55, places=3)
+        self.assertNotIn("temporal", [k for k in PESOS if r["scores_parciais"][k] is not None])
 
     def test_ano_ausente_nao_e_tratado_como_cem_anos(self):
         from lib.ipii.matcher import calcular_intersecao
@@ -155,7 +155,8 @@ class TestEtapa5AnoDesconhecido(unittest.TestCase):
         from lib.ipii.matcher import PESOS, calcular_intersecao
         r = calcular_intersecao(_token("a", 2019), _token("b", 2020))
         self.assertEqual(r["dimensoes_sem_dado"], [])
-        self.assertAlmostEqual(r["score"], round(sum(r["scores_parciais"][k] * w for k, w in PESOS.items()), 3), places=3)
+        self.assertAlmostEqual(r["score"], 0.595, places=3)
+        self.assertEqual(set(r["scores_parciais"]), set(PESOS))
 
     def test_sem_nenhuma_dimensao_utilizavel_nao_inventa_pontuacao(self):
         from unittest import mock

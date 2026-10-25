@@ -1,4 +1,4 @@
-"""Status referencia_etica (PR 7): fora do percentual, visível, sem hierarquia."""
+"""Status referencia_etica (PR #59): fora do percentual, visível, sem hierarquia."""
 import json
 import unittest
 from contextlib import contextmanager

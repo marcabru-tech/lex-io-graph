@@ -16,7 +16,7 @@ from unittest import mock
 import lib.conformidade as conformidade
 
 from lib.conformidade import (ACOES_POR_TAG, ENQUADRAMENTO_DECRETO_12976, NORMA_TAGS, STATUS_FORA_DA_PONTUACAO,
-                              PERFIL_TEMA_MAP, TAGS_OBSERVAVEIS, _gerar_acoes, _score_norma, _tags_norma,
+                              TAGS_OBSERVAVEIS, _gerar_acoes, _score_norma, _tags_norma,
                               gerar_radar, gerar_relatorio_html)
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -98,9 +98,19 @@ class TestAcoesAlcancaveis(unittest.TestCase):
         perfil = {"setor": "Escritório de Advocacia / Jurídico", "usa_ia": "Sim",
                   "trata_dados": "Sim — ambos", "online": "Sim — plataforma / app"}
         acoes = _gerar_acoes(perfil)
-        ordem = {"critica": 0, "alta": 1, "media": 2, "baixa": 3}
-        chaves = [(ordem[a["prioridade"]], a["tag_origem"], a["acao"]) for a in acoes]
-        self.assertEqual(chaves, sorted(chaves))
+        # Ordem fixada por literal: prioridade, depois tag de origem.
+        self.assertEqual([(a["prioridade"], a["tag_origem"]) for a in acoes[:8]], [
+            ("critica", "bases_legais"), ("critica", "consentimento"), ("critica", "dados_sensiveis"),
+            ("critica", "deepfake"), ("critica", "dpo"), ("critica", "seguranca_dados"),
+            ("critica", "violencia_genero"), ("alta", "alto_risco")])
+        self.assertEqual([a["tag_origem"] for a in acoes[-2:]], ["etica_ia", "moderacao_conteudo"])
+        self.assertEqual(len(acoes), 22)
+
+    def test_governanca_e_compliance_nao_sao_usadas(self):
+        # Justificativa da remoção dessas tags do porte (comentário em PERFIL_TEMA_MAP).
+        usadas = {t for n in NORMAS for t in (n.get("temas") or [])}
+        usadas |= set().union(*NORMA_TAGS.values()) | set(ACOES_POR_TAG)
+        self.assertFalse({"governanca", "compliance"} & usadas)
 
     def test_etica_ia_rotulada_na_tela_e_no_relatorio(self):
         a = ACOES_POR_TAG["etica_ia"]
@@ -171,8 +181,7 @@ class TestEscopoDaIntersecao(unittest.TestCase):
         radar = gerar_radar({"setor": "Fintech / Serviços Financeiros", "trata_dados": "Sim — clientes"},
                             NORMAS, ARESTAS)
         lgpd = next(n for n in radar["normas"] if n["id"] == "lgpd")
-        esperado = len(_tags_norma("lgpd", next(n for n in NORMAS if n["id"] == "lgpd")) - TAGS_OBSERVAVEIS)
-        self.assertEqual(lgpd["temas_fora_do_questionario"], esperado)
+        self.assertEqual(lgpd["temas_fora_do_questionario"], 7)  # valor medido em 25/10/2026
 
     def test_magnifica_humanitas_fora_do_conjunto_pontuado(self):
         mh = next(n for n in NORMAS if n["id"] == "magnifica_humanitas")  # continua no corpus

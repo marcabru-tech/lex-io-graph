@@ -52,8 +52,8 @@ Nota de contagem; a decisão acima não muda. O Contexto e as Consequências
 descrevem o corpus na data da decisão, com cinco registros.
 
 - **Contagem atual: 4 registros** em `data/jurisprudencia.json`, nenhum
-  `verificado`: `stf_adimc` (`contestado`), `stj_resp`, `stj_resp_plat` e
-  `stj_menor_online` (`pendente`).
+  `verificado`: `stf_adimc` (`contestado`), `stj_resp` (`pendente`), `stj_resp_plat`
+  (`pendente`) e `stj_menor_online` (`pendente`).
 - O quinto registro, `trf4_lgpd_cookies`, citado no Contexto pelo dígito CNJ
   divergente, foi removido do corpus em 16/10/2026 (commit `c0bb9d7`).
 - A pendência sobre a métrica da página inicial continua: ela hoje se chama
