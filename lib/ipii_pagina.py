@@ -41,6 +41,36 @@ def pct(valor) -> str:
         return "—"
 
 
+def tier_valido(valor) -> int:
+    """Tier inteiro de 1 a 5; qualquer outro valor (texto, lista, None) vira 5."""
+    if isinstance(valor, bool):
+        return 5
+    try:
+        t = int(valor)
+    except (TypeError, ValueError):
+        return 5
+    return t if 1 <= t <= 5 else 5
+
+
+def rotulo_tipo(valor, padrao: str = "") -> str:
+    """Rótulo do tipo de aresta; valor não textual (lista, dict) não quebra a busca."""
+    if not isinstance(valor, str):
+        return padrao if valor in (None, "") else str(valor)
+    return TIPO_LABELS.get(valor, valor or padrao)
+
+
+def so_objetos(valor) -> list:
+    """Lista de entradas do relatório, descartando o que não for objeto."""
+    return [x for x in valor if isinstance(x, dict)] if isinstance(valor, list) else []
+
+
+def filtrar_por_tier(novas, tier_max: int) -> list:
+    """Arestas novas até o tier escolhido, ignorando entradas que não são objetos."""
+    if not isinstance(novas, list):
+        return []
+    return [n for n in novas if isinstance(n, dict) and tier_valido(n.get("tier", 5)) <= tier_max]
+
+
 def _lista(valores) -> str:
     if not isinstance(valores, (list, tuple)):
         return ""
@@ -48,8 +78,8 @@ def _lista(valores) -> str:
 
 
 def html_aresta_nova(n: dict) -> str:
-    tier = n.get("tier", 5)
-    css_class, tier_label = TIER_LABELS.get(tier, ("tier-3", f"TIER {tier}"))
+    tier = tier_valido(n.get("tier", 5))
+    css_class, tier_label = TIER_LABELS[tier]
     css_class = css_class if css_class in _CLASSES_TIER else "tier-3"
     tipo = n.get("tipo_sugerido", "")
     temas = _lista(n.get("temas_comuns", []))
@@ -59,7 +89,7 @@ def html_aresta_nova(n: dict) -> str:
   <div class="tier-label">{esc(tier_label)}</div>
   <div class="aresta-par">{esc(n.get('source'))} ↔ {esc(n.get('target'))}</div>
   <div class="aresta-score">Score: {esc(n.get('score'))} · {esc(str(n.get('classificacao', '')).upper())}</div>
-  <div class="aresta-tipo">Tipo sugerido: {esc(TIPO_LABELS.get(tipo, tipo))}</div>
+  <div class="aresta-tipo">Tipo sugerido: {esc(rotulo_tipo(tipo))}</div>
   <div class="aresta-temas">Temas comuns: {temas or '—'}</div>
   {f'<div class="aresta-temas">Jurisdições: {jurs}</div>' if jurs else ''}
 </div>"""
@@ -72,7 +102,7 @@ def html_aresta_confirmada(c: dict) -> str:
 <div class="tier-card tier-3">
   <div class="aresta-par">{esc(c.get('source'))} ↔ {esc(c.get('target'))}</div>
   <div class="aresta-score">Score: {esc(c.get('score'))}</div>
-  <div class="aresta-tipo">Tipo sugerido: {esc(TIPO_LABELS.get(sug, sug))} · Tipo existente: {esc(TIPO_LABELS.get(ex, ex))} · {marca}</div>
+  <div class="aresta-tipo">Tipo sugerido: {esc(rotulo_tipo(sug))} · Tipo existente: {esc(rotulo_tipo(ex))} · {marca}</div>
 </div>"""
 
 

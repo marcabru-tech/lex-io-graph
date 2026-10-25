@@ -7,8 +7,8 @@ from pathlib import Path
 from datetime import datetime
 from lib.constants import APP_NAME, APP_SUBTITLE, APP_VERSION
 from lib.footer import render_footer
-from lib.ipii_pagina import (TIPO_LABELS, esc, html_aresta_confirmada, html_aresta_nova,
-                             ler_total_normas, pct)
+from lib.ipii_pagina import (esc, filtrar_por_tier, html_aresta_confirmada, html_aresta_nova,
+                             ler_total_normas, pct, rotulo_tipo, so_objetos)
 
 st.set_page_config(
     page_title=f"{APP_NAME} — IPII Engine",
@@ -182,7 +182,7 @@ def _texto_completo(item: dict) -> None:
 
 # =============================================================
 if secao == "🆕 Novas arestas descobertas":
-    novas = resultado.get("detalhe_novas", [])
+    novas = so_objetos(resultado.get("detalhe_novas", []))
     st.markdown(f"## {len(novas)} arestas novas descobertas")
     st.markdown(
         "Arestas que o engine detectou mas ainda não existem no grafo. "
@@ -198,7 +198,7 @@ if secao == "🆕 Novas arestas descobertas":
     tier_map = {"Todos": 5, "Tier 1 (≥ 0.75)": 1, "Tier 2 (0.65–0.74)": 2, "Tier 3 (0.55–0.64)": 3}
     tier_max = tier_map[tier_sel]
 
-    filtradas = [n for n in novas if n.get("tier", 5) <= tier_max]
+    filtradas = filtrar_por_tier(novas, tier_max)
     st.markdown(f"**{len(filtradas)}** aresta(s) exibida(s)")
 
     for n in filtradas:
@@ -206,7 +206,7 @@ if secao == "🆕 Novas arestas descobertas":
 
 # =============================================================
 elif secao == "✅ Arestas confirmadas":
-    confirmadas = resultado.get("detalhe_confirmadas", [])
+    confirmadas = so_objetos(resultado.get("detalhe_confirmadas", []))
     st.markdown(f"## {len(confirmadas)} arestas confirmadas pelo engine")
     st.markdown(
         "Arestas que o engine sugeriu e já existem no grafo — validação da precisão do engine."
@@ -216,7 +216,7 @@ elif secao == "✅ Arestas confirmadas":
 
 # =============================================================
 elif secao == "⚠️ Gap do engine":
-    gap = resultado.get("gap_engine", [])
+    gap = so_objetos(resultado.get("gap_engine", []))
     st.markdown(f"## {len(gap)} arestas não detectadas pelo engine")
     st.markdown(
         "Arestas que existem no grafo mas o engine não sugeriu. "
@@ -224,7 +224,7 @@ elif secao == "⚠️ Gap do engine":
         "(ANPD criada por lei, decreto atribui competência)."
     )
     for g in gap:
-        tipo_label = escape(str(TIPO_LABELS.get(g.get("tipo", ""), g.get("tipo", ""))))
+        tipo_label = escape(rotulo_tipo(g.get("tipo", "")))
         resumo = escape(str(g.get("descricao") or ""))
         st.markdown(f"""
 <div class="tier-card tier-3">
@@ -244,7 +244,7 @@ elif secao == "⚠️ Gap do engine":
 
 # =============================================================
 elif secao == "🚫 Fora do IPII":
-    fora = resultado.get("fora_do_ipii", [])
+    fora = so_objetos(resultado.get("fora_do_ipii", []))
     st.markdown(f"## {len(fora)} aresta(s) fora do IPII")
     st.markdown(
         "Relações existentes que envolvem ao menos uma norma excluída da formação de pares "
@@ -255,8 +255,7 @@ elif secao == "🚫 Fora do IPII":
         st.info("Nenhuma aresta fora do IPII neste relatório.")
     for item in fora:
         par = escape(str(item.get("par", "Par não identificado")))
-        tipo_original = str(item.get("tipo", ""))
-        tipo = escape(TIPO_LABELS.get(tipo_original, tipo_original or "Não especificado"))
+        tipo = escape(rotulo_tipo(item.get("tipo"), "Não especificado"))
         descricao = escape(str(item.get("descricao") or ""))
         st.markdown(f"""
 <div class="tier-card tier-3">

@@ -67,3 +67,58 @@ class TestCacheDoPadrao(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestTierEValoresMalformados(unittest.TestCase):
+    def test_tier_invalido_nao_quebra_o_filtro(self):
+        from lib.ipii_pagina import filtrar_por_tier, tier_valido
+        for ruim in ("x", None, [1], {"a": 1}, 0, 9, True, 2.7):
+            self.assertIn(tier_valido(ruim), range(1, 6), ruim)
+        novas = [{"tier": "x"}, {"tier": 1}, {"tier": [2]}, "não é objeto", {"tier": 3}]
+        self.assertEqual(len(filtrar_por_tier(novas, 5)), 4)
+        self.assertEqual(len(filtrar_por_tier(novas, 1)), 1)
+        self.assertEqual(filtrar_por_tier("não é lista", 5), [])
+
+    def test_tipo_lista_ou_dict_nao_quebra(self):
+        from lib.ipii_pagina import rotulo_tipo
+        self.assertEqual(rotulo_tipo("regulamenta"), "Regulamentação")
+        self.assertEqual(rotulo_tipo(["x"]), "['x']")
+        self.assertEqual(rotulo_tipo(None, "Não especificado"), "Não especificado")
+        html = html_aresta_nova({"tipo_sugerido": {"a": 1}, "tier": [1]})
+        self.assertIn("TIER 5", html)
+
+
+class TestPaginaComRelatorioMalformado(unittest.TestCase):
+    """Caminho da página: o relatório vem com tier, tipo e entradas malformados."""
+
+    def test_todas_as_secoes_renderizam_sem_excecao(self):
+        import shutil
+        import streamlit as st
+        from streamlit.testing.v1 import AppTest
+        raiz = Path(__file__).resolve().parent.parent
+        rel = raiz / "data" / "ipii_resultado.json"
+        copia = Path(tempfile.mkdtemp()) / "ipii_resultado.json"
+        shutil.copy(rel, copia)
+        try:
+            dados = json.loads(rel.read_text(encoding="utf-8"))
+            dados["detalhe_novas"] = [{"source": MALICIOSO, "target": "b", "tier": "x", "score": 1,
+                                       "classificacao": "fraca", "tipo_sugerido": ["lista"]},
+                                      {"tier": {"a": 1}}, "texto solto"]
+            dados["detalhe_confirmadas"] = [{"source": "a", "tipo_existente": {"b": 2}}, 7]
+            dados["gap_engine"] = [{"par": "a ↔ b", "tipo": ["x"]}, None]
+            dados["fora_do_ipii"] = [{"par": "c ↔ d", "tipo": {"y": 1}}]
+            dados["precisao"] = "quebrado"
+            rel.write_text(json.dumps(dados, ensure_ascii=False), encoding="utf-8")
+            st.cache_data.clear()
+            at = AppTest.from_file(str(raiz / "pages" / "9_🔬_IPII_Engine.py"), default_timeout=60)
+            at.run()
+            for opcao in at.radio[0].options:
+                at.radio[0].set_value(opcao).run()
+                if at.selectbox:
+                    for tier in at.selectbox[0].options:
+                        at.selectbox[0].set_value(tier).run()
+                        self.assertEqual(len(at.exception), 0, (opcao, tier))
+                self.assertEqual(len(at.exception), 0, opcao)
+        finally:
+            shutil.copy(copia, rel)
+            st.cache_data.clear()
