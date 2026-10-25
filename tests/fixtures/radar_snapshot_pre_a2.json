@@ -1,0 +1,738 @@
+{
+ "_origem": "Recorte congelado de data/radar_legislativo.json no commit c5eef1f (coleta de 23/10/2026, anterior à A2). Usado só por tests/test_radar_a2.py; não atualizar junto com o radar.",
+ "ultima_atualizacao": "2026-10-19T18:24:58.635583",
+ "temas": {
+  "ia": {
+   "termos_monitorados": [
+    "inteligência artificial",
+    "IA generativa",
+    "algoritmo decisão"
+   ],
+   "senado": [
+    {
+     "fonte": "Senado Federal",
+     "id": "172783",
+     "sigla": "PL 750/2026",
+     "ementa": "Institui o Programa Nacional de Monitoramento de Agressores com Uso de Tecnologia por Inteligência Artificial (PNM-IA), com a finalidade de prevenir a violência doméstica; assegurar a efetividade das medidas protetivas de urgência; ampliar a proteção das vítimas por meio do uso de tecnologias digitais e de inteligência artificial; e subsidiar a atuação preventiva e repressiva dos órgãos de segurança pública, do Ministério Público e do Poder Judiciário.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-02-25",
+     "autor": "Senador Eduardo Braga (MDB/AM)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:01.599182"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "172838",
+     "sigla": "PL 846/2026",
+     "ementa": "Institui a Lei de Governança de Inteligência Artificial no Setor Público",
+     "ano": "2026",
+     "status": "Apresentada em 2026-03-02",
+     "autor": "Senador Marcio Bittar (PL/AC)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:01.599377"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "172900",
+     "sigla": "PL 931/2026",
+     "ementa": "Dispõe sobre os princípios éticos, diretrizes de governança, requisitos de transparência e mecanismos de controle aplicáveis ao uso de sistemas de Inteligência Artificial (IA) na área da saúde, e dá outras providências.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-03-04",
+     "autor": "Senadora Dra. Eudócia (PL/AL)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:01.599552"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "174154",
+     "sigla": "PL 2397/2026",
+     "ementa": "Estabelece os parâmetros de ética nacional para o uso da inteligência artificial nas instituições de ensino públicas e privadas e dá outras providências.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-05-14",
+     "autor": "Senador Jader Barbalho (MDB/PA)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:01.602337"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "174521",
+     "sigla": "PL 2991/2026",
+     "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre o crime de manipulação fraudulenta de sistema de inteligência artificial, quando o fato não constituir crime mais grave.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-06-10",
+     "autor": "Senador Eduardo Girão (NOVO/CE)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:01.603362"
+    }
+   ],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2647780",
+     "sigla": "PL 5580/2026",
+     "ementa": "Institui a Política Nacional de Formação de Talentos, destinada ao desenvolvimento de competências, à orientação educacional e profissional e à preparação dos estudantes para as transformações tecnológicas, econômicas e ocupacionais, e dá outras providências.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647780",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:02.889978"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2646413",
+     "sigla": "PL 5366/2026",
+     "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para explicitar que a natureza integralmente sintética do material de violência sexual contra criança ou adolescente, gerado por inteligência artificial, não afasta a tipicidade penal, para tipificar a criação de representações integralmente sintéticas e para incluir o crime de simulação entre os crimes hediondos.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:02.889994"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2646363",
+     "sigla": "PL 5349/2026",
+     "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente) e a Lei no 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para prevenir e mitigar riscos relacionados a aplicações de internet, conteúdos, produtos ou práticas interativos que simulem relacionamentos afetivos.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:02.889998"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2646330",
+     "sigla": "PL 5338/2026",
+     "ementa": "Institui a Lei Sinal de Risco, sobre a comunicação emergencial de situações de risco concreto e grave à vida ou à integridade física identificadas no âmbito de serviços digitais.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:02.890002"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2644599",
+     "sigla": "PL 5178/2026",
+     "ementa": "Institui a Política Nacional de Formação Profissional para Trabalhadores Substituídos por Automação e Inteligência Artificial, estabelece o direito à requalificação tecnológica gratuita, cria incentivos fiscais para a recontratação e dá outras providências.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2644599",
+     "termo_busca": "inteligência artificial",
+     "data_deteccao": "2026-10-19T18:25:02.890005"
+    }
+   ],
+   "lexml": []
+  },
+  "dados": {
+   "termos_monitorados": [
+    "dados pessoais",
+    "LGPD",
+    "privacidade"
+   ],
+   "senado": [],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2648344",
+     "sigla": "PL 5594/2026",
+     "ementa": "Dispõe sobre a transparência patrimonial, fiscal e financeira dos candidatos à Presidência da República, estabelece mecanismos de autorização de acesso a informações protegidas por sigilo e altera a Lei nº 9.504, de 30 de setembro de 1997.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648344",
+     "termo_busca": "dados pessoais",
+     "data_deteccao": "2026-10-19T18:25:04.239649"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2648297",
+     "sigla": "PL 5586/2026",
+     "ementa": "Altera a Lei nº 12.527, de 18 de novembro de 2011, para estabelecer critérios de fundamentação, proporcionalidade, acesso parcial e revisão das restrições de acesso a informações pessoais, assegurando a proteção do interesse público e geral preponderante.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648297",
+     "termo_busca": "dados pessoais",
+     "data_deteccao": "2026-10-19T18:25:04.239661"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2647228",
+     "sigla": "PL 5498/2026",
+     "ementa": "Dispõe sobre medidas complementares de proteção de crianças e adolescentes no uso de redes sociais e altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente).",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647228",
+     "termo_busca": "dados pessoais",
+     "data_deteccao": "2026-10-19T18:25:04.239664"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2646974",
+     "sigla": "PL 5457/2026",
+     "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para assegurar informação sobre cuidado em saúde, confirmação da autoexclusão centralizada e proteção dos dados das pessoas que solicitam a interrupção do acesso a apostas de quota fixa.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646974",
+     "termo_busca": "dados pessoais",
+     "data_deteccao": "2026-10-19T18:25:04.239666"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2646308",
+     "sigla": "PL 5331/2026",
+     "ementa": "Institui o Extrato Profissional Digital, assegura ao trabalhador que presta serviços intermediados por plataforma digital o acesso, a portabilidade e o uso de seu histórico profissional digital e estabelece obrigações às plataformas digitais de intermediação.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646308",
+     "termo_busca": "dados pessoais",
+     "data_deteccao": "2026-10-19T18:25:04.239668"
+    }
+   ],
+   "lexml": []
+  },
+  "plataformas": {
+   "termos_monitorados": [
+    "plataformas digitais",
+    "redes sociais",
+    "moderação de conteúdo"
+   ],
+   "senado": [
+    {
+     "fonte": "Senado Federal",
+     "id": "173290",
+     "sigla": "PL 1355/2026",
+     "ementa": "Altera a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para ampliar o prazo do direito de arrependimento, no caso de contratações realizadas por pessoas idosas em meios eletrônicos, digitais ou remotos, inclusive por intermédio de plataformas digitais, aplicativos ou serviços digitais de intermediação de bens e serviços.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-03-24",
+     "autor": "Senador Marcelo Castro (MDB/PI)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173290",
+     "termo_busca": "plataformas digitais",
+     "data_deteccao": "2026-10-19T18:25:06.592356"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "175170",
+     "sigla": "PL 3707/2026",
+     "ementa": "Dispõe sobre a proteção dos microempreendedores individuais, das microempresas e das empresas de pequeno porte em suas relações contratuais com plataformas digitais de grande porte e dá outras providências.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-07-15",
+     "autor": "Senador Ciro Nogueira (PP/PI)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175170",
+     "termo_busca": "plataformas digitais",
+     "data_deteccao": "2026-10-19T18:25:06.596838"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "175660",
+     "sigla": "PL 5253/2026",
+     "ementa": "Dispõe sobre as relações de trabalho aplicáveis aos trabalhadores que prestam serviços de transporte remunerado privado de passageiros ou de coleta e entrega de bens e mercadorias por meio de plataformas digitais.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-09-01",
+     "autor": "Senador Sérgio Petecão (PSD/AC)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
+     "termo_busca": "plataformas digitais",
+     "data_deteccao": "2026-10-19T18:25:06.598189"
+    }
+   ],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2337417",
+     "sigla": "PL 2768/2022",
+     "ementa": "Dispõe sobre a organização, o funcionamento e a operação das plataformas digitais que oferecem serviços ao público brasileiro e dá outras providências.",
+     "ano": "2022",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2337417",
+     "termo_busca": "plataformas digitais",
+     "data_deteccao": "2026-10-19T18:25:07.268027"
+    }
+   ],
+   "lexml": []
+  },
+  "trabalho_digital": {
+   "termos_monitorados": [
+    "trabalho por aplicativo",
+    "plataformas de trabalho",
+    "riscos psicossociais"
+   ],
+   "senado": [
+    {
+     "fonte": "Senado Federal",
+     "id": "175660",
+     "sigla": "PL 5253/2026",
+     "ementa": "Dispõe sobre as relações de trabalho aplicáveis aos trabalhadores que prestam serviços de transporte remunerado privado de passageiros ou de coleta e entrega de bens e mercadorias por meio de plataformas digitais.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-09-01",
+     "autor": "Senador Sérgio Petecão (PSD/AC)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
+     "termo_busca": "plataformas de trabalho",
+     "data_deteccao": "2026-10-19T18:25:08.962095"
+    }
+   ],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2525925",
+     "sigla": "PL 2911/2025",
+     "ementa": "Dispõe sobre a obrigatoriedade de disponibilização de pontos de apoio para trabalhadores de plataformas digitais de entrega e de transporte individual privado de passageiros",
+     "ano": "2025",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2525925",
+     "termo_busca": "trabalho por aplicativo",
+     "data_deteccao": "2026-10-19T18:25:08.952883"
+    }
+   ],
+   "lexml": []
+  },
+  "infraestrutura_digital": {
+   "termos_monitorados": [
+    "datacenter",
+    "computação em nuvem"
+   ],
+   "senado": [
+    {
+     "fonte": "Senado Federal",
+     "id": "172786",
+     "sigla": "PL 278/2026",
+     "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter (Redata), e a Lei nº 15.211, de 17 de setembro de 2025.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-02-25",
+     "autor": "Câmara dos Deputados",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
+     "termo_busca": "datacenter",
+     "data_deteccao": "2026-10-19T18:25:09.491850"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "175732",
+     "sigla": "PLP 74/2026",
+     "ementa": "Altera a Lei Complementar nº 229, de 30 de março de 2026, para incluir o regime especial de tributação para serviços de datacenter, o programa federal de financiamento de ações de apoio às pessoas com câncer e às pessoas com deficiência, bem como a desoneração do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL) das sociedades resseguradoras locais entre as exceções às regras aplicáveis à concessão de benefícios tributários e altera a Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal).",
+     "ano": "2026",
+     "status": "Apresentada em 2026-09-03",
+     "autor": "Câmara dos Deputados",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
+     "termo_busca": "datacenter",
+     "data_deteccao": "2026-10-19T18:25:09.498615"
+    }
+   ],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2611313",
+     "sigla": "PLP 74/2026",
+     "ementa": "Dispõe sobre regras relativas a benefícios tributários e despesas obrigatórias no exercício de 2026.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
+     "termo_busca": "datacenter",
+     "data_deteccao": "2026-10-19T18:25:10.156687"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2600838",
+     "sigla": "PL 278/2026",
+     "ementa": "Altera a Lei nº 11.196, de 21 de novembro de 2005, para instituir o Regime Especial de Tributação para Serviços de Datacenter – REDATA, e a Lei nº 15.211, de 17 de setembro de 2025.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
+     "termo_busca": "datacenter",
+     "data_deteccao": "2026-10-19T18:25:10.156699"
+    }
+   ],
+   "lexml": []
+  },
+  "minerais_criticos": {
+   "termos_monitorados": [
+    "minerais críticos",
+    "terras raras"
+   ],
+   "senado": [
+    {
+     "fonte": "Senado Federal",
+     "id": "174566",
+     "sigla": "PL 3050/2026",
+     "ementa": "Altera a Lei nº 8.001, de 13 de março de 1990, para destinar pelo menos 50% (cinquenta por cento) dos recursos arrecadados com a Compensação Financeira pela Exploração de Recursos Minerais (CFEM) decorrentes da exploração de minerais classificados como críticos ou estratégicos ao financiamento de políticas públicas de saúde e educação, sendo 25% (vinte e cinco por cento) para cada área.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-06-11",
+     "autor": "Senadora Ana Paula Lobato (PSB/MA)",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
+     "termo_busca": "minerais críticos",
+     "data_deteccao": "2026-10-19T18:25:11.848725"
+    },
+    {
+     "fonte": "Senado Federal",
+     "id": "175446",
+     "sigla": "PLP 114/2026",
+     "ementa": "Dispõe sobre regras para renúncias de receita com o objetivo de mitigar os impactos econômicos causados pelo choque no mercado internacional de energia decorrente do conflito no Oriente Médio e excepcionaliza os benefícios tributários destinados à Política Nacional de Minerais Críticos e Estratégicos, ao Programa de Desenvolvimento da Indústria de Fertilizantes e à realização da Copa do Mundo Feminina, e dá outras providências.",
+     "ano": "2026",
+     "status": "Apresentada em 2026-08-12",
+     "autor": "Câmara dos Deputados",
+     "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
+     "termo_busca": "minerais críticos",
+     "data_deteccao": "2026-10-19T18:25:11.850896"
+    }
+   ],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2621082",
+     "sigla": "PL 2166/2026",
+     "ementa": "Dispõe sobre critérios para o enquadramento de minerais estratégicos no âmbito da Política Nacional de Minerais Críticos e Estratégicos e dá outras providências.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
+     "termo_busca": "minerais críticos",
+     "data_deteccao": "2026-10-19T18:25:12.594249"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2447259",
+     "sigla": "PL 2780/2024",
+     "ementa": "Institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE), o Comitê de Minerais Críticos e Estratégicos (CMCE), vinculado ao Conselho Nacional de Política Mineral, e dá outras providências.",
+     "ano": "2024",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
+     "termo_busca": "minerais críticos",
+     "data_deteccao": "2026-10-19T18:25:12.594260"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2631129",
+     "sigla": "PL 2988/2026",
+     "ementa": "Dispõe sobre a participação de estrangeiros em pessoas jurídicas que explorem recursos minerais classificados como críticos e estratégicos e dá outras providências.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
+     "termo_busca": "terras raras",
+     "data_deteccao": "2026-10-19T18:25:13.328949"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2618506",
+     "sigla": "PL 1984/2026",
+     "ementa": "Altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967, para estabelecer requisitos específicos para a outorga de direitos minerários relativos a minerais estratégicos, e dá outras providências.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
+     "termo_busca": "terras raras",
+     "data_deteccao": "2026-10-19T18:25:13.328962"
+    }
+   ],
+   "lexml": []
+  },
+  "Sustação dos Decretos 12.975 e 12.976/2026": {
+   "termos_monitorados": [
+    "sustação de decreto",
+    "art. 49, V, CF/88",
+    "Decreto 12.975/2026",
+    "Decreto 12.976/2026"
+   ],
+   "senado": [],
+   "camara": [
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626866",
+     "sigla": "PDL 395/2026",
+     "ementa": "Susta parcialmente os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar dispositivos da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet).",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626866",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626867",
+     "sigla": "PDL 396/2026",
+     "ementa": "Susta os Decretos nºs 12.975/2026 e 12.976/2026, que que dispõem sobre a regulamentação do Marco Civil da Internet e sobre deveres das plataformas digitais em matéria de proteção das mulheres no ambiente digital, respectivamente, por extrapolarem os limites do poder regulamentar do Poder Executivo, violarem a reserva legal em matéria de liberdade de expressão e comunicação, e usurparem competência normativa do Congresso Nacional.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626867",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626798",
+     "sigla": "PDL 397/2026",
+     "ementa": "Susta integralmente os efeitos dos Decretos nº 12.975 e nº 12.976, de 2026, que regulamentam a atuação das plataformas digitais, dispõem sobre mecanismos de responsabilização e fiscalização no âmbito do Marco Civil da Internet e estabelecem medidas relacionadas à moderação de conteúdos e ao funcionamento de redes sociais.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626798",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.647299"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626813",
+     "sigla": "PDL 399/2026",
+     "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626813",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.647299"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626819",
+     "sigla": "PDL 400/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que “Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014”.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626819",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626820",
+     "sigla": "PDL 401/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que “Estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.”.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626820",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626827",
+     "sigla": "PDL 402/2026",
+     "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626827",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626829",
+     "sigla": "PDL 403/2026",
+     "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626829",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626854",
+     "sigla": "PDL 406/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres nainternete para o enfrentamento da violência contra mulheres em ambiente digital.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626854",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626855",
+     "sigla": "PDL 407/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626855",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626868",
+     "sigla": "PDL 408/2026",
+     "ementa": "Ficam sustados os efeitos dos Decretos 12.975 e 12.976 de 2026, publicados no D.O.U no dia 21 de maio de 2026, assinados pelo presidente Luiz Inácio Lula da Silva, que atualizam a regulamentação do Marco Civil da Internet e estabelecem novas diretrizes para a proteção de mulheres no ambiente digital.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626868",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626876",
+     "sigla": "PDL 409/2026",
+     "ementa": "Susta Decreto Federal nº 12975, de 20 de maio de 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626876",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626880",
+     "sigla": "PDL 410/2026",
+     "ementa": "Ficam sustados, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos dos Decretos nºs 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados – ANPD no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626880",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626935",
+     "sigla": "PDL 412/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para tratar de hipóteses de discriminação de pacotes de dados na internet, degradação de tráfego, guarda de dados, requisição de informações pela Administração Pública e fiscalização de provedores.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626935",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2626967",
+     "sigla": "PDL 413/2026",
+     "ementa": "Susta a aplicação dos Decretos nº 12.975 e nº 12.976, ambos de 20 de maio de 2026, que dispõem sobre a regulamentação do Marco Civil da Internet (Lei nº 12.965/2014) e estabelecem diretrizes para o ambiente digital.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2626967",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:11.658823"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627017",
+     "sigla": "PDL 454/2026",
+     "ementa": "Ficam sustados, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos dos Decretos 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados (ANPD) no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627017",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627043",
+     "sigla": "PDL 455/2026",
+     "ementa": "Sustam os Decretos Presidenciais nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014, e nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção das mulheres na internet para o enfrentamento da violência contra mulheres no ambiente digital, por exorbitância do poder regulamentar e violação aos limites constitucionais da função regulamentar do Poder Executivo.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627043",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627053",
+     "sigla": "PDL 456/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que “Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.”",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627053",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627056",
+     "sigla": "PDL 457/2026",
+     "ementa": "Susta dispositivos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar a Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet), em razão de extrapolação do poder regulamentar.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627056",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627069",
+     "sigla": "PDL 458/2026",
+     "ementa": "Sustam os efeitos dos Decretos nºs 12.975 e 12.976, de 20 de maio de 2026, editados pelo Poder Executivo, que dispõem sobre deveres de provedores de aplicações de internet e plataformas digitais, moderação de conteúdo, responsabilização de intermediários, mitigação de circulação de conteúdos e competências fiscalizatórias da Autoridade Nacional de Proteção de Dados – ANPD no âmbito da Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627069",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627076",
+     "sigla": "PDL 459/2026",
+     "ementa": "Susta parcialmente os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para regulamentar dispositivos da Lei nº 12.965, de 23 de abril de 2014 (Marco Civil da Internet).",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627076",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627549",
+     "sigla": "PDL 468/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.976, de 20 de maio de 2026, que estabelece diretrizes para a proteção de mulheres na internet e para o enfrentamento da violência contra mulheres em ambiente digital.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627549",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627560",
+     "sigla": "PDL 469/2026",
+     "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os Decretos nº 12.975/2026 e nº 12.976/2026, que dispõem sobre a regulamentação do Marco Civil da Internet e sobre deveres das plataformas digitais na proteção das mulheres no ambiente digital, por extrapolarem o poder regulamentar, violarem a reserva legal e invadirem a competência do Congresso Nacional.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627560",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627789",
+     "sigla": "PDL 477/2026",
+     "ementa": "Susta, nos termos do art. 49, inciso V, da Constituição Federal, os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, para dispor sobre os deveres dos provedores de conexão e de aplicações de internet.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627789",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2627901",
+     "sigla": "PDL 480/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2627901",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2628943",
+     "sigla": "PDL 489/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975, de 20 de maio de 2026, que altera o Decreto nº 8.771, de 11 de maio de 2016, regulamentador da Lei nº 12.965, de 23 de abril de 2014 — Marco Civil da Internet.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2628943",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:12.701164"
+    },
+    {
+     "fonte": "Câmara dos Deputados",
+     "id": "2633132",
+     "sigla": "PDL 617/2026",
+     "ementa": "Susta os efeitos do Decreto nº 12.975 de 2026, que Altera o Decreto nº 8.771, de 11 de maio de 2016, que regulamenta a Lei nº 12.965, de 23 de abril de 2014.",
+     "ano": "2026",
+     "status": "Em tramitação",
+     "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2633132",
+     "termo_busca": "sustação decretos 12.975/12.976",
+     "data_deteccao": "2026-08-15T12:00:13.877382"
+    }
+   ],
+   "lexml": []
+  }
+ }
+}

@@ -2,7 +2,9 @@
 import json
 import tempfile
 import unittest
+from html import escape
 from pathlib import Path
+from unittest import mock
 
 from lib.ipii.tokenizer import _padrao_termo
 from lib.ipii_pagina import html_aresta_confirmada, html_aresta_nova, ler_total_normas, pct
@@ -65,9 +67,6 @@ class TestCacheDoPadrao(unittest.TestCase):
         self.assertIs(_padrao_termo("gdpr"), _padrao_termo("gdpr"))
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class TestTierEValoresMalformados(unittest.TestCase):
     def test_tier_invalido_nao_quebra_o_filtro(self):
@@ -94,33 +93,47 @@ class TestPaginaComRelatorioMalformado(unittest.TestCase):
     """Caminho da página: o relatório vem com tier, tipo e entradas malformados."""
 
     def test_todas_as_secoes_renderizam_sem_excecao(self):
-        import shutil
+        import hashlib
+        import os
         import streamlit as st
         from streamlit.testing.v1 import AppTest
         raiz = Path(__file__).resolve().parent.parent
-        rel = raiz / "data" / "ipii_resultado.json"
-        copia = Path(tempfile.mkdtemp()) / "ipii_resultado.json"
-        shutil.copy(rel, copia)
-        try:
-            dados = json.loads(rel.read_text(encoding="utf-8"))
-            dados["detalhe_novas"] = [{"source": MALICIOSO, "target": "b", "tier": "x", "score": 1,
-                                       "classificacao": "fraca", "tipo_sugerido": ["lista"]},
-                                      {"tier": {"a": 1}}, "texto solto"]
-            dados["detalhe_confirmadas"] = [{"source": "a", "tipo_existente": {"b": 2}}, 7]
-            dados["gap_engine"] = [{"par": "a ↔ b", "tipo": ["x"]}, None]
-            dados["fora_do_ipii"] = [{"par": "c ↔ d", "tipo": {"y": 1}}]
-            dados["precisao"] = "quebrado"
-            rel.write_text(json.dumps(dados, ensure_ascii=False), encoding="utf-8")
+        real = raiz / "data" / "ipii_resultado.json"
+        hash_antes = hashlib.sha256(real.read_bytes()).hexdigest()
+        # Cópia malformada numa pasta temporária, apagada mesmo se o teste falhar.
+        pasta = tempfile.TemporaryDirectory()
+        self.addCleanup(pasta.cleanup)
+        self.addCleanup(st.cache_data.clear)
+        rel = Path(pasta.name) / "ipii_resultado.json"
+        dados = json.loads(real.read_text(encoding="utf-8"))
+        dados["detalhe_novas"] = [{"source": MALICIOSO, "target": "b", "tier": "x", "score": 1,
+                                   "classificacao": "fraca", "tipo_sugerido": ["lista"]},
+                                  {"tier": {"a": 1}}, "texto solto"]
+        dados["detalhe_confirmadas"] = [{"source": "a", "tipo_existente": {"b": 2}}, 7]
+        dados["gap_engine"] = [{"par": "a ↔ b", "tipo": ["x"]}, None]
+        dados["fora_do_ipii"] = [{"par": "c ↔ d", "tipo": {"y": 1}}]
+        dados["precisao"] = "quebrado"
+        rel.write_text(json.dumps(dados, ensure_ascii=False), encoding="utf-8")
+        with mock.patch.dict(os.environ, {"LEXIOGRAPH_IPII_RESULTADO": str(rel)}):
             st.cache_data.clear()
             at = AppTest.from_file(str(raiz / "pages" / "9_🔬_IPII_Engine.py"), default_timeout=60)
             at.run()
+            self.assertEqual(len(at.exception), 0)
+            self.assertTrue(at.radio, "a página não carregou o relatório temporário")
+            vistos = set()
             for opcao in at.radio[0].options:
                 at.radio[0].set_value(opcao).run()
+                vistos.update(m.value for m in at.markdown)
                 if at.selectbox:
                     for tier in at.selectbox[0].options:
                         at.selectbox[0].set_value(tier).run()
                         self.assertEqual(len(at.exception), 0, (opcao, tier))
                 self.assertEqual(len(at.exception), 0, opcao)
-        finally:
-            shutil.copy(copia, rel)
-            st.cache_data.clear()
+            # A página leu a cópia malformada (escapada), não o arquivo real.
+            self.assertTrue(any(escape(MALICIOSO) in v for v in vistos),
+                            "a página não leu o arquivo temporário")
+        self.assertEqual(hashlib.sha256(real.read_bytes()).hexdigest(), hash_antes)
+
+
+if __name__ == "__main__":
+    unittest.main()
