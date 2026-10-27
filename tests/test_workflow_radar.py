@@ -3,7 +3,9 @@ import unittest
 from pathlib import Path
 
 WF = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "update-radar.yml").read_text(encoding="utf-8")
-PASSOS = WF.split("# GOVERNANÇA")[0]
+_PARTES = WF.split("# GOVERNANÇA")
+assert len(_PARTES) == 2, "Sentinela '# GOVERNANÇA' não encontrada (ou repetida) no workflow do Radar."
+PASSOS = _PARTES[0]
 
 
 class TestWorkflowRadar(unittest.TestCase):
@@ -15,6 +17,7 @@ class TestWorkflowRadar(unittest.TestCase):
         self.assertIn('git push origin "$RAMO"', PASSOS)
         self.assertIn("gh pr create --base main", PASSOS)
         self.assertIn('gh pr merge "$RAMO" --squash --delete-branch', PASSOS)
+        self.assertIn("for TENTATIVA in 1 2 3 4 5", PASSOS)  # tolera a PR ainda não mesclável
         self.assertIn("pull-requests: write", PASSOS)
 
     def test_travas_continuam_antes_do_commit(self):

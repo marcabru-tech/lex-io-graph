@@ -102,9 +102,18 @@ jobs:
           gh pr create --base main --head "$RAMO" \
             --title "chore(radar): snapshot automático $(date +'%Y-%m-%d')" \
             --body "Snapshot gerado pela execução ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}. Validado (python -m lib.validacao --radar) e restrito a data/radar_legislativo.json pela trava de escopo (ADR 006). Mesclado automaticamente por este job."
-          gh pr merge "$RAMO" --squash --delete-branch
-
-          echo "Snapshot mesclado em main via PR."
+          # Logo após a criação, o GitHub pode ainda estar calculando se a PR é
+          # mesclável; tenta até 5 vezes antes de desistir com erro visível.
+          for TENTATIVA in 1 2 3 4 5; do
+            if gh pr merge "$RAMO" --squash --delete-branch; then
+              echo "Snapshot mesclado em main via PR."
+              exit 0
+            fi
+            echo "Merge ainda não disponível (tentativa $TENTATIVA de 5); aguardando 10 s."
+            sleep 10
+          done
+          echo "::error::A PR do snapshot foi criada, mas não pôde ser mesclada. Mesclar manualmente: $RAMO"
+          exit 1
 
       - name: Sinalizar falha do coletor
         if: steps.coletor.outcome == 'failure'
