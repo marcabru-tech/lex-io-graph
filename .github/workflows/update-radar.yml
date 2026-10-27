@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-24.04  # fixado: ubuntu-latest migra para Ubuntu 26 em 19/10/2026
     timeout-minutes: 20
     permissions:
-      contents: write       # Commit direto em main, restrito a data/radar_legislativo.json
+      contents: write       # Branch do snapshot, restrita a data/radar_legislativo.json
                             # pelo passo "Trava de escopo" abaixo (ADR 006).
+      pull-requests: write  # A main exige PR (ruleset "protege-main", 23/10/2026):
+                            # o snapshot entra por PR aberta e mesclada neste job.
 
     steps:
       # v5 e v6 rodam em Node24: some o aviso de deprecação do Node20
@@ -75,9 +77,11 @@ jobs:
 
       - name: Commitar snapshot se houve mudança
         if: steps.frescor.outputs.fresco != 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # git diff --quiet retorna 0 se NÃO há mudança, 1 se há.
-          # O 'if' abaixo evita commit vazio quando o radar não achou nada novo.
+          # O 'if' abaixo evita PR vazia quando o radar não achou nada novo.
           if git diff --quiet data/radar_legislativo.json; then
             echo "Nenhuma novidade detectada. Radar sem alterações."
             exit 0
@@ -86,16 +90,30 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # A main é protegida e só aceita mudanças por PR (ruleset "protege-main").
+          # O snapshot já passou pela validação e pela trava de escopo acima; a PR
+          # é aberta e mesclada aqui mesmo, para não acumular PRs abertas (ADR 006).
+          RAMO="radar/snapshot-$(date +'%Y-%m-%d')-${GITHUB_RUN_ID}"
+          git checkout -b "$RAMO"
           git add data/radar_legislativo.json
           git commit -m "chore(radar): snapshot automático $(date +'%Y-%m-%d')"
+          git push origin "$RAMO"
 
-          # Rebase antes do push evita falha se alguém commitou em main
-          # enquanto o radar rodava. A trava de escopo já garantiu que
-          # nada além do snapshot foi alterado.
-          git pull --rebase origin main
-          git push origin main
-
-          echo "Snapshot atualizado em main."
+          gh pr create --base main --head "$RAMO" \
+            --title "chore(radar): snapshot automático $(date +'%Y-%m-%d')" \
+            --body "Snapshot gerado pela execução ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}. Validado (python -m lib.validacao --radar) e restrito a data/radar_legislativo.json pela trava de escopo (ADR 006). Mesclado automaticamente por este job."
+          # Logo após a criação, o GitHub pode ainda estar calculando se a PR é
+          # mesclável; tenta até 5 vezes antes de desistir com erro visível.
+          for TENTATIVA in 1 2 3 4 5; do
+            if gh pr merge "$RAMO" --squash --delete-branch; then
+              echo "Snapshot mesclado em main via PR."
+              exit 0
+            fi
+            echo "Merge ainda não disponível (tentativa $TENTATIVA de 5); aguardando 10 s."
+            sleep 10
+          done
+          echo "::error::A PR do snapshot foi criada, mas não pôde ser mesclada. Mesclar manualmente: $RAMO"
+          exit 1
 
       - name: Sinalizar falha do coletor
         if: steps.coletor.outcome == 'failure'
@@ -106,14 +124,20 @@ jobs:
 # ─────────────────────────────────────────────────────────────────────
 # GOVERNANÇA — ver docs/adr/006-ingestao-automatizada-de-dados.md
 #
-# O radar é a única exceção ao fluxo de PR do ADR 005. A exceção é
-# estreita: um arquivo, validado antes do commit, com proveniência
+# O radar é a única exceção à revisão humana prévia do ADR 005. A exceção
+# é estreita: um arquivo, validado antes do commit, com proveniência
 # gravada no próprio snapshot (bloco "proveniencia": executor, URL da
 # execução, hash do conteúdo, estado e contagem por fonte).
 #
-# Por que não PR: PRs abertas com o GITHUB_TOKEN não disparam outros
-# workflows, então a validação não rodaria sem um token pessoal; e o
-# fluxo por PR já foi tentado em jul-ago/2026 e acumulou PRs sem merge.
+# Desde 27/10/2026 o snapshot entra por PR aberta e mesclada pelo próprio
+# job, porque a main passou a exigir PR (ruleset "protege-main", criado em
+# 23/10/2026); o push direto de 26/10/2026 foi recusado. A validação continua
+# acontecendo antes, dentro deste job.
+#
+# Por que a PR é mesclada no mesmo job, e não deixada para revisão: PRs
+# abertas com o GITHUB_TOKEN não disparam outros workflows, então a
+# validação precisa rodar aqui; e o fluxo de PR aguardando merge já foi
+# tentado em jul-ago/2026 e acumulou PRs sem merge.
 # O juízo humano acontece depois, quando uma proposição entra em
 # normas.json: o radar alerta, o curador decide.
 # ─────────────────────────────────────────────────────────────────────

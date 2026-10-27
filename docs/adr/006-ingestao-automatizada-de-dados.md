@@ -45,3 +45,25 @@ precisa ser auditável.
 PR automática com CI e auto-merge. Rejeitada por exigir token pessoal, por depender de
 configuração que o ADR 005 previa mas não estava ativa, e por repetir o modo de falha observado
 em jul-ago/2026 caso o auto-merge não esteja configurado.
+
+## Emenda — 27/10/2026
+
+A coleta agendada de 26/10/2026 coletou, validou e passou pela trava de escopo, mas o push
+direto em `main` foi recusado: em 23/10/2026 o repositório passou a ter o ruleset
+`protege-main`, que exige PR para qualquer mudança em `main`. O item 1 da decisão ficou
+inexequível.
+
+Ajuste, sem mudar o escopo da exceção:
+
+1. O robô grava o snapshot num ramo `radar/snapshot-<data>-<execução>`, abre uma PR para
+   `main` e a mescla (squash) no mesmo job, com o `GITHUB_TOKEN`.
+2. As duas travas (validação e escopo) continuam antes do commit, dentro do job. Como PRs
+   abertas pelo `GITHUB_TOKEN` não disparam outros workflows, a validação não pode depender
+   do CI da PR.
+3. A PR é mesclada na hora, para não repetir o acúmulo de PRs de jul-ago/2026. Ela deixa
+   registro auditável de cada snapshot.
+4. Pré-requisito de configuração: em Settings → Actions → General → Workflow permissions,
+   marcar "Allow GitHub Actions to create and approve pull requests". Sem isso, a criação da
+   PR falha e o job termina em erro visível.
+
+Os itens 2 a 5 da decisão original não mudam.
