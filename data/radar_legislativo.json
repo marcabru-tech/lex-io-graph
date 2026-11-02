@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-27T15:33:22.332003",
+  "ultima_atualizacao": "2026-11-02T21:27:23.216510",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -19,7 +19,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:37.584059",
+          "data_deteccao": "2026-11-02T21:27:26.017624",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -35,7 +35,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:37.584220",
+          "data_deteccao": "2026-11-02T21:27:26.017785",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -51,7 +51,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:37.584408",
+          "data_deteccao": "2026-11-02T21:27:26.017945",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -67,7 +67,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:37.587028",
+          "data_deteccao": "2026-11-02T21:27:26.020530",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -83,7 +83,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:37.587972",
+          "data_deteccao": "2026-11-02T21:27:26.021456",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -100,7 +100,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648394",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:38.885456",
+          "data_deteccao": "2026-11-02T21:27:27.394428",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -115,7 +115,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647780",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:38.885483",
+          "data_deteccao": "2026-11-02T21:27:27.394459",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -130,7 +130,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:38.885517",
+          "data_deteccao": "2026-11-02T21:27:27.394532",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -145,7 +145,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:38.885537",
+          "data_deteccao": "2026-11-02T21:27:27.394557",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -160,7 +160,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:38.885552",
+          "data_deteccao": "2026-11-02T21:27:27.394573",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -186,7 +186,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648344",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:40.610483",
+          "data_deteccao": "2026-11-02T21:27:29.101858",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -201,7 +201,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648297",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:40.610507",
+          "data_deteccao": "2026-11-02T21:27:29.101885",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -216,7 +216,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647228",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:40.610522",
+          "data_deteccao": "2026-11-02T21:27:29.101901",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -231,7 +231,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646974",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:40.610543",
+          "data_deteccao": "2026-11-02T21:27:29.101923",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -246,7 +246,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646308",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:40.610559",
+          "data_deteccao": "2026-11-02T21:27:29.101938",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -272,7 +272,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173870",
           "termo_busca": "criança adolescente digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:41.446419",
+          "data_deteccao": "2026-11-02T21:27:30.110258",
           "termos_busca": [
             "criança adolescente digital"
           ]
@@ -288,7 +288,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175985",
           "termo_busca": "criança adolescente digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:41.451367",
+          "data_deteccao": "2026-11-02T21:27:30.115346",
           "termos_busca": [
             "criança adolescente digital"
           ]
@@ -315,7 +315,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173290",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:42.934425",
+          "data_deteccao": "2026-11-02T21:27:31.374588",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -331,7 +331,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175170",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:42.938505",
+          "data_deteccao": "2026-11-02T21:27:31.378738",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -347,7 +347,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:42.939737",
+          "data_deteccao": "2026-11-02T21:27:31.379946",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -364,7 +364,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2358065",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:43.533732",
+          "data_deteccao": "2026-11-02T21:27:32.144129",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -379,7 +379,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2337417",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:43.533765",
+          "data_deteccao": "2026-11-02T21:27:32.144163",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -405,7 +405,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas de trabalho",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:45.102727",
+          "data_deteccao": "2026-11-02T21:27:34.074420",
           "termos_busca": [
             "plataformas de trabalho"
           ]
@@ -443,7 +443,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:45.725013",
+          "data_deteccao": "2026-11-02T21:27:34.737257",
           "termos_busca": [
             "datacenter"
           ]
@@ -459,7 +459,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:45.731222",
+          "data_deteccao": "2026-11-02T21:27:34.743607",
           "termos_busca": [
             "datacenter"
           ]
@@ -476,7 +476,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
           "termo_busca": "datacenter",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:46.342694",
+          "data_deteccao": "2026-11-02T21:27:35.362313",
           "termos_busca": [
             "datacenter"
           ]
@@ -491,7 +491,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:46.342722",
+          "data_deteccao": "2026-11-02T21:27:35.362345",
           "termos_busca": [
             "datacenter"
           ]
@@ -506,7 +506,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641048",
           "termo_busca": "computação em nuvem",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:46.942233",
+          "data_deteccao": "2026-11-02T21:27:36.044467",
           "termos_busca": [
             "computação em nuvem"
           ]
@@ -521,7 +521,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641047",
           "termo_busca": "computação em nuvem",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:46.942261",
+          "data_deteccao": "2026-11-02T21:27:36.044555",
           "termos_busca": [
             "computação em nuvem"
           ]
@@ -546,7 +546,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2562481",
           "termo_busca": "mercados digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:47.654760",
+          "data_deteccao": "2026-11-02T21:27:36.972186",
           "termos_busca": [
             "mercados digitais"
           ]
@@ -571,7 +571,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:48.332917",
+          "data_deteccao": "2026-11-02T21:27:37.916517",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -587,7 +587,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:48.334950",
+          "data_deteccao": "2026-11-02T21:27:37.918496",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -604,7 +604,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:48.944471",
+          "data_deteccao": "2026-11-02T21:27:38.639751",
           "termos_busca": [
             "minerais críticos",
             "terras raras"
@@ -620,7 +620,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:48.944501",
+          "data_deteccao": "2026-11-02T21:27:38.639776",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -635,7 +635,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
           "termo_busca": "terras raras",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:49.586740",
+          "data_deteccao": "2026-11-02T21:27:39.228656",
           "termos_busca": [
             "terras raras"
           ]
@@ -650,7 +650,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
           "termo_busca": "terras raras",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-10-27T15:33:49.586789",
+          "data_deteccao": "2026-11-02T21:27:39.228697",
           "termos_busca": [
             "terras raras"
           ]
@@ -675,7 +675,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2552522",
           "termo_busca": "soberania digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.182905",
+          "data_deteccao": "2026-11-02T21:27:39.968093",
           "termos_busca": [
             "soberania digital"
           ]
@@ -700,7 +700,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172821",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.853541",
+          "data_deteccao": "2026-11-02T21:27:40.865082",
           "termos_busca": [
             "aprova o texto do acordo",
             "Mercosul"
@@ -717,7 +717,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172822",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.853568",
+          "data_deteccao": "2026-11-02T21:27:40.865119",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -733,7 +733,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172823",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.853586",
+          "data_deteccao": "2026-11-02T21:27:40.865140",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -749,7 +749,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174513",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.857234",
+          "data_deteccao": "2026-11-02T21:27:40.868790",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -765,7 +765,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174726",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:50.857739",
+          "data_deteccao": "2026-11-02T21:27:40.869277",
           "termos_busca": [
             "aprova o texto do acordo",
             "Mercosul"
@@ -782,7 +782,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173375",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:51.531498",
+          "data_deteccao": "2026-11-02T21:27:41.480519",
           "termos_busca": [
             "Mercosul"
           ]
@@ -798,7 +798,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174727",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:51.534210",
+          "data_deteccao": "2026-11-02T21:27:41.483208",
           "termos_busca": [
             "Mercosul"
           ]
@@ -814,7 +814,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174759",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:51.534234",
+          "data_deteccao": "2026-11-02T21:27:41.483231",
           "termos_busca": [
             "Mercosul"
           ]
@@ -831,7 +831,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647289",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:52.145096",
+          "data_deteccao": "2026-11-02T21:27:42.078421",
           "termos_busca": [
             "Mercosul"
           ]
@@ -846,7 +846,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642748",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:52.145116",
+          "data_deteccao": "2026-11-02T21:27:42.078449",
           "termos_busca": [
             "Mercosul"
           ]
@@ -861,7 +861,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2630667",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:52.145128",
+          "data_deteccao": "2026-11-02T21:27:42.078463",
           "termos_busca": [
             "Mercosul"
           ]
@@ -876,7 +876,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2620905",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:52.145143",
+          "data_deteccao": "2026-11-02T21:27:42.078521",
           "termos_busca": [
             "Mercosul"
           ]
@@ -891,7 +891,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2539121",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-10-27T15:33:52.145156",
+          "data_deteccao": "2026-11-02T21:27:42.078538",
           "termos_busca": [
             "Mercosul"
           ]
@@ -1233,10 +1233,10 @@
     }
   },
   "proveniencia": {
-    "coletado_em": "2026-10-27T15:33:22.332003",
+    "coletado_em": "2026-11-02T21:27:23.216510",
     "executor": "github-actions",
-    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/40532095803",
-    "sha256_temas": "e19acd7667fdeb2b27a5b29b2a7a2b1b044ebd686b7a2dbbe014f10736e094fa",
+    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/41528471617",
+    "sha256_temas": "340fc6447c8f00c9a9e676ccaa2a97ebec87bf0e571e44be213288eaac2a88a6",
     "fontes": {
       "senado": {
         "estado": "parcial",
@@ -1257,67 +1257,6 @@
       }
     }
   },
-  "novidades_detectadas": [
-    {
-      "tema": "plataformas",
-      "fonte": "Câmara dos Deputados",
-      "sigla": "PL 2120/2023",
-      "ementa": "Institui o Marco Legal das Plataformas Digitais (MLP) e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2358065",
-      "data_deteccao": "2026-10-27T15:33:43.533732",
-      "chave": "PL 2120/2023",
-      "identidades_novas": [
-        [
-          "PL 2120/2023",
-          "camara"
-        ]
-      ]
-    },
-    {
-      "tema": "infraestrutura_digital",
-      "fonte": "Câmara dos Deputados",
-      "sigla": "PL 4364/2026",
-      "ementa": "Altera a Lei nº 14.133, de 1º de abril de 2021, para estabelecer diretrizes aplicáveis às contratações de serviços de computação em nuvem pela administração pública federal, fortalecer a soberania digital brasileira, incentivar o desenvolvimento da infraestrutura tecnológica nacional e utilizar o poder de compra do Estado como instrumento de desenvolvimento científico, tecnológico e industrial.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641048",
-      "data_deteccao": "2026-10-27T15:33:46.942233",
-      "chave": "PL 4364/2026",
-      "identidades_novas": [
-        [
-          "PL 4364/2026",
-          "camara"
-        ]
-      ]
-    },
-    {
-      "tema": "infraestrutura_digital",
-      "fonte": "Câmara dos Deputados",
-      "sigla": "PL 4363/2026",
-      "ementa": "Institui a Política Nacional de Computação em Nuvem Soberana da Região Norte, estabelece diretrizes para incentivo à instalação de infraestrutura de armazenamento, processamento e segurança de dados na Região Norte, fortalece a soberania digital, a conectividade estratégica e o desenvolvimento tecnológico regional, e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641047",
-      "data_deteccao": "2026-10-27T15:33:46.942261",
-      "chave": "PL 4363/2026",
-      "identidades_novas": [
-        [
-          "PL 4363/2026",
-          "camara"
-        ]
-      ]
-    },
-    {
-      "tema": "soberania_digital",
-      "fonte": "Câmara dos Deputados",
-      "sigla": "PL 4218/2025",
-      "ementa": "Institui a Política Nacional de Soberania Digital (PNSD), estabelece o marco regulatório para o desenvolvimento tecnológico e a segurança digital do Brasil, e dá outras providências.",
-      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2552522",
-      "data_deteccao": "2026-10-27T15:33:50.182905",
-      "chave": "PL 4218/2025",
-      "identidades_novas": [
-        [
-          "PL 4218/2025",
-          "camara"
-        ]
-      ]
-    }
-  ],
-  "total_novidades": 4
+  "novidades_detectadas": [],
+  "total_novidades": 0
 }
