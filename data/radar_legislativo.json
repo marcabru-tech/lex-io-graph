@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-02T21:27:23.216510",
+  "ultima_atualizacao": "2026-11-09T21:59:03.116599",
   "temas": {
     "ia": {
       "termos_monitorados": [
@@ -19,7 +19,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172783",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:26.017624",
+          "data_deteccao": "2026-11-09T21:59:05.765721",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -35,7 +35,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172838",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:26.017785",
+          "data_deteccao": "2026-11-09T21:59:05.765908",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -51,7 +51,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172900",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:26.017945",
+          "data_deteccao": "2026-11-09T21:59:05.766106",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -67,7 +67,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174154",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:26.020530",
+          "data_deteccao": "2026-11-09T21:59:05.768443",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -83,13 +83,58 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174521",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:26.021456",
+          "data_deteccao": "2026-11-09T21:59:05.769181",
           "termos_busca": [
             "inteligência artificial"
           ]
         }
       ],
       "camara": [
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2649761",
+          "sigla": "PL 5729/2026",
+          "ementa": "Institui a Lei Anticrime Deepfake, estabelece medidas penais, processuais e de investigação destinadas à repressão de fraudes, extorsões e organizações criminosas que utilizem inteligência artificial, deepfakes, clonagem de voz ou manipulação artificial de identidade, dispõe sobre mecanismos de preservação e rastreabilidade de evidências digitais, cria protocolo nacional de resposta emergencial a fraudes tecnológicas e estabelece medidas de bloqueio, recuperação e perda de ativos relacionados a esses crimes.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649761",
+          "termo_busca": "inteligência artificial",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:09.161403",
+          "termos_busca": [
+            "inteligência artificial"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2649657",
+          "sigla": "PL 5716/2026",
+          "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para aumentar a pena do estelionato e dos crimes de falsidade documental praticados com o uso de inteligência artificial ou de conteúdo sintético.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649657",
+          "termo_busca": "inteligência artificial",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:09.161466",
+          "termos_busca": [
+            "inteligência artificial"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2649656",
+          "sigla": "PL 5715/2026",
+          "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para qualificar o crime de fraude em certame de interesse público praticado com uso de dispositivo eletrônico ou de ferramenta de inteligência artificial e aumentar a pena de quem fornece o equipamento ou o serviço, e estabelece medidas de prevenção a serem adotadas pelos organizadores de certames.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649656",
+          "termo_busca": "inteligência artificial",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:09.161486",
+          "termos_busca": [
+            "inteligência artificial"
+          ]
+        },
         {
           "fonte": "Câmara dos Deputados",
           "id": "2648394",
@@ -100,7 +145,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648394",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:27.394428",
+          "data_deteccao": "2026-11-09T21:59:09.161499",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -115,52 +160,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647780",
           "termo_busca": "inteligência artificial",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:27.394459",
-          "termos_busca": [
-            "inteligência artificial"
-          ]
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646413",
-          "sigla": "PL 5366/2026",
-          "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para explicitar que a natureza integralmente sintética do material de violência sexual contra criança ou adolescente, gerado por inteligência artificial, não afasta a tipicidade penal, para tipificar a criação de representações integralmente sintéticas e para incluir o crime de simulação entre os crimes hediondos.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646413",
-          "termo_busca": "inteligência artificial",
-          "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:27.394532",
-          "termos_busca": [
-            "inteligência artificial"
-          ]
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646363",
-          "sigla": "PL 5349/2026",
-          "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente) e a Lei no 12.965, de 23 de abril de 2014 (Marco Civil da Internet), para prevenir e mitigar riscos relacionados a aplicações de internet, conteúdos, produtos ou práticas interativos que simulem relacionamentos afetivos.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646363",
-          "termo_busca": "inteligência artificial",
-          "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:27.394557",
-          "termos_busca": [
-            "inteligência artificial"
-          ]
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646330",
-          "sigla": "PL 5338/2026",
-          "ementa": "Institui a Lei Sinal de Risco, sobre a comunicação emergencial de situações de risco concreto e grave à vida ou à integridade física identificadas no âmbito de serviços digitais.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646330",
-          "termo_busca": "inteligência artificial",
-          "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:27.394573",
+          "data_deteccao": "2026-11-09T21:59:09.161512",
           "termos_busca": [
             "inteligência artificial"
           ]
@@ -178,6 +178,36 @@
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
+          "id": "2651068",
+          "sigla": "PL 5770/2026",
+          "ementa": "Institui a Lei do Nexo Protetivo Previdenciário da Mulher e acrescenta dispositivos à Lei nº 8.213, de 24 de julho de 1991, para reconhecer, para fins de dispensa de carência dos benefícios por incapacidade, a violência doméstica e familiar contra a mulher como acidente de qualquer natureza ou causa quando dela decorrer incapacidade física ou mental, estabelecer critérios para a comprovação do nexo causal ou concausal, assegurar avaliação médico-pericial livre de estereótipos e de revitimização, proteger dados pessoais sensíveis da segurada e disciplinar a articulação com a ação regressiva previdenciária contra o responsável pela violência.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2651068",
+          "termo_busca": "dados pessoais",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:11.550881",
+          "termos_busca": [
+            "dados pessoais"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2649761",
+          "sigla": "PL 5729/2026",
+          "ementa": "Institui a Lei Anticrime Deepfake, estabelece medidas penais, processuais e de investigação destinadas à repressão de fraudes, extorsões e organizações criminosas que utilizem inteligência artificial, deepfakes, clonagem de voz ou manipulação artificial de identidade, dispõe sobre mecanismos de preservação e rastreabilidade de evidências digitais, cria protocolo nacional de resposta emergencial a fraudes tecnológicas e estabelece medidas de bloqueio, recuperação e perda de ativos relacionados a esses crimes.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649761",
+          "termo_busca": "dados pessoais",
+          "termo_na_ementa": false,
+          "data_deteccao": "2026-11-09T21:59:11.550912",
+          "termos_busca": [
+            "dados pessoais"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
           "id": "2648344",
           "sigla": "PL 5594/2026",
           "ementa": "Dispõe sobre a transparência patrimonial, fiscal e financeira dos candidatos à Presidência da República, estabelece mecanismos de autorização de acesso a informações protegidas por sigilo e altera a Lei nº 9.504, de 30 de setembro de 1997.",
@@ -186,7 +216,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648344",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:29.101858",
+          "data_deteccao": "2026-11-09T21:59:11.550925",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -201,7 +231,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2648297",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:29.101885",
+          "data_deteccao": "2026-11-09T21:59:11.550938",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -216,37 +246,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647228",
           "termo_busca": "dados pessoais",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:29.101901",
-          "termos_busca": [
-            "dados pessoais"
-          ]
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646974",
-          "sigla": "PL 5457/2026",
-          "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para assegurar informação sobre cuidado em saúde, confirmação da autoexclusão centralizada e proteção dos dados das pessoas que solicitam a interrupção do acesso a apostas de quota fixa.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646974",
-          "termo_busca": "dados pessoais",
-          "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:29.101923",
-          "termos_busca": [
-            "dados pessoais"
-          ]
-        },
-        {
-          "fonte": "Câmara dos Deputados",
-          "id": "2646308",
-          "sigla": "PL 5331/2026",
-          "ementa": "Institui o Extrato Profissional Digital, assegura ao trabalhador que presta serviços intermediados por plataforma digital o acesso, a portabilidade e o uso de seu histórico profissional digital e estabelece obrigações às plataformas digitais de intermediação.",
-          "ano": "2026",
-          "status": "Em tramitação",
-          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2646308",
-          "termo_busca": "dados pessoais",
-          "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:29.101938",
+          "data_deteccao": "2026-11-09T21:59:11.550949",
           "termos_busca": [
             "dados pessoais"
           ]
@@ -272,7 +272,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173870",
           "termo_busca": "criança adolescente digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:30.110258",
+          "data_deteccao": "2026-11-09T21:59:13.051778",
           "termos_busca": [
             "criança adolescente digital"
           ]
@@ -288,7 +288,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175985",
           "termo_busca": "criança adolescente digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:30.115346",
+          "data_deteccao": "2026-11-09T21:59:13.056030",
           "termos_busca": [
             "criança adolescente digital"
           ]
@@ -315,7 +315,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173290",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:31.374588",
+          "data_deteccao": "2026-11-09T21:59:15.225890",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -331,7 +331,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175170",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:31.378738",
+          "data_deteccao": "2026-11-09T21:59:15.229266",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -347,7 +347,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:31.379946",
+          "data_deteccao": "2026-11-09T21:59:15.230282",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -364,7 +364,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2358065",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:32.144129",
+          "data_deteccao": "2026-11-09T21:59:16.355986",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -379,7 +379,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2337417",
           "termo_busca": "plataformas digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:32.144163",
+          "data_deteccao": "2026-11-09T21:59:16.356012",
           "termos_busca": [
             "plataformas digitais"
           ]
@@ -405,7 +405,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175660",
           "termo_busca": "plataformas de trabalho",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:34.074420",
+          "data_deteccao": "2026-11-09T21:59:19.191937",
           "termos_busca": [
             "plataformas de trabalho"
           ]
@@ -443,7 +443,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172786",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:34.737257",
+          "data_deteccao": "2026-11-09T21:59:20.626730",
           "termos_busca": [
             "datacenter"
           ]
@@ -459,7 +459,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175732",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:34.743607",
+          "data_deteccao": "2026-11-09T21:59:20.631873",
           "termos_busca": [
             "datacenter"
           ]
@@ -476,7 +476,22 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2611313",
           "termo_busca": "datacenter",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:35.362313",
+          "data_deteccao": "2026-11-09T21:59:21.873071",
+          "termos_busca": [
+            "datacenter"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2602249",
+          "sigla": "PLP 23/2026",
+          "ementa": "Institui a Contribuição de Intervenção no Domínio Econômico incidente sobre Serviços de Datacenter (CIDE–DataCenter); majora as alíquotas da CSLL, do PIS/Pasep e da Cofins aplicáveis ao setor; revoga benefícios fiscais federais e veda a concessão de novos incentivos destinados à instalação, expansão ou operação de datacenters; e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2602249",
+          "termo_busca": "datacenter",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:21.873108",
           "termos_busca": [
             "datacenter"
           ]
@@ -491,7 +506,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600838",
           "termo_busca": "datacenter",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:35.362345",
+          "data_deteccao": "2026-11-09T21:59:21.873119",
           "termos_busca": [
             "datacenter"
           ]
@@ -506,7 +521,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641048",
           "termo_busca": "computação em nuvem",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:36.044467",
+          "data_deteccao": "2026-11-09T21:59:23.232013",
           "termos_busca": [
             "computação em nuvem"
           ]
@@ -521,7 +536,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641047",
           "termo_busca": "computação em nuvem",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:36.044555",
+          "data_deteccao": "2026-11-09T21:59:23.232039",
           "termos_busca": [
             "computação em nuvem"
           ]
@@ -546,7 +561,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2562481",
           "termo_busca": "mercados digitais",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:36.972186",
+          "data_deteccao": "2026-11-09T21:59:24.305780",
           "termos_busca": [
             "mercados digitais"
           ]
@@ -571,7 +586,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174566",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:37.916517",
+          "data_deteccao": "2026-11-09T21:59:25.184510",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -587,7 +602,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175446",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:37.918496",
+          "data_deteccao": "2026-11-09T21:59:25.186164",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -604,7 +619,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2621082",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:38.639751",
+          "data_deteccao": "2026-11-09T21:59:26.478390",
           "termos_busca": [
             "minerais críticos",
             "terras raras"
@@ -620,7 +635,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259",
           "termo_busca": "minerais críticos",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:38.639776",
+          "data_deteccao": "2026-11-09T21:59:26.478414",
           "termos_busca": [
             "minerais críticos"
           ]
@@ -635,7 +650,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2631129",
           "termo_busca": "terras raras",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:39.228656",
+          "data_deteccao": "2026-11-09T21:59:28.035545",
           "termos_busca": [
             "terras raras"
           ]
@@ -650,7 +665,22 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2618506",
           "termo_busca": "terras raras",
           "termo_na_ementa": false,
-          "data_deteccao": "2026-11-02T21:27:39.228697",
+          "data_deteccao": "2026-11-09T21:59:28.035579",
+          "termos_busca": [
+            "terras raras"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2617957",
+          "sigla": "PL 1939/2026",
+          "ementa": "Institui o Regime Nacional de Proteção dos Minerais Estratégicos (RNPME); dispõe sobre o controle de direitos minerários e de operações societárias envolvendo minerais estratégicos; cria o Fundo Nacional Estratégico de Defesa e Desenvolvimento Tecnológico (FNEDDT); amplia competências da Indústrias Nucleares do Brasil S.A. (INB) para atuação estratégica em minerais estratégicos; altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967 (Código de Mineração), a Lei nº 6.189, de 16 de dezembro de 1974, e a Lei nº 13.575, de 26 de dezembro de 2017; e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2617957",
+          "termo_busca": "terras raras",
+          "termo_na_ementa": false,
+          "data_deteccao": "2026-11-09T21:59:28.035599",
           "termos_busca": [
             "terras raras"
           ]
@@ -667,6 +697,36 @@
       "camara": [
         {
           "fonte": "Câmara dos Deputados",
+          "id": "2650116",
+          "sigla": "PL 5746/2026",
+          "ementa": "Dispõe sobre a Política Nacional de Soberania Digital, estabelece diretrizes para a jurisdição do espaço digital brasileiro, regulamenta a atuação de empresas de tecnologia e institui a obrigatoriedade de interoperabilidade entre plataformas, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2650116",
+          "termo_busca": "soberania digital",
+          "termo_na_ementa": true,
+          "data_deteccao": "2026-11-09T21:59:30.335319",
+          "termos_busca": [
+            "soberania digital"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
+          "id": "2641166",
+          "sigla": "PL 4479/2026",
+          "ementa": "Institui a Política Nacional de Proteção da Autonomia Tecnológica Brasileira, estabelece diretrizes para a soberania tecnológica nacional, a proteção das infraestruturas digitais estratégicas, a resiliência computacional, a inteligência artificial estratégica, a soberania dos dados críticos, a computação em nuvem de interesse nacional, e dá outras providências.",
+          "ano": "2026",
+          "status": "Em tramitação",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2641166",
+          "termo_busca": "soberania digital",
+          "termo_na_ementa": false,
+          "data_deteccao": "2026-11-09T21:59:30.335349",
+          "termos_busca": [
+            "soberania digital"
+          ]
+        },
+        {
+          "fonte": "Câmara dos Deputados",
           "id": "2552522",
           "sigla": "PL 4218/2025",
           "ementa": "Institui a Política Nacional de Soberania Digital (PNSD), estabelece o marco regulatório para o desenvolvimento tecnológico e a segurança digital do Brasil, e dá outras providências.",
@@ -675,7 +735,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2552522",
           "termo_busca": "soberania digital",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:39.968093",
+          "data_deteccao": "2026-11-09T21:59:30.335362",
           "termos_busca": [
             "soberania digital"
           ]
@@ -700,7 +760,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172821",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:40.865082",
+          "data_deteccao": "2026-11-09T21:59:30.967665",
           "termos_busca": [
             "aprova o texto do acordo",
             "Mercosul"
@@ -717,7 +777,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172822",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:40.865119",
+          "data_deteccao": "2026-11-09T21:59:30.967690",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -733,7 +793,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172823",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:40.865140",
+          "data_deteccao": "2026-11-09T21:59:30.967703",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -749,7 +809,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174513",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:40.868790",
+          "data_deteccao": "2026-11-09T21:59:30.970767",
           "termos_busca": [
             "aprova o texto do acordo"
           ]
@@ -765,7 +825,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174726",
           "termo_busca": "aprova o texto do acordo",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:40.869277",
+          "data_deteccao": "2026-11-09T21:59:30.971180",
           "termos_busca": [
             "aprova o texto do acordo",
             "Mercosul"
@@ -782,7 +842,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173375",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:41.480519",
+          "data_deteccao": "2026-11-09T21:59:31.963794",
           "termos_busca": [
             "Mercosul"
           ]
@@ -798,7 +858,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174727",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:41.483208",
+          "data_deteccao": "2026-11-09T21:59:31.966117",
           "termos_busca": [
             "Mercosul"
           ]
@@ -814,7 +874,7 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174759",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:41.483231",
+          "data_deteccao": "2026-11-09T21:59:31.966136",
           "termos_busca": [
             "Mercosul"
           ]
@@ -831,7 +891,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2647289",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:42.078421",
+          "data_deteccao": "2026-11-09T21:59:33.471079",
           "termos_busca": [
             "Mercosul"
           ]
@@ -846,7 +906,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2642748",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:42.078449",
+          "data_deteccao": "2026-11-09T21:59:33.471101",
           "termos_busca": [
             "Mercosul"
           ]
@@ -861,7 +921,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2630667",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:42.078463",
+          "data_deteccao": "2026-11-09T21:59:33.471111",
           "termos_busca": [
             "Mercosul"
           ]
@@ -876,7 +936,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2620905",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:42.078521",
+          "data_deteccao": "2026-11-09T21:59:33.471122",
           "termos_busca": [
             "Mercosul"
           ]
@@ -891,7 +951,7 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2539121",
           "termo_busca": "Mercosul",
           "termo_na_ementa": true,
-          "data_deteccao": "2026-11-02T21:27:42.078538",
+          "data_deteccao": "2026-11-09T21:59:33.471132",
           "termos_busca": [
             "Mercosul"
           ]
@@ -1233,10 +1293,10 @@
     }
   },
   "proveniencia": {
-    "coletado_em": "2026-11-02T21:27:23.216510",
+    "coletado_em": "2026-11-09T21:59:03.116599",
     "executor": "github-actions",
-    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/41528471617",
-    "sha256_temas": "340fc6447c8f00c9a9e676ccaa2a97ebec87bf0e571e44be213288eaac2a88a6",
+    "execucao_url": "https://github.com/marcabru-tech/lex-io-graph/actions/runs/42707577774",
+    "sha256_temas": "190126f7233754e64e7a210058cd428f575f8136958a57ba522d3c8c04a9c72a",
     "fontes": {
       "senado": {
         "estado": "parcial",
@@ -1245,7 +1305,7 @@
       },
       "camara": {
         "estado": "ativa",
-        "itens_coletados": 27,
+        "itens_coletados": 31,
         "temas_herdados_do_snapshot_anterior": [
           "trabalho_digital"
         ]
@@ -1257,6 +1317,97 @@
       }
     }
   },
-  "novidades_detectadas": [],
-  "total_novidades": 0
+  "novidades_detectadas": [
+    {
+      "tema": "ia",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PL 5729/2026",
+      "ementa": "Institui a Lei Anticrime Deepfake, estabelece medidas penais, processuais e de investigação destinadas à repressão de fraudes, extorsões e organizações criminosas que utilizem inteligência artificial, deepfakes, clonagem de voz ou manipulação artificial de identidade, dispõe sobre mecanismos de preservação e rastreabilidade de evidências digitais, cria protocolo nacional de resposta emergencial a fraudes tecnológicas e estabelece medidas de bloqueio, recuperação e perda de ativos relacionados a esses crimes.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649761",
+      "data_deteccao": "2026-11-09T21:59:09.161403",
+      "chave": "PL 5729/2026",
+      "identidades_novas": [
+        [
+          "PL 5729/2026",
+          "camara"
+        ]
+      ]
+    },
+    {
+      "tema": "ia",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PL 5716/2026",
+      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para aumentar a pena do estelionato e dos crimes de falsidade documental praticados com o uso de inteligência artificial ou de conteúdo sintético.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649657",
+      "data_deteccao": "2026-11-09T21:59:09.161466",
+      "chave": "PL 5716/2026",
+      "identidades_novas": [
+        [
+          "PL 5716/2026",
+          "camara"
+        ]
+      ]
+    },
+    {
+      "tema": "ia",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PL 5715/2026",
+      "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para qualificar o crime de fraude em certame de interesse público praticado com uso de dispositivo eletrônico ou de ferramenta de inteligência artificial e aumentar a pena de quem fornece o equipamento ou o serviço, e estabelece medidas de prevenção a serem adotadas pelos organizadores de certames.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2649656",
+      "data_deteccao": "2026-11-09T21:59:09.161486",
+      "chave": "PL 5715/2026",
+      "identidades_novas": [
+        [
+          "PL 5715/2026",
+          "camara"
+        ]
+      ]
+    },
+    {
+      "tema": "dados",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PL 5770/2026",
+      "ementa": "Institui a Lei do Nexo Protetivo Previdenciário da Mulher e acrescenta dispositivos à Lei nº 8.213, de 24 de julho de 1991, para reconhecer, para fins de dispensa de carência dos benefícios por incapacidade, a violência doméstica e familiar contra a mulher como acidente de qualquer natureza ou causa quando dela decorrer incapacidade física ou mental, estabelecer critérios para a comprovação do nexo causal ou concausal, assegurar avaliação médico-pericial livre de estereótipos e de revitimização, proteger dados pessoais sensíveis da segurada e disciplinar a articulação com a ação regressiva previdenciária contra o responsável pela violência.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2651068",
+      "data_deteccao": "2026-11-09T21:59:11.550881",
+      "chave": "PL 5770/2026",
+      "identidades_novas": [
+        [
+          "PL 5770/2026",
+          "camara"
+        ]
+      ]
+    },
+    {
+      "tema": "infraestrutura_digital",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PLP 23/2026",
+      "ementa": "Institui a Contribuição de Intervenção no Domínio Econômico incidente sobre Serviços de Datacenter (CIDE–DataCenter); majora as alíquotas da CSLL, do PIS/Pasep e da Cofins aplicáveis ao setor; revoga benefícios fiscais federais e veda a concessão de novos incentivos destinados à instalação, expansão ou operação de datacenters; e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2602249",
+      "data_deteccao": "2026-11-09T21:59:21.873108",
+      "chave": "PLP 23/2026",
+      "identidades_novas": [
+        [
+          "PLP 23/2026",
+          "camara"
+        ]
+      ]
+    },
+    {
+      "tema": "soberania_digital",
+      "fonte": "Câmara dos Deputados",
+      "sigla": "PL 5746/2026",
+      "ementa": "Dispõe sobre a Política Nacional de Soberania Digital, estabelece diretrizes para a jurisdição do espaço digital brasileiro, regulamenta a atuação de empresas de tecnologia e institui a obrigatoriedade de interoperabilidade entre plataformas, e dá outras providências.",
+      "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2650116",
+      "data_deteccao": "2026-11-09T21:59:30.335319",
+      "chave": "PL 5746/2026",
+      "identidades_novas": [
+        [
+          "PL 5746/2026",
+          "camara"
+        ]
+      ]
+    }
+  ],
+  "total_novidades": 6
 }
